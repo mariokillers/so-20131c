@@ -1,6 +1,6 @@
 #ifndef LIBMEMORIA_H_
 #define LIBMEMORIA_H_
-    #include "commons/collections/list.h"
+    #include "../commons/src/collections/list.h"
 
     typedef char* t_memoria;
 
