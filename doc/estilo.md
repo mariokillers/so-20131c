@@ -14,10 +14,11 @@ posible
 * Agregar un espacio antes y después de `+`, `-`, `=`, `==`, `!=`, etc.
 * Usar comentarios cuando no es inmediatamente obvio qué hace un código.
 Comentarios como éste serán penados con toda la severidad de la ley:
+
     /* Si i es cero, saltar */
     if (i == 0) {
-		saltar();
-	}
+    	    saltar();
+    }
 
 ## Bloques
 
