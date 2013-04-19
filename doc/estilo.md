@@ -1,4 +1,4 @@
-===Guidelines para estilo de código===
+# Guidelines para estilo de código
 
 * Usar TABS para indentación, no espacios
 * Siempre usar llaves para bloques, incluso si tienen una sola sentencia
@@ -19,7 +19,7 @@ Comentarios como éste serán penados con toda la severidad de la ley:
 		saltar();
 	}
 
-==Bloques==
+## Bloques
 
     if (condicion) {
     	algo();
@@ -50,7 +50,7 @@ Comentarios como éste serán penados con toda la severidad de la ley:
 
         struct corta {int x; int y};
 
-==Definición de funciones==
+## Definición de funciones
     int funcion(const char* s)
     {
 		while (*s++) {
