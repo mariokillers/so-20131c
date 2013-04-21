@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include <unistd.h>
 #include <errno.h>
 #include <string.h>
@@ -23,6 +24,7 @@
 #include <sys/epoll.h>
 #include <netdb.h>
 #include <fcntl.h>
+#include "Collections/queue.h"
 #define MYPORT 3490
 // Puerto al que conectarán los usuarios
 
@@ -39,15 +41,18 @@ typedef struct _Connection {
 	socklen_t in_len;
 } Connection;
 
-typedef struct _Mensaje {
-	char from [20];
-	char data[128];
+typedef struct {
+	int from;			//fileDescriptor de la conexion
+	char type;
+	uint16_t lenght;
+	void* data;
 } Mensaje;
 
 
 ////PROTOTIPOS DE FUNCIONES
 void Cerrar_Conexion (int);
 static int make_socket_non_blocking (int);
-
+int initServer(void);
+int mensajes (t_queue*);
 
 #endif /* PROCESO_SERVER_H_ */

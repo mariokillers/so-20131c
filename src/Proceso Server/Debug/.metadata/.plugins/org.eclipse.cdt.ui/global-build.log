@@ -1,0 +1,33 @@
+21:44:52 **** Incremental Build of configuration Default for project Proceso Cliente ****
+make all 
+make: *** No hay ninguna regla para construir el objetivo «all».  Alto.
+21:44:54 **** Incremental Build of configuration Default for project Proceso Cliente ****
+make all 
+make: *** No hay ninguna regla para construir el objetivo «all».  Alto.
+21:45:00 **** Incremental Build of configuration Default for project Proceso Cliente ****
+make all 
+make: *** No hay ninguna regla para construir el objetivo «all».  Alto.
+21:45:05 **** Incremental Build of configuration Default for project Proceso Cliente ****
+make all 
+make: *** No hay ninguna regla para construir el objetivo «all».  Alto.
+21:45:09 **** Incremental Build of configuration Default for project Proceso Cliente ****
+make all 
+make: *** No hay ninguna regla para construir el objetivo «all».  Alto.
+21:46:55 **** Build of configuration Default for project Proceso Server ****
+make all 
+make: *** No hay ninguna regla para construir el objetivo «all».  Alto.
+21:49:36 **** Build of configuration Default for project Proceso Server ****
+make all 
+make: *** No hay ninguna regla para construir el objetivo «all».  Alto.
+21:54:39 **** Build of configuration Default for project Proyecto proceso server ****
+make all 
+make: *** No hay ninguna regla para construir el objetivo «all».  Alto.
+21:56:30 **** Build of configuration Default for project Proyecto proceso server ****
+make all 
+make: *** No hay ninguna regla para construir el objetivo «all».  Alto.
+21:56:37 **** Incremental Build of configuration Default for project Proyecto proceso server ****
+make all 
+make: *** No hay ninguna regla para construir el objetivo «all».  Alto.
+21:56:42 **** Incremental Build of configuration Default for project Proyecto proceso server ****
+make all 
+make: *** No hay ninguna regla para construir el objetivo «all».  Alto.

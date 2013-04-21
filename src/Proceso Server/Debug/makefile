@@ -8,6 +8,7 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include Collections/subdir.mk
 -include subdir.mk
 -include objects.mk
 
@@ -22,19 +23,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: Proyecto\ Server
+all: Proyecto\ proceso\ server
 
 # Tool invocations
-Proyecto\ Server: $(OBJS) $(USER_OBJS)
+Proyecto\ proceso\ server: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc  -o "Proyecto Server" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc  -o "Proyecto proceso server" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(OBJS)$(C_DEPS)$(EXECUTABLES) "Proyecto Server"
+	-$(RM) $(OBJS)$(C_DEPS)$(EXECUTABLES) "Proyecto proceso server"
 	-@echo ' '
 
 .PHONY: all clean dependents
