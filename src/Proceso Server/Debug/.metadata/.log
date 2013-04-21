@@ -1,0 +1,117 @@
+!SESSION 2013-04-19 16:24:44.752 -----------------------------------------------
+eclipse.buildId=M20130204-1200
+java.version=1.7.0_15
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=es_AR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-04-19 16:24:50.035
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-04-19 16:25:47.835
+!MESSAGE Indexed 'Proceso Cliente' (1 sources, 1 headers) in 0,51 sec: 37 declarations; 56 references; 15 unresolved inclusions; 0 syntax errors; 10 unresolved names (9,71%)
+
+!ENTRY org.eclipse.core.resources 4 77 2013-04-19 16:26:08.471
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2013-04-19 16:26:08.471
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2013-04-19 16:26:08.471
+!MESSAGE /home/utnso/Escritorio/S_O/Proceso Server overlaps the workspace location: /home/utnso/Escritorio/S_O/Proceso Server/Debug
+
+!ENTRY org.eclipse.core.resources 4 77 2013-04-19 16:26:30.561
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2013-04-19 16:26:30.561
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2013-04-19 16:26:30.561
+!MESSAGE /home/utnso/Escritorio/S_O/Proceso Server overlaps the workspace location: /home/utnso/Escritorio/S_O/Proceso Server/Debug
+
+!ENTRY org.eclipse.core.resources 4 77 2013-04-19 16:26:53.826
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2013-04-19 16:26:53.826
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2013-04-19 16:26:53.826
+!MESSAGE /home/utnso/Escritorio/S_O/Proceso Server/Debug overlaps the workspace location: /home/utnso/Escritorio/S_O/Proceso Server/Debug
+
+!ENTRY org.eclipse.core.resources 4 77 2013-04-19 16:27:47.825
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2013-04-19 16:27:47.825
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2013-04-19 16:27:47.826
+!MESSAGE /home/utnso/Escritorio/S_O/Proceso Server overlaps the workspace location: /home/utnso/Escritorio/S_O/Proceso Server/Debug
+
+!ENTRY org.eclipse.core.resources 4 77 2013-04-19 16:28:37.964
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2013-04-19 16:28:37.964
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2013-04-19 16:28:37.964
+!MESSAGE /home/utnso/Escritorio/S_O/Proceso Server overlaps the workspace location: /home/utnso/Escritorio/S_O/Proceso Server/Debug
+
+!ENTRY org.eclipse.core.resources 4 77 2013-04-19 16:29:50.964
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2013-04-19 16:29:50.964
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2013-04-19 16:29:50.964
+!MESSAGE /home/utnso/Escritorio/S_O/Proceso Server overlaps the workspace location: /home/utnso/Escritorio/S_O/Proceso Server/Debug
+
+!ENTRY org.eclipse.core.resources 4 77 2013-04-19 16:31:31.529
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2013-04-19 16:31:31.529
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2013-04-19 16:31:31.529
+!MESSAGE /home/utnso/Escritorio/S_O/Proceso Server overlaps the workspace location: /home/utnso/Escritorio/S_O/Proceso Server/Debug
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-04-19 16:31:45.564
+!MESSAGE Indexed 'sdf' (0 sources, 0 headers) in 0,00 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0,00%)
+
+!ENTRY org.eclipse.core.resources 4 77 2013-04-19 16:32:13.823
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2013-04-19 16:32:13.823
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2013-04-19 16:32:13.823
+!MESSAGE /home/utnso/Escritorio/S_O/Proceso Server overlaps the workspace location: /home/utnso/Escritorio/S_O/Proceso Server/Debug
+
+!ENTRY org.eclipse.core.resources 4 77 2013-04-19 16:34:38.937
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2013-04-19 16:34:38.938
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2013-04-19 16:34:38.938
+!MESSAGE /home/utnso/Escritorio/S_O/Proceso Server overlaps the workspace location: /home/utnso/Escritorio/S_O/Proceso Server/Debug
+
+!ENTRY org.eclipse.core.resources 4 77 2013-04-19 16:35:43.964
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2013-04-19 16:35:43.964
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2013-04-19 16:35:43.964
+!MESSAGE /home/utnso/Escritorio/S_O overlaps the workspace location: /home/utnso/Escritorio/S_O/Proceso Server/Debug
+
+!ENTRY org.eclipse.core.resources 4 77 2013-04-19 16:36:18.059
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2013-04-19 16:36:18.060
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2013-04-19 16:36:18.060
+!MESSAGE /home/utnso/Escritorio/S_O overlaps the workspace location: /home/utnso/Escritorio/S_O/Proceso Server/Debug
+
+!ENTRY org.eclipse.core.resources 4 77 2013-04-19 16:36:33.158
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2013-04-19 16:36:33.158
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2013-04-19 16:36:33.158
+!MESSAGE /home/utnso/Escritorio/S_O/Proceso Server overlaps the workspace location: /home/utnso/Escritorio/S_O/Proceso Server/Debug
+!SESSION 2013-04-19 16:36:42.291 -----------------------------------------------
+eclipse.buildId=M20130204-1200
+java.version=1.7.0_15
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=es_AR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.core.resources 4 77 2013-04-19 16:37:42.399
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2013-04-19 16:37:42.399
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2013-04-19 16:37:42.399
+!MESSAGE /home/utnso/Escritorio/S_O/Proceso Server overlaps the workspace location: /home/utnso/Escritorio/S_O/Proceso Server/Debug
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-04-19 16:38:50.910
+!MESSAGE Indexed 'Proceso Cliente' (1 sources, 1 headers) in 0,75 sec: 37 declarations; 56 references; 15 unresolved inclusions; 0 syntax errors; 10 unresolved names (9,71%)
