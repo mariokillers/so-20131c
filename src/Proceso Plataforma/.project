@@ -3,6 +3,7 @@
 	<name>Proceso Plataforma</name>
 	<comment></comment>
 	<projects>
+		<project>CommonsLibrary</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

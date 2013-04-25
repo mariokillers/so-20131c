@@ -24,7 +24,8 @@
 #include <sys/epoll.h>
 #include <netdb.h>
 #include <fcntl.h>
-#include "Collections/queue.h"
+#include <collections/queue.h>
+
 #define MYPORT 3490
 // Puerto al que conectarán los usuarios
 

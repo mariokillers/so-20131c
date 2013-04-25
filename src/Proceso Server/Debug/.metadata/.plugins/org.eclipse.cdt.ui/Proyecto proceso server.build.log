@@ -1,6 +1,0 @@
-21:56:42 **** Incremental Build of configuration Default for project Proyecto proceso server ****
-make all 
-make: *** No hay ninguna regla para construir el objetivo «all».  Alto.
-
-21:56:43 Build Finished (took 227ms)
-

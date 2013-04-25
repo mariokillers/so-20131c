@@ -1,6 +1,0 @@
-21:45:09 **** Incremental Build of configuration Default for project Proceso Cliente ****
-make all 
-make: *** No hay ninguna regla para construir el objetivo «all».  Alto.
-
-21:45:09 Build Finished (took 179ms)
-

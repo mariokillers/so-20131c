@@ -8,7 +8,7 @@
 #ifndef PROCESO_PLATAFORMA_H_
 #define PROCESO_PLATAFORMA_H_
 
-#include "Collections/list.h"
+#include <collections/list.h>
 
 
 typedef struct{
