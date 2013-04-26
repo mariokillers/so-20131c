@@ -9,11 +9,16 @@
 #define PROCESO_PLATAFORMA_H_
 
 #include <collections/list.h>
+#include <collections/queue.h>
+#include <collections/stack.h>
+#include <log.h>
+#include "string.h"
 
-
-typedef struct{
-	char nombre;
+typedef struct t_personaje {
+	char nombre[30];
 	char estado;
 } Elemento_personaje;
+
+Elemento_personaje* personaje_crear(char* nombre);
 
 #endif /* PROCESO_PLATAFORMA_H_ */

@@ -4,14 +4,57 @@
 
 int main (){
 
+	t_log* logger = log_create("testing.log", "ProcesoPlataforma", true, LOG_LEVEL_INFO);
+	char message[500];
 
-t_list* estados_personajes;
-estados_personajes = list_create();
-Elemento_personaje mi_personaje;
-printf("Ingrese el nombre de mi_personaje");
-scanf("%c", &(mi_personaje.nombre));
-list_add (estados_personajes, &mi_personaje);
-printf("El tamaño de la lista es %d\n", list_size(estados_personajes) );
+	log_info(logger, "************************************************************");
 
-return 0;
+	t_stack* stack_personajes = stack_create();
+	t_queue* queue_personajes = queue_create();
+
+	char nombre[30];
+
+	log_info(logger, "Ingrese los personajes. Para finalizar ingrese 'fin':");
+
+	scanf("%s", nombre);
+
+	while (strcmp(nombre, "fin") != 0) {
+		stack_push(stack_personajes, personaje_crear(nombre));
+		queue_push(queue_personajes, personaje_crear(nombre));
+		scanf("%s", nombre);
+	}
+
+	sprintf(message, "El tamaño de la lista es %d", stack_size(stack_personajes));
+	log_info(logger, message);
+
+	log_info(logger, "************************************************************");
+	log_info(logger, "Extrayendo elementos de la pila:");
+
+	while (stack_is_empty(stack_personajes) == false) {
+		Elemento_personaje* personaje_recibido = stack_pop(stack_personajes);
+		log_info(logger, personaje_recibido->nombre);
+	}
+
+	log_info(logger, "************************************************************");
+	log_info(logger, "Extrayendo elementos de la cola:");
+
+	while (queue_is_empty(queue_personajes) == false) {
+		Elemento_personaje* personaje_recibido = queue_pop(queue_personajes);
+		log_info(logger, personaje_recibido->nombre);
+	}
+
+	while (stack_is_empty(stack_personajes) == false) {
+		Elemento_personaje* personaje_recibido = stack_pop(stack_personajes);
+		log_info(logger, personaje_recibido->nombre);
+	}
+
+	log_destroy(logger);
+
+	return 0;
+}
+
+Elemento_personaje* personaje_crear(char* nombre) {
+	Elemento_personaje* personaje = malloc(sizeof(Elemento_personaje));
+	strncpy(personaje->nombre, nombre, 24);
+	return personaje;
 }
