@@ -15,6 +15,7 @@ all: $(LIBRARY) clean
 # .so a partir de archivos objeto
 $(LIBRARY): $(OBJECTS)
 	 $(CC) $(LDFLAGS) $(LIBDIR)/collections/*.c $(OBJECTS) -o ../$(LIBRARY)
+	 $(CC) $(LDFLAGS) $(LIBDIR)/Connections/*.c $(OBJECTS) -o ../$(LIBRARY)
 
 # Limpiar archivos objeto innecesarios
 clean:

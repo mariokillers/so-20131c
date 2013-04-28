@@ -26,7 +26,7 @@ endif
 all: Test\ Client-Server
 
 dependents:
-	-cd /home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug && $(MAKE) clean all
+	-cd /home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug && $(MAKE) all
 
 # Tool invocations
 Test\ Client-Server: $(OBJS) $(USER_OBJS) /home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug/libCommonsLibrary.so

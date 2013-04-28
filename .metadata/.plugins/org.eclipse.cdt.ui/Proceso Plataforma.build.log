@@ -1,0 +1,11 @@
+22:08:49 **** Incremental Build of configuration Debug for project Proceso Plataforma ****
+make all 
+Building target: Proceso Plataforma
+Invoking: GCC C++ Linker
+g++ -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proceso Plataforma"  ./Proceso_Plataforma.o   -lCommonsLibrary
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug/libCommonsLibrary.so: referencia a `make_socket_non_blocking' sin definir
+collect2: error: ld devolvió el estado de salida 1
+make: *** [Proceso Plataforma] Error 1
+
+22:08:51 Build Finished (took 2s.87ms)
+

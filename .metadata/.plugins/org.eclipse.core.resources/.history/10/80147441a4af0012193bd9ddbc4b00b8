@@ -1,0 +1,27 @@
+/*
+ ============================================================================
+ Name        : Test.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <Connections/Client.h>
+#include <Connections/Server.h>
+#include <Connections/Mensajes.h>
+#include <collections/queue.h>
+
+int main(void) {
+	//INICIALIZO LA COLA DE MENSAJES
+	t_queue* mensajesQueue;
+	mensajesQueue = queue_create();
+
+	initServer(5000);
+
+
+	return EXIT_SUCCESS;
+}

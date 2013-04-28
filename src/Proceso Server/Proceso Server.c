@@ -6,64 +6,13 @@ struct epoll_event event;		//
 struct epoll_event *events;
 struct sockaddr_in my_addr; 	// Información sobre mi dirección
 
-int main(void){
-
-	t_queue* mensajesQueue;
-	mensajesQueue = queue_create();
-
-	initServer();
-	////ESPERO MENSAJES O CONEXIONES
-	while(1){
-		//SI HAY MENSAJES
-		if(mensajes(mensajesQueue)){
-			Mensaje* miMensaje;
-			miMensaje = queue_pop(mensajesQueue);
-			write (1, "holaa!", 5);
-			//printf("Mensaje Recibido: %c", miMensaje->type);
-			free(miMensaje->data);
-			free(miMensaje);
-		}
-	}
-	return 0;
 
 
-
-}
-
-
-void Cerrar_Conexion (int fd){
-
-	printf ("Closed connection on descriptor %d\n", fd);
-	//CIERRO CONEXION
-	close (fd);
-
-}
-
-
-static int make_socket_non_blocking (int sfd)
-{
-  int flags, s;
-
-  flags = fcntl (sfd, F_GETFL, 0);
-  if (flags == -1)
-    {
-      perror ("fcntl");
-      return -1;
-    }
-
-  flags |= O_NONBLOCK;
-  s = fcntl (sfd, F_SETFL, flags);
-  if (s == -1)
-    {
-      perror ("fcntl");
-      return -1;
-    }
-
-  return 0;
-}
-
-
-int initServer(void){
+/*
+ * @NAME: initServer
+ * @DESC: Inicializa un servidor en el puerto indicado como parametro. Devuelve 0
+ */
+int initServer(int MYPORT){
 
 
 		////PIDO EL SOCKET
@@ -117,9 +66,16 @@ int initServer(void){
 		return 0;
 }
 
-int mensajes(t_queue* mensajesQueue){
-	int n, i; // n = cantidad de eventos que devuelve epoll, i = variable para recorrer los eventos
 
+/*
+ * @NAME: mensajes
+ * @DESC: Esta es la funcion que se va a usar para esperar mensajes.
+ * 		  Recibe como parametro una cola de mensajes, y una lista de conexiones.
+ * 		  Acepta automaticamente todas las conexiones nuevas, y devuelve la
+ * 		  cantidad de mensajes que hay en la cola.
+ */
+int mensajes(t_queue* mensajesQueue, t_list* conexionesList){
+	int n, i; // n = cantidad de eventos que devuelve epoll, i = variable para recorrer los eventos
 
 				//// ESPERO LAS NOVEDADES EN LOS SOCKETS QUE ESTOY OBSERVANDO
 				n = epoll_wait (instancia_epoll, events, MAXEVENTS, -1);
@@ -145,6 +101,7 @@ int mensajes(t_queue* mensajesQueue){
 					        int infd;
 					        char hbuf[30], sbuf[30];
 			                in_len = sizeof their_addr;
+
 
 			                ////ASIGNO EL NUEVO SOCKET DESCRIPTOR
 			                infd = accept (sockfd, &their_addr, &in_len);
@@ -174,6 +131,19 @@ int mensajes(t_queue* mensajesQueue){
 			                	printf("Accepted connection on descriptor %d "
 			                			"(host=%s, port=%s)\n", infd, hbuf, sbuf);
 			                }
+
+			                //CREO LA NUEVA INSTANCIA CONNECTION TODO LIBERAR ESTRUCTURA MENSAJE
+							Conexion* NuevaConexion;
+							if((NuevaConexion = malloc(sizeof(Conexion))) == NULL){
+								perror ("malloc");
+								exit(1);
+							}
+
+							//ASIGNO LOS DATOS DEL MENSAJE
+							strcpy((NuevaConexion->name), hbuf );
+							NuevaConexion->fd = infd;
+
+							list_add (conexionesList, NuevaConexion);
 
 			                //SETEO EL SOCKET COMO NO BLOQUEANTE
 							if (make_socket_non_blocking (infd) == -1) abort ();
@@ -229,7 +199,7 @@ int mensajes(t_queue* mensajesQueue){
 							//ASIGNO LOS DATOS DEL MENSAJE
 							NuevoMensaje->from = events[i].data.fd;
 							NuevoMensaje->type = buf[0];
-							NuevoMensaje->lenght = 2;//(buf[1] << 8) | buf[2];
+							memcpy(&(NuevoMensaje->lenght),(void*)(&(buf[1])),2);
 
 							//SOLICITO MEMORIA PARA LA DATA DEL MENSAJE TODO LIBERAR DATA
 							if((NuevoMensaje->data = malloc(NuevoMensaje->lenght)) == NULL){
@@ -258,3 +228,111 @@ int mensajes(t_queue* mensajesQueue){
 
 
 }
+
+
+/*
+ * @NAME: obtenerData
+ * @DESC: Recibe como parametro un puntero a la variable que se quiera recuperar
+ * 		  del dato adjunto en el mensaje que recibe como parametro.
+ */
+int obtenerData(void* destino, Mensaje* miMensaje){
+	memcpy(destino, (void*) miMensaje->data, miMensaje->lenght);
+	return 0;
+
+}
+
+/*
+ * @NAME: mandarMensaje
+ * @DESC: Envia un mensaje al descriptor que recibe como parametro. El resto son:
+ * 		  type: codigo de mensaje, lenght: size of (variable que se adjunta),
+ * 		  data: dirección de la variable a adjuntar.
+ */
+int mandarMensaje( int fd , char type, uint16_t lenght, void*data){
+	char mensaje[lenght+3];
+	mensaje[0]=type;
+	mensaje[1]=lenght;
+	memcpy(&mensaje[3],(void*)data,lenght);
+
+	if((send(fd , mensaje, lenght+3, 0)) == -1){
+		return -1;
+	}
+
+	return 0;
+
+}
+
+
+void Cerrar_Conexion (int fd){
+
+	printf ("Closed connection on descriptor %d\n", fd);
+	//CIERRO CONEXION
+	close (fd);
+
+}
+
+
+static int make_socket_non_blocking (int sfd)
+{
+  int flags, s;
+
+  flags = fcntl (sfd, F_GETFL, 0);
+  if (flags == -1)
+    {
+      perror ("fcntl");
+      return -1;
+    }
+
+  flags |= O_NONBLOCK;
+  s = fcntl (sfd, F_SETFL, flags);
+  if (s == -1)
+    {
+      perror ("fcntl");
+      return -1;
+    }
+
+  return 0;
+}
+
+/*
+void setConnectionName(t_list *conexionesList, int fd, char* name) {
+	  Conexion* MiConexion;
+
+	  //Genero la condición para la busqueda
+	  bool _equalFD(Conexion* Actual) {
+
+	                 return Actual->fd == fd;
+
+	  }
+
+	  //Busco
+	 MiConexion = list_find(conexionesList, _equalFD);
+
+	 //Seteo el nombre
+	 MiConexion->name = name;
+
+}
+
+int getConnectionFd(t_list *conexionesList, char ID[]){
+	t_link_element *element = conexionesList->head;
+		int position = 0;
+		Conexion* Actual;
+		while (element != NULL && ((Conexion*)(element->data))->name == ID) {
+			element = element->next;
+			position++;
+		}
+
+		return ((Conexion*)(element->data))->fd;
+}
+
+char* getConnectionName (t_list *conexionesList, int fd){
+	t_link_element *element = conexionesList->head;
+			int position = 0;
+			Conexion* Actual;
+			while (element != NULL && ((Conexion*)(element->data))->fd == fd) {
+				element = element->next;
+				position++;
+			}
+
+			return ((Conexion*)(element->data))->name;
+}
+*/

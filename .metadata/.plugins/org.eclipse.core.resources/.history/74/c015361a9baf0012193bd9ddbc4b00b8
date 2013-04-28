@@ -1,0 +1,44 @@
+/*
+ * Server.h
+ *
+ *  Created on: 27/04/2013
+ *      Author: utnso
+ */
+
+#ifndef SERVER_H_
+#define SERVER_H_
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include <unistd.h>
+#include <errno.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <sys/wait.h>
+#include <string.h>
+#include <signal.h>
+#include <sys/epoll.h>
+#include <netdb.h>
+#include <fcntl.h>
+#include "collections/queue.h"
+//#define MYPORT 3490
+// Puerto al que conectarán los usuarios
+
+#define BACKLOG 20
+// Cuántas conexiones pendientes se mantienen en cola
+
+#define MAXEVENTS 20
+// Cuántas conexiones atiende y supervisa.
+
+
+////PROTOTIPOS DE FUNCIONES
+void Cerrar_Conexion (int);
+static int make_socket_non_blocking (int);
+int initServer(int);
+//void setConnectionName(t_list , int, char*);
+
+#endif /* SERVER_H_ */

@@ -1,0 +1,66 @@
+/*
+ ============================================================================
+ Name        : Test.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <Connections/Client.h>
+#include <Connections/Server.h>
+#include <Connections/Mensajes.h>
+#include <collections/queue.h>
+
+int main(void) {
+	//INICIALIZO LA COLA DE MENSAJES
+	t_queue* mensajesQueue;
+	mensajesQueue = queue_create();
+	int socketCliente;
+
+	//INICIALIZO EL SERVIDOR EN EL PUERTO 5000
+	initServer(5000);
+
+	//INICIALIZO EL CLIENTE EN EL SOCKETCLIENTE
+	socketCliente = connectServer("localhost",5000);
+
+	//MANDO MENSAJE DEL CLIENTE AL SERVIDOR
+	mandarMensaje(socketCliente,'a',sizeof("Mensaje de Cliente a Server"),"Mensaje de Cliente a Server");
+
+	//LEVANTO EL MENSAJE DEL CLIENTE
+	if(mensajes(mensajesQueue)){
+				Mensaje* miMensaje;
+
+				miMensaje = queue_pop(mensajesQueue);
+				char*msg = (char*) miMensaje->data;
+				printf("%s %d",msg,  miMensaje->from );
+				fflush(stdout);
+
+				//ENVIO UNA RESPUESTA DEL SERVER AL CLIENTE
+				mandarMensaje(miMensaje->from,'b',sizeof("Mensaje de Server a Cliente"),"Mensaje de Server a Cliente");
+				free(miMensaje->data);
+				free(miMensaje);
+	}
+
+	//LEVANTO EL MENSAJE DEL SERVIDOR (LLEGAN A LA MISMA COLA, QUE ES UNICA DEL PROCESO)
+	if(mensajes(mensajesQueue)){
+				Mensaje* miMensaje;
+
+				miMensaje = queue_pop(mensajesQueue);
+				char*msg = (char*) miMensaje->data;
+				printf("%s",msg);
+				fflush(stdout);
+				//ENVIO UNA RESPUESTA DEL SERVER AL CLIENTE
+
+				free(miMensaje->data);
+				free(miMensaje);
+	}
+
+	//CIERRO EL SOCKET DEL CLIENTE
+	close(socketCliente);
+
+	return EXIT_SUCCESS;
+}

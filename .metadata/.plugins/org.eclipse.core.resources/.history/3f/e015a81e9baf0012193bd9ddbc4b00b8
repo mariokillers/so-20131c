@@ -1,0 +1,23 @@
+/*
+ * Server.h
+ *
+ *  Created on: 27/04/2013
+ *      Author: utnso
+ */
+
+#ifndef SERVER_H_
+#define SERVER_H_
+
+#include <Mensajes.h>
+//#define MYPORT 3490
+// Puerto al que conectarán los usuarios
+
+
+
+////PROTOTIPOS DE FUNCIONES
+void Cerrar_Conexion (int);
+static int make_socket_non_blocking (int);
+int initServer(int);
+//void setConnectionName(t_list , int, char*);
+
+#endif /* SERVER_H_ */

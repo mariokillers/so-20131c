@@ -1,0 +1,33 @@
+/*
+ * Mensajes.h
+ *
+ *  Created on: 27/04/2013
+ *      Author: utnso
+ */
+
+#ifndef MENSAJES_H_
+#define MENSAJES_H_
+#include <unistd.h>
+
+int instancia_epoll;			// Instancia epoll
+int sockfd, new_fd; 			// Escuchar sobre sock_fd, nuevas conexiones sobre new_fd
+struct epoll_event event;		//
+struct epoll_event *events;
+struct sockaddr_in my_addr; 	// Información sobre mi dirección
+
+
+typedef struct _Connection {
+	char client [20];
+	int client_FD;
+	struct sockaddr client_addr;
+	socklen_t in_len;
+} Connection;
+
+typedef struct {
+	int from;			//fileDescriptor de la conexion
+	char type;
+	uint16_t lenght;
+	void* data;
+} Mensaje;
+
+#endif /* MENSAJES_H_ */
