@@ -8,7 +8,7 @@
 
 #include "nivel_library.h"
 
-/*NAME: read_nivel_archivo_configuracion
+/*NAME: read_nivel_a rchivo_configuracion
 PARAM: char* path -> direccion del archivo de configuracion
 RETURN: t_nivel * -> un nivel creado en base a un archivo de configuracion
 DESC: instancia un t_config (struct de commons/config.h) tomando valores del archivo de configuracion y devuelve 
