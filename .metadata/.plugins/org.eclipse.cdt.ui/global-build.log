@@ -1751,3 +1751,30 @@ make: No se hace nada para «all».
 15:15:14 **** Incremental Build of configuration Debug for project Test Client-Server ****
 make all 
 make: No se hace nada para «all».
+15:30:57 **** Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+15:30:59 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+15:31:00 **** Build of configuration Debug for project Test Client-Server ****
+make all 
+make: No se hace nada para «all».
+11:44:07 **** Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+11:44:10 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+11:44:11 **** Build of configuration Debug for project Test Client-Server ****
+make all 
+make: No se hace nada para «all».
+15:52:13 **** Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+15:52:16 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+15:52:17 **** Build of configuration Debug for project Test Client-Server ****
+make all 
+make: No se hace nada para «all».
