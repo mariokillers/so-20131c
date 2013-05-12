@@ -11,6 +11,6 @@
 #include "Mensajes.h"
 
 ////PROTOTIPOS DE FUNCIONES
-int connectServer(char *, int);
+CCB connectServer(char *, int);
 
 #endif /* CLIENT_H_ */

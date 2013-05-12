@@ -15,27 +15,31 @@
 #include <Connections/Mensajes.h>
 #include <collections/queue.h>
 
+
 int main(void) {
 	//INICIALIZO LA COLA DE MENSAJES
-	t_queue* mensajesQueue;
-	mensajesQueue = queue_create();
-	int socketCliente;
+	CCB Server;
+	CCB Client;
+	t_queue* mensajes_Client;
+	t_queue* mensajes_Server;
 	Mensaje* miMensaje;
+	mensajes_Server = queue_create();
+	mensajes_Client = queue_create();
 
 	//INICIALIZO EL SERVIDOR EN EL PUERTO 5000
-	initServer(5000);
+	Server = initServer(5000);
 
 	//INICIALIZO EL CLIENTE EN EL SOCKETCLIENTE
-	socketCliente = connectServer("localhost",5000);
+	Client = connectServer("localhost",5000);
 
 	//MANDO MENSAJE DEL CLIENTE AL SERVIDOR
-	mandarMensaje(socketCliente,'a',sizeof("Mensaje de Cliente a Server\n"),"Mensaje de Cliente a Server\n");
+	mandarMensaje(Client.sockfd,'a',sizeof("Mensaje de Cliente a Server\n"),"Mensaje de Cliente a Server\n");
 
 	//LEVANTO EL MENSAJE DEL CLIENTE
-	while(!mensajes(mensajesQueue));
+	while(!mensajes(mensajes_Server, Server));
 
 
-				miMensaje = queue_pop(mensajesQueue);
+				miMensaje = queue_pop(mensajes_Server);
 				char*msg = (char*) miMensaje->data;
 				printf("%s",msg);
 				fflush(stdout);
@@ -48,10 +52,10 @@ int main(void) {
 
 
 	//LEVANTO EL MENSAJE DEL SERVIDOR (LLEGAN A LA MISMA COLA, QUE ES UNICA DEL PROCESO)
-	while(!mensajes(mensajesQueue));
+	while(!mensajes(mensajes_Client, Client));
 
 
-				miMensaje = queue_pop(mensajesQueue);
+				miMensaje = queue_pop(mensajes_Client);
 				msg = (char*) miMensaje->data;
 				printf("%s",msg);
 				fflush(stdout);
@@ -63,7 +67,7 @@ int main(void) {
 
 
 	//CIERRO EL SOCKET DEL CLIENTE
-	close(socketCliente);
+	close(Client.sockfd);
 
 	return EXIT_SUCCESS;
 }

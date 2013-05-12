@@ -1,0 +1,11 @@
+13:05:15 **** Incremental Build of configuration Debug for project EJEMPLO MANEJO COLAS LISTAS Y PILAS ****
+make all 
+Building target: EJEMPLO MANEJO COLAS LISTAS Y PILAS
+Invoking: GCC C++ Linker
+g++  -o "EJEMPLO MANEJO COLAS LISTAS Y PILAS"  ./Proceso_Plataforma.o   -lCommonsLibrary
+/usr/bin/ld: no se puede encontrar -lCommonsLibrary
+collect2: error: ld devolvió el estado de salida 1
+make: *** [EJEMPLO MANEJO COLAS LISTAS Y PILAS] Error 1
+
+13:05:17 Build Finished (took 2s.11ms)
+

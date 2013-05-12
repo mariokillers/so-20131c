@@ -36,13 +36,16 @@
 
 //Variables globales
 
-int instancia_epoll;			// Instancia epoll
-int sockfd, new_fd; 			// Escuchar sobre sock_fd, nuevas conexiones sobre new_fd
-struct epoll_event event;		//
-struct epoll_event *events;
-struct sockaddr_in my_addr; 	// Información sobre mi dirección
+
 
 //Estructuras Mensaje y Conexion
+typedef struct {
+	int instancia_epoll;			// Instancia epoll
+	int sockfd, masterfd; 			// Escuchar sobre sock_fd, nuevas conexiones sobre new_fd
+	struct epoll_event event;		//
+	struct epoll_event *events;
+	struct sockaddr_in my_addr; 	// Información sobre mi dirección
+} CCB;
 
 typedef struct {
 	char name [20];
@@ -58,7 +61,7 @@ typedef struct {
 
 
 ///Prototipo de funcion
-int mensajes(t_queue*);
+int mensajes(t_queue* , CCB );
 int mandarMensaje( int , char , uint16_t , void*);
 void borrarMensaje(Mensaje*);
 int obtenerData(void* , Mensaje*);

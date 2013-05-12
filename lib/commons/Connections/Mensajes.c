@@ -13,26 +13,26 @@
  * 		  Acepta automaticamente todas las conexiones nuevas, y devuelve la
  * 		  cantidad de mensajes que hay en la cola.
  */
-int mensajes(t_queue* mensajesQueue){
+int mensajes(t_queue* mensajesQueue, CCB myCOM){
 
 	int n, i; // n = cantidad de eventos que devuelve epoll, i = variable para recorrer los eventos
 
 	//// ESPERO LAS NOVEDADES EN LOS SOCKETS QUE ESTOY OBSERVANDO
-	n = epoll_wait (instancia_epoll, events, MAXEVENTS, -1);
+	n = epoll_wait (myCOM.instancia_epoll, myCOM.events, MAXEVENTS, -1);
 
 	//// RECORRO LOS EVENTOS ATENDIENDO LAS NOVEDADES
 	for (i = 0; i < n; i++)
 	{
 		//// SI EL EVENTO QUE ESTOY MIRANDO DIO ERROR O NO ESTA LISTO PARA SER LEIDO
-		if ((events[i].events & EPOLLERR) || (events[i].events & EPOLLRDHUP) || (events[i].events & EPOLLHUP) || (!(events[i].events & EPOLLIN))) {
+		if ((myCOM.events[i].events & EPOLLERR) || (myCOM.events[i].events & EPOLLRDHUP) || (myCOM.events[i].events & EPOLLHUP) || (!(myCOM.events[i].events & EPOLLIN))) {
 			fprintf (stderr, "epoll error\n");
 			//CIERRO EL EVENTO
-			Cerrar_Conexion(events[i].data.fd);
+			Cerrar_Conexion(myCOM.events[i].data.fd);
 			continue;
 		}
 
 		//// HAY NOVEDADES EN EL SOCKET MAESTRO (NUEVAS CONEXIONES)!!!
-		else if (sockfd == events[i].data.fd) {
+		else if (myCOM.masterfd == myCOM.events[i].data.fd) {
 
 			////ACEPTO TODAS LAS INCOMING CONNECTIONS
 			while (1) {
@@ -44,7 +44,7 @@ int mensajes(t_queue* mensajesQueue){
 
 
 				////ASIGNO EL NUEVO SOCKET DESCRIPTOR
-				infd = accept (sockfd, &their_addr, &in_len);
+				infd = accept (myCOM.masterfd, &their_addr, &in_len);
 
 
 				////SI YA HABIA ACEPTADO TODAS O AL ACEPTAR UNA CONEXION ME DA ERROR
@@ -89,11 +89,11 @@ int mensajes(t_queue* mensajesQueue){
 				if ((s = (make_socket_non_blocking (infd))) == -1) abort ();
 
 				////ASOCIO EL FD DE LA NUEVA CONEXION
-				event.data.fd = infd;
-				event.events = EPOLLIN | EPOLLET;
+				myCOM.event.data.fd = infd;
+				myCOM.event.events = EPOLLIN | EPOLLET;
 
 				//AGREGO LA NUEVA CONEXION A LA INSTANCIA EPOLL
-				if ((s = epoll_ctl (instancia_epoll, EPOLL_CTL_ADD, infd, &event)) == -1){
+				if ((s = epoll_ctl (myCOM.instancia_epoll, EPOLL_CTL_ADD, infd, &(myCOM.event))) == -1){
 					perror ("epoll_ctl");
 					exit(1);
 				}
@@ -110,7 +110,7 @@ int mensajes(t_queue* mensajesQueue){
 				ssize_t count;
 				char buf[512];
 				//LEO LOS DATOS
-				count = read (events[i].data.fd, buf, sizeof buf);
+				count = read (myCOM.events[i].data.fd, buf, sizeof buf);
 
 				//CHECKEO SI YA LEI TODOS O EL CLIENTE CERRO CONEXION
 				if (count == -1)
@@ -137,7 +137,7 @@ int mensajes(t_queue* mensajesQueue){
 				}
 
 				//ASIGNO LOS DATOS DEL MENSAJE
-				NuevoMensaje->from = events[i].data.fd;
+				NuevoMensaje->from = myCOM.events[i].data.fd;
 				NuevoMensaje->type = buf[0];
 				memcpy(&NuevoMensaje->lenght,(void*)(&(buf[1])),2);
 
@@ -155,7 +155,7 @@ int mensajes(t_queue* mensajesQueue){
 			}
 			//SI TERMINE CIERRO CONEXION
 			if (done){
-				Cerrar_Conexion(events[i].data.fd);
+				Cerrar_Conexion(myCOM.events[i].data.fd);
 			}
 		}
 	}

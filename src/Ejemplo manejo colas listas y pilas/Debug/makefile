@@ -37,26 +37,22 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: Proceso\ Plataforma
-
-dependents:
-	-cd /home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug && $(MAKE) all
+all: EJEMPLO\ MANEJO\ COLAS\ LISTAS\ Y\ PILAS
 
 # Tool invocations
-Proceso\ Plataforma: $(OBJS) $(USER_OBJS) /home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug/libCommonsLibrary.so
+EJEMPLO\ MANEJO\ COLAS\ LISTAS\ Y\ PILAS: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proceso Plataforma" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++  -o "EJEMPLO MANEJO COLAS LISTAS Y PILAS" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(OBJS)$(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(CPP_DEPS)$(EXECUTABLES)$(CXX_DEPS)$(C_UPPER_DEPS) "Proceso Plataforma"
+	-$(RM) $(OBJS)$(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(CPP_DEPS)$(EXECUTABLES)$(CXX_DEPS)$(C_UPPER_DEPS) "EJEMPLO MANEJO COLAS LISTAS Y PILAS"
 	-@echo ' '
 
 .PHONY: all clean dependents
 .SECONDARY:
-/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug/libCommonsLibrary.so:
 
 -include ../makefile.targets

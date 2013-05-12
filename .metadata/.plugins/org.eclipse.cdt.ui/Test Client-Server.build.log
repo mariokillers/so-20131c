@@ -1,6 +1,6 @@
-15:52:17 **** Build of configuration Debug for project Test Client-Server ****
+14:38:19 **** Incremental Build of configuration Debug for project Test Client-Server ****
 make all 
 make: No se hace nada para «all».
 
-15:52:18 Build Finished (took 524ms)
+14:38:20 Build Finished (took 619ms)
 

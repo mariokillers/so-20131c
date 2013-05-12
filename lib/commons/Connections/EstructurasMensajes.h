@@ -20,38 +20,38 @@ typedef struct  c{
 	char IP[20];
 	int PORT;
 	int FD;
-} Nivel;
+} __attribute__ ((__packed__)) Nivel;
 
 typedef struct  b{
 	char ID[3]; //es un string, para usar strcpy
 	char IP[20];
 	int PORT;
 	int FD
-} Planificador;
+}__attribute__ ((__packed__)) Planificador;
 
 typedef struct a {
 	char ID[3]; //es un string, para usar strcpy
 	char IP[20];
 	int PORT;
 	int FD;
-} Personaje;
+}__attribute__ ((__packed__)) Personaje;
 
 typedef struct {
 	int POS_X;
 	int POS_Y;
-}Posicion;
+}__attribute__ ((__packed__)) Posicion;
 
 typedef struct {
 	Nivel miNivel;
 	Planificador miPlanificador;
-}Data_Nivel;
+}__attribute__ ((__packed__)) Data_Nivel;
 
 
 typedef struct {
 	int cant_flor;
 	int cant_hongo;
 	int cant_moneda;
-}Recursos;
+}__attribute__ ((__packed__)) Recursos;
 
 Recursos CantRecursos (int flores,int hongos,int monedas){
 	Recursos aux;

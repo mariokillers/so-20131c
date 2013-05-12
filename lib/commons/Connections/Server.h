@@ -14,7 +14,8 @@
 
 ////PROTOTIPOS DE FUNCIONES
 
-int initServer(int);
+CCB initServer(int);
+
 //void setConnectionName(t_list , int, char*);
 
 #endif /* SERVER_H_ */

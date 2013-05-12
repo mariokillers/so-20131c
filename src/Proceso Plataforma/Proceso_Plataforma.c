@@ -25,8 +25,8 @@ Elemento_personaje* personaje_crear(char* nombre) {
 
 
 
-void* initPanif(void* Nivel){
-	nivel* miNivel = (nivel*)Nivel;
+void* initPanif(void* nivel){
+	Nivel* miNivel = (Nivel*)nivel;
 	int error;
 	Planificador* this_Planificador;
 	//CREO LA INSTANCIA DEL PLANIFICADOR
@@ -42,6 +42,8 @@ void* initPanif(void* Nivel){
 
 	list_add(planificadores, this_Planificador);
 	initServer(this_Planificador.PORT);
+
+
 	return 0;
 
 
@@ -74,11 +76,11 @@ void orq (void){
 								//CREO LA INSTANCIA DEL THREAD PLANIFICADOR
 								pthread_t thr;
 								//CREO LA INSTANCIA NIVEL, COPIO LOS PARAMETROS, Y LA AGREGO A LA LISTA
-								nivel* miNivel = malloc(sizeof(nivel));
+								Nivel* miNivel = malloc(sizeof(Nivel));
 								miNivel->FD =
-								strcpy(miNivel->ID, ((nivel*) miMensaje->data)->ID);
-								strcpy(miNivel->IP, ((nivel*) miMensaje->data)->IP);
-								miNivel->PORT= ((nivel*) miMensaje->data)->PORT;
+								strcpy(miNivel->ID, ((Nivel*) miMensaje->data)->ID);
+								strcpy(miNivel->IP, ((Nivel*) miMensaje->data)->IP);
+								miNivel->PORT= ((Nivel*) miMensaje->data)->PORT;
 								miNivel->FD= miMensaje->from;
 								list_add(miNivel);
 

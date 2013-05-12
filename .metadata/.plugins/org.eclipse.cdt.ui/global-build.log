@@ -1,938 +1,149 @@
-23:20:56 **** Clean-only build of configuration Debug for project CommonsLibrary ****
-make clean 
-rm -rf  ./collections/dictionary.o ./collections/list.o ./collections/queue.o ./collections/stack.o  ./Connections/Client.o ./Connections/Mensajes.o ./Connections/Server.o  ./bitarray.o ./config.o ./error.o ./log.o ./process.o ./string.o ./temporal.o ./txt.o  ./collections/dictionary.d ./collections/list.d ./collections/queue.d ./collections/stack.d  ./Connections/Client.d ./Connections/Mensajes.d ./Connections/Server.d  ./bitarray.d ./config.d ./error.d ./log.d ./process.d ./string.d ./temporal.d ./txt.d  libCommonsLibrary.so
- 
-23:21:00 **** Build of configuration Debug for project CommonsLibrary ****
+13:16:23 **** Incremental Build of configuration Debug for project Test Client-Server ****
 make all 
-Building file: ../collections/dictionary.c
+make: No se hace nada para «all».
+13:16:29 **** Incremental Build of configuration Debug for project Test Client-Server ****
+make all 
+make: No se hace nada para «all».
+13:17:07 **** Incremental Build of configuration Debug for project Test Client-Server ****
+make all 
+make: No se hace nada para «all».
+13:17:27 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+13:17:28 **** Incremental Build of configuration Debug for project Test Client-Server ****
+make all 
+make: No se hace nada para «all».
+13:17:32 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+13:17:34 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+13:17:35 **** Incremental Build of configuration Debug for project Test Client-Server ****
+make all 
+make: No se hace nada para «all».
+13:18:15 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+13:18:16 **** Incremental Build of configuration Debug for project Test Client-Server ****
+make all 
+make: No se hace nada para «all».
+13:18:30 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+13:18:31 **** Incremental Build of configuration Debug for project Test Client-Server ****
+make all 
+make: No se hace nada para «all».
+13:18:51 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+13:18:52 **** Incremental Build of configuration Debug for project Test Client-Server ****
+make all 
+Building file: ../src/Test Client-Server.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/dictionary.d" -MT"collections/dictionary.d" -o "collections/dictionary.o" "../collections/dictionary.c"
-Finished building: ../collections/dictionary.c
+gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test Client-Server.d" -MT"src/Test\ Client-Server.d" -o "src/Test Client-Server.o" "../src/Test Client-Server.c"
+Finished building: ../src/Test Client-Server.c
  
-Building file: ../collections/list.c
+Building target: Test Client-Server
+Invoking: GCC C Linker
+gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Test Client-Server"  ./src/Test\ Client-Server.o   -lCommonsLibrary
+Finished building target: Test Client-Server
+ 
+13:19:02 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+13:19:03 **** Incremental Build of configuration Debug for project Test Client-Server ****
+make all 
+make: No se hace nada para «all».
+13:21:09 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+13:21:10 **** Incremental Build of configuration Debug for project Test Client-Server ****
+make all 
+Building file: ../src/Test Client-Server.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/list.d" -MT"collections/list.d" -o "collections/list.o" "../collections/list.c"
-Finished building: ../collections/list.c
+gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test Client-Server.d" -MT"src/Test\ Client-Server.d" -o "src/Test Client-Server.o" "../src/Test Client-Server.c"
+Finished building: ../src/Test Client-Server.c
  
-Building file: ../collections/queue.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/queue.d" -MT"collections/queue.d" -o "collections/queue.o" "../collections/queue.c"
-Finished building: ../collections/queue.c
+Building target: Test Client-Server
+Invoking: GCC C Linker
+gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Test Client-Server"  ./src/Test\ Client-Server.o   -lCommonsLibrary
+Finished building target: Test Client-Server
  
-Building file: ../collections/stack.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/stack.d" -MT"collections/stack.d" -o "collections/stack.o" "../collections/stack.c"
-Finished building: ../collections/stack.c
- 
+13:21:18 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+13:21:20 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+13:21:21 **** Incremental Build of configuration Debug for project Test Client-Server ****
+make all 
+make: No se hace nada para «all».
+13:22:01 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+13:22:02 **** Incremental Build of configuration Debug for project Test Client-Server ****
+make all 
+make: No se hace nada para «all».
+13:26:29 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+13:26:30 **** Incremental Build of configuration Debug for project Test Client-Server ****
+make all 
+make: No se hace nada para «all».
+13:39:37 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+13:39:38 **** Incremental Build of configuration Debug for project Test Client-Server ****
+make all 
+make: No se hace nada para «all».
+13:42:13 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+13:42:14 **** Incremental Build of configuration Debug for project Test Client-Server ****
+make all 
+make: No se hace nada para «all».
+13:52:16 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
 Building file: ../Connections/Client.c
 Invoking: GCC C Compiler
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Client.d" -MT"Connections/Client.d" -o "Connections/Client.o" "../Connections/Client.c"
 Finished building: ../Connections/Client.c
  
-Building file: ../Connections/Mensajes.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Mensajes.d" -MT"Connections/Mensajes.d" -o "Connections/Mensajes.o" "../Connections/Mensajes.c"
-Finished building: ../Connections/Mensajes.c
- 
-Building file: ../Connections/Server.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Server.d" -MT"Connections/Server.d" -o "Connections/Server.o" "../Connections/Server.c"
-Finished building: ../Connections/Server.c
- 
-Building file: ../bitarray.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"bitarray.d" -MT"bitarray.d" -o "bitarray.o" "../bitarray.c"
-Finished building: ../bitarray.c
- 
-Building file: ../config.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"config.d" -MT"config.d" -o "config.o" "../config.c"
-Finished building: ../config.c
- 
-Building file: ../error.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"error.d" -MT"error.d" -o "error.o" "../error.c"
-Finished building: ../error.c
- 
-Building file: ../log.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"log.d" -MT"log.d" -o "log.o" "../log.c"
-Finished building: ../log.c
- 
-Building file: ../process.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"process.d" -MT"process.d" -o "process.o" "../process.c"
-Finished building: ../process.c
- 
-Building file: ../string.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"string.d" -MT"string.d" -o "string.o" "../string.c"
-Finished building: ../string.c
- 
-Building file: ../temporal.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"temporal.d" -MT"temporal.d" -o "temporal.o" "../temporal.c"
-Finished building: ../temporal.c
- 
-Building file: ../txt.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"txt.d" -MT"txt.d" -o "txt.o" "../txt.c"
-Finished building: ../txt.c
- 
 Building target: libCommonsLibrary.so
 Invoking: GCC C Linker
 gcc -shared -o "libCommonsLibrary.so"  ./collections/dictionary.o ./collections/list.o ./collections/queue.o ./collections/stack.o  ./Connections/Client.o ./Connections/Mensajes.o ./Connections/Server.o  ./bitarray.o ./config.o ./error.o ./log.o ./process.o ./string.o ./temporal.o ./txt.o   
 Finished building target: libCommonsLibrary.so
  
-23:21:49 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-23:21:52 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-Building file: ../collections/dictionary.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/dictionary.d" -MT"collections/dictionary.d" -o "collections/dictionary.o" "../collections/dictionary.c"
-Finished building: ../collections/dictionary.c
- 
-Building file: ../collections/list.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/list.d" -MT"collections/list.d" -o "collections/list.o" "../collections/list.c"
-Finished building: ../collections/list.c
- 
-Building file: ../collections/queue.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/queue.d" -MT"collections/queue.d" -o "collections/queue.o" "../collections/queue.c"
-Finished building: ../collections/queue.c
- 
-Building file: ../collections/stack.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/stack.d" -MT"collections/stack.d" -o "collections/stack.o" "../collections/stack.c"
-Finished building: ../collections/stack.c
- 
-Building file: ../Connections/Client.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Client.d" -MT"Connections/Client.d" -o "Connections/Client.o" "../Connections/Client.c"
-Finished building: ../Connections/Client.c
- 
-Building file: ../Connections/Mensajes.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Mensajes.d" -MT"Connections/Mensajes.d" -o "Connections/Mensajes.o" "../Connections/Mensajes.c"
-Finished building: ../Connections/Mensajes.c
- 
-Building file: ../Connections/Server.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Server.d" -MT"Connections/Server.d" -o "Connections/Server.o" "../Connections/Server.c"
-Finished building: ../Connections/Server.c
- 
-Building file: ../bitarray.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"bitarray.d" -MT"bitarray.d" -o "bitarray.o" "../bitarray.c"
-Finished building: ../bitarray.c
- 
-Building file: ../config.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"config.d" -MT"config.d" -o "config.o" "../config.c"
-Finished building: ../config.c
- 
-Building file: ../error.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"error.d" -MT"error.d" -o "error.o" "../error.c"
-Finished building: ../error.c
- 
-Building file: ../log.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"log.d" -MT"log.d" -o "log.o" "../log.c"
-Finished building: ../log.c
- 
-Building file: ../process.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"process.d" -MT"process.d" -o "process.o" "../process.c"
-Finished building: ../process.c
- 
-Building file: ../string.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"string.d" -MT"string.d" -o "string.o" "../string.c"
-Finished building: ../string.c
- 
-Building file: ../temporal.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"temporal.d" -MT"temporal.d" -o "temporal.o" "../temporal.c"
-Finished building: ../temporal.c
- 
-Building file: ../txt.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"txt.d" -MT"txt.d" -o "txt.o" "../txt.c"
-Finished building: ../txt.c
- 
-Building target: libCommonsLibrary.so
-Invoking: GCC C Linker
-gcc -shared -o "libCommonsLibrary.so"  ./collections/dictionary.o ./collections/list.o ./collections/queue.o ./collections/stack.o  ./Connections/Client.o ./Connections/Mensajes.o ./Connections/Server.o  ./bitarray.o ./config.o ./error.o ./log.o ./process.o ./string.o ./temporal.o ./txt.o   
-Finished building target: libCommonsLibrary.so
- 
-23:22:09 **** Incremental Build of configuration Debug for project Test Client-Server ****
+13:52:21 **** Incremental Build of configuration Debug for project Test Client-Server ****
 make all 
 Building target: Test Client-Server
 Invoking: GCC C Linker
 gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Test Client-Server"  ./src/Test\ Client-Server.o   -lCommonsLibrary
 Finished building target: Test Client-Server
  
-23:23:47 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-Building file: ../collections/dictionary.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/dictionary.d" -MT"collections/dictionary.d" -o "collections/dictionary.o" "../collections/dictionary.c"
-Finished building: ../collections/dictionary.c
- 
-Building file: ../collections/list.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/list.d" -MT"collections/list.d" -o "collections/list.o" "../collections/list.c"
-Finished building: ../collections/list.c
- 
-Building file: ../collections/queue.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/queue.d" -MT"collections/queue.d" -o "collections/queue.o" "../collections/queue.c"
-Finished building: ../collections/queue.c
- 
-Building file: ../collections/stack.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/stack.d" -MT"collections/stack.d" -o "collections/stack.o" "../collections/stack.c"
-Finished building: ../collections/stack.c
- 
-Building file: ../Connections/Client.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Client.d" -MT"Connections/Client.d" -o "Connections/Client.o" "../Connections/Client.c"
-Finished building: ../Connections/Client.c
- 
-Building file: ../Connections/Mensajes.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Mensajes.d" -MT"Connections/Mensajes.d" -o "Connections/Mensajes.o" "../Connections/Mensajes.c"
-Finished building: ../Connections/Mensajes.c
- 
-Building file: ../Connections/Server.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Server.d" -MT"Connections/Server.d" -o "Connections/Server.o" "../Connections/Server.c"
-Finished building: ../Connections/Server.c
- 
-Building file: ../bitarray.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"bitarray.d" -MT"bitarray.d" -o "bitarray.o" "../bitarray.c"
-Finished building: ../bitarray.c
- 
-Building file: ../config.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"config.d" -MT"config.d" -o "config.o" "../config.c"
-Finished building: ../config.c
- 
-Building file: ../error.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"error.d" -MT"error.d" -o "error.o" "../error.c"
-Finished building: ../error.c
- 
-Building file: ../log.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"log.d" -MT"log.d" -o "log.o" "../log.c"
-Finished building: ../log.c
- 
-Building file: ../process.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"process.d" -MT"process.d" -o "process.o" "../process.c"
-Finished building: ../process.c
- 
-Building file: ../string.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"string.d" -MT"string.d" -o "string.o" "../string.c"
-Finished building: ../string.c
- 
-Building file: ../temporal.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"temporal.d" -MT"temporal.d" -o "temporal.o" "../temporal.c"
-Finished building: ../temporal.c
- 
-Building file: ../txt.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"txt.d" -MT"txt.d" -o "txt.o" "../txt.c"
-Finished building: ../txt.c
- 
-Building target: libCommonsLibrary.so
-Invoking: GCC C Linker
-gcc -shared -o "libCommonsLibrary.so"  ./collections/dictionary.o ./collections/list.o ./collections/queue.o ./collections/stack.o  ./Connections/Client.o ./Connections/Mensajes.o ./Connections/Server.o  ./bitarray.o ./config.o ./error.o ./log.o ./process.o ./string.o ./temporal.o ./txt.o   
-Finished building target: libCommonsLibrary.so
- 
-23:24:15 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-Building file: ../collections/dictionary.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/dictionary.d" -MT"collections/dictionary.d" -o "collections/dictionary.o" "../collections/dictionary.c"
-Finished building: ../collections/dictionary.c
- 
-Building file: ../collections/list.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/list.d" -MT"collections/list.d" -o "collections/list.o" "../collections/list.c"
-Finished building: ../collections/list.c
- 
-Building file: ../collections/queue.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/queue.d" -MT"collections/queue.d" -o "collections/queue.o" "../collections/queue.c"
-Finished building: ../collections/queue.c
- 
-Building file: ../collections/stack.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/stack.d" -MT"collections/stack.d" -o "collections/stack.o" "../collections/stack.c"
-Finished building: ../collections/stack.c
- 
-Building file: ../Connections/Client.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Client.d" -MT"Connections/Client.d" -o "Connections/Client.o" "../Connections/Client.c"
-Finished building: ../Connections/Client.c
- 
-Building file: ../Connections/Mensajes.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Mensajes.d" -MT"Connections/Mensajes.d" -o "Connections/Mensajes.o" "../Connections/Mensajes.c"
-Finished building: ../Connections/Mensajes.c
- 
-Building file: ../Connections/Server.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Server.d" -MT"Connections/Server.d" -o "Connections/Server.o" "../Connections/Server.c"
-Finished building: ../Connections/Server.c
- 
-Building file: ../bitarray.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"bitarray.d" -MT"bitarray.d" -o "bitarray.o" "../bitarray.c"
-Finished building: ../bitarray.c
- 
-Building file: ../config.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"config.d" -MT"config.d" -o "config.o" "../config.c"
-Finished building: ../config.c
- 
-Building file: ../error.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"error.d" -MT"error.d" -o "error.o" "../error.c"
-Finished building: ../error.c
- 
-Building file: ../log.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"log.d" -MT"log.d" -o "log.o" "../log.c"
-Finished building: ../log.c
- 
-Building file: ../process.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"process.d" -MT"process.d" -o "process.o" "../process.c"
-Finished building: ../process.c
- 
-Building file: ../string.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"string.d" -MT"string.d" -o "string.o" "../string.c"
-Finished building: ../string.c
- 
-Building file: ../temporal.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"temporal.d" -MT"temporal.d" -o "temporal.o" "../temporal.c"
-Finished building: ../temporal.c
- 
-Building file: ../txt.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"txt.d" -MT"txt.d" -o "txt.o" "../txt.c"
-Finished building: ../txt.c
- 
-Building target: libCommonsLibrary.so
-Invoking: GCC C Linker
-gcc -shared -o "libCommonsLibrary.so"  ./collections/dictionary.o ./collections/list.o ./collections/queue.o ./collections/stack.o  ./Connections/Client.o ./Connections/Mensajes.o ./Connections/Server.o  ./bitarray.o ./config.o ./error.o ./log.o ./process.o ./string.o ./temporal.o ./txt.o   
-Finished building target: libCommonsLibrary.so
- 
-23:24:23 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-Building file: ../src/Test Client-Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test Client-Server.d" -MT"src/Test\ Client-Server.d" -o "src/Test Client-Server.o" "../src/Test Client-Server.c"
-Finished building: ../src/Test Client-Server.c
- 
-Building target: Test Client-Server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Test Client-Server"  ./src/Test\ Client-Server.o   -lCommonsLibrary
-Finished building target: Test Client-Server
- 
-23:25:25 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+13:52:31 **** Incremental Build of configuration Debug for project CommonsLibrary ****
 make all 
 make: No se hace nada para «all».
-23:25:27 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-Building file: ../src/Test Client-Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test Client-Server.d" -MT"src/Test\ Client-Server.d" -o "src/Test Client-Server.o" "../src/Test Client-Server.c"
-../src/Test Client-Server.c: En la función ‘main’:
-../src/Test Client-Server.c:39:5: aviso: formato ‘%d’ espera un argumento ‘int’ coincidente [-Wformat]
-Finished building: ../src/Test Client-Server.c
- 
-Building target: Test Client-Server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Test Client-Server"  ./src/Test\ Client-Server.o   -lCommonsLibrary
-Finished building target: Test Client-Server
- 
-23:25:50 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+13:52:33 **** Incremental Build of configuration Debug for project Test Client-Server ****
 make all 
 make: No se hace nada para «all».
-23:25:51 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-Building file: ../src/Test Client-Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test Client-Server.d" -MT"src/Test\ Client-Server.d" -o "src/Test Client-Server.o" "../src/Test Client-Server.c"
-Finished building: ../src/Test Client-Server.c
- 
-Building target: Test Client-Server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Test Client-Server"  ./src/Test\ Client-Server.o   -lCommonsLibrary
-Finished building target: Test Client-Server
- 
-23:27:05 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+13:52:38 **** Incremental Build of configuration Debug for project CommonsLibrary ****
 make all 
 make: No se hace nada para «all».
-23:27:07 **** Incremental Build of configuration Debug for project Test Client-Server ****
+13:52:39 **** Incremental Build of configuration Debug for project CommonsLibrary ****
 make all 
 make: No se hace nada para «all».
-23:28:31 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+13:52:40 **** Incremental Build of configuration Debug for project Test Client-Server ****
 make all 
 make: No se hace nada para «all».
-23:28:32 **** Incremental Build of configuration Debug for project Test Client-Server ****
+13:53:26 **** Incremental Build of configuration Debug for project CommonsLibrary ****
 make all 
 make: No se hace nada para «all».
-23:28:51 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+13:53:27 **** Incremental Build of configuration Debug for project Test Client-Server ****
 make all 
 make: No se hace nada para «all».
-23:28:52 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-23:29:10 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-Building file: ../collections/dictionary.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/dictionary.d" -MT"collections/dictionary.d" -o "collections/dictionary.o" "../collections/dictionary.c"
-Finished building: ../collections/dictionary.c
- 
-Building file: ../collections/list.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/list.d" -MT"collections/list.d" -o "collections/list.o" "../collections/list.c"
-Finished building: ../collections/list.c
- 
-Building file: ../collections/queue.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/queue.d" -MT"collections/queue.d" -o "collections/queue.o" "../collections/queue.c"
-Finished building: ../collections/queue.c
- 
-Building file: ../collections/stack.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/stack.d" -MT"collections/stack.d" -o "collections/stack.o" "../collections/stack.c"
-Finished building: ../collections/stack.c
- 
-Building file: ../Connections/Client.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Client.d" -MT"Connections/Client.d" -o "Connections/Client.o" "../Connections/Client.c"
-Finished building: ../Connections/Client.c
- 
-Building file: ../Connections/Mensajes.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Mensajes.d" -MT"Connections/Mensajes.d" -o "Connections/Mensajes.o" "../Connections/Mensajes.c"
-Finished building: ../Connections/Mensajes.c
- 
-Building file: ../Connections/Server.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Server.d" -MT"Connections/Server.d" -o "Connections/Server.o" "../Connections/Server.c"
-Finished building: ../Connections/Server.c
- 
-Building file: ../bitarray.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"bitarray.d" -MT"bitarray.d" -o "bitarray.o" "../bitarray.c"
-Finished building: ../bitarray.c
- 
-Building file: ../config.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"config.d" -MT"config.d" -o "config.o" "../config.c"
-Finished building: ../config.c
- 
-Building file: ../error.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"error.d" -MT"error.d" -o "error.o" "../error.c"
-Finished building: ../error.c
- 
-Building file: ../log.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"log.d" -MT"log.d" -o "log.o" "../log.c"
-Finished building: ../log.c
- 
-Building file: ../process.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"process.d" -MT"process.d" -o "process.o" "../process.c"
-Finished building: ../process.c
- 
-Building file: ../string.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"string.d" -MT"string.d" -o "string.o" "../string.c"
-Finished building: ../string.c
- 
-Building file: ../temporal.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"temporal.d" -MT"temporal.d" -o "temporal.o" "../temporal.c"
-Finished building: ../temporal.c
- 
-Building file: ../txt.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"txt.d" -MT"txt.d" -o "txt.o" "../txt.c"
-Finished building: ../txt.c
- 
-Building target: libCommonsLibrary.so
-Invoking: GCC C Linker
-gcc -shared -o "libCommonsLibrary.so"  ./collections/dictionary.o ./collections/list.o ./collections/queue.o ./collections/stack.o  ./Connections/Client.o ./Connections/Mensajes.o ./Connections/Server.o  ./bitarray.o ./config.o ./error.o ./log.o ./process.o ./string.o ./temporal.o ./txt.o   
-Finished building target: libCommonsLibrary.so
- 
-23:29:21 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-Building target: Test Client-Server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Test Client-Server"  ./src/Test\ Client-Server.o   -lCommonsLibrary
-Finished building target: Test Client-Server
- 
-23:29:27 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-23:29:28 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-23:31:52 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-23:31:54 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-23:32:08 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-23:32:10 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-23:33:13 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-Building file: ../Connections/Mensajes.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Mensajes.d" -MT"Connections/Mensajes.d" -o "Connections/Mensajes.o" "../Connections/Mensajes.c"
-Finished building: ../Connections/Mensajes.c
- 
-Building target: libCommonsLibrary.so
-Invoking: GCC C Linker
-gcc -shared -o "libCommonsLibrary.so"  ./collections/dictionary.o ./collections/list.o ./collections/queue.o ./collections/stack.o  ./Connections/Client.o ./Connections/Mensajes.o ./Connections/Server.o  ./bitarray.o ./config.o ./error.o ./log.o ./process.o ./string.o ./temporal.o ./txt.o   
-Finished building target: libCommonsLibrary.so
- 
-23:33:23 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-Building target: Test Client-Server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Test Client-Server"  ./src/Test\ Client-Server.o   -lCommonsLibrary
-Finished building target: Test Client-Server
- 
-23:33:33 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-23:33:35 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-23:34:55 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-23:34:58 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-Building file: ../src/Test Client-Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test Client-Server.d" -MT"src/Test\ Client-Server.d" -o "src/Test Client-Server.o" "../src/Test Client-Server.c"
-Finished building: ../src/Test Client-Server.c
- 
-Building target: Test Client-Server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Test Client-Server"  ./src/Test\ Client-Server.o   -lCommonsLibrary
-Finished building target: Test Client-Server
- 
-23:35:08 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-23:35:10 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-23:38:42 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-23:38:46 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-Building file: ../src/Test Client-Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test Client-Server.d" -MT"src/Test\ Client-Server.d" -o "src/Test Client-Server.o" "../src/Test Client-Server.c"
-Finished building: ../src/Test Client-Server.c
- 
-Building target: Test Client-Server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Test Client-Server"  ./src/Test\ Client-Server.o   -lCommonsLibrary
-Finished building target: Test Client-Server
- 
-23:38:53 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-23:38:54 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-00:01:01 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-00:01:03 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-00:07:05 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-Building file: ../Connections/Mensajes.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Mensajes.d" -MT"Connections/Mensajes.d" -o "Connections/Mensajes.o" "../Connections/Mensajes.c"
-Finished building: ../Connections/Mensajes.c
- 
-Building target: libCommonsLibrary.so
-Invoking: GCC C Linker
-gcc -shared -o "libCommonsLibrary.so"  ./collections/dictionary.o ./collections/list.o ./collections/queue.o ./collections/stack.o  ./Connections/Client.o ./Connections/Mensajes.o ./Connections/Server.o  ./bitarray.o ./config.o ./error.o ./log.o ./process.o ./string.o ./temporal.o ./txt.o   
-Finished building target: libCommonsLibrary.so
- 
-00:07:09 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-Building file: ../src/Test Client-Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test Client-Server.d" -MT"src/Test\ Client-Server.d" -o "src/Test Client-Server.o" "../src/Test Client-Server.c"
-../src/Test Client-Server.c:50:2: error: expected identifier or ‘(’ before ‘if’
-../src/Test Client-Server.c:64:2: aviso: la definición de datos no tiene tipo o clase de almacenamiento [activado por defecto]
-../src/Test Client-Server.c:64:2: aviso: el tipo de dato por defecto es ‘int’ en la declaración de ‘close’ [-Wimplicit-int]
-../src/Test Client-Server.c:64:2: aviso: nombres de parámetros (sin tipos) en la declaración de la función [activado por defecto]
-../src/Test Client-Server.c:66:2: error: expected identifier or ‘(’ before ‘return’
-../src/Test Client-Server.c:67:1: error: expected identifier or ‘(’ before ‘}’ token
-../src/Test Client-Server.c: En la función ‘main’:
-../src/Test Client-Server.c:47:2: aviso: el control alcanza el final de una función que no es void [-Wreturn-type]
-make: *** [src/Test Client-Server.o] Error 1
-00:08:02 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-00:08:06 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-Building file: ../src/Test Client-Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test Client-Server.d" -MT"src/Test\ Client-Server.d" -o "src/Test Client-Server.o" "../src/Test Client-Server.c"
-Finished building: ../src/Test Client-Server.c
- 
-Building target: Test Client-Server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Test Client-Server"  ./src/Test\ Client-Server.o   -lCommonsLibrary
-Finished building target: Test Client-Server
- 
-00:10:41 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-00:10:43 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-00:15:20 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-00:15:22 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-Building file: ../src/Test Client-Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test Client-Server.d" -MT"src/Test\ Client-Server.d" -o "src/Test Client-Server.o" "../src/Test Client-Server.c"
-../src/Test Client-Server.c: En la función ‘main’:
-../src/Test Client-Server.c:32:2: aviso: el paso del argumento 1 de ‘atoi’ crea un puntero desde un entero sin una conversión [activado por defecto]
-In file included from ../src/Test Client-Server.c:12:0:
-/usr/include/stdlib.h:148:12: nota: se esperaba ‘const char *’ pero el argumento es de tipo ‘int’
-../src/Test Client-Server.c:44:5: aviso: el paso del argumento 1 de ‘atoi’ crea un puntero desde un entero sin una conversión [activado por defecto]
-In file included from ../src/Test Client-Server.c:12:0:
-/usr/include/stdlib.h:148:12: nota: se esperaba ‘const char *’ pero el argumento es de tipo ‘int’
-Finished building: ../src/Test Client-Server.c
- 
-Building target: Test Client-Server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Test Client-Server"  ./src/Test\ Client-Server.o   -lCommonsLibrary
-Finished building target: Test Client-Server
- 
-00:16:03 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-00:16:04 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-Building file: ../src/Test Client-Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test Client-Server.d" -MT"src/Test\ Client-Server.d" -o "src/Test Client-Server.o" "../src/Test Client-Server.c"
-../src/Test Client-Server.c: En la función ‘main’:
-../src/Test Client-Server.c:32:2: aviso: el paso del argumento 1 de ‘atoi’ crea un puntero desde un entero sin una conversión [activado por defecto]
-In file included from ../src/Test Client-Server.c:12:0:
-/usr/include/stdlib.h:148:12: nota: se esperaba ‘const char *’ pero el argumento es de tipo ‘int’
-Finished building: ../src/Test Client-Server.c
- 
-Building target: Test Client-Server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Test Client-Server"  ./src/Test\ Client-Server.o   -lCommonsLibrary
-Finished building target: Test Client-Server
- 
-00:18:01 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-Building file: ../Connections/Mensajes.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Mensajes.d" -MT"Connections/Mensajes.d" -o "Connections/Mensajes.o" "../Connections/Mensajes.c"
-../Connections/Mensajes.c: En la función ‘mandarMensaje’:
-../Connections/Mensajes.c:181:21: aviso: conversión a puntero desde un entero de tamaño diferente [-Wint-to-pointer-cast]
-Finished building: ../Connections/Mensajes.c
- 
-Building target: libCommonsLibrary.so
-Invoking: GCC C Linker
-gcc -shared -o "libCommonsLibrary.so"  ./collections/dictionary.o ./collections/list.o ./collections/queue.o ./collections/stack.o  ./Connections/Client.o ./Connections/Mensajes.o ./Connections/Server.o  ./bitarray.o ./config.o ./error.o ./log.o ./process.o ./string.o ./temporal.o ./txt.o   
-Finished building target: libCommonsLibrary.so
- 
-00:18:06 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-Building file: ../src/Test Client-Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test Client-Server.d" -MT"src/Test\ Client-Server.d" -o "src/Test Client-Server.o" "../src/Test Client-Server.c"
-Finished building: ../src/Test Client-Server.c
- 
-Building target: Test Client-Server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Test Client-Server"  ./src/Test\ Client-Server.o   -lCommonsLibrary
-Finished building target: Test Client-Server
- 
-00:19:09 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-Building file: ../Connections/Mensajes.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Mensajes.d" -MT"Connections/Mensajes.d" -o "Connections/Mensajes.o" "../Connections/Mensajes.c"
-Finished building: ../Connections/Mensajes.c
- 
-Building target: libCommonsLibrary.so
-Invoking: GCC C Linker
-gcc -shared -o "libCommonsLibrary.so"  ./collections/dictionary.o ./collections/list.o ./collections/queue.o ./collections/stack.o  ./Connections/Client.o ./Connections/Mensajes.o ./Connections/Server.o  ./bitarray.o ./config.o ./error.o ./log.o ./process.o ./string.o ./temporal.o ./txt.o   
-Finished building target: libCommonsLibrary.so
- 
-00:19:12 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-Building target: Test Client-Server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Test Client-Server"  ./src/Test\ Client-Server.o   -lCommonsLibrary
-Finished building target: Test Client-Server
- 
-12:20:50 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-Building file: ../Connections/Mensajes.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Mensajes.d" -MT"Connections/Mensajes.d" -o "Connections/Mensajes.o" "../Connections/Mensajes.c"
-Finished building: ../Connections/Mensajes.c
-make: *** Se borra el archivo «Connections/Mensajes.o»
-make: *** [Connections/Mensajes.o] Terminado
-Command canceled
-12:22:26 **** Build of configuration Debug for project CommonsLibrary ****
-make all 
-Building file: ../Connections/Mensajes.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Mensajes.d" -MT"Connections/Mensajes.d" -o "Connections/Mensajes.o" "../Connections/Mensajes.c"
-Finished building: ../Connections/Mensajes.c
- 
-Building target: libCommonsLibrary.so
-Invoking: GCC C Linker
-gcc -shared -o "libCommonsLibrary.so"  ./collections/dictionary.o ./collections/list.o ./collections/queue.o ./collections/stack.o  ./Connections/Client.o ./Connections/Mensajes.o ./Connections/Server.o  ./bitarray.o ./config.o ./error.o ./log.o ./process.o ./string.o ./temporal.o ./txt.o   
-Finished building target: libCommonsLibrary.so
- 
-12:22:33 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-Building file: ../src/Test Client-Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test Client-Server.d" -MT"src/Test\ Client-Server.d" -o "src/Test Client-Server.o" "../src/Test Client-Server.c"
-../src/Test Client-Server.c: En la función ‘main’:
-../src/Test Client-Server.c:54:10: error: redefinición de ‘msg’
-../src/Test Client-Server.c:39:10: nota: la definición previa de ‘msg’ estaba aquí
-../src/Test Client-Server.c:59:10: error: ‘miMensaje2’ no se declaró aquí (primer uso en esta función)
-../src/Test Client-Server.c:59:10: nota: cada identificador sin declarar se reporta sólo una vez para cada función en el que aparece
-make: *** [src/Test Client-Server.o] Error 1
-12:22:50 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-12:22:59 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-Building file: ../src/Test Client-Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test Client-Server.d" -MT"src/Test\ Client-Server.d" -o "src/Test Client-Server.o" "../src/Test Client-Server.c"
-../src/Test Client-Server.c: En la función ‘main’:
-../src/Test Client-Server.c:54:10: error: redefinición de ‘msg’
-../src/Test Client-Server.c:39:10: nota: la definición previa de ‘msg’ estaba aquí
-make: *** [src/Test Client-Server.o] Error 1
-12:23:11 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-12:23:13 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-Building file: ../src/Test Client-Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test Client-Server.d" -MT"src/Test\ Client-Server.d" -o "src/Test Client-Server.o" "../src/Test Client-Server.c"
-../src/Test Client-Server.c: En la función ‘main’:
-../src/Test Client-Server.c:54:10: error: redefinición de ‘msg’
-../src/Test Client-Server.c:39:10: nota: la definición previa de ‘msg’ estaba aquí
-make: *** [src/Test Client-Server.o] Error 1
-12:23:44 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-12:23:46 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-Building file: ../src/Test Client-Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test Client-Server.d" -MT"src/Test\ Client-Server.d" -o "src/Test Client-Server.o" "../src/Test Client-Server.c"
-../src/Test Client-Server.c: En la función ‘main’:
-../src/Test Client-Server.c:39:5: error: ‘msg’ no se declaró aquí (primer uso en esta función)
-../src/Test Client-Server.c:39:5: nota: cada identificador sin declarar se reporta sólo una vez para cada función en el que aparece
-make: *** [src/Test Client-Server.o] Error 1
-12:23:50 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-12:23:51 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-Building file: ../src/Test Client-Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test Client-Server.d" -MT"src/Test\ Client-Server.d" -o "src/Test Client-Server.o" "../src/Test Client-Server.c"
-../src/Test Client-Server.c: En la función ‘main’:
-../src/Test Client-Server.c:39:5: error: ‘msg’ no se declaró aquí (primer uso en esta función)
-../src/Test Client-Server.c:39:5: nota: cada identificador sin declarar se reporta sólo una vez para cada función en el que aparece
-make: *** [src/Test Client-Server.o] Error 1
-12:24:23 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-12:24:25 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-Building file: ../src/Test Client-Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test Client-Server.d" -MT"src/Test\ Client-Server.d" -o "src/Test Client-Server.o" "../src/Test Client-Server.c"
-Finished building: ../src/Test Client-Server.c
- 
-Building target: Test Client-Server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Test Client-Server"  ./src/Test\ Client-Server.o   -lCommonsLibrary
-Finished building target: Test Client-Server
- 
-12:24:33 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-12:24:34 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-12:27:04 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-12:27:06 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-Building file: ../src/Test Client-Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test Client-Server.d" -MT"src/Test\ Client-Server.d" -o "src/Test Client-Server.o" "../src/Test Client-Server.c"
-Finished building: ../src/Test Client-Server.c
- 
-Building target: Test Client-Server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Test Client-Server"  ./src/Test\ Client-Server.o   -lCommonsLibrary
-Finished building target: Test Client-Server
- 
-12:27:12 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-12:27:13 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-12:28:44 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-12:28:45 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-12:32:20 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-Building file: ../Connections/Mensajes.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Mensajes.d" -MT"Connections/Mensajes.d" -o "Connections/Mensajes.o" "../Connections/Mensajes.c"
-Finished building: ../Connections/Mensajes.c
- 
-Building target: libCommonsLibrary.so
-Invoking: GCC C Linker
-gcc -shared -o "libCommonsLibrary.so"  ./collections/dictionary.o ./collections/list.o ./collections/queue.o ./collections/stack.o  ./Connections/Client.o ./Connections/Mensajes.o ./Connections/Server.o  ./bitarray.o ./config.o ./error.o ./log.o ./process.o ./string.o ./temporal.o ./txt.o   
-Finished building target: libCommonsLibrary.so
- 
-12:32:23 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-Building target: Test Client-Server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Test Client-Server"  ./src/Test\ Client-Server.o   -lCommonsLibrary
-Finished building target: Test Client-Server
- 
-12:32:32 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-12:32:33 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-12:32:40 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-12:32:42 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-12:35:38 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-12:35:42 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-12:35:43 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-12:35:56 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-12:35:58 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-12:42:07 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-12:42:08 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-12:50:06 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-12:50:07 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-12:52:39 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-Building file: ../Connections/Mensajes.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Mensajes.d" -MT"Connections/Mensajes.d" -o "Connections/Mensajes.o" "../Connections/Mensajes.c"
-Finished building: ../Connections/Mensajes.c
- 
-Building target: libCommonsLibrary.so
-Invoking: GCC C Linker
-gcc -shared -o "libCommonsLibrary.so"  ./collections/dictionary.o ./collections/list.o ./collections/queue.o ./collections/stack.o  ./Connections/Client.o ./Connections/Mensajes.o ./Connections/Server.o  ./bitarray.o ./config.o ./error.o ./log.o ./process.o ./string.o ./temporal.o ./txt.o   
-Finished building target: libCommonsLibrary.so
- 
-12:52:44 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-Building file: ../Connections/Mensajes.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Mensajes.d" -MT"Connections/Mensajes.d" -o "Connections/Mensajes.o" "../Connections/Mensajes.c"
-Finished building: ../Connections/Mensajes.c
- 
-Building target: libCommonsLibrary.so
-Invoking: GCC C Linker
-gcc -shared -o "libCommonsLibrary.so"  ./collections/dictionary.o ./collections/list.o ./collections/queue.o ./collections/stack.o  ./Connections/Client.o ./Connections/Mensajes.o ./Connections/Server.o  ./bitarray.o ./config.o ./error.o ./log.o ./process.o ./string.o ./temporal.o ./txt.o   
-Finished building target: libCommonsLibrary.so
- 
-12:52:47 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-Building target: Test Client-Server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Test Client-Server"  ./src/Test\ Client-Server.o   -lCommonsLibrary
-Finished building target: Test Client-Server
- 
-12:57:28 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+14:04:44 **** Incremental Build of configuration Debug for project CommonsLibrary ****
 make all 
 Building file: ../Connections/Client.c
 Invoking: GCC C Compiler
@@ -954,827 +165,80 @@ Invoking: GCC C Linker
 gcc -shared -o "libCommonsLibrary.so"  ./collections/dictionary.o ./collections/list.o ./collections/queue.o ./collections/stack.o  ./Connections/Client.o ./Connections/Mensajes.o ./Connections/Server.o  ./bitarray.o ./config.o ./error.o ./log.o ./process.o ./string.o ./temporal.o ./txt.o   
 Finished building target: libCommonsLibrary.so
  
-12:57:39 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-Building file: ../Connections/Client.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Client.d" -MT"Connections/Client.d" -o "Connections/Client.o" "../Connections/Client.c"
-Finished building: ../Connections/Client.c
- 
-Building file: ../Connections/Mensajes.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Mensajes.d" -MT"Connections/Mensajes.d" -o "Connections/Mensajes.o" "../Connections/Mensajes.c"
-Finished building: ../Connections/Mensajes.c
- 
-Building file: ../Connections/Server.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Server.d" -MT"Connections/Server.d" -o "Connections/Server.o" "../Connections/Server.c"
-Finished building: ../Connections/Server.c
- 
-Building target: libCommonsLibrary.so
-Invoking: GCC C Linker
-gcc -shared -o "libCommonsLibrary.so"  ./collections/dictionary.o ./collections/list.o ./collections/queue.o ./collections/stack.o  ./Connections/Client.o ./Connections/Mensajes.o ./Connections/Server.o  ./bitarray.o ./config.o ./error.o ./log.o ./process.o ./string.o ./temporal.o ./txt.o   
-Finished building target: libCommonsLibrary.so
- 
-12:57:46 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-Building file: ../src/Test Client-Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Test Client-Server.d" -MT"src/Test\ Client-Server.d" -o "src/Test Client-Server.o" "../src/Test Client-Server.c"
-Finished building: ../src/Test Client-Server.c
- 
-Building target: Test Client-Server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Test Client-Server"  ./src/Test\ Client-Server.o   -lCommonsLibrary
-Finished building target: Test Client-Server
- 
-13:08:28 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-Building file: ../Connections/Client.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Client.d" -MT"Connections/Client.d" -o "Connections/Client.o" "../Connections/Client.c"
-Finished building: ../Connections/Client.c
- 
-Building file: ../Connections/Mensajes.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Mensajes.d" -MT"Connections/Mensajes.d" -o "Connections/Mensajes.o" "../Connections/Mensajes.c"
-Finished building: ../Connections/Mensajes.c
- 
-Building file: ../Connections/Server.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Server.d" -MT"Connections/Server.d" -o "Connections/Server.o" "../Connections/Server.c"
-Finished building: ../Connections/Server.c
- 
-Building target: libCommonsLibrary.so
-Invoking: GCC C Linker
-gcc -shared -o "libCommonsLibrary.so"  ./collections/dictionary.o ./collections/list.o ./collections/queue.o ./collections/stack.o  ./Connections/Client.o ./Connections/Mensajes.o ./Connections/Server.o  ./bitarray.o ./config.o ./error.o ./log.o ./process.o ./string.o ./temporal.o ./txt.o   
-Finished building target: libCommonsLibrary.so
- 
-13:08:33 **** Build of configuration Debug for project Proceso Cliente ****
-make all 
-Building file: ../Proceso Cliente.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Proceso Cliente.d" -MT"Proceso\ Cliente.d" -o "Proceso Cliente.o" "../Proceso Cliente.c"
-../Proceso Cliente.c: En la función ‘connectServer’:
-../Proceso Cliente.c:31:3: aviso: declaración implícita de la función ‘memset’ [-Wimplicit-function-declaration]
-../Proceso Cliente.c:31:3: aviso: declaración implícita incompatible de la función interna ‘memset’ [activado por defecto]
-../Proceso Cliente.c:49:12: error: expected ‘)’ before ‘s’
-../Proceso Cliente.c:49:49: error: expected expression before ‘==’ token
-../Proceso Cliente.c:52:3: error: ‘event’ no se declaró aquí (primer uso en esta función)
-../Proceso Cliente.c:52:3: nota: cada identificador sin declarar se reporta sólo una vez para cada función en el que aparece
-../Proceso Cliente.c:56:8: error: ‘s’ no se declaró aquí (primer uso en esta función)
-../Proceso Cliente.c:56:23: error: ‘instancia_epoll’ no se declaró aquí (primer uso en esta función)
-../Proceso Cliente.c: En la función ‘mandarMensaje’:
-../Proceso Cliente.c:84:2: aviso: declaración implícita de la función ‘memcpy’ [-Wimplicit-function-declaration]
-../Proceso Cliente.c:84:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Cliente.c: En la función ‘obtenerData’:
-../Proceso Cliente.c:100:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-make: *** [Proceso Cliente.o] Error 1
-13:08:34 **** Incremental Build of configuration Debug for project Test Client-Server ****
+14:04:51 **** Incremental Build of configuration Debug for project Test Client-Server ****
 make all 
 Building target: Test Client-Server
 Invoking: GCC C Linker
 gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Test Client-Server"  ./src/Test\ Client-Server.o   -lCommonsLibrary
 Finished building target: Test Client-Server
  
-13:10:12 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+14:04:57 **** Incremental Build of configuration Debug for project CommonsLibrary ****
 make all 
 make: No se hace nada para «all».
-13:10:13 **** Incremental Build of configuration Debug for project Proceso Cliente ****
+14:04:59 **** Incremental Build of configuration Debug for project CommonsLibrary ****
 make all 
-Building file: ../Proceso Cliente.c
+make: No se hace nada para «all».
+14:05:00 **** Incremental Build of configuration Debug for project Test Client-Server ****
+make all 
+make: No se hace nada para «all».
+14:35:18 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+14:35:19 **** Incremental Build of configuration Debug for project Test Client-Server ****
+make all 
+make: No se hace nada para «all».
+14:35:50 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+14:35:51 **** Incremental Build of configuration Debug for project Test Client-Server ****
+make all 
+make: No se hace nada para «all».
+14:36:08 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+14:36:09 **** Incremental Build of configuration Debug for project Test Client-Server ****
+make all 
+make: No se hace nada para «all».
+14:36:26 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+14:36:28 **** Incremental Build of configuration Debug for project Test Client-Server ****
+make all 
+make: No se hace nada para «all».
+14:36:34 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+14:36:35 **** Incremental Build of configuration Debug for project Test Client-Server ****
+make all 
+make: No se hace nada para «all».
+14:36:50 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+14:36:52 **** Incremental Build of configuration Debug for project Test Client-Server ****
+make all 
+make: No se hace nada para «all».
+14:38:05 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+Building file: ../Connections/Mensajes.c
 Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Proceso Cliente.d" -MT"Proceso\ Cliente.d" -o "Proceso Cliente.o" "../Proceso Cliente.c"
-../Proceso Cliente.c: En la función ‘connectServer’:
-../Proceso Cliente.c:37:3: aviso: declaración implícita de la función ‘memset’ [-Wimplicit-function-declaration]
-../Proceso Cliente.c:37:3: aviso: declaración implícita incompatible de la función interna ‘memset’ [activado por defecto]
-../Proceso Cliente.c:55:12: error: expected ‘)’ before ‘s’
-../Proceso Cliente.c:55:52: error: expected expression before ‘==’ token
-../Proceso Cliente.c:62:8: error: ‘s’ no se declaró aquí (primer uso en esta función)
-../Proceso Cliente.c:62:8: nota: cada identificador sin declarar se reporta sólo una vez para cada función en el que aparece
-../Proceso Cliente.c: En la función ‘mandarMensaje’:
-../Proceso Cliente.c:90:2: aviso: declaración implícita de la función ‘memcpy’ [-Wimplicit-function-declaration]
-../Proceso Cliente.c:90:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Cliente.c: En la función ‘obtenerData’:
-../Proceso Cliente.c:106:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-make: *** [Proceso Cliente.o] Error 1
-13:10:15 **** Build of configuration Debug for project Proyecto proceso server ****
-make all 
-Building target: Proyecto proceso server
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Mensajes.d" -MT"Connections/Mensajes.d" -o "Connections/Mensajes.o" "../Connections/Mensajes.c"
+Finished building: ../Connections/Mensajes.c
+ 
+Building target: libCommonsLibrary.so
 Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proyecto proceso server"  ./Proceso\ Server.o ./main.o   -lCommonsLibrary
-Finished building target: Proyecto proceso server
+gcc -shared -o "libCommonsLibrary.so"  ./collections/dictionary.o ./collections/list.o ./collections/queue.o ./collections/stack.o  ./Connections/Client.o ./Connections/Mensajes.o ./Connections/Server.o  ./bitarray.o ./config.o ./error.o ./log.o ./process.o ./string.o ./temporal.o ./txt.o   
+Finished building target: libCommonsLibrary.so
  
-13:10:16 **** Incremental Build of configuration Debug for project Test Client-Server ****
+14:38:12 **** Incremental Build of configuration Debug for project Test Client-Server ****
 make all 
-make: No se hace nada para «all».
-13:11:41 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:11:44 **** Incremental Build of configuration Debug for project Proceso Cliente ****
-make all 
-Building file: ../Proceso Cliente.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Proceso Cliente.d" -MT"Proceso\ Cliente.d" -o "Proceso Cliente.o" "../Proceso Cliente.c"
-../Proceso Cliente.c: En la función ‘connectServer’:
-../Proceso Cliente.c:37:3: aviso: declaración implícita de la función ‘memset’ [-Wimplicit-function-declaration]
-../Proceso Cliente.c:37:3: aviso: declaración implícita incompatible de la función interna ‘memset’ [activado por defecto]
-../Proceso Cliente.c:55:3: aviso: declaración implícita de la función ‘make_socket_non_blocking’ [-Wimplicit-function-declaration]
-../Proceso Cliente.c: En la función ‘mandarMensaje’:
-../Proceso Cliente.c:90:2: aviso: declaración implícita de la función ‘memcpy’ [-Wimplicit-function-declaration]
-../Proceso Cliente.c:90:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Cliente.c: En la función ‘obtenerData’:
-../Proceso Cliente.c:106:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-Finished building: ../Proceso Cliente.c
- 
-Building file: ../main.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
-../main.c: En la función ‘main’:
-../main.c:13:6: aviso: variable ‘numbytes’ sin usar [-Wunused-variable]
-Finished building: ../main.c
- 
-Building target: Proceso Cliente
+Building target: Test Client-Server
 Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proceso Cliente"  ./Proceso\ Cliente.o ./main.o   -lCommonsLibrary
-Finished building target: Proceso Cliente
+gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Test Client-Server"  ./src/Test\ Client-Server.o   -lCommonsLibrary
+Finished building target: Test Client-Server
  
-13:11:52 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
+14:38:18 **** Incremental Build of configuration Debug for project CommonsLibrary ****
 make all 
 make: No se hace nada para «all».
-13:11:53 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-13:14:07 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:14:09 **** Incremental Build of configuration Debug for project Proceso Cliente ****
-make all 
-Building file: ../Proceso Cliente.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Proceso Cliente.d" -MT"Proceso\ Cliente.d" -o "Proceso Cliente.o" "../Proceso Cliente.c"
-../Proceso Cliente.c: En la función ‘connectServer’:
-../Proceso Cliente.c:37:3: aviso: declaración implícita de la función ‘memset’ [-Wimplicit-function-declaration]
-../Proceso Cliente.c:37:3: aviso: declaración implícita incompatible de la función interna ‘memset’ [activado por defecto]
-../Proceso Cliente.c: En la función ‘mandarMensaje’:
-../Proceso Cliente.c:90:2: aviso: declaración implícita de la función ‘memcpy’ [-Wimplicit-function-declaration]
-../Proceso Cliente.c:90:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Cliente.c: En la función ‘obtenerData’:
-../Proceso Cliente.c:106:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-Finished building: ../Proceso Cliente.c
- 
-Building file: ../main.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
-../main.c: En la función ‘main’:
-../main.c:13:6: aviso: variable ‘numbytes’ sin usar [-Wunused-variable]
-Finished building: ../main.c
- 
-Building target: Proceso Cliente
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proceso Cliente"  ./Proceso\ Cliente.o ./main.o   -lCommonsLibrary
-Finished building target: Proceso Cliente
- 
-13:14:19 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-make: No se hace nada para «all».
-13:14:19 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-13:15:09 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:15:12 **** Incremental Build of configuration Debug for project Proceso Cliente ****
-make all 
-Building file: ../Proceso Cliente.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Proceso Cliente.d" -MT"Proceso\ Cliente.d" -o "Proceso Cliente.o" "../Proceso Cliente.c"
-../Proceso Cliente.c: En la función ‘connectServer’:
-../Proceso Cliente.c:37:3: aviso: declaración implícita de la función ‘memset’ [-Wimplicit-function-declaration]
-../Proceso Cliente.c:37:3: aviso: declaración implícita incompatible de la función interna ‘memset’ [activado por defecto]
-../Proceso Cliente.c: En la función ‘mandarMensaje’:
-../Proceso Cliente.c:90:2: aviso: declaración implícita de la función ‘memcpy’ [-Wimplicit-function-declaration]
-../Proceso Cliente.c:90:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Cliente.c: En la función ‘obtenerData’:
-../Proceso Cliente.c:106:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-Finished building: ../Proceso Cliente.c
- 
-Building file: ../main.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
-../main.c: En la función ‘main’:
-../main.c:13:6: aviso: variable ‘numbytes’ sin usar [-Wunused-variable]
-Finished building: ../main.c
- 
-Building target: Proceso Cliente
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proceso Cliente"  ./Proceso\ Cliente.o ./main.o   -lCommonsLibrary
-Finished building target: Proceso Cliente
- 
-13:15:15 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-make: No se hace nada para «all».
-13:15:16 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-13:15:41 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:15:43 **** Incremental Build of configuration Debug for project Proceso Cliente ****
-make all 
-Building file: ../main.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
-Finished building: ../main.c
- 
-Building target: Proceso Cliente
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proceso Cliente"  ./Proceso\ Cliente.o ./main.o   -lCommonsLibrary
-Finished building target: Proceso Cliente
- 
-13:15:48 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-make: No se hace nada para «all».
-13:15:50 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-13:16:01 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:16:03 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:16:04 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-make: No se hace nada para «all».
-13:16:12 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:16:15 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:16:16 **** Incremental Build of configuration Debug for project Proceso Cliente ****
-make all 
-make: No se hace nada para «all».
-13:17:50 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:17:52 **** Incremental Build of configuration Debug for project Proceso Cliente ****
-make all 
-Building file: ../Proceso Cliente.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Proceso Cliente.d" -MT"Proceso\ Cliente.d" -o "Proceso Cliente.o" "../Proceso Cliente.c"
-../Proceso Cliente.c: En la función ‘connectServer’:
-../Proceso Cliente.c:37:3: aviso: declaración implícita de la función ‘memset’ [-Wimplicit-function-declaration]
-../Proceso Cliente.c:37:3: aviso: declaración implícita incompatible de la función interna ‘memset’ [activado por defecto]
-../Proceso Cliente.c: En la función ‘mandarMensaje’:
-../Proceso Cliente.c:79:2: aviso: declaración implícita de la función ‘memcpy’ [-Wimplicit-function-declaration]
-../Proceso Cliente.c:79:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Cliente.c: En la función ‘obtenerData’:
-../Proceso Cliente.c:95:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-Finished building: ../Proceso Cliente.c
- 
-Building target: Proceso Cliente
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proceso Cliente"  ./Proceso\ Cliente.o ./main.o   -lCommonsLibrary
-Finished building target: Proceso Cliente
- 
-13:17:55 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-make: No se hace nada para «all».
-13:17:56 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-13:18:01 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:18:03 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:18:03 **** Incremental Build of configuration Debug for project Proceso Cliente ****
-make all 
-make: No se hace nada para «all».
-13:20:26 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:20:28 **** Incremental Build of configuration Debug for project Proceso Cliente ****
-make all 
-Building file: ../Proceso Cliente.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Proceso Cliente.d" -MT"Proceso\ Cliente.d" -o "Proceso Cliente.o" "../Proceso Cliente.c"
-../Proceso Cliente.c: En la función ‘connectServer’:
-../Proceso Cliente.c:37:3: aviso: declaración implícita de la función ‘memset’ [-Wimplicit-function-declaration]
-../Proceso Cliente.c:37:3: aviso: declaración implícita incompatible de la función interna ‘memset’ [activado por defecto]
-../Proceso Cliente.c: En la función ‘mandarMensaje’:
-../Proceso Cliente.c:78:2: aviso: declaración implícita de la función ‘memcpy’ [-Wimplicit-function-declaration]
-../Proceso Cliente.c:78:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Cliente.c: En la función ‘obtenerData’:
-../Proceso Cliente.c:94:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-Finished building: ../Proceso Cliente.c
- 
-Building target: Proceso Cliente
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proceso Cliente"  ./Proceso\ Cliente.o ./main.o   -lCommonsLibrary
-Finished building target: Proceso Cliente
- 
-13:20:32 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-make: No se hace nada para «all».
-13:20:33 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-13:21:02 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:21:05 **** Incremental Build of configuration Debug for project Proceso Cliente ****
-make all 
-Building file: ../Proceso Cliente.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Proceso Cliente.d" -MT"Proceso\ Cliente.d" -o "Proceso Cliente.o" "../Proceso Cliente.c"
-../Proceso Cliente.c: En la función ‘connectServer’:
-../Proceso Cliente.c:37:3: aviso: declaración implícita de la función ‘memset’ [-Wimplicit-function-declaration]
-../Proceso Cliente.c:37:3: aviso: declaración implícita incompatible de la función interna ‘memset’ [activado por defecto]
-../Proceso Cliente.c: En la función ‘mandarMensaje’:
-../Proceso Cliente.c:78:2: aviso: declaración implícita de la función ‘memcpy’ [-Wimplicit-function-declaration]
-../Proceso Cliente.c:78:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Cliente.c: En la función ‘obtenerData’:
-../Proceso Cliente.c:94:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-Finished building: ../Proceso Cliente.c
- 
-Building file: ../main.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
-Finished building: ../main.c
- 
-Building target: Proceso Cliente
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proceso Cliente"  ./Proceso\ Cliente.o ./main.o   -lCommonsLibrary
-Finished building target: Proceso Cliente
- 
-13:21:09 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-make: No se hace nada para «all».
-13:21:09 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-13:21:36 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:21:38 **** Incremental Build of configuration Debug for project Proceso Cliente ****
-make all 
-make: No se hace nada para «all».
-13:21:39 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-make: No se hace nada para «all».
-13:21:40 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-13:22:55 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:22:57 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:22:58 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-make: No se hace nada para «all».
-13:24:40 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:24:44 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:24:45 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-make: No se hace nada para «all».
-13:33:33 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:33:35 **** Incremental Build of configuration Debug for project Proceso Cliente ****
-make all 
-make: No se hace nada para «all».
-13:33:37 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-Building file: ../Proceso Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -c -fmessage-length=0 -MMD -MP -MF"Proceso Server.d" -MT"Proceso\ Server.d" -o "Proceso Server.o" "../Proceso Server.c"
-../Proceso Server.c: En la función ‘initServer’:
-../Proceso Server.c:25:3: error: ‘my_addr’ no se declaró aquí (primer uso en esta función)
-../Proceso Server.c:25:3: nota: cada identificador sin declarar se reporta sólo una vez para cada función en el que aparece
-../Proceso Server.c:28:3: aviso: declaración implícita incompatible de la función interna ‘memset’ [activado por defecto]
-../Proceso Server.c: En la función ‘mensajes’:
-../Proceso Server.c:143:8: aviso: declaración implícita incompatible de la función interna ‘strcpy’ [activado por defecto]
-../Proceso Server.c:211:8: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Server.c: En la función ‘obtenerData’:
-../Proceso Server.c:239:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Server.c: En la función ‘mandarMensaje’:
-../Proceso Server.c:254:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-make: *** [Proceso Server.o] Error 1
-13:33:41 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-13:34:01 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:34:03 **** Incremental Build of configuration Debug for project Proceso Cliente ****
-make all 
-make: No se hace nada para «all».
-13:34:04 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-Building file: ../Proceso Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -c -fmessage-length=0 -MMD -MP -MF"Proceso Server.d" -MT"Proceso\ Server.d" -o "Proceso Server.o" "../Proceso Server.c"
-../Proceso Server.c: En la función ‘initServer’:
-../Proceso Server.c:28:3: aviso: declaración implícita incompatible de la función interna ‘memset’ [activado por defecto]
-../Proceso Server.c: En la función ‘mensajes’:
-../Proceso Server.c:143:8: aviso: declaración implícita incompatible de la función interna ‘strcpy’ [activado por defecto]
-../Proceso Server.c:211:8: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Server.c: En la función ‘obtenerData’:
-../Proceso Server.c:239:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Server.c: En la función ‘mandarMensaje’:
-../Proceso Server.c:254:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-Finished building: ../Proceso Server.c
- 
-Building target: Proyecto proceso server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proyecto proceso server"  ./Proceso\ Server.o ./main.o   -lCommonsLibrary
-Finished building target: Proyecto proceso server
- 
-13:34:11 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-13:34:48 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:34:50 **** Incremental Build of configuration Debug for project Proceso Cliente ****
-make all 
-make: No se hace nada para «all».
-13:34:54 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-Building file: ../Proceso Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -c -fmessage-length=0 -MMD -MP -MF"Proceso Server.d" -MT"Proceso\ Server.d" -o "Proceso Server.o" "../Proceso Server.c"
-../Proceso Server.c: En la función ‘initServer’:
-../Proceso Server.c:28:3: aviso: declaración implícita incompatible de la función interna ‘memset’ [activado por defecto]
-../Proceso Server.c: En la función ‘mensajes’:
-../Proceso Server.c:143:8: aviso: declaración implícita incompatible de la función interna ‘strcpy’ [activado por defecto]
-../Proceso Server.c:211:8: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Server.c: En la función ‘obtenerData’:
-../Proceso Server.c:239:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Server.c: En la función ‘mandarMensaje’:
-../Proceso Server.c:254:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-Finished building: ../Proceso Server.c
- 
-Building file: ../main.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
-Finished building: ../main.c
- 
-Building target: Proyecto proceso server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proyecto proceso server"  ./Proceso\ Server.o ./main.o   -lCommonsLibrary
-Finished building target: Proyecto proceso server
- 
-13:35:01 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-13:40:29 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:40:31 **** Incremental Build of configuration Debug for project Proceso Cliente ****
-make all 
-make: No se hace nada para «all».
-13:40:32 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-Building file: ../Proceso Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -c -fmessage-length=0 -MMD -MP -MF"Proceso Server.d" -MT"Proceso\ Server.d" -o "Proceso Server.o" "../Proceso Server.c"
-../Proceso Server.c: En la función ‘initServer’:
-../Proceso Server.c:28:3: aviso: declaración implícita incompatible de la función interna ‘memset’ [activado por defecto]
-../Proceso Server.c: En la función ‘mensajes’:
-../Proceso Server.c:143:8: aviso: declaración implícita incompatible de la función interna ‘strcpy’ [activado por defecto]
-../Proceso Server.c:211:8: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Server.c: En la función ‘obtenerData’:
-../Proceso Server.c:239:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Server.c: En la función ‘mandarMensaje’:
-../Proceso Server.c:254:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-Finished building: ../Proceso Server.c
- 
-Building file: ../main.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
-Finished building: ../main.c
- 
-Building target: Proyecto proceso server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proyecto proceso server"  ./Proceso\ Server.o ./main.o   -lCommonsLibrary
-Finished building target: Proyecto proceso server
- 
-13:40:36 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-13:41:11 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:41:14 **** Incremental Build of configuration Debug for project Proceso Cliente ****
-make all 
-make: No se hace nada para «all».
-13:41:15 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-Building file: ../Proceso Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -c -fmessage-length=0 -MMD -MP -MF"Proceso Server.d" -MT"Proceso\ Server.d" -o "Proceso Server.o" "../Proceso Server.c"
-../Proceso Server.c: En la función ‘initServer’:
-../Proceso Server.c:28:3: aviso: declaración implícita incompatible de la función interna ‘memset’ [activado por defecto]
-../Proceso Server.c: En la función ‘mensajes’:
-../Proceso Server.c:143:8: aviso: declaración implícita incompatible de la función interna ‘strcpy’ [activado por defecto]
-../Proceso Server.c:211:8: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Server.c: En la función ‘obtenerData’:
-../Proceso Server.c:239:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Server.c: En la función ‘mandarMensaje’:
-../Proceso Server.c:254:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-Finished building: ../Proceso Server.c
- 
-Building file: ../main.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
-Finished building: ../main.c
- 
-Building target: Proyecto proceso server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proyecto proceso server"  ./Proceso\ Server.o ./main.o   -lCommonsLibrary
-Finished building target: Proyecto proceso server
- 
-13:41:18 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-13:41:55 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:41:56 **** Incremental Build of configuration Debug for project Proceso Cliente ****
-make all 
-make: No se hace nada para «all».
-13:41:59 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-Building file: ../Proceso Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -c -fmessage-length=0 -MMD -MP -MF"Proceso Server.d" -MT"Proceso\ Server.d" -o "Proceso Server.o" "../Proceso Server.c"
-../Proceso Server.c: En la función ‘initServer’:
-../Proceso Server.c:28:3: aviso: declaración implícita incompatible de la función interna ‘memset’ [activado por defecto]
-../Proceso Server.c: En la función ‘mensajes’:
-../Proceso Server.c:143:8: aviso: declaración implícita incompatible de la función interna ‘strcpy’ [activado por defecto]
-../Proceso Server.c:211:8: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Server.c: En la función ‘obtenerData’:
-../Proceso Server.c:239:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Server.c: En la función ‘mandarMensaje’:
-../Proceso Server.c:254:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-Finished building: ../Proceso Server.c
- 
-Building file: ../main.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
-Finished building: ../main.c
- 
-Building target: Proyecto proceso server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proyecto proceso server"  ./Proceso\ Server.o ./main.o   -lCommonsLibrary
-Finished building target: Proyecto proceso server
- 
-13:42:05 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-13:42:32 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-13:42:35 **** Incremental Build of configuration Debug for project Proceso Cliente ****
-make all 
-make: No se hace nada para «all».
-13:42:36 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-Building file: ../Proceso Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -c -fmessage-length=0 -MMD -MP -MF"Proceso Server.d" -MT"Proceso\ Server.d" -o "Proceso Server.o" "../Proceso Server.c"
-../Proceso Server.c: En la función ‘initServer’:
-../Proceso Server.c:28:3: aviso: declaración implícita incompatible de la función interna ‘memset’ [activado por defecto]
-../Proceso Server.c: En la función ‘mensajes’:
-../Proceso Server.c:143:8: aviso: declaración implícita incompatible de la función interna ‘strcpy’ [activado por defecto]
-../Proceso Server.c:211:8: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Server.c: En la función ‘obtenerData’:
-../Proceso Server.c:239:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Server.c: En la función ‘mandarMensaje’:
-../Proceso Server.c:254:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-Finished building: ../Proceso Server.c
- 
-Building file: ../main.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
-Finished building: ../main.c
- 
-Building target: Proyecto proceso server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proyecto proceso server"  ./Proceso\ Server.o ./main.o   -lCommonsLibrary
-Finished building target: Proyecto proceso server
- 
-13:42:39 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-14:34:57 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-14:34:59 **** Incremental Build of configuration Debug for project Proceso Cliente ****
-make all 
-make: No se hace nada para «all».
-14:35:00 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-make: No se hace nada para «all».
-14:35:01 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-14:35:23 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-14:35:26 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-14:35:27 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-make: No se hace nada para «all».
-14:36:57 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-14:37:00 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-14:37:01 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-make: No se hace nada para «all».
-14:37:17 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-14:37:20 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-14:37:21 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-make: No se hace nada para «all».
-14:37:57 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-14:37:58 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-14:37:59 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-make: No se hace nada para «all».
-14:38:35 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-14:38:38 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-14:38:39 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-make: No se hace nada para «all».
-14:40:08 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-14:40:09 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-make: No se hace nada para «all».
-14:58:48 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-14:58:49 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-Building file: ../main.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
-Finished building: ../main.c
- 
-Building target: Proyecto proceso server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proyecto proceso server"  ./Proceso\ Server.o ./main.o   -lCommonsLibrary
-Finished building target: Proyecto proceso server
- 
-15:03:21 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-15:03:22 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-make: No se hace nada para «all».
-15:03:52 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-15:03:53 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-15:03:54 **** Incremental Build of configuration Debug for project Proceso Cliente ****
-make all 
-make: No se hace nada para «all».
-15:09:52 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-15:09:54 **** Incremental Build of configuration Debug for project Proceso Cliente ****
-make all 
-Building file: ../Proceso Cliente.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Proceso Cliente.d" -MT"Proceso\ Cliente.d" -o "Proceso Cliente.o" "../Proceso Cliente.c"
-../Proceso Cliente.c: En la función ‘connectServer’:
-../Proceso Cliente.c:37:3: aviso: declaración implícita de la función ‘memset’ [-Wimplicit-function-declaration]
-../Proceso Cliente.c:37:3: aviso: declaración implícita incompatible de la función interna ‘memset’ [activado por defecto]
-../Proceso Cliente.c: En la función ‘mandarMensaje’:
-../Proceso Cliente.c:78:2: aviso: declaración implícita de la función ‘memcpy’ [-Wimplicit-function-declaration]
-../Proceso Cliente.c:78:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Cliente.c: En la función ‘obtenerData’:
-../Proceso Cliente.c:96:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-Finished building: ../Proceso Cliente.c
- 
-Building target: Proceso Cliente
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proceso Cliente"  ./Proceso\ Cliente.o ./main.o   -lCommonsLibrary
-Finished building target: Proceso Cliente
- 
-15:09:58 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-Building file: ../Proceso Server.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -c -fmessage-length=0 -MMD -MP -MF"Proceso Server.d" -MT"Proceso\ Server.d" -o "Proceso Server.o" "../Proceso Server.c"
-../Proceso Server.c: En la función ‘initServer’:
-../Proceso Server.c:28:3: aviso: declaración implícita incompatible de la función interna ‘memset’ [activado por defecto]
-../Proceso Server.c: En la función ‘mensajes’:
-../Proceso Server.c:143:8: aviso: declaración implícita incompatible de la función interna ‘strcpy’ [activado por defecto]
-../Proceso Server.c:202:8: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Server.c: En la función ‘obtenerData’:
-../Proceso Server.c:239:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-../Proceso Server.c: En la función ‘mandarMensaje’:
-../Proceso Server.c:254:2: aviso: declaración implícita incompatible de la función interna ‘memcpy’ [activado por defecto]
-Finished building: ../Proceso Server.c
- 
-Building target: Proyecto proceso server
-Invoking: GCC C Linker
-gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proyecto proceso server"  ./Proceso\ Server.o ./main.o   -lCommonsLibrary
-Finished building target: Proyecto proceso server
- 
-15:10:46 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-15:10:48 **** Incremental Build of configuration Debug for project Proceso Cliente ****
-make all 
-make: No se hace nada para «all».
-15:10:49 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-make: No se hace nada para «all».
-15:10:58 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-15:11:00 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-15:11:01 **** Incremental Build of configuration Debug for project Proyecto proceso server ****
-make all 
-make: No se hace nada para «all».
-15:11:19 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-15:11:21 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-15:11:22 **** Incremental Build of configuration Debug for project Proceso Cliente ****
-make all 
-make: No se hace nada para «all».
-15:15:11 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-15:15:13 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-15:15:14 **** Incremental Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-15:30:57 **** Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-15:30:59 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-15:31:00 **** Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-11:44:07 **** Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-11:44:10 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-11:44:11 **** Build of configuration Debug for project Test Client-Server ****
-make all 
-make: No se hace nada para «all».
-15:52:13 **** Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-15:52:16 **** Incremental Build of configuration Debug for project CommonsLibrary ****
-make all 
-make: No se hace nada para «all».
-15:52:17 **** Build of configuration Debug for project Test Client-Server ****
+14:38:19 **** Incremental Build of configuration Debug for project Test Client-Server ****
 make all 
 make: No se hace nada para «all».

@@ -9,7 +9,7 @@
 #define PROCESO_PLATAFORMA_H_
 
 #define STANDBY 0
-#define HANDSHAKE 00
+
 #define REQUESTDATANIVEL 01
 
 #include <collections/list.h>
@@ -21,14 +21,8 @@
 #include <Connections/Server.h>
 #include <Connections/Client.h>
 #include <Connections/Mensajes.h>
-
-typedef struct  c{
-	char ID[3]; //es un string, para usar strcpy
-	char IP[20];
-	int PORT;
-	int FD;
-} nivel;
-
+#include <Connections/EstructurasMensajes.h>
+/*
 typedef struct  b{
 	char ID[3]; //es un string, para usar strcpy
 	char IP[20];
@@ -47,7 +41,7 @@ typedef struct t_personaje {
 	char nombre[30];
 	char estado;
 } Elemento_personaje;
-
+*/
 Elemento_personaje* personaje_crear(char* nombre);
 void* initPanif(void* Nivel);
 
