@@ -26,7 +26,7 @@ typedef struct  b{
 	char ID[3]; //es un string, para usar strcpy
 	char IP[20];
 	int PORT;
-	int FD
+	int FD;
 }__attribute__ ((__packed__)) Planificador;
 
 typedef struct a {
@@ -61,7 +61,6 @@ Recursos CantRecursos (int flores,int hongos,int monedas){
 	return(aux);
 
 }
-
 
 Posicion Pos (int x, int y){
 	Posicion aux;
