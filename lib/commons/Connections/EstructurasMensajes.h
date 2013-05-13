@@ -70,3 +70,13 @@ Posicion Pos (int x, int y){
 	return(aux);
 }
 
+int obtenerPosX(Posicion pos){
+	int aux = pos.POS_X;
+	return(aux);
+}
+
+int obtenerPosY(Posicion pos){
+	int aux = pos.POS_Y;
+	return(aux);
+}
+
