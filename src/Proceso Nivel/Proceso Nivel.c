@@ -33,7 +33,7 @@ int main(void) {
 
 	serverCCB = initServer(6000);
 
-	clientCCB = connectServer("localhost",5000);
+	clientCCB = connectServer("localhost", nivel->nivel_orquestador);
 
 	//inicializo la lista de items a dibujar y controlar
 
@@ -55,10 +55,6 @@ int main(void) {
 	colaDeMensajes = queue_create();
 	Mensaje* mensaje;
 
-	//se conecta a plataforma con el puerto y el ip(es un char*)
-
-
-	int socketCliente = connectServer();
 
 	nivel_gui_dibujar(ListaItems);
 
@@ -75,7 +71,7 @@ int main(void) {
 
 		switch(mensaje){
 
-			case HANDSHAKE: //AGREGAR AL LOG
+			case HANDSHAKE:
 
 				//cargo el personaje en la lista que yo voy a manejar para validar recursos
 
@@ -86,8 +82,19 @@ int main(void) {
 				CrearPersonaje(&ListaItems,((char*)(mensaje->from))[1],0,0);
 				nivel_gui_dibujar(ListaItems);
 
+				//creo instancia de logeo
+
+				t_log* logger = log_create("testing.log", "ProcesoNivel", true, LOG_LEVEL_INFO);
+
+				//mensajeLogeo= char del personaje que ingreso al nivel
+
+				char mensajeLogeo = ((char*)(mensaje->from))[1];
+
+				log_info(logger, mensajeLogeo);
+
 
 				break;
+
 			case REQUEST_POS_RECURSO:
 
 			/**le envia al personaje la pos del nuevo recurso.
@@ -99,7 +106,8 @@ int main(void) {
 
 				Posicion pos = Pos(posx,posy);
 
-				mandarMensaje(mensaje->from, Posicion,sizeof(pos),pos);
+				mandarMensaje(mensaje->from, POSICION_RECURSO,sizeof(pos),pos);
+
 				break;
 
 			case REQUEST_MOVIMIENTO:
@@ -132,7 +140,7 @@ int main(void) {
 
 					//le manda 1/TRUE porque lo puede tomar
 
-					mandarMensaje(mensaje->from,int,sizeof(1),1);
+					mandarMensaje(mensaje->from,CONFIRMAR_RECURSO,sizeof(1),1);
 					restarRecurso(ListaItems, mensaje->data);
 					agregarRecursoAPersonaje(&listaPersonajes, ((char*)(mensaje->from))[1],mensaje->data);
 					nivel_gui_dibujar(ListaItems);
@@ -140,8 +148,9 @@ int main(void) {
 				}else{
 					//si no pudo, le manda 0/FALSE porque no lo puede tomar
 
-					mandarMensaje(mensaje->from, int,sizeof(0),0);
+					mandarMensaje(mensaje->from, CONFIRMAR_RECURSO,sizeof(0),0);
 				}
+
 				break;
 
 
@@ -168,7 +177,7 @@ int main(void) {
 
 				//le mando al orquestador los recursos liberados para que re-asigne
 
-				mandarMensaje(clientCCB.sockfd, Recursos,sizeof(recursosALiberar), recursosALiberar);
+				mandarMensaje(clientCCB.sockfd, RECURSOS_LIBERADOS,sizeof(recursosALiberar), recursosALiberar);
 
 				//borra el personaje del nivel y libera al personaje de listaPersonajes
 
@@ -211,7 +220,7 @@ int main(void) {
 
 	nivel_gui_terminar();
 
-	//CIERRO EL SOCKET DEL CLIENTE
+	//cierro el socket del cliente
 	close(clientCCB.sockfd);
 
 }
@@ -330,8 +339,8 @@ void agregarRecursoAPersonaje(PersonajeEnNivel** listaPersonajes, char idPersona
 	while ((personaje != NULL) && (personaje->id != idPersonaje)) {
 		personaje = personaje->sig;
 	}if ((personaje != NULL) && (personaje->id == idPersonaje)) {
-		personaje->recursos->idRecurso = recurso; //VER PORQUE NO ME LO ESTA TOMANDO
-		personaje->recursos->sig = NULL;
+		((t_recursos*)(personaje->recursos))->idRecurso = recurso; //VER PORQUE NO ME LO ESTA TOMANDO
+		((t_recursos*)(personaje->recursos))->sig = NULL;
 	}
 }
 
@@ -382,7 +391,7 @@ Recursos liberarRecursos(char idPersonaje,PersonajeEnNivel* listaPersonajes ){
 		//recorro todos los recursos
 
 		while(personaje->recursos != NULL){
-			char recurso = personaje->recursos->idRecurso;
+			char recurso = ((t_recursos*)(personaje->recursos))->idRecurso;
 
 			//me fijo que recurso es y lo sumo al contador de ese recurso
 
