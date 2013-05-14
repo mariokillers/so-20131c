@@ -79,11 +79,11 @@ int main(void) {
 
 				//cargo el personaje en la lista que yo voy a manejar para validar recursos
 
-				cargarPersonaje(&listaPersonajes, (char*)(mensaje->from)[1]);
+				cargarPersonaje(&listaPersonajes, ((char*)(mensaje->from))[1]);
 
 				//creo el personaje en el nivel. Le pongo como pos inicial la (0,0) y lo dibujo
 
-				CrearPersonaje(&ListaItems,(char*)(mensaje->from)[1],0,0);
+				CrearPersonaje(&ListaItems,((char*)(mensaje->from))[1],0,0);
 				nivel_gui_dibujar(ListaItems);
 
 
@@ -99,7 +99,7 @@ int main(void) {
 
 				Posicion pos = Pos(posx,posy);
 
-				mandarMensaje(mensaje->from, sizeof(pos),pos);
+				mandarMensaje(mensaje->from, Posicion,sizeof(pos),pos);
 				break;
 
 			case REQUEST_MOVIMIENTO:
@@ -117,7 +117,7 @@ int main(void) {
 
 				//muevo el personaje y lo dibujo
 
-				moverPersonaje(ListaItems,(char*)(mensaje->from)[1],posx,posy);
+				moverPersonaje(ListaItems,((char*)(mensaje->from))[1],posx,posy);
 				nivel_gui_dibujar(ListaItems);
 
 				sleep(1);
@@ -128,19 +128,19 @@ int main(void) {
 
 				//le confirma al personaje que puede tomar ese recurso y lo resta de listaItems
 
-				if(validarPosYRecursos(ListaItems, (char*)(mensaje->from)[1], mensaje->data)){
+				if(validarPosYRecursos(ListaItems, ((char*)(mensaje->from))[1], mensaje->data)){
 
 					//le manda 1/TRUE porque lo puede tomar
 
-					mandarMensaje(mensaje->from,sizeof(1),1);
+					mandarMensaje(mensaje->from,int,sizeof(1),1);
 					restarRecurso(ListaItems, mensaje->data);
-					agregarRecursoAPersonaje(&listaPersonajes, (char*)(mensaje->from)[1],mensaje->data);
+					agregarRecursoAPersonaje(&listaPersonajes, ((char*)(mensaje->from))[1],mensaje->data);
 					nivel_gui_dibujar(ListaItems);
 
 				}else{
 					//si no pudo, le manda 0/FALSE porque no lo puede tomar
 
-					mandarMensaje(mensaje->from,sizeof(0),0);
+					mandarMensaje(mensaje->from, int,sizeof(0),0);
 				}
 				break;
 
@@ -160,7 +160,7 @@ int main(void) {
 
 				//se fija que recursos tenia asignado el personaje para liberarlos y mandarselos al orquestador
 
-				Recursos recursosALiberar = liberarRecursos((char*)(mensaje->from)[1], listaPersonajes);
+				Recursos recursosALiberar = liberarRecursos(((char*)(mensaje->from))[1], listaPersonajes);
 
 				//por cada recurso que libera tengo que sumarlo a la cantidad en listaItems
 
@@ -168,12 +168,12 @@ int main(void) {
 
 				//le mando al orquestador los recursos liberados para que re-asigne
 
-				mandarMensaje(clientCCB.sockfd, sizeof(recursosALiberar), recursosALiberar);
+				mandarMensaje(clientCCB.sockfd, Recursos,sizeof(recursosALiberar), recursosALiberar);
 
 				//borra el personaje del nivel y libera al personaje de listaPersonajes
 
-				BorrarItem(&ListaItems,(char*)(mensaje->from)[1]);
-				borrarPersonaje(&listaPersonajes,(char*)(mensaje->from)[1]);
+				BorrarItem(&ListaItems,((char*)(mensaje->from))[1]);
+				borrarPersonaje(&listaPersonajes,((char*)(mensaje->from))[1]);
 
 				//re-dibuja el nivel ya sin el personaje
 
@@ -188,6 +188,18 @@ int main(void) {
 
 
 			case NOMBRE_VICTIMA: //LOGEO QUE HUBO RECOVERY Y PONGO EL NOMBRE DE LA VICTIMA. TIPO DE DATO: CHAR
+
+				//creo instancia de logeo.
+
+				t_log* logger = log_create("testing.log", "ProcesoNivel", true, LOG_LEVEL_INFO);
+
+				//mensajeLogeo= char del personaje muerto
+
+				char mensajeLogeo = mensaje->data;
+
+				log_info(logger, mensajeLogeo);
+
+
 				break;
 
 			//borro el mensaje
