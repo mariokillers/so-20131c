@@ -18,6 +18,7 @@ void cargarPersonaje(PersonajeEnNivel** listaPersonajes, char id);
 void agregarRecursoAPersonaje(PersonajeEnNivel** listaPersonajes, char idPersonaje,char recurso);
 void borrarPersonaje(PersonajeEnNivel** listaPersonajes, char idPersonaje);
 void aumentarRecursos(ITEM_NIVEL *,Recursos recursosALiberar);
+void modificarPosPersonaje(PersonajeEnNivel** listaPersonajes,char idPersonaje, int posx, int posy);
 /*int chequearMovimiento(char idPersonaje, Posicion pos);
 Posicion posPersonaje(char idPersonaje);*/
 

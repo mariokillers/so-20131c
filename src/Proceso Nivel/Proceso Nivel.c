@@ -69,7 +69,7 @@ int main(void) {
 
 		//analiza los mensajes recibidos y en base a eso, actua
 
-		switch(mensaje){
+		switch(mensaje->type){
 
 			case HANDSHAKE:
 
@@ -84,7 +84,7 @@ int main(void) {
 
 				//creo instancia de logeo
 
-				t_log* logger = log_create("testing.log", "ProcesoNivel", true, LOG_LEVEL_INFO);
+				t_log* logger = log_create("ProcesoNivelTesting.log", "ProcesoNivel", true, LOG_LEVEL_INFO);
 
 				//mensajeLogeo= char del personaje que ingreso al nivel
 
@@ -127,6 +127,10 @@ int main(void) {
 
 				moverPersonaje(ListaItems,((char*)(mensaje->from))[1],posx,posy);
 				nivel_gui_dibujar(ListaItems);
+
+				//modifico la posicion del personaje en listaPersonajes
+
+				modificarPosPersonaje(&listaPersonajes,((char*)(mensaje->from))[1],posx,posy);
 
 				sleep(1);
 
@@ -173,7 +177,7 @@ int main(void) {
 
 				//por cada recurso que libera tengo que sumarlo a la cantidad en listaItems
 
-				aumentarRecursos(ListaItems,recursosALiberar);
+				aumentarRecursos(ListaItems,recursosALiberar); //CAMBIAR ACA
 
 				//le mando al orquestador los recursos liberados para que re-asigne
 
@@ -200,7 +204,7 @@ int main(void) {
 
 				//creo instancia de logeo.
 
-				t_log* logger = log_create("testing.log", "ProcesoNivel", true, LOG_LEVEL_INFO);
+				t_log* logger = log_create("ProcesoNivelTesting.log", "ProcesoNivel", true, LOG_LEVEL_INFO);
 
 				//mensajeLogeo= char del personaje muerto
 
@@ -218,7 +222,7 @@ int main(void) {
 		}
 	}
 
-	nivel_gui_terminar();
+	//nivel_gui_terminar();
 
 	//cierro el socket del cliente
 	close(clientCCB.sockfd);
@@ -339,7 +343,7 @@ void agregarRecursoAPersonaje(PersonajeEnNivel** listaPersonajes, char idPersona
 	while ((personaje != NULL) && (personaje->id != idPersonaje)) {
 		personaje = personaje->sig;
 	}if ((personaje != NULL) && (personaje->id == idPersonaje)) {
-		((t_recursos*)(personaje->recursos))->idRecurso = recurso; //VER PORQUE NO ME LO ESTA TOMANDO
+		((t_recursos*)(personaje->recursos))->idRecurso = recurso;
 		((t_recursos*)(personaje->recursos))->sig = NULL;
 	}
 }
@@ -368,6 +372,7 @@ void borrarPersonaje(PersonajeEnNivel** listaPersonajes, char idPersonaje){
       }
 }
 
+//CAMBIAR LA FUNCION
 Recursos liberarRecursos(char idPersonaje,PersonajeEnNivel* listaPersonajes ){
 	/*@NAME: liberarRecursos
 	 * @DESC: cuenta los recursos a ser liberados
@@ -425,6 +430,7 @@ Recursos liberarRecursos(char idPersonaje,PersonajeEnNivel* listaPersonajes ){
 
 }
 
+//CAMBIAR LA FUNCION
 void aumentarRecursos(ITEM_NIVEL* ListaItems,Recursos recursosALiberar){
 	/*@NAME: aumentarRecursos
 	 * @DESC: actualiza el estado de los recursos en ListaItems, dependiendo de los recursos liberados
@@ -470,6 +476,22 @@ void aumentarRecursos(ITEM_NIVEL* ListaItems,Recursos recursosALiberar){
 		 }
 
 	 }
+
+}
+
+void modificarPosPersonaje(PersonajeEnNivel** listaPersonajes,char idPersonaje, int posx, int posy){
+	/*@NAME: modificarPosPersonaje
+	* @DESC: actualiza la pos del personaje
+	*/
+
+	PersonajeEnNivel * personaje;
+	personaje = listaPersonajes;
+
+	while ((personaje != NULL) && (personaje->id != idPersonaje)) {
+		personaje = personaje->sig;
+	}if ((personaje != NULL) && (personaje->id == idPersonaje)) {
+		personaje->pos = Pos(posx,posy);
+	}
 
 }
 /*
