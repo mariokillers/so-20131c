@@ -16,7 +16,7 @@
 #include <collections/queue.h>
 
 
-int main(void) {
+int testClientServer(void) {
 	//INICIALIZO LA COLA DE MENSAJES
 	CCB Server;
 	CCB Client;
