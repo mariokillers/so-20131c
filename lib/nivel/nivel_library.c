@@ -40,17 +40,16 @@ t_nivel *create_nivel(t_config *n){
 
 	t_nivel *nivel;
 	nivel = (t_nivel*)malloc(sizeof(t_nivel));
-	t_list *list_personajes = list_create();
 
 	nivel->nivel_items = create_lista_cajas(n);
 
-	nivel->nivel_orquestador = config_get_string_value(n, "orquestador");
+	nivel->nivel_orquestador->IP = tomarIP(config_get_string_value(n, "orquestador"));
+
+	nivel->nivel_orquestador->puerto = tomarPuerto(config_get_string_value(n, "orquestador"));
 
 	nivel->nivel_tiempo_deadlock = config_get_double_value(n, "tiempoChequeoDeadlock");
 
 	nivel->nivel_recovery = config_get_int_value(n, "recovery");
-
-	nivel->personajes_en_nivel = list_personajes;
 
 	return nivel;
 }

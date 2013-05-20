@@ -59,7 +59,9 @@ t_personaje *create_personaje(t_config *p){
 	
 	personaje->personaje_vidas_restantes = personaje->personaje_vidas;
 
-	personaje->personaje_orquestador = config_get_string_value(p, "orquestador");
+	personaje->personaje_orquestador->IP = tomarIP(config_get_string_value(n, "orquestador"));
+
+	personaje->personaje_orquestador->puerto = tomarPuerto(config_get_string_value(n, "orquestador"));
 
 	return personaje;
 }

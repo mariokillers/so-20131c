@@ -42,6 +42,11 @@ typedef struct {
 }__attribute__ ((__packed__)) Posicion;
 
 typedef struct {
+	char IP[20];
+	int PORT;
+}__attribute__ ((__packed__)) Direccion;
+
+typedef struct {
 	Nivel miNivel;
 	Planificador miPlanificador;
 }__attribute__ ((__packed__)) Data_Nivel;
@@ -69,6 +74,7 @@ Posicion Pos (int x, int y){
 	return(aux);
 }
 
+
 int obtenerPosX(Posicion pos){
 	int aux = pos.POS_X;
 	return(aux);
@@ -77,5 +83,17 @@ int obtenerPosX(Posicion pos){
 int obtenerPosY(Posicion pos){
 	int aux = pos.POS_Y;
 	return(aux);
+}
+
+char* tomarPuerto(char* direct){
+	char** direct_sep = string_split(direct, ":")
+	int puerto = atoi(direct_sep[1]);
+	return puerto;
+}
+
+char* tomarIP(char* direct){
+	char** direct_sep = string_split(direct, ":")
+	char *IP = direct_sep[0];
+	return IP;
 }
 

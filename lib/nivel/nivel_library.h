@@ -15,30 +15,19 @@
 #include <commons/config.h>
 #include <commons/string.h>
 #include <commons/collections/list.h>
+#include <commons/Connections/EstructurasMensajes.h>
 #include <so-nivel-gui-library-master/nivel-gui/nivel.h>
 
-/*define el tipo t_personaje_en_nivel, que representa a un personaje conectado a ese nivel con sus 
-respectivos atributos
-	*/
-typedef struct t_personaje_en_nivel{
-	char personaje_simbolo;
-	int personaje_pos_x;
-	int personaje_pos_y;
-	char *personaje_ip;
-	int personaje_puerto;
-	struct t_personaje_en_nivel *sig;
-} t_personaje_en_nivel;
 
 /*define el tipo t_nivel, que representa un nivel creado a partir de un archivo de configuracion dado
 con toda su estructura de datos
 	*/
 typedef struct t_nivel{
 	ITEM_NIVEL *nivel_items;
-	char *nivel_orquestador;
+	Direccion nivel_orquestador;
 	long nivel_tiempo_deadlock;
 	int nivel_recovery;
-	t_list *personajes_en_nivel;
-} t_nivel;
+	} t_nivel;
 
 t_nivel *read_nivel_archivo_configuracion(char* path);
 t_nivel *create_nivel(t_config *n);

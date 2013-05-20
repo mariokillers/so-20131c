@@ -15,6 +15,7 @@
 #include <commons/config.h>
 #include <commons/string.h>
 #include <commons/collections/list.h>
+#include <commons/Connections/EstructurasMensajes.h>
 
 /*define el tipo t_personaje_objetivo, que representa un objetivo de los que tiene que conseguir el personaje
 en un nivel y si lo tiene o no
@@ -42,7 +43,7 @@ typedef struct t_personaje {
 	t_list *personaje_niveles;
 	int personaje_vidas;
 	int personaje_vidas_restantes;
-	char *personaje_orquestador;
+	Direccion personaje_orquestador;
 } t_personaje;
 
 t_personaje *read_personaje_archivo_configuracion(char* path);

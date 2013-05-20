@@ -273,7 +273,9 @@ char **string_split(char *text, char *separator) {
  * @NAME: string_get_string_as_array
  * @DESC: Retorna una array separando los elementos 
  * de un string con formato de array
- * 
+ * char* tomarPuerto(char* direct){
+	char* puerto = string_substring_from(direct, int start)
+	char *
  * Ejemplo:
  * char* array_string = "[1,2,3,4]"
  * string_get_value_as_array(array_string) => ["1","2","3","4"]
@@ -312,6 +314,7 @@ char*   string_substring(char* text, int start, int length) {
 char *string_substring_from(char *text, int start) {
 	return string_substring(text, start, strlen(text) - start);
 }
+
 
 /**
  * @NAME: string_substring_until
