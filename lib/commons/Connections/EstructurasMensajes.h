@@ -58,14 +58,6 @@ typedef struct {
 	int cant;
 }__attribute__ ((__packed__)) Recursos;
 
-/*Recursos CantRecursos (int flores,int hongos,int monedas){
-	Recursos aux;
-	aux.cant_flor = flores;
-	aux.cant_hongo = hongos;
-	aux.cant_moneda = monedas;
-	return(aux);
-
-}*/
 
 Posicion Pos (int x, int y){
 	Posicion aux;
