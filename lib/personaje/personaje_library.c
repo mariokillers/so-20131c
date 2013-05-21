@@ -63,6 +63,10 @@ t_personaje *create_personaje(t_config *p){
 
 	personaje->personaje_orquestador->puerto = tomarPuerto(config_get_string_value(n, "orquestador"));
 
+	personaje->personaje_posicion_actual->POS_X = 0;
+
+	personaje->personaje_posicion_actual->POS_Y = 0;
+
 	return personaje;
 }
 
@@ -87,6 +91,8 @@ t_personaje_nivel *create_personaje_nivel(char *nivel, char **objetivos){
 	}
 
 	new->personaje_objetivos = list_objetivos;
+
+	new->termino_nivel = false;
 
 	new->sig = NULL;
 

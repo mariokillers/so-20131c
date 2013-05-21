@@ -31,6 +31,7 @@ typedef struct t_personaje_objetivo{
 typedef struct t_personaje_nivel{
 	char *personaje_nivel;
 	t_list *personaje_objetivos;
+	bool termino_nivel;
 	struct t_personaje_nivel *sig;
 } t_personaje_nivel;
 
@@ -44,6 +45,7 @@ typedef struct t_personaje {
 	int personaje_vidas;
 	int personaje_vidas_restantes;
 	Direccion personaje_orquestador;
+	Posicion personaje_posicion_actual;
 } t_personaje;
 
 t_personaje *read_personaje_archivo_configuracion(char* path);
