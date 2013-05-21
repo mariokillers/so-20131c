@@ -9,16 +9,21 @@
 #define PROCESO_NIVEL_H_
 
 Posicion obtenerPosRecurso(char recurso);
-void pedirDireccionRecurso();
-void cambiarEstado();
-Recursos liberarRecursos(char idPersonaje,PersonajeEnNivel* listaPersonajes );
+t_recursos liberarRecursos(char idPersonaje);
 int validarPosYRecursos(char idPersonaje, char idRecurso);
-void cargarPersonaje(PersonajeEnNivel** listaPersonajes, char id);
-void agregarRecursoAPersonaje(PersonajeEnNivel** listaPersonajes, char idPersonaje,char recurso);
-void borrarPersonaje(PersonajeEnNivel** listaPersonajes, char idPersonaje);
-void aumentarRecursos(Recursos recursosALiberar);
-void modificarPosPersonaje(PersonajeEnNivel** listaPersonajes,char idPersonaje, int posx, int posy);
-t_recursos actualizarListaPersonaje(t_recursos** listaRecursos, char idRecurso);
+void cargarPersonajeEnNivel(char id);
+void cargarPersonajeEnPendiente(char id);
+void agregarRecursoAPersonaje(char idPersonaje,char recurso);
+void borrarPersonajeEnNivel(char idPersonaje);
+void borrarPersonajeEnPendiente(char idPersonaje);
+void aumentarRecursos(t_recursos recursosALiberar);
+void modificarPosPersonaje(char idPersonaje, int posx, int posy);
+PersonajeEnNivel buscarPersonaje(char idPersonaje);
+ITEM_NIVEL buscarItem(char idRecurso);
+void actualizarListaRecursosPendientes(char idPersonaje, char recurso);
+void mandarRecursosLiberados(t_recursos recursosALiberar, int fd);
+void agregarRecursosAListaItems(ITEM_NIVEL recurso, int cant);
+
 
 
 //creo estructura de datos para yo:Nivel poder tener el seguimiento del personaje en mi nivel
@@ -32,14 +37,15 @@ typedef struct PersonajeEnNivel{
 
 typedef struct t_recursos{
 	char idRecurso;
-	t_recursos *sig;
-}t_recursos;
-
-typedef struct recursos{
-	char idRecurso;
 	int cant;
 	t_recursos *sig;
 }t_recursos;
+
+typedef struct RecursoPendientePersonaje{
+	char idPersonaje;
+	char recursoPendiente;
+	RecursoPendientePersonaje *sig;
+}RecursoPendientePersonaje;
 
 
 #endif /* PROCESO_NIVEL_H_ */
