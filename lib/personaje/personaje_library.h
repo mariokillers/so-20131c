@@ -44,8 +44,8 @@ typedef struct t_personaje {
 	t_list *personaje_niveles;
 	int personaje_vidas;
 	int personaje_vidas_restantes;
-	Direccion personaje_orquestador;
-	Posicion personaje_posicion_actual;
+	Direccion *personaje_orquestador;
+	Posicion *personaje_posicion_actual;
 } t_personaje;
 
 t_personaje *read_personaje_archivo_configuracion(char* path);

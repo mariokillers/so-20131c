@@ -20,7 +20,6 @@ int Personaje(char *PATH){
 	char proxRec;
 	char *nivActual;
 	Posicion *nuevaPos = malloc(sizeof(Posicion));
-	int p;
 
 	CCB clientCCB_orq;
 	CCB clientCCB_niv;

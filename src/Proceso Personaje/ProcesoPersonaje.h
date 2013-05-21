@@ -22,7 +22,7 @@ char *proximoNivel(t_list niveles);
 char *transformNivel_to_send(char *nivel);
 int _is_next_obj(t_personaje_objetivo *o);
 char proximoRecurso(t_list *niveles, char *nivActual);
-Posicion *proximaPosicion(Posicion *posActual, Posicion *posProxRec);
+Posicion proximaPosicion(Posicion *posActual, Posicion *posProxRec);
 void reiniciarNivel(t_list *niveles, char *nivActual, char proxRec);
 Posicion *realizarMovimiento(Posicion *posActual, Posicion *posProxRec, CBB clientCCB_niv, CBB clientCBB_pln, char *state, char proxRec);
 bool recursoAlcanzado(Posicion *pos1, Posicion *pos2);

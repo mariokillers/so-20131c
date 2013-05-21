@@ -15,6 +15,7 @@
 #define MOVIMIENTO_PERMITIDO 17
 #define RECURSOS_REASIGNADOS 18
 #define NOMBRE_VICTIMA 18 //CHAR DE LA VICTIMA DE INTERBLOQUEO
+#define GANE 20
 
 typedef struct  c{
 	char ID[3]; //es un string, para usar strcpy
@@ -58,6 +59,14 @@ typedef struct {
 	int cant;
 }__attribute__ ((__packed__)) Recursos;
 
+/*Recursos CantRecursos (int flores,int hongos,int monedas){
+	Recursos aux;
+	aux.cant_flor = flores;
+	aux.cant_hongo = hongos;
+	aux.cant_moneda = monedas;
+	return(aux);
+
+}*/
 
 Posicion Pos (int x, int y){
 	Posicion aux;
