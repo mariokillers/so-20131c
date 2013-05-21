@@ -45,7 +45,9 @@ t_nivel *create_nivel(t_config *n){
 
 	nivel->nivel_orquestador->IP = tomarIP(config_get_string_value(n, "orquestador"));
 
-	nivel->nivel_orquestador->puerto = tomarPuerto(config_get_string_value(n, "orquestador"));
+	nivel->nivel_nombre = config_get_string_value(n, "nombre");
+
+	nivel->nivel_orquestador.PORT = tomarPuerto(config_get_string_value(n, "orquestador"));
 
 	nivel->nivel_tiempo_deadlock = config_get_double_value(n, "tiempoChequeoDeadlock");
 

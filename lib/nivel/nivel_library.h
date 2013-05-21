@@ -25,6 +25,7 @@ con toda su estructura de datos
 typedef struct t_nivel{
 	ITEM_NIVEL *nivel_items;
 	Direccion nivel_orquestador;
+	char *nivel_nombre;
 	long nivel_tiempo_deadlock;
 	int nivel_recovery;
 	} t_nivel;
