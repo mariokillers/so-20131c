@@ -14,6 +14,7 @@
 #define DATANIVEL 16
 #define MOVIMIENTO_PERMITIDO 17
 #define RECURSOS_REASIGNADOS 18
+#define NOMBRE_VICTIMA 18 //CHAR DE LA VICTIMA DE INTERBLOQUEO
 
 typedef struct  c{
 	char ID[3]; //es un string, para usar strcpy
@@ -86,13 +87,13 @@ int obtenerPosY(Posicion pos){
 }
 
 char* tomarPuerto(char* direct){
-	char** direct_sep = string_split(direct, ":")
+	char** direct_sep = string_split(direct, ":");
 	int puerto = atoi(direct_sep[1]);
 	return puerto;
 }
 
 char* tomarIP(char* direct){
-	char** direct_sep = string_split(direct, ":")
+	char** direct_sep = string_split(direct, ":");
 	char *IP = direct_sep[0];
 	return IP;
 }
