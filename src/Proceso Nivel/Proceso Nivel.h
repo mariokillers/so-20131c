@@ -8,19 +8,18 @@
 #ifndef PROCESO_NIVEL_H_
 #define PROCESO_NIVEL_H_
 
-int obtenerPosRecursoX(char recurso, ITEM_NIVEL *ListaItems);
-int obtenerPosRecursoY(char recurso, ITEM_NIVEL *ListaItems);
+Posicion obtenerPosRecurso(char recurso);
 void pedirDireccionRecurso();
 void cambiarEstado();
 Recursos liberarRecursos(char idPersonaje,PersonajeEnNivel* listaPersonajes );
-int validarPosYRecursos(ITEM_NIVEL *ListaItems, char idPersonaje, char idRecurso);
+int validarPosYRecursos(char idPersonaje, char idRecurso);
 void cargarPersonaje(PersonajeEnNivel** listaPersonajes, char id);
 void agregarRecursoAPersonaje(PersonajeEnNivel** listaPersonajes, char idPersonaje,char recurso);
 void borrarPersonaje(PersonajeEnNivel** listaPersonajes, char idPersonaje);
-void aumentarRecursos(ITEM_NIVEL *,Recursos recursosALiberar);
+void aumentarRecursos(Recursos recursosALiberar);
 void modificarPosPersonaje(PersonajeEnNivel** listaPersonajes,char idPersonaje, int posx, int posy);
-/*int chequearMovimiento(char idPersonaje, Posicion pos);
-Posicion posPersonaje(char idPersonaje);*/
+t_recursos actualizarListaPersonaje(t_recursos** listaRecursos, char idRecurso);
+
 
 //creo estructura de datos para yo:Nivel poder tener el seguimiento del personaje en mi nivel
 
@@ -36,4 +35,14 @@ typedef struct t_recursos{
 	t_recursos *sig;
 }t_recursos;
 
+typedef struct recursos{
+	char idRecurso;
+	int cant;
+	t_recursos *sig;
+}t_recursos;
+
+
 #endif /* PROCESO_NIVEL_H_ */
+
+
+//HACER UNA FUNCION QUE RECORRA PersonajeEnNivel y que me devuelva, por recurso, la cantidad que tiene ese personaje
