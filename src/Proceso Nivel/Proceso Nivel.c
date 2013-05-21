@@ -39,6 +39,10 @@ int main(void) {
 	serverCCB = initServer(6000);
 
 	clientCCB = connectServer("localhost", (nivel->nivel_orquestador).PORT); // VA EL PUERTO O EL IP?
+	/**mandarMensaje(nivel->nivel_orquestador, HANDSHAKE,sizeof(pos),pos); //le tengo que pasar el puerto+ip+id
+	 *
+	 * tome del nmbre el ultimo caracter y lo concatene con el puerto que elija
+	 * */
 
 	//inicializo el hilo que maneja interbloqueo VER ACA!
 	pthread_t interbloqueo;
@@ -136,7 +140,7 @@ int main(void) {
 					mandarMensaje(mensaje->from, CONFIRMAR_RECURSO,sizeof(0),0);
 
 					//actualiza la lista de recursos pendientes
-					actualizarListaRecursosPendientes(((char*)(mensaje->from))[1], mensaje->data);
+					agregarAListaRecursosPendientes(((char*)(mensaje->from))[1], mensaje->data);
 
 				}
 
@@ -157,26 +161,31 @@ int main(void) {
 			case TERMINE_NIVEL:
 
 				//se fija que recursos tenia asignado el personaje para liberarlos
-				t_recursos recursosALiberar = liberarRecursos(((char*)(mensaje->from))[1]);
+				t_recursos *recursosALiberar = liberarRecursos(((char*)(mensaje->from))[1]);
 
 				//le manda los recursos liberados, de a 1, al orquestador
 				mandarRecursosLiberados(&recursosALiberar,clientCCB.sockfd);
 
 				//por cada recurso que libera tengo que sumarlo a la cantidad en listaItems
-				aumentarRecursos(&recursosALiberar); //CAMBIAR ACA
+				aumentarRecursos(&recursosALiberar);
 
-				//borra el personaje del nivel y libera al personaje de listaPersonajes
+				//borra el personaje del nivel y libera al personaje de listaPersonajes y listaRecursosPendientes
 				BorrarItem(&ListaItems,((char*)(mensaje->from))[1]);
 				borrarPersonajeEnNivel(((char*)(mensaje->from))[1]);
 				borrarPersonajeEnPendiente(((char*)(mensaje->from))[1]);
 
-				//re-dibuja el nivel ya sin el personaje
+				//re-dibuja el nivel ya sin el personaje y con la cantidad de recursos nueva
 				nivel_gui_dibujar(ListaItems);
 
 				break;
 
 			//es avisado de que reasigne los recursos que tomaron los personajes que antes estaban bloqueados
 			case RECURSOS_REASIGNADOS:
+				/*MODIFICAR TODAS LAS LISTAS
+				 * HAY ALGO MAL PENSADO, LA CANTIDAD NO ME SIRVE PORQUE SOLO PUEDE RE-ASIGNAR DE A UN RECURSO POR PERSONAJE.
+				 * REPLANTEAR LA STRUCT
+				*/
+
 				break;
 
 
@@ -207,6 +216,19 @@ int main(void) {
 
 }
 
+void reasignarRecursos(Recursos listaRecursos){
+	/** @NAME: reasignarRecursos
+	 * @DESC: recibe del orquestador los recursos que re-asigno
+	*/
+	Recursos * recurso;
+	recurso = listaRecursos;
+
+	quitarRecursosAListaItems(recurso->idRecurso, recurso->cant); //resta de la lista items la cantidad de recursos que reasigno
+	//agregarRecursoAPersonaje (recurso->idPersonaje, recurso->idRecurso, recurso->cant);
+	quitarSolicitudesDeRecurso (recurso->idPersonaje, recurso->idRecurso); //quita de la lista de solicitudes los recursos que recibio
+
+}
+
 void mandarRecursosLiberados(t_recursos recursosALiberar, int fd){
 	/** @NAME: mandarRecursosLiberados
 	 * @DESC: le manda al orquestador la cantidad de recursos que se liberaron POR RECURSO
@@ -218,6 +240,7 @@ void mandarRecursosLiberados(t_recursos recursosALiberar, int fd){
 		//paso a la struct a la que voy a mandar los mensajes
 		Recursos * recurso;
 		recurso->idRecurso = aux->idRecurso;
+		recurso->idPersonaje = NULL;
 		recurso->cant = aux->cant;
 
 		//le mando al orquestador los recursos liberados para que re-asigne
@@ -313,8 +336,8 @@ void cargarPersonajeEnPendiente(char id){
 
 }
 
-void actualizarListaRecursosPendientes(char idPersonaje, char recurso){
-	/*@NAME: actualizarListaRecursosPendientes
+void agregarAListaRecursosPendientes(char idPersonaje, char recurso){
+	/*@NAME: agregarAListaRecursosPendientes
 	 * @DESC: actualiza la lista de recursos pendientes del personaje para luego utilizarla en el interbloqueo
 	 */
 	RecursoPendientePersonaje* personaje;
@@ -324,6 +347,23 @@ void actualizarListaRecursosPendientes(char idPersonaje, char recurso){
 		personaje = personaje->sig;
 	}if( (personaje != NULL) && (personaje->idPersonaje == idPersonaje)){
 		personaje->recursoPendiente = recurso;
+	}
+}
+
+void quitarSolicitudesDeRecurso(char idPersonaje, char idRecurso){
+	/*@NAME: quitarSolicitudesDeRecurso
+	 * @DESC: quita de la lista de recursos pendientes los recursos que obtuvo el personaje tras la re-asignacion
+	*/
+
+	RecursoPendientePersonaje* personaje;
+	personaje = listaRecursosPendientes;
+
+	while( (personaje != NULL) && (personaje->idPersonaje != idPersonaje)){
+		personaje = personaje->sig;
+	}if( (personaje != NULL) && (personaje->idPersonaje == idPersonaje)){
+		if(personaje->recursoPendiente == idRecurso){
+			personaje->recursoPendiente = NULL;
+		}
 	}
 }
 
@@ -450,12 +490,42 @@ void aumentarRecursos(t_recursos recursosALiberar){
 
 		 //me fijo de que recurso se trata y sumo cantidades a liberar donde corresponda
 
-		 ITEM_NIVEL * recurso = buscarItem(aux.idRecurso);
-		 agregarRecursosAListaItems(&recurso, aux->cant); //DESARROLLAR
+		 //ITEM_NIVEL * recurso = buscarItem(aux.idRecurso);
+		 agregarRecursosAListaItems(aux->idRecurso, aux->cant);
 
 		 aux= aux->sig;
 	 }
 
+}
+
+void agregarRecursosAListaItems(char idRecurso, int cant){
+	/*@NAME: agregarRecursosAListaItems
+	 * @DESC: dado un id de recurso, lo busco en la lista Items y le sumo la cantidad que libero
+	*/
+
+	ITEM_NIVEL * temp;
+	temp = ListaItems;
+
+	while( (temp!= NULL) && (temp->id != idRecurso)){
+		temp= temp->next;
+	}if((temp != NULL) && (temp->id == idRecurso)){
+		temp->quantity = temp->quantity + cant;
+	}
+}
+
+void quitarRecursosAListaItems(char idRecurso, int cant){
+	/*@NAME: quitarRecursosAListaItems
+	* @DESC: dado un id de recurso, lo busco en la lista Items y le resto la cantidad que re-asigno
+	*/
+
+	ITEM_NIVEL * temp;
+	temp = ListaItems;
+
+	while( (temp!= NULL) && (temp->id != idRecurso)){
+		temp= temp->next;
+	}if((temp != NULL) && (temp->id == idRecurso)){
+		temp->quantity = temp->quantity - cant;
+	}
 }
 
 void modificarPosPersonaje(char idPersonaje, int posx, int posy){

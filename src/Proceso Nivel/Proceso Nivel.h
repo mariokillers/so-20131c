@@ -20,10 +20,12 @@ void aumentarRecursos(t_recursos recursosALiberar);
 void modificarPosPersonaje(char idPersonaje, int posx, int posy);
 PersonajeEnNivel buscarPersonaje(char idPersonaje);
 ITEM_NIVEL buscarItem(char idRecurso);
-void actualizarListaRecursosPendientes(char idPersonaje, char recurso);
+void agregarAListaRecursosPendientes(char idPersonaje, char recurso);
 void mandarRecursosLiberados(t_recursos recursosALiberar, int fd);
-void agregarRecursosAListaItems(ITEM_NIVEL recurso, int cant);
-
+void agregarRecursosAListaItems(char idRecurso, int cant);
+void reasignarRecursos(Recursos listaRecursos);
+void quitarRecursosAListaItems(char idRecurso, int cant);
+void quitarSolicitudesDeRecurso(char idPersonaje, char idRecurso);
 
 
 //creo estructura de datos para yo:Nivel poder tener el seguimiento del personaje en mi nivel
