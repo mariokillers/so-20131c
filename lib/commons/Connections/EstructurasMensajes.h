@@ -17,6 +17,10 @@
 #define NOMBRE_VICTIMA 18 //CHAR DE LA VICTIMA DE INTERBLOQUEO
 #define GANE 20
 
+#include "commons/Connections/Mensajes.h"
+
+
+
 typedef struct  c{
 	char ID[3]; //es un string, para usar strcpy
 	char IP[20];
@@ -86,7 +90,7 @@ int obtenerPosY(Posicion pos){
 	return(aux);
 }
 
-char* tomarPuerto(char* direct){
+int tomarPuerto(char* direct){
 	char** direct_sep = string_split(direct, ":");
 	int puerto = atoi(direct_sep[1]);
 	return puerto;
