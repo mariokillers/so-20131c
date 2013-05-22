@@ -24,7 +24,6 @@ void agregarAListaRecursosPendientes(char idPersonaje, char recurso);
 void mandarRecursosLiberados(t_recursos recursosALiberar, int fd);
 void agregarRecursosAListaItems(char idRecurso, int cant);
 void reasignarRecursos(Recursos listaRecursos);
-void quitarRecursosAListaItems(char idRecurso, int cant);
 void quitarSolicitudesDeRecurso(char idPersonaje, char idRecurso);
 
 

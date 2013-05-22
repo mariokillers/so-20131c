@@ -179,12 +179,10 @@ int main(void) {
 
 				break;
 
-			//es avisado de que reasigne los recursos que tomaron los personajes que antes estaban bloqueados
+			//es avisado de que reasigne el recurso que libero previamente. recibe un recurso liberado a la vez
 			case RECURSOS_REASIGNADOS:
-				/*MODIFICAR TODAS LAS LISTAS
-				 * HAY ALGO MAL PENSADO, LA CANTIDAD NO ME SIRVE PORQUE SOLO PUEDE RE-ASIGNAR DE A UN RECURSO POR PERSONAJE.
-				 * REPLANTEAR LA STRUCT
-				*/
+
+				reasignarRecursos(mensaje->data);
 
 				break;
 
@@ -218,13 +216,13 @@ int main(void) {
 
 void reasignarRecursos(Recursos listaRecursos){
 	/** @NAME: reasignarRecursos
-	 * @DESC: recibe del orquestador los recursos que re-asigno
+	 * @DESC: recibe del orquestador el recurso que re-asigno
 	*/
 	Recursos * recurso;
 	recurso = listaRecursos;
 
-	quitarRecursosAListaItems(recurso->idRecurso, recurso->cant); //resta de la lista items la cantidad de recursos que reasigno
-	//agregarRecursoAPersonaje (recurso->idPersonaje, recurso->idRecurso, recurso->cant);
+	restarRecurso(ListaItems, recurso->idRecurso); //resta de la lista items el recurso que re-asigno
+	agregarRecursoAPersonaje (recurso->idPersonaje, recurso->idRecurso); // le agrega a listaPersonajes el recurso que obtuvo el personaje
 	quitarSolicitudesDeRecurso (recurso->idPersonaje, recurso->idRecurso); //quita de la lista de solicitudes los recursos que recibio
 
 }
@@ -352,7 +350,7 @@ void agregarAListaRecursosPendientes(char idPersonaje, char recurso){
 
 void quitarSolicitudesDeRecurso(char idPersonaje, char idRecurso){
 	/*@NAME: quitarSolicitudesDeRecurso
-	 * @DESC: quita de la lista de recursos pendientes los recursos que obtuvo el personaje tras la re-asignacion
+	 * @DESC: quita de la lista de recursos pendientes el recurs que obtuvo el personaje tras la re-asignacion
 	*/
 
 	RecursoPendientePersonaje* personaje;
@@ -510,21 +508,6 @@ void agregarRecursosAListaItems(char idRecurso, int cant){
 		temp= temp->next;
 	}if((temp != NULL) && (temp->id == idRecurso)){
 		temp->quantity = temp->quantity + cant;
-	}
-}
-
-void quitarRecursosAListaItems(char idRecurso, int cant){
-	/*@NAME: quitarRecursosAListaItems
-	* @DESC: dado un id de recurso, lo busco en la lista Items y le resto la cantidad que re-asigno
-	*/
-
-	ITEM_NIVEL * temp;
-	temp = ListaItems;
-
-	while( (temp!= NULL) && (temp->id != idRecurso)){
-		temp= temp->next;
-	}if((temp != NULL) && (temp->id == idRecurso)){
-		temp->quantity = temp->quantity - cant;
 	}
 }
 
