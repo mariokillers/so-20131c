@@ -16,16 +16,21 @@ int ProcesoPersonaje(char *PATH){
 
 	//variables locales
 	char state = NUEVO_NIVEL;
-	Posicion *posProxRec = malloc(sizeof(Posicion));
+	Posicion posProxRec;
 	char proxRec;
 	char* proxNiv;
 	char *nivActual;
 	strcpy(nivActual,"");
-	Posicion *nuevaPos = malloc(sizeof(Posicion));
+	Posicion nuevaPos;
 
 	CCB clientCCB_orq;
 	CCB clientCCB_niv;
 	CCB clientCCB_pln;
+
+	//declaro las señales
+
+	signal(SIGTERM, matarPersonaje);
+	signal(SIGUSR1, darVidaPersonaje);
 
 	//inicializo la cola de mensajes
 
@@ -43,7 +48,7 @@ int ProcesoPersonaje(char *PATH){
 
 					//verifico si gane
 					if(ganado(personaje->personaje_niveles, nivActual)){
-						mandarMensaje(clientCCB_orq.sockfd,GANE,sizeof(personaje->personaje_simbolo),personaje->personaje_simbolo);
+						mandarMensaje(clientCCB_orq.sockfd,GANE,sizeof(personaje->personaje_simbolo),(char) personaje->personaje_simbolo);
 
 						state = WIN;
 					} else{
@@ -72,29 +77,24 @@ int ProcesoPersonaje(char *PATH){
 						switch(mensaje->type){
 							case DATANIVEL:
 								strcpy(nivActual, proxNiv);
-								Data_Nivel *data_new = mensaje->data;
-								Nivel nivel_new = data_new->miNivel;
-								Planificador planificador_new = data_new->miPlanificador;
-
-								char *nivel_IP = nivel_new.IP;
-								int nivel_port = nivel_new.PORT;
-								char *planificador_IP = planificador_new.IP;
-								int planificador_port = planificador_new.PORT;
+								Data_Nivel data_new = (Data_Nivel) mensaje->data;
+								Nivel nivel_new = data_new.miNivel;
+								Planificador planificador_new = data_new.miPlanificador;
 
 								//desconecta del orquestador y conecta a nivel y planificador
 								close(clientCCB_orq.sockfd);
 
-								clientCCB_niv = connectServer(nivel_IP, nivel_port);
-								clientCCB_pln = connectServer(planificador_IP, planificador_port);
+								clientCCB_niv = connectServer(nivel_new.IP, nivel_new.PORT);
+								clientCCB_pln = connectServer(planificador_new.IP, planificador_new.PORT);
 
 								state = STANDBY;
 
 								break;
 						}
 					}
-				break;
+					break;
 
-		case STANDBY:
+				case STANDBY:
 					if (mensajes(colaDeMensajes, clientCCB_pln)){
 						mensaje = queue_pop(colaDeMensajes);
 
@@ -102,8 +102,8 @@ int ProcesoPersonaje(char *PATH){
 							case MOVIMIENTO_PERMITIDO:
 								if(posProxRec != NULL){
 									nuevaPos = realizarMovimiento(personaje->personaje_posicion_actual, posProxRec, clientCCB_niv);
-									personaje->personaje_posicion_actual = nuevaPos;
-									analizarRecurso(personaje->personaje_posicion_actual, posProxRec, clientCCB_niv, clientCCB_pln, &state, proxRec);
+									personaje->personaje_posicion_actual = &nuevaPos;
+									analizarRecurso(personaje->personaje_posicion_actual, posProxRec, clientCCB_niv, clientCCB_pln, &state, (char) proxRec);
 								} else{
 									//solicitar posicion proximo recurso
 									proxRec = proximoRecurso(personaje->personaje_niveles, nivActual);
@@ -118,7 +118,7 @@ int ProcesoPersonaje(char *PATH){
 								mandarMensaje(clientCCB_niv.sockfd,TERMINE_NIVEL,sizeof(NULL),NULL);
 								personaje->personaje_vidas_restantes --;
 
-								//si no le quedan vidas, reinicia todo de nuevo => comienza Personaje de nuevo
+								//si no le quedan vidas, reinicia todo de nuevo -> comienza Personaje de nuevo
 								if(personaje->personaje_vidas_restantes == 0){
 									printf("muerte del personaje %c por interbloqueo", personaje->personaje_simbolo);
 									ProcesoPersonaje(PATH);
@@ -129,21 +129,24 @@ int ProcesoPersonaje(char *PATH){
 									state = STANDBY;
 								}
 								break;
-						}
+							}
+					}
+					break;
+
 				case WAIT_POS_REC:
 					if (mensajes(colaDeMensajes, clientCCB_niv)){
 						mensaje = queue_pop(colaDeMensajes);
 
 						switch(mensaje->type){
 							case POSICION_RECURSO:
-								posProxRec = mensaje->data;
+								posProxRec = (Posicion) mensaje->data;
 								nuevaPos = realizarMovimiento(personaje->personaje_posicion_actual, posProxRec, clientCCB_niv);
-								personaje->personaje_posicion_actual = nuevaPos;
+								personaje->personaje_posicion_actual = &nuevaPos;
 								analizarRecurso(personaje->personaje_posicion_actual, posProxRec, clientCCB_niv, clientCCB_pln, &state, proxRec);
 						}
 						break;
 					}
-
+					break;
 				case WAIT_REC:
 					if (mensajes(colaDeMensajes, clientCCB_niv)){
 						mensaje = queue_pop(colaDeMensajes);
@@ -169,12 +172,16 @@ int ProcesoPersonaje(char *PATH){
 									}
 
 								} else{
-									mandarMensaje(clientCCB_pln.sockfd,PERSONAJE_BLOQUEADO,sizeof(proxRec),proxRec);
+									mandarMensaje(clientCCB_pln.sockfd,PERSONAJE_BLOQUEADO,sizeof(proxRec),(char) proxRec);
 
 									state = STANDBY;
 								}
 							}
 						}
+						break;
+
+					case WIN:
+						return 1;
 						break;
 					}
 			}
@@ -208,14 +215,14 @@ char proximoRecurso(t_list *niveles, char *nivActual){
 	return auxObj->objetivo;
 }
 
-Posicion *proximaPosicion(Posicion *posActual, Posicion *posProxRec){
-	if((posActual->POS_X < posProxRec->POS_X) && (posActual->POS_X != posProxRec->POS_X)){
+Posicion proximaPosicion(Posicion posActual, Posicion posProxRec){
+	if((posActual.POS_X < posProxRec.POS_X) && (posActual.POS_X != posProxRec.POS_X)){
 		posActual->POS_X ++;
-	} else if((posActual->POS_X > posProxRec->POS_X) && (posActual->POS_X != posProxRec->POS_X)){
+	} else if((posActual.POS_X > posProxRec.POS_X) && (posActual.POS_X != posProxRec.POS_X)){
 		posActual->POS_X --;
-	} else if((posActual->POS_Y > posProxRec->POS_Y) && (posActual->POS_Y != posProxRec->POS_Y)){
+	} else if((posActual.POS_Y > posProxRec.POS_Y) && (posActual.POS_Y != posProxRec.POS_Y)){
 		posActual->POS_Y --;
-	} else if((posActual->POS_Y < posProxRec->POS_Y) && (posActual->POS_Y != posProxRec->POS_Y)){
+	} else if((posActual.POS_Y < posProxRec.POS_Y) && (posActual.POS_Y != posProxRec.POS_Y)){
 		posActual->POS_Y ++;
 	}
 
@@ -248,17 +255,17 @@ bool recursoAlcanzado(Posicion *pos1, Posicion *pos2){
 }
 
 
-Posicion *realizarMovimiento(Posicion *posActual, Posicion *posProxRec, CBB clientCCB_niv){
-	Posicion *nuevaPos = proximaPosicion(posActual, posProxRec);
+Posicion realizarMovimiento(Posicion *posActual, Posicion *posProxRec, CBB clientCCB_niv){
+	Posicion nuevaPos = proximaPosicion(*posActual, posProxRec);
 
-	mandarMensaje(clientCCB_niv.sockfd,REQUEST_MOVIMIENTO,sizeof(nuevaPos),nuevaPos);
+	mandarMensaje(clientCCB_niv.sockfd,REQUEST_MOVIMIENTO,sizeof(&nuevaPos),&nuevaPos);
 
 	return nuevaPos;
 }
 
-void analizarRecurso(Posicion *posActual, Posicion *posProxRec, CBB clientCCB_niv, CBB clientCBB_pln, char *state, char proxRec){
+void analizarRecurso(Posicion *posActual, Posicion posProxRec, CBB clientCCB_niv, CBB clientCBB_pln, char *state, char proxRec){
 	if(recursoAlcanzado(posActual, posProxRec)){
-		mandarMensaje(clientCCB_niv.sockfd,REQUEST_RECURSO,sizeof(proxRec),proxRec);
+		mandarMensaje(clientCCB_niv.sockfd,REQUEST_RECURSO,sizeof(proxRec), (char)proxRec);
 
 		*state = WAIT_REC;
 	} else{
