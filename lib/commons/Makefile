@@ -1,7 +1,7 @@
 CC = gcc
 LDFLAGS = -shared
-LIBDIR = ./src
-LIBRARY = libcommons.so
+LIBDIR = .
+LIBRARY = libso-commons-library.so
 SOURCES = bitarray.c config.c process.c txt.c log.c temporal.c string.c error.c
 OBJECTS = $(SOURCES:.c=.o)
 
