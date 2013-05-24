@@ -1,1 +1,5 @@
-# Compila proyecto entero, incluyendo bibliotecas externas
+all: libs
+
+libs:
+	cd lib/commons; make
+	cd lib/memoria; make
