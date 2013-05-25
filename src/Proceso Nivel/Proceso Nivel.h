@@ -26,6 +26,11 @@ void agregarRecursosAListaItems(char idRecurso, int cant);
 void reasignarRecursos(Recursos listaRecursos);
 void quitarSolicitudesDeRecurso(char idPersonaje, char idRecurso);
 
+//listaItems = Resources (al principio)
+//PersonajeEnNivel = Allocation
+//RecursoPendientePersonaje = Claim
+// RECURSOSDISPONIBLES = Available
+
 
 //creo estructura de datos para yo:Nivel poder tener el seguimiento del personaje en mi nivel
 
@@ -36,6 +41,7 @@ typedef struct PersonajeEnNivel{
 	struct PersonajeEnNivel *sig;
 } PersonajeEnNivel;
 
+//ESTO SIRVE PARA DEADLOCK: RECURSOSDISPONIBLES (AVAILABLE)
 typedef struct t_recursos{
 	char idRecurso;
 	int cant;

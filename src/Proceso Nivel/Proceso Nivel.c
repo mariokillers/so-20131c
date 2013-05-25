@@ -21,6 +21,10 @@ PersonajeEnNivel* listaPersonajes;
 ITEM_NIVEL* ListaItems;
 RecursoPendientePersonaje* listaRecursosPendientes;
 
+//inicio al proceso como servidor y me conecto como cliente
+	CCB serverCCB;
+	CCB clientCCB;
+
 int recovery;
 
 
@@ -32,11 +36,7 @@ int main(void) {
 	//inicializo el proceso nivel
 	nivel_gui_inicializar();
 
-	//inicio al proceso como servidor y me conecto como cliente
-	CCB serverCCB;
-	CCB clientCCB;
-
-	serverCCB = initServer(6000);
+	serverCCB = initServer(6000);  // chequear esto
 
 	clientCCB = connectServer("localhost", (nivel->nivel_orquestador).PORT); // VA EL PUERTO O EL IP?
 	/**mandarMensaje(nivel->nivel_orquestador, HANDSHAKE,sizeof(pos),pos); //le tengo que pasar el puerto+ip+id
@@ -45,8 +45,9 @@ int main(void) {
 	 * */
 
 	//inicializo el hilo que maneja interbloqueo VER ACA!
-	pthread_t interbloqueo;
-	pthread_create( &interbloqueo, NULL, interbloqueo, NULL );
+	//pthread_t interbloqueo;
+	//pthread_create( &interbloqueo, NULL, interbloqueo, NULL );S RECURSOS_LIBERADOS;
+
 
 	//inicializo la lista de items a dibujar y controlar
 	extern ITEM_NIVEL* ListaItems;
@@ -93,7 +94,6 @@ int main(void) {
 				char mensajeLogeo = ((char*)(mensaje->from))[1];
 
 				log_info(logger, mensajeLogeo);
-
 
 				break;
 
@@ -179,13 +179,6 @@ int main(void) {
 
 				break;
 
-			//es avisado de que reasigne el recurso que libero previamente. recibe un recurso liberado a la vez
-			case RECURSOS_REASIGNADOS:
-
-				reasignarRecursos(mensaje->data);
-
-				break;
-
 
 			case NOMBRE_VICTIMA: //LOGEO QUE HUBO RECOVERY Y PONGO EL NOMBRE DE LA VICTIMA. TIPO DE DATO: CHAR
 
@@ -221,6 +214,12 @@ void reasignarRecursos(Recursos listaRecursos){
 	Recursos * recurso;
 	recurso = listaRecursos;
 
+	t_queue* colaDeMensajes;
+	colaDeMensajes = queue_create();
+	Mensaje* mensaje;
+
+
+
 	restarRecurso(ListaItems, recurso->idRecurso); //resta de la lista items el recurso que re-asigno
 	agregarRecursoAPersonaje (recurso->idPersonaje, recurso->idRecurso); // le agrega a listaPersonajes el recurso que obtuvo el personaje
 	quitarSolicitudesDeRecurso (recurso->idPersonaje, recurso->idRecurso); //quita de la lista de solicitudes los recursos que recibio
@@ -234,6 +233,13 @@ void mandarRecursosLiberados(t_recursos recursosALiberar, int fd){
 	t_recursos * aux;
 	aux = recursosALiberar;
 
+	t_queue* colaDeMensajes;
+	colaDeMensajes = queue_create();
+	Mensaje* mensaje;
+
+
+
+
 	while(aux != NULL){
 		//paso a la struct a la que voy a mandar los mensajes
 		Recursos * recurso;
@@ -243,6 +249,23 @@ void mandarRecursosLiberados(t_recursos recursosALiberar, int fd){
 
 		//le mando al orquestador los recursos liberados para que re-asigne
 		mandarMensaje(fd, RECURSOS_LIBERADOS,sizeof(recurso),recurso);
+
+		//escucho al orquestador que me va a mandar los que re-asigno
+		while((!mensajes(colaDeMensajes,serverCCB)));
+			mensaje = queue_pop(colaDeMensajes);
+
+			//mientras no sea el mensaje REASIGNACION_FINALIZADA... quiere decir que me esta mandando re-asignaciones
+
+			while(mensaje->type !=REASIGNACION_FINALIZADA ){
+				if(mensaje->type == RECURSOS_REASIGNADOS){
+					//llamo a reasignar con la data que me envio
+					reasignarRecursos(mensaje->data);
+				} borrarMensaje(mensaje);
+				//levanto nuevo mensaje
+			while((!mensajes(colaDeMensajes,serverCCB)));
+				mensaje = queue_pop(colaDeMensajes);
+			}
+
 		aux = aux->sig;
 	}
 }
@@ -306,7 +329,7 @@ void cargarPersonajeEnNivel(char id){
 
 	personaje->id = id;
 
-	Posicion pos = Pos(0,0);
+	Posicion *pos = Pos(0,0);
 	personaje->pos = pos;
 
 	personaje->recursos = NULL;
