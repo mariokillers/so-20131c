@@ -17,17 +17,7 @@
 
 #include "personaje_library.h"
 #include <signal.h>
-#include "Client.h"
-#include "EstructurasMensajes.h"
-#include "Mensajes.h"
 
-typedef struct {
-	int instancia_epoll;			// Instancia epoll
-	int sockfd, masterfd; 			// Escuchar sobre sock_fd, nuevas conexiones sobre new_fd
-	struct epoll_event event;		//
-	struct epoll_event *events;
-	struct sockaddr_in my_addr; 	// Información sobre mi dirección
-} CBB;
 
 int _is_next_level(t_personaje_nivel *p);
 char *proximoNivel(t_list *niveles);
@@ -40,9 +30,10 @@ void analizarRecurso(Posicion *posActual, Posicion *posProxRec, CCB clientCCB_ni
 bool recursoAlcanzado(Posicion *pos1, Posicion *pos2);
 void agregarRecurso(t_list *niveles, char *nivActual, char proxRec);
 bool nivelTerminado(t_list *niveles, char *nivActual);
-bool ganado(t_list *niveles, char *nivActual);
+bool ganado(t_list *niveles);
 Posicion *realizarMovimiento(Posicion *posActual, Posicion *posProxRec, CCB clientCCB_niv);
-
+void morir(t_personaje *personaje, t_personaje *personaje_init, CCB clientCCB_niv, Posicion *posProxRec, char state, char *nivActual);
+void rutinaSignal(int n);
 
 
 
