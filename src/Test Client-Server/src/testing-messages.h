@@ -41,5 +41,6 @@ void finDeNivel();
 void responseFinDeNivel(Mensaje* mensaje);
 void gane();
 void responseGane(Mensaje* mensaje);
+void conectarNivel();
 
 #endif /* TESTING_MESSAGES_H_ */

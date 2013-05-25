@@ -102,6 +102,7 @@ void procesoNivel() {
 			case 2:
 				break;
 			case 3:
+				conectarNivel();
 				break;
 		}
 	}
@@ -354,4 +355,15 @@ void responseGane(Mensaje* mensaje) {
 	char* personaje = (char*)mensaje->data;
 	printf("LLego a Server el mensaje de Cliente diciendo que el personaje '%s' gano \n", personaje);
 	close(Client.sockfd);
+}
+
+void conectarNivel() {
+	setClientAndServer();
+	printf("Enviando mensaje de Nivel para conectarse \n");
+	Nivel nivel;
+	nivel.FD = 0;
+	nivel.PORT = 6000;
+	strcpy(nivel.ID, "IDT");
+	strcpy(nivel.IP, "localhost");
+	mandarMensaje(Client.sockfd, HANDSHAKE, sizeof(nivel), &nivel);
 }
