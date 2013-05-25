@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <syncparticipants>
-<participant displayName="Git (CommonsLibrary)" id="org.eclipse.egit.ui.modelCompareParticipant" secondary_id="1368205291468">
+<participant displayName="Git (0 items)" id="org.eclipse.egit.ui.modelCompareParticipant" secondary_id="1369462586204">
 <data forceFetch="false" root="false">
-<org.eclipse.team.ui.MODEL_PARTICIPANT_SETTINGS org.eclipse.team.ui.MODEL_PARTICIPANT_DESCRIPTION="CommonsLibrary" startupAction="none">
+<org.eclipse.team.ui.MODEL_PARTICIPANT_SETTINGS org.eclipse.team.ui.MODEL_PARTICIPANT_DESCRIPTION="0 items" startupAction="none">
 <org.eclipse.team.ui.MODEL_PARTICIPANT_REFRESH_SCHEDULE org.eclipse.team.ui.CTX_REFRESHSCHEDULE_ENABLED="false" org.eclipse.team.ui.CTX_REFRESHSCHEDULE_INTERVAL="3600" org.eclipse.team.ui.CTX_REFRESHSCHEDULE_RUNONCE="false"/>
-<org.eclipse.team.ui.MODEL_PARTICIPANT_MAPPINGS modelProviderId="org.eclipse.core.resources.modelProvider">
-<mappings>
-<resources resourcePath="/CommonsLibrary" resourceType="4"/>
-</mappings>
-</org.eclipse.team.ui.MODEL_PARTICIPANT_MAPPINGS>
 </org.eclipse.team.ui.MODEL_PARTICIPANT_SETTINGS>
-<gitSynchronizeData container="/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" dstRev="refs/remotes/origin/develop" inludeLocal="true" srcRev="HEAD"/>
 </data>
 </participant>
 </syncparticipants>

@@ -21,7 +21,25 @@ void procesoNivel();
 void procesoPlataforma();
 void showClientMessageAndResponse();
 void showServerMessage();
+
+void setClientAndServer();
+void conectarPersonaje();
+void responseConectarPersonaje(Mensaje* mensaje);
 void requestDataNivel();
-void responsePosicionRecurso();
+void responseDataNivel(Mensaje* mensaje);
+void requestProximoRecurso();
+void responsePosicionProxRecurso(Mensaje* mensaje);
+void realizarMovimiento();
+void responseRealizarMovimiento(Mensaje* mensaje);
+void quieroRecurso();
+void responseQuieroRecurso(Mensaje* mensaje);
+void bloquear();
+void responseBloquear(Mensaje* mensaje);
+void terminarTurno();
+void responseTerminarTurno(Mensaje* mensaje);
+void finDeNivel();
+void responseFinDeNivel(Mensaje* mensaje);
+void gane();
+void responseGane(Mensaje* mensaje);
 
 #endif /* TESTING_MESSAGES_H_ */
