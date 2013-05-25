@@ -1,6 +1,2 @@
-commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\n<messages>\n<message>ESTRUCTURAS DE MENSAJES</message>\n<message>Biblioteca Comunicaciones en commons + Test Client-Server + Procesos&\#x0A;Server y Cliente con mensajes paquetizados.</message>\n<message>Nueva biblioteca agregada a las Shared para Comunicaci\u00F3n Interprocesos.&\#x0A;Ejempo de uso.</message>\n</messages>
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\n<messages>\n<message>Modificacion para multiples recursos en proceso.</message>\n</messages>
 eclipse.preferences.version=1
-resourcehistory_graph_split=500,500
-resourcehistory_rev_split=700,300
-resourcehistory_show_rev_comment=false
-show_initial_config_dialog=false

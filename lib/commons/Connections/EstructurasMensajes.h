@@ -14,15 +14,16 @@
 #define DATANIVEL 16
 #define MOVIMIENTO_PERMITIDO 17
 #define RECURSOS_REASIGNADOS 18
-#define NOMBRE_VICTIMA 18 //CHAR DE LA VICTIMA DE INTERBLOQUEO
+#define NOMBRE_VICTIMA 19 //CHAR DE LA VICTIMA DE INTERBLOQUEO
 #define GANE 20
+#define REASIGNACION_FINALIZADA 21
 
 #include "commons/Connections/Mensajes.h"
 
 
 
 typedef struct  c{
-	char ID[3]; //es un string, para usar strcpy
+	char ID[20]; //es un string, para usar strcpy
 	char IP[20];
 	int PORT;
 	int FD;
@@ -82,7 +83,7 @@ int obtenerPosY(Posicion pos){
 	int aux = pos.POS_Y;
 	return(aux);
 }
-
+/*
 int tomarPuerto(char* direct){
 	char** direct_sep = string_split(direct, ":");
 	int puerto = atoi(direct_sep[1]);
@@ -94,4 +95,4 @@ char* tomarIP(char* direct){
 	char *IP = direct_sep[0];
 	return IP;
 }
-
+*/

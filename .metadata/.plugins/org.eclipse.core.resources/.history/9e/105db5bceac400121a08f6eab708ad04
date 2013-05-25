@@ -13,7 +13,7 @@
 #define REQUESTDATANIVEL 01
 #include <stdio.h>
 #include <stdlib.h>
-#include <commons/collections/list.h>
+
 #include <commons/collections/stack.h>
 #include <commons/log.h>
 #include <pthread.h>

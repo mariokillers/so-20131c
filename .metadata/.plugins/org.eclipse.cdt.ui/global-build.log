@@ -242,3 +242,166 @@ make: No se hace nada para «all».
 14:38:19 **** Incremental Build of configuration Debug for project Test Client-Server ****
 make all 
 make: No se hace nada para «all».
+00:21:34 **** Build of configuration Debug for project CommonsLibrary ****
+make all 
+Building file: ../collections/dictionary.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/dictionary.d" -MT"collections/dictionary.d" -o "collections/dictionary.o" "../collections/dictionary.c"
+Finished building: ../collections/dictionary.c
+ 
+Building file: ../collections/list.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/list.d" -MT"collections/list.d" -o "collections/list.o" "../collections/list.c"
+Finished building: ../collections/list.c
+ 
+Building file: ../collections/queue.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/queue.d" -MT"collections/queue.d" -o "collections/queue.o" "../collections/queue.c"
+Finished building: ../collections/queue.c
+ 
+Building file: ../collections/stack.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/stack.d" -MT"collections/stack.d" -o "collections/stack.o" "../collections/stack.c"
+Finished building: ../collections/stack.c
+ 
+Building file: ../Connections/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Client.d" -MT"Connections/Client.d" -o "Connections/Client.o" "../Connections/Client.c"
+Finished building: ../Connections/Client.c
+ 
+Building file: ../Connections/Mensajes.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Mensajes.d" -MT"Connections/Mensajes.d" -o "Connections/Mensajes.o" "../Connections/Mensajes.c"
+Finished building: ../Connections/Mensajes.c
+ 
+Building file: ../Connections/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Server.d" -MT"Connections/Server.d" -o "Connections/Server.o" "../Connections/Server.c"
+Finished building: ../Connections/Server.c
+ 
+Building file: ../bitarray.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"bitarray.d" -MT"bitarray.d" -o "bitarray.o" "../bitarray.c"
+Finished building: ../bitarray.c
+ 
+Building file: ../config.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"config.d" -MT"config.d" -o "config.o" "../config.c"
+Finished building: ../config.c
+ 
+Building file: ../error.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"error.d" -MT"error.d" -o "error.o" "../error.c"
+Finished building: ../error.c
+ 
+Building file: ../log.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"log.d" -MT"log.d" -o "log.o" "../log.c"
+Finished building: ../log.c
+ 
+Building file: ../process.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"process.d" -MT"process.d" -o "process.o" "../process.c"
+Finished building: ../process.c
+ 
+Building file: ../string.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"string.d" -MT"string.d" -o "string.o" "../string.c"
+Finished building: ../string.c
+ 
+Building file: ../temporal.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"temporal.d" -MT"temporal.d" -o "temporal.o" "../temporal.c"
+Finished building: ../temporal.c
+ 
+Building file: ../txt.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"txt.d" -MT"txt.d" -o "txt.o" "../txt.c"
+Finished building: ../txt.c
+ 
+Building target: libCommonsLibrary.so
+Invoking: GCC C Linker
+gcc -shared -o "libCommonsLibrary.so"  ./collections/dictionary.o ./collections/list.o ./collections/queue.o ./collections/stack.o  ./Connections/Client.o ./Connections/Mensajes.o ./Connections/Server.o  ./bitarray.o ./config.o ./error.o ./log.o ./process.o ./string.o ./temporal.o ./txt.o   
+Finished building target: libCommonsLibrary.so
+ 
+00:21:47 **** Build of configuration Debug for project Proceso Plataforma ****
+make all 
+Building file: ../Proceso_Plataforma.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Proceso_Plataforma.d" -MT"Proceso_Plataforma.d" -o "Proceso_Plataforma.o" "../Proceso_Plataforma.c"
+In file included from ../Proceso_Plataforma.c:2:0:
+../Proceso_Plataforma.h:16:38: error fatal: commons/collections/list.h: No existe el archivo o el directorio
+compilación terminada.
+make: *** [Proceso_Plataforma.o] Error 1
+00:23:19 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+00:23:21 **** Incremental Build of configuration Debug for project Proceso Plataforma ****
+make all 
+Building file: ../Proceso_Plataforma.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Proceso_Plataforma.d" -MT"Proceso_Plataforma.d" -o "Proceso_Plataforma.o" "../Proceso_Plataforma.c"
+In file included from ../Proceso_Plataforma.c:2:0:
+../Proceso_Plataforma.h:16:38: error fatal: commons/collections/list.h: No existe el archivo o el directorio
+compilación terminada.
+make: *** [Proceso_Plataforma.o] Error 1
+00:24:08 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+00:24:10 **** Incremental Build of configuration Debug for project Proceso Plataforma ****
+make all 
+Building file: ../Proceso_Plataforma.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Proceso_Plataforma.d" -MT"Proceso_Plataforma.d" -o "Proceso_Plataforma.o" "../Proceso_Plataforma.c"
+In file included from ../Proceso_Plataforma.c:2:0:
+../Proceso_Plataforma.h:16:38: error fatal: commons/collections/list.h: No existe el archivo o el directorio
+compilación terminada.
+make: *** [Proceso_Plataforma.o] Error 1
+00:24:20 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+00:24:22 **** Incremental Build of configuration Debug for project Proceso Plataforma ****
+make all 
+Building file: ../Proceso_Plataforma.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Proceso_Plataforma.d" -MT"Proceso_Plataforma.d" -o "Proceso_Plataforma.o" "../Proceso_Plataforma.c"
+In file included from ../Proceso_Plataforma.c:2:0:
+../Proceso_Plataforma.h:16:38: error fatal: commons/collections/list.h: No existe el archivo o el directorio
+compilación terminada.
+make: *** [Proceso_Plataforma.o] Error 1
+00:25:25 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+00:25:28 **** Incremental Build of configuration Debug for project Proceso Plataforma ****
+make all 
+Building file: ../Proceso_Plataforma.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Proceso_Plataforma.d" -MT"Proceso_Plataforma.d" -o "Proceso_Plataforma.o" "../Proceso_Plataforma.c"
+In file included from ../Proceso_Plataforma.c:2:0:
+../Proceso_Plataforma.h:16:38: error fatal: commons/collections/list.h: No existe el archivo o el directorio
+compilación terminada.
+make: *** [Proceso_Plataforma.o] Error 1
+00:25:54 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+00:25:57 **** Incremental Build of configuration Debug for project Proceso Plataforma ****
+make all 
+Building file: ../Proceso_Plataforma.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Proceso_Plataforma.d" -MT"Proceso_Plataforma.d" -o "Proceso_Plataforma.o" "../Proceso_Plataforma.c"
+In file included from ../Proceso_Plataforma.c:2:0:
+../Proceso_Plataforma.h:16:38: error fatal: commons/collections/list.h: No existe el archivo o el directorio
+compilación terminada.
+make: *** [Proceso_Plataforma.o] Error 1
+00:27:04 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+00:27:07 **** Incremental Build of configuration Debug for project Proceso Plataforma ****
+make all 
+Building file: ../Proceso_Plataforma.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Proceso_Plataforma.d" -MT"Proceso_Plataforma.d" -o "Proceso_Plataforma.o" "../Proceso_Plataforma.c"
+In file included from ../Proceso_Plataforma.c:2:0:
+../Proceso_Plataforma.h:16:38: error fatal: commons/collections/list.h: No existe el archivo o el directorio
+compilación terminada.
+make: *** [Proceso_Plataforma.o] Error 1
