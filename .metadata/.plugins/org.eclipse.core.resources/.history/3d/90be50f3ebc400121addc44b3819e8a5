@@ -8,6 +8,7 @@
 t_list* Gestores;
 int main (){
 
+	int i;
 	Gestores = list_create();
 
 	//TEST 1

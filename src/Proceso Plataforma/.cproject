@@ -25,8 +25,6 @@
 								<option id="gnu.cpp.compiler.exe.debug.option.debugging.level.163915203" name="Debug Level" superClass="gnu.cpp.compiler.exe.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1651003368" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CommonsLibrary}&quot;"/>
-									<listOptionValue builtIn="false" value="/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib"/>
-									<listOptionValue builtIn="false" value="pthread"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.589442852" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
@@ -34,7 +32,7 @@
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.exe.debug.option.optimization.level.647208311" name="Optimization Level" superClass="gnu.c.compiler.exe.debug.option.optimization.level" valueType="enumerated"/>
 								<option id="gnu.c.compiler.exe.debug.option.debugging.level.435454870" name="Debug Level" superClass="gnu.c.compiler.exe.debug.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.40029464" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CommonsLibrary}&quot;"/>
+									<listOptionValue builtIn="false" value="/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1319989348" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
@@ -44,7 +42,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CommonsLibrary/Debug}&quot;"/>
 								</option>
 								<option id="gnu.cpp.link.option.libs.493522213" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="CommonsLibrary"/>
+									<listOptionValue builtIn="false" value="CommonsLibrary"/>
+									<listOptionValue builtIn="false" value="pthread"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.854326955" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
@@ -54,7 +53,6 @@
 							<tool id="cdt.managedbuild.tool.gnu.assembler.exe.debug.340964376" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.exe.debug">
 								<option id="gnu.both.asm.option.include.paths.1544855595" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CommonsLibrary}&quot;"/>
-									<listOptionValue builtIn="false" value="/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1176176171" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
@@ -137,6 +135,12 @@
 		</scannerConfigBuildInfo>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-	<storageModule moduleId="refreshScope"/>
-	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/Proceso Plataforma"/>
+		</configuration>
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/Proceso Plataforma"/>
+		</configuration>
+	</storageModule>
 </cproject>

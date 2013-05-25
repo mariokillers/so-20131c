@@ -1,12 +1,6 @@
-00:27:07 **** Incremental Build of configuration Debug for project Proceso Plataforma ****
+00:35:38 **** Incremental Build of configuration Debug for project Proceso Plataforma ****
 make all 
-Building file: ../Proceso_Plataforma.c
-Invoking: GCC C Compiler
-gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Proceso_Plataforma.d" -MT"Proceso_Plataforma.d" -o "Proceso_Plataforma.o" "../Proceso_Plataforma.c"
-In file included from ../Proceso_Plataforma.c:2:0:
-../Proceso_Plataforma.h:16:38: error fatal: commons/collections/list.h: No existe el archivo o el directorio
-compilación terminada.
-make: *** [Proceso_Plataforma.o] Error 1
+make: No se hace nada para «all».
 
-00:27:09 Build Finished (took 2s.323ms)
+00:35:39 Build Finished (took 642ms)
 

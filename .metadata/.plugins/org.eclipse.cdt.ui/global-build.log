@@ -405,3 +405,65 @@ In file included from ../Proceso_Plataforma.c:2:0:
 ../Proceso_Plataforma.h:16:38: error fatal: commons/collections/list.h: No existe el archivo o el directorio
 compilación terminada.
 make: *** [Proceso_Plataforma.o] Error 1
+00:31:31 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+00:31:33 **** Incremental Build of configuration Debug for project Proceso Plataforma ****
+make all 
+Building file: ../Proceso_Plataforma.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Proceso_Plataforma.d" -MT"Proceso_Plataforma.d" -o "Proceso_Plataforma.o" "../Proceso_Plataforma.c"
+In file included from ../Proceso_Plataforma.c:2:0:
+../Proceso_Plataforma.h:16:38: error fatal: commons/collections/list.h: No existe el archivo o el directorio
+compilación terminada.
+make: *** [Proceso_Plataforma.o] Error 1
+00:33:16 **** Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+00:33:18 **** Build of configuration Debug for project Proceso Plataforma ****
+make all 
+Building file: ../Proceso_Plataforma.c
+Invoking: GCC C Compiler
+gcc -I/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Proceso_Plataforma.d" -MT"Proceso_Plataforma.d" -o "Proceso_Plataforma.o" "../Proceso_Plataforma.c"
+../Proceso_Plataforma.c: En la función ‘main’:
+../Proceso_Plataforma.c:11:6: aviso: variable ‘i’ sin usar [-Wunused-variable]
+Finished building: ../Proceso_Plataforma.c
+ 
+Building target: Proceso Plataforma
+Invoking: GCC C++ Linker
+g++ -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proceso Plataforma"  ./Proceso_Plataforma.o   -lCommonsLibrary -lpthread
+Finished building target: Proceso Plataforma
+ 
+00:34:07 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+00:34:10 **** Incremental Build of configuration Debug for project Proceso Plataforma ****
+make all 
+Building file: ../Proceso_Plataforma.c
+Invoking: GCC C Compiler
+gcc -I/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Proceso_Plataforma.d" -MT"Proceso_Plataforma.d" -o "Proceso_Plataforma.o" "../Proceso_Plataforma.c"
+Finished building: ../Proceso_Plataforma.c
+ 
+Building target: Proceso Plataforma
+Invoking: GCC C++ Linker
+g++ -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proceso Plataforma"  ./Proceso_Plataforma.o   -lCommonsLibrary -lpthread
+Finished building target: Proceso Plataforma
+ 
+00:34:19 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+00:34:20 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+00:34:21 **** Incremental Build of configuration Debug for project Proceso Plataforma ****
+make all 
+make: No se hace nada para «all».
+00:35:35 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+00:35:37 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+00:35:38 **** Incremental Build of configuration Debug for project Proceso Plataforma ****
+make all 
+make: No se hace nada para «all».
