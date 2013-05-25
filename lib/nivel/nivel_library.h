@@ -12,11 +12,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
-#include <commons/config.h>
-#include <commons/string.h>
-#include <commons/collections/list.h>
-#include <commons/Connections/EstructurasMensajes.h>
-#include <so-nivel-gui-library-master/nivel-gui/nivel.h>
+#include "commons/config.h"
+#include "commons/string.h"
+#include "commons/collections/list.h"
+//#include "commons/Connections/EstructurasMensajes.h"
+//#include "../dibujoNivel/nivel-gui/nivel.h"
 
 
 /*define el tipo t_nivel, que representa un nivel creado a partir de un archivo de configuracion dado
@@ -24,7 +24,7 @@ con toda su estructura de datos
 	*/
 typedef struct t_nivel{
 	ITEM_NIVEL *nivel_items;
-	Direccion nivel_orquestador;
+	Direccion* nivel_orquestador;
 	char *nivel_nombre;
 	long nivel_tiempo_deadlock;
 	int nivel_recovery;
@@ -40,7 +40,7 @@ void ListItems_add_caja(t_config *n, char *buffer_caja_num, ITEM_NIVEL **list);
 /*funciones para usar en el dibujo de nivel
 	*/
 ITEM_NIVEL *crear_lista_items(t_list *cajas, t_list *personajes);
-void add_personaje_item_nivel(t_personaje_en_nivel *personaje, ITEM_NIVEL **list, char tipo);
+//void add_personaje_item_nivel(t_personaje_en_nivel *personaje, ITEM_NIVEL **list, char tipo);
 void BorrarItem(ITEM_NIVEL** i, char id);
 void MoverPersonaje(ITEM_NIVEL* ListaItems, char id, int x, int y);
 

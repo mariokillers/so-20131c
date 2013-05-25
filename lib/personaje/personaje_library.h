@@ -12,10 +12,12 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
-#include <commons/config.h>
-#include <commons/string.h>
-#include <commons/collections/list.h>
-#include <commons/Connections/EstructurasMensajes.h>
+#include "commons/config.h"
+#include "commons/string.h"
+#include "commons/collections/list.h"
+
+
+
 
 /*define el tipo t_personaje_objetivo, que representa un objetivo de los que tiene que conseguir el personaje
 en un nivel y si lo tiene o no

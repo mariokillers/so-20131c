@@ -1,4 +1,4 @@
-#include "nivel.h"
+#include "../nivel-gui/nivel.h"
 
 void BorrarItem(ITEM_NIVEL** i, char id);
 void restarRecurso(ITEM_NIVEL* i, char id);

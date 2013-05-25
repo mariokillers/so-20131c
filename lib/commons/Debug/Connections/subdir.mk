@@ -5,16 +5,19 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Connections/Client.c \
+../Connections/EstructurasMensajes.c \
 ../Connections/Mensajes.c \
 ../Connections/Server.c 
 
 OBJS += \
 ./Connections/Client.o \
+./Connections/EstructurasMensajes.o \
 ./Connections/Mensajes.o \
 ./Connections/Server.o 
 
 C_DEPS += \
 ./Connections/Client.d \
+./Connections/EstructurasMensajes.d \
 ./Connections/Mensajes.d \
 ./Connections/Server.d 
 

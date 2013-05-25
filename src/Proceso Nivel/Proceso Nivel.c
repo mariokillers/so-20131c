@@ -5,15 +5,17 @@
  *      Author: petauriel
  */
 
-#include "tad_items.h"
+#include "dibujoNivel/nivel-gui-test/tad_items.h"
 #include <stdlib.h>
 #include <curses.h>
-#include "Proceso Server.h"
-#include "nivel.h"
-#include "Proceso Cliente.h"
-#include "config.c"
+#include <commons/log.h>
+#include "commons/Connections/Server.h"
+#include "commons/Connections/EstructurasMensajes.h"
+#include "commons/Connections/Client.h"
+#include "commons/config.h"
 #include "Proceso Nivel.h"
-#include "personaje_library.h"
+#include "personaje/personaje_library.h"
+#include "nivel/nivel_library.h"
 
 
 //inicializo la lista de personajes para controlar, dibujar e interbloqueo (en orden)
@@ -31,16 +33,26 @@ int recovery;
 int main(void) {
 
 	//inicializo el nivel desde el archivo config FALTA EL PATH
-	t_nivel *nivel= read_nivel_archivo_configuracion();
+	t_nivel *nivel= read_nivel_archivo_configuracion("../../Configs/nivel1.config");
+	Nivel yoNivel;
 
+	//instancio el logger
+	t_log* logger = log_create("ProcesoNivelTestingConexiones.log", "ProcesoNivel", true, LOG_LEVEL_INFO);
 	//inicializo el proceso nivel
 	nivel_gui_inicializar();
 
 	serverCCB = initServer(6000);  // chequear esto
 
-	clientCCB = connectServer("localhost", (nivel->nivel_orquestador).PORT); // VA EL PUERTO O EL IP?
-	/**mandarMensaje(nivel->nivel_orquestador, HANDSHAKE,sizeof(pos),pos); //le tengo que pasar el puerto+ip+id
-	 *
+	//Direccion * dir = (Direccion *)
+	char ip[20];
+	strcpy(ip,"localhost");
+	clientCCB = connectServer("localhost", ((Direccion*)(nivel->nivel_orquestador))->PORT); // VA EL PUERTO O EL IP?
+
+	strcpy(yoNivel.ID,nivel->nivel_nombre);
+	strcpy(yoNivel.IP,"localhost");
+	yoNivel.PORT=6000;
+	mandarMensaje(clientCCB.sockfd, HANDSHAKE,sizeof(Nivel),&yoNivel); //le tengo que pasar el puerto+ip+id
+	 /*
 	 * tome del nmbre el ultimo caracter y lo concatene con el puerto que elija
 	 * */
 
@@ -53,11 +65,11 @@ int main(void) {
 	extern ITEM_NIVEL* ListaItems;
 	ListaItems = nivel->nivel_items;
 
-	extern PersonajeEnNivel* listaPersonajes; //TENGO QUE HACER ESTO?
-	extern RecursoPendientePersonaje* listaRecursosPendientes;
+	//extern PersonajeEnNivel* listaPersonajes; //TENGO QUE HACER ESTO?
+	//extern RecursoPendientePersonaje* listaRecursosPendientes;
 
 	//inicializo el recovery
-	extern int recovery = nivel->nivel_recovery;
+	recovery = nivel->nivel_recovery;
 
 	//inicializo la cola de mensajes
 	t_queue* colaDeMensajes;
@@ -78,61 +90,60 @@ int main(void) {
 		switch(mensaje->type){
 
 			case HANDSHAKE:
-
+				((Personaje*)mensaje->data)->FD=mensaje->from;
 				//cargo el personaje en las listas que voy a manejar para validar recursos e interbloque
-				cargarPersonajeEnNivel(((char*)(mensaje->from))[1]);
-				cargarPersonajeEnPendiente(((char*)(mensaje->from))[1]);
+				cargarPersonajeEnNivel(((Personaje*)mensaje->data));
+				cargarPersonajeEnPendiente(buscarPersonaje_byfd(mensaje->from));
 
 				//creo el personaje en el nivel. Le pongo como pos inicial la (0,0) y lo dibujo
-				CrearPersonaje(&ListaItems,((char*)(mensaje->from))[1],0,0);
+				CrearPersonaje(&ListaItems,(buscarPersonaje_byfd(mensaje->from)),0,0);
 				nivel_gui_dibujar(ListaItems);
 
-				//creo instancia de logeo
-				t_log* logger = log_create("ProcesoNivelTestingConexiones.log", "ProcesoNivel", true, LOG_LEVEL_INFO);
-
 				//mensajeLogeo= char del personaje que ingreso al nivel
-				char mensajeLogeo = ((char*)(mensaje->from))[1];
+				char mensajeLogeo = (buscarPersonaje_byfd(mensaje->from));
 
-				log_info(logger, mensajeLogeo);
+				log_info(logger, &mensajeLogeo);
 
 				break;
 
 			case REQUEST_POS_RECURSO:
-
+			{
 			/**le envia al personaje la pos del nuevo recurso **/
 
-				Posicion *pos = obtenerPosRecurso(mensaje->data);
+				Posicion pos;
+				pos =  obtenerPosRecurso((char)(*((char*)(mensaje->data))));
 
-				mandarMensaje(mensaje->from, POSICION_RECURSO,sizeof(pos),pos);
-
+				mandarMensaje(mensaje->from, POSICION_RECURSO,sizeof(Posicion),&pos);
+			}
 				break;
 
 			case REQUEST_MOVIMIENTO:
-
+			{
 				//tomo del mensaje la posicion donde se va a mover el personaje
-				int posx = obtenerPosX(mensaje->data);
-				int posy = obtenerPosY(mensaje->data);
+				int posx = obtenerPosX(*((Posicion*)mensaje->data));
+				int posy = obtenerPosY(*(Posicion*)mensaje->data);
 
 				//muevo el personaje y lo dibujo
-				MoverPersonaje(ListaItems,((char*)(mensaje->from))[1],posx,posy);
+				MoverPersonaje(ListaItems,buscarPersonaje_byfd(mensaje->from),posx,posy);
 				nivel_gui_dibujar(ListaItems);
 
 				//modifico la posicion del personaje en listaPersonajes
 				modificarPosPersonaje(((char*)(mensaje->from))[1],posx,posy);
 
 				sleep(1);
-
+			}
 				break;
 
 			case REQUEST_RECURSO:
 
 				//le confirma al personaje que puede tomar ese recurso y lo resta de listaItems
-				if(validarPosYRecursos( ((char*)(mensaje->from))[1], mensaje->data)){
+				if(validarPosYRecursos( buscarPersonaje_byfd(mensaje->from), *((char*)mensaje->data))){
 
 					//le manda 1/TRUE porque lo puede tomar
-					mandarMensaje(mensaje->from,CONFIRMAR_RECURSO,sizeof(1),1);
-					restarRecurso(ListaItems, mensaje->data);
-					agregarRecursoAPersonaje(((char*)(mensaje->from))[1],mensaje->data);
+					bool a = 1;
+					mandarMensaje(mensaje->from,CONFIRMAR_RECURSO,sizeof(bool),&a);
+					restarRecurso(ListaItems, *((char*)mensaje->data));
+					agregarRecursoAPersonaje(((char*)(mensaje->from))[1],*((char*)mensaje->data));
 					nivel_gui_dibujar(ListaItems);
 
 				}else{
@@ -140,7 +151,7 @@ int main(void) {
 					mandarMensaje(mensaje->from, CONFIRMAR_RECURSO,sizeof(0),0);
 
 					//actualiza la lista de recursos pendientes
-					agregarAListaRecursosPendientes(((char*)(mensaje->from))[1], mensaje->data);
+					agregarAListaRecursosPendientes(buscarPersonaje_byfd(mensaje->from), *((char*)mensaje->data));
 
 				}
 
@@ -150,7 +161,7 @@ int main(void) {
 			/**case ENVIAR_VICTIMAS://LOGEAR ACA Y VER COMO FUNCIONA EL TEMA DEL HILO
 
 				//...
-				/**if(recovery){
+				if(recovery){
 					manderMensaje(orquestador, sizeof(),personajes)
 				}
 				break; **/
@@ -159,39 +170,35 @@ int main(void) {
 			//es avisado de que libere recursos y llama al orquestador para avisarle de liberarlos
 			// y que este le diga cuales fueron re-asignados.
 			case TERMINE_NIVEL:
-
+			{
 				//se fija que recursos tenia asignado el personaje para liberarlos
-				t_recursos *recursosALiberar = liberarRecursos(((char*)(mensaje->from))[1]);
+				t_recursos *recursosALiberar = liberarRecursos(buscarPersonaje_byfd(mensaje->from));
 
 				//le manda los recursos liberados, de a 1, al orquestador
-				mandarRecursosLiberados(&recursosALiberar,clientCCB.sockfd);
+				mandarRecursosLiberados(recursosALiberar,clientCCB.sockfd);
 
 				//por cada recurso que libera tengo que sumarlo a la cantidad en listaItems
-				aumentarRecursos(&recursosALiberar);
+				aumentarRecursos(recursosALiberar);
 
 				//borra el personaje del nivel y libera al personaje de listaPersonajes y listaRecursosPendientes
-				BorrarItem(&ListaItems,((char*)(mensaje->from))[1]);
-				borrarPersonajeEnNivel(((char*)(mensaje->from))[1]);
-				borrarPersonajeEnPendiente(((char*)(mensaje->from))[1]);
+				BorrarItem(&ListaItems,buscarPersonaje_byfd(mensaje->from));
+				borrarPersonajeEnNivel(buscarPersonaje_byfd(mensaje->from));
+				borrarPersonajeEnPendiente(buscarPersonaje_byfd(mensaje->from));
 
 				//re-dibuja el nivel ya sin el personaje y con la cantidad de recursos nueva
 				nivel_gui_dibujar(ListaItems);
-
+			}
 				break;
 
 
 			case NOMBRE_VICTIMA: //LOGEO QUE HUBO RECOVERY Y PONGO EL NOMBRE DE LA VICTIMA. TIPO DE DATO: CHAR
+			{
 
-				//creo instancia de logeo.
-				t_log* logger = log_create("ProcesoNivelTestingVictimas.log", "ProcesoNivel", true, LOG_LEVEL_INFO);
+				char mensajeLogeo= *((char*)mensaje->data);
 
-				char mensajeLogeo= mensaje->data;
+				log_info(logger, &mensajeLogeo);
 
-				char mensajeLogeo = mensaje->data;
-
-				log_info(logger, mensajeLogeo);
-
-
+			}
 				break;
 
 			//borro el mensaje
@@ -203,22 +210,17 @@ int main(void) {
 	//nivel_gui_terminar();
 
 	//cierro el socket del cliente
+
 	close(clientCCB.sockfd);
 
 }
 
-void reasignarRecursos(Recursos listaRecursos){
+void reasignarRecursos(Recursos* listaRecursos){
 	/** @NAME: reasignarRecursos
 	 * @DESC: recibe del orquestador el recurso que re-asigno
 	*/
 	Recursos * recurso;
 	recurso = listaRecursos;
-
-	t_queue* colaDeMensajes;
-	colaDeMensajes = queue_create();
-	Mensaje* mensaje;
-
-
 
 	restarRecurso(ListaItems, recurso->idRecurso); //resta de la lista items el recurso que re-asigno
 	agregarRecursoAPersonaje (recurso->idPersonaje, recurso->idRecurso); // le agrega a listaPersonajes el recurso que obtuvo el personaje
@@ -226,7 +228,7 @@ void reasignarRecursos(Recursos listaRecursos){
 
 }
 
-void mandarRecursosLiberados(t_recursos recursosALiberar, int fd){
+void mandarRecursosLiberados(t_recursos* recursosALiberar, int fd){
 	/** @NAME: mandarRecursosLiberados
 	 * @DESC: le manda al orquestador la cantidad de recursos que se liberaron POR RECURSO
 	 */
@@ -278,7 +280,8 @@ Posicion obtenerPosRecurso(char recurso){
 	itemRecurso = buscarItem(recurso);
 
 	if(itemRecurso != NULL){
-		Posicion *posicion = Pos(itemRecurso->posx, itemRecurso->posy);
+		Posicion posicion;
+		posicion= Pos(itemRecurso->posx, itemRecurso->posy);
 		return posicion;
 	}return NULL;
 }
@@ -306,7 +309,7 @@ int validarPosYRecursos(char idPersonaje, char idRecurso){
 	return 0;
 }
 
-ITEM_NIVEL buscarItem(char id){
+ITEM_NIVEL* buscarItem(char id){
 
 	ITEM_NIVEL * temp;
 	temp = ListaItems;
@@ -318,7 +321,7 @@ ITEM_NIVEL buscarItem(char id){
 	}return NULL;
 }
 
-void cargarPersonajeEnNivel(char id){
+void cargarPersonajeEnNivel(Personaje miPersonaje){
 	/*@NAME: cargarPersonaje
 	 * @DESC: cuando se conecta un personaje al nivel, lo agrega a la listaPersonajes que es la lista para la cual el nivel
 	 * tiene actualizado los recursos que ese personaje posee en el nivel
@@ -327,15 +330,17 @@ void cargarPersonajeEnNivel(char id){
 	PersonajeEnNivel* personaje;
 	personaje = malloc(sizeof(PersonajeEnNivel));
 
-	personaje->id = id;
+	personaje->id = miPersonaje.ID[1];
+	personaje->fd = miPersonaje.FD;
 
-	Posicion *pos = Pos(0,0);
+	Posicion pos;
+	pos = Pos(0,0);
 	personaje->pos = pos;
 
 	personaje->recursos = NULL;
 
-	personaje->sig = *listaPersonajes;
-	*listaPersonajes = personaje;
+	personaje->sig = listaPersonajes;
+	listaPersonajes = personaje;
 
 
 }
@@ -351,9 +356,9 @@ void cargarPersonajeEnPendiente(char id){
 
 	personaje->idPersonaje = id;
 	personaje->recursoPendiente = NULL; // va NULL o va ' '?
-	personaje->sig= *listaRecursosPendientes;
+	personaje->sig= listaRecursosPendientes;
 
-	*listaRecursosPendientes = personaje;
+	listaRecursosPendientes = personaje;
 
 }
 
@@ -406,7 +411,7 @@ void agregarRecursoAPersonaje(char idPersonaje,char recurso){
 			auxList = auxList->sig;
 		}if( auxList->idRecurso == recurso ){
 			//si lo encontro, le suma 1 a la cant que ya tenia.
-			personaje->recursos->cant = personaje->recursos->cant++ ;
+			((t_recursos*)(personaje->recursos))->cant ++ ;
 
 		}else if((auxList->sig == NULL)){
 			//si no lo encontro, lo agrega
@@ -419,12 +424,12 @@ void agregarRecursoAPersonaje(char idPersonaje,char recurso){
 			temp->sig = NULL;
 
 			personaje->recursos = temp;
-			*listaPersonajes = personaje;
+			listaPersonajes = personaje;
 		}
 	}
 }
 
-PersonajeEnNivel buscarPersonaje(char idPersonaje){
+PersonajeEnNivel* buscarPersonaje(char idPersonaje){
 	/*@NAME: buscarPersonaje
 	* @DESC: devuelve un PersonajeEnNivel que tenga ese id
 	*/
@@ -444,11 +449,11 @@ void borrarPersonajeEnNivel(char idPersonaje){
 	* @DESC: cuando un personaje termina el nivel, lo borra de listaPersonajes
 	*/
 
-	PersonajeEnNivel * personaje = *listaPersonajes;
+	PersonajeEnNivel * personaje = listaPersonajes;
 	PersonajeEnNivel * personajeAnterior;
 
     if ((personaje != NULL) && (personaje->id == idPersonaje)) {
-    	*listaPersonajes = (*listaPersonajes)->sig;
+    	listaPersonajes = ((PersonajeEnNivel*)listaPersonajes)->sig;
 		free(personaje);
     } else {
     	while((personaje != NULL) && (personaje->id != idPersonaje)) {
@@ -467,11 +472,11 @@ void borrarPersonajeEnPendiente(char idPersonaje){
 	 * @DESC: cuando un personaje termina el nivel, lo borra de listaRecursosPendientes
 	 */
 
-	RecursoPendientePersonaje * personaje = *listaRecursosPendientes;
+	RecursoPendientePersonaje * personaje = listaRecursosPendientes;
 	RecursoPendientePersonaje * personajeAnterior;
 
 	if ((personaje != NULL) && (personaje->idPersonaje == idPersonaje)) {
-	    *listaRecursosPendientes = (*listaRecursosPendientes)->sig;
+	    listaRecursosPendientes = ((RecursoPendientePersonaje*)listaRecursosPendientes)->sig;
 		free(personaje);
 	}else {
     	while((personaje != NULL) && (personaje->idPersonaje != idPersonaje)) {
@@ -485,7 +490,7 @@ void borrarPersonajeEnPendiente(char idPersonaje){
       }
 }
 
-t_recursos liberarRecursos(char idPersonaje ){
+t_recursos* liberarRecursos(char idPersonaje ){
 	/*@NAME: liberarRecursos
 	 * @DESC: me devuelve la lista de recursos del personaje que termino el nivel
 	*/
@@ -499,7 +504,7 @@ t_recursos liberarRecursos(char idPersonaje ){
 
 }
 
-void aumentarRecursos(t_recursos recursosALiberar){
+void aumentarRecursos(t_recursos* recursosALiberar){
 	/*@NAME: aumentarRecursos
 	 * @DESC: actualiza el estado de los recursos en ListaItems, dependiendo de los recursos liberados
 	*/
@@ -547,4 +552,24 @@ void modificarPosPersonaje(char idPersonaje, int posx, int posy){
 	}
 
 }
+
+char buscarPersonaje_byfd(int fd){
+	/*@NAME: buscarPersonaje
+	* @DESC: devuelve un PersonajeEnNivel que tenga ese id
+	*/
+	PersonajeEnNivel * personaje;
+	personaje = listaPersonajes;
+
+	//busco el personaje
+	while ((personaje != NULL) && (personaje->fd != fd)) {
+		personaje = personaje->sig;
+	}if ((personaje != NULL) && (personaje->fd == fd)){
+		return personaje->id;
+	}
+	return NULL;
+
+}
+
+
+
 

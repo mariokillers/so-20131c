@@ -1,0 +1,9 @@
+02:58:55 **** Incremental Build of configuration Default for project nivel-gui-test ****
+make all 
+gcc tad_items.c -I ../nivel-gui -L ../nivel-gui -c -o tad_items.o
+gcc main.c -I ../nivel-gui -L ../nivel-gui tad_items.o -lnivel-gui -lncurses -o nivel -g
+gcc: error: main.c: No existe el archivo o el directorio
+make: *** [all] Error 1
+
+02:58:56 Build Finished (took 618ms)
+

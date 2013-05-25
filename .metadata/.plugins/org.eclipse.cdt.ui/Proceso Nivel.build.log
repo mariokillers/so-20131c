@@ -1,0 +1,27 @@
+03:02:15 **** Incremental Build of configuration Debug for project Proceso Nivel ****
+make all 
+Building file: ../Proceso Nivel.c
+Invoking: GCC C Compiler
+gcc -I/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Proceso Nivel.d" -MT"Proceso\ Nivel.d" -o "Proceso Nivel.o" "../Proceso Nivel.c"
+../Proceso Nivel.c: En la función ‘mandarRecursosLiberados’:
+../Proceso Nivel.c:249:24: aviso: la asignación crea un entero desde un puntero sin una conversión [activado por defecto]
+../Proceso Nivel.c: En la función ‘obtenerPosRecurso’:
+../Proceso Nivel.c:286:3: error: tipos incompatible al devolver el tipo ‘void *’ pero se esperaba ‘Posicion’
+../Proceso Nivel.c: En el nivel principal:
+../Proceso Nivel.c:324:6: error: tipos en conflicto para ‘cargarPersonajeEnNivel’
+In file included from ../Proceso Nivel.c:16:0:
+../Proceso Nivel.h:47:6: nota: la declaración previa de ‘cargarPersonajeEnNivel’ estaba aquí
+../Proceso Nivel.c: En la función ‘cargarPersonajeEnPendiente’:
+../Proceso Nivel.c:358:30: aviso: la asignación crea un entero desde un puntero sin una conversión [activado por defecto]
+../Proceso Nivel.c: En la función ‘quitarSolicitudesDeRecurso’:
+../Proceso Nivel.c:391:32: aviso: la asignación crea un entero desde un puntero sin una conversión [activado por defecto]
+../Proceso Nivel.c: En la función ‘buscarPersonaje_byfd’:
+../Proceso Nivel.c:569:2: aviso: la devolución crea un entero desde un puntero sin una conversión [activado por defecto]
+../Proceso Nivel.c: En la función ‘obtenerPosRecurso’:
+../Proceso Nivel.c:287:1: aviso: el control alcanza el final de una función que no es void [-Wreturn-type]
+../Proceso Nivel.c: En la función ‘main’:
+../Proceso Nivel.c:216:1: aviso: el control alcanza el final de una función que no es void [-Wreturn-type]
+make: *** [Proceso Nivel.o] Error 1
+
+03:02:18 Build Finished (took 2s.501ms)
+

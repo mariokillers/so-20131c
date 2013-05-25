@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project>
+	<configuration id="cdt.managedbuild.toolchain.gnu.base.448924433" name="Default">
+		<extension point="org.eclipse.cdt.core.LanguageSettingsProvider">
+			<provider id="org.eclipse.cdt.managedbuilder.core.GCCBuildCommandParser">
+				<language id="org.eclipse.cdt.core.gcc">
+					<resource project-relative-path="tad_items.c">
+						<entry kind="includePath" name="/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/dibujoNivel/nivel-gui"/>
+						<entry kind="libraryPath" name="/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/dibujoNivel/nivel-gui"/>
+					</resource>
+					<resource project-relative-path="main.c">
+						<entry kind="includePath" name="/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/dibujoNivel/nivel-gui"/>
+						<entry kind="libraryPath" name="/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/dibujoNivel/nivel-gui"/>
+						<entry kind="libraryFile" name="libnivel-gui.a"/>
+						<entry kind="libraryFile" name="libncurses.a"/>
+					</resource>
+				</language>
+			</provider>
+		</extension>
+	</configuration>
+</project>

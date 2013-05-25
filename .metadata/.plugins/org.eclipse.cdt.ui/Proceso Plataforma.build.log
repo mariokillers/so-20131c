@@ -1,6 +1,6 @@
-00:35:38 **** Incremental Build of configuration Debug for project Proceso Plataforma ****
+02:58:55 **** Incremental Build of configuration Debug for project Proceso Plataforma ****
 make all 
 make: No se hace nada para «all».
 
-00:35:39 Build Finished (took 642ms)
+02:58:55 Build Finished (took 273ms)
 
