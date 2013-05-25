@@ -7,6 +7,7 @@
 
 
 #include "personaje_library.h"
+#include <string.h>
 
 /*NAME: read_personaje_archivo_configuracion
 PARAM: char* path -> direccion del archivo de configuracion
@@ -33,7 +34,9 @@ void imprimir_personaje(t_personaje *personaje){
 
 	printf("%d\n", personaje->personaje_vidas);
 
-	printf("%s\n", personaje->personaje_orquestador);
+	printf("%s\n", personaje->personaje_orquestador->IP);
+
+	printf("%d\n", personaje->personaje_orquestador->PORT);
 }
 
 /*NAME: create_personaje
@@ -48,6 +51,8 @@ t_personaje *create_personaje(t_config *p){
 	char *aux = config_get_string_value(p, "simbolo");
 
 	personaje = (t_personaje*)malloc(sizeof(t_personaje));
+	personaje->personaje_orquestador = (Direccion *)malloc(sizeof(Direccion));
+	personaje->personaje_posicion_actual = (Posicion *)malloc(sizeof(Posicion));
 
 	personaje->personaje_nombre = config_get_string_value(p, "nombre");
 
@@ -59,9 +64,9 @@ t_personaje *create_personaje(t_config *p){
 	
 	personaje->personaje_vidas_restantes = personaje->personaje_vidas;
 
-	personaje->personaje_orquestador->IP = tomarIP(config_get_string_value(n, "orquestador"));
+	strcpy(personaje->personaje_orquestador->IP, tomarIP(config_get_string_value(p, "orquestador")));
 
-	personaje->personaje_orquestador->puerto = tomarPuerto(config_get_string_value(n, "orquestador"));
+	personaje->personaje_orquestador->PORT = tomarPuerto(config_get_string_value(p, "orquestador"));
 
 	personaje->personaje_posicion_actual->POS_X = 0;
 
@@ -82,7 +87,7 @@ t_personaje_nivel *create_personaje_nivel(char *nivel, char **objetivos){
 	t_list *list_objetivos = list_create();
 	int i = 0;
 
-	strcpy(new->personaje_nivel,nivel);
+	new->personaje_nivel = nivel;
 
 	while(objetivos[i] != NULL){
 

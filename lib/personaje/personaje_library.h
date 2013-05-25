@@ -15,7 +15,7 @@
 #include <commons/config.h>
 #include <commons/string.h>
 #include <commons/collections/list.h>
-#include <commons/Connections/EstructurasMensajes.h>
+#include "EstructurasMensajes.h"
 
 /*define el tipo t_personaje_objetivo, que representa un objetivo de los que tiene que conseguir el personaje
 en un nivel y si lo tiene o no
@@ -58,5 +58,8 @@ t_list *create_lista_niveles(t_personaje *personaje, t_config *p);
 void imprimir_personaje(t_personaje *personaje);
 t_personaje_objetivo *create_nivel_objetivo(char objetivo_char);
 void add_list_nivel_objetivos(char *objetivo, t_list *list_objetivos);
+
+int tomarPuerto(char* direct);
+char* tomarIP(char* direct);
 
 #endif /* FPERSONAJE_LIBRARY_H_ */
