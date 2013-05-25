@@ -1,15 +1,26 @@
-03:13:52 **** Incremental Build of configuration Debug for project Proceso Nivel ****
+04:31:38 **** Incremental Build of configuration Debug for project Proceso Nivel ****
 make all 
-Building file: ../Proceso Nivel.c
-Invoking: GCC C Compiler
-gcc -I/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Proceso Nivel.d" -MT"Proceso\ Nivel.d" -o "Proceso Nivel.o" "../Proceso Nivel.c"
-In file included from ../Proceso Nivel.c:17:0:
-/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/personaje/personaje_library.h:15:1: error: expected identifier or ‘(’ before ‘<<’ token
-In file included from ../Proceso Nivel.c:17:0:
-/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/personaje/personaje_library.h:22:1: error: expected identifier or ‘(’ before ‘==’ token
-/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/personaje/personaje_library.h:26:33: error fatal: EstructurasMensajes.h: No existe el archivo o el directorio
-compilación terminada.
-make: *** [Proceso Nivel.o] Error 1
+Building target: Proceso Nivel
+Invoking: GCC C Linker
+gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug" -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proceso Nivel"  ./Proceso\ Nivel.o ./nivel_library.o   -lDibujoNivelLib -lCommonsLibrary -lpthread
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `waddch' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `wborder' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `init_pair' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `wbkgd' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `wrefresh' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `keypad' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `initscr' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `start_color' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `newwin' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `delwin' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `printw' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `stdscr' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `endwin' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `noecho' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `wmove' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `werase' sin definir
+collect2: error: ld devolvió el estado de salida 1
+make: *** [Proceso Nivel] Error 1
 
-03:13:54 Build Finished (took 2s.483ms)
+04:31:40 Build Finished (took 1s.863ms)
 

@@ -5,17 +5,9 @@
  *      Author: petauriel
  */
 
-#include "dibujoNivel/nivel-gui-test/tad_items.h"
-#include <stdlib.h>
-#include <curses.h>
-#include <commons/log.h>
-#include "commons/Connections/Server.h"
-#include "commons/Connections/EstructurasMensajes.h"
-#include "commons/Connections/Client.h"
-#include "commons/config.h"
+
 #include "Proceso Nivel.h"
-#include "personaje/personaje_library.h"
-#include "nivel/nivel_library.h"
+
 
 
 //inicializo la lista de personajes para controlar, dibujar e interbloqueo (en orden)
@@ -212,6 +204,7 @@ int main(void) {
 	//cierro el socket del cliente
 
 	close(clientCCB.sockfd);
+	return 0;
 
 }
 
@@ -244,13 +237,13 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fd){
 
 	while(aux != NULL){
 		//paso a la struct a la que voy a mandar los mensajes
-		Recursos * recurso;
-		recurso->idRecurso = aux->idRecurso;
-		recurso->idPersonaje = NULL;
-		recurso->cant = aux->cant;
+		Recursos  recurso;
+		recurso.idRecurso = aux->idRecurso;
+		recurso.idPersonaje = '\0';
+		recurso.cant = aux->cant;
 
 		//le mando al orquestador los recursos liberados para que re-asigne
-		mandarMensaje(fd, RECURSOS_LIBERADOS,sizeof(recurso),recurso);
+		mandarMensaje(fd, RECURSOS_LIBERADOS,sizeof(recurso),&recurso);
 
 		//escucho al orquestador que me va a mandar los que re-asigno
 		while((!mensajes(colaDeMensajes,serverCCB)));
@@ -279,11 +272,12 @@ Posicion obtenerPosRecurso(char recurso){
 	ITEM_NIVEL * itemRecurso;
 	itemRecurso = buscarItem(recurso);
 
-	if(itemRecurso != NULL){
+	//if(itemRecurso != NULL){
 		Posicion posicion;
 		posicion= Pos(itemRecurso->posx, itemRecurso->posy);
 		return posicion;
-	}return NULL;
+	//}
+
 }
 
 int validarPosYRecursos(char idPersonaje, char idRecurso){
@@ -321,7 +315,7 @@ ITEM_NIVEL* buscarItem(char id){
 	}return NULL;
 }
 
-void cargarPersonajeEnNivel(Personaje miPersonaje){
+void cargarPersonajeEnNivel(Personaje* miPersonaje){
 	/*@NAME: cargarPersonaje
 	 * @DESC: cuando se conecta un personaje al nivel, lo agrega a la listaPersonajes que es la lista para la cual el nivel
 	 * tiene actualizado los recursos que ese personaje posee en el nivel
@@ -330,8 +324,8 @@ void cargarPersonajeEnNivel(Personaje miPersonaje){
 	PersonajeEnNivel* personaje;
 	personaje = malloc(sizeof(PersonajeEnNivel));
 
-	personaje->id = miPersonaje.ID[1];
-	personaje->fd = miPersonaje.FD;
+	personaje->id = miPersonaje->ID[1];
+	personaje->fd = miPersonaje->FD;
 
 	Posicion pos;
 	pos = Pos(0,0);
@@ -355,7 +349,7 @@ void cargarPersonajeEnPendiente(char id){
 	personaje = malloc(sizeof(RecursoPendientePersonaje));
 
 	personaje->idPersonaje = id;
-	personaje->recursoPendiente = NULL; // va NULL o va ' '?
+	personaje->recursoPendiente = '\0'; // va NULL o va ' '?
 	personaje->sig= listaRecursosPendientes;
 
 	listaRecursosPendientes = personaje;
@@ -388,7 +382,7 @@ void quitarSolicitudesDeRecurso(char idPersonaje, char idRecurso){
 		personaje = personaje->sig;
 	}if( (personaje != NULL) && (personaje->idPersonaje == idPersonaje)){
 		if(personaje->recursoPendiente == idRecurso){
-			personaje->recursoPendiente = NULL;
+			personaje->recursoPendiente = '\0';
 		}
 	}
 }
@@ -566,7 +560,7 @@ char buscarPersonaje_byfd(int fd){
 	}if ((personaje != NULL) && (personaje->fd == fd)){
 		return personaje->id;
 	}
-	return NULL;
+	return '\0';
 
 }
 

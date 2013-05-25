@@ -4,5 +4,5 @@
 
 USER_OBJS :=
 
-LIBS := -lCommonsLibrary -lpthread
+LIBS := -lDibujoNivelLib -lCommonsLibrary -lpthread
 

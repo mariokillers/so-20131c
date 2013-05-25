@@ -1,0 +1,27 @@
+04:51:39 **** Incremental Build of configuration Debug for project Proceso Personaje ****
+make all 
+Building file: ../ProcesoPersonaje.c
+Invoking: GCC C Compiler
+gcc -I/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ProcesoPersonaje.d" -MT"ProcesoPersonaje.d" -o "ProcesoPersonaje.o" "../ProcesoPersonaje.c"
+../ProcesoPersonaje.c: En la función ‘create_personaje’:
+../ProcesoPersonaje.c:439:2: aviso: declaración implícita de la función ‘tomarIP’ [-Wimplicit-function-declaration]
+../ProcesoPersonaje.c:439:2: aviso: el paso del argumento 2 de ‘strcpy’ crea un puntero desde un entero sin una conversión [activado por defecto]
+In file included from ../../../lib/commons/Connections/Mensajes.h:17:0,
+                 from ../../../lib/commons/Connections/Client.h:11,
+                 from ../ProcesoPersonaje.h:20,
+                 from ../ProcesoPersonaje.c:9:
+/usr/include/string.h:128:14: nota: se esperaba ‘const char * __restrict__’ pero el argumento es de tipo ‘int’
+../ProcesoPersonaje.c:441:2: aviso: declaración implícita de la función ‘tomarPuerto’ [-Wimplicit-function-declaration]
+../ProcesoPersonaje.c: En la función ‘main’:
+../ProcesoPersonaje.c:166:12: aviso: puede ser que se utilice ‘respuesta’ sin inicializar en esta función [-Wuninitialized]
+Finished building: ../ProcesoPersonaje.c
+ 
+Building target: Proceso Personaje
+Invoking: GCC C Linker
+gcc -L/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib -o "Proceso Personaje"  ./ProcesoPersonaje.o   -lCommonsLibrary
+/usr/bin/ld: no se puede encontrar -lCommonsLibrary
+collect2: error: ld devolvió el estado de salida 1
+make: *** [Proceso Personaje] Error 1
+
+04:51:41 Build Finished (took 2s.162ms)
+

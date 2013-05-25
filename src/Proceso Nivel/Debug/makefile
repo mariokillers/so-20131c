@@ -26,12 +26,13 @@ all: Proceso\ Nivel
 
 dependents:
 	-cd /home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug && $(MAKE) all
+	-cd /home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug && $(MAKE) all
 
 # Tool invocations
-Proceso\ Nivel: $(OBJS) $(USER_OBJS) /home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug/libCommonsLibrary.so
+Proceso\ Nivel: $(OBJS) $(USER_OBJS) /home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug/libCommonsLibrary.so /home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proceso Nivel" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug" -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proceso Nivel" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -43,5 +44,6 @@ clean:
 .PHONY: all clean dependents
 .SECONDARY:
 /home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug/libCommonsLibrary.so:
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so:
 
 -include ../makefile.targets
