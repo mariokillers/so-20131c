@@ -40,7 +40,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CommonsLibrary/Debug}&quot;"/>
 								</option>
 								<option id="gnu.c.link.option.libs.359892318" name="Libraries (-l)" superClass="gnu.c.link.option.libs" valueType="libs">
-									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="DibujoNivelLib"/>
+									<listOptionValue builtIn="false" value="DibujoNivelLib"/>
+									<listOptionValue builtIn="false" value="curses"/>
 									<listOptionValue builtIn="false" value="CommonsLibrary"/>
 									<listOptionValue builtIn="false" value="pthread"/>
 								</option>
@@ -136,7 +137,14 @@
 		</scannerConfigBuildInfo>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/Proceso Nivel"/>
+		</configuration>
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/Proceso Nivel"/>
+		</configuration>
+	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
 		<buildTargets>
 			<target name="Make" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">

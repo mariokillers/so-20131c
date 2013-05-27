@@ -1,6 +1,6 @@
-04:51:37 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+20:09:41 **** Incremental Build of configuration Debug for project CommonsLibrary ****
 make all 
 make: No se hace nada para «all».
 
-04:51:38 Build Finished (took 692ms)
+20:09:42 Build Finished (took 866ms)
 

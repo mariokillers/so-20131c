@@ -25,7 +25,7 @@ int recovery;
 int main(void) {
 
 	//inicializo el nivel desde el archivo config FALTA EL PATH
-	t_nivel *nivel= read_nivel_archivo_configuracion("/home/utnso/Escritorio/TP/tp-20131c-mario-killers/Configs/nivel1.config");
+	t_nivel *nivel= read_nivel_archivo_configuracion("../../Configs/nivel1.config");
 	Nivel yoNivel;
 
 	//instancio el logger

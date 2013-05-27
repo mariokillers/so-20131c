@@ -41,11 +41,10 @@ t_nivel *create_nivel(t_config *n){
 
 	t_nivel *nivel;
 	nivel = (t_nivel*)malloc(sizeof(t_nivel));
-	nivel->nivel_orquestador = (Direccion*) malloc(sizeof(Direccion));
 
 	nivel->nivel_items = create_lista_cajas(n);
 
-	strcpy(nivel->nivel_orquestador->IP , tomarIP(config_get_string_value(n, "orquestador")));
+	nivel->nivel_orquestador->IP = tomarIP(config_get_string_value(n, "orquestador"));
 
 	nivel->nivel_nombre = config_get_string_value(n, "Nombre");
 

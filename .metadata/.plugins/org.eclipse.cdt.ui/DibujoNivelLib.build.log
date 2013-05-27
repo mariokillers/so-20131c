@@ -1,6 +1,6 @@
-04:31:37 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+20:09:42 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
 make all 
 make: No se hace nada para «all».
 
-04:31:38 Build Finished (took 347ms)
+20:09:43 Build Finished (took 510ms)
 

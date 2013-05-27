@@ -1028,3 +1028,389 @@ gcc -L/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib -o "Proceso Personaj
 /usr/bin/ld: no se puede encontrar -lCommonsLibrary
 collect2: error: ld devolvió el estado de salida 1
 make: *** [Proceso Personaje] Error 1
+19:24:30 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+Building file: ../collections/dictionary.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/dictionary.d" -MT"collections/dictionary.d" -o "collections/dictionary.o" "../collections/dictionary.c"
+Finished building: ../collections/dictionary.c
+ 
+Building file: ../collections/list.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/list.d" -MT"collections/list.d" -o "collections/list.o" "../collections/list.c"
+Finished building: ../collections/list.c
+ 
+Building file: ../collections/queue.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/queue.d" -MT"collections/queue.d" -o "collections/queue.o" "../collections/queue.c"
+Finished building: ../collections/queue.c
+ 
+Building file: ../collections/stack.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"collections/stack.d" -MT"collections/stack.d" -o "collections/stack.o" "../collections/stack.c"
+Finished building: ../collections/stack.c
+ 
+Building file: ../Connections/Client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Client.d" -MT"Connections/Client.d" -o "Connections/Client.o" "../Connections/Client.c"
+Finished building: ../Connections/Client.c
+ 
+Building file: ../Connections/EstructurasMensajes.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/EstructurasMensajes.d" -MT"Connections/EstructurasMensajes.d" -o "Connections/EstructurasMensajes.o" "../Connections/EstructurasMensajes.c"
+Finished building: ../Connections/EstructurasMensajes.c
+ 
+Building file: ../Connections/Mensajes.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Mensajes.d" -MT"Connections/Mensajes.d" -o "Connections/Mensajes.o" "../Connections/Mensajes.c"
+Finished building: ../Connections/Mensajes.c
+ 
+Building file: ../Connections/Server.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"Connections/Server.d" -MT"Connections/Server.d" -o "Connections/Server.o" "../Connections/Server.c"
+Finished building: ../Connections/Server.c
+ 
+Building file: ../bitarray.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"bitarray.d" -MT"bitarray.d" -o "bitarray.o" "../bitarray.c"
+Finished building: ../bitarray.c
+ 
+Building file: ../config.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"config.d" -MT"config.d" -o "config.o" "../config.c"
+Finished building: ../config.c
+ 
+Building file: ../error.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"error.d" -MT"error.d" -o "error.o" "../error.c"
+Finished building: ../error.c
+ 
+Building file: ../log.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"log.d" -MT"log.d" -o "log.o" "../log.c"
+Finished building: ../log.c
+ 
+Building file: ../process.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"process.d" -MT"process.d" -o "process.o" "../process.c"
+Finished building: ../process.c
+ 
+Building file: ../string.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"string.d" -MT"string.d" -o "string.o" "../string.c"
+Finished building: ../string.c
+ 
+Building file: ../temporal.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"temporal.d" -MT"temporal.d" -o "temporal.o" "../temporal.c"
+Finished building: ../temporal.c
+ 
+Building file: ../txt.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -MMD -MP -MF"txt.d" -MT"txt.d" -o "txt.o" "../txt.c"
+Finished building: ../txt.c
+ 
+Building target: libCommonsLibrary.so
+Invoking: GCC C Linker
+gcc -shared -o "libCommonsLibrary.so"  ./collections/dictionary.o ./collections/list.o ./collections/queue.o ./collections/stack.o  ./Connections/Client.o ./Connections/EstructurasMensajes.o ./Connections/Mensajes.o ./Connections/Server.o  ./bitarray.o ./config.o ./error.o ./log.o ./process.o ./string.o ./temporal.o ./txt.o   
+Finished building target: libCommonsLibrary.so
+ 
+19:24:51 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+19:24:52 **** Incremental Build of configuration Debug for project Proceso Nivel ****
+make all 
+Building target: Proceso Nivel
+Invoking: GCC C Linker
+gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug" -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proceso Nivel"  ./Proceso\ Nivel.o ./nivel_library.o   -lDibujoNivelLib -lCommonsLibrary -lpthread
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `waddch' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `wborder' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `init_pair' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `wbkgd' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `wrefresh' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `keypad' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `initscr' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `start_color' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `newwin' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `delwin' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `printw' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `stdscr' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `endwin' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `noecho' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `wmove' sin definir
+/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug/libDibujoNivelLib.so: referencia a `werase' sin definir
+collect2: error: ld devolvió el estado de salida 1
+make: *** [Proceso Nivel] Error 1
+19:33:29 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+19:33:31 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+19:33:32 **** Incremental Build of configuration Debug for project Proceso Nivel ****
+make all 
+Building target: Proceso Nivel
+Invoking: GCC C Linker
+gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug" -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proceso Nivel"  ./Proceso\ Nivel.o ./nivel_library.o   -lDibujoNivelLib -lcurses -lCommonsLibrary -lpthread
+Finished building target: Proceso Nivel
+ 
+19:33:45 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+19:33:46 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+19:33:47 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+19:33:48 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+19:33:49 **** Incremental Build of configuration Debug for project Proceso Nivel ****
+make all 
+make: No se hace nada para «all».
+19:38:42 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+19:38:43 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+19:38:45 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+19:38:46 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+19:38:47 **** Incremental Build of configuration Debug for project Proceso Nivel ****
+make all 
+make: No se hace nada para «all».
+19:39:39 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+19:39:40 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+19:39:41 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+19:39:42 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+19:39:42 **** Incremental Build of configuration Debug for project Proceso Nivel ****
+make all 
+make: No se hace nada para «all».
+19:45:20 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+19:45:22 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+19:45:24 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+19:45:24 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+19:45:25 **** Incremental Build of configuration Debug for project Proceso Nivel ****
+make all 
+make: No se hace nada para «all».
+19:48:12 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+19:48:13 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+19:48:14 **** Incremental Build of configuration Debug for project Proceso Nivel ****
+make all 
+make: No se hace nada para «all».
+19:48:18 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+19:48:19 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+19:48:21 **** Incremental Build of configuration Debug for project Proceso Nivel ****
+make all 
+make: No se hace nada para «all».
+19:48:25 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+19:48:27 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+19:48:30 **** Incremental Build of configuration Debug for project Proceso Nivel ****
+make all 
+make: No se hace nada para «all».
+19:50:54 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+19:50:55 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+19:50:56 **** Incremental Build of configuration Debug for project Proceso Nivel ****
+make all 
+Building file: ../nivel_library.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib" -I/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"nivel_library.d" -MT"nivel_library.d" -o "nivel_library.o" "../nivel_library.c"
+Finished building: ../nivel_library.c
+ 
+Building target: Proceso Nivel
+Invoking: GCC C Linker
+gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug" -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proceso Nivel"  ./Proceso\ Nivel.o ./nivel_library.o   -lDibujoNivelLib -lcurses -lCommonsLibrary -lpthread
+Finished building target: Proceso Nivel
+ 
+19:51:26 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+19:51:27 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+19:51:28 **** Incremental Build of configuration Debug for project Proceso Nivel ****
+make all 
+make: No se hace nada para «all».
+19:53:59 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+19:54:00 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+19:54:01 **** Incremental Build of configuration Debug for project Proceso Nivel ****
+make all 
+Building file: ../nivel_library.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib" -I/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"nivel_library.d" -MT"nivel_library.d" -o "nivel_library.o" "../nivel_library.c"
+../nivel_library.c: En la función ‘create_nivel’:
+../nivel_library.c:47:31: error: tipos incompatible en la asignación al tipo ‘char[20]’ del tipo ‘char *’
+make: *** [nivel_library.o] Error 1
+19:55:21 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+19:55:22 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+19:55:23 **** Incremental Build of configuration Debug for project Proceso Nivel ****
+make all 
+Building file: ../nivel_library.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib" -I/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"nivel_library.d" -MT"nivel_library.d" -o "nivel_library.o" "../nivel_library.c"
+Finished building: ../nivel_library.c
+ 
+Building target: Proceso Nivel
+Invoking: GCC C Linker
+gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug" -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proceso Nivel"  ./Proceso\ Nivel.o ./nivel_library.o   -lDibujoNivelLib -lcurses -lCommonsLibrary -lpthread
+Finished building target: Proceso Nivel
+ 
+19:55:29 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+19:55:30 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+19:55:31 **** Incremental Build of configuration Debug for project Proceso Nivel ****
+make all 
+make: No se hace nada para «all».
+20:04:27 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+20:04:29 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+20:04:30 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+20:04:31 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+20:04:32 **** Incremental Build of configuration Debug for project Proceso Nivel ****
+make all 
+Building file: ../Proceso Nivel.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib" -I/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Proceso Nivel.d" -MT"Proceso\ Nivel.d" -o "Proceso Nivel.o" "../Proceso Nivel.c"
+Finished building: ../Proceso Nivel.c
+ 
+Building file: ../nivel_library.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib" -I/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"nivel_library.d" -MT"nivel_library.d" -o "nivel_library.o" "../nivel_library.c"
+../nivel_library.c: En la función ‘read_nivel_archivo_configuracion’:
+../nivel_library.c:23:2: error: faltan argumentos para la función ‘fopen’
+In file included from /usr/include/curses.h:150:0,
+                 from ../Proceso Nivel.h:13,
+                 from ../nivel_library.c:9:
+/usr/include/stdio.h:273:14: nota: se declara aquí
+../nivel_library.c:26:2: aviso: se pasa el argumento 1 de ‘fclose’ desde un tipo de puntero incompatible [activado por defecto]
+In file included from /usr/include/curses.h:150:0,
+                 from ../Proceso Nivel.h:13,
+                 from ../nivel_library.c:9:
+/usr/include/stdio.h:238:12: nota: se esperaba ‘struct FILE *’ pero el argumento es de tipo ‘char *’
+make: *** [nivel_library.o] Error 1
+20:05:57 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+20:05:58 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+20:05:59 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+20:06:01 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+20:06:02 **** Incremental Build of configuration Debug for project Proceso Nivel ****
+make all 
+Building file: ../nivel_library.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib" -I/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"nivel_library.d" -MT"nivel_library.d" -o "nivel_library.o" "../nivel_library.c"
+Finished building: ../nivel_library.c
+ 
+Building target: Proceso Nivel
+Invoking: GCC C Linker
+gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug" -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proceso Nivel"  ./Proceso\ Nivel.o ./nivel_library.o   -lDibujoNivelLib -lcurses -lCommonsLibrary -lpthread
+Finished building target: Proceso Nivel
+ 
+20:06:34 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+20:06:36 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+20:06:37 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+20:06:39 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+20:06:40 **** Incremental Build of configuration Debug for project Proceso Nivel ****
+make all 
+Building file: ../nivel_library.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib" -I/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"nivel_library.d" -MT"nivel_library.d" -o "nivel_library.o" "../nivel_library.c"
+Finished building: ../nivel_library.c
+ 
+Building target: Proceso Nivel
+Invoking: GCC C Linker
+gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug" -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proceso Nivel"  ./Proceso\ Nivel.o ./nivel_library.o   -lDibujoNivelLib -lcurses -lCommonsLibrary -lpthread
+Finished building target: Proceso Nivel
+ 
+20:09:41 **** Incremental Build of configuration Debug for project CommonsLibrary ****
+make all 
+make: No se hace nada para «all».
+20:09:42 **** Incremental Build of configuration Debug for project DibujoNivelLib ****
+make all 
+make: No se hace nada para «all».
+20:09:44 **** Incremental Build of configuration Debug for project Proceso Nivel ****
+make all 
+Building file: ../Proceso Nivel.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib" -I/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Proceso Nivel.d" -MT"Proceso\ Nivel.d" -o "Proceso Nivel.o" "../Proceso Nivel.c"
+Finished building: ../Proceso Nivel.c
+ 
+Building file: ../nivel_library.c
+Invoking: GCC C Compiler
+gcc -I"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib" -I/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"nivel_library.d" -MT"nivel_library.d" -o "nivel_library.o" "../nivel_library.c"
+Finished building: ../nivel_library.c
+ 
+Building target: Proceso Nivel
+Invoking: GCC C Linker
+gcc -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/DibujoNivelLib/Debug" -L"/home/utnso/Escritorio/TP/tp-20131c-mario-killers/lib/commons/Debug" -o "Proceso Nivel"  ./Proceso\ Nivel.o ./nivel_library.o   -lDibujoNivelLib -lcurses -lCommonsLibrary -lpthread
+Finished building target: Proceso Nivel
+ 

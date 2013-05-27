@@ -20,7 +20,10 @@ t_nivel *read_nivel_archivo_configuracion(char* path){
 
 	t_nivel *nivel;
 	t_config * n;
-
+	if (!fopen(path)) {
+		printf("No existe el archivo");
+	}
+	fclose(path);
 	n = config_create(path);
 
 	nivel = create_nivel(n);
