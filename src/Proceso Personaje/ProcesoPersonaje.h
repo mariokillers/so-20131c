@@ -16,6 +16,23 @@
 #define WIN 5
 
 
+/*---------------------INCLUDES DEL TESTER, COMENTAR ANTES DE HACER PUSH--------------------------------*/
+/*
+#include <signal.h>
+#include <string.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "EstructurasMensajes.h"
+#include "Client.h"
+#include "Server.h"
+#include "Mensajes.h"
+#include "commons/config.h"
+#include "commons/string.h"
+#include "commons/collections/list.h"
+*/
+/*--------------------------------------------------------------------------------------------*/
+
 
 #include "../../lib/commons/Connections/Client.h"
 #include "../../lib/commons/Connections/Mensajes.h"

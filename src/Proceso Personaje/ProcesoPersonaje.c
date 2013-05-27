@@ -6,7 +6,9 @@
  */
 
 
+
 #include "ProcesoPersonaje.h"
+
 
 t_personaje *personaje;
 t_personaje *personaje_init;
@@ -24,7 +26,8 @@ CCB clientCCB_orq;
 CCB clientCCB_niv;
 CCB clientCCB_pln;
 
-int main(){
+
+int main(void){
 
 	//inicializo el personaje desde el archivo config
 
@@ -158,7 +161,7 @@ int main(){
 						mensaje = queue_pop(colaDeMensajes);
 
 						switch(mensaje->type){
-						char *respuesta;
+						char *respuesta = malloc((int)mensaje->lenght);
 						respuesta = ((char*) mensaje->data);
 							case CONFIRMAR_RECURSO:
 
@@ -201,6 +204,7 @@ int main(){
 	return 1;
 }
 
+
 int _is_next_level(t_personaje_nivel *p){
 	return !(p->termino_nivel);
 }
@@ -228,16 +232,20 @@ char proximoRecurso(t_list *niveles, char *nivActual){
 }
 
 Posicion *proximaPosicion(Posicion *posActual, Posicion *posProxRec){
-	if((posActual->POS_X < posProxRec->POS_X) && (posActual->POS_X != posProxRec->POS_X)){
-		posActual->POS_X ++;
-	} else if((posActual->POS_X > posProxRec->POS_X) && (posActual->POS_X != posProxRec->POS_X)){
-		posActual->POS_X --;
-	} else if((posActual->POS_Y > posProxRec->POS_Y) && (posActual->POS_Y != posProxRec->POS_Y)){
-		posActual->POS_Y --;
-	} else if((posActual->POS_Y < posProxRec->POS_Y) && (posActual->POS_Y != posProxRec->POS_Y)){
+	Posicion *pos = posActual;
+	if((pos->POS_X < posProxRec->POS_X) && (pos->POS_X != posProxRec->POS_X)){
+		pos->POS_X ++;
+		return pos;
+	} else if((pos->POS_X > posProxRec->POS_X) && (pos->POS_X != posProxRec->POS_X)){
+		pos->POS_X --;
+		return pos;
+	} else if((pos->POS_Y > posProxRec->POS_Y) && (pos->POS_Y != posProxRec->POS_Y)){
+		pos->POS_Y --;
+		return pos;
+	} else if((pos->POS_Y < posProxRec->POS_Y) && (pos->POS_Y != posProxRec->POS_Y)){
 		posActual->POS_Y ++;
+		return posActual;
 	}
-
 	return posActual;
 }
 
@@ -294,13 +302,12 @@ void agregarRecurso(t_list *niveles, char *nivActual, char proxRec){
 	t_list *auxListObj = auxNiv->personaje_objetivos;
 	int len = list_size(auxListObj);
 	t_personaje_objetivo *auxObj;
-	t_personaje_nivel *nn = malloc(sizeof(t_personaje_nivel));
+	t_personaje_nivel *nn;
 	while(i<len){
 		auxObj = list_get(auxListObj, i);
 		if(auxObj->objetivo == proxRec){
 			auxObj->tiene_objetivo = true;
 			nn = list_replace(auxListObj, i, auxObj);
-			free(nn);
 			break;
 		} else{
 			i++;
@@ -435,8 +442,6 @@ t_personaje *create_personaje(t_config *p){
 	personaje->personaje_vidas = config_get_int_value(p, "vidas");
 
 	personaje->personaje_vidas_restantes = personaje->personaje_vidas;
-
-	char IP[20]
 
 	strcpy(personaje->personaje_orquestador->IP, tomarIP(config_get_string_value(p, "orquestador")));
 
