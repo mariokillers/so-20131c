@@ -16,15 +16,15 @@ ITEM_NIVEL* ListaItems;
 RecursoPendientePersonaje* listaRecursosPendientes;
 
 //inicio al proceso como servidor y me conecto como cliente
-	CCB serverCCB;
-	CCB clientCCB;
+CCB serverCCB;
+CCB clientCCB;
 
 int recovery;
 
 
 int main(void) {
 
-	//inicializo el nivel desde el archivo config FALTA EL PATH
+	//inicializo el nivel desde el archivo config 
 	t_nivel *nivel= read_nivel_archivo_configuracion("/home/utnso/Escritorio/TP/tp-20131c-mario-killers/Configs/nivel1.config");
 	Nivel yoNivel;
 
@@ -38,27 +38,23 @@ int main(void) {
 	//Direccion * dir = (Direccion *)
 	char ip[20];
 	strcpy(ip,"localhost");
-	clientCCB = connectServer("localhost", ((Direccion*)(nivel->nivel_orquestador))->PORT); // VA EL PUERTO O EL IP?
+	clientCCB = connectServer("localhost", ((Direccion*)(nivel->nivel_orquestador))->PORT); 
 
 	strcpy(yoNivel.ID,nivel->nivel_nombre);
 	strcpy(yoNivel.IP,"localhost");
 	yoNivel.PORT=6000;
-	mandarMensaje(clientCCB.sockfd, HANDSHAKE,sizeof(Nivel),&yoNivel); //le tengo que pasar el puerto+ip+id
+	mandarMensaje(clientCCB.sockfd, HANDSHAKE,sizeof(Nivel),&yoNivel); 
 	 /*
 	 * tome del nmbre el ultimo caracter y lo concatene con el puerto que elija
 	 * */
 
 	//inicializo el hilo que maneja interbloqueo VER ACA!
-	//pthread_t interbloqueo;
-	//pthread_create( &interbloqueo, NULL, interbloqueo, NULL );S RECURSOS_LIBERADOS;
+	pthread_t interbloqueo;
+	pthread_create( &interbloqueo, NULL, interbloqueo, NULL );S RECURSOS_LIBERADOS;
 
 
 	//inicializo la lista de items a dibujar y controlar
-	extern ITEM_NIVEL* ListaItems;
 	ListaItems = nivel->nivel_items;
-
-	//extern PersonajeEnNivel* listaPersonajes; //TENGO QUE HACER ESTO?
-	//extern RecursoPendientePersonaje* listaRecursosPendientes;
 
 	//inicializo el recovery
 	recovery = nivel->nivel_recovery;
@@ -71,7 +67,7 @@ int main(void) {
 
 	nivel_gui_dibujar(ListaItems);
 
-	//mientras tenga algun mensaje, ya sea de server o cliente....
+	//mientras tenga algun mensaje, ya sea de server o cliente.... NO TENGO QUE PONER WHILE(1)?
 	while( (mensajes(colaDeMensajes,serverCCB)) || (mensajes(colaDeMensajes, clientCCB)) ){
 
 		//agarra de la cola de mensajes un mensaje
@@ -563,6 +559,47 @@ char buscarPersonaje_byfd(int fd){
 	return '\0';
 
 }
+
+void* interbloqueo(void* a){
+	/*@NAME: interbloqueo	
+	* @DESC: hilo que se encarga de detectar interbloqueo
+	*/
+}
+
+int buscarEnReferenciaRecurso(char idRecurso){	
+	/*@NAME: buscarEnReferenciaRecurso	
+	* @DESC: busca en el vector que hace referencia a los recursos la pos de ese recurso en las matrices/vectores	
+	*/	
+	int i=0;
+	bool encontrado = false;
+	while(!encontrado){
+		if(referenciarecurso[i] == idRecurso){
+			encontrado = true;
+			return i;
+		}else{
+			i++;
+		}
+	}
+			
+}
+
+int buscarEnReferenciaProceso(char idProceso){
+	/*@NAME: buscarEnReferenciaProceso
+	* @DESC: busca en el vector que hace referencia a los personajes la pos de ese personaje en las matrices
+	*/	
+	int i=0;
+	bool encontrado = false;
+	while(!encontrado){
+		if(referenciaProceso[i] == idProceso){
+			encontrado = true;
+			return i;
+		}else{
+			i++;
+		}
+	}
+				
+}
+				
 
 
 
