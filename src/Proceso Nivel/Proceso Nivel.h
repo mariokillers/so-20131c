@@ -94,6 +94,11 @@ void agregarRecursosAListaItems(char idRecurso, int cant);
 void reasignarRecursos(Recursos* listaRecursos);
 void quitarSolicitudesDeRecurso(char idPersonaje, char idRecurso);
 char buscarPersonaje_byfd(int fd);
+//funciones para tratar interbloqueo
+void* interbloqueo(void*);
+int buscarEnReferenciaRecurso(char idRecurso);
+int buscarEnReferenciaProceso(char idProceso);
+
 char* tomarIP(char* direct);
 int tomarPuerto(char* direct);
 
