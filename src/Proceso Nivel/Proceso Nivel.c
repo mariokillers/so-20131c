@@ -572,10 +572,12 @@ void* interbloqueo(void* a){
 	int cantRecursos = cantidadRecursos();
 
 	//vector para saber que procesos estan interbloqueados
-	bool marcados[];
+	bool marcados[cantidadPersonajes];
+
+	inicializarMarcados (marcados, cantidadPersonajes);
 
 	//vectores que referencian en la posicion de matrices y vectores para detectar interbloqueo
-	char referenciaProceso[cantidadPersonajes];
+	char referenciaPersonaje[cantidadPersonajes];
 	char referenciaPersonaje[cantRecursos];
 
 	//vectores para interbloqueo
@@ -586,12 +588,26 @@ void* interbloqueo(void* a){
 	int recursosAsignados[cantidadPersonajes][cantRecursos];
 	int recursosSolicitados[cantidadPersonajes][cantRecursos];
 
+
+	//inicializo los vectores-matrices
 	cargarRecursosTotales(recursosTotales, cantRecursos);
 	cargarRecursosDisponibles(recursosDisponibles, cantRecursos);
 	cargarRecursosSolicitados(recursosSolicitados);
 	cargarRecursosAsignados(recursosAsignados);
 
 
+}
+
+void inicializarMarcados (bool marcados[], int cantidadPersonajes){
+	/*@NAME: inicializarMarcados
+	* @DESC: inicializo  el vector en false
+	*/
+
+	int i;
+
+	for(i=0;i<= cantidadPersonajes; i++){
+		marcados[i]= false;
+	}
 }
 
 int buscarEnReferenciaRecurso(char idRecurso, char referenciaRecurso[]){
