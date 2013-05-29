@@ -13,6 +13,7 @@
 //inicializo la lista de personajes para controlar, dibujar e interbloqueo (en orden)
 PersonajeEnNivel* listaPersonajes;
 ITEM_NIVEL* ListaItems;
+ITEM_NIVEL* recursosIniciales;
 RecursoPendientePersonaje* listaRecursosPendientes;
 
 //inicio al proceso como servidor y me conecto como cliente
@@ -50,11 +51,12 @@ int main(void) {
 
 	//inicializo el hilo que maneja interbloqueo VER ACA!
 	pthread_t interbloqueo;
-	pthread_create( &interbloqueo, NULL, interbloqueo, NULL );S RECURSOS_LIBERADOS;
+	pthread_create( &interbloqueo, NULL, interbloqueo, NULL );
 
 
 	//inicializo la lista de items a dibujar y controlar
 	ListaItems = nivel->nivel_items;
+	recursosIniciales = nivel->nivel_items; //esta lista es para saber la cantidad total de recursos que hay en el nivel (interbloqueo)
 
 	//inicializo el recovery
 	recovery = nivel->nivel_recovery;
@@ -560,30 +562,55 @@ char buscarPersonaje_byfd(int fd){
 
 }
 
+//VER TEMA SEMAFOROS
 void* interbloqueo(void* a){
 	/*@NAME: interbloqueo	
 	* @DESC: hilo que se encarga de detectar interbloqueo
 	*/
+
+	int cantidadPersonajes = cantidadPersonajes();
+	int cantRecursos = cantidadRecursos();
+
+	//vector para saber que procesos estan interbloqueados
+	bool marcados[];
+	//vectores que referencian en la posicion de matrices y vectores para detectar interbloqueo
+	char referenciaProceso[cantidadPersonajes];
+	char referenciaRecurso[cantRecursos];
+
+	//vectores para interbloqueo
+	int recursosTotales[cantRecursos];
+	int recursosDisponibles[cantRecursos];
+
+	//matrices para interbloqueo
+	int recursosAsignados[cantidadPersonajes][cantRecursos];
+	int recursosSolicitados[cantidadPersonajes][cantRecursos];
+
+	cargarRecursosTotales(recursosTotales, cantRecursos);
+	cargarRecursosDisponibles(recursosDisponibles, cantRecursos);
+	cargarRecursosSolicitados(recursosSolicitados);
+	cargarRecursosAsignados(recursosAsignados);
+
+
 }
 
-int buscarEnReferenciaRecurso(char idRecurso){	
+int buscarEnReferenciaRecurso(char idRecurso, char referenciaRecurso[]){
 	/*@NAME: buscarEnReferenciaRecurso	
 	* @DESC: busca en el vector que hace referencia a los recursos la pos de ese recurso en las matrices/vectores	
 	*/	
 	int i=0;
 	bool encontrado = false;
 	while(!encontrado){
-		if(referenciarecurso[i] == idRecurso){
+		if(referenciaRecurso[i] == idRecurso){
 			encontrado = true;
 			return i;
 		}else{
 			i++;
 		}
-	}
+	}return -1;
 			
 }
 
-int buscarEnReferenciaProceso(char idProceso){
+int buscarEnReferenciaProceso(char idProceso, char referenciaProceso[]){
 	/*@NAME: buscarEnReferenciaProceso
 	* @DESC: busca en el vector que hace referencia a los personajes la pos de ese personaje en las matrices
 	*/	
@@ -596,11 +623,87 @@ int buscarEnReferenciaProceso(char idProceso){
 		}else{
 			i++;
 		}
-	}
+	}return -1;
 				
 }
 				
 
+int cantidadPersonajes(){
+	/*@NAME: cantidadProcesos
+	* @DESC: devuelve la cantidad de personajes conectados al nivel
+	*/
+	int i =0;
+	PersonajeEnNivel * personaje;
+	personaje = listaPersonajes;
+
+	while(personaje != NULL){
+		i++;
+		personaje= personaje->sig;
+	}return i;
+}
+
+int cantidadRecursos(){
+	/*@NAME: cantidadRecursos
+	* @DESC: devuelve la cantidad de recursos que hay en el nivel
+	* NOTA: como no hay personajes en esta lista no tengo que diferenciar recursos de personajes
+	*/
+	int i =0;
+	ITEM_NIVEL* recurso;
+	recurso = recursosIniciales;
+
+	while(recurso != NULL){
+		i++;
+		recurso= recurso->next;
+	}return i;
+}
+
+void cargarRecursosTotales(int recursosTotales[], int cantRecursos , char referenciaRecurso[]){
+	/*@NAME: cargarRecursosTotales
+	* @DESC: completa el vector con la cantidad de recursos que hay en total
+	*/
+
+	int i;
+	int pos =-1;
+
+	ITEM_NIVEL* recurso;
+	recurso = recursosIniciales;
+
+	for(i=0; i<= cantRecursos; i++){
+		//busco en el vector referencia la pos de ese recurso
+		pos = buscarEnReferenciaRecurso(recurso->id,referenciaRecurso);
+		if(pos != -1){
+			//le asigno a esa pos la cantidad de recursos que hay
+			recursosTotales[pos] = recurso->quantity;
+		}
+	}
+
+}
+
+void cargarRecursosDisponibles(int recursosDisponibles[], int cantRecursos , char referenciaRecurso[]){
+	/*@NAME: cargarRecursosDisponibles
+	* @DESC: completa el vector con la cantidad de recursos que quedan sin asignar
+	*/
+
+	int i;
+	int pos =-1;
+
+	ITEM_NIVEL* recurso;
+	recurso = ListaItems;
+
+	while(recurso!= NULL){
+		//me fijo antes que sea recurso y NO personaje
+		if ( (recurso!= NULL) && (recurso->item_type == 1)){
+			//busco en el vector referencia la pos de ese recurso
+			pos = buscarEnReferenciaRecurso(recurso->id,referenciaRecurso);
+			if(pos != -1){
+				//le asigno a esa pos la cantidad de recursos que hay
+				recursosDisponibles[pos] = recurso->quantity;
+				recurso = recurso->next;
+			}
+		}
+		recurso = recurso->next;
+	}
+}
 
 
 
