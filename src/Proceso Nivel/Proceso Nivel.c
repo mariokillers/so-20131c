@@ -573,9 +573,10 @@ void* interbloqueo(void* a){
 
 	//vector para saber que procesos estan interbloqueados
 	bool marcados[];
+
 	//vectores que referencian en la posicion de matrices y vectores para detectar interbloqueo
 	char referenciaProceso[cantidadPersonajes];
-	char referenciaRecurso[cantRecursos];
+	char referenciaPersonaje[cantRecursos];
 
 	//vectores para interbloqueo
 	int recursosTotales[cantRecursos];
@@ -610,14 +611,14 @@ int buscarEnReferenciaRecurso(char idRecurso, char referenciaRecurso[]){
 			
 }
 
-int buscarEnReferenciaProceso(char idProceso, char referenciaProceso[]){
+int buscarEnReferenciaProceso(char idProceso, char referenciaPersonaje[]){
 	/*@NAME: buscarEnReferenciaProceso
 	* @DESC: busca en el vector que hace referencia a los personajes la pos de ese personaje en las matrices
 	*/	
 	int i=0;
 	bool encontrado = false;
 	while(!encontrado){
-		if(referenciaProceso[i] == idProceso){
+		if(referenciaPersonaje[i] == idProceso){
 			encontrado = true;
 			return i;
 		}else{
@@ -679,12 +680,11 @@ void cargarRecursosTotales(int recursosTotales[], int cantRecursos , char refere
 
 }
 
-void cargarRecursosDisponibles(int recursosDisponibles[], int cantRecursos , char referenciaRecurso[]){
+void cargarRecursosDisponibles(int recursosDisponibles[], char referenciaRecurso[]){
 	/*@NAME: cargarRecursosDisponibles
 	* @DESC: completa el vector con la cantidad de recursos que quedan sin asignar
 	*/
 
-	int i;
 	int pos =-1;
 
 	ITEM_NIVEL* recurso;
@@ -705,5 +705,57 @@ void cargarRecursosDisponibles(int recursosDisponibles[], int cantRecursos , cha
 	}
 }
 
+void cargarRecursosSolicitados(int recursosSolicitados[][], char referenciaRecurso[], char referenciaPersonaje[]){
+	/*@NAME: cargarRecursosSolicitados
+	* @DESC: carga la matriz dependiendo de el recurso solicitado que tuvo cada personaje
+	*/
 
+	RecursoPendientePersonaje* recurso;
+	recurso = listaRecursosPendientes;
 
+	int posPersonaje = -1;
+	int posRecurso = -1;
+
+	while(recurso != NULL){
+		posPersonaje = buscarEnReferenciaPersonaje(recurso->idPersonaje,referenciaPersonaje );
+		posRecurso = buscarEnReferenciaRecurso(recurso->recursoPendiente, referenciaRecurso);
+		if((posPersonaje == -1)|| (posRecurso == -1)){
+			recurso = recurso->sig;
+
+		}else{
+			//en la fila del personaje, en la columna de ese recurso, pongo un 1 que es el recurso que solicito
+			recursosSolicitados[posPersonaje][posRecurso]= 1;
+			recurso = recurso->sig;
+		}
+	}
+}
+
+void cargarRecursosAsignados(int recursosAsignados[][], char referenciaRecurso[], char referenciaPersonaje[]){
+	/*@NAME: cargarRecursosAsignados
+	* @DESC: carga la matriz dependiendo de los recursos que tiene asignado cada personaje
+	*/
+
+	int posPersonaje = -1;
+	int posRecurso = -1;
+
+	PersonajeEnNivel* personaje;
+	personaje = listaPersonajes;
+
+	while(personaje != NULL){
+		posPersonaje = buscarEnReferenciaPersonaje(personaje->id,referenciaPersonaje );
+		//recorro la lista de recursos de ese personaje
+		t_recursos* recurso;
+		recurso = personaje->recursos;
+
+		while(recurso != NULL){
+			//busca la posicion en la matriz del char de ese recurso
+			posRecurso = buscarEnReferenciaRecurso(recurso->idRecurso, referenciaRecurso);
+			//en la fila del personaje, la columna del recurso, le asigna la cantidad que tiene asignado ese personaje
+			recursosAsignados[posPersonaje][posRecurso] = recurso->cant;
+			//paso al siguiente recurso del personaje
+			recurso = recurso->sig;
+		}
+		//paso al otro personaje
+		personaje = personaje->sig;
+	}
+}
