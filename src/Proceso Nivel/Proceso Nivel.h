@@ -192,16 +192,28 @@ char buscarPersonaje_byfd(int fd);
 
 //funciones para tratar interbloqueo
 void* interbloqueo(void*);
+
 int buscarEnReferenciaRecurso(char idRecurso, char referenciaRecurso[]);
+
 int buscarEnReferenciaProceso(char idProceso, char referenciaProceso[]);
+
 int cantidadPersonajes();
+
 int cantidadRecursos();
+
 void cargarRecursosTotales(int recursosTotales[], int cantRecursos , char referenciaRecurso[]);
+
 void cargarRecursosDisponibles(int recursosDisponibles[], char referenciaRecurso[]);
+
 void cargarRecursosSolicitados(int recursosSolicitados[][]);
+
 void cargarRecursosAsignados(int recursosAsignados[][]);
+
 void cargarRecursosSolicitados(int recursosSolicitados[][], char referenciaRecurso[], char referenciaPersonaje[]);
+
 void cargarRecursosAsignados(int recursosAsignados[][], char referenciaRecurso[], char referenciaPersonaje[]);
+
+void inicializarMarcados (bool marcados[], int cantidadPersonajes);
 
 
 
