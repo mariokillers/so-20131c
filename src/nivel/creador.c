@@ -17,8 +17,6 @@ t_nivel *read_nivel_archivo_configuracion(char* path){
 
 	nivel = create_nivel(n);
 
-	printf("nivel creado\n\n");
-
 	return nivel;
 }
 

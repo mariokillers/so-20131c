@@ -1,5 +1,5 @@
 
-#include "Proceso_Plataforma.h"
+#include "plataforma.h"
 #include <string.h>
 
 
@@ -71,7 +71,7 @@ void* Planif(void* nivel){
 	strcpy(miGestor->dataPlanificador.ID, miNivel->ID);
 	miGestor->dataPlanificador.ID[0]='P';
 	//Los puertos de los planificadores son 5501 5502 5503...
-	miGestor->dataPlanificador.PORT= (miNivel->PORT)-1000;
+	miGestor->dataPlanificador.PORT= (7777/*miNivel->PORT*/);
 	strcpy(miGestor->dataPlanificador.IP, "localhost");
 
 	//Copio la instancia de dataNivel

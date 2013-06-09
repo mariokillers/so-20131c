@@ -13,10 +13,23 @@ CCB clientCCB;
 int recovery;
 
 
-int main(void) {
+int main(int argc, char *argv[]) {
+
+	printf("%d\n", argc);
+	char *path_config = argv[1];
+	int puerto = atoi(argv[2]);
+
+	if (argc < 3) {
+		fprintf(stderr, "%s: Faltan parametros (%s archivoconfig puerto)\n", "nivel", "nivel");
+		exit(1);
+	}
 
 	//inicializo el nivel desde el archivo config 
-	t_nivel *nivel= read_nivel_archivo_configuracion("/home/utnso/Escritorio/TP/tp-20131c-mario-killers/Configs/nivel1.config");
+	t_nivel *nivel= read_nivel_archivo_configuracion(path_config);
+	if (nivel == NULL) {
+		fprintf(stderr, "Error: no se pudo leer el archivo de configuracion %s", path_config);
+		exit(1);
+	}
 	Nivel yoNivel;
 
 	//instancio el logger
@@ -24,7 +37,7 @@ int main(void) {
 	//inicializo el proceso nivel
 	nivel_gui_inicializar();
 
-	serverCCB = initServer(6000);  // chequear esto
+	serverCCB = initServer(puerto);  // chequear esto
 
 	//Direccion * dir = (Direccion *)
 	char ip[20];
@@ -33,7 +46,7 @@ int main(void) {
 
 	strcpy(yoNivel.ID,nivel->nivel_nombre);
 	strcpy(yoNivel.IP,"localhost");
-	yoNivel.PORT=6000;
+	yoNivel.PORT = puerto;
 	mandarMensaje(clientCCB.sockfd, HANDSHAKE,sizeof(Nivel),&yoNivel); 
 	 /*
 	 * tome del nmbre el ultimo caracter y lo concatene con el puerto que elija
