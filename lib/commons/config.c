@@ -62,6 +62,9 @@ t_config *config_create(char *path) {
 		free(buffer);
 		fclose(file);
 	}
+	else {
+		return NULL;
+	}
 
 	return config;
 }

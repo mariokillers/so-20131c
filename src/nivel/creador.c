@@ -14,6 +14,9 @@ t_nivel *read_nivel_archivo_configuracion(char* path){
 	t_config * n;
 
 	n = config_create(path);
+	if (n == NULL) {
+		return NULL;
+	}
 
 	nivel = create_nivel(n);
 
@@ -116,18 +119,6 @@ void ListItems_add_caja(t_config *n, char *buffer_caja_num, ITEM_NIVEL **list){
 	new->next = *list;
 	
 	*list = new;
-}
-
-int tomarPuerto(char direct[20]){
-	char** direct_sep = string_split(direct, ":");
-	int puerto = atoi(direct_sep[1]);
-	return puerto;
-}
-
-char* tomarIP(char direct[20]){
-	char** direct_sep = string_split(direct, ":");
-	char *IP = direct_sep[0];
-	return IP;
 }
 
 /*-----------------------------FUNCIONES DE USO PARA DIBUJAR NIVEL----------------------------------------*/

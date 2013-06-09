@@ -26,7 +26,7 @@ int obtenerPosY(Posicion pos){
 	int aux = pos.POS_Y;
 	return(aux);
 }
-/*
+
 int tomarPuerto(char* direct){
 	char** direct_sep = string_split(direct, ":");
 	int puerto = atoi(direct_sep[1]);
@@ -38,6 +38,5 @@ char* tomarIP(char* direct){
 	char *IP = direct_sep[0];
 	return IP;
 }
-*/
 
 #endif

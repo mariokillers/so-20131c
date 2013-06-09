@@ -1,4 +1,6 @@
 #include "nivel.h"
+#include <stdio.h>
+#include <string.h>
 
 //inicializo la lista de personajes para controlar, dibujar e interbloqueo (en orden)
 PersonajeEnNivel* listaPersonajes;
@@ -14,20 +16,21 @@ int recovery;
 
 
 int main(int argc, char *argv[]) {
-
-	printf("%d\n", argc);
-	char *path_config = argv[1];
-	int puerto = atoi(argv[2]);
+	char *path_config;
+	int puerto;
 
 	if (argc < 3) {
 		fprintf(stderr, "%s: Faltan parametros (%s archivoconfig puerto)\n", "nivel", "nivel");
 		exit(1);
 	}
 
+	path_config = argv[1];
+	puerto = atoi(argv[2]);
+
 	//inicializo el nivel desde el archivo config 
 	t_nivel *nivel= read_nivel_archivo_configuracion(path_config);
 	if (nivel == NULL) {
-		fprintf(stderr, "Error: no se pudo leer el archivo de configuracion %s", path_config);
+		fprintf(stderr, "ERROR: no se pudo leer el archivo de configuracion %s\n", path_config);
 		exit(1);
 	}
 	Nivel yoNivel;
