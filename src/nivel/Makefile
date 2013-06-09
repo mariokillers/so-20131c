@@ -1,3 +1,3 @@
 all: nivel
 nivel:
-	gcc creador.c nivel.c tad_items.c gui.c -o nivel -g -lcommons -lncurses
+	gcc creador.c nivel.c tad_items.c gui.c -o ../../bin/nivel -g -lcommons -lncurses

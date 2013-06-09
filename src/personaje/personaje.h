@@ -1,13 +1,7 @@
 #ifndef PERSONAJE_H_
 #define PERSONAJE_H_
 
-#define STANDBY 0
-#define WAIT_DATA_LEVEL 1
-#define WAIT_POS_REC 2
-#define WAIT_REC 3
-#define NUEVO_NIVEL 4
-#define WIN 5
-
+enum ESTADO {STANDBY, WAIT_DATA_LEVEL, WAIT_POS_REC, WAIT_REC, NUEVO_NIVEL, WIN};
 
 /*---------------------INCLUDES DEL TESTER, COMENTAR ANTES DE HACER PUSH--------------------------------*/
 /*
