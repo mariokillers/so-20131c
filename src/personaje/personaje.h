@@ -27,18 +27,18 @@
 /*--------------------------------------------------------------------------------------------*/
 
 
-#include "../../lib/commons/Connections/Client.h"
-#include "../../lib/commons/Connections/Mensajes.h"
-#include "../../lib/commons/Connections/EstructurasMensajes.h"
+#include <commons/Connections/Client.h>
+#include <commons/Connections/Mensajes.h>
+#include <commons/Connections/EstructurasMensajes.h>
 #include <signal.h>
 #include <string.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../../lib/commons/config.h"
-#include "../../lib/commons/string.h"
-#include "../../lib/commons/collections/list.h"
+#include <commons/config.h>
+#include <commons/string.h>
+#include <commons/collections/list.h>
 
 
 
