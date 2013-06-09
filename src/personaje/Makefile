@@ -1,3 +1,3 @@
 all: personaje
 personaje:
-	gcc personaje.c -o ../../bin/personaje -lcommons
+	gcc personaje.c -g -o ../../bin/personaje -lcommons

@@ -18,11 +18,24 @@ CCB clientCCB_niv;
 CCB clientCCB_pln;
 
 
-int main(void){
+int main(int argc, char *argv[]) {
+
+	char *archivo_config;
+
+	if (argc < 2) {
+		fprintf(stderr, "Faltan argumentos. personaje archivoconfig\n");
+		exit(1);
+	}
+
+	archivo_config = argv[1];
 
 	//inicializo el personaje desde el archivo config
 
-	personaje= read_personaje_archivo_configuracion("PATH");              //VER DE DONDE SALE EL PATH
+	personaje = read_personaje_archivo_configuracion(archivo_config);
+	if (personaje == NULL) {
+		fprintf(stderr, "No se pudo leer el archivo de configuracion %s\n", archivo_config);
+		exit(1);
+	}
 
 	personaje_init = personaje;
 	strcpy(nivActual,"");
@@ -391,6 +404,9 @@ t_personaje *read_personaje_archivo_configuracion(char* path){
 	t_config * p;
 
 	p = config_create(path);
+	if (p == NULL) {
+		return NULL;
+	}
 
 	personaje = create_personaje(p);
 
