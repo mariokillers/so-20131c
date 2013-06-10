@@ -8,6 +8,7 @@
 #ifndef CLIENT_H_
 #define CLIENT_H_
 
+#include <errno.h>
 #include "Mensajes.h"
 
 ////PROTOTIPOS DE FUNCIONES

@@ -56,6 +56,7 @@ CCB connectServer(char *IP, int PORT){
 		//AGREGO LA NUEVA CONEXION A LA INSTANCIA EPOLL
 		if ((epoll_ctl (myClient.instancia_epoll, EPOLL_CTL_ADD, myClient.sockfd, &(myClient.event))) == -1){
 		  perror ("epoll_ctl");
+		 printf("%s\n", strerror(errno));
 		  exit(1);
 		}
 

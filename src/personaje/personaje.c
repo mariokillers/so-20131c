@@ -8,8 +8,8 @@ t_personaje *personaje_init;
 char state = NUEVO_NIVEL;
 Posicion *posProxRec;
 char proxRec;
-char* proxNiv;
-char *nivActual;
+char proxNiv[20];
+char nivActual[20];
 Posicion *nuevaPos;
 Posicion *posActual;
 
@@ -59,7 +59,7 @@ int main(int argc, char *argv[]) {
 			//analiza el estado actual del proceso y en base a eso, actua
 			switch (state){
 				case NUEVO_NIVEL:
-					clientCCB_orq = connectServer(((char*)((Direccion*)(personaje->personaje_orquestador))->IP), ((int)((Direccion*)(personaje->personaje_orquestador))->PORT));
+					clientCCB_orq = connectServer("localhost", 5000/*((char*)((Direccion*)(personaje->personaje_orquestador))->IP), ((Direccion*)(personaje->personaje_orquestador))->PORT*/);
 
 					//verifico si gane
 					if(ganado(personaje->personaje_niveles)){
