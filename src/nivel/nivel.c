@@ -51,14 +51,13 @@ int main(int argc, char *argv[]) {
 	strcpy(yoNivel.IP,"localhost");
 	yoNivel.PORT = puerto;
 	mandarMensaje(clientCCB.sockfd, HANDSHAKE,sizeof(Nivel),&yoNivel); 
-	 /*
-	 * tome del nmbre el ultimo caracter y lo concatene con el puerto que elija
-	 * */
 
 	//inicializo el hilo que maneja interbloqueo VER ACA!
-	//pthread_t interbloqueo;
-	//pthread_create( &interbloqueo, NULL, interbloqueo, NULL );
+	pthread_t interbloqueo;
+	pthread_create( &interbloqueo, NULL, interbloqueo, NULL );
 
+	//entro en la region critica
+	pthread_mutex_lock(mutex);
 
 	//inicializo la lista de items a dibujar y controlar
 	ListaItems = nivel->nivel_items;
@@ -75,6 +74,9 @@ int main(int argc, char *argv[]) {
 
 	nivel_gui_dibujar(ListaItems);
 
+	pthread_mutex_unlock(mutex);
+	//salgo de la region critica
+
 	//mientras tenga algun mensaje, ya sea de server o cliente.... NO TENGO QUE PONER WHILE(1)?
 	while( (mensajes(colaDeMensajes,serverCCB)) || (mensajes(colaDeMensajes, clientCCB)) ){
 
@@ -87,6 +89,10 @@ int main(int argc, char *argv[]) {
 
 			case HANDSHAKE:
 				((Personaje*)mensaje->data)->FD=mensaje->from;
+
+				//entro en la region critica
+				pthread_mutex_lock(mutex);
+
 				//cargo el personaje en las listas que voy a manejar para validar recursos e interbloque
 				cargarPersonajeEnNivel(((Personaje*)mensaje->data));
 				cargarPersonajeEnPendiente(buscarPersonaje_byfd(mensaje->from));
@@ -94,6 +100,9 @@ int main(int argc, char *argv[]) {
 				//creo el personaje en el nivel. Le pongo como pos inicial la (0,0) y lo dibujo
 				CrearPersonaje(&ListaItems,(buscarPersonaje_byfd(mensaje->from)),0,0);
 				nivel_gui_dibujar(ListaItems);
+
+				pthread_mutex_unlock(mutex);
+				//salgo de la region critica
 
 				//mensajeLogeo= char del personaje que ingreso al nivel
 				char mensajeLogeo = (buscarPersonaje_byfd(mensaje->from));
@@ -107,7 +116,13 @@ int main(int argc, char *argv[]) {
 			/**le envia al personaje la pos del nuevo recurso **/
 
 				Posicion pos;
+				//entro en la region critica
+				pthread_mutex_lock(mutex);
+
 				pos =  obtenerPosRecurso((char)(*((char*)(mensaje->data))));
+
+				pthread_mutex_unlock(mutex);
+				//salgo de la region critica
 
 				mandarMensaje(mensaje->from, POSICION_RECURSO,sizeof(Posicion),&pos);
 			}
@@ -115,6 +130,9 @@ int main(int argc, char *argv[]) {
 
 			case REQUEST_MOVIMIENTO:
 			{
+				//entro en la region critica
+				pthread_mutex_lock(mutex);
+
 				//tomo del mensaje la posicion donde se va a mover el personaje
 				int posx = obtenerPosX(*((Posicion*)mensaje->data));
 				int posy = obtenerPosY(*(Posicion*)mensaje->data);
@@ -126,11 +144,17 @@ int main(int argc, char *argv[]) {
 				//modifico la posicion del personaje en listaPersonajes
 				modificarPosPersonaje(((char*)(mensaje->from))[1],posx,posy);
 
+				pthread_mutex_unlock(mutex);
+				//salgo de la region critica
+
 				sleep(1);
 			}
 				break;
 
 			case REQUEST_RECURSO:
+
+				//entro en la region critica
+				pthread_mutex_lock(mutex);
 
 				//le confirma al personaje que puede tomar ese recurso y lo resta de listaItems
 				if(validarPosYRecursos( buscarPersonaje_byfd(mensaje->from), *((char*)mensaje->data))){
@@ -151,6 +175,9 @@ int main(int argc, char *argv[]) {
 
 				}
 
+				pthread_mutex_unlock(mutex);
+				//salgo de la region critica
+
 				break;
 
 
@@ -167,6 +194,9 @@ int main(int argc, char *argv[]) {
 			// y que este le diga cuales fueron re-asignados.
 			case TERMINE_NIVEL:
 			{
+				//entro en la region critica
+				pthread_mutex_lock(mutex);
+
 				//se fija que recursos tenia asignado el personaje para liberarlos
 				t_recursos *recursosALiberar = liberarRecursos(buscarPersonaje_byfd(mensaje->from));
 
@@ -183,6 +213,10 @@ int main(int argc, char *argv[]) {
 
 				//re-dibuja el nivel ya sin el personaje y con la cantidad de recursos nueva
 				nivel_gui_dibujar(ListaItems);
+
+
+				pthread_mutex_unlock(mutex);
+				//salgo de la region critica
 			}
 				break;
 
@@ -606,6 +640,7 @@ void* interbloqueo(void* a){
 	cargarRecursosDisponibles(aux, cantRecursos, referenciaRecursos);
 	cargarRecursosSolicitados(recursosSolicitados);
 	cargarRecursosAsignados(recursosAsignados);
+
 	pthread_mutex_unlock(mutex);
 	//salgo de la region critica
 
@@ -795,6 +830,9 @@ void cargarRecursosAsignados(int recursosAsignados[][], char referenciaRecurso[]
 
 void marcarPersonajesSinRecursos (int recursosAsignados[][], char referenciaPersonaje[], bool marcados[], int cantPersonajes, int cantRecursos){
 	int i,j;
+
+	//marco los personaes que tengan to do 0
+
 	for(i=0;i<cantPersonajes;i++){
 		int flag=0;
 		for(j=0;j<cantRecursos;j++){
@@ -815,31 +853,31 @@ void marcarPersonajesConRecursos (int recursosAsignados[][], int recursosSolicit
 	int i,j,asignacionImposible, flagTerminar;
 	do{
 		flagTerminar=0;
-		//RECORREMOS PERSONAJES
+		//recorro personaje
 		for(i=0;i<cantPersonajes;i++){
 			asignacionImposible=0;
 
-			//RECORREMOS RECURSOS DEL PERSONAJE ACTUAL
+			//recorro recursos del personaje actual
 			for(j=0;j<cantRecursos;j++){
-				//VERIFICO QUE HAYA RECURSO SUFICIENTE PARA SATISFACER EL PEDIDO
+				//verifico que haya recursos suficientes para satisfacer el pedido
 				if(marcados[i]==false && recursosSolicitados[i][j]<=recursosDisponibles[j]){
 					asignacionImposible=1;
 				}
 			}
 
-			//ES POSIBLE EJECUTAR EL PERSONAJE
+			//es posible ejecutar el personaje
 			if(!asignacionImposible){
-				//SI ENCUENTRA UNO QUE PUEDA EJECUTAR, SETEA PARA CONTINUAR EL ALGORTIMO
+				//si encuentra uno que pueda ejecutar, setea para continuar el algoritmo
 				flagTerminar=1;
 				marcados[i]=true;
-				//SI PUEDE EJECUTAR, ACTUALIZO EL DISPONIBLE
+				//si se puede ejecutar, actualizo el disponible
 				for(j=0;j<cantRecursos;j++){
 					recursosDisponibles[j]+=recursosAsignados[i][j];
 				}
 			}
 
 		}
-	//SI SE ENCONTRO ALGUNO, TERMINA EL ALGORITMO
+	//si se encontro alguno, termino el algoritmo
 	}while(flagTerminar);
 
 }
@@ -866,4 +904,3 @@ void comprobarDeadlock (bool marcados[],int cantPersonajes, char referenciaPerso
 		mandarMensaje(clientCCB.sockfd,REQUEST_INTERBLOQUEO,strlen(personajesInterbloqueados)+1,personajesInterbloqueados);
 	}
 }
-
