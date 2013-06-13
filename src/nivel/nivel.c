@@ -573,6 +573,9 @@ void* interbloqueo(void* a){
 	* @DESC: hilo que se encarga de detectar interbloqueo
 	*/
 
+	//entro en la region critica
+	pthread_mutex_lock(mutex);
+	
 	int cantPersonajes = cantidadPersonajes();
 	int cantRecursos = cantidadRecursos();
 	int aux[];
@@ -597,9 +600,7 @@ void* interbloqueo(void* a){
 
 
 	aux= recursosDisponibles;
-
-	//entro en la region critica
-	pthread_mutex_lock(mutex);
+	
 	//inicializo los vectores-matrices
 	cargarRecursosTotales(recursosTotales, cantRecursos, referenciaRecursos);
 	cargarRecursosDisponibles(aux, cantRecursos, referenciaRecursos);
