@@ -11,22 +11,6 @@
 #include <commons/config.h>
 //#include "personaje/personaje_library.h"
 
-
-
-
-
-//listaItems = Resources (al principio)
-
-//PersonajeEnNivel = Allocation
-
-//RecursoPendientePersonaje = Claim
-
-// RECURSOSDISPONIBLES = Available
-
-
-
-
-
 //creo estructura de datos para yo:Nivel poder tener el seguimiento del personaje en mi nivel
 
 
@@ -53,6 +37,8 @@ typedef struct PersonajeEnNivel{
 
 	t_recursos *recursos;
 
+	char recursoPendiente;
+
 	struct PersonajeEnNivel *sig;
 
 	int fd;
@@ -61,7 +47,7 @@ typedef struct PersonajeEnNivel{
 
 
 
-typedef struct RecursoPendientePersonaje{
+/*typedef struct RecursoPendientePersonaje{
 
 	char idPersonaje;
 
@@ -69,7 +55,7 @@ typedef struct RecursoPendientePersonaje{
 
 	struct RecursoPendientePersonaje *sig;
 
-}RecursoPendientePersonaje;
+}RecursoPendientePersonaje;*/
 
 
 
@@ -139,8 +125,6 @@ void agregarRecursoAPersonaje(char idPersonaje,char recurso);
 
 void borrarPersonajeEnNivel(char idPersonaje);
 
-void borrarPersonajeEnPendiente(char idPersonaje);
-
 void aumentarRecursos(t_recursos* recursosALiberar);
 
 void modificarPosPersonaje(char idPersonaje, int posx, int posy);
@@ -149,7 +133,7 @@ PersonajeEnNivel* buscarPersonaje(char idPersonaje);
 
 ITEM_NIVEL* buscarItem(char idRecurso);
 
-void agregarAListaRecursosPendientes(char idPersonaje, char recurso);
+void agregarARecursosPendientes(char idPersonaje, char recurso);
 
 void mandarRecursosLiberados(t_recursos* recursosALiberar, int fd);
 
