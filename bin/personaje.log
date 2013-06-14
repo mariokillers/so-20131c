@@ -1,0 +1,68 @@
+[INFO] 19:44:51:433 ProcesoPersonaje/(5694:5694): se conecta personaje Mario a orquestador
+[INFO] 19:44:51:439 ProcesoPersonaje/(5694:5694): personaje Mario solicita al orquestador DATA_NIVEL del nivel Nivel1
+[INFO] 19:44:51:442 ProcesoPersonaje/(5694:5694): personaje Mario se desconecta del orquestador
+[INFO] 19:44:51:450 ProcesoPersonaje/(5694:5694): personaje Mario se conecta a nivel Nivel1
+[INFO] 19:44:51:466 ProcesoPersonaje/(5694:5694): personaje Mario se conecta a planificador de nivel Nivel1
+[INFO] 19:57:14:327 ProcesoPersonaje/(7102:7102): se conecta personaje Mario a orquestador
+[INFO] 19:57:14:342 ProcesoPersonaje/(7102:7102): personaje Mario solicita al orquestador DATA_NIVEL del nivel Nivel1
+[INFO] 19:57:14:354 ProcesoPersonaje/(7102:7102): personaje Mario se desconecta del orquestador
+[INFO] 19:57:14:362 ProcesoPersonaje/(7102:7102): personaje Mario se conecta a nivel Nivel1
+[INFO] 19:57:14:375 ProcesoPersonaje/(7102:7102): personaje Mario se conecta a planificador de nivel Nivel1
+[INFO] 20:01:54:233 ProcesoPersonaje/(7194:7194): se conecta personaje Mario a orquestador
+[INFO] 20:01:54:242 ProcesoPersonaje/(7194:7194): personaje Mario solicita al orquestador DATA_NIVEL del nivel Nivel1
+[INFO] 20:01:54:247 ProcesoPersonaje/(7194:7194): personaje Mario se desconecta del orquestador
+[INFO] 20:01:54:264 ProcesoPersonaje/(7194:7194): personaje Mario se conecta a nivel Nivel1
+[INFO] 20:01:54:277 ProcesoPersonaje/(7194:7194): personaje Mario se conecta a planificador de nivel Nivel1
+[INFO] 20:06:11:884 ProcesoPersonaje/(7423:7423): se conecta personaje Mario a orquestador
+[INFO] 20:06:11:903 ProcesoPersonaje/(7423:7423): personaje Mario solicita al orquestador DATA_NIVEL del nivel Nivel1
+[INFO] 20:06:11:904 ProcesoPersonaje/(7423:7423): IP: localhost, PORT: 20000
+[INFO] 20:06:11:911 ProcesoPersonaje/(7423:7423): personaje Mario se desconecta del orquestador
+[INFO] 20:06:11:918 ProcesoPersonaje/(7423:7423): personaje Mario se conecta a nivel Nivel1
+[INFO] 20:06:11:936 ProcesoPersonaje/(7423:7423): personaje Mario se conecta a planificador de nivel Nivel1
+[INFO] 20:14:04:936 ProcesoPersonaje/(7553:7553): se conecta personaje Mario a orquestador
+[INFO] 20:14:04:950 ProcesoPersonaje/(7553:7553): personaje Mario solicita al orquestador DATA_NIVEL del nivel Nivel1
+[INFO] 20:14:04:951 ProcesoPersonaje/(7553:7553): IP: localhost, PORT: 20000
+[INFO] 20:14:04:954 ProcesoPersonaje/(7553:7553): personaje Mario se desconecta del orquestador
+[INFO] 20:14:04:974 ProcesoPersonaje/(7553:7553): personaje Mario se conecta a nivel Nivel1
+[INFO] 20:14:04:981 ProcesoPersonaje/(7553:7553): personaje Mario se conecta a planificador de nivel Nivel1
+[INFO] 20:17:54:31 ProcesoPersonaje/(7648:7648): se conecta personaje Mario a orquestador
+[INFO] 20:17:54:45 ProcesoPersonaje/(7648:7648): personaje Mario solicita al orquestador DATA_NIVEL del nivel Nivel1
+[INFO] 20:17:54:46 ProcesoPersonaje/(7648:7648): IP: localhost, PORT: 20000
+[INFO] 20:17:54:52 ProcesoPersonaje/(7648:7648): personaje Mario se desconecta del orquestador
+[INFO] 20:17:54:66 ProcesoPersonaje/(7648:7648): personaje Mario se conecta a nivel Nivel1
+[INFO] 20:17:54:80 ProcesoPersonaje/(7648:7648): personaje Mario se conecta a planificador de nivel Nivel1
+[INFO] 20:24:08:399 ProcesoPersonaje/(7806:7806): se conecta personaje Mario a orquestador
+[INFO] 20:24:08:409 ProcesoPersonaje/(7806:7806): personaje Mario solicita al orquestador DATA_NIVEL del nivel Nivel1
+[INFO] 20:24:08:410 ProcesoPersonaje/(7806:7806): IP: localhost, PORT: 20000
+[INFO] 20:24:08:412 ProcesoPersonaje/(7806:7806): personaje Mario se desconecta del orquestador
+[INFO] 20:24:08:426 ProcesoPersonaje/(7806:7806): personaje Mario se conecta a nivel Nivel1
+[INFO] 20:24:08:428 ProcesoPersonaje/(7806:7806): Handshake enviado
+[INFO] 20:24:08:436 ProcesoPersonaje/(7806:7806): personaje Mario se conecta a planificador de nivel Nivel1
+[INFO] 20:31:14:759 ProcesoPersonaje/(7953:7953): se conecta personaje Mario a orquestador
+[INFO] 20:31:14:769 ProcesoPersonaje/(7953:7953): personaje Mario solicita al orquestador DATA_NIVEL del nivel Nivel1
+[INFO] 20:31:14:775 ProcesoPersonaje/(7953:7953): IP: localhost, PORT: 20000
+[INFO] 20:31:14:777 ProcesoPersonaje/(7953:7953): personaje Mario se desconecta del orquestador
+[INFO] 20:31:14:791 ProcesoPersonaje/(7953:7953): personaje Mario se conecta a nivel Nivel1
+[INFO] 20:31:14:792 ProcesoPersonaje/(7953:7953): Handshake enviado
+[INFO] 20:31:14:801 ProcesoPersonaje/(7953:7953): personaje Mario se conecta a planificador de nivel Nivel1
+[INFO] 20:41:26:658 ProcesoPersonaje/(8212:8212): se conecta personaje Mario a orquestador
+[INFO] 20:41:26:674 ProcesoPersonaje/(8212:8212): personaje Mario solicita al orquestador DATA_NIVEL del nivel Nivel1
+[INFO] 20:41:26:676 ProcesoPersonaje/(8212:8212): IP: localhost, PORT: 20000
+[INFO] 20:41:26:678 ProcesoPersonaje/(8212:8212): personaje Mario se desconecta del orquestador
+[INFO] 20:41:26:687 ProcesoPersonaje/(8212:8212): personaje Mario se conecta a nivel Nivel1
+[INFO] 20:41:26:694 ProcesoPersonaje/(8212:8212): Handshake enviado
+[INFO] 20:41:26:703 ProcesoPersonaje/(8212:8212): personaje Mario se conecta a planificador de nivel Nivel1
+[INFO] 20:45:42:172 ProcesoPersonaje/(8350:8350): se conecta personaje Mario a orquestador
+[INFO] 20:45:42:224 ProcesoPersonaje/(8350:8350): personaje Mario solicita al orquestador DATA_NIVEL del nivel Nivel1
+[INFO] 20:45:42:225 ProcesoPersonaje/(8350:8350): IP: localhost, PORT: 20000
+[INFO] 20:45:42:227 ProcesoPersonaje/(8350:8350): personaje Mario se desconecta del orquestador
+[INFO] 20:45:42:238 ProcesoPersonaje/(8350:8350): personaje Mario se conecta a nivel Nivel1
+[INFO] 20:45:42:244 ProcesoPersonaje/(8350:8350): Handshake enviado
+[INFO] 20:45:42:266 ProcesoPersonaje/(8350:8350): personaje Mario se conecta a planificador de nivel Nivel1
+[INFO] 20:55:16:152 ProcesoPersonaje/(8576:8576): se conecta personaje Mario a orquestador
+[INFO] 20:55:16:167 ProcesoPersonaje/(8576:8576): personaje Mario solicita al orquestador DATA_NIVEL del nivel Nivel1
+[INFO] 20:55:16:174 ProcesoPersonaje/(8576:8576): IP: localhost, PORT: 20000
+[INFO] 20:55:16:176 ProcesoPersonaje/(8576:8576): personaje Mario se desconecta del orquestador
+[INFO] 20:55:16:186 ProcesoPersonaje/(8576:8576): personaje Mario se conecta a nivel Nivel1
+[INFO] 20:55:16:187 ProcesoPersonaje/(8576:8576): Handshake enviado
+[INFO] 20:55:16:198 ProcesoPersonaje/(8576:8576): personaje Mario se conecta a planificador de nivel Nivel1

@@ -24,6 +24,7 @@ enum ESTADO {STANDBY, WAIT_DATA_LEVEL, WAIT_POS_REC, WAIT_REC, NUEVO_NIVEL, WIN}
 #include <commons/Connections/Client.h>
 #include <commons/Connections/Mensajes.h>
 #include <commons/Connections/EstructurasMensajes.h>
+#include <commons/log.h>
 #include <signal.h>
 #include <string.h>
 #include <stdbool.h>

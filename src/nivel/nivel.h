@@ -119,7 +119,7 @@ t_recursos* liberarRecursos(char idPersonaje);
 
 int validarPosYRecursos(char idPersonaje, char idRecurso);
 
-void cargarPersonajeEnNivel(Personaje* miPersonaje);
+void cargarPersonajeEnNivel(Personaje* miPersonaje, int fd);
 
 void cargarPersonajeEnPendiente(char id);
 

@@ -1,0 +1,13 @@
+[INFO] 20:39:55:843 ProcesoNivel/(8200:8200): Terminado dibujar nivel
+[INFO] 20:41:18:492 ProcesoNivel/(8210:8210): Terminado dibujar nivel
+[INFO] 20:41:26:700 ProcesoNivel/(8210:8210): Buscando mensaje en cola
+[INFO] 20:45:37:111 ProcesoNivel/(8348:8348): Terminado dibujar nivel
+[INFO] 20:45:42:256 ProcesoNivel/(8348:8348): Buscando mensaje en cola
+[INFO] 20:45:42:267 ProcesoNivel/(8348:8348): Recibi handshake
+[INFO] 20:55:11:899 ProcesoNivel/(8574:8574): Terminado dibujar nivel
+[INFO] 20:55:16:199 ProcesoNivel/(8574:8574): Buscando mensaje en cola
+[INFO] 20:55:16:200 ProcesoNivel/(8574:8574): Recibi mensaje de tipo: 1
+[INFO] 20:55:16:201 ProcesoNivel/(8574:8574): Recibi handshake
+[INFO] 20:55:16:201 ProcesoNivel/(8574:8574): Reservando memoria para personaje
+[INFO] 20:55:16:202 ProcesoNivel/(8574:8574): Reservada memoria para personaje
+[INFO] 20:55:16:203 ProcesoNivel/(8574:8574): fasfasfasf

@@ -13,11 +13,14 @@ CCB clientCCB;
 
 int recovery;
 
+//instancio el logger
+t_log* logger;
+
 
 int main(int argc, char *argv[]) {
 	char *path_config;
 	int puerto;
-
+	logger = log_create("ProcesoNivelTestingConexiones.log", "ProcesoNivel", true, LOG_LEVEL_INFO);
 	if (argc < 3) {
 		fprintf(stderr, "%s: Faltan parametros (%s archivoconfig puerto)\n", "nivel", "nivel");
 		exit(1);
@@ -34,12 +37,10 @@ int main(int argc, char *argv[]) {
 	}
 	Nivel yoNivel;
 
-	//instancio el logger
-	t_log* logger = log_create("ProcesoNivelTestingConexiones.log", "ProcesoNivel", true, LOG_LEVEL_INFO);
 	//inicializo el proceso nivel
 	nivel_gui_inicializar();
 
-	serverCCB = initServer(puerto);  // chequear esto
+	serverCCB = initServer(puerto);
 
 	//Direccion * dir = (Direccion *)
 	char ip[20];
@@ -68,31 +69,34 @@ int main(int argc, char *argv[]) {
 
 
 	nivel_gui_dibujar(ListaItems);
+	log_info(logger, "Terminado dibujar nivel");
 
-	//mientras tenga algun mensaje, ya sea de server o cliente.... NO TENGO QUE PONER WHILE(1)?
-	while( (mensajes(colaDeMensajes,serverCCB)) || (mensajes(colaDeMensajes, clientCCB)) ){
-
+	while(1){
+		while(!mensajes(colaDeMensajes,serverCCB)); 
+		log_info(logger, "Buscando mensaje en cola");
+		//mientras tenga algun mensaje, ya sea de server o cliente.... NO TENGO QUE PONER WHILE(1)?
 		//agarra de la cola de mensajes un mensaje
 		mensaje = queue_pop(colaDeMensajes);
-
+		log_info(logger, string_from_format("Recibi mensaje de tipo: %d", mensaje->type));
 
 		//analiza los mensajes recibidos y en base a eso, actua
 		switch(mensaje->type){
 
 			case HANDSHAKE:
-				((Personaje*)mensaje->data)->FD=mensaje->from;
+				log_info(logger, "Recibi handshake");
+				//((Personaje*)mensaje->data)->FD=mensaje->from;
 
 				//cargo el personaje en las listas que voy a manejar para validar recursos e interbloque
-				cargarPersonajeEnNivel(((Personaje*)mensaje->data));
+				cargarPersonajeEnNivel(((Personaje*)mensaje->data),mensaje->from);
 
 				//creo el personaje en el nivel. Le pongo como pos inicial la (0,0) y lo dibujo
 				CrearPersonaje(&ListaItems,(buscarPersonaje_byfd(mensaje->from)),0,0);
 				nivel_gui_dibujar(ListaItems);
 
 				//mensajeLogeo= char del personaje que ingreso al nivel
-				char mensajeLogeo = (buscarPersonaje_byfd(mensaje->from));
+				//char mensajeLogeo = (buscarPersonaje_byfd(mensaje->from));
 
-				log_info(logger, &mensajeLogeo);
+				log_info(logger, "fasfasfasf");
 
 				break;
 
@@ -314,17 +318,19 @@ ITEM_NIVEL* buscarItem(char id){
 	}return NULL;
 }
 
-void cargarPersonajeEnNivel(Personaje* miPersonaje){
+void cargarPersonajeEnNivel(Personaje* miPersonaje, int fd){
 	/*@NAME: cargarPersonaje
 	 * @DESC: cuando se conecta un personaje al nivel, lo agrega a la listaPersonajes que es la lista para la cual el nivel
 	 * tiene actualizado los recursos que ese personaje posee en el nivel
 	 */
 
 	PersonajeEnNivel* personaje;
+	log_info(logger, "Reservando memoria para personaje");
 	personaje = malloc(sizeof(PersonajeEnNivel));
+	log_info(logger, "Reservada memoria para personaje");
 
 	personaje->id = miPersonaje->ID[1];
-	personaje->fd = miPersonaje->FD;
+	personaje->fd = fd;
 
 	Posicion pos;
 	pos = Pos(0,0);

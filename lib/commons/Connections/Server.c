@@ -5,6 +5,7 @@
  *      Author: utnso
  */
 #include "Server.h"
+#define MAX_EVENTOS 200
 
 
 /*
@@ -53,14 +54,15 @@ CCB initServer(int MYPORT){
 		myServer.event.data.fd = myServer.masterfd;
 		myServer.event.events = EPOLLIN | EPOLLET | EPOLLRDHUP;
 
+		////RESERVO ESPACIO PARA LAS CONEXIONES
+		myServer.events = calloc (MAXEVENTS, sizeof myServer.event);
+
 		////ASIGNO EL CCONTROL DE EPOLL
 		if ((epoll_ctl (myServer.instancia_epoll, EPOLL_CTL_ADD, myServer.masterfd, &(myServer.event))) == -1) {
 		    perror ("epoll_ctl");
 		    exit(1);
 		}
 
-		////RESERVO ESPACIO PARA LAS CONEXIONES
-		myServer.events = calloc (MAXEVENTS, sizeof myServer.event);
 
 		return myServer;
 }
