@@ -1,4 +1,3 @@
-
 #include "plataforma.h"
 #include <string.h>
 
@@ -183,9 +182,13 @@ void* orq (void* a){
 							GestorNivel* miGestor;
 							Data_Nivel miDataNivel;
 							miGestor=findGestor_byid(((char*)(miMensaje->data)));
-							memcpy(&(miDataNivel.miNivel),&(miGestor->dataNivel),sizeof(Nivel));
-							memcpy(&(miDataNivel.miPlanificador),&(miGestor->dataPlanificador),sizeof(Planificador));
+							miDataNivel.miNivel=malloc(sizeof(Nivel));
+							miDataNivel.miPlanificador=malloc(sizeof(Planificador));
+							memcpy(miDataNivel.miNivel,&(miGestor->dataNivel),sizeof(Nivel));
+							memcpy(miDataNivel.miPlanificador,&(miGestor->dataPlanificador),sizeof(Planificador));
 							mandarMensaje(miMensaje->from,DATANIVEL,sizeof(Data_Nivel),&miDataNivel);
+							free(miDataNivel.miNivel);
+							free(miDataNivel.miPlanificador);
 						}
 						break;
 
