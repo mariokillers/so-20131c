@@ -64,7 +64,7 @@ void* Planif(void* nivel){
 
 	//Asigno ID del gestor ="GX"
 	strcpy(miGestor->ID, miNivel->ID);
-	miGestor->ID[0]='G';
+	//miGestor->ID[0]='G';
 
 	//Asigno ID="PXXXX"
 	strcpy(miGestor->dataPlanificador.ID, miNivel->ID);
@@ -172,20 +172,28 @@ void* orq (void* a){
 								//CREO LA INSTANCIA PLANIFICADOR CORRESPONDIENTE A ESE NIVEL
 
 								//CREO EL THREAD, EL PARAMETRO ES UNA ESTRUCTURA NIVEL
+								printf("Antes");
+fflush(stdout);
 								pthread_create( &thr, NULL, Planif, (void*) miNivel);
-
+								printf("despues");
+fflush(stdout);
 							}
 						break;
 
 						case REQUEST_DATA_NIVEL:
 						{
+							printf("requestDataNivel");
+fflush(stdout);
 							GestorNivel* miGestor;
 							Data_Nivel miDataNivel;
 							miGestor=findGestor_byid(((char*)(miMensaje->data)));
-												
-							memcpy(&(miDataNivel.miNivel),&(miGestor->dataNivel),sizeof(Nivel));
-							memcpy(&(miDataNivel.miPlanificador),&(miGestor->dataPlanificador),sizeof(Planificador));
-							mandarMensaje(miMensaje->from,DATANIVEL,sizeof(Data_Nivel),&miDataNivel);
+							printf("paso funcion");
+				
+							printf("%x",miGestor);	
+fflush(stdout);
+							//memcpy(&(miDataNivel.miNivel),&(miGestor->dataNivel),sizeof(Nivel));
+							//memcpy(&(miDataNivel.miPlanificador),&(miGestor->dataPlanificador),sizeof(Planificador));
+							mandarMensaje(miMensaje->from,DATANIVEL,sizeof(Data_Nivel),&(miGestor->dataNivel));
 							
 						}
 						break;
@@ -246,7 +254,10 @@ void* orq (void* a){
 //CHEKEADA
 GestorNivel* findGestor_byid (char* nivel){
 	bool _eselGestor (GestorNivel* comparador){
-		return(strcmp(comparador->ID, nivel)==0);
+	printf("gestor %s\n nivel %s\n", comparador->ID, nivel);
+	fflush(stdout);
+	printf("resultado: %d\n", string_equals_ignore_case(comparador->ID, nivel));
+		return(string_equals_ignore_case(comparador->ID, nivel));
 	}
 	return (list_find(Gestores,(void*)_eselGestor));
 
