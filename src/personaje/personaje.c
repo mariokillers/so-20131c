@@ -70,13 +70,14 @@ int main(int argc, char *argv[]) {
 
 					//mando el primer mensaje al orquestador solicitando informacion del nivel y su planificador
 
-					strcpy(proxNiv, proximoNivel(personaje->personaje_niveles));
+					//strcpy(proxNiv, proximoNivel(personaje->personaje_niveles));
+					proximoNivel(proxNiv, personaje->personaje_niveles);
 					char miNiv[3];
 					char *miNivAux;
-					transformNivel_to_send(proxNiv, &miNivAux);
+					//transformNivel_to_send(proxNiv, &miNivAux);
 					strcpy(miNiv, miNivAux);
 
-					mandarMensaje(clientCCB_orq.sockfd,REQUEST_DATA_NIVEL,sizeof(miNiv),miNiv);
+					mandarMensaje(clientCCB_orq.sockfd,REQUEST_DATA_NIVEL,strlen(proxNiv)+1,proxNiv);
 
 					state = WAIT_DATA_LEVEL;
 					}
@@ -213,10 +214,10 @@ int _is_next_level(t_personaje_nivel *p){
 	return !(p->termino_nivel);
 }
 
-char *proximoNivel(t_list *niveles){
+void proximoNivel(char*proxNivel, t_list *niveles){
 	t_personaje_nivel *auxNiv = list_find(niveles, (void*) _is_next_level);
 
-	return auxNiv->personaje_nivel;
+	proxNivel= auxNiv->personaje_nivel;
 }
 
 char* transformNivel_to_send(char *nivel, char **miNivAux){
