@@ -39,6 +39,8 @@ typedef struct PersonajeEnNivel{
 
 	char recursoPendiente;
 
+	bool marcado;
+
 	struct PersonajeEnNivel *sig;
 
 	int fd;
@@ -172,9 +174,11 @@ void inicializarMarcados (bool marcados[], int cantidadPersonajes);
 
 void comprobarDeadlock (bool marcados[],int cantPersonajes, char referenciaPersonaje[]);
 
-void marcarPersonajesConRecursos (int recursosAsignados[][], int recursosSolicitados[][], int recursosDisponibles[], bool marcados[], int cantPersonajes, int cantRecursos);
+void marcarPersonajesConRecursos ();
 
-void marcarPersonajesSinRecursos (int recursosAsignados[][], char referenciaPersonaje[], bool marcados[], int cantPersonajes, int cantRecursos);
+void marcarPersonajesSinRecursos ();
+
+bool hayRecurso(char idRecurso);
 
 
 char* tomarIP(char* direct);
@@ -183,4 +187,4 @@ int tomarPuerto(char* direct);
 
 
 
-#endif /* PROCESO_NIVEL_H_ */
+#endif /* NIVEL_H_ */
