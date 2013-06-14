@@ -1,6 +1,0 @@
-04:28:57 **** Incremental Build of configuration Default for project nivel-gui-test ****
-make all 
-make: *** No hay ninguna regla para construir el objetivo «all».  Alto.
-
-04:28:57 Build Finished (took 603ms)
-
