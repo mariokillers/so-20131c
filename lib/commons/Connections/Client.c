@@ -48,7 +48,12 @@ CCB connectServer(char *IP, int PORT){
 
 		//HAGO EL SOCKET NO BLOQUEANTE
 		if (make_socket_non_blocking (myClient.sockfd) == -1) abort ();
-
+		
+		////CREO LA INSTANCIA DE EPOLL
+		if ((myClient.instancia_epoll = epoll_create1 (0)) == -1) {
+			perror ("epoll_create");
+			exit(1);
+		}
 		////ASOCIO EL FD DE LA NUEVA CONEXION
 		myClient.event.data.fd = myClient.sockfd;
 		myClient.event.events = EPOLLIN | EPOLLET;
