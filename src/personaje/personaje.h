@@ -81,7 +81,7 @@ t_personaje_objetivo *create_nivel_objetivo(char objetivo_char);
 void add_list_nivel_objetivos(char *objetivo, t_list *list_objetivos);
 
 int _is_next_level(t_personaje_nivel *p);
-void proximoNivel(char*proxNivel, t_list *niveles);
+char *proximoNivel(t_list *niveles);
 char *transformNivel_to_send(char *nivel, char **miNivAux);
 int _is_next_obj(t_personaje_objetivo *o);
 char proximoRecurso(t_list *niveles, char *nivActual);
