@@ -72,10 +72,10 @@ int main(int argc, char *argv[]) {
 
 					//strcpy(proxNiv, proximoNivel(personaje->personaje_niveles));
 					proximoNivel(proxNiv, personaje->personaje_niveles);
-					char miNiv[3];
-					char *miNivAux;
+					//char miNiv[3];
+					//char *miNivAux;
 					//transformNivel_to_send(proxNiv, &miNivAux);
-					strcpy(miNiv, miNivAux);
+					//strcpy(miNiv, miNivAux);
 
 					mandarMensaje(clientCCB_orq.sockfd,REQUEST_DATA_NIVEL,strlen(proxNiv)+1,proxNiv);
 
