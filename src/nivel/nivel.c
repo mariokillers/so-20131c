@@ -737,7 +737,8 @@ void cargarPersonajeEnNivel(Personaje* miPersonaje){
 
 
 	personaje->recursos = NULL;
-
+	
+	//agregar el personaje.recursoSolicitado = '\0'
 
 
 	personaje->sig = listaPersonajes;
