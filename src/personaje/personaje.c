@@ -124,16 +124,21 @@ int main(int argc, char *argv[]) {
 								log_info(logger, string_from_format("personaje %s se conecta a nivel %s", personaje->personaje_nombre, nivActual));
 
 								Personaje *personajeSend = malloc(sizeof(Personaje));
-								strcpy(personajeSend->ID,string_from_format("P%c",personaje->personaje_simbolo));
-								
+								strcpy(personajeSend->ID,string_from_format("P%c",personaje->personaje_simbolo));								
 
 								mandarMensaje(clientCCB_niv.sockfd, HANDSHAKE,sizeof(personajeSend),personajeSend);
-								log_info(logger, "Handshake enviado");
-								//free(personajeSend);
+								log_info(logger,"mande HANDSHAKE a nivel");
+
 
 								//conecyo al planificador del nivel actual y loggeo
 								clientCCB_pln = connectServer((char*)planificador_new.IP, (int)planificador_new.PORT);
 								log_info(logger, string_from_format("personaje %s se conecta a planificador de nivel %s", personaje->personaje_nombre, nivActual));
+
+								mandarMensaje(clientCCB_pln.sockfd, HANDSHAKE,sizeof(personajeSend),personajeSend);
+								log_info(logger,"mande HANDSHAKE a planificador");
+
+
+								free(personajeSend);
 
 								state = STANDBY;
 
@@ -149,8 +154,10 @@ int main(int argc, char *argv[]) {
 
 						switch(mensaje->type){
 							case MOVIMIENTO_PERMITIDO:
+								log_info(logger, "llego mensaje MOVIMIENTO_PERMITIDO");
 								//si tengo la poscion del proximo recurso se mueve
 								if(posProxRec != NULL){
+									log_info(logger,"tengo posicion de recurso");
 									nuevaPos = realizarMovimiento(posActual, posProxRec, clientCCB_niv);
 									posActual = nuevaPos;
 									((Posicion*)(personaje->personaje_posicion_actual))->POS_X = posActual->POS_X;
@@ -162,6 +169,7 @@ int main(int argc, char *argv[]) {
 									//analiza si llego a la posicion del proximo recurso
 									analizarRecurso(posActual, posProxRec, clientCCB_niv, clientCCB_pln, &state, (char) proxRec);
 								} else{
+									log_info(logger,"no tengo posicion de recurso");
 									//solicitar posicion del proximo recurso y loggea solicitud
 									proxRec = proximoRecurso(personaje->personaje_niveles, nivActual);
 
