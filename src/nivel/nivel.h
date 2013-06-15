@@ -49,20 +49,6 @@ typedef struct PersonajeEnNivel{
 
 
 
-/*typedef struct RecursoPendientePersonaje{
-
-	char idPersonaje;
-
-	char recursoPendiente;
-
-	struct RecursoPendientePersonaje *sig;
-
-}RecursoPendientePersonaje;*/
-
-
-
-
-
 /*define el tipo t_nivel, que representa un nivel creado a partir de un archivo de configuracion dado
 
 con toda su estructura de datos
@@ -115,23 +101,21 @@ void MoverPersonaje(ITEM_NIVEL* ListaItems, char id, int x, int y);
 
 Posicion obtenerPosRecurso(char recurso);
 
-t_recursos* liberarRecursos(char idPersonaje);
+t_recursos* liberarRecursos(PersonajeEnNivel* personaje );
 
-int validarPosYRecursos(int fdPersonaje, char *mensaje);
+int validarPosYRecursos(int fdPersonaje, char idRecurso);
 
-void cargarPersonajeEnNivel(Personaje* miPersonaje, int fd);
+PersonajeEnNivel* cargarPersonajeEnNivel(Personaje* miPersonaje);
 
 void cargarPersonajeEnPendiente(char id);
 
-void agregarRecursoAPersonaje(int fdPersonaje,char recurso);
+void modificarPosPersonaje(int fdPersonaje, int posx,int posy);
+
+void agregarRecursoAPersonaje(PersonajeEnNivel* personaje,char recurso);
 
 void borrarPersonajeEnNivel(char idPersonaje);
 
 void aumentarRecursos(t_recursos* recursosALiberar);
-
-void modificarPosPersonaje(int fdPersonaje, int posx, int posy);
-
-PersonajeEnNivel* buscarPersonaje(char idPersonaje);
 
 ITEM_NIVEL* buscarItem(char idRecurso);
 
@@ -146,6 +130,36 @@ void reasignarRecursos(Recursos* listaRecursos);
 void quitarSolicitudesDeRecurso(char idPersonaje, char idRecurso);
 
 PersonajeEnNivel *buscarPersonaje_byfd(int fd);
+
+void* interbloqueo(void*);
+
+int buscarEnReferenciaRecurso(char idRecurso, char referenciaRecurso[]);
+
+int buscarEnReferenciaPersonaje(char idProceso, char referenciaProceso[]);
+
+int cantidadPersonajes();
+
+int cantidadRecursos();
+
+void cargarRecursosTotales(int recursosTotales[], int cantRecursos , char referenciaRecurso[]);
+
+void cargarRecursosDisponibles(int recursosDisponibles[], char referenciaRecurso[]);
+
+void cargarRecursosSolicitados(int recursosSolicitados[][]);
+
+void cargarRecursosAsignados(int recursosAsignados[][]);
+
+void cargarRecursosSolicitados(int recursosSolicitados[][], char referenciaRecurso[], char referenciaPersonaje[]);
+
+void cargarRecursosAsignados(int recursosAsignados[][], char referenciaRecurso[], char referenciaPersonaje[]);
+
+void inicializarMarcados (bool marcados[], int cantidadPersonajes);
+
+void comprobarDeadlock (bool marcados[],int cantPersonajes, char referenciaPersonaje[]);
+
+void marcarPersonajesConRecursos (int recursosAsignados[][], int recursosSolicitados[][], int recursosDisponibles[], bool marcados[], int cantPersonajes, int cantRecursos);
+
+void marcarPersonajesSinRecursos (int recursosAsignados[][], char referenciaPersonaje[], bool marcados[], int cantPersonajes, int cantRecursos);
 
 char* tomarIP(char* direct);
 
