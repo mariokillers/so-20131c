@@ -137,9 +137,10 @@ int main(int argc, char *argv[]) {
 				break;
 
 			case REQUEST_RECURSO:
+				log_info(logger, "Me pidieron tomar un recurso");
 
 				//le confirma al personaje que puede tomar ese recurso y lo resta de listaItems
-				if(validarPosYRecursos( buscarPersonaje_byfd(mensaje->from), *((char*)mensaje->data))){
+				if(validarPosYRecursos( buscarPersonaje_byfd(mensaje->from), (char*)mensaje->data)){
 
 					//le manda 1/TRUE porque lo puede tomar
 					bool a = 1;
@@ -290,21 +291,20 @@ Posicion obtenerPosRecurso(char recurso){
 
 }
 
-int validarPosYRecursos(char idPersonaje, char idRecurso){
+int validarPosYRecursos(int fdPersonaje, char *mensaje){
 	/** @NAME: validarPosYRecursos
 	 * @DESC: Verifico que el personaje este sobre el recurso que dice estar y a su vez veo si hay instancias del mismo para
 	 * asignarle al personaje.
 	 **/
-
 	//busco la posicion del personaje en el mapa.
 	PersonajeEnNivel * personaje;
-	personaje = buscarPersonaje (idPersonaje);
+	personaje = buscarPersonaje_byfd(fdPersonaje);
 	int personajePosx = obtenerPosX(personaje->pos);
 	int personajePosy = obtenerPosY(personaje->pos);
 
 	//busco la posicion del recurso en el mapa y la cantidad de recursos que tiene
 	ITEM_NIVEL * recurso;
-	recurso = buscarItem(idRecurso);
+	recurso = buscarItem(mensaje[0]);
 
 	//comparo
 	if( ((personajePosx == recurso->posx) && (personajePosy == recurso->posy)) && ( (recurso->quantity)>0) ){

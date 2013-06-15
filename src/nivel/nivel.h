@@ -117,7 +117,7 @@ Posicion obtenerPosRecurso(char recurso);
 
 t_recursos* liberarRecursos(char idPersonaje);
 
-int validarPosYRecursos(char idPersonaje, char idRecurso);
+int validarPosYRecursos(int fdPersonaje, char *mensaje);
 
 void cargarPersonajeEnNivel(Personaje* miPersonaje, int fd);
 
