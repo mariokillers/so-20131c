@@ -198,6 +198,7 @@ int main(int argc, char *argv[]) {
 						switch(mensaje->type){
 							case POSICION_RECURSO:
 								posProxRec = (Posicion*) mensaje->data;
+								log_info(logger, string_from_format("recibi la posicion del recurso %c: (%d,%d)", proxRec, posProxRec->POS_X, posProxRec->POS_Y));
 								nuevaPos = realizarMovimiento(posActual, posProxRec, clientCCB_niv);
 								posActual = nuevaPos;
 								((Posicion*)(personaje->personaje_posicion_actual))->POS_X = posActual->POS_X;
@@ -205,7 +206,7 @@ int main(int argc, char *argv[]) {
 
 								log_info(logger, string_from_format("personaje %s nueva posicion: (%d,%d)", personaje->personaje_nombre, personaje->personaje_posicion_actual->POS_X, personaje->personaje_posicion_actual->POS_Y));
 
-								analizarRecurso(posActual, posProxRec, clientCCB_niv, clientCCB_pln, &state, (char) proxRec);
+								Recurso(posActual, posProxRec, clientCCB_niv, clientCCB_pln, &state, (char) proxRec);
 						}
 						break;
 						borrarMensaje(mensaje);
@@ -535,9 +536,9 @@ t_personaje *create_personaje(t_config *p){
 
 	personaje->personaje_orquestador->PORT = tomarPuerto(config_get_string_value(p, "orquestador"));
 
-	personaje->personaje_posicion_actual->POS_X = 10;
+	personaje->personaje_posicion_actual->POS_X = 0;
 
-	personaje->personaje_posicion_actual->POS_Y = 10;
+	personaje->personaje_posicion_actual->POS_Y = 0;
 
 	return personaje;
 }

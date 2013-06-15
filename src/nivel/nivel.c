@@ -96,19 +96,19 @@ int main(int argc, char *argv[]) {
 				//mensajeLogeo= char del personaje que ingreso al nivel
 				//char mensajeLogeo = (buscarPersonaje_byfd(mensaje->from));
 
-				log_info(logger, "fasfasfasf");
-
 				break;
 
 			case REQUEST_POS_RECURSO:
 			{
 			/**le envia al personaje la pos del nuevo recurso **/
-
+				log_info(logger, "Recibi REQUEST_POS_RECURSO");
 				Posicion pos;
 				//entro en la region critica
 				pos =  obtenerPosRecurso((char)(*((char*)(mensaje->data))));
+				log_info(logger, string_from_format("mando la posicion del recurso %c: (%d,%d)", ((char)mensaje->data), pos->POS_X, pos->POS_Y );
 
 				mandarMensaje(mensaje->from, POSICION_RECURSO,sizeof(Posicion),&pos);
+				log_info(logger, "mande POSICION");
 			}
 				break;
 
