@@ -129,7 +129,7 @@ void borrarPersonajeEnNivel(char idPersonaje);
 
 void aumentarRecursos(t_recursos* recursosALiberar);
 
-void modificarPosPersonaje(char idPersonaje, int posx, int posy);
+void modificarPosPersonaje(int fdPersonaje, int posx, int posy);
 
 PersonajeEnNivel* buscarPersonaje(char idPersonaje);
 
@@ -145,7 +145,7 @@ void reasignarRecursos(Recursos* listaRecursos);
 
 void quitarSolicitudesDeRecurso(char idPersonaje, char idRecurso);
 
-char buscarPersonaje_byfd(int fd);
+PersonajeEnNivel *buscarPersonaje_byfd(int fd);
 
 char* tomarIP(char* direct);
 

@@ -20,7 +20,7 @@ t_log* logger;
 int main(int argc, char *argv[]) {
 	char *path_config;
 	int puerto;
-	logger = log_create("ProcesoNivelTestingConexiones.log", "ProcesoNivel", true, LOG_LEVEL_INFO);
+	logger = log_create("ProcesoNivelTestingConexiones.log", "ProcesoNivel", false, LOG_LEVEL_INFO);
 	if (argc < 3) {
 		fprintf(stderr, "%s: Faltan parametros (%s archivoconfig puerto)\n", "nivel", "nivel");
 		exit(1);
@@ -105,7 +105,7 @@ int main(int argc, char *argv[]) {
 				Posicion pos;
 				//entro en la region critica
 				pos =  obtenerPosRecurso((char)(*((char*)(mensaje->data))));
-				log_info(logger, string_from_format("mando la posicion del recurso %c: (%d,%d)", ((char)mensaje->data), pos->POS_X, pos->POS_Y );
+				log_info(logger, string_from_format("mando la posicion del recurso %c: (%d,%d)", ((char)mensaje->data), pos.POS_X, pos.POS_Y ));
 
 				mandarMensaje(mensaje->from, POSICION_RECURSO,sizeof(Posicion),&pos);
 				log_info(logger, "mande POSICION");
@@ -115,15 +115,22 @@ int main(int argc, char *argv[]) {
 			case REQUEST_MOVIMIENTO:
 			{
 				//tomo del mensaje la posicion donde se va a mover el personaje
-				int posx = obtenerPosX(*((Posicion*)mensaje->data));
-				int posy = obtenerPosY(*(Posicion*)mensaje->data);
+				
+				int posx = ((Posicion*)mensaje->data)->POS_X;
+				int posy = ((Posicion*)mensaje->data)->POS_Y;
+
+				log_info(logger, string_from_format("tomo la posicion del recurso que me mando personaje: (%d,%d)", posx,posy));
 
 				//muevo el personaje y lo dibujo
 				MoverPersonaje(ListaItems,buscarPersonaje_byfd(mensaje->from),posx,posy);
 				nivel_gui_dibujar(ListaItems);
+				
+				log_info(logger, "MOVI EL PERSONAJE");
 
 				//modifico la posicion del personaje en listaPersonajes
-				modificarPosPersonaje(((char*)(mensaje->from))[1],posx,posy);
+				modificarPosPersonaje(mensaje->from,posx,posy);
+
+				log_info(logger, "MODIFICO LA POSICION DEL PERSONAJE EN LA LISTA: (%d,%d)", posx,posy);
 
 				sleep(1);
 			}
@@ -513,13 +520,14 @@ void agregarRecursosAListaItems(char idRecurso, int cant){
 	}
 }
 
-void modificarPosPersonaje(char idPersonaje, int posx, int posy){
+void modificarPosPersonaje(int fdPersonaje, int posx, int posy){
 	/*@NAME: modificarPosPersonaje
 	* @DESC: actualiza la pos del personaje
 	*/
+	log_info(logger, string_from_format("Modifico posicion personaje de fd %d en posicion (%d,%d)", fdPersonaje, posx, posy));
 
 	PersonajeEnNivel * personaje;
-	personaje = buscarPersonaje (idPersonaje);
+	personaje = buscarPersonaje_byfd(fdPersonaje);
 
 	if (personaje != NULL){
 		personaje->pos = Pos(posx,posy);
@@ -527,7 +535,7 @@ void modificarPosPersonaje(char idPersonaje, int posx, int posy){
 
 }
 
-char buscarPersonaje_byfd(int fd){
+PersonajeEnNivel *buscarPersonaje_byfd(int fd){
 	/*@NAME: buscarPersonaje
 	* @DESC: devuelve un PersonajeEnNivel que tenga ese id
 	*/
@@ -538,8 +546,8 @@ char buscarPersonaje_byfd(int fd){
 	while ((personaje != NULL) && (personaje->fd != fd)) {
 		personaje = personaje->sig;
 	}if ((personaje != NULL) && (personaje->fd == fd)){
-		return personaje->id;
+		return personaje;
 	}
-	return '\0';
+	return NULL;
 
 }

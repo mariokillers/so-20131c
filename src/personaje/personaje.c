@@ -206,7 +206,7 @@ int main(int argc, char *argv[]) {
 
 								log_info(logger, string_from_format("personaje %s nueva posicion: (%d,%d)", personaje->personaje_nombre, personaje->personaje_posicion_actual->POS_X, personaje->personaje_posicion_actual->POS_Y));
 
-								Recurso(posActual, posProxRec, clientCCB_niv, clientCCB_pln, &state, (char) proxRec);
+								analizarRecurso(posActual, posProxRec, clientCCB_niv, clientCCB_pln, &state, (char) proxRec);
 						}
 						break;
 						borrarMensaje(mensaje);
@@ -353,22 +353,24 @@ bool recursoAlcanzado(Posicion *pos1, Posicion *pos2){
 Posicion *realizarMovimiento(Posicion *posActual, Posicion *posProxRec, CCB clientCCB_niv){
 	Posicion *nuevaPos = proximaPosicion(posActual, posProxRec);
 
-	mandarMensaje(clientCCB_niv.sockfd,REQUEST_MOVIMIENTO,sizeof(&nuevaPos),(char*)&nuevaPos);
+	mandarMensaje(clientCCB_niv.sockfd,REQUEST_MOVIMIENTO,sizeof(Posicion), nuevaPos);
 
-	log_info(logger, string_from_format("personaje %s solicita movimiento a nivel %s", personaje->personaje_nombre, nivActual));
+	log_info(logger, string_from_format("personaje %s solicita movimiento a nivel %s a la posicion (%d, %d)", personaje->personaje_nombre, nivActual, nuevaPos->POS_X, nuevaPos->POS_Y));
 
 	return nuevaPos;
 }
 
 void analizarRecurso(Posicion *posActual, Posicion *posProxRec, CCB clientCCB_niv, CCB clientCBB_pln, char *state, char proxRec){
 	if(recursoAlcanzado(posActual, posProxRec)){
+		log_info(logger, "alcance el recurso");
 		mandarMensaje(clientCCB_niv.sockfd,REQUEST_RECURSO,sizeof(proxRec), (char *)&proxRec);
 
 		log_info(logger, string_from_format("personaje %s solicita recurso %c a nivel %s", personaje->personaje_nombre, proxRec, nivActual));
 
 		*state = WAIT_REC;
 	} else{
-		mandarMensaje(clientCBB_pln.sockfd,TERMINE_TURNO,sizeof(NULL),NULL);
+		log_info(logger, "no llegue al recurso");
+		mandarMensaje(clientCBB_pln.sockfd,TERMINE_TURNO,0,NULL);
 
 		log_info(logger, string_from_format("personaje %s termino turno en nivel %s", personaje->personaje_nombre, nivActual));
 
