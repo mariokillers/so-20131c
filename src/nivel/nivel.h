@@ -123,7 +123,7 @@ void cargarPersonajeEnNivel(Personaje* miPersonaje, int fd);
 
 void cargarPersonajeEnPendiente(char id);
 
-void agregarRecursoAPersonaje(char idPersonaje,char recurso);
+void agregarRecursoAPersonaje(int fdPersonaje,char recurso);
 
 void borrarPersonajeEnNivel(char idPersonaje);
 

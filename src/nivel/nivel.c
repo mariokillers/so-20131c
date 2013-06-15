@@ -131,8 +131,6 @@ int main(int argc, char *argv[]) {
 				modificarPosPersonaje(mensaje->from,posx,posy);
 
 				log_info(logger, "MODIFICO LA POSICION DEL PERSONAJE EN LA LISTA: (%d,%d)", posx,posy);
-
-				sleep(1);
 			}
 				break;
 
@@ -140,7 +138,8 @@ int main(int argc, char *argv[]) {
 				log_info(logger, "Me pidieron tomar un recurso");
 
 				//le confirma al personaje que puede tomar ese recurso y lo resta de listaItems
-				if(validarPosYRecursos( buscarPersonaje_byfd(mensaje->from), (char*)mensaje->data)){
+				if(validarPosYRecursos(mensaje->from, (char*)mensaje->data)){
+					log_info(logger, "Se valido la posicion y cantidad del recurso");
 
 					//le manda 1/TRUE porque lo puede tomar
 					bool a = 1;
@@ -299,12 +298,15 @@ int validarPosYRecursos(int fdPersonaje, char *mensaje){
 	//busco la posicion del personaje en el mapa.
 	PersonajeEnNivel * personaje;
 	personaje = buscarPersonaje_byfd(fdPersonaje);
-	int personajePosx = obtenerPosX(personaje->pos);
-	int personajePosy = obtenerPosY(personaje->pos);
+	log_info(logger, string_from_format("Personaje encontrado, direccion %x", personaje));
+	int personajePosx = ((Posicion)personaje->pos).POS_X;
+	int personajePosy = ((Posicion)personaje->pos).POS_Y;
+	log_info(logger, string_from_format("Personaje encontrado en posicion (%d,%d)", personajePosx, personajePosy));
 
 	//busco la posicion del recurso en el mapa y la cantidad de recursos que tiene
 	ITEM_NIVEL * recurso;
 	recurso = buscarItem(mensaje[0]);
+	log_info(logger, "Se encontro el recurso");
 
 	//comparo
 	if( ((personajePosx == recurso->posx) && (personajePosy == recurso->posy)) && ( (recurso->quantity)>0) ){
@@ -389,18 +391,18 @@ void quitarSolicitudesDeRecurso(char idPersonaje, char idRecurso){
 	}
 }
 
-void agregarRecursoAPersonaje(char idPersonaje,char recurso){
+void agregarRecursoAPersonaje(int fdPersonaje,char recurso){
 	/*@NAME: agregarRecursoAPersonaje
 	 * @DESC: cuando le confirman al personaje que puede tomar el recurso, el nivel agrega a la listaPersonajes, en el
 	 * personaje, el recurso que obtuvo
 	*/
 
 	PersonajeEnNivel * personaje;
-	personaje = buscarPersonaje (idPersonaje);
+	personaje = buscarPersonaje_byfd(fdPersonaje);
 
 	if(personaje->recursoPendiente == recurso){
 
-		quitarSolicitudesDeRecurso(idPersonaje, recurso);
+		quitarSolicitudesDeRecurso(fdPersonaje, recurso);
 	}
 
 	if(personaje!=NULL){
