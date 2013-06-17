@@ -11,11 +11,6 @@
 #include <commons/config.h>
 //#include "personaje/personaje_library.h"
 
-//creo estructura de datos para yo:Nivel poder tener el seguimiento del personaje en mi nivel
-
-
-
-//ESTO SIRVE PARA DEADLOCK: RECURSOSDISPONIBLES (AVAILABLE)
 
 typedef struct t_recursos{
 
@@ -87,11 +82,9 @@ void ListItems_add_caja(t_config *n, char *buffer_caja_num, ITEM_NIVEL **list);
 
 /*funciones para usar en el dibujo de nivel
 
-	*/
+*/
 
 ITEM_NIVEL *crear_lista_items(t_list *cajas, t_list *personajes);
-
-//void add_personaje_item_nivel(t_personaje_en_nivel *personaje, ITEM_NIVEL **list, char tipo);
 
 void BorrarItem(ITEM_NIVEL** i, char id);
 
@@ -119,9 +112,9 @@ void aumentarRecursos(t_recursos* recursosALiberar);
 
 ITEM_NIVEL* buscarItem(char idRecurso);
 
-void agregarARecursosPendientes(char idPersonaje, char recurso);
+void agregarARecursosPendientes(int fdPersonaje, char recurso);
 
-void mandarRecursosLiberados(t_recursos* recursosALiberar, int fd);
+void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador);
 
 void agregarRecursosAListaItems(char idRecurso, int cant);
 
