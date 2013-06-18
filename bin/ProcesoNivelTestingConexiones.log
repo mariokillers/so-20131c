@@ -11,3 +11,17 @@
 [INFO] 20:55:16:201 ProcesoNivel/(8574:8574): Reservando memoria para personaje
 [INFO] 20:55:16:202 ProcesoNivel/(8574:8574): Reservada memoria para personaje
 [INFO] 20:55:16:203 ProcesoNivel/(8574:8574): fasfasfasf
+[INFO] 15:49:40:619 ProcesoNivel/(3504:3504): El nivel se conecto al puerto: 5000
+[INFO] 15:49:40:619 ProcesoNivel/(3504:3504): El nivel: Nivel1 le hizo HANDSHAKE al socket: 6
+[INFO] 15:49:40:619 ProcesoNivel/(3504:3504): El recovery esta activado
+[INFO] 15:49:40:621 ProcesoNivel/(3504:3504): Terminado dibujar nivel
+[INFO] 15:49:40:621 ProcesoNivel/(3504:3506): Empieza a ejecutar el hilo interbloqueo
+[INFO] 15:49:40:621 ProcesoNivel/(3504:3506): El hilo interbloqueo entra en la region critica
+[INFO] 15:49:40:621 ProcesoNivel/(3504:3506): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:50:38:329 ProcesoNivel/(3515:3515): El nivel se conecto al puerto: 5000
+[INFO] 15:50:38:330 ProcesoNivel/(3515:3515): El nivel: Nivel1 le hizo HANDSHAKE al socket: 6
+[INFO] 15:50:38:330 ProcesoNivel/(3515:3515): El recovery esta activado
+[INFO] 15:50:38:332 ProcesoNivel/(3515:3515): Terminado dibujar nivel
+[INFO] 15:50:38:332 ProcesoNivel/(3515:3517): Empieza a ejecutar el hilo interbloqueo
+[INFO] 15:50:38:332 ProcesoNivel/(3515:3517): El hilo interbloqueo entra en la region critica
+[INFO] 15:50:38:332 ProcesoNivel/(3515:3517): La cantidad de personajes es: 0 y de recursos es: 3
