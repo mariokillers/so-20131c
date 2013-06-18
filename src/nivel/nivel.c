@@ -15,13 +15,13 @@ int recovery;
 
 //inicializo el semaforo MUTEX (VER PORQUE NO FUNCA EL INIT)
 pthread_mutex_t mutex;
-//pthread_mutex_init(&mutex, NULL);
 
 //instancio el logger
 t_log* logger;
 
 
 int main(int argc, char *argv[]) {
+	pthread_mutex_init(&mutex, NULL);
 
 	char *path_config;
 	int puerto;
@@ -63,7 +63,7 @@ int main(int argc, char *argv[]) {
 
 	//inicializo el hilo que maneja interbloqueo VER ACA!
 	pthread_t thread_interbloqueo;
-	pthread_create( thread_interbloqueo, NULL, &interbloqueo, NULL );
+	pthread_create(&thread_interbloqueo, NULL, &interbloqueo, NULL );
 
 	//inicializo el recovery
 	recovery = nivel->nivel_recovery;
@@ -77,7 +77,7 @@ int main(int argc, char *argv[]) {
 	Mensaje* mensaje;
 
 	//entro en la region critica
-	pthread_mutex_lock(mutex);
+	pthread_mutex_lock(&mutex);
 
 	//inicializo la lista de items a dibujar y controlar
 	ListaItems = nivel->nivel_items;
@@ -85,7 +85,7 @@ int main(int argc, char *argv[]) {
 
 	nivel_gui_dibujar(ListaItems);
 
-	pthread_mutex_unlock(mutex);
+	pthread_mutex_unlock(&mutex);
 	//salgo de la region critica
 
 
@@ -111,7 +111,7 @@ int main(int argc, char *argv[]) {
 				log_info(logger, string_from_format("Recibi HANDSHAKE del personaje: %s", personajeNuevo->ID));
 
 				//entro en la region critica
-				pthread_mutex_lock(mutex);
+				pthread_mutex_lock(&mutex);
 
 				//cargo el personaje en las listas que voy a manejar para validar recursos e interbloqueo
 				PersonajeEnNivel *miPersonaje = cargarPersonajeEnNivel(personajeNuevo);
@@ -120,7 +120,7 @@ int main(int argc, char *argv[]) {
 				CrearPersonaje(&ListaItems,miPersonaje->id,0,0);
 				nivel_gui_dibujar(ListaItems);
 
-				pthread_mutex_unlock(mutex);
+				pthread_mutex_unlock(&mutex);
 				//salgo de la region critica
 
 				log_info(logger, string_from_format("Se dibujo el personaje: %s en la pos (0,0)", personajeNuevo->ID));
@@ -134,17 +134,17 @@ int main(int argc, char *argv[]) {
 
 				log_info(logger, "Recibi REQUEST_POS_RECURSO");
 
-				char recurso = ((char)mensaje->data);
+				char recurso = *(char *)mensaje->data;
 
 				//entro en la region critica
-				pthread_mutex_lock(mutex);
+				pthread_mutex_lock(&mutex);
 
 				//obtengo la posicion del recurso
 				Posicion pos =  obtenerPosRecurso(recurso);
 
 				log_info(logger, string_from_format("Mando la posicion del recurso %s: (%d,%d)",recurso , pos.POS_X, pos.POS_Y ));
 
-				pthread_mutex_unlock(mutex);
+				pthread_mutex_unlock(&mutex);
 				//salgo de la region critica
 
 				mandarMensaje(mensaje->from, POSICION_RECURSO,sizeof(Posicion),&pos);
@@ -158,7 +158,7 @@ int main(int argc, char *argv[]) {
 				log_info(logger, "Recibi REQUEST_MOVIMIENTO");
 
 				//entro en la region critica
-				pthread_mutex_lock(mutex);
+				pthread_mutex_lock(&mutex);
 
 				//tomo del mensaje la posicion donde se va a mover el personaje
 				Posicion* pos = ((Posicion*)mensaje->data);
@@ -177,7 +177,7 @@ int main(int argc, char *argv[]) {
 				//modifico la posicion en la listaPersonajes
 				modificarPosPersonaje(personaje, posx, posy);
 
-				pthread_mutex_unlock(mutex);
+				pthread_mutex_unlock(&mutex);
 				//salgo de la region critica
 
 				log_info(logger, string_from_format("Movi el personaje: %s a la posicion:(%d,%d)", personaje->id,posx,posy));
@@ -190,41 +190,36 @@ int main(int argc, char *argv[]) {
 
 				log_info(logger, "Recibi REQUEST_RECURSO");
 
-				char recurso = (char*)mensaje->data;
+				char recurso = *(char *)mensaje->data;
 
 				//entro en la region critica
-				pthread_mutex_lock(mutex);
+				pthread_mutex_lock(&mutex);
 
 				PersonajeEnNivel* personaje = buscarPersonaje_byfd(mensaje->from);
 
 				log_info(logger, string_from_format("El personaje: %s me pidio el recurso:%s", personaje->id,recurso));
 
 				//le confirma al personaje que puede tomar ese recurso y lo resta de listaItems
-				if(validarPosYRecursos( personaje, recurso)){
-
+				bool puedeTomarRecurso;
+				if (validarPosYRecursos(personaje, recurso)) {
+					puedeTomarRecurso = true;
 					log_info(logger, string_from_format("El personaje:%s pudo obtener el recurso:%s",personaje->id, recurso));
-
-					//le manda 1/TRUE porque lo puede tomar
-					mandarMensaje(mensaje->from, CONFIRMAR_RECURSO,sizeof(bool),1);
+					mandarMensaje(mensaje->from, CONFIRMAR_RECURSO, sizeof(bool), &puedeTomarRecurso);
 					restarRecurso(ListaItems, recurso);
 					agregarRecursoAPersonaje(personaje,recurso);
-
 					nivel_gui_dibujar(ListaItems);
 
-				}else{
-
+				} else {
+					puedeTomarRecurso = false;
 					log_info(logger, string_from_format("El personaje:%s no pudo obtener el recurso:%s",personaje->id, recurso));
-
 					//si no pudo, le manda 0/FALSE porque no lo puede tomar
-					mandarMensaje(mensaje->from, CONFIRMAR_RECURSO,sizeof(0),0);
-
+					mandarMensaje(mensaje->from, CONFIRMAR_RECURSO, sizeof(bool), &puedeTomarRecurso);
 					//actualiza la lista de recursos pendientes
 					agregarARecursosPendientes(personaje, recurso);
-
 					log_info(logger, string_from_format("Se agrego la solicitud del recurso:%s del personaje:%s a solicitudes pendientes", recurso, personaje->id));
 				}
 
-				pthread_mutex_unlock(mutex);
+				pthread_mutex_unlock(&mutex);
 				//salgo de la region critica
 
 
@@ -238,7 +233,7 @@ int main(int argc, char *argv[]) {
 				log_info(logger, "Recibi TERMINE_NIVEL");
 
 				//entro en la region critica
-				pthread_mutex_lock(mutex);
+				pthread_mutex_lock(&mutex);
 
 				PersonajeEnNivel* personaje = buscarPersonaje_byfd(mensaje->from);
 
@@ -266,7 +261,7 @@ int main(int argc, char *argv[]) {
 				//re-dibuja el nivel ya sin el personaje y con la cantidad de recursos nueva
 				nivel_gui_dibujar(ListaItems);
 
-				pthread_mutex_unlock(mutex);
+				pthread_mutex_unlock(&mutex);
 				//salgo de la region critica
 			}
 				break;
@@ -278,16 +273,16 @@ int main(int argc, char *argv[]) {
 
 				//loggeo la victima de interbloqueo
 
-				char idVictima = (char*)mensaje->data;
+				char idVictima = *(char *)mensaje->data;
 
 				log_info(logger, string_from_format("El personaje: %s ha sido elegido como victima del interbloqueo", idVictima));
 
 				//entro en la region critica
-				pthread_mutex_lock(mutex);
+				pthread_mutex_lock(&mutex);
 
 				//TENO QUE LLAMAR A LO QUE TIENE EL CASE TERMINE_NIVEL!
 
-				pthread_mutex_unlock(mutex);
+				pthread_mutex_unlock(&mutex);
 				//salgo de la region critica
 
 			}
@@ -616,7 +611,7 @@ void* interbloqueo(void* a){
 	log_info(logger, "Empieza a ejecutar el hilo interbloqueo");
 
 	//entro en la region critica
-	pthread_mutex_lock(mutex);
+	pthread_mutex_lock(&mutex);
 
 	log_info(logger, "El hilo interbloqueo entra en la region critica");
 
@@ -634,7 +629,7 @@ void* interbloqueo(void* a){
 	char *referenciaPersonaje = malloc(cantPersonajes * sizeof(char));
 	char *referenciaRecursos = malloc(cantRecursos * sizeof(char));
 
-	inicializarReferenciaRecurso(cantidadRecursos, referenciaRecursos);
+	inicializarReferenciaRecurso(cantRecursos, referenciaRecursos);
 	inicializarReferenciaPersonaje(cantPersonajes, referenciaPersonaje);
 
 	//vectores para interbloqueo
@@ -653,7 +648,7 @@ void* interbloqueo(void* a){
 	cargarRecursosSolicitados(recursosSolicitados, referenciaRecursos, referenciaPersonaje);
 	cargarRecursosAsignados(recursosAsignados, referenciaRecursos, referenciaPersonaje);
 
-	pthread_mutex_unlock(mutex);
+	pthread_mutex_unlock(&mutex);
 	//salgo de la region critica
 
 	log_info(logger, "El hilo interbloqueo sale de la region critica");

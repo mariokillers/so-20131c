@@ -10,6 +10,7 @@
 #include <commons/Connections/Client.h>
 #include <commons/config.h>
 #include <commons/string.h>
+#include <pthread.h>
 //#include "personaje/personaje_library.h"
 
 
