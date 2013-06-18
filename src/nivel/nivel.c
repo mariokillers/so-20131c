@@ -626,26 +626,26 @@ void* interbloqueo(void* a){
 	log_info(logger, string_from_format("La cantidad de personajes es: %d y de recursos es: %d", cantPersonajes, cantRecursos));
 
 	//vector para saber que procesos estan interbloqueados
-	bool marcados[cantPersonajes];
+	bool *marcados = malloc(cantPersonajes * sizeof(char));
 
 	inicializarMarcados (marcados, cantPersonajes);
 
 	//vectores que referencian en la posicion de matrices y vectores para detectar interbloqueo
-	char referenciaPersonaje[cantPersonajes];
-	char referenciaRecursos[cantRecursos];
+	char *referenciaPersonaje = malloc(cantPersonajes * sizeof(char));
+	char *referenciaRecursos = malloc(cantRecursos * sizeof(char));
 
 	inicializarReferenciaRecurso(cantidadRecursos, referenciaRecursos);
 	inicializarReferenciaPersonaje(cantPersonajes, referenciaPersonaje);
 
 	//vectores para interbloqueo
-	int recursosTotales[cantRecursos];
-	int recursosDisponibles[cantRecursos];
+	int *recursosTotales = malloc(cantRecursos * sizeof(int));
+	int *recursosDisponibles = malloc(cantRecursos * sizeof(int));
 
 	//matrices para interbloqueo
-	int recursosAsignados[cantPersonajes][cantRecursos];
-	int recursosSolicitados[cantPersonajes][cantRecursos];
+	int **recursosAsignados = malloc(cantPersonajes * cantRecursos * sizeof(int));
+	int **recursosSolicitados = malloc(cantPersonajes * cantRecursos * sizeof(int));
 
-	int aux[cantRecursos] = recursosDisponibles;
+	int *aux = malloc(cantRecursos * sizeof(int));
 
 	//inicializo los vectores-matrices
 	cargarRecursosTotales(recursosTotales, cantRecursos, referenciaRecursos);
@@ -662,6 +662,16 @@ void* interbloqueo(void* a){
 	marcarPersonajesSinRecursos(recursosAsignados,referenciaPersonaje,marcados,cantPersonajes, cantRecursos);
 	marcarPersonajesConRecursos(recursosAsignados, recursosSolicitados, recursosDisponibles, marcados,cantPersonajes, cantRecursos);
 	comprobarDeadlock(marcados,cantPersonajes, referenciaPersonaje);
+
+	free(aux);
+	free(recursosAsignados);
+	free(recursosSolicitados);
+	free(recursosTotales);
+	free(recursosDisponibles);
+	free(referenciaPersonaje);
+	free(referenciaRecursos);
+	free(marcados);
+
 
 	return 0;
 }
