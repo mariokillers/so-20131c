@@ -108,7 +108,7 @@ void* Planif(void* nivel){
 					case TERMINE_TURNO:
 						if(miMensaje->from == miGestor->PersonajeEnMovimiento->FD){
 							queue_push(miGestor->queue_listos, miGestor->PersonajeEnMovimiento);
-							usleep(2000000);
+							usleep(200000);
 							miGestor->PersonajeEnMovimiento = (Personaje*) (queue_pop (miGestor->queue_listos));
 							mandarMensaje(miGestor->PersonajeEnMovimiento->FD, MOVIMIENTO_PERMITIDO, 0, NULL);
 						}
@@ -128,7 +128,7 @@ void* Planif(void* nivel){
 								queue_push(nueva_queue.queue, miGestor->PersonajeEnMovimiento);
 								list_add (miGestor->queues_bloq, &nueva_queue);
 							}
-							usleep(2000000);
+							usleep(200000);
 							miGestor->PersonajeEnMovimiento = (Personaje*) (queue_pop (miGestor->queue_listos));
 							mandarMensaje(miGestor->PersonajeEnMovimiento->FD, MOVIMIENTO_PERMITIDO, 0, NULL);
 						}
