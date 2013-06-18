@@ -215,14 +215,13 @@ int main(int argc, char *argv[]) {
 				case WAIT_REC:
 					if (mensajes(colaDeMensajes, clientCCB_niv)){
 						mensaje = queue_pop(colaDeMensajes);
+						char respuesta = *(char *)mensaje->data;
 
 						switch(mensaje->type){
-						char *respuesta = malloc((int)mensaje->lenght);
-						respuesta = ((char*) mensaje->data);
 							case CONFIRMAR_RECURSO:
 
 								//si le otorgaron el recurso lo agrega y avisa que termino el turno
-								if(*respuesta){
+								if(respuesta){
 									mandarMensaje(clientCCB_pln.sockfd,TERMINE_TURNO,sizeof(NULL),NULL);
 									agregarRecurso(personaje->personaje_niveles, nivActual, proxRec);
 
