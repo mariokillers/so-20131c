@@ -1,0 +1,5 @@
+GRABAR:A:4:abcd
+GRABAR:B:2:ef
+BORRAR:A
+GRABAR:C:4:ghij
+BORRAR:C
