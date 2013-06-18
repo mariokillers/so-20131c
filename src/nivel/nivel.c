@@ -803,13 +803,12 @@ void cargarRecursosDisponibles(int recursosDisponibles[], char referenciaRecurso
 
 	while(recurso!= NULL){
 		//me fijo antes que sea recurso y NO personaje
-		if ( (recurso!= NULL) && (recurso->item_type == 1)){
+		if ( recurso->item_type == 1){
 			//busco en el vector referencia la pos de ese recurso
 			pos = buscarEnReferenciaRecurso(recurso->id,referenciaRecurso);
 			if(pos != -1){
 				//le asigno a esa pos la cantidad de recursos que hay
 				recursosDisponibles[pos] = recurso->quantity;
-				recurso = recurso->next;
 			}
 		}
 		recurso = recurso->next;
