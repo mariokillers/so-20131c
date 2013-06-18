@@ -623,7 +623,7 @@ void* interbloqueo(void* a){
 	//vector para saber que procesos estan interbloqueados
 	bool *marcados = malloc(cantPersonajes * sizeof(char));
 
-	inicializarMarcados (marcados, cantPersonajes);
+	inicializarMarcados(marcados, cantPersonajes);
 
 	//vectores que referencian en la posicion de matrices y vectores para detectar interbloqueo
 	char *referenciaPersonaje = malloc(cantPersonajes * sizeof(char));
@@ -677,7 +677,7 @@ void inicializarMarcados (bool marcados[], int cantidadPersonajes){
 	*/
 
 	int i;
-	for(i=0;i<= cantidadPersonajes; i++){
+	for(i = 0; i < cantidadPersonajes; i++){
 		marcados[i]= false;
 	}
 }
@@ -690,7 +690,7 @@ void inicializarReferenciaRecurso(int cantidadRecursos, char referenciaRecurso[]
 	int i;
 	ITEM_NIVEL* recurso = recursosIniciales;
 
-	for(i=0;i<= cantidadRecursos; i++){
+	for(i = 0; i < cantidadRecursos; i++){
 			referenciaRecurso[i]= recurso->id;
 			recurso = recurso->next;
 	}
@@ -704,7 +704,7 @@ void inicializarReferenciaPersonaje(int cantidadPersonajes, char referenciaPerso
 	int i;
 	PersonajeEnNivel* personaje = listaPersonajes;
 
-	for(i=0;i<= cantidadPersonajes; i++){
+	for(i = 0; i < cantidadPersonajes; i++){
 		referenciaPersonaje[i]= personaje->id;
 		personaje = personaje->sig;
 	}
@@ -779,7 +779,7 @@ void cargarRecursosTotales(int *recursosTotales, int cantRecursos , char *refere
 
 	ITEM_NIVEL* recurso = recursosIniciales;
 
-	for(i=0; i<= cantRecursos; i++){
+	for(i=0; i< cantRecursos; i++){
 		//busco en el vector referencia la pos de ese recurso
 		pos = buscarEnReferenciaRecurso(recurso->id,referenciaRecurso);
 		if(pos != -1){
