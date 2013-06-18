@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
 	puerto = atoi(argv[2]);
 
 	//inicializo el nivel desde el archivo config 
-	t_nivel *nivel= read_nivel_archivo_configuracion(path_config);
+	t_nivel *nivel = read_nivel_archivo_configuracion(path_config);
 	if (nivel == NULL) {
 		fprintf(stderr, "ERROR: no se pudo leer el archivo de configuracion %s\n", path_config);
 		exit(1);
@@ -47,7 +47,7 @@ int main(int argc, char *argv[]) {
 
 	serverCCB = initServer(puerto);
 
-	Direccion * dir = nivel.nivel_orquestador;
+	Direccion * dir = nivel->nivel_orquestador;
 	char ip[20];
 	strcpy(ip,"localhost");
 	clientCCB = connectServer("localhost",dir->PORT);
@@ -91,29 +91,30 @@ int main(int argc, char *argv[]) {
 
 	log_info(logger, "Terminado dibujar nivel");
 
-	while(1){
-		while(!mensajes(colaDeMensajes,serverCCB)); 
+	while(1) {
+		while(!mensajes(colaDeMensajes,serverCCB))
+			;
 		log_info(logger, "Buscando mensaje en cola");
 		//mientras tenga algun mensaje, ya sea de server o cliente, agarra de la cola de mensajes un mensaje
 		mensaje = queue_pop(colaDeMensajes);
+		PersonajeEnNivel *personaje = buscarPersonaje_byfd(mensaje->from);
 		log_info(logger, string_from_format("Recibi mensaje de tipo: %d", mensaje->type));
 
 		//analiza los mensajes recibidos y en base a eso, actua
 		switch(mensaje->type){
 
-			case HANDSHAKE:
+			case HANDSHAKE: {
+				Personaje *personajeNuevo;
+				personajeNuevo = mensaje->data;
+				personajeNuevo->FD = mensaje->from;
 
-				Personaje* personaje;
-				personaje = mensaje->data;
-				personaje->FD = mensaje->from;
-
-				log_info(logger, string_from_format("Recibi HANDSHAKE del personaje: %s", personaje->ID));
+				log_info(logger, string_from_format("Recibi HANDSHAKE del personaje: %s", personajeNuevo->ID));
 
 				//entro en la region critica
 				pthread_mutex_lock(mutex);
 
 				//cargo el personaje en las listas que voy a manejar para validar recursos e interbloqueo
-				PersonajeEnNivel* miPersonaje = cargarPersonajeEnNivel(personaje);
+				PersonajeEnNivel *miPersonaje = cargarPersonajeEnNivel(personajeNuevo);
 
 				//creo el personaje en el nivel. Le pongo como pos inicial la (0,0) y lo dibujo
 				CrearPersonaje(&ListaItems,miPersonaje->id,0,0);
@@ -122,9 +123,10 @@ int main(int argc, char *argv[]) {
 				pthread_mutex_unlock(mutex);
 				//salgo de la region critica
 
-				log_info(logger, string_from_format("Se dibujo el personaje: %s en la pos (0,0)", personaje->ID));
+				log_info(logger, string_from_format("Se dibujo el personaje: %s en la pos (0,0)", personajeNuevo->ID));
 
 				break;
+			}
 
 			case REQUEST_POS_RECURSO:
 			{
@@ -147,7 +149,7 @@ int main(int argc, char *argv[]) {
 
 				mandarMensaje(mensaje->from, POSICION_RECURSO,sizeof(Posicion),&pos);
 
-				log_info(logger, string_from_format("Mande la posicion del recurso: %s al personaje: %s ",recurso , personaje->ID));
+				log_info(logger, string_from_format("Mande la posicion del recurso: %s al personaje: %s ",recurso , personaje->id));
 			}
 				break;
 
@@ -762,7 +764,7 @@ int cantidadRecursos(){
 	}return i;
 }
 
-void cargarRecursosTotales(int recursosTotales[], int cantRecursos , char referenciaRecurso[]){
+void cargarRecursosTotales(int *recursosTotales, int cantRecursos , char *referenciaRecurso){
 	/*@NAME: cargarRecursosTotales
 	* @DESC: completa el vector con la cantidad de recursos que hay en total
 	*/
@@ -809,7 +811,7 @@ void cargarRecursosDisponibles(int recursosDisponibles[], char referenciaRecurso
 	}
 }
 
-void cargarRecursosSolicitados(int recursosSolicitados[][], char referenciaRecurso[], char referenciaPersonaje[]){
+void cargarRecursosSolicitados(int **recursosSolicitados, char *referenciaRecurso, char *referenciaPersonaje){
 	/*@NAME: cargarRecursosSolicitados
 	* @DESC: carga la matriz dependiendo de el recurso solicitado que tuvo cada personaje
 	*/
@@ -837,7 +839,7 @@ void cargarRecursosSolicitados(int recursosSolicitados[][], char referenciaRecur
 	}
 }
 
-void cargarRecursosAsignados(int recursosAsignados[][], char referenciaRecurso[], char referenciaPersonaje[]){
+void cargarRecursosAsignados(int **recursosAsignados, char *referenciaRecurso, char *referenciaPersonaje){
 	/*@NAME: cargarRecursosAsignados
 	* @DESC: carga la matriz dependiendo de los recursos que tiene asignado cada personaje
 	*/
@@ -867,7 +869,7 @@ void cargarRecursosAsignados(int recursosAsignados[][], char referenciaRecurso[]
 	}
 }
 
-void marcarPersonajesSinRecursos (int recursosAsignados[][], char referenciaPersonaje[], bool marcados[], int cantPersonajes, int cantRecursos){
+void marcarPersonajesSinRecursos (int **recursosAsignados, char *referenciaPersonaje, bool *marcados, int cantPersonajes, int cantRecursos){
 	/*@NAME: marcarPersonajesSinRecursos
 	* @DESC: marca a los personajes que no tienen recursos asignados
 	*/
@@ -888,7 +890,7 @@ void marcarPersonajesSinRecursos (int recursosAsignados[][], char referenciaPers
 }
 
 
-void marcarPersonajesConRecursos (int recursosAsignados[][], int recursosSolicitados[][], int recursosDisponibles[], bool marcados[], int cantPersonajes, int cantRecursos){
+void marcarPersonajesConRecursos (int **recursosAsignados, int **recursosSolicitados, int *recursosDisponibles, bool *marcados, int cantPersonajes, int cantRecursos){
 	/*@NAME: marcarPersonajesConRecursos
 	* @DESC: marca a los personajes que pueden ejecutar
 	*/

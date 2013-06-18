@@ -135,7 +135,7 @@ int cantidadPersonajes();
 
 int cantidadRecursos();
 
-void cargarRecursosTotales(int **recursosTotales, int cantRecursos , char *referenciaRecurso);
+void cargarRecursosTotales(int *recursosTotales, int cantRecursos , char *referenciaRecurso);
 
 void cargarRecursosDisponibles(int *recursosDisponibles, char *referenciaRecurso);
 
