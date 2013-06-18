@@ -47,7 +47,7 @@ int main(int argc, char *argv[]) {
 	posActual = (Posicion*)personaje->personaje_posicion_actual;
 
 
-	//declaro las señales
+	//declaro las seï¿½ales
 
 	signal(SIGTERM, rutinaSignal);
 	signal(SIGUSR1, rutinaSignal);
@@ -215,9 +215,9 @@ int main(int argc, char *argv[]) {
 				case WAIT_REC:
 					if (mensajes(colaDeMensajes, clientCCB_niv)){
 						mensaje = queue_pop(colaDeMensajes);
-						char respuesta = *(char *)mensaje->data;
 
 						switch(mensaje->type){
+						int respuesta = (int)(*((int*)mensaje->lenght));
 							case CONFIRMAR_RECURSO:
 
 								//si le otorgaron el recurso lo agrega y avisa que termino el turno
@@ -512,7 +512,7 @@ void imprimir_personaje(t_personaje *personaje){
 PARAM: t_config *n -> una instancia de t_config con los valores de un archivo de ocnfiguracion
 RETURN: t_personaje * -> el personaje creado
 DESC: con las funciones de commons/config.h va tomando los valores del t_config dependiendo de la key pasada
-	como parametro a cada función
+	como parametro a cada funciï¿½n
 	*/
 
 t_personaje *create_personaje(t_config *p){
