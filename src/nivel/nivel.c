@@ -51,6 +51,7 @@ int main(int argc, char *argv[]) {
 	char ip[20];
 	strcpy(ip,"localhost");
 	clientCCB = connectServer("localhost",dir->PORT);
+
 	log_info(logger, string_from_format("El nivel se conecto al puerto: %d", dir->PORT));
 
 	//le mando handshake al orquestador
@@ -172,12 +173,12 @@ int main(int argc, char *argv[]) {
 				nivel_gui_dibujar(ListaItems);
 
 				//modifico la posicion en la listaPersonajes
-				modificarPosPersonaje(personaje->fd, posx, posy);
+				modificarPosPersonaje(personaje, posx, posy);
 
 				pthread_mutex_unlock(mutex);
 				//salgo de la region critica
 
-				log_info(logger, string_from_format("Movi el personaje a la posicion:(%d,%d)", posx,posy));
+				log_info(logger, string_from_format("Movi el personaje: %s a la posicion:(%d,%d)", personaje->id,posx,posy));
 
 			}
 				break;
@@ -197,12 +198,12 @@ int main(int argc, char *argv[]) {
 				log_info(logger, string_from_format("El personaje: %s me pidio el recurso:%s", personaje->id,recurso));
 
 				//le confirma al personaje que puede tomar ese recurso y lo resta de listaItems
-				if(validarPosYRecursos( personaje->fd, recurso)){
+				if(validarPosYRecursos( personaje, recurso)){
 
 					log_info(logger, string_from_format("El personaje:%s pudo obtener el recurso:%s",personaje->id, recurso));
 
 					//le manda 1/TRUE porque lo puede tomar
-					mandarMensaje(mensaje->from,CONFIRMAR_RECURSO,sizeof(bool),1);
+					mandarMensaje(mensaje->from, CONFIRMAR_RECURSO,sizeof(bool),1);
 					restarRecurso(ListaItems, recurso);
 					agregarRecursoAPersonaje(personaje,recurso);
 
@@ -216,7 +217,7 @@ int main(int argc, char *argv[]) {
 					mandarMensaje(mensaje->from, CONFIRMAR_RECURSO,sizeof(0),0);
 
 					//actualiza la lista de recursos pendientes
-					agregarARecursosPendientes(personaje->fd, recurso);
+					agregarARecursosPendientes(personaje, recurso);
 
 					log_info(logger, string_from_format("Se agrego la solicitud del recurso:%s del personaje:%s a solicitudes pendientes", recurso, personaje->id));
 				}
@@ -292,7 +293,6 @@ int main(int argc, char *argv[]) {
 
 			//borro el mensaje
 			borrarMensaje(mensaje);
-
 		}
 	}
 
@@ -309,11 +309,12 @@ void reasignarRecursos(Recursos* listaRecursos){
 	/** @NAME: reasignarRecursos
 	 * @DESC: recibe del orquestador el recurso que re-asigno
 	*/
-	Recursos* recurso= listaRecursos;
+	Recursos* recurso = listaRecursos;
 
 	restarRecurso(ListaItems, recurso->idRecurso); //resta de la lista items el recurso que re-asigno
-	agregarRecursoAPersonaje (recurso->idPersonaje, recurso->idRecurso); // le agrega a listaPersonajes el recurso que obtuvo el personaje
-	quitarSolicitudesDeRecurso (recurso->idPersonaje, recurso->idRecurso); //quita de la lista de solicitudes los recursos que recibio
+
+	PersonajeEnNivel* personaje = buscarPersonaje_byfd(recurso->idPersonaje);
+	agregarRecursoAPersonaje (personaje, recurso->idRecurso); // le agrega a listaPersonajes el recurso que obtuvo el personaje
 
 }
 
@@ -321,8 +322,7 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador){
 	/** @NAME: mandarRecursosLiberados
 	 * @DESC: le manda al orquestador la cantidad de recursos que se liberaron POR RECURSO
 	 */
-	t_recursos * aux;
-	aux = recursosALiberar;
+	t_recursos* aux = recursosALiberar;
 
 	t_queue* colaDeMensajes;
 	colaDeMensajes = queue_create();
@@ -338,7 +338,7 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador){
 		recurso.cant = aux->cant;
 
 		//le mando al orquestador los recursos liberados para que re-asigne
-		mandarMensaje(fdOrquestador, RECURSOS_LIBERADOS,sizeof(recurso),&recurso);
+		mandarMensaje(fdOrquestador, RECURSOS_LIBERADOS,sizeof(Recursos),&recurso);
 
 		//escucho al orquestador que me va a mandar los que re-asigno
 		while((!mensajes(colaDeMensajes,serverCCB)));
@@ -348,8 +348,11 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador){
 
 			while(mensaje->type !=REASIGNACION_FINALIZADA ){
 				if(mensaje->type == RECURSOS_REASIGNADOS){
+
 					//llamo a reasignar con la data que me envio
-					reasignarRecursos(mensaje->data);
+					Recursos* listaRecursos = mensaje->data;
+					reasignarRecursos(listaRecursos);
+
 				} borrarMensaje(mensaje);
 				//levanto nuevo mensaje
 			while((!mensajes(colaDeMensajes,serverCCB)));
@@ -365,21 +368,20 @@ Posicion obtenerPosRecurso(char recurso){
 	 * @DESC: devuelve la pos en la que se encuentra el recurso
 	 */
 
-	ITEM_NIVEL * itemRecurso = buscarItem(recurso);
+	ITEM_NIVEL* itemRecurso = buscarItem(recurso);
 
 	Posicion posicion = Pos(itemRecurso->posx, itemRecurso->posy);
 	return posicion;
 
 }
 
-int validarPosYRecursos(int fdPersonaje, char idRecurso){
+int validarPosYRecursos(PersonajeEnNivel* personaje, char idRecurso){
 	/** @NAME: validarPosYRecursos
 	 * @DESC: Verifico que el personaje este sobre el recurso que dice estar y a su vez veo si hay instancias del mismo para
 	 * asignarle al personaje.
 	 */
 
 	//busco la posicion del personaje en el mapa
-	PersonajeEnNivel* personaje = buscarPersonaje_byfd(fdPersonaje);
 
 	int personajePosx = (personaje->pos).POS_X;
 	int personajePosy = (personaje->pos).POS_Y;
@@ -400,7 +402,7 @@ int validarPosYRecursos(int fdPersonaje, char idRecurso){
 
 ITEM_NIVEL* buscarItem(char id){
 
-	ITEM_NIVEL * temp;
+	ITEM_NIVEL* temp;
 	temp = ListaItems;
 
 	while((temp != NULL) && (temp->id != id)){
@@ -444,73 +446,63 @@ PersonajeEnNivel* cargarPersonajeEnNivel(Personaje* miPersonaje){
 }
 
 
-void agregarARecursosPendientes(int fdPersonaje, char recurso){
+void agregarARecursosPendientes(PersonajeEnNivel* personaje, char recurso){
 	/*@NAME: agregarAListaRecursosPendientes
 	 * @DESC: actualiza la lista de recursos pendientes del personaje para luego utilizarla en el interbloqueo
 	 */
-	PersonajeEnNivel* personaje = personaje = buscarPersonaje_byfd(fdPersonaje);
 
 	if( personaje != NULL){
 		personaje->recursoPendiente = recurso;
 	}
 }
 
-void quitarSolicitudesDeRecurso(int idPersonaje, char idRecurso){
+void quitarSolicitudesDeRecurso(PersonajeEnNivel* personaje, char idRecurso){
 	/*@NAME: quitarSolicitudesDeRecurso
 	 * @DESC: quita de la lista de recursos pendientes el recurs que obtuvo el personaje tras la re-asignacion
 	*/
 
-	PersonajeEnNivel* personaje;
-	personaje = listaPersonajes;
-
-	while( (personaje != NULL) && (personaje->id != idPersonaje)){
-		personaje = personaje->sig;
-	}if( (personaje != NULL) && (personaje->id == idPersonaje)){
-		if(personaje->recursoPendiente == idRecurso){
-			personaje->recursoPendiente = '\0';
-		}
+	if(personaje->recursoPendiente == idRecurso){
+		personaje->recursoPendiente = '\0';
 	}
 }
 
-void agregarRecursoAPersonaje(PersonajeEnNivel* personaje,char recurso){
+void agregarRecursoAPersonaje(PersonajeEnNivel* personaje, char recurso){
 	/*@NAME: agregarRecursoAPersonaje
 	 * @DESC: cuando le confirman al personaje que puede tomar el recurso, el nivel agrega a la listaPersonajes, en el
 	 * personaje, el recurso que obtuvo
 	*/
 
-	PersonajeEnNivel* aux = personaje;
+	//PersonajeEnNivel* aux = personaje;
 
-	if(aux->recursoPendiente == recurso){
+	//si es el recurso que tenia pendiente, lo borra
+	if(personaje->recursoPendiente == recurso){
 
-		quitarSolicitudesDeRecurso(aux->id, recurso);
+		quitarSolicitudesDeRecurso(personaje, recurso);
 	}
 
-	if(aux!=NULL){
-		t_recursos* auxList ;
-		auxList = aux->recursos;
+	t_recursos* auxList = personaje->recursos;
 
-		//busco el recurso
-		while( (auxList->sig != NULL) && (auxList->idRecurso != recurso) ){
-			auxList = auxList->sig;
-		}if( auxList->idRecurso == recurso ){
-			//si lo encontro, le suma el recurso a la cant que ya tenia
-			((t_recursos*)(aux->recursos))->cant ++ ;
+	//busco el recurso
+	while( (auxList->sig != NULL) && (auxList->idRecurso != recurso) ){
+		auxList = auxList->sig;
+	}if( auxList->idRecurso == recurso ){
+		//si lo encontro, le suma el recurso a la cant que ya tenia
+		personaje->recursos->cant++;
 
-		}else if((auxList->sig == NULL)){
-			//si no lo encontro, lo agrega
+	}else if((auxList->sig == NULL)){
 
-			t_recursos * temp;
-			temp = malloc(sizeof(t_recursos));
+		//si no lo encontro, lo agrega en la lista de recursos del personaje
 
-			temp->idRecurso = recurso;
-			temp->cant = 1;
-			temp->sig = NULL;
+		t_recursos* temp;
+		temp = malloc(sizeof(t_recursos));
 
-			aux->recursos = temp;
-			listaPersonajes = aux;
+		temp->idRecurso = recurso;
+		temp->cant = 1;
+		temp->sig = personaje->recursos;
 
-			//free(temp);
-		}
+		personaje->recursos = temp;
+
+		//free(temp);
 	}
 }
 
@@ -519,11 +511,13 @@ void borrarPersonajeEnNivel(char idPersonaje){
 	* @DESC: cuando un personaje termina el nivel, lo borra de listaPersonajes
 	*/
 
-	PersonajeEnNivel * personaje = listaPersonajes;
-	PersonajeEnNivel * personajeAnterior;
+	PersonajeEnNivel* personaje = listaPersonajes;
+	PersonajeEnNivel* personajeAnterior;
+
+
 
     if ((personaje != NULL) && (personaje->id == idPersonaje)) {
-    	listaPersonajes = ((PersonajeEnNivel*)listaPersonajes)->sig;
+    	listaPersonajes = listaPersonajes->sig;
 		free(personaje);
     } else {
     	while((personaje != NULL) && (personaje->id != idPersonaje)) {
@@ -554,8 +548,7 @@ void aumentarRecursos(t_recursos* recursosALiberar){
 	 * @DESC: actualiza el estado de los recursos en ListaItems, dependiendo de los recursos liberados
 	*/
 
-	t_recursos * aux;
-	aux = recursosALiberar;
+	t_recursos* aux = recursosALiberar;
 
 	 while(aux!= NULL){
 
@@ -563,7 +556,7 @@ void aumentarRecursos(t_recursos* recursosALiberar){
 
 		 agregarRecursosAListaItems(aux->idRecurso, aux->cant);
 
-		 aux= aux->sig;
+		 aux = aux->sig;
 	 }
 
 }
@@ -573,8 +566,7 @@ void agregarRecursosAListaItems(char idRecurso, int cant){
 	 * @DESC: dado un id de recurso, lo busco en la lista Items y le sumo la cantidad que libero
 	*/
 
-	ITEM_NIVEL * temp;
-	temp = ListaItems;
+	ITEM_NIVEL* temp = ListaItems;
 
 	while( (temp!= NULL) && (temp->id != idRecurso)){
 		temp= temp->next;
@@ -583,12 +575,10 @@ void agregarRecursosAListaItems(char idRecurso, int cant){
 	}
 }
 
-void modificarPosPersonaje(int fdPersonaje, int posx, int posy){
+void modificarPosPersonaje(PersonajeEnNivel* personaje, int posx, int posy){
 	/*@NAME: modificarPosPersonaje
 	* @DESC: actualiza la pos del personaje
 	*/
-
-	PersonajeEnNivel * personaje = buscarPersonaje_byfd(fdPersonaje);
 
 	log_info(logger, string_from_format("Modifico posicion personaje: %s en posicion (%d,%d)", personaje->id, posx, posy));
 
@@ -602,8 +592,7 @@ PersonajeEnNivel* buscarPersonaje_byfd(int fd){
 	/*@NAME: buscarPersonaje
 	* @DESC: devuelve un PersonajeEnNivel que tenga ese id
 	*/
-	PersonajeEnNivel * personaje;
-	personaje = listaPersonajes;
+	PersonajeEnNivel* personaje = listaPersonajes;
 
 	//busco el personaje
 	while ((personaje != NULL) && (personaje->fd != fd)) {
@@ -626,8 +615,6 @@ void* interbloqueo(void* a){
 
 	//entro en la region critica
 	pthread_mutex_lock(mutex);
-	pthread_mutex_unlock(mutex);
-	//salgo de la region critica
 
 	log_info(logger, "El hilo interbloqueo entra en la region critica");
 
@@ -645,23 +632,24 @@ void* interbloqueo(void* a){
 	char referenciaPersonaje[cantPersonajes];
 	char referenciaRecursos[cantRecursos];
 
+	inicializarReferenciaRecurso(cantidadRecursos, referenciaRecursos);
+	inicializarReferenciaPersonaje(cantPersonajes, referenciaPersonaje);
+
 	//vectores para interbloqueo
 	int recursosTotales[cantRecursos];
 	int recursosDisponibles[cantRecursos];
-	int aux[cantRecursos];
 
 	//matrices para interbloqueo
 	int recursosAsignados[cantPersonajes][cantRecursos];
 	int recursosSolicitados[cantPersonajes][cantRecursos];
 
-
-	aux = recursosDisponibles;
+	int aux[cantRecursos] = recursosDisponibles;
 
 	//inicializo los vectores-matrices
 	cargarRecursosTotales(recursosTotales, cantRecursos, referenciaRecursos);
-	cargarRecursosDisponibles(aux, cantRecursos, referenciaRecursos);
-	cargarRecursosSolicitados(recursosSolicitados);
-	cargarRecursosAsignados(recursosAsignados);
+	cargarRecursosDisponibles(aux, referenciaRecursos);
+	cargarRecursosSolicitados(recursosSolicitados, referenciaRecursos, referenciaPersonaje);
+	cargarRecursosAsignados(recursosAsignados, referenciaRecursos, referenciaPersonaje);
 
 	pthread_mutex_unlock(mutex);
 	//salgo de la region critica
@@ -672,6 +660,8 @@ void* interbloqueo(void* a){
 	marcarPersonajesSinRecursos(recursosAsignados,referenciaPersonaje,marcados,cantPersonajes, cantRecursos);
 	marcarPersonajesConRecursos(recursosAsignados, recursosSolicitados, recursosDisponibles, marcados,cantPersonajes, cantRecursos);
 	comprobarDeadlock(marcados,cantPersonajes, referenciaPersonaje);
+
+	return 0;
 }
 
 void inicializarMarcados (bool marcados[], int cantidadPersonajes){
@@ -680,9 +670,36 @@ void inicializarMarcados (bool marcados[], int cantidadPersonajes){
 	*/
 
 	int i;
-
 	for(i=0;i<= cantidadPersonajes; i++){
 		marcados[i]= false;
+	}
+}
+
+void inicializarReferenciaRecurso(int cantidadRecursos, char referenciaRecurso[]){
+	/*@NAME: inicializarMarcados
+	* @DESC: inicializo  el vector de referencia de recursos con los recursos
+	*/
+
+	int i;
+	ITEM_NIVEL* recurso = recursosIniciales;
+
+	for(i=0;i<= cantidadRecursos; i++){
+			referenciaRecurso[i]= recurso->id;
+			recurso = recurso->next;
+	}
+}
+
+void inicializarReferenciaPersonaje(int cantidadPersonajes, char referenciaPersonaje[]){
+	/*@NAME: inicializarReferenciaPersonaje
+	* @DESC: inicializo  el vector de referencia de personaje con los personajes que hay
+	*/
+
+	int i;
+	PersonajeEnNivel* personaje = listaPersonajes;
+
+	for(i=0;i<= cantidadPersonajes; i++){
+		referenciaPersonaje[i]= personaje->id;
+		personaje = personaje->sig;
 	}
 }
 
@@ -695,11 +712,10 @@ int buscarEnReferenciaRecurso(char idRecurso, char referenciaRecurso[]){
 	while(!encontrado){
 		if(referenciaRecurso[i] == idRecurso){
 			encontrado = true;
-			return i;
 		}else{
 			i++;
 		}
-	}return -1;
+	}return i;
 
 }
 
@@ -712,12 +728,10 @@ int buscarEnReferenciaPersonaje(char idPersonaje, char referenciaPersonaje[]){
 	while(!encontrado){
 		if(referenciaPersonaje[i] == idPersonaje){
 			encontrado = true;
-			return i;
 		}else{
 			i++;
 		}
-	}return -1;
-
+	}return i;
 }
 
 
@@ -726,8 +740,7 @@ int cantidadPersonajes(){
 	* @DESC: devuelve la cantidad de personajes conectados al nivel
 	*/
 	int i =0;
-	PersonajeEnNivel * personaje;
-	personaje = listaPersonajes;
+	PersonajeEnNivel* personaje = listaPersonajes;
 
 	while(personaje != NULL){
 		i++;
@@ -741,8 +754,7 @@ int cantidadRecursos(){
 	* NOTA: como no hay personajes en esta lista no tengo que diferenciar recursos de personajes
 	*/
 	int i =0;
-	ITEM_NIVEL* recurso;
-	recurso = recursosIniciales;
+	ITEM_NIVEL* recurso = recursosIniciales;
 
 	while(recurso != NULL){
 		i++;
@@ -758,8 +770,7 @@ void cargarRecursosTotales(int recursosTotales[], int cantRecursos , char refere
 	int i;
 	int pos =-1;
 
-	ITEM_NIVEL* recurso;
-	recurso = recursosIniciales;
+	ITEM_NIVEL* recurso = recursosIniciales;
 
 	for(i=0; i<= cantRecursos; i++){
 		//busco en el vector referencia la pos de ese recurso
@@ -768,6 +779,7 @@ void cargarRecursosTotales(int recursosTotales[], int cantRecursos , char refere
 			//le asigno a esa pos la cantidad de recursos que hay
 			recursosTotales[pos] = recurso->quantity;
 		}
+		recurso = recurso->next;
 	}
 
 }
@@ -802,9 +814,7 @@ void cargarRecursosSolicitados(int recursosSolicitados[][], char referenciaRecur
 	* @DESC: carga la matriz dependiendo de el recurso solicitado que tuvo cada personaje
 	*/
 
-	PersonajeEnNivel* personaje;
-	personaje = listaPersonajes;
-
+	PersonajeEnNivel* personaje = listaPersonajes;
 	char recurso;
 
 	int posPersonaje = -1;

@@ -96,13 +96,13 @@ Posicion obtenerPosRecurso(char recurso);
 
 t_recursos* liberarRecursos(PersonajeEnNivel* personaje );
 
-int validarPosYRecursos(int fdPersonaje, char idRecurso);
+int validarPosYRecursos(PersonajeEnNivel* personaje, char idRecurso);
 
 PersonajeEnNivel* cargarPersonajeEnNivel(Personaje* miPersonaje);
 
 void cargarPersonajeEnPendiente(char id);
 
-void modificarPosPersonaje(int fdPersonaje, int posx,int posy);
+void modificarPosPersonaje(PersonajeEnNivel* personaje, int posx, int posy);
 
 void agregarRecursoAPersonaje(PersonajeEnNivel* personaje,char recurso);
 
@@ -112,7 +112,7 @@ void aumentarRecursos(t_recursos* recursosALiberar);
 
 ITEM_NIVEL* buscarItem(char idRecurso);
 
-void agregarARecursosPendientes(int fdPersonaje, char recurso);
+void agregarARecursosPendientes(PersonajeEnNivel* personaje, char recurso);
 
 void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador);
 
@@ -120,7 +120,7 @@ void agregarRecursosAListaItems(char idRecurso, int cant);
 
 void reasignarRecursos(Recursos* listaRecursos);
 
-void quitarSolicitudesDeRecurso(char idPersonaje, char idRecurso);
+void quitarSolicitudesDeRecurso(PersonajeEnNivel* personaje, char idRecurso);
 
 PersonajeEnNivel *buscarPersonaje_byfd(int fd);
 
@@ -138,15 +138,15 @@ void cargarRecursosTotales(int recursosTotales[], int cantRecursos , char refere
 
 void cargarRecursosDisponibles(int recursosDisponibles[], char referenciaRecurso[]);
 
-void cargarRecursosSolicitados(int recursosSolicitados[][]);
-
-void cargarRecursosAsignados(int recursosAsignados[][]);
-
 void cargarRecursosSolicitados(int recursosSolicitados[][], char referenciaRecurso[], char referenciaPersonaje[]);
 
 void cargarRecursosAsignados(int recursosAsignados[][], char referenciaRecurso[], char referenciaPersonaje[]);
 
 void inicializarMarcados (bool marcados[], int cantidadPersonajes);
+
+void inicializarReferenciaRecurso(int cantidadRecursos, char referenciaRecurso[]);
+
+void inicializarReferenciaPersonaje(int cantidadPersonajes, char referenciaPersonaje[]);
 
 void comprobarDeadlock (bool marcados[],int cantPersonajes, char referenciaPersonaje[]);
 
