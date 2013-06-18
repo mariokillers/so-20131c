@@ -59,7 +59,7 @@ int main(int argc, char *argv[]) {
 	strcpy(yoNivel.IP,"localhost");
 	yoNivel.PORT = puerto;
 	mandarMensaje(clientCCB.sockfd, HANDSHAKE,sizeof(Nivel),&yoNivel); 
-	log_info(logger, string_from_format("El nivel: %s le hizo HANDSHAKE al socket: %d", yoNivel.ID, clientCCB.sockfd));
+	log_info(logger, string_from_format("El nivel: %c le hizo HANDSHAKE al socket: %d", yoNivel.ID, clientCCB.sockfd));
 
 	//inicializo el hilo que maneja interbloqueo VER ACA!
 	pthread_t thread_interbloqueo;
@@ -108,7 +108,7 @@ int main(int argc, char *argv[]) {
 				personajeNuevo = mensaje->data;
 				personajeNuevo->FD = mensaje->from;
 
-				log_info(logger, string_from_format("Recibi HANDSHAKE del personaje: %s", personajeNuevo->ID));
+				log_info(logger, string_from_format("Recibi HANDSHAKE del personaje: cs", personajeNuevo->ID));
 
 				//entro en la region critica
 				pthread_mutex_lock(&mutex);
@@ -123,7 +123,7 @@ int main(int argc, char *argv[]) {
 				pthread_mutex_unlock(&mutex);
 				//salgo de la region critica
 
-				log_info(logger, string_from_format("Se dibujo el personaje: %s en la pos (0,0)", personajeNuevo->ID));
+				log_info(logger, string_from_format("Se dibujo el personaje: %c en la pos (0,0)", personajeNuevo->ID));
 
 				break;
 			}
@@ -135,21 +135,23 @@ int main(int argc, char *argv[]) {
 				log_info(logger, "Recibi REQUEST_POS_RECURSO");
 
 				char recurso = *(char *)mensaje->data;
+				log_info(logger, string_from_format("El recurso pedido es: %c", recurso));
 
 				//entro en la region critica
 				pthread_mutex_lock(&mutex);
+				log_info(logger, "Mutex de lista de recursos y personajes entra a region critica");
 
 				//obtengo la posicion del recurso
 				Posicion pos =  obtenerPosRecurso(recurso);
 
-				log_info(logger, string_from_format("Mando la posicion del recurso %s: (%d,%d)",recurso , pos.POS_X, pos.POS_Y ));
+				log_info(logger, string_from_format("Mando la posicion del recurso %c: (%d,%d)",recurso , pos.POS_X, pos.POS_Y ));
 
 				pthread_mutex_unlock(&mutex);
 				//salgo de la region critica
 
 				mandarMensaje(mensaje->from, POSICION_RECURSO,sizeof(Posicion),&pos);
 
-				log_info(logger, string_from_format("Mande la posicion del recurso: %s al personaje: %s ",recurso , personaje->id));
+				log_info(logger, string_from_format("Mande la posicion del recurso: %c al personaje: %c",recurso , personaje->id));
 			}
 				break;
 
@@ -168,7 +170,7 @@ int main(int argc, char *argv[]) {
 
 				PersonajeEnNivel* personaje = buscarPersonaje_byfd(mensaje->from);
 
-				log_info(logger, string_from_format("Tomo la posicion del recurso:(%d,%d) que me solicito personaje: %s", posx,posy, personaje->id));
+				log_info(logger, string_from_format("Tomo la posicion del recurso:(%d,%d) que me solicito personaje: %c", posx,posy, personaje->id));
 
 				//muevo el personaje y lo dibujo
 				MoverPersonaje(ListaItems,personaje->id,posx,posy);
@@ -180,7 +182,7 @@ int main(int argc, char *argv[]) {
 				pthread_mutex_unlock(&mutex);
 				//salgo de la region critica
 
-				log_info(logger, string_from_format("Movi el personaje: %s a la posicion:(%d,%d)", personaje->id,posx,posy));
+				log_info(logger, string_from_format("Movi el personaje: %c a la posicion:(%d,%d)", personaje->id,posx,posy));
 
 			}
 				break;
@@ -197,13 +199,13 @@ int main(int argc, char *argv[]) {
 
 				PersonajeEnNivel* personaje = buscarPersonaje_byfd(mensaje->from);
 
-				log_info(logger, string_from_format("El personaje: %s me pidio el recurso:%s", personaje->id,recurso));
+				log_info(logger, string_from_format("El personaje: %c me pidio el recurso:%c", personaje->id,recurso));
 
 				//le confirma al personaje que puede tomar ese recurso y lo resta de listaItems
 				bool puedeTomarRecurso;
 				if (validarPosYRecursos(personaje, recurso)) {
 					puedeTomarRecurso = true;
-					log_info(logger, string_from_format("El personaje:%s pudo obtener el recurso:%s",personaje->id, recurso));
+					log_info(logger, string_from_format("El personaje:%c pudo obtener el recurso:%c",personaje->id, recurso));
 					mandarMensaje(mensaje->from, CONFIRMAR_RECURSO, sizeof(bool), &puedeTomarRecurso);
 					restarRecurso(ListaItems, recurso);
 					agregarRecursoAPersonaje(personaje,recurso);
@@ -211,12 +213,12 @@ int main(int argc, char *argv[]) {
 
 				} else {
 					puedeTomarRecurso = false;
-					log_info(logger, string_from_format("El personaje:%s no pudo obtener el recurso:%s",personaje->id, recurso));
+					log_info(logger, string_from_format("El personaje:%c no pudo obtener el recurso:%c",personaje->id, recurso));
 					//si no pudo, le manda 0/FALSE porque no lo puede tomar
 					mandarMensaje(mensaje->from, CONFIRMAR_RECURSO, sizeof(bool), &puedeTomarRecurso);
 					//actualiza la lista de recursos pendientes
 					agregarARecursosPendientes(personaje, recurso);
-					log_info(logger, string_from_format("Se agrego la solicitud del recurso:%s del personaje:%s a solicitudes pendientes", recurso, personaje->id));
+					log_info(logger, string_from_format("Se agrego la solicitud del recurso:%c del personaje:%c a solicitudes pendientes", recurso, personaje->id));
 				}
 
 				pthread_mutex_unlock(&mutex);
@@ -237,7 +239,7 @@ int main(int argc, char *argv[]) {
 
 				PersonajeEnNivel* personaje = buscarPersonaje_byfd(mensaje->from);
 
-				log_info(logger, string_from_format("El personaje: %s me avisa que termino el nivel", personaje->id));
+				log_info(logger, string_from_format("El personaje: %c me avisa que termino el nivel", personaje->id));
 
 				//se fija que recursos tenia asignado el personaje para liberarlos
 				t_recursos* recursosALiberar = liberarRecursos(personaje);
@@ -256,7 +258,7 @@ int main(int argc, char *argv[]) {
 				BorrarItem(&ListaItems,personaje->id);
 				borrarPersonajeEnNivel(personaje->id);
 
-				log_info(logger, string_from_format("El personaje: %s ha sido borrado del nivel", personaje->id));
+				log_info(logger, string_from_format("El personaje: %c ha sido borrado del nivel", personaje->id));
 
 				//re-dibuja el nivel ya sin el personaje y con la cantidad de recursos nueva
 				nivel_gui_dibujar(ListaItems);
@@ -275,7 +277,7 @@ int main(int argc, char *argv[]) {
 
 				char idVictima = *(char *)mensaje->data;
 
-				log_info(logger, string_from_format("El personaje: %s ha sido elegido como victima del interbloqueo", idVictima));
+				log_info(logger, string_from_format("El personaje: %c ha sido elegido como victima del interbloqueo", idVictima));
 
 				//entro en la region critica
 				pthread_mutex_lock(&mutex);
@@ -366,6 +368,9 @@ Posicion obtenerPosRecurso(char recurso){
 	 */
 
 	ITEM_NIVEL* itemRecurso = buscarItem(recurso);
+	if (itemRecurso == NULL) {
+		log_error(logger, "No se encontro el recurso en el nivel!");
+	}
 
 	Posicion posicion = Pos(itemRecurso->posx, itemRecurso->posy);
 	return posicion;
@@ -386,7 +391,7 @@ int validarPosYRecursos(PersonajeEnNivel* personaje, char idRecurso){
 	//busco la posicion del recurso en el mapa y la cantidad de recursos que tiene
 	ITEM_NIVEL* recurso = buscarItem(idRecurso);
 
-	log_info(logger, string_from_format("La posicion del personaje: %s es:(%d,%d) y la posicion del recurso: %s es:(%d,%d) y su cantidad: %d",personaje->id,personajePosx,personajePosy ,idRecurso, recurso->posx, recurso->posy, recurso->quantity));
+	log_info(logger, string_from_format("La posicion del personaje: %c es:(%d,%d) y la posicion del recurso: %c es:(%d,%d) y su cantidad: %d",personaje->id,personajePosx,personajePosy ,idRecurso, recurso->posx, recurso->posy, recurso->quantity));
 
 	//comparo
 	if( ((personajePosx == recurso->posx) && (personajePosy == recurso->posy)) && ( (recurso->quantity)>0) ){
@@ -397,16 +402,15 @@ int validarPosYRecursos(PersonajeEnNivel* personaje, char idRecurso){
 	return 0;
 }
 
-ITEM_NIVEL* buscarItem(char id){
+ITEM_NIVEL* buscarItem(char id)
+{
+	ITEM_NIVEL* temp = ListaItems;
 
-	ITEM_NIVEL* temp;
-	temp = ListaItems;
-
-	while((temp != NULL) && (temp->id != id)){
+	while ((temp != NULL) && (temp->id != id)) {
 		temp = temp->next;
-	}if((temp != NULL) && (temp->id == id)){
-		return temp;
-	}return NULL;
+	}
+
+	return temp;
 }
 
 
@@ -577,7 +581,7 @@ void modificarPosPersonaje(PersonajeEnNivel* personaje, int posx, int posy){
 	* @DESC: actualiza la pos del personaje
 	*/
 
-	log_info(logger, string_from_format("Modifico posicion personaje: %s en posicion (%d,%d)", personaje->id, posx, posy));
+	log_info(logger, string_from_format("Modifico posicion personaje: %c en posicion (%d,%d)", personaje->id, posx, posy));
 
 	if (personaje != NULL){
 		personaje->pos = Pos(posx,posy);
