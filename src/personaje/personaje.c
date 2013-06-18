@@ -216,13 +216,21 @@ int main(int argc, char *argv[]) {
 					if (mensajes(colaDeMensajes, clientCCB_niv)){
 						mensaje = queue_pop(colaDeMensajes);
 
+
+
 						switch(mensaje->type){
 						int respuesta = (int)(*((int*)mensaje->lenght));
+
+						log_info(logger, string_from_format("Recibi respuesta: %d", respuesta));
+
+
 							case CONFIRMAR_RECURSO:
 
 								//si le otorgaron el recurso lo agrega y avisa que termino el turno
 								if(respuesta){
+									log_info(logger, "Antes de mandar");
 									mandarMensaje(clientCCB_pln.sockfd,TERMINE_TURNO,sizeof(NULL),NULL);
+									log_info(logger, "Despues de mandar");
 									agregarRecurso(personaje->personaje_niveles, nivActual, proxRec);
 
 									//loggea la obtencion del recurso y la finalizacion del turno

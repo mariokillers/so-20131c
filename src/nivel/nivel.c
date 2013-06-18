@@ -206,7 +206,10 @@ int main(int argc, char *argv[]) {
 				if (validarPosYRecursos(personaje, recurso)) {
 					puedeTomarRecurso = true;
 					log_info(logger, string_from_format("El personaje:%c pudo obtener el recurso:%c",personaje->id, recurso));
+
 					mandarMensaje(mensaje->from, CONFIRMAR_RECURSO, sizeof(bool), &puedeTomarRecurso);
+					log_info(logger, string_from_format("La respuesta es: %d", puedeTomarRecurso));
+
 					restarRecurso(ListaItems, recurso);
 					agregarRecursoAPersonaje(personaje,recurso);
 					nivel_gui_dibujar(ListaItems);
