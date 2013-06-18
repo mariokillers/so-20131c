@@ -9,6 +9,7 @@
 #include <commons/Connections/EstructurasMensajes.h>
 #include <commons/Connections/Client.h>
 #include <commons/config.h>
+#include <commons/string.h>
 //#include "personaje/personaje_library.h"
 
 
