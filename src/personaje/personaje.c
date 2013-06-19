@@ -12,6 +12,7 @@ char proxNiv[20];
 char nivActual[20];
 Posicion *nuevaPos;
 Posicion *posActual;
+bool respuesta_confirmacion;
 
 t_log* logger;
 
@@ -47,7 +48,7 @@ int main(int argc, char *argv[]) {
 	posActual = (Posicion*)personaje->personaje_posicion_actual;
 
 
-	//declaro las se�ales
+	//declaro las se?ales
 
 	signal(SIGTERM, rutinaSignal);
 	signal(SIGUSR1, rutinaSignal);
@@ -124,7 +125,7 @@ int main(int argc, char *argv[]) {
 								log_info(logger, string_from_format("personaje %s se conecta a nivel %s", personaje->personaje_nombre, nivActual));
 
 								Personaje *personajeSend = malloc(sizeof(Personaje));
-								strcpy(personajeSend->ID,string_from_format("P%c",personaje->personaje_simbolo));								
+								strcpy(personajeSend->ID,string_from_format("P%c",personaje->personaje_simbolo));
 
 								mandarMensaje(clientCCB_niv.sockfd, HANDSHAKE,sizeof(personajeSend),personajeSend);
 								log_info(logger,"mande HANDSHAKE a nivel");
@@ -207,7 +208,6 @@ int main(int argc, char *argv[]) {
 								log_info(logger, string_from_format("personaje %s nueva posicion: (%d,%d)", personaje->personaje_nombre, personaje->personaje_posicion_actual->POS_X, personaje->personaje_posicion_actual->POS_Y));
 
 								analizarRecurso(posActual, posProxRec, clientCCB_niv, clientCCB_pln, &state, (char) proxRec);
-							break;
 						}
 						break;
 						borrarMensaje(mensaje);
@@ -217,18 +217,18 @@ int main(int argc, char *argv[]) {
 					if (mensajes(colaDeMensajes, clientCCB_niv)){
 						mensaje = queue_pop(colaDeMensajes);
 
-						switch(mensaje->type){
-						int* respuesta; 
+						log_info(logger, string_from_format("Recibi mensaje: %d", (int)(mensaje->type)));
 
-				
+						respuesta_confirmacion = ((bool)*((int*)(mensaje->data)));
+						log_info(logger, string_from_format("Recibi respuesta: %d", (respuesta_confirmacion)));
+
+						switch(mensaje->type){
 							case CONFIRMAR_RECURSO:
-								respuesta= (int*)mensaje->data;
-								log_info(logger, string_from_format("Recibi respuesta: %d", (*respuesta)));
 								//si le otorgaron el recurso lo agrega y avisa que termino el turno
-								if(respuesta){
-									log_info(logger, "Antes de mandar");
-									mandarMensaje(clientCCB_pln.sockfd,TERMINE_TURNO,sizeof(NULL),NULL);
-									log_info(logger, "Despues de mandar");
+								if(respuesta_confirmacion){
+
+									mandarMensaje(clientCCB_pln.sockfd,TERMINE_TURNO,0,NULL);
+
 									agregarRecurso(personaje->personaje_niveles, nivActual, proxRec);
 
 									//loggea la obtencion del recurso y la finalizacion del turno
@@ -258,6 +258,7 @@ int main(int argc, char *argv[]) {
 										state = NUEVO_NIVEL;
 									}else{
 										state = STANDBY;
+										break;
 									}
 
 								} else{
@@ -267,7 +268,9 @@ int main(int argc, char *argv[]) {
 
 									state = STANDBY;
 								}
+								break;
 							}
+
 							borrarMensaje(mensaje);
 						}
 						break;
@@ -367,7 +370,7 @@ Posicion *realizarMovimiento(Posicion *posActual, Posicion *posProxRec, CCB clie
 
 void analizarRecurso(Posicion *posActual, Posicion *posProxRec, CCB clientCCB_niv, CCB clientCBB_pln, char *state, char proxRec){
 	if(recursoAlcanzado(posActual, posProxRec)){
-		log_info(logger, "alcance el recurso");
+		log_info(logger, string_from_format("alcance el recurso %c", proxRec));
 		mandarMensaje(clientCCB_niv.sockfd,REQUEST_RECURSO,sizeof(proxRec), (char *)&proxRec);
 
 		log_info(logger, string_from_format("personaje %s solicita recurso %c a nivel %s", personaje->personaje_nombre, proxRec, nivActual));
@@ -518,7 +521,7 @@ void imprimir_personaje(t_personaje *personaje){
 PARAM: t_config *n -> una instancia de t_config con los valores de un archivo de ocnfiguracion
 RETURN: t_personaje * -> el personaje creado
 DESC: con las funciones de commons/config.h va tomando los valores del t_config dependiendo de la key pasada
-	como parametro a cada funci�n
+	como parametro a cada funci?n
 	*/
 
 t_personaje *create_personaje(t_config *p){
@@ -667,4 +670,3 @@ t_list *create_lista_niveles(t_personaje *personaje, t_config *p){
 
 	return list;
 }
-
