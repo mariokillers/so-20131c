@@ -92,9 +92,12 @@ int main(int argc, char *argv[]) {
 	log_info(logger, "Terminado dibujar nivel");
 
 	while(1) {
-		while(!mensajes(colaDeMensajes,serverCCB))
-			;
-		log_info(logger, "Buscando mensaje en cola");
+		log_info(logger, "Esperando Mensaje");
+		
+		//SI NO HABIA MENSAJES, ESPERO QUE LLEGUEN.
+		if(!queue_size(colaDeMensajes)) while(!mensajes(colaDeMensajes,serverCCB));
+
+		log_info(logger, string_from_format("Buscando mensaje en cola, hay %d", queue_size(colaDeMensajes)));
 		//mientras tenga algun mensaje, ya sea de server o cliente, agarra de la cola de mensajes un mensaje
 		mensaje = queue_pop(colaDeMensajes);
 		log_info(logger, string_from_format("Recibi mensaje de tipo: %d", mensaje->type));
@@ -124,8 +127,8 @@ int main(int argc, char *argv[]) {
 
 				log_info(logger, string_from_format("Se dibujo el personaje: %c en la pos (0,0)", personajeNuevo->ID));
 
-				break;
-			}
+				
+			}break;
 
 			case REQUEST_POS_RECURSO:
 			{
@@ -190,15 +193,16 @@ int main(int argc, char *argv[]) {
 
 			case REQUEST_RECURSO:
 			{
+				char recurso = *(char *)mensaje->data;
+				PersonajeEnNivel* personaje = buscarPersonaje_byfd(mensaje->from);
+				
 
 				log_info(logger, "Recibi REQUEST_RECURSO");
 
-				char recurso = *(char *)mensaje->data;
-
 				//entro en la region critica
-				pthread_mutex_lock(&mutex);
+				//pthread_mutex_lock(&mutex);
 
-				PersonajeEnNivel* personaje = buscarPersonaje_byfd(mensaje->from);
+				
 
 				log_info(logger, string_from_format("El personaje: %c me pidio el recurso:%c", personaje->id,recurso));
 
@@ -225,12 +229,12 @@ int main(int argc, char *argv[]) {
 					log_info(logger, string_from_format("Se agrego la solicitud del recurso:%c del personaje:%c a solicitudes pendientes", recurso, personaje->id));
 				}
 
-				pthread_mutex_unlock(&mutex);
+				//pthread_mutex_unlock(&mutex);
 				//salgo de la region critica
 
-
+				}
 				break;
-			}
+			
 
 			//es avisado de que libere recursos y llama al orquestador para avisarle de liberarlos
 			// y que este le diga cuales fueron re-asignados.

@@ -88,12 +88,12 @@ int _is_next_obj(t_personaje_objetivo *o);
 char proximoRecurso(t_list *niveles, char *nivActual);
 Posicion *proximaPosicion(Posicion *posActual, Posicion *posProxRec);
 void reiniciarNivel(t_list *niveles, char *nivActual);
-void analizarRecurso(Posicion *posActual, Posicion *posProxRec, CCB clientCCB_niv, CCB clientCBB_pln, char *state, char proxRec);
+void analizarRecurso(Posicion *posActual, Posicion *posProxRec, char *state, char proxRec);
 bool recursoAlcanzado(Posicion *pos1, Posicion *pos2);
 void agregarRecurso(t_list *niveles, char *nivActual, char proxRec);
 bool nivelTerminado(t_list *niveles, char *nivActual);
 bool ganado(t_list *niveles);
-Posicion *realizarMovimiento(Posicion *posActual, Posicion *posProxRec, CCB clientCCB_niv);
+Posicion *realizarMovimiento(Posicion *posActual, Posicion *posProxRec);
 void morir(t_personaje *personaje, t_personaje *personaje_init, CCB clientCCB_niv, Posicion *posProxRec, char state, char *nivActual);
 void rutinaSignal(int n);
 

@@ -128,6 +128,8 @@ int mensajes(t_queue* mensajesQueue, CCB myCOM){
 					done=1;
 					break;
 				}
+				//MIENTRAS HAYA MENSAJES EN EL BUFFER
+				while(count!=0){
 
 				//CREO LA NUEVA INSTANCIA MENSAJE TODO LIBERAR ESTRUCTURA MENSAJE
 				Mensaje* NuevoMensaje;
@@ -151,6 +153,14 @@ int mensajes(t_queue* mensajesQueue, CCB myCOM){
 				memcpy(NuevoMensaje->data, (void*) buf+3, NuevoMensaje->lenght);
 
 				queue_push (mensajesQueue, NuevoMensaje);
+				
+				//cambio la cantidad que me queda en buf
+				count=count-3-(NuevoMensaje->lenght);
+				memmove(buf,  (void*) (buf+3+(NuevoMensaje->lenght)), count);
+				
+			
+
+			}//YA NO HAY MAS MENSAJES EN EL BUFFER
 
 			}
 			//SI TERMINE CIERRO CONEXION
@@ -177,11 +187,8 @@ int mandarMensaje( int fd , char type, uint16_t lenght, void*data){
 	memcpy(&mensaje[1],(void*)(&lenght),2);
 	memcpy(&mensaje[3],(void*)data,lenght);
 
-	if((send(fd , mensaje, lenght+3, 0)) == -1){
-		return -1;
-	}
-
-	return 0;
+	
+	return (send(fd , mensaje, lenght+3, 0));
 
 }
 

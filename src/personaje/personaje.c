@@ -159,7 +159,7 @@ int main(int argc, char *argv[]) {
 								//si tengo la poscion del proximo recurso se mueve
 								if(posProxRec != NULL){
 									log_info(logger,"tengo posicion de recurso");
-									nuevaPos = realizarMovimiento(posActual, posProxRec, clientCCB_niv);
+									nuevaPos = realizarMovimiento(posActual, posProxRec);
 									posActual = nuevaPos;
 									((Posicion*)(personaje->personaje_posicion_actual))->POS_X = posActual->POS_X;
 									((Posicion*)(personaje->personaje_posicion_actual))->POS_Y = posActual->POS_Y;
@@ -168,7 +168,7 @@ int main(int argc, char *argv[]) {
 									log_info(logger, string_from_format("personaje %s nueva posicion: (%d,%d)", personaje->personaje_nombre, personaje->personaje_posicion_actual->POS_X, personaje->personaje_posicion_actual->POS_Y));
 
 									//analiza si llego a la posicion del proximo recurso
-									analizarRecurso(posActual, posProxRec, clientCCB_niv, clientCCB_pln, &state, (char) proxRec);
+									analizarRecurso(posActual, posProxRec, &state, (char) proxRec);
 								} else{
 									log_info(logger,"no tengo posicion de recurso");
 									//solicitar posicion del proximo recurso y loggea solicitud
@@ -200,14 +200,14 @@ int main(int argc, char *argv[]) {
 							case POSICION_RECURSO:
 								posProxRec = (Posicion*) mensaje->data;
 								log_info(logger, string_from_format("recibi la posicion del recurso %c: (%d,%d)", proxRec, posProxRec->POS_X, posProxRec->POS_Y));
-								nuevaPos = realizarMovimiento(posActual, posProxRec, clientCCB_niv);
+								nuevaPos = realizarMovimiento(posActual, posProxRec);
 								posActual = nuevaPos;
 								((Posicion*)(personaje->personaje_posicion_actual))->POS_X = posActual->POS_X;
 								((Posicion*)(personaje->personaje_posicion_actual))->POS_Y = posActual->POS_Y;
 
 								log_info(logger, string_from_format("personaje %s nueva posicion: (%d,%d)", personaje->personaje_nombre, personaje->personaje_posicion_actual->POS_X, personaje->personaje_posicion_actual->POS_Y));
 
-								analizarRecurso(posActual, posProxRec, clientCCB_niv, clientCCB_pln, &state, (char) proxRec);
+								analizarRecurso(posActual, posProxRec, &state, (char) proxRec);
 						}
 						break;
 						borrarMensaje(mensaje);
@@ -358,27 +358,26 @@ bool recursoAlcanzado(Posicion *pos1, Posicion *pos2){
 }
 
 
-Posicion *realizarMovimiento(Posicion *posActual, Posicion *posProxRec, CCB clientCCB_niv){
+Posicion *realizarMovimiento(Posicion *posActual, Posicion *posProxRec){
 	Posicion *nuevaPos = proximaPosicion(posActual, posProxRec);
 
 	mandarMensaje(clientCCB_niv.sockfd,REQUEST_MOVIMIENTO,sizeof(Posicion), nuevaPos);
-
+	
 	log_info(logger, string_from_format("personaje %s solicita movimiento a nivel %s a la posicion (%d, %d)", personaje->personaje_nombre, nivActual, nuevaPos->POS_X, nuevaPos->POS_Y));
 
 	return nuevaPos;
 }
 
-void analizarRecurso(Posicion *posActual, Posicion *posProxRec, CCB clientCCB_niv, CCB clientCBB_pln, char *state, char proxRec){
+void analizarRecurso(Posicion *posActual, Posicion *posProxRec, char *state, char proxRec){
 	if(recursoAlcanzado(posActual, posProxRec)){
-		log_info(logger, string_from_format("alcance el recurso %c", proxRec));
-		mandarMensaje(clientCCB_niv.sockfd,REQUEST_RECURSO,sizeof(proxRec), (char *)&proxRec);
-
-		log_info(logger, string_from_format("personaje %s solicita recurso %c a nivel %s", personaje->personaje_nombre, proxRec, nivActual));
-
+		int res;
+		res = mandarMensaje(clientCCB_niv.sockfd ,REQUEST_RECURSO,sizeof(proxRec), &proxRec);
+		log_info(logger, string_from_format("Pedido enviado con resultado %d, al filedesc %d", res, clientCCB_niv.sockfd));
 		*state = WAIT_REC;
 	} else{
 		log_info(logger, "no llegue al recurso");
-		mandarMensaje(clientCBB_pln.sockfd,TERMINE_TURNO,0,NULL);
+		
+		mandarMensaje(clientCCB_pln.sockfd,TERMINE_TURNO,0,NULL);
 
 		log_info(logger, string_from_format("personaje %s termino turno en nivel %s", personaje->personaje_nombre, nivActual));
 

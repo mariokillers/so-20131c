@@ -149,6 +149,10 @@ void* Planif(void* nivel){
 							log_info(Logger, string_from_format("Envia mensaje indicando movimiento permitido (ID PERSONAJE: %s).", miGestor->PersonajeEnMovimiento->ID));
 							mandarMensaje(miGestor->PersonajeEnMovimiento->FD, MOVIMIENTO_PERMITIDO, 0, NULL);
 						}
+						break;
+					case REQUEST_RECURSO:
+						log_info(Logger, "Recibi request Recurso");
+					break;
 				}
 			}
 	}
