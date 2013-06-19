@@ -1,13 +1,15 @@
 #include "plataforma.h"
 #include <string.h>
 
-
-
-
 t_list* Gestores;
+t_log* Logger;
+
 int main (){
 
 	Gestores = list_create();
+	Logger = log_create("ProcesoPlataforma.log", "ProcesoPlataforma", true, LOG_LEVEL_INFO);
+	log_info(Logger, "************************************************************************");
+	log_info(Logger, "Se inicia Proceso Plataforma.");
 
 	//TEST 1
 /*
@@ -28,8 +30,8 @@ int main (){
 */
 	pthread_t orquestador;
 	pthread_create( &orquestador, NULL, orq, NULL );
-
 	pthread_join(orquestador,NULL);
+	log_info(Logger, "Crea Thread Orquestador.");
 
 	return 0;
 }
@@ -43,6 +45,9 @@ Elemento_personaje* personaje_crear(char* nombre) {
 
 
 void* Planif(void* nivel){
+
+	log_info(Logger, "Inicia Planificador.");
+
 	//int Quantum = 500;
 	GestorNivel* miGestor;
 	Nivel* miNivel = (Nivel*)nivel;
@@ -58,9 +63,9 @@ void* Planif(void* nivel){
 		}
 
 	//Creo las colas del nivel
+	log_info(Logger, "Crea cola de Listos y lista de bloqueados.");
 	miGestor->queue_listos = queue_create();
 	miGestor->queues_bloq = list_create();
-
 
 	//Asigno ID del gestor ="GX"
 	strcpy(miGestor->ID, miNivel->ID);
@@ -82,15 +87,16 @@ void* Planif(void* nivel){
 
 	miCON = initServer(miGestor->dataPlanificador.PORT);
 
+	log_info(Logger, "Crea e inicializa las variables y colecciones necesarias del Planificador.");
 
 	while(1){
-
 
 			if(mensajes(misMensajes ,miCON)){
 				miMensaje = queue_pop(misMensajes);
 				switch(miMensaje->type){
 					case HANDSHAKE:
 						//CONEXION DE P	ERSONAJE
+						log_info(Logger, "Recibe mensaje de conexion de Proceso Personaje.");
 						if(((char*)miMensaje->data)[0]=='P'){
 							//Inicializo la instancia de personaje correspondiente
 							Personaje* miPersonaje = malloc (sizeof(Personaje));
@@ -98,52 +104,56 @@ void* Planif(void* nivel){
 							miPersonaje->FD=miMensaje->from;
 							//Lo agrego a la cola de listos o le permito mover si no hay nadie en la cola
 							if(queue_is_empty(miGestor->queue_listos)){
+								log_info(Logger, string_from_format("Envia mensaje indicando movimiento permitido (ID PERSONAJE: %s).", miPersonaje->ID));
 								miGestor->PersonajeEnMovimiento = miPersonaje;
 								mandarMensaje(miPersonaje->FD, MOVIMIENTO_PERMITIDO, 0, NULL);
 							}else{
 								queue_push (miGestor->queue_listos, miPersonaje);
+								imprimirListos(miGestor->queue_listos, string_from_format("Agrega personaje '%s' a cola de listos.", miPersonaje->ID));
 							}
 						}
 					break;
 					case TERMINE_TURNO:
+						log_info(Logger, "Recibe mensaje de finalizacion de turno.");
 						if(miMensaje->from == miGestor->PersonajeEnMovimiento->FD){
 							queue_push(miGestor->queue_listos, miGestor->PersonajeEnMovimiento);
+							imprimirListos(miGestor->queue_listos, string_from_format("Agrega personaje '%s' a cola de listos.", miGestor->PersonajeEnMovimiento->ID));
 							usleep(200000);
 							miGestor->PersonajeEnMovimiento = (Personaje*) (queue_pop (miGestor->queue_listos));
+							imprimirListos(miGestor->queue_listos, string_from_format("Quita personaje '%s' de cola de listos.", miGestor->PersonajeEnMovimiento->ID));
+							log_info(Logger, string_from_format("Envia mensaje indicando movimiento permitido (ID PERSONAJE: %s).", miGestor->PersonajeEnMovimiento->ID));
 							mandarMensaje(miGestor->PersonajeEnMovimiento->FD, MOVIMIENTO_PERMITIDO, 0, NULL);
 						}
 
 					break;
 					case PERSONAJE_BLOQUEADO:
+						log_info(Logger, "Recibe mensaje de personaje bloqueado.");
 						if(miMensaje->from == miGestor->PersonajeEnMovimiento->FD){
 							Queue_bloqueados* queue_bloq;
 							//busco la cola de bloqueados de ese recurso en la lista de colas de bloqueados
 							queue_bloq = findBloqQueue_byidRecurso (miGestor->queues_bloq, *((char*)(miMensaje->data)));
 							if (queue_bloq != NULL){
 								queue_push(queue_bloq->queue, miGestor->PersonajeEnMovimiento);
+								imprimirBloqueados(miGestor->queues_bloq, string_from_format("Agrega personaje '%s' asignado al recurso '%s' a lista de bloqueados", miGestor->PersonajeEnMovimiento->ID, queue_bloq->idRecurso));
 							}else{
 								Queue_bloqueados nueva_queue;
 								nueva_queue.queue = queue_create();
 								nueva_queue.idRecurso = *((char*)(miMensaje->data));
 								queue_push(nueva_queue.queue, miGestor->PersonajeEnMovimiento);
 								list_add (miGestor->queues_bloq, &nueva_queue);
+								imprimirBloqueados(miGestor->queues_bloq, string_from_format("Agrega personaje '%s' asignado al recurso '%s' a lista de bloqueados.", miGestor->PersonajeEnMovimiento->ID, nueva_queue.idRecurso));
 							}
 							usleep(200000);
 							miGestor->PersonajeEnMovimiento = (Personaje*) (queue_pop (miGestor->queue_listos));
+							imprimirListos(miGestor->queue_listos, string_from_format("Quita personaje '%s' de cola de listos.", miGestor->PersonajeEnMovimiento->ID));
+							log_info(Logger, string_from_format("Envia mensaje indicando movimiento permitido (ID PERSONAJE: %s).", miGestor->PersonajeEnMovimiento->ID));
 							mandarMensaje(miGestor->PersonajeEnMovimiento->FD, MOVIMIENTO_PERMITIDO, 0, NULL);
 						}
-
 				}
 			}
-
 	}
-
 	return 0;
-
 }
-
-
-
 
 void* orq (void* a){
 
@@ -158,6 +168,7 @@ void* orq (void* a){
 					miMensaje = queue_pop(queue_mensajes);
 					switch(miMensaje->type){
 						case HANDSHAKE:
+							log_info(Logger, "Recibe mensaje de conexion de nivel");
 							//CONEXION DE NIVEL
 							if (((char*)miMensaje->data)[0]!='P'){
 								//CREO LA INSTANCIA DEL THREAD PLANIFICADOR
@@ -171,28 +182,23 @@ void* orq (void* a){
 								miNivel->FD= miMensaje->from;
 								//CREO LA INSTANCIA PLANIFICADOR CORRESPONDIENTE A ESE NIVEL
 
+								log_info(Logger, string_from_format("Crea el Thread con la estructura de nivel (ID: %s - PUERTO NIVEL: %d - IP NIVEL: %s).", miNivel->ID, miNivel->PORT, miNivel->IP));
 								//CREO EL THREAD, EL PARAMETRO ES UNA ESTRUCTURA NIVEL
-								printf("Antes");
-fflush(stdout);
 								pthread_create( &thr, NULL, Planif, (void*) miNivel);
-								printf("despues");
-fflush(stdout);
 							}
 						break;
 
 						case REQUEST_DATA_NIVEL:
 						{
-							printf("requestDataNivel");
-fflush(stdout);
+							log_info(Logger, "Recibe mensaje pidiendo informacion del nivel.");
 							GestorNivel* miGestor;
 							Data_Nivel miDataNivel;
 							miGestor=findGestor_byid(((char*)(miMensaje->data)));
-							printf("paso funcion");
-				
-							printf("%x",miGestor);	
-fflush(stdout);
+
 							//memcpy(&(miDataNivel.miNivel),&(miGestor->dataNivel),sizeof(Nivel));
 							//memcpy(&(miDataNivel.miPlanificador),&(miGestor->dataPlanificador),sizeof(Planificador));
+
+							log_info(Logger, string_from_format("Envia mensaje con la informacion del nivel (NIVEL ID: %s - PLANIFICADOR ID: %s).", miGestor->dataNivel->ID, miGestor->dataPlanificador->ID));
 							mandarMensaje(miMensaje->from,DATANIVEL,sizeof(Data_Nivel),&(miGestor->dataNivel));
 							
 						}
@@ -200,6 +206,7 @@ fflush(stdout);
 
 						case RECURSOS_LIBERADOS:
 						{
+							log_info(Logger, "Recibe mensaje de recursos liberados.");
 							GestorNivel* miGestor;
 							Personaje* personajeAux;
 							miGestor = findGestor_byfd(miMensaje->from);
@@ -214,36 +221,41 @@ fflush(stdout);
 									//SI LA COLA DE BLOQUEADOS NO ESTA VACIA
 									if(!queue_is_empty(queue_bloq->queue)){
 										personajeAux = queue_pop(queue_bloq->queue);
+										imprimirBloqueados(miGestor->queues_bloq, string_from_format("Quita personaje '%s' asignado al recurso '%s' de la lista de bloqueados.", personajeAux->ID, queue_bloq->idRecurso));
 										recursoAsignado = asignarRecurso(miRecurso->idRecurso, personajeAux);
+										log_info(Logger, string_from_format("Envia mensaje con la cantidad de recursos asignados (ID PERSONAJE: %s - ID RECURSO: %s - CANT: %d).", recursoAsignado->idPersonaje, recursoAsignado->idRecurso, recursoAsignado->cant));
 										mandarMensaje(miMensaje->from,RECURSOS_REASIGNADOS,sizeof(Recursos), &recursoAsignado);
 										queue_push(miGestor->queue_listos, personajeAux);
+										imprimirListos(miGestor->queue_listos, string_from_format("Agrega personaje '%s' a cola de listos.", personajeAux->ID));
 									}else{
 										//LA COLA ESTA VACIA
+										log_info(Logger, "Envia mensaje informando reasignacion finalizada debido a que la cola de bloqueados esta vacia para el recurso.");
 										mandarMensaje(miMensaje->from,REASIGNACION_FINALIZADA,0,NULL);
 										miRecurso->cant=0;
 									}
 								}
 							//NO HAY COLA DE BLOQUEADOS ESPERANDO ESE RECURSO
 							}else{
+								log_info(Logger, "Envia mensaje informando reasignacion finalizada debido a que no hay cosa de bloqueados esperando ese recurso.");
 								mandarMensaje(miMensaje->from,REASIGNACION_FINALIZADA,0,NULL);
 							}
 						}
 						break;
 						case REQUEST_INTERBLOQUEO:
 						{
+							log_info(Logger, "Recibe mensaje de pedido de interbloqueo.");
 							char PersonajesInterbloqueados[10];
 							GestorNivel* miGestor;
 							Personaje* Victima;
 							strcpy(PersonajesInterbloqueados, miMensaje->data);
 							miGestor = findGestor_byfd(miMensaje->from);
 							Victima = findUltimoEnLlegar (miGestor->personajes_en_nivel, PersonajesInterbloqueados);
+							log_info(Logger, "Envia mensaje indicando que murio el personaje");
 							mandarMensaje(Victima->FD,MORISTE_PERSONAJE,0,NULL);
+							log_info(Logger, string_from_format("Envia mensaje con el nombre de la victima (NOMBRE VICTIMA: %s)", Victima->ID[1]));
 							mandarMensaje(miMensaje->from, NOMBRE_VICTIMA ,1,&(Victima->ID[1]));
 						}
 						break;
-
-
-
 					}
 				}
 
@@ -251,16 +263,50 @@ fflush(stdout);
 	return 0;
 }
 
+void finalizarProceso() {
+	log_destroy(Logger);
+}
+
+void imprimirListos(t_queue* listos, char* mensaje) {
+	if (!string_is_empty(mensaje)) {
+		log_info(Logger, mensaje);
+	}
+	log_info(Logger, "---LISTOS---");
+	int index = 0;
+	while (index < queue_size(listos)) {
+		Personaje* personaje = (Personaje*)list_get(listos->elements, index);
+		log_info(Logger, string_from_format("Personaje '%s'", personaje->ID));
+		index++;
+	}
+	log_info(Logger, "-----------");
+}
+
+void imprimirBloqueados(t_list* bloqueados, char* mensaje) {
+	if (!string_is_empty(mensaje)) {
+		log_info(Logger, mensaje);
+	}
+	log_info(Logger, "---BLOQUEADOS---");
+	int index = 0;
+	while (index < list_size(bloqueados)) {
+		Queue_bloqueados* queueBloqueados = (Queue_bloqueados*)list_get(bloqueados, index);
+		log_info(Logger, string_from_format("Recurso: '%s'", queueBloqueados->idRecurso));
+		int queueIndex = 0;
+		while (queueIndex < queue_size(queueBloqueados->queue)) {
+			Personaje* personaje = (Personaje*)list_get(queueBloqueados->queue->elements, queueIndex);
+			log_info(Logger, string_from_format("-> Personaje '%s'", personaje->ID));
+			queueIndex++;
+		}
+		index++;
+	}
+	log_info(Logger, "----------------");
+}
+
 //CHEKEADA
 GestorNivel* findGestor_byid (char* nivel){
 	bool _eselGestor (GestorNivel* comparador){
-	printf("gestor %s\n nivel %s\n", comparador->ID, nivel);
-	fflush(stdout);
-	printf("resultado: %d\n", string_equals_ignore_case(comparador->ID, nivel));
 		return(string_equals_ignore_case(comparador->ID, nivel));
 	}
 	return (list_find(Gestores,(void*)_eselGestor));
-
 }
 
 Queue_bloqueados* findBloqQueue_byidRecurso (t_list* lista, char idRecurso){
@@ -276,9 +322,7 @@ GestorNivel* findGestor_byfd (int fd){
 		return(comparador->dataNivel.FD==fd);
 	}
 	return (list_find(Gestores,(void*)_eselGestor));
-
 }
-
 
 //CHEKEADA
 Personaje* findUltimoEnLlegar (t_list* ListaDePersonajes, char PersonajesInterbloqueados[10]){

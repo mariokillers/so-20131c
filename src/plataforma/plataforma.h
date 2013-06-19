@@ -50,6 +50,9 @@ typedef struct t_personaje {
 void* Planif(void*);
 void initOrq(void);
 void* orq (void*);
+void finalizarProceso();
+void imprimirListos();
+void imprimirBloqueados();
 GestorNivel* findGestor_byid (char* );
 GestorNivel* findGestor_byfd (int);
 Queue_bloqueados* findBloqQueue_byidRecurso (t_list*, char);
