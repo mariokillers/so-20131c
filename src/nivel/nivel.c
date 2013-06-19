@@ -97,7 +97,6 @@ int main(int argc, char *argv[]) {
 		log_info(logger, "Buscando mensaje en cola");
 		//mientras tenga algun mensaje, ya sea de server o cliente, agarra de la cola de mensajes un mensaje
 		mensaje = queue_pop(colaDeMensajes);
-		PersonajeEnNivel *personaje = buscarPersonaje_byfd(mensaje->from);
 		log_info(logger, string_from_format("Recibi mensaje de tipo: %d", mensaje->type));
 
 		//analiza los mensajes recibidos y en base a eso, actua
@@ -150,6 +149,8 @@ int main(int argc, char *argv[]) {
 				//salgo de la region critica
 
 				mandarMensaje(mensaje->from, POSICION_RECURSO,sizeof(Posicion),&pos);
+				
+				PersonajeEnNivel *personaje = buscarPersonaje_byfd(mensaje->from);
 
 				log_info(logger, string_from_format("Mande la posicion del recurso: %c al personaje: %c",recurso , personaje->id));
 			}
