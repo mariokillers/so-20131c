@@ -1432,3 +1432,187 @@
 [INFO] 12:36:57:467 ProcesoPersonaje/(10282:10282): llego mensaje MOVIMIENTO_PERMITIDO
 [INFO] 12:36:57:468 ProcesoPersonaje/(10282:10282): no tengo posicion de recurso
 [INFO] 12:36:57:468 ProcesoPersonaje/(10282:10282): personaje Mario solicita posicion del recurso H a nivel Nivel1
+[INFO] 12:53:18:845 ProcesoPersonaje/(10314:10314): se conecta personaje Mario a orquestador
+[INFO] 12:53:18:866 ProcesoPersonaje/(10314:10314): personaje Mario solicita al orquestador DATA_NIVEL del nivel Nivel1
+[INFO] 12:53:18:872 ProcesoPersonaje/(10314:10314): IP: localhost, PORT: 20000
+[INFO] 12:53:18:876 ProcesoPersonaje/(10314:10314): personaje Mario se desconecta del orquestador
+[INFO] 12:53:18:896 ProcesoPersonaje/(10314:10314): personaje Mario se conecta a nivel Nivel1
+[INFO] 12:53:18:897 ProcesoPersonaje/(10314:10314): mande HANDSHAKE a nivel
+[INFO] 12:53:18:915 ProcesoPersonaje/(10314:10314): personaje Mario se conecta a planificador de nivel Nivel1
+[INFO] 12:53:18:923 ProcesoPersonaje/(10314:10314): mande HANDSHAKE a planificador
+[INFO] 12:53:18:924 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:18:925 ProcesoPersonaje/(10314:10314): no tengo posicion de recurso
+[INFO] 12:53:18:937 ProcesoPersonaje/(10314:10314): personaje Mario solicita posicion del recurso F a nivel Nivel1
+[INFO] 12:53:18:943 ProcesoPersonaje/(10314:10314): recibi la posicion del recurso F: (23,5)
+[INFO] 12:53:18:947 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (1, 0)
+[INFO] 12:53:18:952 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (1,0)
+[INFO] 12:53:18:954 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:18:956 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:19:157 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:19:157 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:19:158 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (2, 0)
+[INFO] 12:53:19:158 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (2,0)
+[INFO] 12:53:19:158 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:19:158 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:19:370 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:19:370 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:19:370 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (3, 0)
+[INFO] 12:53:19:370 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (3,0)
+[INFO] 12:53:19:370 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:19:371 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:19:588 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:19:588 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:19:589 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (4, 0)
+[INFO] 12:53:19:589 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (4,0)
+[INFO] 12:53:19:589 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:19:589 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:19:808 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:19:808 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:19:809 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (5, 0)
+[INFO] 12:53:19:809 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (5,0)
+[INFO] 12:53:19:809 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:19:809 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:20:20 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:20:20 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:20:20 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (6, 0)
+[INFO] 12:53:20:20 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (6,0)
+[INFO] 12:53:20:20 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:20:20 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:20:231 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:20:231 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:20:232 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (7, 0)
+[INFO] 12:53:20:232 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (7,0)
+[INFO] 12:53:20:232 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:20:232 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:20:440 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:20:440 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:20:440 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (8, 0)
+[INFO] 12:53:20:441 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (8,0)
+[INFO] 12:53:20:441 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:20:442 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:20:651 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:20:651 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:20:651 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (9, 0)
+[INFO] 12:53:20:652 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (9,0)
+[INFO] 12:53:20:652 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:20:652 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:20:864 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:20:864 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:20:864 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (10, 0)
+[INFO] 12:53:20:865 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (10,0)
+[INFO] 12:53:20:865 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:20:865 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:21:79 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:21:80 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:21:80 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (11, 0)
+[INFO] 12:53:21:80 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (11,0)
+[INFO] 12:53:21:80 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:21:80 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:21:291 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:21:291 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:21:291 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (12, 0)
+[INFO] 12:53:21:291 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (12,0)
+[INFO] 12:53:21:291 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:21:292 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:21:502 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:21:502 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:21:502 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (13, 0)
+[INFO] 12:53:21:503 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (13,0)
+[INFO] 12:53:21:503 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:21:503 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:21:712 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:21:713 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:21:713 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (14, 0)
+[INFO] 12:53:21:713 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (14,0)
+[INFO] 12:53:21:713 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:21:713 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:21:923 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:21:923 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:21:924 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (15, 0)
+[INFO] 12:53:21:924 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (15,0)
+[INFO] 12:53:21:924 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:21:924 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:22:140 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:22:140 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:22:143 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (16, 0)
+[INFO] 12:53:22:149 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (16,0)
+[INFO] 12:53:22:150 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:22:153 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:22:354 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:22:354 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:22:355 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (17, 0)
+[INFO] 12:53:22:355 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (17,0)
+[INFO] 12:53:22:355 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:22:355 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:22:563 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:22:563 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:22:563 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (18, 0)
+[INFO] 12:53:22:564 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (18,0)
+[INFO] 12:53:22:564 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:22:564 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:22:779 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:22:779 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:22:780 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (19, 0)
+[INFO] 12:53:22:780 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (19,0)
+[INFO] 12:53:22:780 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:22:780 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:22:987 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:22:987 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:22:987 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (20, 0)
+[INFO] 12:53:22:987 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (20,0)
+[INFO] 12:53:22:988 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:22:988 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:23:211 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:23:211 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:23:211 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (21, 0)
+[INFO] 12:53:23:211 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (21,0)
+[INFO] 12:53:23:212 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:23:212 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:23:422 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:23:422 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:23:422 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (22, 0)
+[INFO] 12:53:23:423 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (22,0)
+[INFO] 12:53:23:423 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:23:423 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:23:630 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:23:630 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:23:631 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (23, 0)
+[INFO] 12:53:23:631 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (23,0)
+[INFO] 12:53:23:631 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:23:631 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:23:839 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:23:839 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:23:840 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (23, 1)
+[INFO] 12:53:23:840 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (23,1)
+[INFO] 12:53:23:840 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:23:840 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:24:50 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:24:50 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:24:51 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (23, 2)
+[INFO] 12:53:24:51 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (23,2)
+[INFO] 12:53:24:51 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:24:51 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:24:262 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:24:262 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:24:262 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (23, 3)
+[INFO] 12:53:24:262 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (23,3)
+[INFO] 12:53:24:262 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:24:263 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:24:483 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:24:483 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:24:483 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (23, 4)
+[INFO] 12:53:24:484 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (23,4)
+[INFO] 12:53:24:484 ProcesoPersonaje/(10314:10314): no llegue al recurso
+[INFO] 12:53:24:484 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:24:691 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:24:691 ProcesoPersonaje/(10314:10314): tengo posicion de recurso
+[INFO] 12:53:24:692 ProcesoPersonaje/(10314:10314): personaje Mario solicita movimiento a nivel Nivel1 a la posicion (23, 5)
+[INFO] 12:53:24:692 ProcesoPersonaje/(10314:10314): personaje Mario nueva posicion: (23,5)
+[INFO] 12:53:24:692 ProcesoPersonaje/(10314:10314): Pedido enviado con resultado 4, al filedesc 4
+[INFO] 12:53:24:700 ProcesoPersonaje/(10314:10314): Recibi mensaje: 6
+[INFO] 12:53:24:700 ProcesoPersonaje/(10314:10314): Recibi respuesta: 1
+[INFO] 12:53:24:700 ProcesoPersonaje/(10314:10314): personaje Mario obtuvo recurso F en nivel Nivel1
+[INFO] 12:53:24:700 ProcesoPersonaje/(10314:10314): personaje Mario termino turno en nivel Nivel1
+[INFO] 12:53:24:922 ProcesoPersonaje/(10314:10314): llego mensaje MOVIMIENTO_PERMITIDO
+[INFO] 12:53:24:922 ProcesoPersonaje/(10314:10314): no tengo posicion de recurso
+[INFO] 12:53:24:922 ProcesoPersonaje/(10314:10314): personaje Mario solicita posicion del recurso H a nivel Nivel1

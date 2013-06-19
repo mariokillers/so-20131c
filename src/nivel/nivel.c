@@ -95,7 +95,8 @@ int main(int argc, char *argv[]) {
 		log_info(logger, "Esperando Mensaje");
 		
 		//SI NO HABIA MENSAJES, ESPERO QUE LLEGUEN.
-		if(!queue_size(colaDeMensajes)) while(!mensajes(colaDeMensajes,serverCCB));
+		//if(!queue_size(colaDeMensajes)) 
+		while(!mensajes(colaDeMensajes,serverCCB));
 
 		log_info(logger, string_from_format("Buscando mensaje en cola, hay %d", queue_size(colaDeMensajes)));
 		//mientras tenga algun mensaje, ya sea de server o cliente, agarra de la cola de mensajes un mensaje
