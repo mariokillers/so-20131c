@@ -74,10 +74,7 @@ t_personaje *read_personaje_archivo_configuracion(char* path);
 t_personaje *create_personaje(t_config *p);
 t_personaje_nivel *create_personaje_nivel(char *nivel, char **objetivos);
 void add_list_personaje_niveles(char **arr, char *buffer_nivel, t_list *list);
-void imprimir_lista_niveles(t_list *list);
-void liberar_memoria_personaje(t_personaje *personaje);
 t_list *create_lista_niveles(t_personaje *personaje, t_config *p);
-void imprimir_personaje(t_personaje *personaje);
 t_personaje_objetivo *create_nivel_objetivo(char objetivo_char);
 void add_list_nivel_objetivos(char *objetivo, t_list *list_objetivos);
 
@@ -85,19 +82,17 @@ int _is_next_level(t_personaje_nivel *p);
 char *proximoNivel(t_list *niveles);
 char *transformNivel_to_send(char *nivel, char **miNivAux);
 int _is_next_obj(t_personaje_objetivo *o);
-char proximoRecurso(t_list *niveles, char *nivActual);
-Posicion *proximaPosicion(Posicion *posActual, Posicion *posProxRec);
-void reiniciarNivel(t_list *niveles, char *nivActual);
-void analizarRecurso(Posicion *posActual, Posicion *posProxRec, char *state, char proxRec);
+char proximoRecurso(t_list *niveles);
+Posicion *proximaPosicion();
+void reiniciarNivel(t_list *niveles);
+void analizarRecurso();
 bool recursoAlcanzado(Posicion *pos1, Posicion *pos2);
-void agregarRecurso(t_list *niveles, char *nivActual, char proxRec);
+void agregarRecurso(t_list *niveles);
 bool nivelTerminado(t_list *niveles, char *nivActual);
 bool ganado(t_list *niveles);
-Posicion *realizarMovimiento(Posicion *posActual, Posicion *posProxRec);
-void morir(t_personaje *personaje, t_personaje *personaje_init, CCB clientCCB_niv, Posicion *posProxRec, char state, char *nivActual);
+Posicion *realizarMovimiento();
+void morir();
 void rutinaSignal(int n);
-
-
 
 
 #endif /* PROCESOPERSONAJE_H_ */

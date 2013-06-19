@@ -2,17 +2,17 @@
 
 
 t_personaje *personaje;
-t_personaje *personaje_init;
 
 //variables locales //VER
 char state = NUEVO_NIVEL;
-Posicion *posProxRec;
-char proxRec;
-char proxNiv[20];
-char nivActual[20];
-Posicion *nuevaPos;
-Posicion *posActual;
-bool respuesta_confirmacion;
+Posicion *posicionProximoRecurso;
+char proxRecurso;
+char proxNivel[20];
+char nivelActual[20];
+Posicion *nuevaPosicion;
+Posicion *posicionActual;
+bool respuestaConfirmacionRecurso;
+char *archivo_config;
 
 t_log* logger;
 
@@ -23,8 +23,6 @@ CCB clientCCB_pln;
 
 int main(int argc, char *argv[]) {
 
-	char *archivo_config;
-
 	if (argc < 2) {
 		fprintf(stderr, "Faltan argumentos. personaje archivoconfig\n");
 		exit(1);
@@ -33,7 +31,6 @@ int main(int argc, char *argv[]) {
 	archivo_config = argv[1];
 
 	//inicializo el personaje desde el archivo config
-
 	personaje = read_personaje_archivo_configuracion(archivo_config);
 	if (personaje == NULL) {
 		fprintf(stderr, "No se pudo leer el archivo de configuracion %s\n", archivo_config);
@@ -43,24 +40,21 @@ int main(int argc, char *argv[]) {
 	//instancio el logger
 	logger = log_create("personaje.log", "ProcesoPersonaje", true, LOG_LEVEL_INFO);
 
-	personaje_init = personaje;
-	strcpy(nivActual,"");
-	posActual = (Posicion*)personaje->personaje_posicion_actual;
+
+	strcpy(nivelActual,"");
+	posicionActual = (Posicion*)personaje->personaje_posicion_actual;
 
 
-	//declaro las se?ales
-
+	//declaro las seniales
 	signal(SIGTERM, rutinaSignal);
 	signal(SIGUSR1, rutinaSignal);
 
 	//inicializo la cola de mensajes
-
 	t_queue* colaDeMensajes;
 	colaDeMensajes = queue_create();
 	Mensaje* mensaje;
 
 	//mientras tenga algun mensaje del Server
-
 		while(1){
 			//analiza el estado actual del proceso y en base a eso, actua
 			switch (state){
@@ -72,6 +66,7 @@ int main(int argc, char *argv[]) {
 
 					//verifico si gane
 					if(ganado(personaje->personaje_niveles)){
+						//aviso al orquestador que gane
 						mandarMensaje(clientCCB_orq.sockfd,GANE,sizeof(personaje->personaje_simbolo),(char *)&personaje->personaje_simbolo);
 
 						state = WIN;
@@ -82,20 +77,15 @@ int main(int argc, char *argv[]) {
 					} else{
 
 					//mando el primer mensaje al orquestador solicitando informacion del nivel y su planificador
+					strcpy(proxNivel, proximoNivel(personaje->personaje_niveles));
 
-					strcpy(proxNiv, proximoNivel(personaje->personaje_niveles));
-					//proximoNivel(proxNiv, personaje->personaje_niveles);
-					//char miNiv[3];
-					//char *miNivAux;
-					//transformNivel_to_send(proxNiv, &miNivAux);
-					//strcpy(miNiv, miNivAux);
-
-					mandarMensaje(clientCCB_orq.sockfd,REQUEST_DATA_NIVEL,strlen(proxNiv)+1,proxNiv);
+					mandarMensaje(clientCCB_orq.sockfd,REQUEST_DATA_NIVEL,strlen(proxNivel)+1,proxNivel);
 
 					//loggeo la solicitud de DATA_NIVEL al orquestador
-					log_info(logger, string_from_format("personaje %s solicita al orquestador DATA_NIVEL del nivel %s", personaje->personaje_nombre, proxNiv));
+					log_info(logger, string_from_format("personaje %s solicita al orquestador DATA_NIVEL del %s", personaje->personaje_nombre, proxNivel));
 
 					state = WAIT_DATA_LEVEL;
+					log_info(logger, string_from_format("personaje %s cambia a estado %d", personaje->personaje_nombre, state));
 					}
 
 					break;
@@ -108,7 +98,8 @@ int main(int argc, char *argv[]) {
 						//analiza los mensajes recibidos y en base a eso, actua
 						switch(mensaje->type){
 							case DATANIVEL:
-								strcpy(nivActual, proxNiv);
+								//almaceno los datos recibidos en estructuras auxiliares
+								strcpy(nivelActual, proxNivel);
 								Data_Nivel *data_new = (Data_Nivel*) mensaje->data;
 								Nivel nivel_new = data_new->miNivel;
 								Planificador planificador_new = data_new->miPlanificador;
@@ -122,7 +113,7 @@ int main(int argc, char *argv[]) {
 
 								//conecto al nivel actual y loggeo
 								clientCCB_niv = connectServer((char*)nivel_new.IP, (int)nivel_new.PORT);
-								log_info(logger, string_from_format("personaje %s se conecta a nivel %s", personaje->personaje_nombre, nivActual));
+								log_info(logger, string_from_format("personaje %s se conecta a %s", personaje->personaje_nombre, nivelActual));
 
 								Personaje *personajeSend = malloc(sizeof(Personaje));
 								strcpy(personajeSend->ID,string_from_format("P%c",personaje->personaje_simbolo));
@@ -131,17 +122,17 @@ int main(int argc, char *argv[]) {
 								log_info(logger,"mande HANDSHAKE a nivel");
 
 
-								//conecyo al planificador del nivel actual y loggeo
+								//conecto al planificador del nivel actual y loggeo
 								clientCCB_pln = connectServer((char*)planificador_new.IP, (int)planificador_new.PORT);
-								log_info(logger, string_from_format("personaje %s se conecta a planificador de nivel %s", personaje->personaje_nombre, nivActual));
+								log_info(logger, string_from_format("personaje %s se conecta a planificador de %s", personaje->personaje_nombre, nivelActual));
 
 								mandarMensaje(clientCCB_pln.sockfd, HANDSHAKE,sizeof(personajeSend),personajeSend);
 								log_info(logger,"mande HANDSHAKE a planificador");
 
-
 								free(personajeSend);
 
 								state = STANDBY;
+								log_info(logger, string_from_format("personaje %s cambia a estado %d", personaje->personaje_nombre, state));
 
 								break;
 						}
@@ -157,34 +148,38 @@ int main(int argc, char *argv[]) {
 							case MOVIMIENTO_PERMITIDO:
 								log_info(logger, "llego mensaje MOVIMIENTO_PERMITIDO");
 								//si tengo la poscion del proximo recurso se mueve
-								if(posProxRec != NULL){
-									log_info(logger,"tengo posicion de recurso");
-									nuevaPos = realizarMovimiento(posActual, posProxRec);
-									posActual = nuevaPos;
-									((Posicion*)(personaje->personaje_posicion_actual))->POS_X = posActual->POS_X;
-									((Posicion*)(personaje->personaje_posicion_actual))->POS_Y = posActual->POS_Y;
+								if(posicionProximoRecurso != NULL){
+									log_info(logger,"tengo posicion de recurso que necesito");
+
+									//realizo el movimiento y guardo nueva posicion del personaje
+									nuevaPosicion = realizarMovimiento();
+									posicionActual = nuevaPosicion;
+									((Posicion*)(personaje->personaje_posicion_actual))->POS_X = posicionActual->POS_X;
+									((Posicion*)(personaje->personaje_posicion_actual))->POS_Y = posicionActual->POS_Y;
 
 									//loggeo de la nueva posicion del personaje
 									log_info(logger, string_from_format("personaje %s nueva posicion: (%d,%d)", personaje->personaje_nombre, personaje->personaje_posicion_actual->POS_X, personaje->personaje_posicion_actual->POS_Y));
 
-									//analiza si llego a la posicion del proximo recurso
-									analizarRecurso(posActual, posProxRec, &state, (char) proxRec);
+									//analiza si llego a la posicion del proximo recurso (adentro manda los mensajes)
+									analizarRecurso();
 								} else{
 									log_info(logger,"no tengo posicion de recurso");
 									//solicitar posicion del proximo recurso y loggea solicitud
-									proxRec = proximoRecurso(personaje->personaje_niveles, nivActual);
+									proxRecurso = proximoRecurso(personaje->personaje_niveles);
 
-									mandarMensaje(clientCCB_niv.sockfd,REQUEST_POS_RECURSO, sizeof(proxRec),(char *)&proxRec);
+									mandarMensaje(clientCCB_niv.sockfd,REQUEST_POS_RECURSO, sizeof(proxRecurso),(char *)&proxRecurso);
 
-									log_info(logger, string_from_format("personaje %s solicita posicion del recurso %c a nivel %s", personaje->personaje_nombre, proxRec, nivActual));
+									log_info(logger, string_from_format("personaje %s solicita posicion del recurso %c a %s", personaje->personaje_nombre, proxRecurso, nivelActual));
 
 									state = WAIT_POS_REC;
 								}
 								break;
 
 							case MORISTE_PERSONAJE:
-								//recibe mensaje de muerte por interbloqueo
-								morir(personaje, personaje_init, clientCCB_niv, posProxRec, state, nivActual);
+								//recibe mensaje de muerte por interbloqueo, muere y loggea
+								morir();
+
+								log_info(logger, string_from_format("personaje %s murio por interbloqueo en %s", personaje->personaje_nombre, nivelActual));
 
 								break;
 							}
@@ -198,16 +193,16 @@ int main(int argc, char *argv[]) {
 
 						switch(mensaje->type){
 							case POSICION_RECURSO:
-								posProxRec = (Posicion*) mensaje->data;
-								log_info(logger, string_from_format("recibi la posicion del recurso %c: (%d,%d)", proxRec, posProxRec->POS_X, posProxRec->POS_Y));
-								nuevaPos = realizarMovimiento(posActual, posProxRec);
-								posActual = nuevaPos;
-								((Posicion*)(personaje->personaje_posicion_actual))->POS_X = posActual->POS_X;
-								((Posicion*)(personaje->personaje_posicion_actual))->POS_Y = posActual->POS_Y;
+								posicionProximoRecurso = (Posicion*) mensaje->data;
+								log_info(logger, string_from_format("recibi la posicion del recurso %c: (%d,%d)", proxRecurso, posicionProximoRecurso->POS_X, posicionProximoRecurso->POS_Y));
+								nuevaPosicion = realizarMovimiento();
+								posicionActual = nuevaPosicion;
+								((Posicion*)(personaje->personaje_posicion_actual))->POS_X = posicionActual->POS_X;
+								((Posicion*)(personaje->personaje_posicion_actual))->POS_Y = posicionActual->POS_Y;
 
 								log_info(logger, string_from_format("personaje %s nueva posicion: (%d,%d)", personaje->personaje_nombre, personaje->personaje_posicion_actual->POS_X, personaje->personaje_posicion_actual->POS_Y));
 
-								analizarRecurso(posActual, posProxRec, &state, (char) proxRec);
+								analizarRecurso();
 						}
 						break;
 						borrarMensaje(mensaje);
@@ -219,42 +214,43 @@ int main(int argc, char *argv[]) {
 
 						log_info(logger, string_from_format("Recibi mensaje: %d", (int)(mensaje->type)));
 
-						//respuesta_confirmacion = ((bool)*((int*)(mensaje->data)));
-						respuesta_confirmacion = *(bool*)mensaje->data;
-						log_info(logger, string_from_format("Recibi respuesta: %d", (respuesta_confirmacion)));
+						respuestaConfirmacionRecurso = *(bool*)mensaje->data;
+
+						log_info(logger, string_from_format("Recibi respuesta: %d", (respuestaConfirmacionRecurso)));
 
 						switch(mensaje->type){
 							case CONFIRMAR_RECURSO:
 								//si le otorgaron el recurso lo agrega y avisa que termino el turno
-								if(respuesta_confirmacion){
+								if(respuestaConfirmacionRecurso){
 
 									mandarMensaje(clientCCB_pln.sockfd,TERMINE_TURNO,0,NULL);
 
-									agregarRecurso(personaje->personaje_niveles, nivActual, proxRec);
+									agregarRecurso(personaje->personaje_niveles);
+
+									posicionProximoRecurso = NULL;
 
 									//loggea la obtencion del recurso y la finalizacion del turno
-									log_info(logger, string_from_format("personaje %s obtuvo recurso %c en nivel %s", personaje->personaje_nombre, proxRec, nivActual));
-									posProxRec = NULL;
+									log_info(logger, string_from_format("personaje %s obtuvo recurso %c en %s", personaje->personaje_nombre, proxRecurso, nivelActual));
 
-									log_info(logger, string_from_format("personaje %s termino turno en nivel %s", personaje->personaje_nombre, nivActual));
+									log_info(logger, string_from_format("personaje %s termino turno en %s", personaje->personaje_nombre, nivelActual));
 
 									//verifico si el personaje finalizo el nivel
-									if(nivelTerminado(personaje->personaje_niveles, nivActual)){
+									if(nivelTerminado(personaje->personaje_niveles, nivelActual)){
 										mandarMensaje(clientCCB_niv.sockfd,TERMINE_NIVEL,sizeof(NULL),NULL);
 
 										//loggea la finalizacion del nivel actual
-										log_info(logger, string_from_format("personaje %s termino nivel %s", personaje->personaje_nombre, nivActual));
+										log_info(logger, string_from_format("personaje %s termino %s", personaje->personaje_nombre, nivelActual));
 
 										((Posicion*)(personaje->personaje_posicion_actual))->POS_X = 0;
 										((Posicion*)(personaje->personaje_posicion_actual))->POS_Y = 0;
 
 										//personaje se desconecta del nivel actual y loggea la desconexion
 										close(clientCCB_niv.sockfd);
-										log_info(logger, string_from_format("personaje %s se desconecta del nivel %s", personaje->personaje_nombre, nivActual));
+										log_info(logger, string_from_format("personaje %s se desconecta del %s", personaje->personaje_nombre, nivelActual));
 
 										//personaje se desconecta del planificador del nivel actual y loggea la desconexion
 										close(clientCCB_pln.sockfd);
-										log_info(logger, string_from_format("personaje %s se desconecta del planificador de nivel %s", personaje->personaje_nombre, nivActual));
+										log_info(logger, string_from_format("personaje %s se desconecta del planificador de %s", personaje->personaje_nombre, nivelActual));
 
 										state = NUEVO_NIVEL;
 									}else{
@@ -263,9 +259,9 @@ int main(int argc, char *argv[]) {
 									}
 
 								} else{
-									mandarMensaje(clientCCB_pln.sockfd,PERSONAJE_BLOQUEADO,sizeof(proxRec), (char *)&proxRec);
+									mandarMensaje(clientCCB_pln.sockfd,PERSONAJE_BLOQUEADO,sizeof(proxRecurso), (char *)&proxRecurso);
 
-									log_info(logger, string_from_format("personaje %s se encuentra bloqueado por el recurso %c en el nivel %s", personaje->personaje_nombre, proxRec, nivActual));
+									log_info(logger, string_from_format("personaje %s se encuentra bloqueado por el recurso %c en el %s", personaje->personaje_nombre, proxRecurso, nivelActual));
 
 									state = STANDBY;
 								}
@@ -277,6 +273,8 @@ int main(int argc, char *argv[]) {
 						break;
 
 					case WIN:
+
+						log_info(logger, string_from_format("personaje %s gano su plan de niveles!",personaje->personaje_nombre));
 
 						log_destroy(logger);
 
@@ -294,8 +292,8 @@ int _is_next_level(t_personaje_nivel *p){
 }
 
 char* proximoNivel(t_list *niveles){
-	t_personaje_nivel *auxNiv = list_find(niveles, (void*) _is_next_level);
-	return auxNiv->personaje_nivel;
+	t_personaje_nivel *auxNivel = list_find(niveles, (void*) _is_next_level);
+	return auxNivel->personaje_nivel;
 }
 
 char* transformNivel_to_send(char *nivel, char **miNivAux){
@@ -307,98 +305,96 @@ int _is_next_obj(t_personaje_objetivo *o){
 	return !(o->tiene_objetivo);
 }
 
-char proximoRecurso(t_list *niveles, char *nivActual){
-	t_personaje_nivel *auxNiv = list_find(niveles, (void*) _is_next_level);
-	t_personaje_objetivo *auxObj = list_find(auxNiv->personaje_objetivos, (void*) _is_next_obj);
+char proximoRecurso(t_list *niveles){
+	t_personaje_nivel *auxNivel = list_find(niveles, (void*) _is_next_level);
+	t_personaje_objetivo *auxObjetivo = list_find(auxNivel->personaje_objetivos, (void*) _is_next_obj);
 
-	return auxObj->objetivo;
+	return auxObjetivo->objetivo;
 }
 
-Posicion *proximaPosicion(Posicion *posActual, Posicion *posProxRec){
-	Posicion *pos = posActual;
-	if((pos->POS_X < posProxRec->POS_X) && (pos->POS_X != posProxRec->POS_X)){
+Posicion *proximaPosicion(){
+	Posicion *pos = posicionActual;
+	if((pos->POS_X < posicionProximoRecurso->POS_X) && (pos->POS_X != posicionProximoRecurso->POS_X)){
 		pos->POS_X ++;
 		return pos;
-	} else if((pos->POS_X > posProxRec->POS_X) && (pos->POS_X != posProxRec->POS_X)){
+	} else if((pos->POS_X > posicionProximoRecurso->POS_X) && (pos->POS_X != posicionProximoRecurso->POS_X)){
 		pos->POS_X --;
 		return pos;
-	} else if((pos->POS_Y > posProxRec->POS_Y) && (pos->POS_Y != posProxRec->POS_Y)){
+	} else if((pos->POS_Y > posicionProximoRecurso->POS_Y) && (pos->POS_Y != posicionProximoRecurso->POS_Y)){
 		pos->POS_Y --;
 		return pos;
-	} else if((pos->POS_Y < posProxRec->POS_Y) && (pos->POS_Y != posProxRec->POS_Y)){
-		posActual->POS_Y ++;
-		return posActual;
+	} else if((pos->POS_Y < posicionProximoRecurso->POS_Y) && (pos->POS_Y != posicionProximoRecurso->POS_Y)){
+		posicionActual->POS_Y ++;
+		return posicionActual;
 	}
-	return posActual;
+	return posicionActual;
 }
 
-void reiniciarNivel(t_list *niveles, char *nivActual){
-	t_personaje_nivel *nn = malloc(sizeof(t_personaje_nivel));
+void reiniciarNivel(t_list *niveles){
+	t_personaje_nivel *nn;
 	int i = 0;
 	int j = 0;
-	int lenNiv = list_size(niveles);
-	t_personaje_objetivo *auxObj;
-	t_personaje_nivel *auxNiv;
-	while((j<lenNiv) && (!(string_equals_ignore_case(nivActual, auxNiv->personaje_nivel)))){
-		auxNiv = list_get(niveles,j);
+	int lenNiveles = list_size(niveles);
+	t_personaje_objetivo *auxObjetivo;
+	t_personaje_nivel *auxNivel;
+	while((j<lenNiveles) && (!(string_equals_ignore_case(nivelActual, auxNivel->personaje_nivel)))){
+		auxNivel = list_get(niveles,j);
 		j++;
 	}
-	int lenObj = list_size(auxNiv->personaje_objetivos);
-	while(i<lenObj){
-		auxObj = list_get(auxNiv->personaje_objetivos,i);
-		auxObj->tiene_objetivo = false;
+	int lenObjetivos = list_size(auxNivel->personaje_objetivos);
+	while(i<lenObjetivos){
+		auxObjetivo = list_get(auxNivel->personaje_objetivos,i);
+		auxObjetivo->tiene_objetivo = false;
 		i++;
 	}
-	auxNiv->termino_nivel = true;
-	nn = list_replace(niveles, j, auxNiv);
-	free(nn);
+	auxNivel->termino_nivel = true;
+	nn = list_replace(niveles, j, auxNivel);
 }
 
 bool recursoAlcanzado(Posicion *pos1, Posicion *pos2){
-	return ((pos1->POS_X == pos2->POS_X)&&(pos1->POS_Y==pos2->POS_Y));
+	return ((pos1->POS_X==pos2->POS_X)&&(pos1->POS_Y==pos2->POS_Y));
 }
 
 
-Posicion *realizarMovimiento(Posicion *posActual, Posicion *posProxRec){
-	Posicion *nuevaPos = proximaPosicion(posActual, posProxRec);
+Posicion *realizarMovimiento(){
+	Posicion *nuevaPos = proximaPosicion();
 
 	mandarMensaje(clientCCB_niv.sockfd,REQUEST_MOVIMIENTO,sizeof(Posicion), nuevaPos);
 	
-	log_info(logger, string_from_format("personaje %s solicita movimiento a nivel %s a la posicion (%d, %d)", personaje->personaje_nombre, nivActual, nuevaPos->POS_X, nuevaPos->POS_Y));
+	log_info(logger, string_from_format("personaje %s solicita movimiento a %s a la posicion (%d, %d)", personaje->personaje_nombre, nivelActual, nuevaPos->POS_X, nuevaPos->POS_Y));
 
 	return nuevaPos;
 }
 
-void analizarRecurso(Posicion *posActual, Posicion *posProxRec, char *state, char proxRec){
-	if(recursoAlcanzado(posActual, posProxRec)){
+void analizarRecurso(){
+	if(recursoAlcanzado(posicionActual, posicionProximoRecurso)){
 		int res;
-		res = mandarMensaje(clientCCB_niv.sockfd ,REQUEST_RECURSO,sizeof(proxRec), &proxRec);
-		log_info(logger, string_from_format("Pedido enviado con resultado %c, al filedesc %d", proxRec, clientCCB_niv.sockfd));
-		*state = WAIT_REC;
-		log_info(logger, "Paso a estado WAIT_REC");
+		res = mandarMensaje(clientCCB_niv.sockfd ,REQUEST_RECURSO,sizeof(proxRecurso), &proxRecurso);
+		log_info(logger, string_from_format("Pedido enviado recurso %c con resultado %d, al filedesc %d", proxRecurso, res, clientCCB_niv.sockfd));
+		state = WAIT_REC;
 	} else{
 		log_info(logger, "no llegue al recurso");
 		
 		mandarMensaje(clientCCB_pln.sockfd,TERMINE_TURNO,0,NULL);
 
-		log_info(logger, string_from_format("personaje %s termino turno en nivel %s", personaje->personaje_nombre, nivActual));
+		log_info(logger, string_from_format("personaje %s termino turno en %s", personaje->personaje_nombre, nivelActual));
 
-		*state = STANDBY;
+		state = STANDBY;
 	}
 }
 
-void agregarRecurso(t_list *niveles, char *nivActual, char proxRec){
-	t_personaje_nivel *auxNiv = list_find(niveles, (void*) _is_next_level);
+void agregarRecurso(t_list *niveles){
+	t_personaje_nivel *auxNivel = list_find(niveles, (void*) _is_next_level);
 	int i = 0;
-	t_list *auxListObj = auxNiv->personaje_objetivos;
-	int len = list_size(auxListObj);
-	t_personaje_objetivo *auxObj;
+	t_list *auxListObjetivos = auxNivel->personaje_objetivos;
+	int len = list_size(auxListObjetivos);
+	t_personaje_objetivo *auxObjetivo;
 	t_personaje_nivel *nn;
 	while(i<len){
-		auxObj = list_get(auxListObj, i);
-		if(auxObj->objetivo == proxRec){
-			auxObj->tiene_objetivo = true;
-			nn = list_replace(auxListObj, i, auxObj);
+		auxObjetivo = list_get(auxListObjetivos, i);
+		if(auxObjetivo->objetivo == proxRecurso){
+			auxObjetivo->tiene_objetivo = true;
+			nn = list_replace(auxListObjetivos, i, auxObjetivo);
 			break;
 		} else{
 			i++;
@@ -435,11 +431,11 @@ bool nivelTerminado(t_list *niveles, char *nivActual){
 
 bool ganado(t_list *niveles){
 	int i = 0;
-	t_personaje_nivel *auxNiv;
+	t_personaje_nivel *auxNivel;
 	int len = list_size(niveles);
 	while(i<len){
-		auxNiv = list_get(niveles, i);
-		if(nivelTerminado(niveles, auxNiv->personaje_nivel)){
+		auxNivel = list_get(niveles, i);
+		if(nivelTerminado(niveles, auxNivel->personaje_nivel)){
 			i++;
 		} else{
 			return false;
@@ -448,21 +444,21 @@ bool ganado(t_list *niveles){
 	return true;
 }
 
-void morir(t_personaje *personaje, t_personaje *personaje_init, CCB clientCCB_niv, Posicion *posProxRec, char state, char *nivActual){
+void morir(){
 
 	mandarMensaje(clientCCB_niv.sockfd,TERMINE_NIVEL,sizeof(NULL),NULL);
 	personaje->personaje_vidas_restantes --;
 
-	//si no le quedan vidas, reinicia todo de nuevo -> personaje apunta al personaje iniciar
+	//si no le quedan vidas, reinicia todo de nuevo -> personaje apunta al personaje inicial
 	if(personaje->personaje_vidas_restantes == 0){
-		log_info(logger, string_from_format("personaje %s murio por interbloqueo en nivel %s", personaje->personaje_nombre, nivActual));
-		personaje = personaje_init;
+		//reinicio el personaje
+		personaje = read_personaje_archivo_configuracion(archivo_config);
 	} else{
-		reiniciarNivel(personaje->personaje_niveles, nivActual);
+		reiniciarNivel(personaje->personaje_niveles);
 
-		posProxRec = NULL;
+		posicionProximoRecurso = NULL;
 
-		log_info(logger, string_from_format("personaje %s reinicio el nivel %s", personaje->personaje_nombre, nivActual));
+		log_info(logger, string_from_format("personaje %s reinicio el %s", personaje->personaje_nombre, nivelActual));
 
 		state = STANDBY;
 	}
@@ -471,7 +467,7 @@ void morir(t_personaje *personaje, t_personaje *personaje_init, CCB clientCCB_ni
 void rutinaSignal(int n){
 	switch (n) {
 		case SIGTERM:
-			morir(personaje, personaje_init, clientCCB_niv, posProxRec, state, nivActual);
+			morir();
 			log_info(logger, string_from_format("personaje %s murio por SIGTERM", personaje->personaje_nombre));
 
 		break;
@@ -504,18 +500,6 @@ t_personaje *read_personaje_archivo_configuracion(char* path){
 	personaje = create_personaje(p);
 
 	return personaje;
-}
-
-void imprimir_personaje(t_personaje *personaje){
-	printf("%s\n%c\n", personaje->personaje_nombre, personaje->personaje_simbolo);
-
-	imprimir_lista_niveles(personaje->personaje_niveles);
-
-	printf("%d\n", personaje->personaje_vidas);
-
-	printf("%s\n", personaje->personaje_orquestador->IP);
-
-	printf("%d\n", personaje->personaje_orquestador->PORT);
 }
 
 /*NAME: create_personaje
@@ -605,49 +589,6 @@ t_personaje_objetivo *create_nivel_objetivo(char objetivo){
 void add_list_personaje_niveles(char **arr, char *buffer_nivel, t_list *list){
 
 		list_add(list, create_personaje_nivel(buffer_nivel, arr));
-}
-
-void imprimir_lista_niveles(t_list *list){
-
-	int i = 0;
-	t_personaje_nivel *niv;
-	t_personaje_objetivo *obj;
-
-	while(i < (list_size(list))){
-		niv = list_get(list, i);
-
-		printf("\n%s\n", niv->personaje_nivel);
-
-		int j = 0;
-		while(j < (list_size(niv->personaje_objetivos))){
-			obj = list_get(niv->personaje_objetivos,j);
-
-			printf("%c\n", obj->objetivo);
-			printf("%d\n", obj->tiene_objetivo);
-			j++;
-		}
-		printf("\n");
-		i++;
-	}
-}
-
-void liberar_memoria_personaje(t_personaje *personaje){
-	int i = 0;
-	t_personaje_nivel *niv;
-
-	while(i < (list_size(personaje->personaje_niveles))){
-		niv = list_get(personaje->personaje_niveles, i);
-		int j = 0;
-		while(j < (list_size(niv->personaje_objetivos))){
-			free(niv->personaje_objetivos);
-
-			j++;
-		}
-		free(niv);
-		i++;
-	}
-	list_clean(personaje->personaje_niveles);
-	free(personaje);
 }
 
 t_list *create_lista_niveles(t_personaje *personaje, t_config *p){
