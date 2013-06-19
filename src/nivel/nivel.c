@@ -106,6 +106,11 @@ int main(int argc, char *argv[]) {
 		//analiza los mensajes recibidos y en base a eso, actua
 		switch(mensaje->type){
 
+			default:{
+				log_error(logger, "No recibi ningun mensaje");
+			}
+				break;
+
 			case HANDSHAKE: {
 				Personaje *personajeNuevo;
 				personajeNuevo = mensaje->data;
@@ -129,7 +134,8 @@ int main(int argc, char *argv[]) {
 				log_info(logger, string_from_format("Se dibujo el personaje: %c en la pos (0,0)", personajeNuevo->ID));
 
 				
-			}break;
+			}
+				break;
 
 			case REQUEST_POS_RECURSO:
 			{
@@ -217,7 +223,9 @@ int main(int argc, char *argv[]) {
 					log_info(logger, string_from_format("La respuesta es: %d", puedeTomarRecurso));
 
 					restarRecurso(ListaItems, recurso);
+					log_info(logger, "Resto recurso a listaItems");
 					agregarRecursoAPersonaje(personaje,recurso);
+					log_info(logger, string_from_format("Se agrega recurso: %c al personaje: %c", recurso, personaje->id));
 					nivel_gui_dibujar(ListaItems);
 
 				} else {
@@ -234,7 +242,7 @@ int main(int argc, char *argv[]) {
 				//salgo de la region critica
 
 				}
-				break;
+					break;
 			
 
 			//es avisado de que libere recursos y llama al orquestador para avisarle de liberarlos
@@ -484,25 +492,22 @@ void agregarRecursoAPersonaje(PersonajeEnNivel* personaje, char recurso){
 
 	//PersonajeEnNivel* aux = personaje;
 
+	log_info(logger, "Entro en agregar recurso al personaje");
+
 	//si es el recurso que tenia pendiente, lo borra
 	if(personaje->recursoPendiente == recurso){
 
+		log_info(logger, "Es recurso pendiente");
 		quitarSolicitudesDeRecurso(personaje, recurso);
 	}
+
+	log_info(logger, "No es recurso pendiente");
 
 	t_recursos* auxList = personaje->recursos;
 
 	//busco el recurso
-	while( (auxList->sig != NULL) && (auxList->idRecurso != recurso) ){
-		auxList = auxList->sig;
-	}if( auxList->idRecurso == recurso ){
-		//si lo encontro, le suma el recurso a la cant que ya tenia
-		personaje->recursos->cant++;
 
-	}else if((auxList->sig == NULL)){
-
-		//si no lo encontro, lo agrega en la lista de recursos del personaje
-
+	if(auxList == NULL){
 		t_recursos* temp;
 		temp = malloc(sizeof(t_recursos));
 
@@ -511,9 +516,32 @@ void agregarRecursoAPersonaje(PersonajeEnNivel* personaje, char recurso){
 		temp->sig = personaje->recursos;
 
 		personaje->recursos = temp;
+	}else {
+		while( (auxList->sig != NULL) && (auxList->idRecurso != recurso) ){
+			auxList = auxList->sig;
+		}if( auxList->idRecurso == recurso ){
+			log_info(logger, string_from_format("El recurso: %c se agrega al personaje: %c", auxList->idRecurso, personaje->id));
+			//si lo encontro, le suma el recurso a la cant que ya tenia
+			personaje->recursos->cant++;
+			log_info(logger, string_from_format("El recurso: %c tiene: %d recursos", auxList->idRecurso, auxList->cant));
 
-		//free(temp);
+		}else if((auxList->sig == NULL)){
+
+			//si no lo encontro, lo agrega en la lista de recursos del personaje
+
+			t_recursos* temp;
+			temp = malloc(sizeof(t_recursos));
+
+			temp->idRecurso = recurso;
+			temp->cant = 1;
+			temp->sig = personaje->recursos;
+
+			personaje->recursos = temp;
+
+			//free(temp);
+		}
 	}
+
 }
 
 void borrarPersonajeEnNivel(char idPersonaje){

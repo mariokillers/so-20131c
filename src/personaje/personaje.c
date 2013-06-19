@@ -219,7 +219,8 @@ int main(int argc, char *argv[]) {
 
 						log_info(logger, string_from_format("Recibi mensaje: %d", (int)(mensaje->type)));
 
-						respuesta_confirmacion = ((bool)*((int*)(mensaje->data)));
+						//respuesta_confirmacion = ((bool)*((int*)(mensaje->data)));
+						respuesta_confirmacion = *(bool*)mensaje->data;
 						log_info(logger, string_from_format("Recibi respuesta: %d", (respuesta_confirmacion)));
 
 						switch(mensaje->type){
@@ -354,7 +355,7 @@ void reiniciarNivel(t_list *niveles, char *nivActual){
 }
 
 bool recursoAlcanzado(Posicion *pos1, Posicion *pos2){
-	return ((pos1->POS_X==pos2->POS_X)&&(pos1->POS_Y==pos2->POS_Y));
+	return ((pos1->POS_X == pos2->POS_X)&&(pos1->POS_Y==pos2->POS_Y));
 }
 
 
@@ -372,8 +373,9 @@ void analizarRecurso(Posicion *posActual, Posicion *posProxRec, char *state, cha
 	if(recursoAlcanzado(posActual, posProxRec)){
 		int res;
 		res = mandarMensaje(clientCCB_niv.sockfd ,REQUEST_RECURSO,sizeof(proxRec), &proxRec);
-		log_info(logger, string_from_format("Pedido enviado con resultado %d, al filedesc %d", res, clientCCB_niv.sockfd));
+		log_info(logger, string_from_format("Pedido enviado con resultado %c, al filedesc %d", proxRec, clientCCB_niv.sockfd));
 		*state = WAIT_REC;
+		log_info(logger, "Paso a estado WAIT_REC");
 	} else{
 		log_info(logger, "no llegue al recurso");
 		
