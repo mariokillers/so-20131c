@@ -207,7 +207,6 @@ int main(int argc, char *argv[]) {
 								log_info(logger, string_from_format("personaje %s nueva posicion: (%d,%d)", personaje->personaje_nombre, personaje->personaje_posicion_actual->POS_X, personaje->personaje_posicion_actual->POS_Y));
 
 								analizarRecurso(posActual, posProxRec, clientCCB_niv, clientCCB_pln, &state, (char) proxRec);
-							break;
 						}
 						break;
 						borrarMensaje(mensaje);
@@ -217,13 +216,16 @@ int main(int argc, char *argv[]) {
 					if (mensajes(colaDeMensajes, clientCCB_niv)){
 						mensaje = queue_pop(colaDeMensajes);
 
-						switch(mensaje->type){
-						int* respuesta; 
 
-				
+
+						switch(mensaje->type){
+						int respuesta = (int)(*((int*)mensaje->lenght));
+
+						log_info(logger, string_from_format("Recibi respuesta: %d", respuesta));
+
+
 							case CONFIRMAR_RECURSO:
-								respuesta= (int*)mensaje->data;
-								log_info(logger, string_from_format("Recibi respuesta: %d", (*respuesta)));
+
 								//si le otorgaron el recurso lo agrega y avisa que termino el turno
 								if(respuesta){
 									log_info(logger, "Antes de mandar");

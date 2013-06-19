@@ -25,3 +25,1834 @@
 [INFO] 15:50:38:332 ProcesoNivel/(3515:3517): Empieza a ejecutar el hilo interbloqueo
 [INFO] 15:50:38:332 ProcesoNivel/(3515:3517): El hilo interbloqueo entra en la region critica
 [INFO] 15:50:38:332 ProcesoNivel/(3515:3517): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 19:01:30:113 ProcesoNivel/(4114:4114): El nivel se conecto al puerto: 5000
+[INFO] 19:01:30:114 ProcesoNivel/(4114:4114): El nivel: Œ le hizo HANDSHAKE al socket: 6
+[INFO] 19:01:30:115 ProcesoNivel/(4114:4114): El recovery esta activado
+[INFO] 19:01:30:126 ProcesoNivel/(4114:4115): Empieza a ejecutar el hilo interbloqueo
+[INFO] 19:01:30:151 ProcesoNivel/(4114:4114): Terminado dibujar nivel
+[INFO] 19:01:30:151 ProcesoNivel/(4114:4115): El hilo interbloqueo entra en la region critica
+[INFO] 19:01:30:152 ProcesoNivel/(4114:4115): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 19:01:30:152 ProcesoNivel/(4114:4115): El hilo interbloqueo sale de la region critica
+[INFO] 19:01:48:686 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:48:686 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 1
+[INFO] 19:01:48:695 ProcesoNivel/(4114:4114): Recibi HANDSHAKE del personaje: cs
+[INFO] 19:01:48:709 ProcesoNivel/(4114:4114): Se dibujo el personaje: ( en la pos (0,0)
+[INFO] 19:01:48:709 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:48:709 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 3
+[INFO] 19:01:48:709 ProcesoNivel/(4114:4114): Recibi REQUEST_POS_RECURSO
+[INFO] 19:01:48:709 ProcesoNivel/(4114:4114): El recurso pedido es: F
+[INFO] 19:01:48:709 ProcesoNivel/(4114:4114): Mutex de lista de recursos y personajes entra a region critica
+[INFO] 19:01:48:715 ProcesoNivel/(4114:4114): Mando la posicion del recurso F: (23,5)
+[INFO] 19:01:48:723 ProcesoNivel/(4114:4114): Mande la posicion del recurso: F al personaje: @
+[INFO] 19:01:48:723 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:48:723 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:48:723 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:48:723 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(1,0) que me solicito personaje: @
+[INFO] 19:01:48:739 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (1,0)
+[INFO] 19:01:48:739 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(1,0)
+[INFO] 19:01:48:929 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:48:929 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:48:929 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:48:929 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(2,0) que me solicito personaje: @
+[INFO] 19:01:48:934 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (2,0)
+[INFO] 19:01:48:934 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(2,0)
+[INFO] 19:01:49:135 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:49:135 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:49:136 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:49:136 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(3,0) que me solicito personaje: @
+[INFO] 19:01:49:136 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (3,0)
+[INFO] 19:01:49:136 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(3,0)
+[INFO] 19:01:49:341 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:49:341 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:49:341 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:49:342 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(4,0) que me solicito personaje: @
+[INFO] 19:01:49:342 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (4,0)
+[INFO] 19:01:49:342 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(4,0)
+[INFO] 19:01:49:547 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:49:547 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:49:547 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:49:548 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(5,0) que me solicito personaje: @
+[INFO] 19:01:49:548 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (5,0)
+[INFO] 19:01:49:548 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(5,0)
+[INFO] 19:01:49:754 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:49:754 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:49:754 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:49:755 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(6,0) que me solicito personaje: @
+[INFO] 19:01:49:755 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (6,0)
+[INFO] 19:01:49:755 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(6,0)
+[INFO] 19:01:49:958 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:49:959 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:49:959 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:49:959 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(7,0) que me solicito personaje: @
+[INFO] 19:01:49:960 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (7,0)
+[INFO] 19:01:49:960 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(7,0)
+[INFO] 19:01:50:175 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:50:175 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:50:175 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:50:175 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(8,0) que me solicito personaje: @
+[INFO] 19:01:50:176 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (8,0)
+[INFO] 19:01:50:176 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(8,0)
+[INFO] 19:01:50:383 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:50:384 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:50:384 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:50:384 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(9,0) que me solicito personaje: @
+[INFO] 19:01:50:385 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (9,0)
+[INFO] 19:01:50:390 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(9,0)
+[INFO] 19:01:50:590 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:50:591 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:50:591 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:50:591 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(10,0) que me solicito personaje: @
+[INFO] 19:01:50:592 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (10,0)
+[INFO] 19:01:50:592 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(10,0)
+[INFO] 19:01:50:801 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:50:801 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:50:801 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:50:801 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(11,0) que me solicito personaje: @
+[INFO] 19:01:50:802 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (11,0)
+[INFO] 19:01:50:802 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(11,0)
+[INFO] 19:01:51:8 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:51:8 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:51:8 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:51:8 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(12,0) que me solicito personaje: @
+[INFO] 19:01:51:9 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (12,0)
+[INFO] 19:01:51:9 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(12,0)
+[INFO] 19:01:51:213 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:51:214 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:51:214 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:51:214 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(13,0) que me solicito personaje: @
+[INFO] 19:01:51:215 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (13,0)
+[INFO] 19:01:51:215 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(13,0)
+[INFO] 19:01:51:420 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:51:420 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:51:420 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:51:420 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(14,0) que me solicito personaje: @
+[INFO] 19:01:51:421 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (14,0)
+[INFO] 19:01:51:422 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(14,0)
+[INFO] 19:01:51:626 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:51:626 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:51:626 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:51:626 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(15,0) que me solicito personaje: @
+[INFO] 19:01:51:627 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (15,0)
+[INFO] 19:01:51:627 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(15,0)
+[INFO] 19:01:51:838 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:51:838 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:51:838 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:51:838 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(16,0) que me solicito personaje: @
+[INFO] 19:01:51:839 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (16,0)
+[INFO] 19:01:51:839 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(16,0)
+[INFO] 19:01:52:43 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:52:43 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:52:44 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:52:44 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(17,0) que me solicito personaje: @
+[INFO] 19:01:52:44 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (17,0)
+[INFO] 19:01:52:45 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(17,0)
+[INFO] 19:01:52:253 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:52:253 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:52:253 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:52:253 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(18,0) que me solicito personaje: @
+[INFO] 19:01:52:254 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (18,0)
+[INFO] 19:01:52:254 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(18,0)
+[INFO] 19:01:52:464 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:52:464 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:52:464 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:52:464 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(19,0) que me solicito personaje: @
+[INFO] 19:01:52:465 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (19,0)
+[INFO] 19:01:52:465 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(19,0)
+[INFO] 19:01:52:670 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:52:670 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:52:670 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:52:670 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(20,0) que me solicito personaje: @
+[INFO] 19:01:52:671 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (20,0)
+[INFO] 19:01:52:671 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(20,0)
+[INFO] 19:01:52:880 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:52:880 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:52:880 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:52:880 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(21,0) que me solicito personaje: @
+[INFO] 19:01:52:881 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (21,0)
+[INFO] 19:01:52:881 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(21,0)
+[INFO] 19:01:53:86 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:53:86 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:53:86 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:53:86 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(22,0) que me solicito personaje: @
+[INFO] 19:01:53:87 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (22,0)
+[INFO] 19:01:53:87 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(22,0)
+[INFO] 19:01:53:291 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:53:291 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:53:291 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:53:291 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(23,0) que me solicito personaje: @
+[INFO] 19:01:53:292 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (23,0)
+[INFO] 19:01:53:292 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(23,0)
+[INFO] 19:01:53:499 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:53:499 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:53:499 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:53:499 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(23,1) que me solicito personaje: @
+[INFO] 19:01:53:500 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (23,1)
+[INFO] 19:01:53:500 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(23,1)
+[INFO] 19:01:53:715 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:53:715 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:53:715 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:53:715 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(23,2) que me solicito personaje: @
+[INFO] 19:01:53:716 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (23,2)
+[INFO] 19:01:53:716 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(23,2)
+[INFO] 19:01:53:936 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:53:936 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:53:936 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:53:937 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(23,3) que me solicito personaje: @
+[INFO] 19:01:53:943 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (23,3)
+[INFO] 19:01:53:943 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(23,3)
+[INFO] 19:01:54:145 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:54:145 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:54:145 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:54:145 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(23,4) que me solicito personaje: @
+[INFO] 19:01:54:146 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (23,4)
+[INFO] 19:01:54:146 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(23,4)
+[INFO] 19:01:54:350 ProcesoNivel/(4114:4114): Buscando mensaje en cola
+[INFO] 19:01:54:350 ProcesoNivel/(4114:4114): Recibi mensaje de tipo: 10
+[INFO] 19:01:54:351 ProcesoNivel/(4114:4114): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:01:54:351 ProcesoNivel/(4114:4114): Tomo la posicion del recurso:(23,5) que me solicito personaje: @
+[INFO] 19:01:54:351 ProcesoNivel/(4114:4114): Modifico posicion personaje: @ en posicion (23,5)
+[INFO] 19:01:54:351 ProcesoNivel/(4114:4114): Movi el personaje: @ a la posicion:(23,5)
+[INFO] 19:05:44:523 ProcesoNivel/(4450:4450): El nivel se conecto al puerto: 5000
+[INFO] 19:05:44:538 ProcesoNivel/(4450:4450): El nivel: ¼ le hizo HANDSHAKE al socket: 6
+[INFO] 19:05:44:539 ProcesoNivel/(4450:4450): El recovery esta activado
+[INFO] 19:05:44:547 ProcesoNivel/(4450:4451): Empieza a ejecutar el hilo interbloqueo
+[INFO] 19:05:44:565 ProcesoNivel/(4450:4451): El hilo interbloqueo entra en la region critica
+[INFO] 19:05:44:565 ProcesoNivel/(4450:4451): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 19:05:44:566 ProcesoNivel/(4450:4451): El hilo interbloqueo sale de la region critica
+[INFO] 19:05:44:578 ProcesoNivel/(4450:4450): Terminado dibujar nivel
+[INFO] 19:05:51:821 ProcesoNivel/(4450:4450): Buscando mensaje en cola
+[INFO] 19:05:51:821 ProcesoNivel/(4450:4450): Recibi mensaje de tipo: 1
+[INFO] 19:05:51:821 ProcesoNivel/(4450:4450): Recibi HANDSHAKE del personaje: cs
+[INFO] 19:05:51:832 ProcesoNivel/(4450:4450): Se dibujo el personaje:   en la pos (0,0)
+[INFO] 19:05:51:846 ProcesoNivel/(4450:4450): Buscando mensaje en cola
+[INFO] 19:05:51:846 ProcesoNivel/(4450:4450): Recibi mensaje de tipo: 3
+[INFO] 19:05:51:847 ProcesoNivel/(4450:4450): Recibi REQUEST_POS_RECURSO
+[INFO] 19:05:51:847 ProcesoNivel/(4450:4450): El recurso pedido es: F
+[INFO] 19:05:51:847 ProcesoNivel/(4450:4450): Mutex de lista de recursos y personajes entra a region critica
+[INFO] 19:05:51:847 ProcesoNivel/(4450:4450): Mando la posicion del recurso F: (23,5)
+[INFO] 19:05:51:847 ProcesoNivel/(4450:4450): Mande la posicion del recurso: F al personaje: @
+[INFO] 19:05:51:853 ProcesoNivel/(4450:4450): Buscando mensaje en cola
+[INFO] 19:05:51:853 ProcesoNivel/(4450:4450): Recibi mensaje de tipo: 10
+[INFO] 19:05:51:853 ProcesoNivel/(4450:4450): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:05:51:853 ProcesoNivel/(4450:4450): Tomo la posicion del recurso:(1,0) que me solicito personaje: @
+[INFO] 19:05:51:854 ProcesoNivel/(4450:4450): Modifico posicion personaje: @ en posicion (1,0)
+[INFO] 19:05:51:854 ProcesoNivel/(4450:4450): Movi el personaje: @ a la posicion:(1,0)
+[INFO] 19:05:52:72 ProcesoNivel/(4450:4450): Buscando mensaje en cola
+[INFO] 19:05:52:72 ProcesoNivel/(4450:4450): Recibi mensaje de tipo: 10
+[INFO] 19:05:52:72 ProcesoNivel/(4450:4450): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:05:52:72 ProcesoNivel/(4450:4450): Tomo la posicion del recurso:(2,0) que me solicito personaje: @
+[INFO] 19:05:52:73 ProcesoNivel/(4450:4450): Modifico posicion personaje: @ en posicion (2,0)
+[INFO] 19:05:52:74 ProcesoNivel/(4450:4450): Movi el personaje: @ a la posicion:(2,0)
+[INFO] 19:05:52:286 ProcesoNivel/(4450:4450): Buscando mensaje en cola
+[INFO] 19:05:52:286 ProcesoNivel/(4450:4450): Recibi mensaje de tipo: 10
+[INFO] 19:05:52:286 ProcesoNivel/(4450:4450): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:05:52:286 ProcesoNivel/(4450:4450): Tomo la posicion del recurso:(3,0) que me solicito personaje: @
+[INFO] 19:05:52:287 ProcesoNivel/(4450:4450): Modifico posicion personaje: @ en posicion (3,0)
+[INFO] 19:05:52:287 ProcesoNivel/(4450:4450): Movi el personaje: @ a la posicion:(3,0)
+[INFO] 19:05:52:493 ProcesoNivel/(4450:4450): Buscando mensaje en cola
+[INFO] 19:05:52:493 ProcesoNivel/(4450:4450): Recibi mensaje de tipo: 10
+[INFO] 19:05:52:493 ProcesoNivel/(4450:4450): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:05:52:493 ProcesoNivel/(4450:4450): Tomo la posicion del recurso:(4,0) que me solicito personaje: @
+[INFO] 19:05:52:498 ProcesoNivel/(4450:4450): Modifico posicion personaje: @ en posicion (4,0)
+[INFO] 19:05:52:499 ProcesoNivel/(4450:4450): Movi el personaje: @ a la posicion:(4,0)
+[INFO] 19:05:52:700 ProcesoNivel/(4450:4450): Buscando mensaje en cola
+[INFO] 19:05:52:700 ProcesoNivel/(4450:4450): Recibi mensaje de tipo: 10
+[INFO] 19:05:52:700 ProcesoNivel/(4450:4450): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:05:52:700 ProcesoNivel/(4450:4450): Tomo la posicion del recurso:(5,0) que me solicito personaje: @
+[INFO] 19:05:52:702 ProcesoNivel/(4450:4450): Modifico posicion personaje: @ en posicion (5,0)
+[INFO] 19:05:52:702 ProcesoNivel/(4450:4450): Movi el personaje: @ a la posicion:(5,0)
+[INFO] 19:05:52:906 ProcesoNivel/(4450:4450): Buscando mensaje en cola
+[INFO] 19:05:52:906 ProcesoNivel/(4450:4450): Recibi mensaje de tipo: 10
+[INFO] 19:05:52:906 ProcesoNivel/(4450:4450): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:05:52:906 ProcesoNivel/(4450:4450): Tomo la posicion del recurso:(6,0) que me solicito personaje: @
+[INFO] 19:05:52:907 ProcesoNivel/(4450:4450): Modifico posicion personaje: @ en posicion (6,0)
+[INFO] 19:05:52:907 ProcesoNivel/(4450:4450): Movi el personaje: @ a la posicion:(6,0)
+[INFO] 19:05:53:119 ProcesoNivel/(4450:4450): Buscando mensaje en cola
+[INFO] 19:05:53:119 ProcesoNivel/(4450:4450): Recibi mensaje de tipo: 10
+[INFO] 19:05:53:119 ProcesoNivel/(4450:4450): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:05:53:120 ProcesoNivel/(4450:4450): Tomo la posicion del recurso:(7,0) que me solicito personaje: @
+[INFO] 19:05:53:120 ProcesoNivel/(4450:4450): Modifico posicion personaje: @ en posicion (7,0)
+[INFO] 19:05:53:120 ProcesoNivel/(4450:4450): Movi el personaje: @ a la posicion:(7,0)
+[INFO] 19:05:53:330 ProcesoNivel/(4450:4450): Buscando mensaje en cola
+[INFO] 19:05:53:330 ProcesoNivel/(4450:4450): Recibi mensaje de tipo: 10
+[INFO] 19:05:53:331 ProcesoNivel/(4450:4450): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:05:53:331 ProcesoNivel/(4450:4450): Tomo la posicion del recurso:(8,0) que me solicito personaje: @
+[INFO] 19:05:53:331 ProcesoNivel/(4450:4450): Modifico posicion personaje: @ en posicion (8,0)
+[INFO] 19:05:53:332 ProcesoNivel/(4450:4450): Movi el personaje: @ a la posicion:(8,0)
+[INFO] 19:05:53:547 ProcesoNivel/(4450:4450): Buscando mensaje en cola
+[INFO] 19:05:53:547 ProcesoNivel/(4450:4450): Recibi mensaje de tipo: 10
+[INFO] 19:05:53:547 ProcesoNivel/(4450:4450): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:05:53:547 ProcesoNivel/(4450:4450): Tomo la posicion del recurso:(9,0) que me solicito personaje: @
+[INFO] 19:05:53:548 ProcesoNivel/(4450:4450): Modifico posicion personaje: @ en posicion (9,0)
+[INFO] 19:05:53:548 ProcesoNivel/(4450:4450): Movi el personaje: @ a la posicion:(9,0)
+[INFO] 19:05:53:757 ProcesoNivel/(4450:4450): Buscando mensaje en cola
+[INFO] 19:05:53:758 ProcesoNivel/(4450:4450): Recibi mensaje de tipo: 10
+[INFO] 19:05:53:758 ProcesoNivel/(4450:4450): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:05:53:758 ProcesoNivel/(4450:4450): Tomo la posicion del recurso:(10,0) que me solicito personaje: @
+[INFO] 19:05:53:759 ProcesoNivel/(4450:4450): Modifico posicion personaje: @ en posicion (10,0)
+[INFO] 19:05:53:759 ProcesoNivel/(4450:4450): Movi el personaje: @ a la posicion:(10,0)
+[INFO] 19:05:53:972 ProcesoNivel/(4450:4450): Buscando mensaje en cola
+[INFO] 19:05:53:972 ProcesoNivel/(4450:4450): Recibi mensaje de tipo: 10
+[INFO] 19:05:53:972 ProcesoNivel/(4450:4450): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:05:53:973 ProcesoNivel/(4450:4450): Tomo la posicion del recurso:(11,0) que me solicito personaje: @
+[INFO] 19:05:53:973 ProcesoNivel/(4450:4450): Modifico posicion personaje: @ en posicion (11,0)
+[INFO] 19:05:53:974 ProcesoNivel/(4450:4450): Movi el personaje: @ a la posicion:(11,0)
+[INFO] 19:05:54:180 ProcesoNivel/(4450:4450): Buscando mensaje en cola
+[INFO] 19:05:54:180 ProcesoNivel/(4450:4450): Recibi mensaje de tipo: 10
+[INFO] 19:05:54:180 ProcesoNivel/(4450:4450): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:05:54:180 ProcesoNivel/(4450:4450): Tomo la posicion del recurso:(12,0) que me solicito personaje: @
+[INFO] 19:05:54:181 ProcesoNivel/(4450:4450): Modifico posicion personaje: @ en posicion (12,0)
+[INFO] 19:05:54:182 ProcesoNivel/(4450:4450): Movi el personaje: @ a la posicion:(12,0)
+[INFO] 19:05:54:206 ProcesoNivel/(4450:4450): Buscando mensaje en cola
+[INFO] 19:05:54:207 ProcesoNivel/(4450:4450): Recibi mensaje de tipo: 1
+[INFO] 19:05:54:207 ProcesoNivel/(4450:4450): Recibi HANDSHAKE del personaje: cs
+[INFO] 19:05:54:215 ProcesoNivel/(4450:4450): Se dibujo el personaje: ° en la pos (0,0)
+[INFO] 19:05:54:389 ProcesoNivel/(4450:4450): Buscando mensaje en cola
+[INFO] 19:05:54:389 ProcesoNivel/(4450:4450): Recibi mensaje de tipo: 10
+[INFO] 19:05:54:389 ProcesoNivel/(4450:4450): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:05:54:389 ProcesoNivel/(4450:4450): Tomo la posicion del recurso:(13,0) que me solicito personaje: @
+[INFO] 19:05:54:390 ProcesoNivel/(4450:4450): Modifico posicion personaje: @ en posicion (13,0)
+[INFO] 19:05:54:390 ProcesoNivel/(4450:4450): Movi el personaje: @ a la posicion:(13,0)
+[INFO] 19:05:54:601 ProcesoNivel/(4450:4450): Buscando mensaje en cola
+[INFO] 19:05:54:601 ProcesoNivel/(4450:4450): Recibi mensaje de tipo: 10
+[INFO] 19:05:54:601 ProcesoNivel/(4450:4450): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:05:54:601 ProcesoNivel/(4450:4450): Tomo la posicion del recurso:(14,0) que me solicito personaje: @
+[INFO] 19:05:54:602 ProcesoNivel/(4450:4450): Modifico posicion personaje: @ en posicion (14,0)
+[INFO] 19:05:54:602 ProcesoNivel/(4450:4450): Movi el personaje: @ a la posicion:(14,0)
+[INFO] 19:06:19:984 ProcesoNivel/(4450:4450): Buscando mensaje en cola
+[INFO] 19:06:19:984 ProcesoNivel/(4450:4450): Recibi mensaje de tipo: 3
+[INFO] 19:06:19:984 ProcesoNivel/(4450:4450): Recibi REQUEST_POS_RECURSO
+[INFO] 19:06:19:985 ProcesoNivel/(4450:4450): El recurso pedido es: F
+[INFO] 19:06:19:985 ProcesoNivel/(4450:4450): Mutex de lista de recursos y personajes entra a region critica
+[INFO] 19:06:19:987 ProcesoNivel/(4450:4450): Mando la posicion del recurso F: (23,5)
+[INFO] 19:06:19:987 ProcesoNivel/(4450:4450): Mande la posicion del recurso: F al personaje: ?
+[INFO] 19:10:02:161 ProcesoNivel/(4536:4536): El nivel se conecto al puerto: 5000
+[INFO] 19:10:02:162 ProcesoNivel/(4536:4536): El nivel: | le hizo HANDSHAKE al socket: 6
+[INFO] 19:10:02:163 ProcesoNivel/(4536:4536): El recovery esta activado
+[INFO] 19:10:02:175 ProcesoNivel/(4536:4537): Empieza a ejecutar el hilo interbloqueo
+[INFO] 19:10:02:207 ProcesoNivel/(4536:4537): El hilo interbloqueo entra en la region critica
+[INFO] 19:10:02:207 ProcesoNivel/(4536:4537): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 19:10:02:207 ProcesoNivel/(4536:4537): El hilo interbloqueo sale de la region critica
+[INFO] 19:10:02:212 ProcesoNivel/(4536:4536): Terminado dibujar nivel
+[INFO] 19:10:09:487 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:09:488 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 1
+[INFO] 19:10:09:488 ProcesoNivel/(4536:4536): Recibi HANDSHAKE del personaje: cs
+[INFO] 19:10:09:495 ProcesoNivel/(4536:4536): Se dibujo el personaje:   en la pos (0,0)
+[INFO] 19:10:09:511 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:09:512 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 3
+[INFO] 19:10:09:512 ProcesoNivel/(4536:4536): Recibi REQUEST_POS_RECURSO
+[INFO] 19:10:09:512 ProcesoNivel/(4536:4536): El recurso pedido es: F
+[INFO] 19:10:09:512 ProcesoNivel/(4536:4536): Mutex de lista de recursos y personajes entra a region critica
+[INFO] 19:10:09:513 ProcesoNivel/(4536:4536): Mando la posicion del recurso F: (23,5)
+[INFO] 19:10:09:513 ProcesoNivel/(4536:4536): Mande la posicion del recurso: F al personaje: @
+[INFO] 19:10:09:517 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:09:517 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:09:517 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:09:517 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(1,0) que me solicito personaje: @
+[INFO] 19:10:09:518 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (1,0)
+[INFO] 19:10:09:519 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(1,0)
+[INFO] 19:10:09:730 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:09:731 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:09:731 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:09:731 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(2,0) que me solicito personaje: @
+[INFO] 19:10:09:732 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (2,0)
+[INFO] 19:10:09:732 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(2,0)
+[INFO] 19:10:09:937 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:09:937 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:09:937 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:09:937 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(3,0) que me solicito personaje: @
+[INFO] 19:10:09:938 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (3,0)
+[INFO] 19:10:09:938 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(3,0)
+[INFO] 19:10:10:143 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:10:143 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:10:143 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:10:143 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(4,0) que me solicito personaje: @
+[INFO] 19:10:10:144 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (4,0)
+[INFO] 19:10:10:144 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(4,0)
+[INFO] 19:10:10:350 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:10:351 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:10:351 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:10:351 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(5,0) que me solicito personaje: @
+[INFO] 19:10:10:360 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (5,0)
+[INFO] 19:10:10:360 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(5,0)
+[INFO] 19:10:10:552 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:10:552 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:10:552 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:10:553 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(6,0) que me solicito personaje: @
+[INFO] 19:10:10:553 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (6,0)
+[INFO] 19:10:10:553 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(6,0)
+[INFO] 19:10:10:768 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:10:769 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:10:769 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:10:769 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(7,0) que me solicito personaje: @
+[INFO] 19:10:10:771 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (7,0)
+[INFO] 19:10:10:771 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(7,0)
+[INFO] 19:10:10:974 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:10:974 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:10:975 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:10:975 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(8,0) que me solicito personaje: @
+[INFO] 19:10:10:981 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (8,0)
+[INFO] 19:10:10:981 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(8,0)
+[INFO] 19:10:11:196 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:11:196 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:11:197 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:11:197 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(9,0) que me solicito personaje: @
+[INFO] 19:10:11:206 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (9,0)
+[INFO] 19:10:11:206 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(9,0)
+[INFO] 19:10:11:400 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:11:400 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:11:400 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:11:400 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(10,0) que me solicito personaje: @
+[INFO] 19:10:11:401 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (10,0)
+[INFO] 19:10:11:401 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(10,0)
+[INFO] 19:10:11:609 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:11:609 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:11:609 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:11:609 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(11,0) que me solicito personaje: @
+[INFO] 19:10:11:610 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (11,0)
+[INFO] 19:10:11:610 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(11,0)
+[INFO] 19:10:11:819 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:11:819 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:11:819 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:11:820 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(12,0) que me solicito personaje: @
+[INFO] 19:10:11:820 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (12,0)
+[INFO] 19:10:11:821 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(12,0)
+[INFO] 19:10:12:34 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:12:34 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:12:34 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:12:34 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(13,0) que me solicito personaje: @
+[INFO] 19:10:12:35 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (13,0)
+[INFO] 19:10:12:35 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(13,0)
+[INFO] 19:10:12:241 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:12:241 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:12:241 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:12:241 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(14,0) que me solicito personaje: @
+[INFO] 19:10:12:242 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (14,0)
+[INFO] 19:10:12:242 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(14,0)
+[INFO] 19:10:12:454 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:12:455 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:12:455 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:12:455 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(15,0) que me solicito personaje: @
+[INFO] 19:10:12:456 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (15,0)
+[INFO] 19:10:12:456 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(15,0)
+[INFO] 19:10:12:669 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:12:670 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:12:670 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:12:670 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(16,0) que me solicito personaje: @
+[INFO] 19:10:12:671 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (16,0)
+[INFO] 19:10:12:671 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(16,0)
+[INFO] 19:10:12:884 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:12:884 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:12:884 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:12:884 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(17,0) que me solicito personaje: @
+[INFO] 19:10:12:888 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (17,0)
+[INFO] 19:10:12:889 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(17,0)
+[INFO] 19:10:13:90 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:13:90 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:13:90 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:13:90 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(18,0) que me solicito personaje: @
+[INFO] 19:10:13:91 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (18,0)
+[INFO] 19:10:13:91 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(18,0)
+[INFO] 19:10:13:297 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:13:298 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:13:298 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:13:298 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(19,0) que me solicito personaje: @
+[INFO] 19:10:13:299 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (19,0)
+[INFO] 19:10:13:299 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(19,0)
+[INFO] 19:10:13:508 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:13:509 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:13:509 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:13:509 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(20,0) que me solicito personaje: @
+[INFO] 19:10:13:510 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (20,0)
+[INFO] 19:10:13:510 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(20,0)
+[INFO] 19:10:13:720 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:13:720 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:13:721 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:13:721 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(21,0) que me solicito personaje: @
+[INFO] 19:10:13:722 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (21,0)
+[INFO] 19:10:13:722 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(21,0)
+[INFO] 19:10:13:935 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:13:935 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:13:936 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:13:936 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(22,0) que me solicito personaje: @
+[INFO] 19:10:13:936 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (22,0)
+[INFO] 19:10:13:937 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(22,0)
+[INFO] 19:10:14:143 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:14:143 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:14:143 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:14:143 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(23,0) que me solicito personaje: @
+[INFO] 19:10:14:144 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (23,0)
+[INFO] 19:10:14:144 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(23,0)
+[INFO] 19:10:14:345 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:14:345 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:14:345 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:14:346 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(23,1) que me solicito personaje: @
+[INFO] 19:10:14:346 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (23,1)
+[INFO] 19:10:14:347 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(23,1)
+[INFO] 19:10:14:554 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:14:554 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:14:554 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:14:554 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(23,2) que me solicito personaje: @
+[INFO] 19:10:14:556 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (23,2)
+[INFO] 19:10:14:556 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(23,2)
+[INFO] 19:10:14:758 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:14:758 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:14:758 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:14:758 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(23,3) que me solicito personaje: @
+[INFO] 19:10:14:759 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (23,3)
+[INFO] 19:10:14:759 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(23,3)
+[INFO] 19:10:14:966 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:14:966 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:14:966 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:14:966 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(23,4) que me solicito personaje: @
+[INFO] 19:10:14:967 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (23,4)
+[INFO] 19:10:14:967 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(23,4)
+[INFO] 19:10:15:174 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:15:174 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 10
+[INFO] 19:10:15:174 ProcesoNivel/(4536:4536): Recibi REQUEST_MOVIMIENTO
+[INFO] 19:10:15:174 ProcesoNivel/(4536:4536): Tomo la posicion del recurso:(23,5) que me solicito personaje: @
+[INFO] 19:10:15:175 ProcesoNivel/(4536:4536): Modifico posicion personaje: @ en posicion (23,5)
+[INFO] 19:10:15:175 ProcesoNivel/(4536:4536): Movi el personaje: @ a la posicion:(23,5)
+[INFO] 19:10:15:177 ProcesoNivel/(4536:4536): Buscando mensaje en cola
+[INFO] 19:10:15:178 ProcesoNivel/(4536:4536): Recibi mensaje de tipo: 5
+[INFO] 19:10:15:178 ProcesoNivel/(4536:4536): Recibi REQUEST_RECURSO
+[INFO] 19:10:15:178 ProcesoNivel/(4536:4536): El personaje: @ me pidio el recurso:F
+[INFO] 19:10:15:178 ProcesoNivel/(4536:4536): La posicion del personaje: @ es:(23,5) y la posicion del recurso: F es:(23,5) y su cantidad: 3
+[INFO] 19:10:15:178 ProcesoNivel/(4536:4536): El personaje puede tomar el recurso
+[INFO] 19:10:15:178 ProcesoNivel/(4536:4536): El personaje:@ pudo obtener el recurso:F
+[INFO] 19:10:15:178 ProcesoNivel/(4536:4536): La respuesta es: 1
+[INFO] 21:40:16:934 ProcesoNivel/(4765:4765): El nivel se conecto al puerto: 5000
+[INFO] 21:40:16:940 ProcesoNivel/(4765:4765): El nivel: ü le hizo HANDSHAKE al socket: 6
+[INFO] 21:40:16:940 ProcesoNivel/(4765:4765): El recovery esta activado
+[INFO] 21:40:16:964 ProcesoNivel/(4765:4766): Empieza a ejecutar el hilo interbloqueo
+[INFO] 21:40:16:981 ProcesoNivel/(4765:4766): El hilo interbloqueo entra en la region critica
+[INFO] 21:40:16:981 ProcesoNivel/(4765:4766): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 21:40:16:981 ProcesoNivel/(4765:4766): El hilo interbloqueo sale de la region critica
+[INFO] 21:40:16:984 ProcesoNivel/(4765:4765): Terminado dibujar nivel
+[INFO] 21:40:21:76 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:21:76 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 1
+[INFO] 21:40:21:76 ProcesoNivel/(4765:4765): Recibi HANDSHAKE del personaje: cs
+[INFO] 21:40:21:95 ProcesoNivel/(4765:4765): Se dibujo el personaje:   en la pos (0,0)
+[INFO] 21:40:21:116 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:21:117 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 3
+[INFO] 21:40:21:117 ProcesoNivel/(4765:4765): Recibi REQUEST_POS_RECURSO
+[INFO] 21:40:21:117 ProcesoNivel/(4765:4765): El recurso pedido es: F
+[INFO] 21:40:21:117 ProcesoNivel/(4765:4765): Mutex de lista de recursos y personajes entra a region critica
+[INFO] 21:40:21:117 ProcesoNivel/(4765:4765): Mando la posicion del recurso F: (23,5)
+[INFO] 21:40:21:118 ProcesoNivel/(4765:4765): Mande la posicion del recurso: F al personaje: @
+[INFO] 21:40:21:129 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:21:129 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:21:129 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:21:129 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(1,0) que me solicito personaje: @
+[INFO] 21:40:21:131 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (1,0)
+[INFO] 21:40:21:131 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(1,0)
+[INFO] 21:40:21:348 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:21:348 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:21:348 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:21:348 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(2,0) que me solicito personaje: @
+[INFO] 21:40:21:349 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (2,0)
+[INFO] 21:40:21:349 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(2,0)
+[INFO] 21:40:21:564 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:21:565 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:21:565 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:21:565 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(3,0) que me solicito personaje: @
+[INFO] 21:40:21:565 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (3,0)
+[INFO] 21:40:21:566 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(3,0)
+[INFO] 21:40:21:782 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:21:782 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:21:782 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:21:783 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(4,0) que me solicito personaje: @
+[INFO] 21:40:21:788 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (4,0)
+[INFO] 21:40:21:788 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(4,0)
+[INFO] 21:40:21:996 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:21:996 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:21:996 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:21:996 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(5,0) que me solicito personaje: @
+[INFO] 21:40:21:998 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (5,0)
+[INFO] 21:40:21:998 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(5,0)
+[INFO] 21:40:22:209 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:22:209 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:22:209 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:22:209 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(6,0) que me solicito personaje: @
+[INFO] 21:40:22:210 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (6,0)
+[INFO] 21:40:22:210 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(6,0)
+[INFO] 21:40:22:424 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:22:424 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:22:424 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:22:424 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(7,0) que me solicito personaje: @
+[INFO] 21:40:22:425 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (7,0)
+[INFO] 21:40:22:425 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(7,0)
+[INFO] 21:40:22:631 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:22:632 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:22:632 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:22:632 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(8,0) que me solicito personaje: @
+[INFO] 21:40:22:634 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (8,0)
+[INFO] 21:40:22:634 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(8,0)
+[INFO] 21:40:22:836 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:22:836 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:22:836 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:22:836 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(9,0) que me solicito personaje: @
+[INFO] 21:40:22:837 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (9,0)
+[INFO] 21:40:22:837 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(9,0)
+[INFO] 21:40:23:48 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:23:48 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:23:49 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:23:49 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(10,0) que me solicito personaje: @
+[INFO] 21:40:23:50 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (10,0)
+[INFO] 21:40:23:50 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(10,0)
+[INFO] 21:40:23:264 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:23:264 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:23:264 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:23:264 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(11,0) que me solicito personaje: @
+[INFO] 21:40:23:265 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (11,0)
+[INFO] 21:40:23:265 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(11,0)
+[INFO] 21:40:23:469 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:23:469 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:23:469 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:23:469 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(12,0) que me solicito personaje: @
+[INFO] 21:40:23:470 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (12,0)
+[INFO] 21:40:23:470 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(12,0)
+[INFO] 21:40:23:686 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:23:686 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:23:686 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:23:687 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(13,0) que me solicito personaje: @
+[INFO] 21:40:23:688 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (13,0)
+[INFO] 21:40:23:688 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(13,0)
+[INFO] 21:40:23:890 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:23:890 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:23:890 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:23:890 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(14,0) que me solicito personaje: @
+[INFO] 21:40:23:902 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (14,0)
+[INFO] 21:40:23:902 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(14,0)
+[INFO] 21:40:24:105 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:24:106 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:24:106 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:24:106 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(15,0) que me solicito personaje: @
+[INFO] 21:40:24:111 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (15,0)
+[INFO] 21:40:24:111 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(15,0)
+[INFO] 21:40:24:317 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:24:317 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:24:317 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:24:317 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(16,0) que me solicito personaje: @
+[INFO] 21:40:24:318 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (16,0)
+[INFO] 21:40:24:318 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(16,0)
+[INFO] 21:40:24:543 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:24:544 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:24:544 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:24:544 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(17,0) que me solicito personaje: @
+[INFO] 21:40:24:545 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (17,0)
+[INFO] 21:40:24:545 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(17,0)
+[INFO] 21:40:24:756 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:24:756 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:24:756 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:24:757 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(18,0) que me solicito personaje: @
+[INFO] 21:40:24:757 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (18,0)
+[INFO] 21:40:24:758 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(18,0)
+[INFO] 21:40:24:970 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:24:970 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:24:971 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:24:971 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(19,0) que me solicito personaje: @
+[INFO] 21:40:24:972 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (19,0)
+[INFO] 21:40:24:972 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(19,0)
+[INFO] 21:40:25:180 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:25:180 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:25:180 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:25:180 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(20,0) que me solicito personaje: @
+[INFO] 21:40:25:181 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (20,0)
+[INFO] 21:40:25:181 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(20,0)
+[INFO] 21:40:25:392 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:25:392 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:25:392 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:25:393 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(21,0) que me solicito personaje: @
+[INFO] 21:40:25:393 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (21,0)
+[INFO] 21:40:25:393 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(21,0)
+[INFO] 21:40:25:594 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:25:594 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:25:595 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:25:595 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(22,0) que me solicito personaje: @
+[INFO] 21:40:25:596 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (22,0)
+[INFO] 21:40:25:596 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(22,0)
+[INFO] 21:40:25:800 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:25:800 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:25:800 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:25:800 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(23,0) que me solicito personaje: @
+[INFO] 21:40:25:801 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (23,0)
+[INFO] 21:40:25:801 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(23,0)
+[INFO] 21:40:26:4 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:26:4 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:26:4 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:26:4 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(23,1) que me solicito personaje: @
+[INFO] 21:40:26:6 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (23,1)
+[INFO] 21:40:26:6 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(23,1)
+[INFO] 21:40:26:222 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:26:222 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:26:222 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:26:222 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(23,2) que me solicito personaje: @
+[INFO] 21:40:26:223 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (23,2)
+[INFO] 21:40:26:223 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(23,2)
+[INFO] 21:40:26:431 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:26:431 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:26:431 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:26:431 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(23,3) que me solicito personaje: @
+[INFO] 21:40:26:432 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (23,3)
+[INFO] 21:40:26:432 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(23,3)
+[INFO] 21:40:26:646 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:26:646 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:26:646 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:26:646 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(23,4) que me solicito personaje: @
+[INFO] 21:40:26:647 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (23,4)
+[INFO] 21:40:26:647 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(23,4)
+[INFO] 21:40:26:853 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:26:853 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 10
+[INFO] 21:40:26:853 ProcesoNivel/(4765:4765): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:40:26:853 ProcesoNivel/(4765:4765): Tomo la posicion del recurso:(23,5) que me solicito personaje: @
+[INFO] 21:40:26:854 ProcesoNivel/(4765:4765): Modifico posicion personaje: @ en posicion (23,5)
+[INFO] 21:40:26:854 ProcesoNivel/(4765:4765): Movi el personaje: @ a la posicion:(23,5)
+[INFO] 21:40:26:869 ProcesoNivel/(4765:4765): Buscando mensaje en cola
+[INFO] 21:40:26:869 ProcesoNivel/(4765:4765): Recibi mensaje de tipo: 5
+[INFO] 21:40:26:869 ProcesoNivel/(4765:4765): Recibi REQUEST_RECURSO
+[INFO] 21:40:26:870 ProcesoNivel/(4765:4765): El personaje: @ me pidio el recurso:F
+[INFO] 21:40:26:870 ProcesoNivel/(4765:4765): La posicion del personaje: @ es:(23,5) y la posicion del recurso: F es:(23,5) y su cantidad: 3
+[INFO] 21:40:26:870 ProcesoNivel/(4765:4765): El personaje puede tomar el recurso
+[INFO] 21:40:26:871 ProcesoNivel/(4765:4765): El personaje:@ pudo obtener el recurso:F
+[INFO] 21:40:26:872 ProcesoNivel/(4765:4765): La respuesta es: 1
+[INFO] 21:50:41:575 ProcesoNivel/(5017:5017): El nivel se conecto al puerto: 5000
+[INFO] 21:50:41:576 ProcesoNivel/(5017:5017): El nivel:  le hizo HANDSHAKE al socket: 6
+[INFO] 21:50:41:577 ProcesoNivel/(5017:5017): El recovery esta activado
+[INFO] 21:50:41:597 ProcesoNivel/(5017:5018): Empieza a ejecutar el hilo interbloqueo
+[INFO] 21:50:41:609 ProcesoNivel/(5017:5018): El hilo interbloqueo entra en la region critica
+[INFO] 21:50:41:610 ProcesoNivel/(5017:5018): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 21:50:41:610 ProcesoNivel/(5017:5018): El hilo interbloqueo sale de la region critica
+[INFO] 21:50:41:617 ProcesoNivel/(5017:5017): Terminado dibujar nivel
+[INFO] 21:51:09:248 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:09:248 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 1
+[INFO] 21:51:09:248 ProcesoNivel/(5017:5017): Recibi HANDSHAKE del personaje: cs
+[INFO] 21:51:09:267 ProcesoNivel/(5017:5017): Se dibujo el personaje:   en la pos (0,0)
+[INFO] 21:51:09:271 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:09:271 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 3
+[INFO] 21:51:09:272 ProcesoNivel/(5017:5017): Recibi REQUEST_POS_RECURSO
+[INFO] 21:51:09:272 ProcesoNivel/(5017:5017): El recurso pedido es: F
+[INFO] 21:51:09:272 ProcesoNivel/(5017:5017): Mutex de lista de recursos y personajes entra a region critica
+[INFO] 21:51:09:272 ProcesoNivel/(5017:5017): Mando la posicion del recurso F: (23,5)
+[INFO] 21:51:09:272 ProcesoNivel/(5017:5017): Mande la posicion del recurso: F al personaje: @
+[INFO] 21:51:09:278 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:09:278 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:09:279 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:09:279 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(1,0) que me solicito personaje: @
+[INFO] 21:51:09:289 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (1,0)
+[INFO] 21:51:09:289 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(1,0)
+[INFO] 21:51:09:499 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:09:499 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:09:499 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:09:499 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(2,0) que me solicito personaje: @
+[INFO] 21:51:09:500 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (2,0)
+[INFO] 21:51:09:500 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(2,0)
+[INFO] 21:51:09:710 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:09:710 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:09:710 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:09:710 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(3,0) que me solicito personaje: @
+[INFO] 21:51:09:719 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (3,0)
+[INFO] 21:51:09:720 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(3,0)
+[INFO] 21:51:09:918 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:09:918 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:09:918 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:09:918 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(4,0) que me solicito personaje: @
+[INFO] 21:51:09:925 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (4,0)
+[INFO] 21:51:09:925 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(4,0)
+[INFO] 21:51:10:163 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:10:163 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:10:163 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:10:163 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(5,0) que me solicito personaje: @
+[INFO] 21:51:10:165 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (5,0)
+[INFO] 21:51:10:165 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(5,0)
+[INFO] 21:51:10:383 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:10:383 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:10:383 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:10:383 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(6,0) que me solicito personaje: @
+[INFO] 21:51:10:384 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (6,0)
+[INFO] 21:51:10:384 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(6,0)
+[INFO] 21:51:10:607 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:10:607 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:10:607 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:10:607 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(7,0) que me solicito personaje: @
+[INFO] 21:51:10:608 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (7,0)
+[INFO] 21:51:10:608 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(7,0)
+[INFO] 21:51:10:815 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:10:816 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:10:816 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:10:816 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(8,0) que me solicito personaje: @
+[INFO] 21:51:10:816 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (8,0)
+[INFO] 21:51:10:817 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(8,0)
+[INFO] 21:51:11:42 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:11:42 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:11:42 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:11:42 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(9,0) que me solicito personaje: @
+[INFO] 21:51:11:43 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (9,0)
+[INFO] 21:51:11:43 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(9,0)
+[INFO] 21:51:11:256 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:11:257 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:11:257 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:11:257 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(10,0) que me solicito personaje: @
+[INFO] 21:51:11:258 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (10,0)
+[INFO] 21:51:11:258 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(10,0)
+[INFO] 21:51:11:489 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:11:489 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:11:489 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:11:489 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(11,0) que me solicito personaje: @
+[INFO] 21:51:11:495 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (11,0)
+[INFO] 21:51:11:495 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(11,0)
+[INFO] 21:51:11:710 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:11:710 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:11:710 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:11:710 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(12,0) que me solicito personaje: @
+[INFO] 21:51:11:717 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (12,0)
+[INFO] 21:51:11:717 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(12,0)
+[INFO] 21:51:11:919 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:11:919 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:11:919 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:11:920 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(13,0) que me solicito personaje: @
+[INFO] 21:51:11:920 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (13,0)
+[INFO] 21:51:11:921 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(13,0)
+[INFO] 21:51:12:127 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:12:128 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:12:128 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:12:128 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(14,0) que me solicito personaje: @
+[INFO] 21:51:12:129 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (14,0)
+[INFO] 21:51:12:129 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(14,0)
+[INFO] 21:51:12:337 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:12:337 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:12:337 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:12:337 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(15,0) que me solicito personaje: @
+[INFO] 21:51:12:338 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (15,0)
+[INFO] 21:51:12:338 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(15,0)
+[INFO] 21:51:12:546 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:12:546 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:12:546 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:12:546 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(16,0) que me solicito personaje: @
+[INFO] 21:51:12:554 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (16,0)
+[INFO] 21:51:12:554 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(16,0)
+[INFO] 21:51:12:757 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:12:757 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:12:757 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:12:757 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(17,0) que me solicito personaje: @
+[INFO] 21:51:12:758 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (17,0)
+[INFO] 21:51:12:758 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(17,0)
+[INFO] 21:51:12:977 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:12:977 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:12:977 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:12:977 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(18,0) que me solicito personaje: @
+[INFO] 21:51:12:982 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (18,0)
+[INFO] 21:51:12:982 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(18,0)
+[INFO] 21:51:13:189 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:13:189 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:13:189 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:13:189 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(19,0) que me solicito personaje: @
+[INFO] 21:51:13:190 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (19,0)
+[INFO] 21:51:13:190 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(19,0)
+[INFO] 21:51:13:397 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:13:397 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:13:397 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:13:397 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(20,0) que me solicito personaje: @
+[INFO] 21:51:13:398 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (20,0)
+[INFO] 21:51:13:398 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(20,0)
+[INFO] 21:51:13:605 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:13:605 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:13:605 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:13:606 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(21,0) que me solicito personaje: @
+[INFO] 21:51:13:606 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (21,0)
+[INFO] 21:51:13:606 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(21,0)
+[INFO] 21:51:13:813 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:13:813 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:13:813 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:13:814 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(22,0) que me solicito personaje: @
+[INFO] 21:51:13:814 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (22,0)
+[INFO] 21:51:13:814 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(22,0)
+[INFO] 21:51:14:21 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:14:21 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:14:21 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:14:22 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(23,0) que me solicito personaje: @
+[INFO] 21:51:14:22 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (23,0)
+[INFO] 21:51:14:22 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(23,0)
+[INFO] 21:51:14:232 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:14:232 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:14:232 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:14:232 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(23,1) que me solicito personaje: @
+[INFO] 21:51:14:233 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (23,1)
+[INFO] 21:51:14:233 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(23,1)
+[INFO] 21:51:14:446 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:14:446 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:14:446 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:14:446 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(23,2) que me solicito personaje: @
+[INFO] 21:51:14:447 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (23,2)
+[INFO] 21:51:14:447 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(23,2)
+[INFO] 21:51:14:654 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:14:654 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:14:654 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:14:654 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(23,3) que me solicito personaje: @
+[INFO] 21:51:14:655 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (23,3)
+[INFO] 21:51:14:661 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(23,3)
+[INFO] 21:51:14:868 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:14:868 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:14:869 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:14:869 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(23,4) que me solicito personaje: @
+[INFO] 21:51:14:869 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (23,4)
+[INFO] 21:51:14:869 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(23,4)
+[INFO] 21:51:15:79 ProcesoNivel/(5017:5017): Buscando mensaje en cola
+[INFO] 21:51:15:79 ProcesoNivel/(5017:5017): Recibi mensaje de tipo: 10
+[INFO] 21:51:15:80 ProcesoNivel/(5017:5017): Recibi REQUEST_MOVIMIENTO
+[INFO] 21:51:15:80 ProcesoNivel/(5017:5017): Tomo la posicion del recurso:(23,5) que me solicito personaje: @
+[INFO] 21:51:15:80 ProcesoNivel/(5017:5017): Modifico posicion personaje: @ en posicion (23,5)
+[INFO] 21:51:15:80 ProcesoNivel/(5017:5017): Movi el personaje: @ a la posicion:(23,5)
+[INFO] 22:03:09:871 ProcesoNivel/(5146:5146): El nivel se conecto al puerto: 5000
+[INFO] 22:03:09:873 ProcesoNivel/(5146:5146): El nivel: L le hizo HANDSHAKE al socket: 6
+[INFO] 22:03:09:885 ProcesoNivel/(5146:5146): El recovery esta activado
+[INFO] 22:03:09:915 ProcesoNivel/(5146:5147): Empieza a ejecutar el hilo interbloqueo
+[INFO] 22:03:09:924 ProcesoNivel/(5146:5147): El hilo interbloqueo entra en la region critica
+[INFO] 22:03:09:924 ProcesoNivel/(5146:5147): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 22:03:09:925 ProcesoNivel/(5146:5147): El hilo interbloqueo sale de la region critica
+[INFO] 22:03:09:928 ProcesoNivel/(5146:5146): Terminado dibujar nivel
+[INFO] 22:03:16:77 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:16:87 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 1
+[INFO] 22:03:16:88 ProcesoNivel/(5146:5146): Recibi HANDSHAKE del personaje: cs
+[INFO] 22:03:16:100 ProcesoNivel/(5146:5146): Se dibujo el personaje:   en la pos (0,0)
+[INFO] 22:03:16:119 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:16:119 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 3
+[INFO] 22:03:16:119 ProcesoNivel/(5146:5146): Recibi REQUEST_POS_RECURSO
+[INFO] 22:03:16:119 ProcesoNivel/(5146:5146): El recurso pedido es: F
+[INFO] 22:03:16:119 ProcesoNivel/(5146:5146): Mutex de lista de recursos y personajes entra a region critica
+[INFO] 22:03:16:119 ProcesoNivel/(5146:5146): Mando la posicion del recurso F: (23,5)
+[INFO] 22:03:16:120 ProcesoNivel/(5146:5146): Mande la posicion del recurso: F al personaje: @
+[INFO] 22:03:16:124 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:16:124 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:16:124 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:16:124 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(1,0) que me solicito personaje: @
+[INFO] 22:03:16:125 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (1,0)
+[INFO] 22:03:16:126 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(1,0)
+[INFO] 22:03:16:346 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:16:346 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:16:346 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:16:346 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(2,0) que me solicito personaje: @
+[INFO] 22:03:16:347 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (2,0)
+[INFO] 22:03:16:347 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(2,0)
+[INFO] 22:03:16:567 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:16:567 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:16:567 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:16:568 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(3,0) que me solicito personaje: @
+[INFO] 22:03:16:568 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (3,0)
+[INFO] 22:03:16:568 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(3,0)
+[INFO] 22:03:16:776 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:16:777 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:16:777 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:16:777 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(4,0) que me solicito personaje: @
+[INFO] 22:03:16:778 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (4,0)
+[INFO] 22:03:16:778 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(4,0)
+[INFO] 22:03:17:14 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:17:14 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:17:14 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:17:14 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(5,0) que me solicito personaje: @
+[INFO] 22:03:17:15 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (5,0)
+[INFO] 22:03:17:15 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(5,0)
+[INFO] 22:03:17:223 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:17:223 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:17:223 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:17:223 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(6,0) que me solicito personaje: @
+[INFO] 22:03:17:224 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (6,0)
+[INFO] 22:03:17:224 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(6,0)
+[INFO] 22:03:17:431 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:17:431 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:17:431 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:17:431 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(7,0) que me solicito personaje: @
+[INFO] 22:03:17:443 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (7,0)
+[INFO] 22:03:17:443 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(7,0)
+[INFO] 22:03:17:654 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:17:655 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:17:655 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:17:655 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(8,0) que me solicito personaje: @
+[INFO] 22:03:17:655 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (8,0)
+[INFO] 22:03:17:655 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(8,0)
+[INFO] 22:03:17:874 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:17:874 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:17:874 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:17:874 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(9,0) que me solicito personaje: @
+[INFO] 22:03:17:875 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (9,0)
+[INFO] 22:03:17:875 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(9,0)
+[INFO] 22:03:18:81 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:18:81 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:18:81 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:18:81 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(10,0) que me solicito personaje: @
+[INFO] 22:03:18:82 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (10,0)
+[INFO] 22:03:18:82 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(10,0)
+[INFO] 22:03:18:288 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:18:288 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:18:288 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:18:289 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(11,0) que me solicito personaje: @
+[INFO] 22:03:18:289 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (11,0)
+[INFO] 22:03:18:289 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(11,0)
+[INFO] 22:03:18:506 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:18:506 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:18:506 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:18:506 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(12,0) que me solicito personaje: @
+[INFO] 22:03:18:507 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (12,0)
+[INFO] 22:03:18:507 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(12,0)
+[INFO] 22:03:18:715 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:18:715 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:18:715 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:18:715 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(13,0) que me solicito personaje: @
+[INFO] 22:03:18:716 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (13,0)
+[INFO] 22:03:18:716 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(13,0)
+[INFO] 22:03:18:940 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:18:940 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:18:940 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:18:940 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(14,0) que me solicito personaje: @
+[INFO] 22:03:18:946 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (14,0)
+[INFO] 22:03:18:947 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(14,0)
+[INFO] 22:03:19:149 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:19:150 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:19:150 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:19:150 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(15,0) que me solicito personaje: @
+[INFO] 22:03:19:151 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (15,0)
+[INFO] 22:03:19:151 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(15,0)
+[INFO] 22:03:19:359 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:19:359 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:19:359 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:19:359 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(16,0) que me solicito personaje: @
+[INFO] 22:03:19:360 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (16,0)
+[INFO] 22:03:19:360 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(16,0)
+[INFO] 22:03:19:573 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:19:573 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:19:574 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:19:574 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(17,0) que me solicito personaje: @
+[INFO] 22:03:19:575 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (17,0)
+[INFO] 22:03:19:575 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(17,0)
+[INFO] 22:03:19:799 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:19:800 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:19:800 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:19:800 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(18,0) que me solicito personaje: @
+[INFO] 22:03:19:801 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (18,0)
+[INFO] 22:03:19:801 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(18,0)
+[INFO] 22:03:20:20 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:20:20 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:20:20 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:20:20 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(19,0) que me solicito personaje: @
+[INFO] 22:03:20:25 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (19,0)
+[INFO] 22:03:20:25 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(19,0)
+[INFO] 22:03:20:238 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:20:238 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:20:239 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:20:239 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(20,0) que me solicito personaje: @
+[INFO] 22:03:20:239 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (20,0)
+[INFO] 22:03:20:240 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(20,0)
+[INFO] 22:03:20:447 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:20:447 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:20:447 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:20:447 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(21,0) que me solicito personaje: @
+[INFO] 22:03:20:448 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (21,0)
+[INFO] 22:03:20:448 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(21,0)
+[INFO] 22:03:20:656 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:20:656 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:20:656 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:20:657 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(22,0) que me solicito personaje: @
+[INFO] 22:03:20:657 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (22,0)
+[INFO] 22:03:20:657 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(22,0)
+[INFO] 22:03:20:864 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:20:864 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:20:864 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:20:864 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(23,0) que me solicito personaje: @
+[INFO] 22:03:20:865 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (23,0)
+[INFO] 22:03:20:866 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(23,0)
+[INFO] 22:03:21:76 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:21:76 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:21:76 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:21:76 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(23,1) que me solicito personaje: @
+[INFO] 22:03:21:77 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (23,1)
+[INFO] 22:03:21:77 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(23,1)
+[INFO] 22:03:21:283 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:21:283 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:21:283 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:21:284 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(23,2) que me solicito personaje: @
+[INFO] 22:03:21:284 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (23,2)
+[INFO] 22:03:21:284 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(23,2)
+[INFO] 22:03:21:500 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:21:500 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:21:500 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:21:500 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(23,3) que me solicito personaje: @
+[INFO] 22:03:21:504 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (23,3)
+[INFO] 22:03:21:504 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(23,3)
+[INFO] 22:03:21:708 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:21:708 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:21:708 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:21:709 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(23,4) que me solicito personaje: @
+[INFO] 22:03:21:710 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (23,4)
+[INFO] 22:03:21:710 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(23,4)
+[INFO] 22:03:21:917 ProcesoNivel/(5146:5146): Buscando mensaje en cola
+[INFO] 22:03:21:917 ProcesoNivel/(5146:5146): Recibi mensaje de tipo: 10
+[INFO] 22:03:21:917 ProcesoNivel/(5146:5146): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:03:21:917 ProcesoNivel/(5146:5146): Tomo la posicion del recurso:(23,5) que me solicito personaje: @
+[INFO] 22:03:21:918 ProcesoNivel/(5146:5146): Modifico posicion personaje: @ en posicion (23,5)
+[INFO] 22:03:21:918 ProcesoNivel/(5146:5146): Movi el personaje: @ a la posicion:(23,5)
+[INFO] 22:07:23:763 ProcesoNivel/(5316:5316): El nivel se conecto al puerto: 5000
+[INFO] 22:07:23:775 ProcesoNivel/(5316:5316): El nivel: ì le hizo HANDSHAKE al socket: 6
+[INFO] 22:07:23:776 ProcesoNivel/(5316:5316): El recovery esta activado
+[INFO] 22:07:23:814 ProcesoNivel/(5316:5317): Empieza a ejecutar el hilo interbloqueo
+[INFO] 22:07:23:822 ProcesoNivel/(5316:5316): Terminado dibujar nivel
+[INFO] 22:07:23:822 ProcesoNivel/(5316:5317): El hilo interbloqueo entra en la region critica
+[INFO] 22:07:23:823 ProcesoNivel/(5316:5317): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 22:07:23:823 ProcesoNivel/(5316:5317): El hilo interbloqueo sale de la region critica
+[INFO] 22:07:33:28 ProcesoNivel/(5316:5316): Buscando mensaje en cola
+[INFO] 22:07:33:28 ProcesoNivel/(5316:5316): Recibi mensaje de tipo: 1
+[INFO] 22:08:40:83 ProcesoNivel/(5323:5323): El nivel se conecto al puerto: 5000
+[INFO] 22:08:40:93 ProcesoNivel/(5323:5323): El nivel: Œ le hizo HANDSHAKE al socket: 6
+[INFO] 22:08:40:101 ProcesoNivel/(5323:5323): El recovery esta activado
+[INFO] 22:08:40:112 ProcesoNivel/(5323:5324): Empieza a ejecutar el hilo interbloqueo
+[INFO] 22:08:40:124 ProcesoNivel/(5323:5324): El hilo interbloqueo entra en la region critica
+[INFO] 22:08:40:124 ProcesoNivel/(5323:5324): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 22:08:40:124 ProcesoNivel/(5323:5324): El hilo interbloqueo sale de la region critica
+[INFO] 22:08:40:134 ProcesoNivel/(5323:5323): Terminado dibujar nivel
+[INFO] 22:09:56:375 ProcesoNivel/(5389:5389): El nivel se conecto al puerto: 5000
+[INFO] 22:09:56:377 ProcesoNivel/(5389:5389): El nivel: ¼ le hizo HANDSHAKE al socket: 6
+[INFO] 22:09:56:391 ProcesoNivel/(5389:5389): El recovery esta activado
+[INFO] 22:09:56:399 ProcesoNivel/(5389:5390): Empieza a ejecutar el hilo interbloqueo
+[INFO] 22:09:56:424 ProcesoNivel/(5389:5390): El hilo interbloqueo entra en la region critica
+[INFO] 22:09:56:424 ProcesoNivel/(5389:5390): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 22:09:56:425 ProcesoNivel/(5389:5390): El hilo interbloqueo sale de la region critica
+[INFO] 22:09:56:434 ProcesoNivel/(5389:5389): Terminado dibujar nivel
+[INFO] 22:10:01:508 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:01:508 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 1
+[INFO] 22:10:01:509 ProcesoNivel/(5389:5389): Recibi HANDSHAKE del personaje: cs
+[INFO] 22:10:01:526 ProcesoNivel/(5389:5389): Se dibujo el personaje:   en la pos (0,0)
+[INFO] 22:10:01:531 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:01:531 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 3
+[INFO] 22:10:01:531 ProcesoNivel/(5389:5389): Recibi REQUEST_POS_RECURSO
+[INFO] 22:10:01:531 ProcesoNivel/(5389:5389): El recurso pedido es: F
+[INFO] 22:10:01:531 ProcesoNivel/(5389:5389): Mutex de lista de recursos y personajes entra a region critica
+[INFO] 22:10:01:531 ProcesoNivel/(5389:5389): Mando la posicion del recurso F: (23,5)
+[INFO] 22:10:01:532 ProcesoNivel/(5389:5389): Mande la posicion del recurso: F al personaje: @
+[INFO] 22:10:01:537 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:01:537 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:01:537 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:01:537 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(1,0) que me solicito personaje: @
+[INFO] 22:10:01:539 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (1,0)
+[INFO] 22:10:01:539 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(1,0)
+[INFO] 22:10:01:756 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:01:756 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:01:756 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:01:757 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(2,0) que me solicito personaje: @
+[INFO] 22:10:01:758 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (2,0)
+[INFO] 22:10:01:758 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(2,0)
+[INFO] 22:10:01:977 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:01:977 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:01:978 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:01:978 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(3,0) que me solicito personaje: @
+[INFO] 22:10:01:978 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (3,0)
+[INFO] 22:10:01:979 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(3,0)
+[INFO] 22:10:02:187 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:02:187 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:02:187 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:02:187 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(4,0) que me solicito personaje: @
+[INFO] 22:10:02:188 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (4,0)
+[INFO] 22:10:02:188 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(4,0)
+[INFO] 22:10:02:398 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:02:399 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:02:399 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:02:399 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(5,0) que me solicito personaje: @
+[INFO] 22:10:02:399 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (5,0)
+[INFO] 22:10:02:400 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(5,0)
+[INFO] 22:10:02:606 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:02:607 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:02:607 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:02:607 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(6,0) que me solicito personaje: @
+[INFO] 22:10:02:607 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (6,0)
+[INFO] 22:10:02:608 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(6,0)
+[INFO] 22:10:02:835 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:02:835 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:02:835 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:02:836 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(7,0) que me solicito personaje: @
+[INFO] 22:10:02:836 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (7,0)
+[INFO] 22:10:02:836 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(7,0)
+[INFO] 22:10:03:54 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:03:54 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:03:54 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:03:54 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(8,0) que me solicito personaje: @
+[INFO] 22:10:03:55 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (8,0)
+[INFO] 22:10:03:55 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(8,0)
+[INFO] 22:10:03:281 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:03:281 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:03:281 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:03:281 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(9,0) que me solicito personaje: @
+[INFO] 22:10:03:282 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (9,0)
+[INFO] 22:10:03:282 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(9,0)
+[INFO] 22:10:03:504 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:03:504 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:03:504 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:03:504 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(10,0) que me solicito personaje: @
+[INFO] 22:10:03:507 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (10,0)
+[INFO] 22:10:03:507 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(10,0)
+[INFO] 22:10:03:735 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:03:735 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:03:735 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:03:735 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(11,0) que me solicito personaje: @
+[INFO] 22:10:03:736 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (11,0)
+[INFO] 22:10:03:736 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(11,0)
+[INFO] 22:10:03:951 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:03:951 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:03:951 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:03:951 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(12,0) que me solicito personaje: @
+[INFO] 22:10:03:952 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (12,0)
+[INFO] 22:10:03:952 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(12,0)
+[INFO] 22:10:04:159 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:04:159 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:04:159 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:04:159 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(13,0) que me solicito personaje: @
+[INFO] 22:10:04:164 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (13,0)
+[INFO] 22:10:04:164 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(13,0)
+[INFO] 22:10:04:369 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:04:369 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:04:369 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:04:369 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(14,0) que me solicito personaje: @
+[INFO] 22:10:04:370 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (14,0)
+[INFO] 22:10:04:370 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(14,0)
+[INFO] 22:10:04:576 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:04:577 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:04:577 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:04:577 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(15,0) que me solicito personaje: @
+[INFO] 22:10:04:579 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (15,0)
+[INFO] 22:10:04:579 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(15,0)
+[INFO] 22:10:04:789 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:04:789 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:04:789 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:04:789 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(16,0) que me solicito personaje: @
+[INFO] 22:10:04:790 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (16,0)
+[INFO] 22:10:04:790 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(16,0)
+[INFO] 22:10:04:3 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:04:3 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:04:3 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:04:4 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(17,0) que me solicito personaje: @
+[INFO] 22:10:04:4 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (17,0)
+[INFO] 22:10:04:4 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(17,0)
+[INFO] 22:10:05:223 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:05:223 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:05:223 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:05:223 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(18,0) que me solicito personaje: @
+[INFO] 22:10:05:224 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (18,0)
+[INFO] 22:10:05:224 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(18,0)
+[INFO] 22:10:05:432 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:05:432 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:05:432 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:05:432 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(19,0) que me solicito personaje: @
+[INFO] 22:10:05:433 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (19,0)
+[INFO] 22:10:05:433 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(19,0)
+[INFO] 22:10:05:645 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:05:645 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:05:645 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:05:646 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(20,0) que me solicito personaje: @
+[INFO] 22:10:05:646 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (20,0)
+[INFO] 22:10:05:647 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(20,0)
+[INFO] 22:10:05:854 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:05:854 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:05:855 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:05:855 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(21,0) que me solicito personaje: @
+[INFO] 22:10:05:855 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (21,0)
+[INFO] 22:10:05:856 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(21,0)
+[INFO] 22:10:06:75 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:06:75 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:06:75 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:06:75 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(22,0) que me solicito personaje: @
+[INFO] 22:10:06:76 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (22,0)
+[INFO] 22:10:06:76 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(22,0)
+[INFO] 22:10:06:284 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:06:284 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:06:284 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:06:284 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(23,0) que me solicito personaje: @
+[INFO] 22:10:06:285 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (23,0)
+[INFO] 22:10:06:285 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(23,0)
+[INFO] 22:10:06:494 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:06:494 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:06:494 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:06:494 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(23,1) que me solicito personaje: @
+[INFO] 22:10:06:495 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (23,1)
+[INFO] 22:10:06:495 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(23,1)
+[INFO] 22:10:06:713 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:06:713 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:06:714 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:06:714 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(23,2) que me solicito personaje: @
+[INFO] 22:10:06:714 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (23,2)
+[INFO] 22:10:06:715 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(23,2)
+[INFO] 22:10:06:929 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:06:929 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:06:930 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:06:930 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(23,3) que me solicito personaje: @
+[INFO] 22:10:06:930 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (23,3)
+[INFO] 22:10:06:931 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(23,3)
+[INFO] 22:10:07:137 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:07:138 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:07:138 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:07:138 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(23,4) que me solicito personaje: @
+[INFO] 22:10:07:138 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (23,4)
+[INFO] 22:10:07:139 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(23,4)
+[INFO] 22:10:07:351 ProcesoNivel/(5389:5389): Buscando mensaje en cola
+[INFO] 22:10:07:351 ProcesoNivel/(5389:5389): Recibi mensaje de tipo: 10
+[INFO] 22:10:07:351 ProcesoNivel/(5389:5389): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:10:07:351 ProcesoNivel/(5389:5389): Tomo la posicion del recurso:(23,5) que me solicito personaje: @
+[INFO] 22:10:07:352 ProcesoNivel/(5389:5389): Modifico posicion personaje: @ en posicion (23,5)
+[INFO] 22:10:07:352 ProcesoNivel/(5389:5389): Movi el personaje: @ a la posicion:(23,5)
+[INFO] 22:16:04:727 ProcesoNivel/(5559:5559): El nivel se conecto al puerto: 5000
+[INFO] 22:16:04:728 ProcesoNivel/(5559:5559): El nivel: L le hizo HANDSHAKE al socket: 6
+[INFO] 22:16:04:743 ProcesoNivel/(5559:5559): El recovery esta activado
+[INFO] 22:16:04:751 ProcesoNivel/(5559:5560): Empieza a ejecutar el hilo interbloqueo
+[INFO] 22:16:04:775 ProcesoNivel/(5559:5560): El hilo interbloqueo entra en la region critica
+[INFO] 22:16:04:775 ProcesoNivel/(5559:5560): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 22:16:04:775 ProcesoNivel/(5559:5560): El hilo interbloqueo sale de la region critica
+[INFO] 22:16:04:780 ProcesoNivel/(5559:5559): Terminado dibujar nivel
+[INFO] 22:16:10:471 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:10:472 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 1
+[INFO] 22:16:10:472 ProcesoNivel/(5559:5559): Recibi HANDSHAKE del personaje: cs
+[INFO] 22:16:10:486 ProcesoNivel/(5559:5559): Se dibujo el personaje:   en la pos (0,0)
+[INFO] 22:16:10:495 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:10:495 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 3
+[INFO] 22:16:10:496 ProcesoNivel/(5559:5559): Recibi REQUEST_POS_RECURSO
+[INFO] 22:16:10:496 ProcesoNivel/(5559:5559): El recurso pedido es: F
+[INFO] 22:16:10:496 ProcesoNivel/(5559:5559): Mutex de lista de recursos y personajes entra a region critica
+[INFO] 22:16:10:496 ProcesoNivel/(5559:5559): Mando la posicion del recurso F: (23,5)
+[INFO] 22:16:10:496 ProcesoNivel/(5559:5559): Mande la posicion del recurso: F al personaje: @
+[INFO] 22:16:10:503 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:10:504 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:10:504 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:10:504 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(1,0) que me solicito personaje: @
+[INFO] 22:16:10:505 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (1,0)
+[INFO] 22:16:10:505 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(1,0)
+[INFO] 22:16:10:724 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:10:724 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:10:724 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:10:724 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(2,0) que me solicito personaje: @
+[INFO] 22:16:10:740 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (2,0)
+[INFO] 22:16:10:740 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(2,0)
+[INFO] 22:16:10:957 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:10:957 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:10:958 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:10:958 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(3,0) que me solicito personaje: @
+[INFO] 22:16:10:958 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (3,0)
+[INFO] 22:16:10:959 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(3,0)
+[INFO] 22:16:11:170 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:11:170 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:11:170 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:11:170 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(4,0) que me solicito personaje: @
+[INFO] 22:16:11:171 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (4,0)
+[INFO] 22:16:11:171 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(4,0)
+[INFO] 22:16:11:379 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:11:379 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:11:379 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:11:379 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(5,0) que me solicito personaje: @
+[INFO] 22:16:11:380 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (5,0)
+[INFO] 22:16:11:380 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(5,0)
+[INFO] 22:16:11:589 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:11:589 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:11:590 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:11:590 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(6,0) que me solicito personaje: @
+[INFO] 22:16:11:599 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (6,0)
+[INFO] 22:16:11:599 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(6,0)
+[INFO] 22:16:11:814 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:11:814 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:11:814 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:11:814 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(7,0) que me solicito personaje: @
+[INFO] 22:16:11:815 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (7,0)
+[INFO] 22:16:11:815 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(7,0)
+[INFO] 22:16:12:21 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:12:21 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:12:21 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:12:21 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(8,0) que me solicito personaje: @
+[INFO] 22:16:12:22 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (8,0)
+[INFO] 22:16:12:23 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(8,0)
+[INFO] 22:16:12:230 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:12:230 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:12:230 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:12:230 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(9,0) que me solicito personaje: @
+[INFO] 22:16:12:231 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (9,0)
+[INFO] 22:16:12:231 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(9,0)
+[INFO] 22:16:12:451 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:12:451 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:12:451 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:12:451 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(10,0) que me solicito personaje: @
+[INFO] 22:16:12:452 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (10,0)
+[INFO] 22:16:12:452 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(10,0)
+[INFO] 22:16:12:679 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:12:679 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:12:679 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:12:679 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(11,0) que me solicito personaje: @
+[INFO] 22:16:12:680 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (11,0)
+[INFO] 22:16:12:680 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(11,0)
+[INFO] 22:16:12:890 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:12:890 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:12:890 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:12:890 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(12,0) que me solicito personaje: @
+[INFO] 22:16:12:891 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (12,0)
+[INFO] 22:16:12:891 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(12,0)
+[INFO] 22:16:13:98 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:13:98 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:13:98 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:13:98 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(13,0) que me solicito personaje: @
+[INFO] 22:16:13:99 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (13,0)
+[INFO] 22:16:13:99 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(13,0)
+[INFO] 22:16:13:305 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:13:305 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:13:305 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:13:305 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(14,0) que me solicito personaje: @
+[INFO] 22:16:13:306 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (14,0)
+[INFO] 22:16:13:306 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(14,0)
+[INFO] 22:16:13:518 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:13:518 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:13:518 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:13:519 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(15,0) que me solicito personaje: @
+[INFO] 22:16:13:519 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (15,0)
+[INFO] 22:16:13:520 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(15,0)
+[INFO] 22:16:13:728 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:13:733 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:13:733 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:13:733 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(16,0) que me solicito personaje: @
+[INFO] 22:16:13:740 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (16,0)
+[INFO] 22:16:13:740 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(16,0)
+[INFO] 22:16:13:953 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:13:953 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:13:953 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:13:954 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(17,0) que me solicito personaje: @
+[INFO] 22:16:13:955 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (17,0)
+[INFO] 22:16:13:955 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(17,0)
+[INFO] 22:16:14:172 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:14:172 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:14:172 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:14:172 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(18,0) que me solicito personaje: @
+[INFO] 22:16:14:173 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (18,0)
+[INFO] 22:16:14:173 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(18,0)
+[INFO] 22:16:14:393 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:14:394 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:14:394 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:14:394 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(19,0) que me solicito personaje: @
+[INFO] 22:16:14:395 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (19,0)
+[INFO] 22:16:14:395 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(19,0)
+[INFO] 22:16:14:612 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:14:612 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:14:612 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:14:612 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(20,0) que me solicito personaje: @
+[INFO] 22:16:14:613 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (20,0)
+[INFO] 22:16:14:614 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(20,0)
+[INFO] 22:16:14:829 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:14:830 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:14:830 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:14:830 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(21,0) que me solicito personaje: @
+[INFO] 22:16:14:831 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (21,0)
+[INFO] 22:16:14:831 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(21,0)
+[INFO] 22:16:15:39 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:15:39 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:15:40 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:15:40 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(22,0) que me solicito personaje: @
+[INFO] 22:16:15:41 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (22,0)
+[INFO] 22:16:15:43 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(22,0)
+[INFO] 22:16:15:256 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:15:256 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:15:257 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:15:257 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(23,0) que me solicito personaje: @
+[INFO] 22:16:15:258 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (23,0)
+[INFO] 22:16:15:258 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(23,0)
+[INFO] 22:16:15:474 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:15:474 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:15:474 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:15:475 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(23,1) que me solicito personaje: @
+[INFO] 22:16:15:479 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (23,1)
+[INFO] 22:16:15:479 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(23,1)
+[INFO] 22:16:15:682 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:15:682 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:15:683 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:15:683 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(23,2) que me solicito personaje: @
+[INFO] 22:16:15:683 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (23,2)
+[INFO] 22:16:15:683 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(23,2)
+[INFO] 22:16:15:900 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:15:900 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:15:900 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:15:900 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(23,3) que me solicito personaje: @
+[INFO] 22:16:15:901 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (23,3)
+[INFO] 22:16:15:903 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(23,3)
+[INFO] 22:16:16:117 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:16:117 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:16:117 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:16:117 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(23,4) que me solicito personaje: @
+[INFO] 22:16:16:118 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (23,4)
+[INFO] 22:16:16:118 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(23,4)
+[INFO] 22:16:16:339 ProcesoNivel/(5559:5559): Buscando mensaje en cola
+[INFO] 22:16:16:339 ProcesoNivel/(5559:5559): Recibi mensaje de tipo: 10
+[INFO] 22:16:16:339 ProcesoNivel/(5559:5559): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:16:16:339 ProcesoNivel/(5559:5559): Tomo la posicion del recurso:(23,5) que me solicito personaje: @
+[INFO] 22:16:16:340 ProcesoNivel/(5559:5559): Modifico posicion personaje: @ en posicion (23,5)
+[INFO] 22:16:16:340 ProcesoNivel/(5559:5559): Movi el personaje: @ a la posicion:(23,5)
+[INFO] 22:19:20:92 ProcesoNivel/(5727:5727): El nivel se conecto al puerto: 5000
+[INFO] 22:19:20:102 ProcesoNivel/(5727:5727): El nivel: ü le hizo HANDSHAKE al socket: 6
+[INFO] 22:19:20:103 ProcesoNivel/(5727:5727): El recovery esta activado
+[INFO] 22:19:20:132 ProcesoNivel/(5727:5728): Empieza a ejecutar el hilo interbloqueo
+[INFO] 22:19:20:142 ProcesoNivel/(5727:5727): Terminado dibujar nivel
+[INFO] 22:19:20:143 ProcesoNivel/(5727:5728): El hilo interbloqueo entra en la region critica
+[INFO] 22:19:20:143 ProcesoNivel/(5727:5728): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 22:19:20:151 ProcesoNivel/(5727:5728): El hilo interbloqueo sale de la region critica
+[INFO] 22:19:29:722 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:29:723 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 1
+[INFO] 22:19:29:723 ProcesoNivel/(5727:5727): Recibi HANDSHAKE del personaje: cs
+[INFO] 22:19:29:768 ProcesoNivel/(5727:5727): Se dibujo el personaje: ( en la pos (0,0)
+[INFO] 22:19:29:768 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:29:768 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 3
+[INFO] 22:19:29:769 ProcesoNivel/(5727:5727): Recibi REQUEST_POS_RECURSO
+[INFO] 22:19:29:770 ProcesoNivel/(5727:5727): El recurso pedido es: F
+[INFO] 22:19:29:770 ProcesoNivel/(5727:5727): Mutex de lista de recursos y personajes entra a region critica
+[INFO] 22:19:29:770 ProcesoNivel/(5727:5727): Mando la posicion del recurso F: (23,5)
+[INFO] 22:19:29:781 ProcesoNivel/(5727:5727): Mande la posicion del recurso: F al personaje: @
+[INFO] 22:19:29:782 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:29:782 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:29:782 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:29:782 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(1,0) que me solicito personaje: @
+[INFO] 22:19:29:795 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (1,0)
+[INFO] 22:19:29:795 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(1,0)
+[INFO] 22:19:29:976 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:29:976 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:29:976 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:29:976 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(2,0) que me solicito personaje: @
+[INFO] 22:19:29:983 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (2,0)
+[INFO] 22:19:29:983 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(2,0)
+[INFO] 22:19:30:195 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:30:195 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:30:195 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:30:195 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(3,0) que me solicito personaje: @
+[INFO] 22:19:30:196 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (3,0)
+[INFO] 22:19:30:196 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(3,0)
+[INFO] 22:19:30:402 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:30:402 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:30:402 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:30:402 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(4,0) que me solicito personaje: @
+[INFO] 22:19:30:403 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (4,0)
+[INFO] 22:19:30:403 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(4,0)
+[INFO] 22:19:30:610 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:30:610 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:30:610 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:30:610 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(5,0) que me solicito personaje: @
+[INFO] 22:19:30:611 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (5,0)
+[INFO] 22:19:30:611 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(5,0)
+[INFO] 22:19:30:821 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:30:821 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:30:822 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:30:822 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(6,0) que me solicito personaje: @
+[INFO] 22:19:30:822 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (6,0)
+[INFO] 22:19:30:822 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(6,0)
+[INFO] 22:19:31:47 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:31:47 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:31:47 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:31:47 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(7,0) que me solicito personaje: @
+[INFO] 22:19:31:48 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (7,0)
+[INFO] 22:19:31:48 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(7,0)
+[INFO] 22:19:31:255 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:31:255 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:31:255 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:31:255 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(8,0) que me solicito personaje: @
+[INFO] 22:19:31:256 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (8,0)
+[INFO] 22:19:31:256 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(8,0)
+[INFO] 22:19:31:464 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:31:464 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:31:464 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:31:464 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(9,0) que me solicito personaje: @
+[INFO] 22:19:31:472 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (9,0)
+[INFO] 22:19:31:472 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(9,0)
+[INFO] 22:19:31:682 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:31:682 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:31:682 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:31:682 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(10,0) que me solicito personaje: @
+[INFO] 22:19:31:683 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (10,0)
+[INFO] 22:19:31:683 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(10,0)
+[INFO] 22:19:31:895 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:31:895 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:31:895 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:31:895 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(11,0) que me solicito personaje: @
+[INFO] 22:19:31:896 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (11,0)
+[INFO] 22:19:31:896 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(11,0)
+[INFO] 22:19:32:103 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:32:103 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:32:103 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:32:104 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(12,0) que me solicito personaje: @
+[INFO] 22:19:32:105 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (12,0)
+[INFO] 22:19:32:108 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(12,0)
+[INFO] 22:19:32:311 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:32:311 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:32:311 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:32:311 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(13,0) que me solicito personaje: @
+[INFO] 22:19:32:312 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (13,0)
+[INFO] 22:19:32:312 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(13,0)
+[INFO] 22:19:32:519 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:32:519 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:32:519 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:32:519 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(14,0) que me solicito personaje: @
+[INFO] 22:19:32:520 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (14,0)
+[INFO] 22:19:32:520 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(14,0)
+[INFO] 22:19:32:726 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:32:726 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:32:726 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:32:726 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(15,0) que me solicito personaje: @
+[INFO] 22:19:32:727 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (15,0)
+[INFO] 22:19:32:727 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(15,0)
+[INFO] 22:19:32:939 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:32:939 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:32:939 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:32:939 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(16,0) que me solicito personaje: @
+[INFO] 22:19:32:945 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (16,0)
+[INFO] 22:19:32:945 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(16,0)
+[INFO] 22:19:33:149 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:33:149 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:33:149 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:33:149 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(17,0) que me solicito personaje: @
+[INFO] 22:19:33:157 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (17,0)
+[INFO] 22:19:33:157 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(17,0)
+[INFO] 22:19:33:360 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:33:360 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:33:360 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:33:360 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(18,0) que me solicito personaje: @
+[INFO] 22:19:33:361 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (18,0)
+[INFO] 22:19:33:362 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(18,0)
+[INFO] 22:19:33:569 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:33:569 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:33:569 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:33:569 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(19,0) que me solicito personaje: @
+[INFO] 22:19:33:570 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (19,0)
+[INFO] 22:19:33:570 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(19,0)
+[INFO] 22:19:33:779 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:33:779 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:33:779 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:33:779 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(20,0) que me solicito personaje: @
+[INFO] 22:19:33:785 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (20,0)
+[INFO] 22:19:33:785 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(20,0)
+[INFO] 22:19:33:991 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:33:991 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:33:991 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:33:991 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(21,0) que me solicito personaje: @
+[INFO] 22:19:33:992 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (21,0)
+[INFO] 22:19:33:992 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(21,0)
+[INFO] 22:19:34:210 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:34:210 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:34:210 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:34:210 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(22,0) que me solicito personaje: @
+[INFO] 22:19:34:211 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (22,0)
+[INFO] 22:19:34:211 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(22,0)
+[INFO] 22:19:34:428 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:34:428 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:34:428 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:34:428 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(23,0) que me solicito personaje: @
+[INFO] 22:19:34:429 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (23,0)
+[INFO] 22:19:34:429 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(23,0)
+[INFO] 22:19:34:646 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:34:646 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:34:646 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:34:646 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(23,1) que me solicito personaje: @
+[INFO] 22:19:34:647 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (23,1)
+[INFO] 22:19:34:647 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(23,1)
+[INFO] 22:19:34:863 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:34:863 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:34:864 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:34:864 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(23,2) que me solicito personaje: @
+[INFO] 22:19:34:865 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (23,2)
+[INFO] 22:19:34:868 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(23,2)
+[INFO] 22:19:35:71 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:35:71 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:35:71 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:35:71 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(23,3) que me solicito personaje: @
+[INFO] 22:19:35:72 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (23,3)
+[INFO] 22:19:35:72 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(23,3)
+[INFO] 22:19:35:283 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:35:283 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:35:283 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:35:284 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(23,4) que me solicito personaje: @
+[INFO] 22:19:35:284 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (23,4)
+[INFO] 22:19:35:284 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(23,4)
+[INFO] 22:19:35:495 ProcesoNivel/(5727:5727): Buscando mensaje en cola
+[INFO] 22:19:35:495 ProcesoNivel/(5727:5727): Recibi mensaje de tipo: 10
+[INFO] 22:19:35:495 ProcesoNivel/(5727:5727): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:19:35:496 ProcesoNivel/(5727:5727): Tomo la posicion del recurso:(23,5) que me solicito personaje: @
+[INFO] 22:19:35:496 ProcesoNivel/(5727:5727): Modifico posicion personaje: @ en posicion (23,5)
+[INFO] 22:19:35:496 ProcesoNivel/(5727:5727): Movi el personaje: @ a la posicion:(23,5)
+[INFO] 22:39:16:104 ProcesoNivel/(5918:5918): El nivel se conecto al puerto: 5000
+[INFO] 22:39:16:113 ProcesoNivel/(5918:5918): El nivel: L le hizo HANDSHAKE al socket: 6
+[INFO] 22:39:16:114 ProcesoNivel/(5918:5918): El recovery esta activado
+[INFO] 22:39:16:135 ProcesoNivel/(5918:5919): Empieza a ejecutar el hilo interbloqueo
+[INFO] 22:39:16:143 ProcesoNivel/(5918:5918): Terminado dibujar nivel
+[INFO] 22:39:16:145 ProcesoNivel/(5918:5919): El hilo interbloqueo entra en la region critica
+[INFO] 22:39:16:145 ProcesoNivel/(5918:5919): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 22:39:16:145 ProcesoNivel/(5918:5919): El hilo interbloqueo sale de la region critica
+[INFO] 22:39:20:555 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:20:558 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 1
+[INFO] 22:39:20:558 ProcesoNivel/(5918:5918): Recibi HANDSHAKE del personaje: cs
+[INFO] 22:39:20:564 ProcesoNivel/(5918:5918): Se dibujo el personaje: ( en la pos (0,0)
+[INFO] 22:39:20:574 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:20:574 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 3
+[INFO] 22:39:20:574 ProcesoNivel/(5918:5918): Recibi REQUEST_POS_RECURSO
+[INFO] 22:39:20:574 ProcesoNivel/(5918:5918): El recurso pedido es: F
+[INFO] 22:39:20:574 ProcesoNivel/(5918:5918): Mutex de lista de recursos y personajes entra a region critica
+[INFO] 22:39:20:575 ProcesoNivel/(5918:5918): Mando la posicion del recurso F: (23,5)
+[INFO] 22:39:20:575 ProcesoNivel/(5918:5918): Mande la posicion del recurso: F al personaje: @
+[INFO] 22:39:20:584 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:20:584 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:20:584 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:20:584 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(1,0) que me solicito personaje: @
+[INFO] 22:39:20:586 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (1,0)
+[INFO] 22:39:20:586 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(1,0)
+[INFO] 22:39:20:798 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:20:798 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:20:799 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:20:799 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(2,0) que me solicito personaje: @
+[INFO] 22:39:20:804 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (2,0)
+[INFO] 22:39:20:805 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(2,0)
+[INFO] 22:39:21:20 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:21:20 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:21:20 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:21:20 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(3,0) que me solicito personaje: @
+[INFO] 22:39:21:26 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (3,0)
+[INFO] 22:39:21:26 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(3,0)
+[INFO] 22:39:21:242 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:21:242 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:21:242 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:21:242 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(4,0) que me solicito personaje: @
+[INFO] 22:39:21:243 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (4,0)
+[INFO] 22:39:21:243 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(4,0)
+[INFO] 22:39:21:465 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:21:465 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:21:465 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:21:465 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(5,0) que me solicito personaje: @
+[INFO] 22:39:21:466 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (5,0)
+[INFO] 22:39:21:466 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(5,0)
+[INFO] 22:39:21:673 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:21:673 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:21:673 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:21:673 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(6,0) que me solicito personaje: @
+[INFO] 22:39:21:674 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (6,0)
+[INFO] 22:39:21:674 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(6,0)
+[INFO] 22:39:21:882 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:21:882 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:21:883 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:21:883 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(7,0) que me solicito personaje: @
+[INFO] 22:39:21:884 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (7,0)
+[INFO] 22:39:21:884 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(7,0)
+[INFO] 22:39:22:105 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:22:106 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:22:106 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:22:106 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(8,0) que me solicito personaje: @
+[INFO] 22:39:22:106 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (8,0)
+[INFO] 22:39:22:106 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(8,0)
+[INFO] 22:39:22:317 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:22:317 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:22:317 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:22:317 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(9,0) que me solicito personaje: @
+[INFO] 22:39:22:318 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (9,0)
+[INFO] 22:39:22:318 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(9,0)
+[INFO] 22:39:22:523 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:22:523 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:22:524 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:22:524 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(10,0) que me solicito personaje: @
+[INFO] 22:39:22:524 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (10,0)
+[INFO] 22:39:22:524 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(10,0)
+[INFO] 22:39:22:730 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:22:730 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:22:730 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:22:730 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(11,0) que me solicito personaje: @
+[INFO] 22:39:22:731 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (11,0)
+[INFO] 22:39:22:731 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(11,0)
+[INFO] 22:39:22:939 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:22:939 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:22:939 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:22:939 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(12,0) que me solicito personaje: @
+[INFO] 22:39:22:939 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (12,0)
+[INFO] 22:39:22:939 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(12,0)
+[INFO] 22:39:23:148 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:23:148 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:23:148 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:23:148 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(13,0) que me solicito personaje: @
+[INFO] 22:39:23:149 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (13,0)
+[INFO] 22:39:23:149 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(13,0)
+[INFO] 22:39:23:357 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:23:357 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:23:358 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:23:358 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(14,0) que me solicito personaje: @
+[INFO] 22:39:23:358 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (14,0)
+[INFO] 22:39:23:359 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(14,0)
+[INFO] 22:39:23:587 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:23:588 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:23:588 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:23:588 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(15,0) que me solicito personaje: @
+[INFO] 22:39:23:589 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (15,0)
+[INFO] 22:39:23:589 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(15,0)
+[INFO] 22:39:23:809 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:23:809 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:23:809 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:23:809 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(16,0) que me solicito personaje: @
+[INFO] 22:39:23:810 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (16,0)
+[INFO] 22:39:23:810 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(16,0)
+[INFO] 22:39:24:18 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:24:18 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:24:18 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:24:18 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(17,0) que me solicito personaje: @
+[INFO] 22:39:24:25 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (17,0)
+[INFO] 22:39:24:25 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(17,0)
+[INFO] 22:39:24:227 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:24:227 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:24:227 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:24:227 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(18,0) que me solicito personaje: @
+[INFO] 22:39:24:235 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (18,0)
+[INFO] 22:39:24:235 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(18,0)
+[INFO] 22:39:24:452 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:24:452 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:24:452 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:24:452 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(19,0) que me solicito personaje: @
+[INFO] 22:39:24:453 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (19,0)
+[INFO] 22:39:24:453 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(19,0)
+[INFO] 22:39:24:669 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:24:669 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:24:669 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:24:669 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(20,0) que me solicito personaje: @
+[INFO] 22:39:24:670 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (20,0)
+[INFO] 22:39:24:670 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(20,0)
+[INFO] 22:39:24:877 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:24:877 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:24:877 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:24:878 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(21,0) que me solicito personaje: @
+[INFO] 22:39:24:878 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (21,0)
+[INFO] 22:39:24:878 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(21,0)
+[INFO] 22:39:25:86 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:25:86 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:25:86 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:25:86 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(22,0) que me solicito personaje: @
+[INFO] 22:39:25:87 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (22,0)
+[INFO] 22:39:25:87 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(22,0)
+[INFO] 22:39:25:306 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:25:306 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:25:306 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:25:306 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(23,0) que me solicito personaje: @
+[INFO] 22:39:25:307 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (23,0)
+[INFO] 22:39:25:307 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(23,0)
+[INFO] 22:39:25:517 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:25:517 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:25:517 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:25:517 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(23,1) que me solicito personaje: @
+[INFO] 22:39:25:518 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (23,1)
+[INFO] 22:39:25:518 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(23,1)
+[INFO] 22:39:25:724 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:25:724 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:25:725 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:25:725 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(23,2) que me solicito personaje: @
+[INFO] 22:39:25:725 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (23,2)
+[INFO] 22:39:25:725 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(23,2)
+[INFO] 22:39:25:932 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:25:932 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:25:933 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:25:933 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(23,3) que me solicito personaje: @
+[INFO] 22:39:25:939 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (23,3)
+[INFO] 22:39:25:939 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(23,3)
+[INFO] 22:39:26:154 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:26:155 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:26:155 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:26:155 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(23,4) que me solicito personaje: @
+[INFO] 22:39:26:156 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (23,4)
+[INFO] 22:39:26:156 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(23,4)
+[INFO] 22:39:26:368 ProcesoNivel/(5918:5918): Buscando mensaje en cola
+[INFO] 22:39:26:368 ProcesoNivel/(5918:5918): Recibi mensaje de tipo: 10
+[INFO] 22:39:26:368 ProcesoNivel/(5918:5918): Recibi REQUEST_MOVIMIENTO
+[INFO] 22:39:26:368 ProcesoNivel/(5918:5918): Tomo la posicion del recurso:(23,5) que me solicito personaje: @
+[INFO] 22:39:26:369 ProcesoNivel/(5918:5918): Modifico posicion personaje: @ en posicion (23,5)
+[INFO] 22:39:26:369 ProcesoNivel/(5918:5918): Movi el personaje: @ a la posicion:(23,5)

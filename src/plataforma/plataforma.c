@@ -198,7 +198,7 @@ void* orq (void* a){
 							//memcpy(&(miDataNivel.miNivel),&(miGestor->dataNivel),sizeof(Nivel));
 							//memcpy(&(miDataNivel.miPlanificador),&(miGestor->dataPlanificador),sizeof(Planificador));
 
-							log_info(Logger, string_from_format("Envia mensaje con la informacion del nivel (NIVEL ID: %s - PLANIFICADOR ID: %s).", miGestor->dataNivel->ID, miGestor->dataPlanificador->ID));
+							log_info(Logger, string_from_format("Envia mensaje con la informacion del nivel (NIVEL ID: %s - PLANIFICADOR ID: %s).", (miGestor->dataNivel.ID), (miGestor->dataPlanificador.ID)));
 							mandarMensaje(miMensaje->from,DATANIVEL,sizeof(Data_Nivel),&(miGestor->dataNivel));
 							
 						}
@@ -223,7 +223,7 @@ void* orq (void* a){
 										personajeAux = queue_pop(queue_bloq->queue);
 										imprimirBloqueados(miGestor->queues_bloq, string_from_format("Quita personaje '%s' asignado al recurso '%s' de la lista de bloqueados.", personajeAux->ID, queue_bloq->idRecurso));
 										recursoAsignado = asignarRecurso(miRecurso->idRecurso, personajeAux);
-										log_info(Logger, string_from_format("Envia mensaje con la cantidad de recursos asignados (ID PERSONAJE: %s - ID RECURSO: %s - CANT: %d).", recursoAsignado->idPersonaje, recursoAsignado->idRecurso, recursoAsignado->cant));
+										log_info(Logger, string_from_format("Envia mensaje con la cantidad de recursos asignados (ID PERSONAJE: %s - ID RECURSO: %s - CANT: %d).", (recursoAsignado.idPersonaje), (recursoAsignado.idRecurso), (recursoAsignado.cant)));
 										mandarMensaje(miMensaje->from,RECURSOS_REASIGNADOS,sizeof(Recursos), &recursoAsignado);
 										queue_push(miGestor->queue_listos, personajeAux);
 										imprimirListos(miGestor->queue_listos, string_from_format("Agrega personaje '%s' a cola de listos.", personajeAux->ID));
