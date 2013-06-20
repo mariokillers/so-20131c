@@ -3,7 +3,7 @@
 
 t_personaje *personaje;
 
-//variables locales //VER
+//variables globales
 char state;
 Posicion *posicionProximoRecurso;
 char proxRecurso;
