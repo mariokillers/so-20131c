@@ -126,6 +126,10 @@ void quitarSolicitudesDeRecurso(PersonajeEnNivel* personaje, char idRecurso);
 
 PersonajeEnNivel *buscarPersonaje_byfd(int fd);
 
+PersonajeEnNivel* buscarPersonaje_byid(char id);
+
+void matarPersonaje(int fdPersonaje);
+
 void* interbloqueo(void*);
 
 int buscarEnReferenciaRecurso(char idRecurso, char referenciaRecurso[]);

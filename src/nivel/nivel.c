@@ -13,7 +13,7 @@ CCB clientCCB;
 
 int recovery;
 
-//inicializo el semaforo MUTEX (VER PORQUE NO FUNCA EL INIT)
+//inicializo el semaforo MUTEX
 pthread_mutex_t mutex;
 
 //instancio el logger
@@ -249,37 +249,10 @@ int main(int argc, char *argv[]) {
 			{
 				log_info(logger, "Recibi TERMINE_NIVEL");
 
-				//entro en la region critica
-				pthread_mutex_lock(&mutex);
+				matarPersonaje(mensaje->from);
 
-				PersonajeEnNivel* personaje = buscarPersonaje_byfd(mensaje->from);
+				log_info(logger, "Personaje matado");
 
-				log_info(logger, string_from_format("El personaje: %c me avisa que termino el nivel", personaje->id));
-
-				//se fija que recursos tenia asignado el personaje para liberarlos
-				t_recursos* recursosALiberar = liberarRecursos(personaje);
-
-				//le manda los recursos liberados, de a 1, al orquestador
-				mandarRecursosLiberados(recursosALiberar,clientCCB.sockfd);
-
-				log_info(logger, "Mando recursos liberados");
-
-				//por cada recurso que libera tengo que sumarlo a la cantidad en listaItems
-				aumentarRecursos(recursosALiberar);
-
-				log_info(logger, "Aumento los recursos re-asignados");
-
-				//borra el personaje del nivel y libera al personaje de listaPersonajes
-				BorrarItem(&ListaItems,personaje->id);
-				borrarPersonajeEnNivel(personaje->id);
-
-				log_info(logger, string_from_format("El personaje: %c ha sido borrado del nivel", personaje->id));
-
-				//re-dibuja el nivel ya sin el personaje y con la cantidad de recursos nueva
-				nivel_gui_dibujar(ListaItems);
-
-				pthread_mutex_unlock(&mutex);
-				//salgo de la region critica
 			}
 				break;
 
@@ -297,10 +270,14 @@ int main(int argc, char *argv[]) {
 				//entro en la region critica
 				pthread_mutex_lock(&mutex);
 
-				//TENO QUE LLAMAR A LO QUE TIENE EL CASE TERMINE_NIVEL!
+				PersonajeEnNivel* personaje = buscarPersonaje_byid(idVictima);
 
 				pthread_mutex_unlock(&mutex);
 				//salgo de la region critica
+
+				matarPersonaje (personaje->fd);
+
+				log_info(logger, string_from_format("El personaje: %c ha sido matado y ha liberado sus recursos", personaje->id));
 
 			}
 				break;
@@ -317,6 +294,41 @@ int main(int argc, char *argv[]) {
 	close(clientCCB.sockfd);
 	return 0;
 
+}
+
+void matarPersonaje(int fdPersonaje){
+
+	//entro en la region critica
+	pthread_mutex_lock(&mutex);
+
+	PersonajeEnNivel* personaje = buscarPersonaje_byfd(fdPersonaje);
+
+	//se fija que recursos tenia asignado el personaje para liberarlos
+	t_recursos* recursosALiberar = liberarRecursos(personaje);
+
+	log_info(logger, "Tengo recursos a liberar");
+
+	//le manda los recursos liberados, de a 1, al orquestador
+	mandarRecursosLiberados(recursosALiberar,clientCCB.sockfd);
+
+	log_info(logger, "Mando recursos liberados");
+
+	//por cada recurso que libera tengo que sumarlo a la cantidad en listaItems
+	aumentarRecursos(recursosALiberar);
+
+	log_info(logger, "Aumento los recursos re-asignados");
+
+	//borra el personaje del nivel y libera al personaje de listaPersonajes
+	BorrarItem(&ListaItems,personaje->id);
+	borrarPersonajeEnNivel(personaje->id);
+
+	log_info(logger, string_from_format("El personaje: %c ha sido borrado del nivel", personaje->id));
+
+	//re-dibuja el nivel ya sin el personaje y con la cantidad de recursos nueva
+	nivel_gui_dibujar(ListaItems);
+
+	pthread_mutex_unlock(&mutex);
+	//salgo de la region critica
 }
 
 void reasignarRecursos(Recursos* listaRecursos){
@@ -350,12 +362,19 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador){
 		recurso.idPersonaje = '\0';
 		recurso.cant = aux->cant;
 
+		log_info(logger, string_from_format("Mando mensaje. La cantidad del recurso: %c es: %d", aux->idRecurso, aux->cant));
+
 		//le mando al orquestador los recursos liberados para que re-asigne
 		mandarMensaje(fdOrquestador, RECURSOS_LIBERADOS,sizeof(Recursos),&recurso);
 
+		log_info(logger, "Mando mensaje al orquestador con lo que libera");
+
 		//escucho al orquestador que me va a mandar los que re-asigno
-		while((!mensajes(colaDeMensajes,serverCCB)));
+		while((!mensajes(colaDeMensajes,serverCCB)))
+			;
 			mensaje = queue_pop(colaDeMensajes);
+
+			log_info(logger, "Le llega mensaje");
 
 			//mientras no sea el mensaje REASIGNACION_FINALIZADA... quiere decir que me esta mandando re-asignaciones
 
@@ -622,7 +641,7 @@ void modificarPosPersonaje(PersonajeEnNivel* personaje, int posx, int posy){
 
 PersonajeEnNivel* buscarPersonaje_byfd(int fd){
 	/*@NAME: buscarPersonaje
-	* @DESC: devuelve un PersonajeEnNivel que tenga ese id
+	* @DESC: devuelve un PersonajeEnNivel que tenga ese fd
 	*/
 	PersonajeEnNivel* personaje = listaPersonajes;
 
@@ -630,6 +649,22 @@ PersonajeEnNivel* buscarPersonaje_byfd(int fd){
 	while ((personaje != NULL) && (personaje->fd != fd)) {
 		personaje = personaje->sig;
 	}if ((personaje != NULL) && (personaje->fd == fd)){
+		return personaje;
+	}
+	return NULL;
+
+}
+
+PersonajeEnNivel* buscarPersonaje_byid(char id){
+	/*@NAME: buscarPersonaje
+	* @DESC: devuelve un PersonajeEnNivel que tenga ese id
+	*/
+	PersonajeEnNivel* personaje = listaPersonajes;
+
+	//busco el personaje
+	while ((personaje != NULL) && (personaje->id != id)) {
+		personaje = personaje->sig;
+	}if ((personaje != NULL) && (personaje->id == id)){
 		return personaje;
 	}
 	return NULL;
