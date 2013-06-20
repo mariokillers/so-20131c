@@ -115,6 +115,7 @@ int main(int argc, char *argv[]) {
 
 								break;
 							case NODATANIVEL:
+								sleep(5);
 								//orquestador no pudo mandar la data de nivel, la vuelve a pedir
 								log_info(logger, string_from_format("el personaje %s no recibio data de %s", personaje->personaje_nombre, proxNivel));
 								solicitarDataNivel();
