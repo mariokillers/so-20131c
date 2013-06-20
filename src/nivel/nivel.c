@@ -47,7 +47,6 @@ int main(int argc, char *argv[]) {
 	log_info(logger, string_from_format("El nivel: %c le hizo HANDSHAKE al socket: %d", yoNivel.ID, clientCCB.sockfd));
 
 	//inicializo el hilo que maneja interbloqueo VER ACA!
-	pthread_t thread_interbloqueo;
 	pthread_create(&thread_interbloqueo, NULL, &interbloqueo, NULL );
 
 	//inicializo el recovery

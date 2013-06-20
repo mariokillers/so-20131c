@@ -12,8 +12,8 @@ void *interbloqueo(void* a){
 		char *referenciaPersonaje, *referenciaRecursos;
 		int *recursosTotales, *recursosDisponibles, *aux, **recursosAsignados, **recursosSolicitados;
 		bool *marcados;
-		if (pthread_mutex_trylock(&deadlock_mutex)) { //esta terminando nivel
-			pthread_mutex_unlock(&mutex);
+		if (!pthread_mutex_trylock(&deadlock_mutex)) { //esta terminando nivel
+			pthread_mutex_unlock(&deadlock_mutex);
 			free(aux);
 			free(recursosAsignados);
 			free(recursosSolicitados);

@@ -10,5 +10,6 @@
 
 int recovery, recovery_time;
 pthread_mutex_t deadlock_mutex;
+pthread_t thread_interbloqueo;
 
 #endif /* INTERBLOQUEO_H_ */
