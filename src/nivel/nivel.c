@@ -416,8 +416,8 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador) {
 		log_info(logger, "Mando mensaje al orquestador con lo que libera");
 
 		//escucho al orquestador que me va a mandar los que re-asigno
-		while ((!mensajes(colaDeMensajes, serverCCB)))
-			log_info(logger, "Esperando mensaje del orquestador...");
+		while ((!mensajes(colaDeMensajes, clientCCB)))
+			;
 
 		mensaje = queue_pop(colaDeMensajes);
 
@@ -437,7 +437,7 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador) {
 			}
 			borrarMensaje(mensaje);
 			//levanto nuevo mensaje
-			while ((!mensajes(colaDeMensajes, serverCCB)))
+			while ((!mensajes(colaDeMensajes, clientCCB)))
 				;
 			mensaje = queue_pop(colaDeMensajes);
 		}

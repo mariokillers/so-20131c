@@ -54,6 +54,7 @@ void imprimirBloqueados();
 GestorNivel* findGestor_byid (char* );
 GestorNivel* findGestor_byfd (int);
 Queue_bloqueados* findBloqQueue_byidRecurso (t_list*, char);
+Personaje* removePersonaje_byid (t_list* personajes_en_nivel, Personaje* miPersonaje);
 Personaje* removePersonaje_byfd (t_list* personajes_en_nivel, int fd);
 Personaje* findPersonaje_byid (t_list* personajes_en_nivel, char* id);
 void entregarTurno (GestorNivel* miGestor);

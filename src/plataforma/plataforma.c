@@ -366,10 +366,20 @@ GestorNivel* findGestor_byid (char* nivel){
 	return (list_find(Gestores,(void*)_eselGestor));
 }
 
-Personaje* removePersonaje_byid (t_list* personajes_en_nivel, Personaje * miPersonaje){
-	log_info(Logger, string_from_format ("recibi fd %d", fd));
+Personaje* removePersonaje_byfd (t_list* personajes_en_nivel, int fd){
+	
 	bool _eselPersonaje (Personaje* comparador){
-		log_info(Logger, string_from_format ("recibi fd %d", id));
+	
+		return(comparador->FD ==fd);
+	}
+	return (list_remove_by_condition(personajes_en_nivel,(void*)_eselPersonaje));
+}
+
+
+Personaje* removePersonaje_byid (t_list* personajes_en_nivel, Personaje * miPersonaje){
+	log_info(Logger, string_from_format ("recibi id %s", miPersonaje->ID));
+	bool _eselPersonaje (Personaje* comparador){
+		log_info(Logger, string_from_format ("recibi fd %s", comparador->ID));
 		return(string_equals_ignore_case(comparador->ID, miPersonaje->ID));
 	}
 	return (list_remove_by_condition(personajes_en_nivel,(void*)_eselPersonaje));
