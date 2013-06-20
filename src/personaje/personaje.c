@@ -12,6 +12,7 @@ Posicion *nuevaPosicion;
 Posicion *posicionActual;
 bool respuestaConfirmacionRecurso;
 char *pathArchivoConfig;
+char flag;
 
 Nivel nivelActualData;
 Planificador planificadorActualData;
@@ -156,48 +157,54 @@ int main(int argc, char *argv[]) {
 				case MOVIMIENTO_PERMITIDO:
 					log_info(logger, "llego mensaje MOVIMIENTO_PERMITIDO");
 					//si tengo la poscion del proximo recurso se mueve
-					if (posicionProximoRecurso != NULL ) {
-						log_info(logger,
-								"tengo posicion de recurso que necesito");
+					if(flag == 0){
+						if (posicionProximoRecurso != NULL ) {
+							log_info(logger,
+									"tengo posicion de recurso que necesito");
 
-						//realizo el movimiento y guardo nueva posicion del personaje
-						nuevaPosicion = realizarMovimiento();
-						posicionActual = nuevaPosicion;
-						((Posicion*) (personaje->posActual))->POS_X =
-								posicionActual->POS_X;
-						((Posicion*) (personaje->posActual))->POS_Y =
-								posicionActual->POS_Y;
+							//realizo el movimiento y guardo nueva posicion del personaje
+							nuevaPosicion = realizarMovimiento();
+							posicionActual = nuevaPosicion;
+							((Posicion*) (personaje->posActual))->POS_X =
+									posicionActual->POS_X;
+							((Posicion*) (personaje->posActual))->POS_Y =
+									posicionActual->POS_Y;
 
-						//loggeo de la nueva posicion del personaje
-						log_info(logger,
-								string_from_format(
-										"personaje %s nueva posicion: (%d,%d)",
-										personaje->nombre,
-										personaje->posActual->POS_X,
-										personaje->posActual->POS_Y));
+							//loggeo de la nueva posicion del personaje
+							log_info(logger,
+									string_from_format(
+											"personaje %s nueva posicion: (%d,%d)",
+											personaje->nombre,
+											personaje->posActual->POS_X,
+											personaje->posActual->POS_Y));
 
-						//analiza si llego a la posicion del proximo recurso (adentro manda los mensajes)
-						analizarRecurso();
-					} else {
-						log_info(logger, "no tengo posicion de recurso");
-						//solicitar posicion del proximo recurso y loggea solicitud
-						proxRecurso = proximoRecurso(
-								personaje->niveles);
+							//analiza si llego a la posicion del proximo recurso (adentro manda los mensajes)
+							analizarRecurso();
+						} else {
+							log_info(logger, "no tengo posicion de recurso");
+							//solicitar posicion del proximo recurso y loggea solicitud
+							proxRecurso = proximoRecurso(
+									personaje->niveles);
 
-						mandarMensaje(nivelCCB.sockfd, REQUEST_POS_RECURSO,
-								sizeof(proxRecurso), (char *) &proxRecurso);
+							mandarMensaje(nivelCCB.sockfd, REQUEST_POS_RECURSO,
+									sizeof(proxRecurso), (char *) &proxRecurso);
 
-						log_info(logger,
-								string_from_format(
-										"personaje %s solicita posicion del recurso %c a %s",
-										personaje->nombre,
-										proxRecurso, nombreNivelActual));
+							log_info(logger,
+									string_from_format(
+											"personaje %s solicita posicion del recurso %c a %s",
+											personaje->nombre,
+											proxRecurso, nombreNivelActual));
 
-						miEstado = WAIT_POS_REC;
-						log_info(logger,
-								string_from_format(
-										"personaje %s cambia a estado %d",
-										personaje->nombre, miEstado));
+							miEstado = WAIT_POS_REC;
+							log_info(logger,
+									string_from_format(
+											"personaje %s cambia a estado %d",
+											personaje->nombre, miEstado));
+						}
+					} else{
+						flag = 0;
+						llegoRecurso();
+						break;
 					}
 					break;
 
@@ -267,93 +274,13 @@ int main(int argc, char *argv[]) {
 					//si le otorgaron el recurso lo agrega y avisa que termino el turno
 					if (respuestaConfirmacionRecurso) {
 
-						agregarRecurso(personaje->niveles);
-
-						posicionProximoRecurso = NULL;
-
-						//loggea la obtencion del recurso y la finalizacion del turno
-						log_info(logger,
-								string_from_format(
-										"personaje %s obtuvo recurso %c en %s",
-										personaje->nombre,
-										proxRecurso, nombreNivelActual));
-
-						log_info(logger,
-								string_from_format(
-										"personaje %s termino turno en %s",
-										personaje->nombre,
-										nombreNivelActual));
-
-						//verifico si el personaje finalizo el nivel
-						if (nivelTerminado(personaje->niveles,
-								nombreNivelActual)) {
-							mandarMensaje(nivelCCB.sockfd, TERMINE_NIVEL,
-									0, NULL );
-							log_info(logger,
-									string_from_format(
-											"personaje %s avisa a %s que lo termino",
-											personaje->nombre,
-											nombreNivelActual));
-							mandarMensaje(planificadorCCB.sockfd, TERMINE_NIVEL,
-									0, NULL );
-							log_info(logger,
-									string_from_format(
-											"personaje %s avisa al planificador de %s que lo termino",
-											personaje->nombre,
-											nombreNivelActual));
-
-							//loggea la finalizacion del nivel actual
-							log_info(logger,
-									string_from_format(
-											"personaje %s termino %s",
-											personaje->nombre,
-											nombreNivelActual));
-
-							((Posicion*) (personaje->posActual))->POS_X =
-									0;
-							((Posicion*) (personaje->posActual))->POS_Y =
-									0;
-
-							//personaje se desconecta del nivel actual y loggea la desconexion
-							close(nivelCCB.sockfd);
-							log_info(logger,
-									string_from_format(
-											"personaje %s se desconecta del %s",
-											personaje->nombre,
-											nombreNivelActual));
-
-							//personaje se desconecta del planificador del nivel actual y loggea la desconexion
-							close(planificadorCCB.sockfd);
-							log_info(logger,
-									string_from_format(
-											"personaje %s se desconecta del planificador de %s",
-											personaje->nombre,
-											nombreNivelActual));
-
-							miEstado = NUEVO_NIVEL;
-							log_info(logger,
-									string_from_format(
-											"personaje %s cambia a estado %d",
-											personaje->nombre,
-											miEstado));
-							break;
-						} else {
-
-							//si no termino el nivel, aviso a planificador que finalizo el turno
-							mandarMensaje(planificadorCCB.sockfd, TERMINE_TURNO,
-									0, NULL );
-							miEstado = STANDBY;
-							log_info(logger,
-									string_from_format(
-											"personaje %s cambia a estado %d",
-											personaje->nombre,
-											miEstado));
-							break;
-						}
+						llegoRecurso();
 
 					} else {
 						mandarMensaje(planificadorCCB.sockfd, PERSONAJE_BLOQUEADO,
 								sizeof(proxRecurso), (char *) &proxRecurso);
+
+						flag = 1;
 
 						log_info(logger,
 								string_from_format(
@@ -842,6 +769,7 @@ void inicializarPersonaje() {
 
 	strcpy(nombreNivelActual, "");
 	posicionActual = (Posicion*) personaje->posActual;
+	flag = 0;
 	miEstado = NUEVO_NIVEL;
 }
 
@@ -860,4 +788,88 @@ void solicitarDataNivel() {
 	log_info(logger,
 			string_from_format("personaje %s cambia a estado %d",
 					personaje->nombre, miEstado));
+}
+
+void llegoRecurso(){
+	agregarRecurso(personaje->niveles);
+
+	posicionProximoRecurso = NULL;
+
+	//loggea la obtencion del recurso y la finalizacion del turno
+	log_info(logger,
+			string_from_format(
+					"personaje %s obtuvo recurso %c en %s",
+					personaje->nombre,
+					proxRecurso, nombreNivelActual));
+
+	log_info(logger,
+			string_from_format(
+					"personaje %s termino turno en %s",
+					personaje->nombre,
+					nombreNivelActual));
+
+	//verifico si el personaje finalizo el nivel
+	if (nivelTerminado(personaje->niveles,
+			nombreNivelActual)) {
+		mandarMensaje(nivelCCB.sockfd, TERMINE_NIVEL,
+				0, NULL );
+		log_info(logger,
+				string_from_format(
+						"personaje %s avisa a %s que lo termino",
+						personaje->nombre,
+						nombreNivelActual));
+		mandarMensaje(planificadorCCB.sockfd, TERMINE_NIVEL,
+				0, NULL );
+		log_info(logger,
+				string_from_format(
+						"personaje %s avisa al planificador de %s que lo termino",
+						personaje->nombre,
+						nombreNivelActual));
+
+		//loggea la finalizacion del nivel actual
+		log_info(logger,
+				string_from_format(
+						"personaje %s termino %s",
+						personaje->nombre,
+						nombreNivelActual));
+
+		((Posicion*) (personaje->posActual))->POS_X =
+				0;
+		((Posicion*) (personaje->posActual))->POS_Y =
+				0;
+
+		//personaje se desconecta del nivel actual y loggea la desconexion
+		close(nivelCCB.sockfd);
+		log_info(logger,
+				string_from_format(
+						"personaje %s se desconecta del %s",
+						personaje->nombre,
+						nombreNivelActual));
+
+		//personaje se desconecta del planificador del nivel actual y loggea la desconexion
+		close(planificadorCCB.sockfd);
+		log_info(logger,
+				string_from_format(
+						"personaje %s se desconecta del planificador de %s",
+						personaje->nombre,
+						nombreNivelActual));
+
+		miEstado = NUEVO_NIVEL;
+		log_info(logger,
+				string_from_format(
+						"personaje %s cambia a estado %d",
+						personaje->nombre,
+						miEstado));
+	} else {
+
+		//si no termino el nivel, aviso a planificador que finalizo el turno
+		mandarMensaje(planificadorCCB.sockfd, TERMINE_TURNO,
+				0, NULL );
+		miEstado = STANDBY;
+		log_info(logger,
+				string_from_format(
+						"personaje %s cambia a estado %d",
+						personaje->nombre,
+						miEstado));
+	}
 }
