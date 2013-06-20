@@ -41,16 +41,16 @@ en un nivel y si lo tiene o no
 	*/
 typedef struct t_personaje_objetivo{
 	char objetivo;
-	bool tiene_objetivo;
+	bool tieneObjetivo;
 	struct t_personaje_objetivo *sig;
 } t_personaje_objetivo;
 
 /*define el tipo t_personaje_nivel, que representa un nivel que tiene que ganar un personaje y sus objetivos
 	*/
 typedef struct t_personaje_nivel{
-	char *personaje_nivel;
-	t_list *personaje_objetivos;
-	bool termino_nivel;
+	char *nivel;
+	t_list *objetivos;
+	bool terminoNivel;
 	struct t_personaje_nivel *sig;
 } t_personaje_nivel;
 
@@ -58,13 +58,13 @@ typedef struct t_personaje_nivel{
 y su estructura de datos
 	*/
 typedef struct t_personaje {
-	char *personaje_nombre;
-	char personaje_simbolo;
-	t_list *personaje_niveles;
-	int personaje_vidas;
-	int personaje_vidas_restantes;
-	Direccion *personaje_orquestador;
-	Posicion *personaje_posicion_actual;
+	char *nombre;
+	char simbolo;
+	t_list *niveles;
+	int vidas;
+	int vidasRestantes;
+	Direccion *orquestador;
+	Posicion *posActual;
 } t_personaje;
 
 t_personaje *read_personaje_archivo_configuracion(char* path);
