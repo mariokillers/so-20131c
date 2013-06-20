@@ -95,6 +95,7 @@ int conectarNivel(char *IP, int PORT);
 Personaje *hacerHandshake();
 void inicializarPersonaje();
 void solicitarDataNivel();
+void llegoRecurso();
 
 void imprimirObjetivos(t_list *niveles);
 

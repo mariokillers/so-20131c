@@ -30,6 +30,7 @@ int main(int argc, char *argv[]) {
 
 	logger = log_create(string_from_format("Proceso%s.log", nivel->nivel_nombre), "ProcesoNivel", false,
 			LOG_LEVEL_INFO);
+	loggerInterbloqueo = log_create(string_from_format("Interbloqueo%s.log", nivel->nivel_nombre), "Interbloqueo", false, LOG_LEVEL_INFO);
 
 	Nivel yoNivel;
 
@@ -149,6 +150,7 @@ int main(int argc, char *argv[]) {
 
 			//entro en la region critica
 			pthread_mutex_lock(&mutex);
+
 			log_info(logger,
 					"Mutex de lista de recursos y personajes entra a region critica");
 
@@ -219,7 +221,7 @@ int main(int argc, char *argv[]) {
 			log_info(logger, "Recibi REQUEST_RECURSO");
 
 			//entro en la region critica
-			//pthread_mutex_lock(&mutex);
+			pthread_mutex_lock(&mutex);
 
 			log_info(logger,
 					string_from_format(
@@ -267,7 +269,7 @@ int main(int argc, char *argv[]) {
 								recurso, personaje->id));
 			}
 
-			//pthread_mutex_unlock(&mutex);
+			pthread_mutex_unlock(&mutex);
 			//salgo de la region critica
 
 		}
@@ -325,7 +327,6 @@ int main(int argc, char *argv[]) {
 	//pthread_join(thread_interbloqueo, NULL );
 
 	//cierro el socket del cliente
-
 	close(clientCCB.sockfd);
 
 	//nivel_gui_terminar();
@@ -381,7 +382,7 @@ void reasignarRecursos(Recursos* listaRecursos) {
 
 	restarRecurso(ListaItems, recurso->idRecurso); //resta de la lista items el recurso que re-asigno
 
-	PersonajeEnNivel* personaje = buscarPersonaje_byfd(recurso->idPersonaje);
+	PersonajeEnNivel* personaje = buscarPersonaje_byid(recurso->idPersonaje);
 	agregarRecursoAPersonaje(personaje, recurso->idRecurso); // le agrega a listaPersonajes el recurso que obtuvo el personaje
 
 }
@@ -579,7 +580,7 @@ void agregarRecursoAPersonaje(PersonajeEnNivel* personaje, char recurso) {
 		quitarSolicitudesDeRecurso(personaje, recurso);
 	}
 
-	log_info(logger, "No es recurso pendiente");
+	//log_info(logger, "No es recurso pendiente");
 
 	t_recursos* auxList = personaje->recursos;
 
