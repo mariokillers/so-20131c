@@ -47,7 +47,6 @@ int main(int argc, char *argv[]) {
 	log_info(logger, string_from_format("El nivel: %c le hizo HANDSHAKE al socket: %d", yoNivel.ID, clientCCB.sockfd));
 
 	//inicializo el hilo que maneja interbloqueo VER ACA!
-	pthread_t thread_interbloqueo;
 	pthread_create(&thread_interbloqueo, NULL, &interbloqueo, NULL );
 
 	//inicializo el recovery
@@ -355,6 +354,8 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador){
 		recurso.idPersonaje = '\0';
 		recurso.cant = aux->cant;
 
+		int cant = recurso.cant;
+
 		log_info(logger, string_from_format("Mando mensaje. La cantidad del recurso: %c es: %d", aux->idRecurso, aux->cant));
 
 		//le mando al orquestador los recursos liberados para que re-asigne
@@ -364,6 +365,7 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador){
 
 		//escucho al orquestador que me va a mandar los que re-asigno
 		while((!mensajes(colaDeMensajes,serverCCB)))
+			log_info(logger, "Esperando mensaje del orquestador...");
 			;
 			mensaje = queue_pop(colaDeMensajes);
 
@@ -372,17 +374,33 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador){
 			//mientras no sea el mensaje REASIGNACION_FINALIZADA... quiere decir que me esta mandando re-asignaciones
 
 			while(mensaje->type != REASIGNACION_FINALIZADA ){
+				log_info(logger, "No llega recursos reasignados");
 				if(mensaje->type == RECURSOS_REASIGNADOS){
 
 					//llamo a reasignar con la data que me envio
 					Recursos* listaRecursos = mensaje->data;
 					reasignarRecursos(listaRecursos);
+					--cant;
+					log_info(logger, "Reasigno recursos");
 
 				} borrarMensaje(mensaje);
 				//levanto nuevo mensaje
 			while((!mensajes(colaDeMensajes,serverCCB)));
 				mensaje = queue_pop(colaDeMensajes);
 			}
+
+			log_info(logger, "Aumento los recursos que no se reasignaron");
+
+			t_recursos* recursoSinReasignar;
+			recursoSinReasignar = malloc(sizeof(t_recursos));
+
+			recursoSinReasignar->idRecurso = recurso.idRecurso;
+			recursoSinReasignar->cant = cant;
+			recursoSinReasignar->sig = NULL;
+
+			log_info(logger, string_from_format("Agrego a ListaItem en el recurso: %c la cantidad de: %d", recursoSinReasignar->idRecurso, recursoSinReasignar->cant));
+
+			aumentarRecursos(recursoSinReasignar);
 
 		aux = aux->sig;
 	}
@@ -439,7 +457,6 @@ ITEM_NIVEL* buscarItem(char id)
 	return temp;
 }
 
-
 PersonajeEnNivel* cargarPersonajeEnNivel(Personaje* miPersonaje){
 	/*@NAME: cargarPersonaje
 	 * @DESC: cuando se conecta un personaje al nivel, lo agrega a la listaPersonajes que es la lista para la cual el nivel
@@ -471,7 +488,6 @@ PersonajeEnNivel* cargarPersonajeEnNivel(Personaje* miPersonaje){
 
 
 }
-
 
 void agregarARecursosPendientes(PersonajeEnNivel* personaje, char recurso){
 	/*@NAME: agregarAListaRecursosPendientes
@@ -575,7 +591,6 @@ void borrarPersonajeEnNivel(char idPersonaje){
         }
       }
 }
-
 
 t_recursos* liberarRecursos(PersonajeEnNivel* personaje ){
 	/*@NAME: liberarRecursos
@@ -735,216 +750,3 @@ int buscarEnReferenciaPersonaje(char idPersonaje, char referenciaPersonaje[]){
 		}
 	}return i;
 }
-
-
-int cantidadPersonajes(){
-	/*@NAME: cantidadProcesos
-	* @DESC: devuelve la cantidad de personajes conectados al nivel
-	*/
-	int i =0;
-	PersonajeEnNivel* personaje = listaPersonajes;
-
-	while(personaje != NULL){
-		i++;
-		personaje= personaje->sig;
-	}return i;
-}
-
-int cantidadRecursos(){
-	/*@NAME: cantidadRecursos
-	* @DESC: devuelve la cantidad de recursos que hay en el nivel
-	* NOTA: como no hay personajes en esta lista no tengo que diferenciar recursos de personajes
-	*/
-	int i =0;
-	ITEM_NIVEL* recurso = recursosIniciales;
-
-	while(recurso != NULL){
-		i++;
-		recurso= recurso->next;
-	}return i;
-}
-
-void cargarRecursosTotales(int *recursosTotales, int cantRecursos , char *referenciaRecurso){
-	/*@NAME: cargarRecursosTotales
-	* @DESC: completa el vector con la cantidad de recursos que hay en total
-	*/
-
-	int i;
-	int pos =-1;
-
-	ITEM_NIVEL* recurso = recursosIniciales;
-
-	for(i=0; i< cantRecursos; i++){
-		//busco en el vector referencia la pos de ese recurso
-		pos = buscarEnReferenciaRecurso(recurso->id,referenciaRecurso);
-		if(pos != -1){
-			//le asigno a esa pos la cantidad de recursos que hay
-			recursosTotales[pos] = recurso->quantity;
-		}
-		recurso = recurso->next;
-	}
-
-}
-
-void cargarRecursosDisponibles(int recursosDisponibles[], char referenciaRecurso[]){
-	/*@NAME: cargarRecursosDisponibles
-	* @DESC: completa el vector con la cantidad de recursos que quedan sin asignar
-	*/
-
-	int pos =-1;
-
-	ITEM_NIVEL* recurso;
-	recurso = ListaItems;
-
-	while(recurso!= NULL){
-		//me fijo antes que sea recurso y NO personaje
-		if ( recurso->item_type == 1){
-			//busco en el vector referencia la pos de ese recurso
-			pos = buscarEnReferenciaRecurso(recurso->id,referenciaRecurso);
-			if(pos != -1){
-				//le asigno a esa pos la cantidad de recursos que hay
-				recursosDisponibles[pos] = recurso->quantity;
-			}
-		}
-		recurso = recurso->next;
-	}
-}
-
-void cargarRecursosSolicitados(int **recursosSolicitados, char *referenciaRecurso, char *referenciaPersonaje){
-	/*@NAME: cargarRecursosSolicitados
-	* @DESC: carga la matriz dependiendo de el recurso solicitado que tuvo cada personaje
-	*/
-
-	PersonajeEnNivel* personaje = listaPersonajes;
-	char recurso;
-
-	int posPersonaje = -1;
-	int posRecurso = -1;
-
-	while(personaje != NULL){
-		//cargo el recurso que solicito el personaje
-		recurso = personaje->recursoPendiente;
-
-		//busco la posicion del personaje y el recurso en el vector de referencia
-		posPersonaje = buscarEnReferenciaPersonaje(personaje->id,referenciaPersonaje );
-		posRecurso = buscarEnReferenciaRecurso(recurso, referenciaRecurso);
-
-		if((posRecurso != -1) && (posPersonaje != -1)){
-
-			//en la fila del personaje, en la columna del recurso, pongo un 1 que es el recurso que solicito
-			recursosSolicitados[posPersonaje][posRecurso]= 1;
-		}
-		personaje = personaje->sig;
-	}
-}
-
-void cargarRecursosAsignados(int **recursosAsignados, char *referenciaRecurso, char *referenciaPersonaje){
-	/*@NAME: cargarRecursosAsignados
-	* @DESC: carga la matriz dependiendo de los recursos que tiene asignado cada personaje
-	*/
-
-	int posPersonaje = -1;
-	int posRecurso = -1;
-
-	PersonajeEnNivel* personaje;
-	personaje = listaPersonajes;
-
-	while(personaje != NULL){
-		posPersonaje = buscarEnReferenciaPersonaje(personaje->id,referenciaPersonaje );
-		//recorro la lista de recursos de ese personaje
-		t_recursos* recurso;
-		recurso = personaje->recursos;
-
-		while(recurso != NULL){
-			//busca la posicion en la matriz del char de ese recurso
-			posRecurso = buscarEnReferenciaRecurso(recurso->idRecurso, referenciaRecurso);
-			//en la fila del personaje, la columna del recurso, le asigna la cantidad que tiene asignado ese personaje
-			recursosAsignados[posPersonaje][posRecurso] = recurso->cant;
-			//paso al siguiente recurso del personaje
-			recurso = recurso->sig;
-		}
-		//paso al otro personaje
-		personaje = personaje->sig;
-	}
-}
-
-void marcarPersonajesSinRecursos (int **recursosAsignados, char *referenciaPersonaje, bool *marcados, int cantPersonajes, int cantRecursos){
-	/*@NAME: marcarPersonajesSinRecursos
-	* @DESC: marca a los personajes que no tienen recursos asignados
-	*/
-
-	int i,j;
-	for(i=0;i<cantPersonajes;i++){
-		int flag=0;
-		for(j=0;j<cantRecursos;j++){
-			if(recursosAsignados[i][j]!=0){
-				flag=1;
-			}
-		}
-		if (flag==1){
-			marcados[i]=true;
-		}
-	}
-
-}
-
-
-void marcarPersonajesConRecursos (int **recursosAsignados, int **recursosSolicitados, int *recursosDisponibles, bool *marcados, int cantPersonajes, int cantRecursos){
-	/*@NAME: marcarPersonajesConRecursos
-	* @DESC: marca a los personajes que pueden ejecutar
-	*/
-	int i,j,asignacionImposible, flagTerminar;
-	do{
-		flagTerminar=0;
-		//recorremos personajes
-		for(i=0;i<cantPersonajes;i++){
-			asignacionImposible=0;
-
-			//recorremos recursos del personaje actual
-			for(j=0;j<cantRecursos;j++){
-				//verifico que haya recursos susficientes para satisfacer el pedido
-				if(marcados[i]==false && recursosSolicitados[i][j]<=recursosDisponibles[j]){
-					asignacionImposible=1;
-				}
-			}
-
-			//es posible ejecutar el personaje
-			if(!asignacionImposible){
-				//SI ENCUENTRA UNO QUE PUEDA EJECUTAR, SETEA PARA CONTINUAR EL ALGORTIMO
-				flagTerminar=1;
-				marcados[i]=true;
-				//si se puede ejecutar, actualizo el disponible
-				for(j=0;j<cantRecursos;j++){
-					recursosDisponibles[j]+=recursosAsignados[i][j];
-				}
-			}
-
-		}
-	//si se encontro, termina el algoritmo
-	}while(flagTerminar);
-
-}
-
-
-void comprobarDeadlock (bool marcados[],int cantPersonajes, char referenciaPersonaje[]){
-	//CHEQUEAR INOTIFY
-
-	int i,j;
-	j=0;
-	char personajesInterbloqueados[cantPersonajes+1];
-	//recorremos el vector de marcados
-	for(i=0;i<cantPersonajes;i++){
-		if(marcados[i]==false){
-			//Si el personaje no esta marcado, esta comprometido en un deadlock.
-			personajesInterbloqueados[j]=referenciaPersonaje[i];
-			j++;
-
-		}
-	}
-	personajesInterbloqueados[j]='\0';
-
-	if(recovery && personajesInterbloqueados[0]!='\0'){
-		mandarMensaje(clientCCB.sockfd,REQUEST_INTERBLOQUEO,strlen(personajesInterbloqueados)+1,personajesInterbloqueados);
-	}
-}
-

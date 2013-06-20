@@ -3,8 +3,8 @@
 
 t_personaje *personaje;
 
-//variables locales //VER
-char state = NUEVO_NIVEL;
+//variables globales
+char state;
 Posicion *posicionProximoRecurso;
 char proxRecurso;
 char proxNivel[20];
@@ -13,6 +13,9 @@ Posicion *nuevaPosicion;
 Posicion *posicionActual;
 bool respuestaConfirmacionRecurso;
 char *archivo_config;
+
+Nivel nivelActualData ;
+Planificador planificadorActualData;
 
 t_log* logger;
 
@@ -31,19 +34,10 @@ int main(int argc, char *argv[]) {
 	archivo_config = argv[1];
 
 	//inicializo el personaje desde el archivo config
-	personaje = read_personaje_archivo_configuracion(archivo_config);
-	if (personaje == NULL) {
-		fprintf(stderr, "No se pudo leer el archivo de configuracion %s\n", archivo_config);
-		exit(1);
-	}
+	inicializarPersonaje();
 
 	//instancio el logger
 	logger = log_create("personaje.log", "ProcesoPersonaje", true, LOG_LEVEL_INFO);
-
-
-	strcpy(nivelActual,"");
-	posicionActual = (Posicion*)personaje->personaje_posicion_actual;
-
 
 	//declaro las seniales
 	signal(SIGTERM, rutinaSignal);
@@ -66,19 +60,16 @@ int main(int argc, char *argv[]) {
 
 					//verifico si gane
 					if(ganado(personaje->personaje_niveles)){
-						//aviso al orquestador que gane
-						mandarMensaje(clientCCB_orq.sockfd,GANE,sizeof(personaje->personaje_simbolo),(char *)&personaje->personaje_simbolo);
 
 						state = WIN;
-
-						//loggeo que el personaje gano
-						log_info(logger, string_from_format("personaje %s gano", personaje->personaje_nombre));
+						log_info(logger, string_from_format("personaje %s cambia a estado %d", personaje->personaje_nombre, state));
 
 					} else{
 
 					//mando el primer mensaje al orquestador solicitando informacion del nivel y su planificador
 					strcpy(proxNivel, proximoNivel(personaje->personaje_niveles));
 
+					solicitarDataNivel();
 					mandarMensaje(clientCCB_orq.sockfd,REQUEST_DATA_NIVEL,strlen(proxNivel)+1,proxNivel);
 
 					//loggeo la solicitud de DATA_NIVEL al orquestador
@@ -101,41 +92,32 @@ int main(int argc, char *argv[]) {
 								//almaceno los datos recibidos en estructuras auxiliares
 								strcpy(nivelActual, proxNivel);
 								Data_Nivel *data_new = (Data_Nivel*) mensaje->data;
-								Nivel nivel_new = data_new->miNivel;
-								Planificador planificador_new = data_new->miPlanificador;
+								nivelActualData = data_new->miNivel;
+								planificadorActualData = data_new->miPlanificador;
 
-								log_info(logger, string_from_format("IP: %s, PORT: %d", nivel_new.IP, nivel_new.PORT));
-
+								log_info(logger, string_from_format("IP: %s, PORT: %d", nivelActualData.IP, nivelActualData.PORT));
 
 								//desconecta del orquestador y loggeo
 								close(clientCCB_orq.sockfd);
 								log_info(logger, string_from_format("personaje %s se desconecta del orquestador", personaje->personaje_nombre));
 
-								//conecto al nivel actual y loggeo
-								clientCCB_niv = connectServer((char*)nivel_new.IP, (int)nivel_new.PORT);
-								log_info(logger, string_from_format("personaje %s se conecta a %s", personaje->personaje_nombre, nivelActual));
+								//conecto a nivel y planificador y hago HANDSHAKE
+								conectarNivel(nivelActualData.IP, nivelActualData.PORT);
 
-								Personaje *personajeSend = malloc(sizeof(Personaje));
-								strcpy(personajeSend->ID,string_from_format("P%c",personaje->personaje_simbolo));
+								conectarPlanificador(planificadorActualData.IP, planificadorActualData.PORT);
 
-								mandarMensaje(clientCCB_niv.sockfd, HANDSHAKE,sizeof(personajeSend),personajeSend);
-								log_info(logger,"mande HANDSHAKE a nivel");
-
-
-								//conecto al planificador del nivel actual y loggeo
-								clientCCB_pln = connectServer((char*)planificador_new.IP, (int)planificador_new.PORT);
-								log_info(logger, string_from_format("personaje %s se conecta a planificador de %s", personaje->personaje_nombre, nivelActual));
-
-								mandarMensaje(clientCCB_pln.sockfd, HANDSHAKE,sizeof(personajeSend),personajeSend);
-								log_info(logger,"mande HANDSHAKE a planificador");
+								hacerHandshake();
 
 								imprimirObjetivos(personaje->personaje_niveles);
-
-								free(personajeSend);
 
 								state = STANDBY;
 								log_info(logger, string_from_format("personaje %s cambia a estado %d", personaje->personaje_nombre, state));
 
+								break;
+							case NODATANIVEL:
+								//orquestador no pudo mandar la data de nivel, la vuelve a pedir
+								log_info(logger, string_from_format("el personaje %s no recibio data de %s", personaje->personaje_nombre, proxNivel));
+								solicitarDataNivel();
 								break;
 						}
 						borrarMensaje(mensaje);
@@ -174,6 +156,7 @@ int main(int argc, char *argv[]) {
 									log_info(logger, string_from_format("personaje %s solicita posicion del recurso %c a %s", personaje->personaje_nombre, proxRecurso, nivelActual));
 
 									state = WAIT_POS_REC;
+									log_info(logger, string_from_format("personaje %s cambia a estado %d", personaje->personaje_nombre, state));
 								}
 								break;
 
@@ -225,8 +208,6 @@ int main(int argc, char *argv[]) {
 								//si le otorgaron el recurso lo agrega y avisa que termino el turno
 								if(respuestaConfirmacionRecurso){
 
-									mandarMensaje(clientCCB_pln.sockfd,TERMINE_TURNO,0,NULL);
-
 									agregarRecurso(personaje->personaje_niveles);
 
 									posicionProximoRecurso = NULL;
@@ -239,6 +220,7 @@ int main(int argc, char *argv[]) {
 									//verifico si el personaje finalizo el nivel
 									if(nivelTerminado(personaje->personaje_niveles, nivelActual)){
 										mandarMensaje(clientCCB_niv.sockfd,TERMINE_NIVEL,0,NULL);
+										mandarMensaje(clientCCB_pln.sockfd,TERMINE_NIVEL,0,NULL);
 
 										//loggea la finalizacion del nivel actual
 										log_info(logger, string_from_format("personaje %s termino %s", personaje->personaje_nombre, nivelActual));
@@ -255,8 +237,14 @@ int main(int argc, char *argv[]) {
 										log_info(logger, string_from_format("personaje %s se desconecta del planificador de %s", personaje->personaje_nombre, nivelActual));
 
 										state = NUEVO_NIVEL;
+										log_info(logger, string_from_format("personaje %s cambia a estado %d", personaje->personaje_nombre, state));
+										break;
 									}else{
+
+										//si no termino el nivel, aviso a planificador que finalizo el turno
+										mandarMensaje(clientCCB_pln.sockfd,TERMINE_TURNO,0,NULL);
 										state = STANDBY;
+										log_info(logger, string_from_format("personaje %s cambia a estado %d", personaje->personaje_nombre, state));
 										break;
 									}
 
@@ -266,6 +254,7 @@ int main(int argc, char *argv[]) {
 									log_info(logger, string_from_format("personaje %s se encuentra bloqueado por el recurso %c en el %s", personaje->personaje_nombre, proxRecurso, nivelActual));
 
 									state = STANDBY;
+									log_info(logger, string_from_format("personaje %s cambia a estado %d", personaje->personaje_nombre, state));
 								}
 								break;
 							}
@@ -278,6 +267,10 @@ int main(int argc, char *argv[]) {
 
 						log_info(logger, string_from_format("personaje %s gano su plan de niveles!",personaje->personaje_nombre));
 
+						//aviso al orquestador que gane
+						mandarMensaje(clientCCB_orq.sockfd,GANE,sizeof(personaje->personaje_simbolo),(char *)&personaje->personaje_simbolo);
+
+						log_info(logger, string_from_format("personaje %s informo al orquestador que gano", personaje->personaje_nombre));
 						log_destroy(logger);
 
 						return 1;
@@ -336,10 +329,9 @@ Posicion *proximaPosicion(){
 void reiniciarNivel(t_list *niveles){
 	int i = 0;
 	int j = 0;
-	int lenNiveles = list_size(niveles);
 	t_personaje_objetivo *auxObjetivo;
-	t_personaje_nivel *auxNivel;
-	while((j<lenNiveles) && (!(string_equals_ignore_case(nivelActual, auxNivel->personaje_nivel)))){
+	t_personaje_nivel *auxNivel = list_get(niveles, 0);
+	while((!(string_equals_ignore_case(nivelActual, auxNivel->personaje_nivel)))){
 		auxNivel = list_get(niveles,j);
 		j++;
 	}
@@ -349,8 +341,10 @@ void reiniciarNivel(t_list *niveles){
 		auxObjetivo->tiene_objetivo = false;
 		i++;
 	}
-	auxNivel->termino_nivel = true;
-	list_replace(niveles, j, auxNivel);
+	auxNivel->termino_nivel = false;
+
+	personaje->personaje_posicion_actual->POS_X = 0;
+	personaje->personaje_posicion_actual->POS_Y = 0;
 }
 
 bool recursoAlcanzado(Posicion *pos1, Posicion *pos2){
@@ -395,7 +389,6 @@ void agregarRecurso(t_list *niveles){
 		auxObjetivo = list_get(auxListObjetivos, i);
 		if(auxObjetivo->objetivo == proxRecurso && (!(auxObjetivo->tiene_objetivo))){
 			auxObjetivo->tiene_objetivo = true;
-			list_replace(auxListObjetivos, i, auxObjetivo);
 			break;
 		} else{
 			i++;
@@ -404,7 +397,6 @@ void agregarRecurso(t_list *niveles){
 }
 
 bool nivelTerminado(t_list *niveles, char *nivActual){
-	t_personaje_nivel *nn = malloc(sizeof(t_personaje_nivel));
 	int i = 0;
 	int j = 0;
 	int lenNiveles = list_size(niveles);
@@ -446,17 +438,32 @@ bool ganado(t_list *niveles){
 
 void morir(){
 
-	mandarMensaje(clientCCB_niv.sockfd,TERMINE_NIVEL,sizeof(NULL),NULL);
+	mandarMensaje(clientCCB_niv.sockfd,TERMINE_NIVEL,0,NULL);
+	mandarMensaje(clientCCB_pln.sockfd,TERMINE_NIVEL,0,NULL);
 	personaje->personaje_vidas_restantes --;
+	log_info(logger, string_from_format("vidas restantes del personaje %s: %d", personaje->personaje_nombre, personaje->personaje_vidas_restantes));
+
+	//desconecta del nivel y del planificador
+	close(clientCCB_niv.sockfd);
+	close(clientCCB_pln.sockfd);
+	log_info(logger, string_from_format("personaje %s se desconecto del %s y de su planificador", personaje->personaje_nombre, nivelActual));
 
 	//si no le quedan vidas, reinicia todo de nuevo -> personaje apunta al personaje inicial
 	if(personaje->personaje_vidas_restantes == 0){
 		//reinicio el personaje
-		personaje = read_personaje_archivo_configuracion(archivo_config);
+		inicializarPersonaje();
 	} else{
+
 		reiniciarNivel(personaje->personaje_niveles);
 
 		posicionProximoRecurso = NULL;
+
+		//conecto a nivel y planificador y hago HANDSHAKE
+		conectarNivel(nivelActualData.IP, nivelActualData.PORT);
+
+		conectarPlanificador(planificadorActualData.IP, planificadorActualData.PORT);
+
+		hacerHandshake();
 
 		log_info(logger, string_from_format("personaje %s reinicio el %s", personaje->personaje_nombre, nivelActual));
 
@@ -467,14 +474,13 @@ void morir(){
 void rutinaSignal(int n){
 	switch (n) {
 		case SIGTERM:
-			morir();
 			log_info(logger, string_from_format("personaje %s murio por SIGTERM", personaje->personaje_nombre));
+			morir();
 
 		break;
 		case SIGUSR1:
 			personaje->personaje_vidas_restantes ++;
-
-			log_info(logger, string_from_format("personaje %s recibio SIGUSR1", personaje->personaje_nombre));
+			log_info(logger, string_from_format("personaje %s recibio SIGUSR1, vidas actuales: %d", personaje->personaje_nombre, personaje->personaje_vidas_restantes));
 		break;
 	}
 }
@@ -630,4 +636,55 @@ void imprimirObjetivos(t_list *niveles){
 		log_info(logger, string_from_format("recurso del nivel: %c", auxObj->objetivo));
 		i++;
 	}
+}
+
+int conectarNivel(char *IP, int PORT){
+	//conecto al nivel actual y loggeo
+	clientCCB_niv = connectServer(IP, PORT);
+	log_info(logger, string_from_format("personaje %s se conecta a %s", personaje->personaje_nombre, nivelActual));
+	return 1;
+}
+
+int conectarPlanificador(char *IP, int PORT){
+	//conecto al planificador del nivel actual y loggeo
+	clientCCB_pln = connectServer(IP, PORT);
+	log_info(logger, string_from_format("personaje %s se conecta a planificador de %s", personaje->personaje_nombre, nivelActual));
+	return 1;
+}
+
+Personaje *hacerHandshake(){
+	Personaje *personajeSend = malloc(sizeof(Personaje));
+	strcpy(personajeSend->ID,string_from_format("P%c",personaje->personaje_simbolo));
+
+	mandarMensaje(clientCCB_niv.sockfd, HANDSHAKE,sizeof(personajeSend),personajeSend);
+	log_info(logger,"mande HANDSHAKE a %s", nivelActual);
+
+
+	mandarMensaje(clientCCB_pln.sockfd, HANDSHAKE,sizeof(personajeSend),personajeSend);
+	log_info(logger,"mande HANDSHAKE a planificador");
+
+	return personajeSend;
+}
+
+void inicializarPersonaje(){
+	personaje = read_personaje_archivo_configuracion(archivo_config);
+	if (personaje == NULL) {
+		fprintf(stderr, "No se pudo leer el archivo de configuracion %s\n", archivo_config);
+		exit(1);
+	}
+
+	strcpy(nivelActual,"");
+	posicionActual = (Posicion*)personaje->personaje_posicion_actual;
+	state = NUEVO_NIVEL;
+}
+
+void solicitarDataNivel(){
+
+	mandarMensaje(clientCCB_orq.sockfd,REQUEST_DATA_NIVEL,strlen(proxNivel)+1,proxNivel);
+
+	//loggeo la solicitud de DATA_NIVEL al orquestador
+	log_info(logger, string_from_format("personaje %s solicita al orquestador DATA_NIVEL del %s", personaje->personaje_nombre, proxNivel));
+
+	state = WAIT_DATA_LEVEL;
+	log_info(logger, string_from_format("personaje %s cambia a estado %d", personaje->personaje_nombre, state));
 }

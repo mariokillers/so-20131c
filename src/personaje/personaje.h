@@ -36,9 +36,6 @@ enum ESTADO {STANDBY, WAIT_DATA_LEVEL, WAIT_POS_REC, WAIT_REC, NUEVO_NIVEL, WIN}
 #include <commons/collections/list.h>
 
 
-
-
-
 /*define el tipo t_personaje_objetivo, que representa un objetivo de los que tiene que conseguir el personaje
 en un nivel y si lo tiene o no
 	*/
@@ -93,6 +90,11 @@ bool ganado(t_list *niveles);
 Posicion *realizarMovimiento();
 void morir();
 void rutinaSignal(int n);
+int conectarPlanificador(char *IP, int PORT);
+int conectarNivel(char *IP, int PORT);
+Personaje *hacerHandshake();
+void inicializarPersonaje();
+void solicitarDataNivel();
 
 void imprimirObjetivos(t_list *niveles);
 
