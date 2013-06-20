@@ -93,6 +93,10 @@ bool ganado(t_list *niveles);
 Posicion *realizarMovimiento();
 void morir();
 void rutinaSignal(int n);
+int conectarPlanificador(char *IP, int PORT);
+int conectarNivel(char *IP, int PORT);
+Personaje *hacerHandshake();
+void inicializarPersonaje();
 
 void imprimirObjetivos(t_list *niveles);
 
