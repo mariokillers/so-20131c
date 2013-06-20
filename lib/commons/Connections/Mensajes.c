@@ -161,6 +161,7 @@ int mensajes(t_queue* mensajesQueue, CCB myCOM){
 			
 
 			}//YA NO HAY MAS MENSAJES EN EL BUFFER
+			if(count==0) break;
 
 			}
 			//SI TERMINE CIERRO CONEXION
@@ -169,7 +170,8 @@ int mensajes(t_queue* mensajesQueue, CCB myCOM){
 			}
 		}
 	}
-
+	
+	
 	return queue_size(mensajesQueue);
 
 

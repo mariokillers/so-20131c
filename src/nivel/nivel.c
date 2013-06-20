@@ -92,10 +92,11 @@ int main(int argc, char *argv[]) {
 	log_info(logger, "Terminado dibujar nivel");
 
 	while(1) {
+		char flag;
 		log_info(logger, "Esperando Mensaje");
 		
 		//SI NO HABIA MENSAJES, ESPERO QUE LLEGUEN.
-		//if(!queue_size(colaDeMensajes)) 
+		if((flag=queue_size(colaDeMensajes))==0) 
 		while(!mensajes(colaDeMensajes,serverCCB));
 
 		log_info(logger, string_from_format("Buscando mensaje en cola, hay %d", queue_size(colaDeMensajes)));
