@@ -221,7 +221,10 @@ int main(int argc, char *argv[]) {
 									//verifico si el personaje finalizo el nivel
 									if(nivelTerminado(personaje->personaje_niveles, nivelActual)){
 										mandarMensaje(clientCCB_niv.sockfd,TERMINE_NIVEL,0,NULL);
+										log_info(logger, string_from_format("personaje %s avisa a %s que lo termino", personaje->personaje_nombre, nivelActual));
 										mandarMensaje(clientCCB_pln.sockfd,TERMINE_NIVEL,0,NULL);
+										log_info(logger, string_from_format("personaje %s avisa al planificador de %s que lo termino", personaje->personaje_nombre, nivelActual));
+
 
 										//loggea la finalizacion del nivel actual
 										log_info(logger, string_from_format("personaje %s termino %s", personaje->personaje_nombre, nivelActual));
