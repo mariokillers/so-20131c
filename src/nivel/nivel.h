@@ -11,8 +11,6 @@
 #include <commons/config.h>
 #include <commons/string.h>
 #include <pthread.h>
-//#include "personaje/personaje_library.h"
-
 
 typedef struct t_recursos{
 
@@ -52,7 +50,7 @@ con toda su estructura de datos
 
 	*/
 
-typedef struct t_nivel{
+typedef struct t_nivel {
 
 	ITEM_NIVEL *nivel_items;
 
@@ -64,10 +62,16 @@ typedef struct t_nivel{
 
 	int nivel_recovery;
 
-	} t_nivel;
+} t_nivel;
 
+// Variables Globales
+PersonajeEnNivel *listaPersonajes;
+ITEM_NIVEL *ListaItems, *recursosIniciales; //lista para tratar interbloqueo
+CCB serverCCB, clientCCB;
+pthread_mutex_t mutex;
+t_log* logger;
 
-
+// Declaraciones de funciones
 t_nivel *read_nivel_archivo_configuracion(char* path);
 
 t_nivel *create_nivel(t_config *n);
@@ -126,7 +130,11 @@ void quitarSolicitudesDeRecurso(PersonajeEnNivel* personaje, char idRecurso);
 
 PersonajeEnNivel *buscarPersonaje_byfd(int fd);
 
-void* interbloqueo(void*);
+PersonajeEnNivel* buscarPersonaje_byid(char id);
+
+void matarPersonaje(int fdPersonaje);
+
+void *interbloqueo(void*);
 
 int buscarEnReferenciaRecurso(char idRecurso, char referenciaRecurso[]);
 

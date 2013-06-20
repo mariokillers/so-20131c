@@ -94,5 +94,7 @@ Posicion *realizarMovimiento();
 void morir();
 void rutinaSignal(int n);
 
+void imprimirObjetivos(t_list *niveles);
+
 
 #endif /* PROCESOPERSONAJE_H_ */
