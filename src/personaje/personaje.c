@@ -129,6 +129,8 @@ int main(int argc, char *argv[]) {
 								mandarMensaje(clientCCB_pln.sockfd, HANDSHAKE,sizeof(personajeSend),personajeSend);
 								log_info(logger,"mande HANDSHAKE a planificador");
 
+								imprimirObjetivos(personaje->personaje_niveles);
+
 								free(personajeSend);
 
 								state = STANDBY;
@@ -236,7 +238,7 @@ int main(int argc, char *argv[]) {
 
 									//verifico si el personaje finalizo el nivel
 									if(nivelTerminado(personaje->personaje_niveles, nivelActual)){
-										mandarMensaje(clientCCB_niv.sockfd,TERMINE_NIVEL,sizeof(NULL),NULL);
+										mandarMensaje(clientCCB_niv.sockfd,TERMINE_NIVEL,0,NULL);
 
 										//loggea la finalizacion del nivel actual
 										log_info(logger, string_from_format("personaje %s termino %s", personaje->personaje_nombre, nivelActual));
@@ -308,6 +310,7 @@ int _is_next_obj(t_personaje_objetivo *o){
 char proximoRecurso(t_list *niveles){
 	t_personaje_nivel *auxNivel = list_find(niveles, (void*) _is_next_level);
 	t_personaje_objetivo *auxObjetivo = list_find(auxNivel->personaje_objetivos, (void*) _is_next_obj);
+	log_info(logger, string_from_format("proximo recurso: %c", auxObjetivo->objetivo));
 
 	return auxObjetivo->objetivo;
 }
@@ -331,7 +334,6 @@ Posicion *proximaPosicion(){
 }
 
 void reiniciarNivel(t_list *niveles){
-	t_personaje_nivel *nn;
 	int i = 0;
 	int j = 0;
 	int lenNiveles = list_size(niveles);
@@ -348,7 +350,7 @@ void reiniciarNivel(t_list *niveles){
 		i++;
 	}
 	auxNivel->termino_nivel = true;
-	nn = list_replace(niveles, j, auxNivel);
+	list_replace(niveles, j, auxNivel);
 }
 
 bool recursoAlcanzado(Posicion *pos1, Posicion *pos2){
@@ -389,12 +391,11 @@ void agregarRecurso(t_list *niveles){
 	t_list *auxListObjetivos = auxNivel->personaje_objetivos;
 	int len = list_size(auxListObjetivos);
 	t_personaje_objetivo *auxObjetivo;
-	t_personaje_nivel *nn;
 	while(i<len){
 		auxObjetivo = list_get(auxListObjetivos, i);
-		if(auxObjetivo->objetivo == proxRecurso){
+		if(auxObjetivo->objetivo == proxRecurso && (!(auxObjetivo->tiene_objetivo))){
 			auxObjetivo->tiene_objetivo = true;
-			nn = list_replace(auxListObjetivos, i, auxObjetivo);
+			list_replace(auxListObjetivos, i, auxObjetivo);
 			break;
 		} else{
 			i++;
@@ -406,26 +407,25 @@ bool nivelTerminado(t_list *niveles, char *nivActual){
 	t_personaje_nivel *nn = malloc(sizeof(t_personaje_nivel));
 	int i = 0;
 	int j = 0;
-	int lenNiv = list_size(niveles);
-	t_personaje_objetivo *auxObj;
-	t_personaje_nivel *auxNiv = list_get(niveles,0);
-	while((j<lenNiv) && (!(string_equals_ignore_case(nivActual, auxNiv->personaje_nivel)))){
-		auxNiv = list_get(niveles,j);
+	int lenNiveles = list_size(niveles);
+	t_personaje_objetivo *auxObjetivo;
+	t_personaje_nivel *auxNivel = list_get(niveles,0);
+	while((j<lenNiveles) && (!(string_equals_ignore_case(nivActual, auxNivel->personaje_nivel)))){
+		auxNivel = list_get(niveles,j);
+		j++;
 	}
-	t_list *auxListObj = auxNiv->personaje_objetivos;
-	int lenObj = list_size(auxListObj);
-	while(i<lenObj){
-		auxObj = list_get(auxListObj, i);
-		if(auxObj->tiene_objetivo){
+	t_list *auxListObjetivos = auxNivel->personaje_objetivos;
+	int lenObjetivos = list_size(auxListObjetivos);
+	while(i<lenObjetivos){
+		auxObjetivo = list_get(auxListObjetivos, i);
+		if(auxObjetivo->tiene_objetivo){
 			i++;
 		} else{
-			free(nn);
 			return false;
 		}
 	}
-	auxNiv->termino_nivel = true;
-	nn = list_replace(niveles, i, auxNiv);
-	free(nn);
+	auxNivel->termino_nivel = true;
+	list_replace(niveles, i, auxNivel);
 	return true;
 }
 
@@ -611,4 +611,23 @@ t_list *create_lista_niveles(t_personaje *personaje, t_config *p){
 	free(key_obj);
 
 	return list;
+}
+
+void imprimirObjetivos(t_list *niveles){
+	int i = 0;
+	int j = 0;
+	int lenNiv = list_size(niveles);
+	t_personaje_objetivo *auxObj;
+	t_personaje_nivel *auxNiv = list_get(niveles,0);
+	while((j<lenNiv) && (!(string_equals_ignore_case(nivelActual, auxNiv->personaje_nivel)))){
+		auxNiv = list_get(niveles,j);
+		j++;
+	}
+	t_list *auxListObj = auxNiv->personaje_objetivos;
+	int lenObj = list_size(auxListObj);
+	while(i<lenObj){
+		auxObj = list_get(auxListObj, i);
+		log_info(logger, string_from_format("recurso del nivel: %c", auxObj->objetivo));
+		i++;
+	}
 }
