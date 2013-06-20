@@ -1,0 +1,8 @@
+Segmento de memoria:
+--------------------
+VACIO[0:3:4]
+B[4:5:2]:ef
+VACIO[6:9:4]
+VACIO[10:15:6]
+--------------------
+Total: 16 bytes, libres: 14 bytes

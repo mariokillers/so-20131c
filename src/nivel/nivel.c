@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
 	path_config = argv[1];
 	puerto = atoi(argv[2]);
 
-	//inicializo el nivel desde el archivo config 
+	//inicializo el nivel desde el archivo config
 	t_nivel *nivel = read_nivel_archivo_configuracion(path_config);
 	if (nivel == NULL ) {
 		fprintf(stderr,
@@ -54,7 +54,7 @@ int main(int argc, char *argv[]) {
 					yoNivel.ID, clientCCB.sockfd));
 
 	//inicializo el hilo que maneja interbloqueo VER ACA!
-	pthread_create(&thread_interbloqueo, NULL, &interbloqueo, NULL );
+	//pthread_create(&thread_interbloqueo, NULL, &interbloqueo, NULL );
 
 	//inicializo el recovery
 	recovery = nivel->nivel_recovery;
@@ -106,12 +106,12 @@ int main(int argc, char *argv[]) {
 		break;
 
 		case HANDSHAKE: {
-			Personaje *personajeNuevo;
-			personajeNuevo = mensaje->data;
+			Personaje *personajeNuevo = malloc(sizeof(Personaje));
+			memcpy(personajeNuevo, mensaje->data, sizeof(Personaje));
 			personajeNuevo->FD = mensaje->from;
 
 			log_info(logger,
-					string_from_format("Recibi HANDSHAKE del personaje: cs",
+					string_from_format("Recibi HANDSHAKE del personaje: %s",
 							personajeNuevo->ID));
 
 			//entro en la region critica
@@ -320,7 +320,7 @@ int main(int argc, char *argv[]) {
 
 	//cierro el hilo de interbloqueo
 	pthread_mutex_unlock(&deadlock_mutex);
-	pthread_join(thread_interbloqueo, NULL );
+	//pthread_join(thread_interbloqueo, NULL );
 
 	//cierro el socket del cliente
 
@@ -417,7 +417,7 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador) {
 
 		//escucho al orquestador que me va a mandar los que re-asigno
 		while ((!mensajes(colaDeMensajes, clientCCB)))
-			;
+			log_info(logger, "Esperando mensaje del orquestador...");
 
 		mensaje = queue_pop(colaDeMensajes);
 
@@ -445,11 +445,11 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador) {
 		log_info(logger, "Aumento los recursos que no se reasignaron");
 
 		/*t_recursos* recursoSinReasignar;
-		recursoSinReasignar = malloc(sizeof(t_recursos));
+recursoSinReasignar = malloc(sizeof(t_recursos));
 
-		recursoSinReasignar->idRecurso = recurso.idRecurso;
-		recursoSinReasignar->cant = cant;
-		recursoSinReasignar->sig = NULL;*/
+recursoSinReasignar->idRecurso = recurso.idRecurso;
+recursoSinReasignar->cant = cant;
+recursoSinReasignar->sig = NULL;*/
 
 		log_info(logger,
 				string_from_format(
@@ -457,7 +457,7 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador) {
 						aux->idRecurso,
 						aux->cant));
 
-		aumentarRecursos(aux);
+		agregarRecursosAListaItems(aux->idRecurso, cant);
 
 		aux = aux->sig;
 	}
@@ -746,7 +746,7 @@ PersonajeEnNivel* buscarPersonaje_byid(char id) {
 
 void inicializarMarcados(bool marcados[], int cantidadPersonajes) {
 	/*@NAME: inicializarMarcados
-	 * @DESC: inicializo  el vector en false
+	 * @DESC: inicializo el vector en false
 	 */
 
 	int i;
@@ -758,7 +758,7 @@ void inicializarMarcados(bool marcados[], int cantidadPersonajes) {
 void inicializarReferenciaRecurso(int cantidadRecursos,
 		char referenciaRecurso[]) {
 	/*@NAME: inicializarMarcados
-	 * @DESC: inicializo  el vector de referencia de recursos con los recursos
+	 * @DESC: inicializo el vector de referencia de recursos con los recursos
 	 */
 
 	int i;
@@ -773,7 +773,7 @@ void inicializarReferenciaRecurso(int cantidadRecursos,
 void inicializarReferenciaPersonaje(int cantidadPersonajes,
 		char referenciaPersonaje[]) {
 	/*@NAME: inicializarReferenciaPersonaje
-	 * @DESC: inicializo  el vector de referencia de personaje con los personajes que hay
+	 * @DESC: inicializo el vector de referencia de personaje con los personajes que hay
 	 */
 
 	int i;
