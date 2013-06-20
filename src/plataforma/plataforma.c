@@ -71,6 +71,9 @@ void* Planif(void* nivel){
 	log_info(Logger, "Crea cola de Listos y lista de bloqueados.");
 	miGestor->queue_listos = queue_create();
 	miGestor->queues_bloq = list_create();
+	
+	//Creo personajes en nivel
+	miGestor->personajes_en_nivel = list_create();
 
 	//Asigno ID del gestor ="GX"
 	strcpy(miGestor->ID, miNivel->ID);
@@ -112,9 +115,13 @@ void* Planif(void* nivel){
 					//AGREGO EL PERSONAJE A LA LISTA DE PERSONAJES JUGANDO
 					if(findPersonaje_byid(personajes_jugando,miPersonaje->ID)== NULL)
 						list_add(personajes_jugando, miPersonaje);
-									
+					
+					//Lo agrego a la lista de personajes en nivel
+					list_add(miGestor->personajes_en_nivel, miPersonaje);
+					
 					//Lo agrego a la cola de listos
 					queue_push (miGestor->queue_listos, miPersonaje);
+					
 					imprimirListos(miGestor->queue_listos, string_from_format("Agrega personaje '%s' a cola de listos.", miPersonaje->ID));
 				}
 				break;
@@ -253,9 +260,9 @@ void* orq (void* a){
 							queue_push(miGestor->queue_listos, personajeAux);
 							imprimirListos(miGestor->queue_listos, string_from_format("Agrega personaje '%s' a cola de listos.", personajeAux->ID));
 						}else{
-							//LA COLA ESTA VACIA
+							//LA COLA ESTA VACIAfrom
 							log_info(Logger, "Envia mensaje informando reasignacion finalizada debido a que la cola de bloqueados esta vacia para el recurso.");
-							mandarMensaje(miMensaje->from,REASIGNACION_FINALIZADA,sizeof(NULL),NULL);
+							mandarMensaje(miMensaje->from, REASIGNACION_FINALIZADA,sizeof(NULL),NULL);
 							log_info(Logger, "b;ba");
 							miRecurso->cant=0;
 						}
@@ -283,8 +290,13 @@ void* orq (void* a){
 			}
 			break;
 			case GANE:
-				removePersonaje_byfd(personajes_jugando, miMensaje->from);
+			{
+				Personaje* miPersonaje;
+				log_info(Logger, string_from_format("Recibe mensaje de que gano, hay %d personajes jugando",list_size(personajes_jugando)) );
+				miPersonaje = removePersonaje_byid(personajes_jugando, (Personaje *) miMensaje->data);
+				if(miPersonaje!=NULL) log_info(Logger, string_from_format("Removi %s", miPersonaje->ID)); else log_info(Logger,"NADA");
 				if(list_is_empty(personajes_jugando)) finalizarProceso();
+			}
 				break;
 			}
 			borrarMensaje(miMensaje);
@@ -354,9 +366,11 @@ GestorNivel* findGestor_byid (char* nivel){
 	return (list_find(Gestores,(void*)_eselGestor));
 }
 
-Personaje* removePersonaje_byfd (t_list* personajes_en_nivel, int fd){
+Personaje* removePersonaje_byid (t_list* personajes_en_nivel, Personaje * miPersonaje){
+	log_info(Logger, string_from_format ("recibi fd %d", fd));
 	bool _eselPersonaje (Personaje* comparador){
-		return(comparador->FD==fd);
+		log_info(Logger, string_from_format ("recibi fd %d", id));
+		return(string_equals_ignore_case(comparador->ID, miPersonaje->ID));
 	}
 	return (list_remove_by_condition(personajes_en_nivel,(void*)_eselPersonaje));
 }
