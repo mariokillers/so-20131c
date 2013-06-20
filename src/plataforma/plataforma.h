@@ -9,6 +9,7 @@
 #include <commons/collections/list.h>
 #include <commons/collections/stack.h>
 #include <commons/log.h>
+#include <commons/string.h>
 #include <pthread.h>
 
 #include <commons/Connections/Server.h>
