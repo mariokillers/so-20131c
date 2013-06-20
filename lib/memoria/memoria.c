@@ -118,11 +118,11 @@ int buscarSegmentoLibre(t_memoria segmento, int tamanio){
 			if(tamanio <= part->tamanio){
 				ultimo_ingreso = x;
 				return x;
-			} else{
+/*			} else{
 				if(analizarProximasParticiones(x, tamanio, part->tamanio)){
 					ultimo_ingreso = x;
 					return x;
-				}
+				}*/
 			}
 		}
 		x++;
@@ -135,11 +135,11 @@ int buscarSegmentoLibre(t_memoria segmento, int tamanio){
 			if(tamanio <= part->tamanio){
 				ultimo_ingreso = y;
 				return y;
-			} else{
+			/*} else{
 				if(analizarProximasParticiones(y, tamanio, part->tamanio)){
 					ultimo_ingreso = y;
 					return y;
-				}
+				}*/
 			}
 		}
 		y++;
@@ -178,6 +178,7 @@ t_list* particiones(t_memoria segmento) {
 	return list_imprimir;
 }
 
+/*
 bool analizarProximasParticiones(int x, int tamanio, int tamanio_anterior){
 	int i = x + 1;
 	int tamanio_disponible;
@@ -197,10 +198,8 @@ bool analizarProximasParticiones(int x, int tamanio, int tamanio_anterior){
 	} else{
 		return false;
 	}
-
-
 }
-
+*/
 
 /*-------------FUNCIONES PRIVADAS-------------------*/
 
