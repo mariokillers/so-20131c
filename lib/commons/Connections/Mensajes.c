@@ -144,7 +144,7 @@ int mensajes(t_queue* mensajesQueue, CCB myCOM){
 					//ASIGNO LOS DATOS DEL MENSAJE
 					NuevoMensaje->from = myCOM.events[i].data.fd;
 					NuevoMensaje->type = buf[0];
-					memcpy(&NuevoMensaje->lenght,(void*)(&(buf[1])),2);
+					memcpy(&(NuevoMensaje->lenght),(void*)(&(buf[1])),2);
 
 					//SOLICITO MEMORIA PARA LA DATA DEL MENSAJE TODO LIBERAR DATA
 					if((NuevoMensaje->data = malloc(NuevoMensaje->lenght)) == NULL){
