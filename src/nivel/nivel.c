@@ -419,7 +419,7 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador) {
 
 		//escucho al orquestador que me va a mandar los que re-asigno
 		while ((!mensajes(colaDeMensajes, clientCCB)))
-			log_info(logger, "Esperando mensaje del orquestador...");
+			;
 
 		mensaje = queue_pop(colaDeMensajes);
 
