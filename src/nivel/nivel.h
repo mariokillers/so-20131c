@@ -69,7 +69,7 @@ PersonajeEnNivel *listaPersonajes;
 ITEM_NIVEL *ListaItems, *recursosIniciales; //lista para tratar interbloqueo
 CCB serverCCB, clientCCB;
 pthread_mutex_t mutex;
-t_log* logger;
+t_log* logger, loggerInterbloqueo;
 
 // Declaraciones de funciones
 t_nivel *read_nivel_archivo_configuracion(char* path);

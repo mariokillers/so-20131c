@@ -10,8 +10,6 @@ int main(int argc, char *argv[]) {
 
 	char *path_config;
 	int puerto;
-	logger = log_create("ProcesoNivel.log", "ProcesoNivel", false,
-			LOG_LEVEL_INFO);
 	if (argc < 3) {
 		fprintf(stderr, "%s: Faltan parametros (%s archivoconfig puerto)\n",
 				"nivel", "nivel");
@@ -29,6 +27,10 @@ int main(int argc, char *argv[]) {
 				path_config);
 		exit(1);
 	}
+
+	logger = log_create(string_from_format("Proceso%s.log", nivel->nivel_nombre), "ProcesoNivel", false,
+			LOG_LEVEL_INFO);
+
 	Nivel yoNivel;
 
 	//inicializo el proceso nivel
