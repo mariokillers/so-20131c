@@ -1,24 +1,7 @@
 #include "nivel.h"
 #include <stdio.h>
 #include <string.h>
-
-//inicializo la lista de personajes para controlar, dibujar e interbloqueo (en orden)
-PersonajeEnNivel* listaPersonajes;
-ITEM_NIVEL* ListaItems;
-ITEM_NIVEL* recursosIniciales; //lista para tratar interbloqueo
-
-//inicio al proceso como servidor y me conecto como cliente
-CCB serverCCB;
-CCB clientCCB;
-
-int recovery, recovery_time;
-
-//inicializo el semaforo MUTEX
-pthread_mutex_t mutex, deadlock_mutex;
-
-//instancio el logger
-t_log* logger;
-
+#include "interbloqueo.h"
 
 int main(int argc, char *argv[]) {
 	pthread_mutex_init(&mutex, NULL);
@@ -681,81 +664,7 @@ PersonajeEnNivel* buscarPersonaje_byid(char id){
 
 }
 
-void *interbloqueo(void* a){
-	/*@NAME: interbloqueo
-	* @DESC: hilo que se encarga de detectar interbloqueo
-	*/
 
-	while(1) {
-		char *referenciaPersonaje, *referenciaRecursos;
-		int *recursosTotales, *recursosDisponibles, *aux, **recursosAsignados, **recursosSolicitados;
-		bool *marcados;
-		if (pthread_mutex_trylock(&deadlock_mutex)) { //esta terminando nivel
-			pthread_mutex_unlock(&mutex);
-			free(aux);
-			free(recursosAsignados);
-			free(recursosSolicitados);
-			free(recursosTotales);
-			free(recursosDisponibles);
-			free(referenciaPersonaje);
-			free(referenciaRecursos);
-			free(marcados);
-			return NULL;
-		}
-		log_info(logger, "Empieza a ejecutar el hilo interbloqueo");
-
-			//entro en la region critica
-			pthread_mutex_lock(&mutex);
-
-			log_info(logger, "El hilo interbloqueo entra en la region critica");
-
-			int cantPersonajes = cantidadPersonajes();
-			int cantRecursos = cantidadRecursos();
-
-			log_info(logger, string_from_format("La cantidad de personajes es: %d y de recursos es: %d", cantPersonajes, cantRecursos));
-
-			//vector para saber que procesos estan interbloqueados
-			marcados = malloc(cantPersonajes * sizeof(char));
-
-			inicializarMarcados(marcados, cantPersonajes);
-
-			//vectores que referencian en la posicion de matrices y vectores para detectar interbloqueo
-			referenciaPersonaje = malloc(cantPersonajes * sizeof(char));
-			referenciaRecursos = malloc(cantRecursos * sizeof(char));
-
-			inicializarReferenciaRecurso(cantRecursos, referenciaRecursos);
-			inicializarReferenciaPersonaje(cantPersonajes, referenciaPersonaje);
-
-			//vectores para interbloqueo
-			recursosTotales = malloc(cantRecursos * sizeof(int));
-			recursosDisponibles = malloc(cantRecursos * sizeof(int));
-
-			//matrices para interbloqueo
-			recursosAsignados = malloc(cantPersonajes * cantRecursos * sizeof(int));
-			recursosSolicitados = malloc(cantPersonajes * cantRecursos * sizeof(int));
-
-			aux = malloc(cantRecursos * sizeof(int));
-
-			//inicializo los vectores-matrices
-			cargarRecursosTotales(recursosTotales, cantRecursos, referenciaRecursos);
-			cargarRecursosDisponibles(aux, referenciaRecursos);
-			cargarRecursosSolicitados(recursosSolicitados, referenciaRecursos, referenciaPersonaje);
-			cargarRecursosAsignados(recursosAsignados, referenciaRecursos, referenciaPersonaje);
-
-			pthread_mutex_unlock(&mutex);
-			//salgo de la region critica
-
-			log_info(logger, "El hilo interbloqueo sale de la region critica");
-
-
-			marcarPersonajesSinRecursos(recursosAsignados,referenciaPersonaje,marcados,cantPersonajes, cantRecursos);
-			marcarPersonajesConRecursos(recursosAsignados, recursosSolicitados, recursosDisponibles, marcados,cantPersonajes, cantRecursos);
-			comprobarDeadlock(marcados,cantPersonajes, referenciaPersonaje);
-
-			usleep(recovery_time);
-	}
-	return NULL;
-}
 
 void inicializarMarcados (bool marcados[], int cantidadPersonajes){
 	/*@NAME: inicializarMarcados
