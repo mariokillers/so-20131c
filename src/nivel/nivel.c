@@ -10,8 +10,6 @@ int main(int argc, char *argv[]) {
 
 	char *path_config;
 	int puerto;
-	logger = log_create("ProcesoNivel.log", "ProcesoNivel", false,
-			LOG_LEVEL_INFO);
 	if (argc < 3) {
 		fprintf(stderr, "%s: Faltan parametros (%s archivoconfig puerto)\n",
 				"nivel", "nivel");
@@ -29,6 +27,10 @@ int main(int argc, char *argv[]) {
 				path_config);
 		exit(1);
 	}
+
+	logger = log_create(string_from_format("Proceso%s.log", nivel->nivel_nombre), "ProcesoNivel", false,
+			LOG_LEVEL_INFO);
+
 	Nivel yoNivel;
 
 	//inicializo el proceso nivel
@@ -352,7 +354,7 @@ void matarPersonaje(int fdPersonaje) {
 	log_info(logger, "Mando recursos liberados");
 
 	//por cada recurso que libera tengo que sumarlo a la cantidad en listaItems
-	aumentarRecursos(recursosALiberar);
+	//aumentarRecursos(recursosALiberar);
 
 	log_info(logger, "Aumento los recursos re-asignados");
 
@@ -417,7 +419,7 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador) {
 
 		//escucho al orquestador que me va a mandar los que re-asigno
 		while ((!mensajes(colaDeMensajes, clientCCB)))
-			log_info(logger, "Esperando mensaje del orquestador...");
+			;
 
 		mensaje = queue_pop(colaDeMensajes);
 
@@ -431,7 +433,7 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador) {
 				//llamo a reasignar con la data que me envio
 				Recursos* listaRecursos = mensaje->data;
 				reasignarRecursos(listaRecursos);
-				cant--;
+				--cant;
 				log_info(logger, "Reasigno recursos");
 
 			}
@@ -443,13 +445,6 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador) {
 		}
 
 		log_info(logger, "Aumento los recursos que no se reasignaron");
-
-		/*t_recursos* recursoSinReasignar;
-recursoSinReasignar = malloc(sizeof(t_recursos));
-
-recursoSinReasignar->idRecurso = recurso.idRecurso;
-recursoSinReasignar->cant = cant;
-recursoSinReasignar->sig = NULL;*/
 
 		log_info(logger,
 				string_from_format(

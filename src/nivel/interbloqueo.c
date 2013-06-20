@@ -24,17 +24,17 @@ void *interbloqueo(void* a){
 			free(marcados);
 			return NULL;
 		}
-		log_info(logger, "Empieza a ejecutar el hilo interbloqueo");
+		log_info(loggerInterbloqueo, "Empieza a ejecutar el hilo interbloqueo");
 
 			//entro en la region critica
 			pthread_mutex_lock(&mutex);
 
-			log_info(logger, "El hilo interbloqueo entra en la region critica");
+			log_info(loggerInterbloqueo, "El hilo interbloqueo entra en la region critica");
 
 			int cantPersonajes = cantidadPersonajes();
 			int cantRecursos = cantidadRecursos();
 
-			log_info(logger, string_from_format("La cantidad de personajes es: %d y de recursos es: %d", cantPersonajes, cantRecursos));
+			log_info(loggerInterbloqueo, string_from_format("La cantidad de personajes es: %d y de recursos es: %d", cantPersonajes, cantRecursos));
 
 			//vector para saber que procesos estan interbloqueados
 			marcados = malloc(cantPersonajes * sizeof(char));
@@ -67,7 +67,7 @@ void *interbloqueo(void* a){
 			pthread_mutex_unlock(&mutex);
 			//salgo de la region critica
 
-			log_info(logger, "El hilo interbloqueo sale de la region critica");
+			log_info(loggerInterbloqueo, "El hilo interbloqueo sale de la region critica");
 
 
 			marcarPersonajesSinRecursos(recursosAsignados,referenciaPersonaje,marcados,cantPersonajes, cantRecursos);
