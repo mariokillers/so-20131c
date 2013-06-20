@@ -11,10 +11,10 @@ ITEM_NIVEL* recursosIniciales; //lista para tratar interbloqueo
 CCB serverCCB;
 CCB clientCCB;
 
-int recovery;
+int recovery, recovery_time;
 
 //inicializo el semaforo MUTEX
-pthread_mutex_t mutex;
+pthread_mutex_t mutex, deadlock_mutex;
 
 //instancio el logger
 t_log* logger;
@@ -22,6 +22,8 @@ t_log* logger;
 
 int main(int argc, char *argv[]) {
 	pthread_mutex_init(&mutex, NULL);
+	pthread_mutex_init(&deadlock_mutex, NULL);
+	pthread_mutex_lock(&deadlock_mutex);
 
 	char *path_config;
 	int puerto;
@@ -70,6 +72,7 @@ int main(int argc, char *argv[]) {
 	if(recovery)
 		log_info(logger, "El recovery esta activado");
 
+	recovery_time = nivel->nivel_tiempo_deadlock;
 
 	//inicializo la cola de mensajes
 	t_queue* colaDeMensajes;
@@ -287,16 +290,23 @@ int main(int argc, char *argv[]) {
 		}
 	}
 
-	//nivel_gui_terminar();
+	//cierro el hilo de interbloqueo
+	pthread_mutex_unlock(&deadlock_mutex);
+	pthread_join(thread_interbloqueo, NULL);
 
 	//cierro el socket del cliente
 
 	close(clientCCB.sockfd);
+
+	//nivel_gui_terminar();
 	return 0;
 
 }
 
 void matarPersonaje(int fdPersonaje){
+	/** @NAME: matarPersonaje
+	 * @DESC: mata al personaje, es decir, libera sus recursos y lo borra del nivel
+	*/
 
 	//entro en la region critica
 	pthread_mutex_lock(&mutex);
@@ -671,72 +681,80 @@ PersonajeEnNivel* buscarPersonaje_byid(char id){
 
 }
 
-void* interbloqueo(void* a){
+void *interbloqueo(void* a){
 	/*@NAME: interbloqueo
 	* @DESC: hilo que se encarga de detectar interbloqueo
 	*/
 
-	log_info(logger, "Empieza a ejecutar el hilo interbloqueo");
+	while(1) {
+		char *referenciaPersonaje, *referenciaRecursos;
+		int *recursosTotales, *recursosDisponibles, *aux, **recursosAsignados, **recursosSolicitados;
+		bool *marcados;
+		if (pthread_mutex_trylock(&deadlock_mutex)) { //esta terminando nivel
+			pthread_mutex_unlock(&mutex);
+			free(aux);
+			free(recursosAsignados);
+			free(recursosSolicitados);
+			free(recursosTotales);
+			free(recursosDisponibles);
+			free(referenciaPersonaje);
+			free(referenciaRecursos);
+			free(marcados);
+			return NULL;
+		}
+		log_info(logger, "Empieza a ejecutar el hilo interbloqueo");
 
-	//entro en la region critica
-	pthread_mutex_lock(&mutex);
+			//entro en la region critica
+			pthread_mutex_lock(&mutex);
 
-	log_info(logger, "El hilo interbloqueo entra en la region critica");
+			log_info(logger, "El hilo interbloqueo entra en la region critica");
 
-	int cantPersonajes = cantidadPersonajes();
-	int cantRecursos = cantidadRecursos();
+			int cantPersonajes = cantidadPersonajes();
+			int cantRecursos = cantidadRecursos();
 
-	log_info(logger, string_from_format("La cantidad de personajes es: %d y de recursos es: %d", cantPersonajes, cantRecursos));
+			log_info(logger, string_from_format("La cantidad de personajes es: %d y de recursos es: %d", cantPersonajes, cantRecursos));
 
-	//vector para saber que procesos estan interbloqueados
-	bool *marcados = malloc(cantPersonajes * sizeof(char));
+			//vector para saber que procesos estan interbloqueados
+			marcados = malloc(cantPersonajes * sizeof(char));
 
-	inicializarMarcados(marcados, cantPersonajes);
+			inicializarMarcados(marcados, cantPersonajes);
 
-	//vectores que referencian en la posicion de matrices y vectores para detectar interbloqueo
-	char *referenciaPersonaje = malloc(cantPersonajes * sizeof(char));
-	char *referenciaRecursos = malloc(cantRecursos * sizeof(char));
+			//vectores que referencian en la posicion de matrices y vectores para detectar interbloqueo
+			referenciaPersonaje = malloc(cantPersonajes * sizeof(char));
+			referenciaRecursos = malloc(cantRecursos * sizeof(char));
 
-	inicializarReferenciaRecurso(cantRecursos, referenciaRecursos);
-	inicializarReferenciaPersonaje(cantPersonajes, referenciaPersonaje);
+			inicializarReferenciaRecurso(cantRecursos, referenciaRecursos);
+			inicializarReferenciaPersonaje(cantPersonajes, referenciaPersonaje);
 
-	//vectores para interbloqueo
-	int *recursosTotales = malloc(cantRecursos * sizeof(int));
-	int *recursosDisponibles = malloc(cantRecursos * sizeof(int));
+			//vectores para interbloqueo
+			recursosTotales = malloc(cantRecursos * sizeof(int));
+			recursosDisponibles = malloc(cantRecursos * sizeof(int));
 
-	//matrices para interbloqueo
-	int **recursosAsignados = malloc(cantPersonajes * cantRecursos * sizeof(int));
-	int **recursosSolicitados = malloc(cantPersonajes * cantRecursos * sizeof(int));
+			//matrices para interbloqueo
+			recursosAsignados = malloc(cantPersonajes * cantRecursos * sizeof(int));
+			recursosSolicitados = malloc(cantPersonajes * cantRecursos * sizeof(int));
 
-	int *aux = malloc(cantRecursos * sizeof(int));
+			aux = malloc(cantRecursos * sizeof(int));
 
-	//inicializo los vectores-matrices
-	cargarRecursosTotales(recursosTotales, cantRecursos, referenciaRecursos);
-	cargarRecursosDisponibles(aux, referenciaRecursos);
-	cargarRecursosSolicitados(recursosSolicitados, referenciaRecursos, referenciaPersonaje);
-	cargarRecursosAsignados(recursosAsignados, referenciaRecursos, referenciaPersonaje);
+			//inicializo los vectores-matrices
+			cargarRecursosTotales(recursosTotales, cantRecursos, referenciaRecursos);
+			cargarRecursosDisponibles(aux, referenciaRecursos);
+			cargarRecursosSolicitados(recursosSolicitados, referenciaRecursos, referenciaPersonaje);
+			cargarRecursosAsignados(recursosAsignados, referenciaRecursos, referenciaPersonaje);
 
-	pthread_mutex_unlock(&mutex);
-	//salgo de la region critica
+			pthread_mutex_unlock(&mutex);
+			//salgo de la region critica
 
-	log_info(logger, "El hilo interbloqueo sale de la region critica");
-
-
-	marcarPersonajesSinRecursos(recursosAsignados,referenciaPersonaje,marcados,cantPersonajes, cantRecursos);
-	marcarPersonajesConRecursos(recursosAsignados, recursosSolicitados, recursosDisponibles, marcados,cantPersonajes, cantRecursos);
-	comprobarDeadlock(marcados,cantPersonajes, referenciaPersonaje);
-
-	free(aux);
-	free(recursosAsignados);
-	free(recursosSolicitados);
-	free(recursosTotales);
-	free(recursosDisponibles);
-	free(referenciaPersonaje);
-	free(referenciaRecursos);
-	free(marcados);
+			log_info(logger, "El hilo interbloqueo sale de la region critica");
 
 
-	return 0;
+			marcarPersonajesSinRecursos(recursosAsignados,referenciaPersonaje,marcados,cantPersonajes, cantRecursos);
+			marcarPersonajesConRecursos(recursosAsignados, recursosSolicitados, recursosDisponibles, marcados,cantPersonajes, cantRecursos);
+			comprobarDeadlock(marcados,cantPersonajes, referenciaPersonaje);
+
+			usleep(recovery_time);
+	}
+	return NULL;
 }
 
 void inicializarMarcados (bool marcados[], int cantidadPersonajes){
