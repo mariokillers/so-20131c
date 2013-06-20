@@ -16114,3 +16114,1573 @@
 [INFO] 23:49:31:813 ProcesoPlataforma/(12593:12597): -----------
 [INFO] 23:49:31:823 ProcesoPlataforma/(12593:12597): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
 [INFO] 23:49:31:873 ProcesoPlataforma/(12593:12597): Recibe mensaje de personaje bloqueado.
+[INFO] 00:08:50:933 ProcesoPlataforma/(12899:12899): ************************************************************************
+[INFO] 00:08:50:943 ProcesoPlataforma/(12899:12899): Se inicia Proceso Plataforma.
+[INFO] 00:08:59:878 ProcesoPlataforma/(12899:12900): Recibe mensaje de conexion de nivel
+[INFO] 00:08:59:893 ProcesoPlataforma/(12899:12900): Crea el Thread con la estructura de nivel (ID: Nivel1 - PUERTO NIVEL: 20002 - IP NIVEL: localhost).
+[INFO] 00:08:59:895 ProcesoPlataforma/(12899:12903): Inicia Planificador.
+[INFO] 00:08:59:901 ProcesoPlataforma/(12899:12903): Crea cola de Listos y lista de bloqueados.
+[INFO] 00:08:59:903 ProcesoPlataforma/(12899:12903): Crea e inicializa las variables y colecciones necesarias del Planificador.
+[INFO] 00:09:07:149 ProcesoPlataforma/(12899:12900): Recibe mensaje pidiendo informacion del nivel.
+[INFO] 00:09:07:150 ProcesoPlataforma/(12899:12900): Envia mensaje con la informacion del nivel (NIVEL ID: Nivel1 - PLANIFICADOR ID: Pivlocalhost).
+[INFO] 00:09:07:197 ProcesoPlataforma/(12899:12903): Recibe mensaje de conexion de Proceso Personaje.
+[INFO] 00:09:07:197 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:07:233 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:07:234 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:07:234 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:07:234 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:07:234 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:07:435 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:07:435 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:07:435 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:07:435 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:07:441 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:07:449 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:07:454 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:07:456 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:07:457 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:07:665 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:07:666 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:07:666 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:07:666 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:07:671 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:07:671 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:07:672 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:07:672 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:07:672 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:07:873 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:07:873 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:07:873 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:07:873 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:07:879 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:07:880 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:07:880 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:07:880 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:07:880 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:08:81 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:08:81 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:08:81 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:08:82 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:08:88 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:08:100 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:08:101 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:08:102 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:08:102 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:08:308 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:08:308 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:08:308 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:08:308 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:08:316 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:08:316 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:08:316 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:08:316 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:08:316 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:08:517 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:08:517 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:08:517 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:08:517 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:08:522 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:08:522 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:08:522 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:08:522 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:08:522 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:08:723 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:08:723 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:08:723 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:08:723 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:08:730 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:08:730 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:08:731 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:08:731 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:08:731 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:08:931 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:08:931 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:08:931 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:08:932 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:08:936 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:08:936 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:08:936 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:08:936 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:08:936 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:09:137 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:09:137 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:09:137 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:09:137 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:09:144 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:09:144 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:09:145 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:09:145 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:09:145 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:09:346 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:09:346 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:09:346 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:09:346 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:09:350 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:09:350 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:09:350 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:09:350 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:09:350 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:09:551 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:09:551 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:09:551 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:09:551 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:09:556 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:09:556 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:09:556 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:09:557 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:09:557 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:09:757 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:09:757 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:09:757 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:09:757 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:09:761 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:09:761 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:09:761 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:09:761 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:09:761 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:09:963 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:09:963 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:09:964 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:09:964 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:09:969 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:09:972 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:09:972 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:09:972 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:09:973 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:10:175 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:10:175 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:10:175 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:10:175 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:10:180 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:10:183 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:10:184 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:10:184 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:10:184 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:10:385 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:10:385 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:10:385 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:10:385 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:10:391 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:10:391 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:10:391 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:10:391 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:10:392 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:10:598 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:10:598 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:10:599 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:10:599 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:10:607 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:10:607 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:10:607 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:10:607 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:10:607 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:10:808 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:10:808 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:10:809 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:10:809 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:10:816 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:10:819 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:10:819 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:10:819 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:10:819 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:11:21 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:11:21 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:11:21 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:11:21 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:11:25 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:11:25 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:11:25 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:11:26 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:11:26 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:11:227 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:11:227 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:11:227 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:11:227 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:11:233 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:11:235 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:11:236 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:11:236 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:11:236 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:11:438 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:11:438 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:11:438 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:11:438 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:11:444 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:11:444 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:11:444 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:11:445 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:11:445 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:11:646 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:11:646 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:11:647 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:11:647 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:11:651 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:11:652 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:11:652 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:11:652 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:11:652 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:11:853 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:11:853 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:11:853 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:11:853 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:11:858 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:11:859 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:11:859 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:11:859 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:11:859 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:12:61 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:12:61 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:12:61 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:12:61 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:12:66 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:12:66 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:12:66 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:12:67 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:12:67 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:12:267 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:12:268 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:12:268 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:12:268 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:12:273 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:12:275 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:12:279 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:12:280 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:12:283 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:12:485 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:12:486 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:12:486 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:12:486 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:12:493 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:12:493 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:12:493 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:12:494 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:12:494 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:12:695 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:12:696 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:12:696 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:12:696 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:12:701 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:12:702 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:12:702 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:12:702 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:12:702 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:12:903 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:12:904 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:12:904 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:12:904 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:12:913 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:12:913 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:12:913 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:12:913 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:12:913 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:13:114 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:13:114 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:13:115 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:13:115 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:13:129 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:13:130 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:13:130 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:13:130 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:13:130 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:13:331 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:13:331 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:13:331 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:13:331 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:13:336 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:13:337 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:13:337 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:13:337 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:13:338 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:13:538 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:13:539 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:13:539 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:13:539 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:13:546 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:13:549 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:13:549 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:13:550 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:13:550 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:13:751 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:13:751 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:13:751 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:13:751 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:13:756 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:13:756 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:13:756 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:13:756 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:13:756 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:13:957 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:13:957 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:13:957 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:13:958 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:13:963 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:13:963 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:13:963 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:13:963 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:13:963 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:14:165 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:14:166 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:14:172 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:14:173 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:14:180 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:14:186 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:14:187 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:14:188 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:14:189 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:14:394 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:14:394 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:14:394 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:14:394 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:14:399 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:14:399 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:14:399 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:14:399 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:14:400 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:14:608 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:14:609 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:14:609 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:14:609 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:14:613 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:14:613 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:14:614 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:14:619 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:14:623 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:14:824 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:14:824 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:14:824 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:14:824 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:14:829 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:14:829 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:14:830 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:14:830 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:14:830 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:15:30 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:15:31 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:15:31 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:15:31 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:15:38 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:15:41 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:15:41 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:15:41 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:15:41 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:15:242 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:15:242 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:15:243 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:15:243 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:15:247 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:15:248 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:15:248 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:15:248 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:15:248 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:15:449 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:15:449 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:15:449 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:15:449 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:15:455 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:15:455 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:15:455 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:15:455 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:15:455 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:15:656 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:15:656 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:15:657 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:15:657 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:15:661 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:15:661 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:15:662 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:15:662 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:15:662 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:15:862 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:15:863 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:15:863 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:15:863 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:15:873 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:15:874 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:15:874 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:15:874 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:15:874 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:16:76 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:16:76 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:16:76 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:16:76 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:16:83 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:16:86 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:16:86 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:16:86 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:16:86 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:16:287 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:16:287 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:16:287 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:16:287 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:09:16:292 ProcesoPlataforma/(12899:12903): Recibe mensaje de finalizacion de turno.
+[INFO] 00:09:16:293 ProcesoPlataforma/(12899:12903): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:09:16:293 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:16:293 ProcesoPlataforma/(12899:12903): Personaje 'P@'
+[INFO] 00:09:16:293 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:16:494 ProcesoPlataforma/(12899:12903): Quita personaje 'P@' de cola de listos.
+[INFO] 00:09:16:494 ProcesoPlataforma/(12899:12903): ---LISTOS---
+[INFO] 00:09:16:494 ProcesoPlataforma/(12899:12903): -----------
+[INFO] 00:09:16:494 ProcesoPlataforma/(12899:12903): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:12:29:194 ProcesoPlataforma/(13015:13015): ************************************************************************
+[INFO] 00:12:29:207 ProcesoPlataforma/(13015:13015): Se inicia Proceso Plataforma.
+[INFO] 00:12:31:920 ProcesoPlataforma/(13017:13017): ************************************************************************
+[INFO] 00:12:31:930 ProcesoPlataforma/(13017:13017): Se inicia Proceso Plataforma.
+[INFO] 00:13:01:875 ProcesoPlataforma/(13020:13020): ************************************************************************
+[INFO] 00:13:01:887 ProcesoPlataforma/(13020:13020): Se inicia Proceso Plataforma.
+[INFO] 00:13:03:647 ProcesoPlataforma/(13022:13022): ************************************************************************
+[INFO] 00:13:03:660 ProcesoPlataforma/(13022:13022): Se inicia Proceso Plataforma.
+[INFO] 00:13:05:356 ProcesoPlataforma/(13024:13024): ************************************************************************
+[INFO] 00:13:05:374 ProcesoPlataforma/(13024:13024): Se inicia Proceso Plataforma.
+[INFO] 00:13:09:707 ProcesoPlataforma/(13026:13026): ************************************************************************
+[INFO] 00:13:09:726 ProcesoPlataforma/(13026:13026): Se inicia Proceso Plataforma.
+[INFO] 00:13:10:993 ProcesoPlataforma/(13028:13028): ************************************************************************
+[INFO] 00:13:10:999 ProcesoPlataforma/(13028:13028): Se inicia Proceso Plataforma.
+[INFO] 00:13:12:284 ProcesoPlataforma/(13030:13030): ************************************************************************
+[INFO] 00:13:12:300 ProcesoPlataforma/(13030:13030): Se inicia Proceso Plataforma.
+[INFO] 00:13:13:390 ProcesoPlataforma/(13032:13032): ************************************************************************
+[INFO] 00:13:13:405 ProcesoPlataforma/(13032:13032): Se inicia Proceso Plataforma.
+[INFO] 00:13:14:407 ProcesoPlataforma/(13034:13034): ************************************************************************
+[INFO] 00:13:14:419 ProcesoPlataforma/(13034:13034): Se inicia Proceso Plataforma.
+[INFO] 00:13:22:92 ProcesoPlataforma/(13034:13035): Recibe mensaje de conexion de nivel
+[INFO] 00:13:22:98 ProcesoPlataforma/(13034:13035): Crea el Thread con la estructura de nivel (ID: Nivel1 - PUERTO NIVEL: 20001 - IP NIVEL: localhost).
+[INFO] 00:13:22:109 ProcesoPlataforma/(13034:13039): Inicia Planificador.
+[INFO] 00:13:22:115 ProcesoPlataforma/(13034:13039): Crea cola de Listos y lista de bloqueados.
+[INFO] 00:13:22:133 ProcesoPlataforma/(13034:13039): Crea e inicializa las variables y colecciones necesarias del Planificador.
+[INFO] 00:13:26:610 ProcesoPlataforma/(13034:13035): Recibe mensaje pidiendo informacion del nivel.
+[INFO] 00:13:26:611 ProcesoPlataforma/(13034:13035): Envia mensaje con la informacion del nivel (NIVEL ID: Nivel1 - PLANIFICADOR ID: Pivlocalhost).
+[INFO] 00:13:26:705 ProcesoPlataforma/(13034:13039): Recibe mensaje de conexion de Proceso Personaje.
+[INFO] 00:13:26:706 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:26:753 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:26:756 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:26:756 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:26:757 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:26:757 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:26:958 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:26:959 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:26:969 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:26:969 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:26:4 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:27:10 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:27:10 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:27:10 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:27:11 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:27:224 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:27:225 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:27:225 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:27:228 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:27:268 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:27:277 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:27:278 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:27:278 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:27:284 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:27:496 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:27:496 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:27:500 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:27:501 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:27:536 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:27:536 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:27:537 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:27:537 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:27:537 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:27:738 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:27:739 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:27:740 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:27:740 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:27:776 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:27:780 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:27:780 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:27:801 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:27:801 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:28:12 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:28:12 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:28:13 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:28:13 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:28:48 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:28:48 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:28:49 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:28:49 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:28:50 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:28:264 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:28:268 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:28:269 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:28:269 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:28:307 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:28:308 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:28:312 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:28:314 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:28:314 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:28:525 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:28:526 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:28:526 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:28:527 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:28:565 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:28:566 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:28:567 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:28:576 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:28:587 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:28:796 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:28:800 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:28:800 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:28:805 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:28:830 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:28:833 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:28:833 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:28:834 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:28:836 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:29:44 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:29:44 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:29:45 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:29:45 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:29:80 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:29:80 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:29:81 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:29:81 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:29:81 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:29:288 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:29:292 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:29:295 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:29:297 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:29:346 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:29:349 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:29:352 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:29:352 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:29:353 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:29:553 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:29:554 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:29:554 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:29:554 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:29:598 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:29:599 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:29:599 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:29:605 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:29:605 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:29:807 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:29:809 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:29:814 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:29:820 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:29:854 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:29:855 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:29:861 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:29:862 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:29:868 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:30:77 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:30:81 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:30:82 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:30:84 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:30:120 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:30:144 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:30:144 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:30:148 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:30:148 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:30:349 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:30:352 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:30:354 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:30:356 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:30:396 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:30:400 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:30:404 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:30:404 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:30:419 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:30:632 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:30:633 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:30:637 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:30:647 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:30:695 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:30:695 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:30:714 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:30:716 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:30:720 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:30:924 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:30:926 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:30:930 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:30:932 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:30:981 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:30:981 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:30:982 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:30:982 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:30:982 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:31:188 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:31:190 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:31:194 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:31:195 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:31:232 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:31:233 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:31:233 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:31:233 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:31:234 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:31:434 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:31:436 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:31:438 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:31:439 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:31:476 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:31:476 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:31:495 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:31:496 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:31:504 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:31:705 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:31:706 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:31:708 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:31:712 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:31:756 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:31:756 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:31:760 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:31:760 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:31:761 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:31:964 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:31:966 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:31:968 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:31:969 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:31:996 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:31:999 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:32:11 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:32:12 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:32:12 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:32:219 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:32:220 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:32:222 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:32:226 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:32:264 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:32:267 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:32:268 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:32:273 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:32:275 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:32:484 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:32:486 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:32:488 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:32:490 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:32:528 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:32:530 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:32:531 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:32:536 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:32:536 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:32:737 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:32:743 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:32:744 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:32:750 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:32:796 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:32:799 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:32:820 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:32:821 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:32:822 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:33:23 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:33:29 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:33:30 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:33:32 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:33:60 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:33:61 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:33:61 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:33:61 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:33:62 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:33:273 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:33:274 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:33:276 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:33:278 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:33:323 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:33:324 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:33:327 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:33:333 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:33:336 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:33:544 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:33:546 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:33:548 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:33:549 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:33:592 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:33:593 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:33:602 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:33:602 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:33:605 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:33:821 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:33:825 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:33:826 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:33:828 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:33:881 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:33:883 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:33:883 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:33:888 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:33:888 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:34:94 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:34:96 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:34:101 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:34:103 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:34:165 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:34:168 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:34:168 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:34:169 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:34:169 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:34:376 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:34:378 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:34:379 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:34:381 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:34:424 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:34:424 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:34:427 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:34:432 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:34:432 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:34:633 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:34:636 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:34:641 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:34:643 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:34:694 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:34:704 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:34:705 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:34:706 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:34:706 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:34:928 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:34:930 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:34:931 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:34:933 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:34:968 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:34:968 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:34:972 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:34:972 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:34:972 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:35:173 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:35:175 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:35:180 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:35:181 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:35:208 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:35:209 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:35:217 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:35:217 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:35:218 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:35:419 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:35:421 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:35:422 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:35:424 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:35:468 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:35:468 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:35:469 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:35:469 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:35:470 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:35:676 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:35:681 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:35:682 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:35:684 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:35:724 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:35:724 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:35:725 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:35:725 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:35:725 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:35:926 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:35:930 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:35:936 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:35:939 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:35:990 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:35:993 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:35:993 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:35:994 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:35:994 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:36:200 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:36:204 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:36:206 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:36:208 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:36:231 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:36:231 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:36:232 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:36:245 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:36:247 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:36:452 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:36:453 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:36:455 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:36:457 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:36:500 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:36:504 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:36:508 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:36:508 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:36:509 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:36:724 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:36:732 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:36:734 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:36:737 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:36:786 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:36:792 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:36:793 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:36:796 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:36:800 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:36:1 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:36:3 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:37:9 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:37:16 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:37:48 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:37:48 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:37:49 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:37:50 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:37:52 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:37:253 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:37:260 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:37:263 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:37:273 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:37:302 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:37:308 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:37:308 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:37:310 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:37:311 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:37:524 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:37:526 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:37:527 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:37:529 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:37:596 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:37:600 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:37:602 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:37:606 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:37:607 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:37:824 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:37:826 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:37:827 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:37:832 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:37:876 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:37:877 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:37:882 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:37:883 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:37:883 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:38:92 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:38:94 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:38:97 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:38:98 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:38:135 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:38:137 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:38:140 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:38:162 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:38:163 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:38:363 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:38:365 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:38:367 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:38:369 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:38:436 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:38:438 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:38:441 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:38:441 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:38:453 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:38:664 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:38:666 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:38:668 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:38:672 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:38:746 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:38:747 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:38:747 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:38:767 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:38:769 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:38:970 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:38:976 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:38:981 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:38:984 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:39:8 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:39:8 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:39:9 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:39:9 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:39:12 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:39:212 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:39:217 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:39:218 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:39:220 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:39:242 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:39:243 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:39:245 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:39:246 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:39:260 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:39:468 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:39:469 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:39:471 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:39:473 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:39:512 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:39:512 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:39:513 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:39:513 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:39:513 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:39:725 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:39:727 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:39:728 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:39:730 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:39:758 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:39:761 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:39:761 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:39:763 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:39:763 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:39:965 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:39:974 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:39:978 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:39:980 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:40:39 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:40:43 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:40:43 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:40:44 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:40:44 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:40:272 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:40:280 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:40:281 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:40:283 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:40:332 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:40:336 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:40:348 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:40:352 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:40:352 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:40:568 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:40:570 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:40:571 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:40:573 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:40:612 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:40:612 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:40:624 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:40:632 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:40:632 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:40:833 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:40:835 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:40:836 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:40:844 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:40:868 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:40:870 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:40:870 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:40:872 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:40:873 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:41:84 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:41:88 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:41:89 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:41:91 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:41:118 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:41:120 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:41:122 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:41:136 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:41:138 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:41:348 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:41:350 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:41:351 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:41:354 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:41:382 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:41:384 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:41:385 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:41:385 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:41:389 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:41:609 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:41:611 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:41:613 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:41:616 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:41:673 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:41:673 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:41:673 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:41:674 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:41:674 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:41:880 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:41:882 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:41:883 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:41:885 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:41:917 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:41:918 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:41:922 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:41:925 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:41:925 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:42:132 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:42:135 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:42:136 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:42:141 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:42:177 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:42:177 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:42:178 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:42:180 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:42:181 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:42:393 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:42:396 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:42:400 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:42:401 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:42:433 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:42:434 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:42:436 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:42:439 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:42:441 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:42:645 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:42:659 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:42:660 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:42:662 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:42:705 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:42:709 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:42:712 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:42:713 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:42:713 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:42:928 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:42:936 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:42:941 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:42:943 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:43:10 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:43:11 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:43:11 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:43:12 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:43:12 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:43:216 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:43:218 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:43:220 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:43:225 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:43:328 ProcesoPlataforma/(13034:13039): Recibe mensaje de finalizacion de turno.
+[INFO] 00:13:43:328 ProcesoPlataforma/(13034:13039): Agrega personaje 'P@' a cola de listos.
+[INFO] 00:13:43:329 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:43:329 ProcesoPlataforma/(13034:13039): Personaje 'P@'
+[INFO] 00:13:43:329 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:43:532 ProcesoPlataforma/(13034:13039): Quita personaje 'P@' de cola de listos.
+[INFO] 00:13:43:534 ProcesoPlataforma/(13034:13039): ---LISTOS---
+[INFO] 00:13:43:536 ProcesoPlataforma/(13034:13039): -----------
+[INFO] 00:13:43:538 ProcesoPlataforma/(13034:13039): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P@).
+[INFO] 00:13:43:615 ProcesoPlataforma/(13034:13039): Recibe mensaje de personaje bloqueado.
+[INFO] 00:14:12:259 ProcesoPlataforma/(13045:13045): ************************************************************************
+[INFO] 00:14:12:274 ProcesoPlataforma/(13045:13045): Se inicia Proceso Plataforma.
+[INFO] 00:14:14:11 ProcesoPlataforma/(13047:13047): ************************************************************************
+[INFO] 00:14:14:24 ProcesoPlataforma/(13047:13047): Se inicia Proceso Plataforma.
+[INFO] 00:14:15:13 ProcesoPlataforma/(13049:13049): ************************************************************************
+[INFO] 00:14:15:21 ProcesoPlataforma/(13049:13049): Se inicia Proceso Plataforma.
+[INFO] 00:15:26:821 ProcesoPlataforma/(13143:13143): ************************************************************************
+[INFO] 00:15:26:827 ProcesoPlataforma/(13143:13143): Se inicia Proceso Plataforma.
+[INFO] 00:15:33:772 ProcesoPlataforma/(13143:13144): Recibe mensaje de conexion de nivel
+[INFO] 00:15:33:775 ProcesoPlataforma/(13143:13144): Crea el Thread con la estructura de nivel (ID: Nivel1 - PUERTO NIVEL: 20004 - IP NIVEL: localhost).
+[INFO] 00:15:33:787 ProcesoPlataforma/(13143:13147): Inicia Planificador.
+[INFO] 00:15:33:806 ProcesoPlataforma/(13143:13147): Crea cola de Listos y lista de bloqueados.
+[INFO] 00:15:33:809 ProcesoPlataforma/(13143:13147): Crea e inicializa las variables y colecciones necesarias del Planificador.
+[INFO] 00:15:40:308 ProcesoPlataforma/(13143:13144): Recibe mensaje pidiendo informacion del nivel.
+[INFO] 00:15:40:313 ProcesoPlataforma/(13143:13144): Envia mensaje con la informacion del nivel (NIVEL ID: Nivel1 - PLANIFICADOR ID: Pivlocalhost).
+[INFO] 00:15:40:376 ProcesoPlataforma/(13143:13147): Recibe mensaje de conexion de Proceso Personaje.
+[INFO] 00:15:40:384 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:40:429 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:40:432 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:40:432 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:40:433 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:40:457 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:40:669 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:40:672 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:40:672 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:40:673 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:40:715 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:40:724 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:40:725 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:40:726 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:40:726 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:40:941 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:40:942 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:40:942 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:40:942 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:40:971 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:40:976 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:40:976 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:40:977 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:40:977 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:41:193 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:41:193 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:41:196 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:41:196 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:41:234 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:41:235 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:41:240 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:41:240 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:41:240 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:41:452 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:41:452 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:41:453 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:41:453 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:41:488 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:41:488 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:41:489 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:41:489 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:41:490 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:41:691 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:41:692 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:41:693 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:41:694 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:41:724 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:41:731 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:41:752 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:41:753 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:41:753 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:41:967 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:41:967 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:41:968 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:41:968 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:42:8 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:42:12 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:42:12 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:42:12 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:42:13 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:42:226 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:42:229 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:42:229 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:42:230 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:42:276 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:42:277 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:42:277 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:42:277 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:42:278 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:42:496 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:42:497 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:42:497 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:42:498 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:42:548 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:42:552 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:42:552 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:42:553 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:42:553 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:42:764 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:42:765 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:42:766 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:42:766 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:42:805 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:42:805 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:42:805 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:42:807 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:42:808 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:43:19 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:43:25 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:43:27 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:43:28 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:43:64 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:43:69 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:43:72 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:43:72 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:43:76 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:43:284 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:43:284 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:43:287 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:43:288 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:43:325 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:43:326 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:43:326 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:43:327 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:43:327 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:43:544 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:43:550 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:43:550 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:43:552 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:43:596 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:43:596 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:43:604 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:43:604 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:43:605 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:43:805 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:43:806 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:43:806 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:43:806 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:43:845 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:43:845 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:43:849 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:43:849 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:43:850 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:44:52 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:44:52 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:44:57 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:44:57 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:44:92 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:44:93 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:44:100 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:44:100 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:44:100 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:44:301 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:44:303 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:44:309 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:44:311 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:44:348 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:44:348 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:44:349 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:44:368 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:44:368 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:44:569 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:44:571 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:44:573 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:44:575 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:44:604 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:44:604 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:44:605 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:44:605 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:44:607 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:44:817 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:44:820 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:44:824 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:44:826 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:44:868 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:44:878 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:44:878 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:44:879 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:44:879 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:45:80 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:45:88 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:45:90 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:45:91 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:45:136 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:45:148 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:45:152 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:45:152 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:45:153 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:45:364 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:45:369 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:45:370 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:45:372 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:45:397 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:45:404 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:45:404 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:45:405 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:45:406 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:45:608 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:45:611 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:45:616 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:45:617 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:45:660 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:45:660 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:45:661 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:45:661 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:45:661 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:45:870 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:45:872 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:45:873 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:45:875 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:45:909 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:45:916 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:45:916 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:45:917 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:45:917 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:46:118 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:46:119 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:46:121 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:46:123 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:46:171 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:46:171 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:46:172 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:46:172 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:46:176 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:46:380 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:46:385 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:46:386 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:46:389 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:46:420 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:46:424 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:46:425 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:46:425 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:46:425 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:46:632 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:46:634 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:46:635 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:46:637 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:46:654 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:46:658 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:46:658 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:46:659 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:46:659 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:46:862 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:46:867 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:46:869 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:46:870 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:46:913 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:46:916 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:46:916 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:46:917 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:46:917 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:47:120 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:47:123 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:47:128 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:47:130 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:47:184 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:47:196 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:47:197 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:47:197 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:47:200 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:47:408 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:47:410 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:47:411 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:47:413 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:47:496 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:47:498 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:47:499 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:47:504 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:47:506 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:47:712 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:47:714 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:47:720 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:47:722 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:47:756 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:47:757 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:47:758 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:47:760 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:47:765 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:47:972 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:47:975 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:47:976 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:47:978 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:47:996 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:48:25 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:48:25 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:48:26 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:48:26 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:48:228 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:48:230 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:48:231 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:48:233 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:48:263 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:48:268 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:48:269 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:48:270 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:48:270 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:48:472 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:48:478 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:48:479 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:48:481 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:48:524 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:48:524 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:48:525 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:48:525 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:48:525 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:48:729 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:48:731 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:48:732 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:48:736 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:48:781 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:48:781 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:48:782 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:48:784 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:48:784 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:48:992 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:48:994 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:48:996 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:48:998 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:49:44 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:49:48 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:49:52 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:49:52 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:49:53 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:49:253 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:49:261 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:49:263 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:49:266 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:49:300 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:49:301 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:49:301 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:49:301 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:49:302 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:49:508 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:49:511 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:49:512 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:49:514 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:49:552 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:49:553 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:49:553 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:49:554 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:49:554 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:49:764 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:49:767 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:49:770 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:49:771 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:49:808 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:49:808 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:49:809 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:49:809 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:49:809 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:50:16 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:50:18 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:50:20 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:50:22 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:50:80 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:50:80 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:50:81 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:50:81 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:50:81 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:50:288 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:50:289 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:50:291 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:50:293 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:50:332 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:50:336 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:50:338 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:50:339 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:50:339 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:50:541 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:50:547 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:50:549 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:50:551 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:50:592 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:50:595 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:50:605 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:50:605 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:50:624 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:50:837 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:50:839 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:50:841 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:50:842 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:50:888 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:50:893 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:50:893 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:50:896 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:50:897 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:51:104 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:51:106 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:51:112 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:51:114 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:51:148 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:51:148 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:51:149 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:51:152 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:51:152 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:51:353 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:51:354 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:51:357 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:51:359 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:51:416 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:51:420 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:51:420 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:51:421 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:51:424 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:51:626 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:51:628 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:51:629 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:51:636 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:51:702 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:51:705 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:51:705 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:51:705 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:51:706 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:51:906 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:51:909 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:51:913 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:51:914 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:51:984 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:51:984 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:51:985 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:51:985 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:51:989 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:52:190 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:52:194 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:52:195 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:52:197 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:52:242 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:52:248 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:52:268 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:52:269 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:52:269 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:52:470 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:52:474 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:52:475 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:52:477 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:52:517 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:52:519 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:52:519 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:52:520 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:52:521 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:52:736 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:52:740 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:52:742 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:52:750 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:52:796 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:52:797 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:52:797 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:52:797 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:52:798 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:53:17 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:53:23 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:53:25 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:53:26 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:53:50 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:53:51 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:53:53 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:53:76 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:53:77 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:53:280 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:53:282 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:53:284 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:53:286 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:53:328 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:53:333 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:53:334 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:53:342 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:53:346 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:53:552 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:53:556 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:53:558 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:53:560 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:53:596 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:53:596 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:53:597 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:53:597 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:53:598 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:53:808 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:53:810 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:53:817 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:53:821 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:53:873 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:53:873 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:53:874 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:53:880 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:53:880 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:54:81 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:54:83 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:54:84 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:54:86 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:54:126 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:54:132 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:54:132 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:54:133 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:54:136 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:54:360 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:54:363 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:54:364 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:54:366 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:54:388 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:54:392 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:54:392 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:54:393 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:54:393 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:54:596 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:54:602 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:54:604 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:54:606 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:54:630 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:54:637 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:54:640 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:54:640 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:54:641 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:54:845 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:54:847 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:54:849 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:54:850 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:54:888 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:54:888 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:54:889 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:54:889 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:54:890 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:55:112 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:55:117 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:55:119 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:55:121 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:55:161 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:55:162 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:55:162 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:55:163 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:55:172 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:55:373 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:55:375 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:55:376 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:55:378 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:55:417 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:55:418 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:55:428 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:55:433 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:55:436 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:55:648 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:55:650 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:55:652 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:55:654 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:55:672 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:55:673 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:55:674 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:55:675 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:55:676 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:55:884 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:55:886 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:55:892 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:55:894 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:55:943 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:55:944 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:55:946 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:55:947 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:55:947 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:56:152 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:56:154 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:56:155 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:56:160 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).
+[INFO] 00:15:56:252 ProcesoPlataforma/(13143:13147): Recibe mensaje de finalizacion de turno.
+[INFO] 00:15:56:254 ProcesoPlataforma/(13143:13147): Agrega personaje 'P?' a cola de listos.
+[INFO] 00:15:56:257 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:56:266 ProcesoPlataforma/(13143:13147): Personaje 'P?'
+[INFO] 00:15:56:267 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:56:468 ProcesoPlataforma/(13143:13147): Quita personaje 'P?' de cola de listos.
+[INFO] 00:15:56:469 ProcesoPlataforma/(13143:13147): ---LISTOS---
+[INFO] 00:15:56:471 ProcesoPlataforma/(13143:13147): -----------
+[INFO] 00:15:56:473 ProcesoPlataforma/(13143:13147): Envia mensaje indicando movimiento permitido (ID PERSONAJE: P?).

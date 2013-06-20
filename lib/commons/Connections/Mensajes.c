@@ -18,7 +18,7 @@ int mensajes(t_queue* mensajesQueue, CCB myCOM){
 	int n, i; // n = cantidad de eventos que devuelve epoll, i = variable para recorrer los eventos
 
 	//// ESPERO LAS NOVEDADES EN LOS SOCKETS QUE ESTOY OBSERVANDO
-	n = epoll_wait (myCOM.instancia_epoll, myCOM.events, MAXEVENTS, -1);
+	n = epoll_wait (myCOM.instancia_epoll, myCOM.events, MAXEVENTS, 0);
 
 	//// RECORRO LOS EVENTOS ATENDIENDO LAS NOVEDADES
 	for (i = 0; i < n; i++)
@@ -109,6 +109,7 @@ int mensajes(t_queue* mensajesQueue, CCB myCOM){
 			while (1){
 				ssize_t count;
 				char buf[512];
+				ssize_t datos_restantes_en_buf;
 				//LEO LOS DATOS
 				count = read (myCOM.events[i].data.fd, buf, sizeof buf);
 
@@ -128,40 +129,42 @@ int mensajes(t_queue* mensajesQueue, CCB myCOM){
 					done=1;
 					break;
 				}
+				
+				datos_restantes_en_buf = count;
 				//MIENTRAS HAYA MENSAJES EN EL BUFFER
-				while(count!=0){
+				while(datos_restantes_en_buf!=0){
 
-				//CREO LA NUEVA INSTANCIA MENSAJE TODO LIBERAR ESTRUCTURA MENSAJE
-				Mensaje* NuevoMensaje;
-				if((NuevoMensaje = malloc(sizeof(Mensaje))) == NULL){
-					perror ("malloc");
-					exit(1);
-				}
+					//CREO LA NUEVA INSTANCIA MENSAJE TODO LIBERAR ESTRUCTURA MENSAJE
+					Mensaje* NuevoMensaje;
+					if((NuevoMensaje = malloc(sizeof(Mensaje))) == NULL){
+						perror ("malloc");
+						exit(1);
+					}
 
-				//ASIGNO LOS DATOS DEL MENSAJE
-				NuevoMensaje->from = myCOM.events[i].data.fd;
-				NuevoMensaje->type = buf[0];
-				memcpy(&NuevoMensaje->lenght,(void*)(&(buf[1])),2);
+					//ASIGNO LOS DATOS DEL MENSAJE
+					NuevoMensaje->from = myCOM.events[i].data.fd;
+					NuevoMensaje->type = buf[0];
+					memcpy(&NuevoMensaje->lenght,(void*)(&(buf[1])),2);
 
-				//SOLICITO MEMORIA PARA LA DATA DEL MENSAJE TODO LIBERAR DATA
-				if((NuevoMensaje->data = malloc(NuevoMensaje->lenght)) == NULL){
-					perror ("malloc");
-					exit(1);
-				}
+					//SOLICITO MEMORIA PARA LA DATA DEL MENSAJE TODO LIBERAR DATA
+					if((NuevoMensaje->data = malloc(NuevoMensaje->lenght)) == NULL){
+						perror ("malloc");
+						exit(1);
+					}
 
-				//COPIO LA DATA AL ELEMENTO DEL MENSAJE
-				memcpy(NuevoMensaje->data, (void*) buf+3, NuevoMensaje->lenght);
+					//COPIO LA DATA AL ELEMENTO DEL MENSAJE
+					memcpy(NuevoMensaje->data, (void*) buf+3, NuevoMensaje->lenght);
 
-				queue_push (mensajesQueue, NuevoMensaje);
-				
-				//cambio la cantidad que me queda en buf
-				count=count-3-(NuevoMensaje->lenght);
-				memmove(buf,  (void*) (buf+3+(NuevoMensaje->lenght)), count);
-				
-			
+					queue_push (mensajesQueue, NuevoMensaje);
 
-			}//YA NO HAY MAS MENSAJES EN EL BUFFER
-			if(count==0) break;
+					//cambio la cantidad que me queda en buf
+					datos_restantes_en_buf=datos_restantes_en_buf-3-(NuevoMensaje->lenght);
+					memmove(buf,  (void*) (buf+3+(NuevoMensaje->lenght)), datos_restantes_en_buf);
+
+
+
+				}//YA NO HAY MAS MENSAJES EN EL BUFFER
+				if(datos_restantes_en_buf==0) break;
 
 			}
 			//SI TERMINE CIERRO CONEXION
@@ -170,8 +173,8 @@ int mensajes(t_queue* mensajesQueue, CCB myCOM){
 			}
 		}
 	}
-	
-	
+
+
 	return queue_size(mensajesQueue);
 
 
@@ -189,7 +192,7 @@ int mandarMensaje( int fd , char type, uint16_t lenght, void*data){
 	memcpy(&mensaje[1],(void*)(&lenght),2);
 	memcpy(&mensaje[3],(void*)data,lenght);
 
-	
+
 	return (send(fd , mensaje, lenght+3, 0));
 
 }
@@ -228,22 +231,22 @@ void Cerrar_Conexion (int fd){
 
 int make_socket_non_blocking (int sfd)
 {
-  int flags, s;
+	int flags, s;
 
-  flags = fcntl (sfd, F_GETFL, 0);
-  if (flags == -1)
-    {
-      perror ("fcntl");
-      return -1;
-    }
+	flags = fcntl (sfd, F_GETFL, 0);
+	if (flags == -1)
+	{
+		perror ("fcntl");
+		return -1;
+	}
 
-  flags |= O_NONBLOCK;
-  s = fcntl (sfd, F_SETFL, flags);
-  if (s == -1)
-    {
-      perror ("fcntl");
-      return -1;
-    }
+	flags |= O_NONBLOCK;
+	s = fcntl (sfd, F_SETFL, flags);
+	if (s == -1)
+	{
+		perror ("fcntl");
+		return -1;
+	}
 
-  return 0;
+	return 0;
 }
