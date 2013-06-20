@@ -156,12 +156,12 @@ void* Planif(void* nivel){
 						queue_push(queue_bloq->queue, miGestor->PersonajeEnMovimiento);
 						imprimirBloqueados(miGestor->queues_bloq, string_from_format("Agrega personaje '%s' asignado al recurso '%c' a lista de bloqueados", miGestor->PersonajeEnMovimiento->ID, queue_bloq->idRecurso));
 					}else{
-						Queue_bloqueados nueva_queue;
-						nueva_queue.queue = queue_create();
-						nueva_queue.idRecurso = *((char*)(miMensaje->data));
-						queue_push(nueva_queue.queue, miGestor->PersonajeEnMovimiento);
-						list_add (miGestor->queues_bloq, &nueva_queue);
-						imprimirBloqueados(miGestor->queues_bloq, string_from_format("Agrega personaje '%s' asignado al recurso '%c' a lista de bloqueados.", miGestor->PersonajeEnMovimiento->ID, nueva_queue.idRecurso));
+						Queue_bloqueados* nueva_queue= malloc(sizeof(Queue_bloqueados));
+						nueva_queue->queue = queue_create();
+						nueva_queue->idRecurso = *((char*)(miMensaje->data));
+						queue_push(nueva_queue->queue, miGestor->PersonajeEnMovimiento);
+						list_add (miGestor->queues_bloq, nueva_queue);
+						imprimirBloqueados(miGestor->queues_bloq, string_from_format("Crea lista de bloqueados y agrega personaje '%s' asignado al recurso '%c' a lista de bloqueados.", miGestor->PersonajeEnMovimiento->ID, nueva_queue->idRecurso));
 					}
 					miGestor->quantum=quantum_inicial;
 					entregarTurno(miGestor);
@@ -254,16 +254,16 @@ void* orq (void* a){
 						if(!queue_is_empty(queue_bloq->queue)){
 							personajeAux = queue_pop(queue_bloq->queue);
 							imprimirBloqueados(miGestor->queues_bloq, string_from_format("Quita personaje '%s' asignado al recurso '%c' de la lista de bloqueados.", personajeAux->ID, queue_bloq->idRecurso));
-							recursoAsignado = asignarRecurso(miRecurso->idRecurso, personajeAux);
-							log_info(Logger, string_from_format("Envia mensaje con la cantidad de recursos asignados (ID PERSONAJE: %s - ID RECURSO: %s - CANT: %d).", (recursoAsignado.idPersonaje), (recursoAsignado.idRecurso), (recursoAsignado.cant)));
+							asignarDatos(&recursoAsignado, miRecurso->idRecurso, personajeAux);
+							log_info(Logger, string_from_format("Envia mensaje de recursos asignado (ID PERSONAJE: %c - ID RECURSO: %c).", (recursoAsignado.idPersonaje), (recursoAsignado.idRecurso)));
 							mandarMensaje(miMensaje->from,RECURSOS_REASIGNADOS,sizeof(Recursos), &recursoAsignado);
 							queue_push(miGestor->queue_listos, personajeAux);
 							imprimirListos(miGestor->queue_listos, string_from_format("Agrega personaje '%s' a cola de listos.", personajeAux->ID));
+							(miRecurso->cant)--;
 						}else{
 							//LA COLA ESTA VACIAfrom
 							log_info(Logger, "Envia mensaje informando reasignacion finalizada debido a que la cola de bloqueados esta vacia para el recurso.");
 							mandarMensaje(miMensaje->from, REASIGNACION_FINALIZADA,sizeof(NULL),NULL);
-							log_info(Logger, "b;ba");
 							miRecurso->cant=0;
 						}
 					}
@@ -285,7 +285,7 @@ void* orq (void* a){
 				Victima = findUltimoEnLlegar (miGestor->personajes_en_nivel, PersonajesInterbloqueados);
 				log_info(Logger, "Envia mensaje indicando que murio el personaje");
 				mandarMensaje(Victima->FD,MORISTE_PERSONAJE,0,NULL);
-				log_info(Logger, string_from_format("Envia mensaje con el nombre de la victima (NOMBRE VICTIMA: %s)", Victima->ID[1]));
+				log_info(Logger, string_from_format("Mata al personaje (NOMBRE VICTIMA: %s)", Victima->ID[1]));
 				mandarMensaje(miMensaje->from, NOMBRE_VICTIMA ,1,&(Victima->ID[1]));
 			}
 			break;
@@ -335,11 +335,11 @@ void imprimirBloqueados(t_list* bloqueados, char* mensaje) {
 	int index = 0;
 	while (index < list_size(bloqueados)) {
 		Queue_bloqueados* queueBloqueados = (Queue_bloqueados*)list_get(bloqueados, index);
-		log_info(Logger, string_from_format("Recurso: '%c'", queueBloqueados->idRecurso));
+		log_info(Logger, string_from_format("Recurso: '%c' index %d", queueBloqueados->idRecurso, index));
 		int queueIndex = 0;
 		while (queueIndex < queue_size(queueBloqueados->queue)) {
 			Personaje* personaje = (Personaje*)list_get(queueBloqueados->queue->elements, queueIndex);
-			log_info(Logger, string_from_format("-> Personaje '%s'", personaje->ID));
+			log_info(Logger, string_from_format("-> Personaje '%s' indicelocal %d", personaje->ID, queueIndex));
 			queueIndex++;
 		}
 		index++;
@@ -396,7 +396,7 @@ Personaje* findPersonaje_byid (t_list* personajes_en_nivel, char* id){
 Queue_bloqueados* findBloqQueue_byidRecurso (t_list* lista, char idRecurso){
 	log_info(Logger, string_from_format("Busco lista de bloqueados de recurs: %c",idRecurso));
 	bool _eselGestor (Queue_bloqueados* comparador){
-		log_info(Logger, string_from_format("LLamada a la funcion. %c",comparador->idRecurso));
+		log_info(Logger, string_from_format("comparo y tengo resultado %d",(comparador->idRecurso==idRecurso)));
 		return(comparador->idRecurso==idRecurso);
 	}
 	return (list_find(lista,(void*)_eselGestor));
@@ -429,9 +429,7 @@ Personaje* findUltimoEnLlegar (t_list* ListaDePersonajes, char PersonajesInterbl
 
 }
 
-Recursos asignarRecurso (char recurso, Personaje* miPersonaje){
-	Recursos Aux;
-	Aux.idRecurso = recurso;
-	Aux.idPersonaje = miPersonaje->ID[1];
-	return Aux;
+void asignarDatos (Recursos* Aux, char recurso, Personaje* miPersonaje){
+	Aux->idRecurso = recurso;
+	Aux->idPersonaje = miPersonaje->ID[1];
 }

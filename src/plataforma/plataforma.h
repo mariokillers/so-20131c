@@ -59,5 +59,5 @@ Personaje* removePersonaje_byfd (t_list* personajes_en_nivel, int fd);
 Personaje* findPersonaje_byid (t_list* personajes_en_nivel, char* id);
 void entregarTurno (GestorNivel* miGestor);
 Personaje* findUltimoEnLlegar (t_list*, char*);
-Recursos asignarRecurso (char , Personaje* );
+void asignarDatos (Recursos* Aux, char recurso, Personaje* miPersonaje);
 #endif /* PROCESO_PLATAFORMA_H_ */
