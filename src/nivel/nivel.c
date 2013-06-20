@@ -354,7 +354,7 @@ void matarPersonaje(int fdPersonaje) {
 	log_info(logger, "Mando recursos liberados");
 
 	//por cada recurso que libera tengo que sumarlo a la cantidad en listaItems
-	aumentarRecursos(recursosALiberar);
+	//aumentarRecursos(recursosALiberar);
 
 	log_info(logger, "Aumento los recursos re-asignados");
 
@@ -433,7 +433,7 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador) {
 				//llamo a reasignar con la data que me envio
 				Recursos* listaRecursos = mensaje->data;
 				reasignarRecursos(listaRecursos);
-				cant--;
+				--cant;
 				log_info(logger, "Reasigno recursos");
 
 			}
@@ -445,13 +445,6 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador) {
 		}
 
 		log_info(logger, "Aumento los recursos que no se reasignaron");
-
-		/*t_recursos* recursoSinReasignar;
-recursoSinReasignar = malloc(sizeof(t_recursos));
-
-recursoSinReasignar->idRecurso = recurso.idRecurso;
-recursoSinReasignar->cant = cant;
-recursoSinReasignar->sig = NULL;*/
 
 		log_info(logger,
 				string_from_format(
