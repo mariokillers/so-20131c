@@ -161,6 +161,7 @@ void* Planif(void* nivel){
 				}
 				break;
 			case TERMINE_NIVEL:
+				log_info(Logger,"Personaje termino nivel");
 				miGestor->turno_entregado=0;
 				removePersonaje_byfd (miGestor->personajes_en_nivel, miMensaje->from);
 				break;
@@ -254,13 +255,14 @@ void* orq (void* a){
 						}else{
 							//LA COLA ESTA VACIA
 							log_info(Logger, "Envia mensaje informando reasignacion finalizada debido a que la cola de bloqueados esta vacia para el recurso.");
-							mandarMensaje(miMensaje->from,REASIGNACION_FINALIZADA,0,NULL);
+							mandarMensaje(miMensaje->from,REASIGNACION_FINALIZADA,sizeof(NULL),NULL);
+							log_info(Logger, "b;ba");
 							miRecurso->cant=0;
 						}
 					}
 					//NO HAY COLA DE BLOQUEADOS ESPERANDO ESE RECURSO
 				}else{
-					log_info(Logger, "Envia mensaje informando reasignacion finalizada debido a que no hay cosa de bloqueados esperando ese recurso.");
+					log_info(Logger, "Envia mensaje informando reasignacion finalizada debido a que no hay cola de bloqueados esperando ese recurso.");
 					mandarMensaje(miMensaje->from,REASIGNACION_FINALIZADA,0,NULL);
 				}
 			}
