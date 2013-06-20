@@ -354,6 +354,8 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador){
 		recurso.idPersonaje = '\0';
 		recurso.cant = aux->cant;
 
+		int cant = recurso.cant;
+
 		log_info(logger, string_from_format("Mando mensaje. La cantidad del recurso: %c es: %d", aux->idRecurso, aux->cant));
 
 		//le mando al orquestador los recursos liberados para que re-asigne
@@ -363,6 +365,7 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador){
 
 		//escucho al orquestador que me va a mandar los que re-asigno
 		while((!mensajes(colaDeMensajes,serverCCB)))
+			log_info(logger, "Esperando mensaje del orquestador...");
 			;
 			mensaje = queue_pop(colaDeMensajes);
 
@@ -371,17 +374,33 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador){
 			//mientras no sea el mensaje REASIGNACION_FINALIZADA... quiere decir que me esta mandando re-asignaciones
 
 			while(mensaje->type != REASIGNACION_FINALIZADA ){
+				log_info(logger, "No llega recursos reasignados");
 				if(mensaje->type == RECURSOS_REASIGNADOS){
 
 					//llamo a reasignar con la data que me envio
 					Recursos* listaRecursos = mensaje->data;
 					reasignarRecursos(listaRecursos);
+					--cant;
+					log_info(logger, "Reasigno recursos");
 
 				} borrarMensaje(mensaje);
 				//levanto nuevo mensaje
 			while((!mensajes(colaDeMensajes,serverCCB)));
 				mensaje = queue_pop(colaDeMensajes);
 			}
+
+			log_info(logger, "Aumento los recursos que no se reasignaron");
+
+			t_recursos* recursoSinReasignar;
+			recursoSinReasignar = malloc(sizeof(t_recursos));
+
+			recursoSinReasignar->idRecurso = recurso.idRecurso;
+			recursoSinReasignar->cant = cant;
+			recursoSinReasignar->sig = NULL;
+
+			log_info(logger, string_from_format("Agrego a ListaItem en el recurso: %c la cantidad de: %d", recursoSinReasignar->idRecurso, recursoSinReasignar->cant));
+
+			aumentarRecursos(recursoSinReasignar);
 
 		aux = aux->sig;
 	}
@@ -438,7 +457,6 @@ ITEM_NIVEL* buscarItem(char id)
 	return temp;
 }
 
-
 PersonajeEnNivel* cargarPersonajeEnNivel(Personaje* miPersonaje){
 	/*@NAME: cargarPersonaje
 	 * @DESC: cuando se conecta un personaje al nivel, lo agrega a la listaPersonajes que es la lista para la cual el nivel
@@ -470,7 +488,6 @@ PersonajeEnNivel* cargarPersonajeEnNivel(Personaje* miPersonaje){
 
 
 }
-
 
 void agregarARecursosPendientes(PersonajeEnNivel* personaje, char recurso){
 	/*@NAME: agregarAListaRecursosPendientes
@@ -574,7 +591,6 @@ void borrarPersonajeEnNivel(char idPersonaje){
         }
       }
 }
-
 
 t_recursos* liberarRecursos(PersonajeEnNivel* personaje ){
 	/*@NAME: liberarRecursos
