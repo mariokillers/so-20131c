@@ -4,14 +4,15 @@
 t_list* Gestores;
 t_log* Logger;
 int quantum_inicial;
-
+t_list* personajes_jugando;
 int main (){
 
 	Gestores = list_create();
+	personajes_jugando = list_create();
 	Logger = log_create("ProcesoPlataforma.log", "ProcesoPlataforma", true, LOG_LEVEL_INFO);
 	log_info(Logger, "************************************************************************");
 	log_info(Logger, "Se inicia Proceso Plataforma.");
-
+	
 	//TEST 1
 	/*
 	GestorNivel* test;
@@ -107,6 +108,11 @@ void* Planif(void* nivel){
 					Personaje* miPersonaje = malloc (sizeof(Personaje));
 					strcpy(miPersonaje->ID, ((Personaje*) miMensaje->data)->ID);
 					miPersonaje->FD=miMensaje->from;
+					
+					//AGREGO EL PERSONAJE A LA LISTA DE PERSONAJES JUGANDO
+					if(findPersonaje_byid(personajes_jugando,miPersonaje->ID)== NULL)
+						list_add(personajes_jugando, miPersonaje);
+									
 					//Lo agrego a la cola de listos
 					queue_push (miGestor->queue_listos, miPersonaje);
 					imprimirListos(miGestor->queue_listos, string_from_format("Agrega personaje '%s' a cola de listos.", miPersonaje->ID));
@@ -158,7 +164,8 @@ void* Planif(void* nivel){
 				miGestor->turno_entregado=0;
 				removePersonaje_byfd (miGestor->personajes_en_nivel, miMensaje->from);
 				break;
-			}//fin de antencion a los mensajes
+			}
+			borrarMensaje(miMensaje);//fin de antencion a los mensajes
 			
 		}else{ //NO HAY MENSAJES, ME FIJO SI DESBLOQUEO ALGUNO
 			if(!(miGestor->turno_entregado)){//ESTOY EN STANDBY PORQUE NO HABIA PERSONAJES EN COLA DE LISTOS
@@ -170,16 +177,6 @@ void* Planif(void* nivel){
 	return 0;
 }
 
-void entregarTurno (GestorNivel* miGestor){
-	usleep(200000);
-	miGestor->PersonajeEnMovimiento = (Personaje*) (queue_pop (miGestor->queue_listos));
-	if(miGestor->PersonajeEnMovimiento != NULL){ //Si hay personaje en cola de listos, entrega turno
-		miGestor->turno_entregado=1;// SINO, SIGO.
-		imprimirListos(miGestor->queue_listos, string_from_format("Quita personaje '%s' de cola de listos.", miGestor->PersonajeEnMovimiento->ID));
-		log_info(Logger, string_from_format("Envia mensaje indicando movimiento permitido (ID PERSONAJE: %s).", miGestor->PersonajeEnMovimiento->ID));
-		mandarMensaje(miGestor->PersonajeEnMovimiento->FD, MOVIMIENTO_PERMITIDO, 0, NULL);
-	}
-}
 
 
 void* orq (void* a){
@@ -224,9 +221,7 @@ void* orq (void* a){
 				if(miGestor==NULL){
 					log_info(Logger, string_from_format("El nivel %s no esta conectado a plataforma.", (char*)miMensaje->data));
 					mandarMensaje(miMensaje->from,NODATANIVEL,0,NULL);
-				}else{//memcpy(&(miDataNivel.miNivel),&(miGestor->dataNivel),sizeof(Nivel));
-				//memcpy(&(miDataNivel.miPlanificador),&(miGestor->dataPlanificador),sizeof(Planificador));
-
+				}else{
 					log_info(Logger, string_from_format("Envia mensaje con la informacion del nivel (NIVEL ID: %s - PLANIFICADOR ID: %s).", (miGestor->dataNivel.ID), (miGestor->dataPlanificador.ID)));
 					mandarMensaje(miMensaje->from,DATANIVEL,sizeof(Data_Nivel),&(miGestor->dataNivel));
 				}
@@ -285,7 +280,12 @@ void* orq (void* a){
 				mandarMensaje(miMensaje->from, NOMBRE_VICTIMA ,1,&(Victima->ID[1]));
 			}
 			break;
+			case GANE:
+				removePersonaje_byfd(personajes_jugando, miMensaje->from);
+				if(list_is_empty(personajes_jugando)) finalizarProceso();
+				break;
 			}
+			borrarMensaje(miMensaje);
 		}
 
 	}
@@ -293,7 +293,10 @@ void* orq (void* a){
 }
 
 void finalizarProceso() {
+	log_info(Logger, "Ganaron todos. NIVEL FINAL -- KOOPA");
+	char *argumentos[] = {"./koopa", "archivo.lst", NULL};
 	log_destroy(Logger);
+	execv("./koopa", argumentos);
 }
 
 void imprimirListos(t_queue* listos, char* mensaje) {
@@ -330,6 +333,17 @@ void imprimirBloqueados(t_list* bloqueados, char* mensaje) {
 	log_info(Logger, "----------------");
 }
 
+void entregarTurno (GestorNivel* miGestor){
+	usleep(200000);
+	miGestor->PersonajeEnMovimiento = (Personaje*) (queue_pop (miGestor->queue_listos));
+	if(miGestor->PersonajeEnMovimiento != NULL){ //Si hay personaje en cola de listos, entrega turno
+		miGestor->turno_entregado=1;// SINO, SIGO.
+		imprimirListos(miGestor->queue_listos, string_from_format("Quita personaje '%s' de cola de listos.", miGestor->PersonajeEnMovimiento->ID));
+		log_info(Logger, string_from_format("Envia mensaje indicando movimiento permitido (ID PERSONAJE: %s).", miGestor->PersonajeEnMovimiento->ID));
+		mandarMensaje(miGestor->PersonajeEnMovimiento->FD, MOVIMIENTO_PERMITIDO, 0, NULL);
+	}
+}
+
 //CHEKEADA
 GestorNivel* findGestor_byid (char* nivel){
 	bool _eselGestor (GestorNivel* comparador){
@@ -345,6 +359,14 @@ Personaje* removePersonaje_byfd (t_list* personajes_en_nivel, int fd){
 	return (list_remove_by_condition(personajes_en_nivel,(void*)_eselPersonaje));
 }
 
+Personaje* findPersonaje_byid (t_list* personajes_en_nivel, char* id){
+	bool _eselPersonaje (Personaje* comparador){
+		return(string_equals_ignore_case(comparador->ID, id));
+	}
+	return (list_find(personajes_en_nivel,(void*)_eselPersonaje));
+}
+
+
 Queue_bloqueados* findBloqQueue_byidRecurso (t_list* lista, char idRecurso){
 	log_info(Logger, string_from_format("Busco lista de bloqueados de recurs: %c",idRecurso));
 	bool _eselGestor (Queue_bloqueados* comparador){
@@ -352,7 +374,6 @@ Queue_bloqueados* findBloqQueue_byidRecurso (t_list* lista, char idRecurso){
 		return(comparador->idRecurso==idRecurso);
 	}
 	return (list_find(lista,(void*)_eselGestor));
-
 }
 
 GestorNivel* findGestor_byfd (int fd){

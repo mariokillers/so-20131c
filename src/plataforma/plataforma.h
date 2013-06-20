@@ -11,7 +11,7 @@
 #include <commons/log.h>
 #include <commons/string.h>
 #include <pthread.h>
-
+#include <unistd.h>
 #include <commons/Connections/Server.h>
 #include <commons/Connections/Client.h>
 #include <commons/Connections/Mensajes.h>
@@ -55,6 +55,7 @@ GestorNivel* findGestor_byid (char* );
 GestorNivel* findGestor_byfd (int);
 Queue_bloqueados* findBloqQueue_byidRecurso (t_list*, char);
 Personaje* removePersonaje_byfd (t_list* personajes_en_nivel, int fd);
+Personaje* findPersonaje_byid (t_list* personajes_en_nivel, char* id);
 void entregarTurno (GestorNivel* miGestor);
 Personaje* findUltimoEnLlegar (t_list*, char*);
 Recursos asignarRecurso (char , Personaje* );
