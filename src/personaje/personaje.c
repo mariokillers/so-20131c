@@ -69,6 +69,7 @@ int main(int argc, char *argv[]) {
 					//mando el primer mensaje al orquestador solicitando informacion del nivel y su planificador
 					strcpy(proxNivel, proximoNivel(personaje->personaje_niveles));
 
+					solicitarDataNivel();
 					mandarMensaje(clientCCB_orq.sockfd,REQUEST_DATA_NIVEL,strlen(proxNivel)+1,proxNivel);
 
 					//loggeo la solicitud de DATA_NIVEL al orquestador
@@ -109,10 +110,14 @@ int main(int argc, char *argv[]) {
 
 								imprimirObjetivos(personaje->personaje_niveles);
 
-
 								state = STANDBY;
 								log_info(logger, string_from_format("personaje %s cambia a estado %d", personaje->personaje_nombre, state));
 
+								break;
+							case NODATANIVEL:
+								//orquestador no pudo mandar la data de nivel, la vuelve a pedir
+								log_info(logger, string_from_format("el personaje %s no recibio data de %s", personaje->personaje_nombre, proxNivel));
+								solicitarDataNivel();
 								break;
 						}
 						borrarMensaje(mensaje);
@@ -671,4 +676,15 @@ void inicializarPersonaje(){
 	strcpy(nivelActual,"");
 	posicionActual = (Posicion*)personaje->personaje_posicion_actual;
 	state = NUEVO_NIVEL;
+}
+
+void solicitarDataNivel(){
+
+	mandarMensaje(clientCCB_orq.sockfd,REQUEST_DATA_NIVEL,strlen(proxNivel)+1,proxNivel);
+
+	//loggeo la solicitud de DATA_NIVEL al orquestador
+	log_info(logger, string_from_format("personaje %s solicita al orquestador DATA_NIVEL del %s", personaje->personaje_nombre, proxNivel));
+
+	state = WAIT_DATA_LEVEL;
+	log_info(logger, string_from_format("personaje %s cambia a estado %d", personaje->personaje_nombre, state));
 }
