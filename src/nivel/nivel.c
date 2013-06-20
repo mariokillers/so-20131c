@@ -342,7 +342,6 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador){
 	colaDeMensajes = queue_create();
 	Mensaje* mensaje;
 
-//ACA PINCHA SEGURO
 
 	while(aux != NULL){
 		//paso a la struct a la que voy a mandar los mensajes
@@ -360,7 +359,7 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador){
 
 			//mientras no sea el mensaje REASIGNACION_FINALIZADA... quiere decir que me esta mandando re-asignaciones
 
-			while(mensaje->type !=REASIGNACION_FINALIZADA ){
+			while(mensaje->type != REASIGNACION_FINALIZADA ){
 				if(mensaje->type == RECURSOS_REASIGNADOS){
 
 					//llamo a reasignar con la data que me envio
@@ -523,7 +522,7 @@ void agregarRecursoAPersonaje(PersonajeEnNivel* personaje, char recurso){
 			personaje->recursos->cant++;
 			log_info(logger, string_from_format("El recurso: %c tiene: %d recursos", auxList->idRecurso, auxList->cant));
 
-		}else if((auxList->sig == NULL)){
+		}else if(auxList->sig == NULL){
 
 			//si no lo encontro, lo agrega en la lista de recursos del personaje
 
@@ -550,8 +549,6 @@ void borrarPersonajeEnNivel(char idPersonaje){
 	PersonajeEnNivel* personaje = listaPersonajes;
 	PersonajeEnNivel* personajeAnterior;
 
-
-
     if ((personaje != NULL) && (personaje->id == idPersonaje)) {
     	listaPersonajes = listaPersonajes->sig;
 		free(personaje);
@@ -573,7 +570,7 @@ t_recursos* liberarRecursos(PersonajeEnNivel* personaje ){
 	 * @DESC: me devuelve la lista de recursos del personaje que termino el nivel
 	*/
 
- 	if((personaje != NULL)){
+ 	if(personaje != NULL){
  		return personaje->recursos;
 	}return NULL;
 
@@ -594,7 +591,6 @@ void aumentarRecursos(t_recursos* recursosALiberar){
 
 		 aux = aux->sig;
 	 }
-
 }
 
 void agregarRecursosAListaItems(char idRecurso, int cant){
@@ -644,8 +640,6 @@ void* interbloqueo(void* a){
 	/*@NAME: interbloqueo
 	* @DESC: hilo que se encarga de detectar interbloqueo
 	*/
-
-	//VER TEMA DE MALLOC ACA
 
 	log_info(logger, "Empieza a ejecutar el hilo interbloqueo");
 
