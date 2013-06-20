@@ -33,6 +33,8 @@ typedef struct {
 	t_queue* queue_listos;
 	t_list* queues_bloq;
 	Personaje* PersonajeEnMovimiento;
+	char turno_entregado;
+	int quantum;
 
 }GestorNivel;
 
@@ -41,12 +43,7 @@ typedef struct{
 	t_queue* queue;
 } Queue_bloqueados;
 
-/*
-typedef struct t_personaje {
-	char nombre[30];
-	char estado;
-} Elemento_personaje;
-*/
+
 //Elemento_personaje* personaje_crear(char* nombre);
 void* Planif(void*);
 void initOrq(void);
@@ -57,6 +54,8 @@ void imprimirBloqueados();
 GestorNivel* findGestor_byid (char* );
 GestorNivel* findGestor_byfd (int);
 Queue_bloqueados* findBloqQueue_byidRecurso (t_list*, char);
+Personaje* removePersonaje_byfd (t_list* personajes_en_nivel, int fd);
+void entregarTurno (GestorNivel* miGestor);
 Personaje* findUltimoEnLlegar (t_list*, char*);
 Recursos asignarRecurso (char , Personaje* );
 #endif /* PROCESO_PLATAFORMA_H_ */
