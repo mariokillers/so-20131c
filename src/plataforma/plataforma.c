@@ -261,18 +261,21 @@ void* orq (void* a){
 							imprimirListos(miGestor->queue_listos, string_from_format("Agrega personaje '%s' a cola de listos.", personajeAux->ID));
 							(miRecurso->cant)--;
 						}else{
-							//LA COLA ESTA VACIAfrom
-							log_info(Logger, "Envia mensaje informando reasignacion finalizada debido a que la cola de bloqueados esta vacia para el recurso.");
-							mandarMensaje(miMensaje->from, REASIGNACION_FINALIZADA,sizeof(NULL),NULL);
+							//LA COLA ESTA VACIA
 							miRecurso->cant=0;
 						}
 					}
+
+					//EXISTIA COLA, ESTABA VACIA, O SE ACABARON LOS RECURSOS DISPONIBLES
+					log_info(Logger, "Envia mensaje informando reasignacion finalizada.");
+					mandarMensaje(miMensaje->from, REASIGNACION_FINALIZADA,0,NULL);
 					//NO HAY COLA DE BLOQUEADOS ESPERANDO ESE RECURSO
 				}else{
 					log_info(Logger, "Envia mensaje informando reasignacion finalizada debido a que no hay cola de bloqueados esperando ese recurso.");
 					mandarMensaje(miMensaje->from,REASIGNACION_FINALIZADA,0,NULL);
 				}
 			}
+				
 			break;
 			case REQUEST_INTERBLOQUEO:
 			{
