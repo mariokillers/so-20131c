@@ -9,7 +9,7 @@
 
 /* inotify_test.c
  * Monitorea un archivo pasado por parametro y emite un mensaje
- * cuando es modificado (IN_MODIFY)
+ * cuando es modificado o borrado
  */
 int main(int argc, char *argv[])
 {
