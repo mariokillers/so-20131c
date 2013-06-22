@@ -64,8 +64,6 @@ void *interbloqueo(void* a){
 
 			log_info(loggerInterbloqueo, "Cargue las matrices");
 
-
-
 			marcarPersonajesSinRecursos(recursosAsignados,referenciaPersonaje,marcados,cantPersonajes, cantRecursos);
 			marcarPersonajesConRecursos(recursosAsignados, recursosSolicitados, recursosDisponibles, marcados,cantPersonajes, cantRecursos, referenciaPersonaje);
 			comprobarDeadlock(marcados,cantPersonajes, referenciaPersonaje);
@@ -85,6 +83,7 @@ void *interbloqueo(void* a){
 
 			//usleep(recovery_time);
 			sleep(5);
+			log_info(loggerInterbloqueo, "----------------------------------------------");
 	}
 	return NULL;
 }

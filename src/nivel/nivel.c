@@ -314,7 +314,9 @@ int main(int argc, char *argv[]) {
 
 		//borro el mensaje
 		borrarMensaje(mensaje);
+
 		}
+		log_info(logger, "----------------------------------------------");
 	}
 
 	//cierro el hilo de interbloqueo
