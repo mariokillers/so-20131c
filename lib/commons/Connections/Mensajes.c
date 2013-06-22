@@ -14,11 +14,13 @@
  * 		  cantidad de mensajes que hay en la cola.
  */
 int mensajes(t_queue* mensajesQueue, CCB myCOM){
-
+	
+	if(queue_size(mensajesQueue) != 0) return queue_size(mensajesQueue); else {
+	
 	int n, i; // n = cantidad de eventos que devuelve epoll, i = variable para recorrer los eventos
 
 	//// ESPERO LAS NOVEDADES EN LOS SOCKETS QUE ESTOY OBSERVANDO
-	n = epoll_wait (myCOM.instancia_epoll, myCOM.events, MAXEVENTS, 0);
+	n = epoll_wait (myCOM.instancia_epoll, myCOM.events, MAXEVENTS, 500);
 
 	//// RECORRO LOS EVENTOS ATENDIENDO LAS NOVEDADES
 	for (i = 0; i < n; i++)
@@ -177,7 +179,7 @@ int mensajes(t_queue* mensajesQueue, CCB myCOM){
 
 	return queue_size(mensajesQueue);
 
-
+}
 }
 
 /*
