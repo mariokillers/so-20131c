@@ -309,8 +309,6 @@ int main(int argc, char *argv[]) {
 
 			matarPersonaje(personaje->fd);
 
-
-
 		}
 		break;
 
