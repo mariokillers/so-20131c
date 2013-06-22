@@ -56,9 +56,6 @@ int main(int argc, char *argv[]) {
 			string_from_format("El nivel: %s le hizo HANDSHAKE al socket: %d",
 					yoNivel.ID, clientCCB.sockfd));
 
-	//inicializo el hilo que maneja interbloqueo VER ACA!
-	//pthread_create(&thread_interbloqueo, NULL, &interbloqueo, NULL );
-
 	//inicializo el recovery
 	recovery = nivel->nivel_recovery;
 	if (recovery)
@@ -77,6 +74,9 @@ int main(int argc, char *argv[]) {
 	//inicializo la lista de items a dibujar y controlar
 	ListaItems = nivel->nivel_items;
 	recursosIniciales = nivel->nivel_items; //esta lista es para saber la cantidad total de recursos que hay en el nivel (interbloqueo)
+
+	//inicializo el hilo que maneja interbloqueo VER ACA!
+	pthread_create(&thread_interbloqueo, NULL, &interbloqueo, NULL );
 
 	nivel_gui_dibujar(ListaItems);
 
@@ -318,7 +318,8 @@ int main(int argc, char *argv[]) {
 
 	//cierro el hilo de interbloqueo
 	pthread_mutex_unlock(&deadlock_mutex);
-	//pthread_join(thread_interbloqueo, NULL );
+
+	pthread_join(thread_interbloqueo, NULL );
 
 	//cierro el socket del cliente
 	close(clientCCB.sockfd);

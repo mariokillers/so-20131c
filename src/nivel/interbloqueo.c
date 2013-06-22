@@ -66,7 +66,7 @@ void *interbloqueo(void* a){
 
 			log_info(loggerInterbloqueo, "Inicialice el vector auxiliar");
 
-			//inicializo los vectores-matrices
+			//inicializo log vectores-matrices
 			cargarRecursosTotales(recursosTotales, cantRecursos, referenciaRecursos);
 			log_info(loggerInterbloqueo, "Cargue la matriz de recursos totales");
 			cargarRecursosDisponibles(aux, referenciaRecursos);
@@ -347,8 +347,8 @@ void marcarPersonajesConRecursos (int **recursosAsignados, int **recursosSolicit
 	* @DESC: marca a los personajes que pueden ejecutar
 	*/
 	int i,j,asignacionImposible, flagTerminar;
-	do{
-		flagTerminar=0;
+	//do{
+		//flagTerminar=0;
 		//recorremos personajes
 		for(i=0;i<cantPersonajes;i++){
 			asignacionImposible=0;
@@ -364,7 +364,7 @@ void marcarPersonajesConRecursos (int **recursosAsignados, int **recursosSolicit
 			//es posible ejecutar el personaje
 			if(!asignacionImposible){
 				//SI ENCUENTRA UNO QUE PUEDA EJECUTAR, SETEA PARA CONTINUAR EL ALGORTIMO
-				flagTerminar=1;
+				//flagTerminar=1;
 				marcados[i]=true;
 
 				log_info(loggerInterbloqueo, string_from_format("El personajes: %c ha sido marcado", referenciaPersonaje[i]));
@@ -373,11 +373,14 @@ void marcarPersonajesConRecursos (int **recursosAsignados, int **recursosSolicit
 				for(j=0;j<cantRecursos;j++){
 					recursosDisponibles[j]+=recursosAsignados[i* cantRecursos +j];
 				}
+			}else{
+				return;
 			}
 
 		}
+
 	//si se encontro, termina el algoritmo
-	}while(flagTerminar);
+	//}while(flagTerminar);
 
 }
 

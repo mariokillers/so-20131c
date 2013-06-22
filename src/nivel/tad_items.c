@@ -76,4 +76,3 @@ void restarRecurso(ITEM_NIVEL* ListaItems, char id) {
         }
 
 }
-
