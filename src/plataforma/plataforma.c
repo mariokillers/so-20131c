@@ -1,12 +1,10 @@
 #include "plataforma.h"
+#include "quantum_inotify.h"
 #include <string.h>
 
-t_list* Gestores;
-t_log* Logger;
-int quantum_inicial;
-t_list* personajes_jugando;
 int main (){
 
+	pthread_mutex_lock(&mutex_plataforma);
 	Gestores = list_create();
 	personajes_jugando = list_create();
 	Logger = log_create("ProcesoPlataforma.log", "ProcesoPlataforma", true, LOG_LEVEL_INFO);
@@ -30,11 +28,15 @@ int main (){
 	test2 = findGestor_byid("4hola");
 	printf("%s",test2->ID);
 	 */
-	pthread_t orquestador;
 	quantum_inicial=3;
-	pthread_create( &orquestador, NULL, orq, NULL );
-	pthread_join(orquestador,NULL);
+	pthread_create(&orquestador, NULL, orq, NULL);
 	log_info(Logger, "Crea Thread Orquestador.");
+	pthread_create(&quantum_monitor, NULL, monitorear_quantum, "../conf/quantum.conf");
+
+	pthread_join(orquestador, NULL);
+
+	pthread_mutex_unlock(&mutex_plataforma);
+	pthread_join(quantum_monitor, NULL);
 
 	return 0;
 }
