@@ -35,9 +35,11 @@ void *interbloqueo(void* a){
 			log_info(loggerInterbloqueo, string_from_format("La cantidad de personajes es: %d y de recursos es: %d", cantPersonajes, cantRecursos));
 
 			//vector para saber que procesos estan interbloqueados
-			marcados = malloc(cantPersonajes * sizeof(char));
+			marcados = malloc(cantPersonajes * sizeof(bool));
 
 			inicializarMarcados(marcados, cantPersonajes);
+
+			log_info(loggerInterbloqueo, "Inicialice marcados");
 
 			//vectores que referencian en la posicion de matrices y vectores para detectar interbloqueo
 			referenciaPersonaje = malloc(cantPersonajes * sizeof(char));
@@ -46,29 +48,44 @@ void *interbloqueo(void* a){
 			inicializarReferenciaRecurso(cantRecursos, referenciaRecursos);
 			inicializarReferenciaPersonaje(cantPersonajes, referenciaPersonaje);
 
+			log_info(loggerInterbloqueo, "Inicialice referencias");
+
 			//vectores para interbloqueo
 			recursosTotales = malloc(cantRecursos * sizeof(int));
 			recursosDisponibles = malloc(cantRecursos * sizeof(int));
+
+			log_info(loggerInterbloqueo, "Inicialice recursos totales/disponibles");
 
 			//matrices para interbloqueo
 			recursosAsignados = malloc(cantPersonajes * cantRecursos * sizeof(int));
 			recursosSolicitados = malloc(cantPersonajes * cantRecursos * sizeof(int));
 
+			log_info(loggerInterbloqueo, "Inicialice recursos asignados/solicitados");
+
 			aux = malloc(cantRecursos * sizeof(int));
+
+			log_info(loggerInterbloqueo, "Inicialice el vector auxiliar");
 
 			//inicializo los vectores-matrices
 			cargarRecursosTotales(recursosTotales, cantRecursos, referenciaRecursos);
+			log_info(loggerInterbloqueo, "Cargue la matriz de recursos totales");
 			cargarRecursosDisponibles(aux, referenciaRecursos);
-			cargarRecursosSolicitados(recursosSolicitados, referenciaRecursos, referenciaPersonaje);
-			cargarRecursosAsignados(recursosAsignados, referenciaRecursos, referenciaPersonaje);
+			log_info(loggerInterbloqueo, "Cargue la matriz de recursos disponibles");
+			cargarRecursosSolicitados(cantRecursos,recursosSolicitados, referenciaRecursos, referenciaPersonaje);
+			log_info(loggerInterbloqueo, "Cargue la matriz de recursos solicitados");
+			cargarRecursosAsignados(cantRecursos,recursosAsignados, referenciaRecursos, referenciaPersonaje);
+
+			log_info(loggerInterbloqueo, "Cargue las matrices");
 
 			pthread_mutex_unlock(&mutex);
 			//salgo de la region critica
 
-
 			marcarPersonajesSinRecursos(recursosAsignados,referenciaPersonaje,marcados,cantPersonajes, cantRecursos);
+			log_info(loggerInterbloqueo, "Marque personajes sin recursos");
 			marcarPersonajesConRecursos(recursosAsignados, recursosSolicitados, recursosDisponibles, marcados,cantPersonajes, cantRecursos, referenciaPersonaje);
+			log_info(loggerInterbloqueo, "Marque personajes con recursos");
 			comprobarDeadlock(marcados,cantPersonajes, referenciaPersonaje);
+			log_info(loggerInterbloqueo, "Comprobe deadlock");
 
 			free(aux);
 			free(recursosAsignados);
@@ -79,7 +96,8 @@ void *interbloqueo(void* a){
 			free(referenciaRecursos);
 			free(marcados);
 
-			usleep(recovery_time);
+			//usleep(recovery_time);
+			sleep(5);
 	}
 	return NULL;
 }
@@ -103,7 +121,7 @@ int cantidadRecursos(){
 	* NOTA: como no hay personajes en esta lista no tengo que diferenciar recursos de personajes
 	*/
 	int i =0;
-	ITEM_NIVEL* recurso = recursosIniciales;
+	ITEM_NIVEL *recurso = recursosIniciales;
 
 	while(recurso != NULL){
 		i++;
@@ -129,7 +147,7 @@ void inicializarReferenciaPersonaje(int cantidadPersonajes,
 	 */
 
 	int i;
-	PersonajeEnNivel* personaje = listaPersonajes;
+	PersonajeEnNivel *personaje = listaPersonajes;
 
 	for (i = 0; i < cantidadPersonajes; i++) {
 		referenciaPersonaje[i] = personaje->id;
@@ -144,7 +162,7 @@ void inicializarReferenciaRecurso(int cantidadRecursos,
 	 */
 
 	int i;
-	ITEM_NIVEL* recurso = recursosIniciales;
+	ITEM_NIVEL *recurso = recursosIniciales;
 
 	for (i = 0; i < cantidadRecursos; i++) {
 		referenciaRecurso[i] = recurso->id;
@@ -193,7 +211,7 @@ void cargarRecursosTotales(int *recursosTotales, int cantRecursos , char *refere
 	int i;
 	int pos =-1;
 
-	ITEM_NIVEL* recurso = recursosIniciales;
+	ITEM_NIVEL *recurso = recursosIniciales;
 
 	for(i=0; i< cantRecursos; i++){
 		//busco en el vector referencia la pos de ese recurso
@@ -214,8 +232,7 @@ void cargarRecursosDisponibles(int recursosDisponibles[], char referenciaRecurso
 
 	int pos =-1;
 
-	ITEM_NIVEL* recurso;
-	recurso = ListaItems;
+	ITEM_NIVEL *recurso = ListaItems;
 
 	while(recurso!= NULL){
 		//me fijo antes que sea recurso y NO personaje
@@ -231,35 +248,51 @@ void cargarRecursosDisponibles(int recursosDisponibles[], char referenciaRecurso
 	}
 }
 
-void cargarRecursosSolicitados(int **recursosSolicitados, char *referenciaRecurso, char *referenciaPersonaje){
+void cargarRecursosSolicitados(int cantRecursos, int **recursosSolicitados, char *referenciaRecurso, char *referenciaPersonaje){
 	/*@NAME: cargarRecursosSolicitados
 	* @DESC: carga la matriz dependiendo de el recurso solicitado que tuvo cada personaje
 	*/
 
-	PersonajeEnNivel* personaje = listaPersonajes;
+	PersonajeEnNivel *personaje = listaPersonajes;
 	char recurso;
 
 	int posPersonaje = -1;
 	int posRecurso = -1;
 
 	while(personaje != NULL){
+
 		//cargo el recurso que solicito el personaje
 		recurso = personaje->recursoPendiente;
 
-		//busco la posicion del personaje y el recurso en el vector de referencia
-		posPersonaje = buscarEnReferenciaPersonaje(personaje->id,referenciaPersonaje );
-		posRecurso = buscarEnReferenciaRecurso(recurso, referenciaRecurso);
+		if(recurso != NULL){
+			log_info(loggerInterbloqueo, "Paso el recurso");
 
-		if((posRecurso != -1) && (posPersonaje != -1)){
+					log_info(logger,
+									string_from_format("El recurso pendiente es: %c",
+									recurso));
 
-			//en la fila del personaje, en la columna del recurso, pongo un 1 que es el recurso que solicito
-			recursosSolicitados[posPersonaje][posRecurso]= 1;
+					//busco la posicion del personaje y el recurso en el vector de referencia
+					posPersonaje = buscarEnReferenciaPersonaje(personaje->id,referenciaPersonaje );
+					log_info(logger,
+									string_from_format("La pos del personaje es: %d",
+											posPersonaje));
+
+					posRecurso = buscarEnReferenciaRecurso(recurso, referenciaRecurso);
+					log_info(logger,
+									string_from_format("La pos del recurso es: %d",
+											posRecurso));
+
+					if((posRecurso != -1) && (posPersonaje != -1)){
+						//en la fila del personaje, en la columna del recurso, pongo un 1 que es el recurso que solicito
+						recursosSolicitados[posPersonaje*cantRecursos + posRecurso]= 1;
+					}
+
 		}
 		personaje = personaje->sig;
 	}
 }
 
-void cargarRecursosAsignados(int **recursosAsignados, char *referenciaRecurso, char *referenciaPersonaje){
+void cargarRecursosAsignados(int cantRecursos,int **recursosAsignados, char *referenciaRecurso, char *referenciaPersonaje){
 	/*@NAME: cargarRecursosAsignados
 	* @DESC: carga la matriz dependiendo de los recursos que tiene asignado cada personaje
 	*/
@@ -267,8 +300,7 @@ void cargarRecursosAsignados(int **recursosAsignados, char *referenciaRecurso, c
 	int posPersonaje = -1;
 	int posRecurso = -1;
 
-	PersonajeEnNivel* personaje;
-	personaje = listaPersonajes;
+	PersonajeEnNivel *personaje = listaPersonajes;
 
 	while(personaje != NULL){
 		posPersonaje = buscarEnReferenciaPersonaje(personaje->id,referenciaPersonaje );
@@ -280,7 +312,7 @@ void cargarRecursosAsignados(int **recursosAsignados, char *referenciaRecurso, c
 			//busca la posicion en la matriz del char de ese recurso
 			posRecurso = buscarEnReferenciaRecurso(recurso->idRecurso, referenciaRecurso);
 			//en la fila del personaje, la columna del recurso, le asigna la cantidad que tiene asignado ese personaje
-			recursosAsignados[posPersonaje][posRecurso] = recurso->cant;
+			recursosAsignados[posPersonaje*cantRecursos + posRecurso] = recurso->cant;
 			//paso al siguiente recurso del personaje
 			recurso = recurso->sig;
 		}
@@ -298,13 +330,13 @@ void marcarPersonajesSinRecursos (int **recursosAsignados, char *referenciaPerso
 	for(i=0;i<cantPersonajes;i++){
 		int flag=0;
 		for(j=0;j<cantRecursos;j++){
-			if(recursosAsignados[i][j]!=0){
+			if(recursosAsignados[i*cantRecursos +j]!= 0){
 				flag=1;
 			}
 		}
 		if (flag==1){
 			marcados[i]=true;
-			log_info(loggerInterbloqueo, string_from_format("El personajes: %d ha sido marcado", referenciaPersonaje[i]));
+			log_info(loggerInterbloqueo, string_from_format("El personajes: %c ha sido marcado", referenciaPersonaje[i]));
 		}
 	}
 
@@ -324,7 +356,7 @@ void marcarPersonajesConRecursos (int **recursosAsignados, int **recursosSolicit
 			//recorremos recursos del personaje actual
 			for(j=0;j<cantRecursos;j++){
 				//verifico que haya recursos susficientes para satisfacer el pedido
-				if(marcados[i]==false && recursosSolicitados[i][j]<=recursosDisponibles[j]){
+				if(marcados[i]==false && recursosSolicitados[i*cantRecursos +j]<=recursosDisponibles[j]){
 					asignacionImposible=1;
 				}
 			}
@@ -335,11 +367,11 @@ void marcarPersonajesConRecursos (int **recursosAsignados, int **recursosSolicit
 				flagTerminar=1;
 				marcados[i]=true;
 
-				log_info(loggerInterbloqueo, string_from_format("El personajes: %d ha sido marcado", referenciaPersonaje[i]));
+				log_info(loggerInterbloqueo, string_from_format("El personajes: %c ha sido marcado", referenciaPersonaje[i]));
 
 				//si se puede ejecutar, actualizo el disponible
 				for(j=0;j<cantRecursos;j++){
-					recursosDisponibles[j]+=recursosAsignados[i][j];
+					recursosDisponibles[j]+=recursosAsignados[i* cantRecursos +j];
 				}
 			}
 
@@ -356,11 +388,11 @@ void comprobarDeadlock (bool marcados[],int cantPersonajes, char referenciaPerso
 	j=0;
 	char personajesInterbloqueados[cantPersonajes+1];
 	//recorremos el vector de marcados
-	for(i=0;i<cantPersonajes;i++){
+	for(i=0;i < cantPersonajes;i++){
 		if(marcados[i]==false){
 			//Si el personaje no esta marcado, esta comprometido en un deadlock.
 			personajesInterbloqueados[j]=referenciaPersonaje[i];
-			log_info(loggerInterbloqueo, string_from_format("El personajes: %d esta en deadlock", referenciaPersonaje[i]));
+			log_info(loggerInterbloqueo, string_from_format("El personajes: %c esta en deadlock", referenciaPersonaje[i]));
 			j++;
 
 		}

@@ -19,10 +19,10 @@ int cantidadRecursos();
 void cargarRecursosTotales(int *recursosTotales, int cantRecursos , char *referenciaRecurso);
 
 void cargarRecursosDisponibles(int *recursosDisponibles, char *referenciaRecurso);
-
-void cargarRecursosSolicitados(int **recursosSolicitados, char *referenciaRecurso, char *referenciaPersonaje);
-
-void cargarRecursosAsignados(int **recursosAsignados, char *referenciaRecurso, char *referenciaPersonaje);
+void cargarRecursosSolicitados(int cantRecursos, int **recursosSolicitados, char *referenciaRecurso, char *referenciaPersonaje);
+//void cargarRecursosSolicitados(int **recursosSolicitados, char *referenciaRecurso, char *referenciaPersonaje);
+void cargarRecursosAsignados(int cantRecursos, int **recursosAsignados, char *referenciaRecurso, char *referenciaPersonaje);
+//void cargarRecursosAsignados(int **recursosAsignados, char *referenciaRecurso, char *referenciaPersonaje);
 
 void inicializarMarcados (bool *marcados, int cantidadPersonajes);
 
