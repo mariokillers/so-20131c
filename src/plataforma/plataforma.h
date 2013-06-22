@@ -16,14 +16,14 @@
 #include <commons/Connections/Client.h>
 #include <commons/Connections/Mensajes.h>
 #include <commons/Connections/EstructurasMensajes.h>
-/*
-typedef struct  b{
-	char ID[3]; //es un string, para usar strcpy
-	char IP[20];
-	int PORT;﻿﻿
-} Planificador;
-*/
 
+t_list* Gestores;
+t_log* Logger;
+int quantum_inicial;
+t_list* personajes_jugando;
+pthread_t orquestador;
+pthread_t quantum_monitor;
+pthread_mutex_t mutex_plataforma;
 
 typedef struct {
 	char ID[20];
