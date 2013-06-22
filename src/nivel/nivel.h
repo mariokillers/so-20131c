@@ -134,10 +134,6 @@ void matarPersonaje(int fdPersonaje);
 
 void *interbloqueo(void*);
 
-int buscarEnReferenciaRecurso(char idRecurso, char referenciaRecurso[]);
-
-int buscarEnReferenciaPersonaje(char idProceso, char referenciaProceso[]);
-
 char* tomarIP(char* direct);
 
 int tomarPuerto(char* direct);

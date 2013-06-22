@@ -14,14 +14,14 @@ void *interbloqueo(void* a){
 	while(1) {
 		if (!pthread_mutex_trylock(&deadlock_mutex)) { //esta terminando nivel
 			pthread_mutex_unlock(&deadlock_mutex);
-			free(aux);
+			/*free(aux);
 			free(recursosAsignados);
 			free(recursosSolicitados);
 			free(recursosTotales);
 			free(recursosDisponibles);
 			free(referenciaPersonaje);
 			free(referenciaRecursos);
-			free(marcados);
+			free(marcados);*/
 			return NULL;
 		}
 		log_info(loggerInterbloqueo, "Empieza a ejecutar el hilo interbloqueo");
@@ -77,8 +77,7 @@ void *interbloqueo(void* a){
 
 			log_info(loggerInterbloqueo, "Cargue las matrices");
 
-			pthread_mutex_unlock(&mutex);
-			//salgo de la region critica
+
 
 			marcarPersonajesSinRecursos(recursosAsignados,referenciaPersonaje,marcados,cantPersonajes, cantRecursos);
 			log_info(loggerInterbloqueo, "Marque personajes sin recursos");
@@ -96,6 +95,9 @@ void *interbloqueo(void* a){
 			free(referenciaRecursos);
 			free(marcados);
 
+			pthread_mutex_unlock(&mutex);
+			//salgo de la region critica
+
 			//usleep(recovery_time);
 			sleep(5);
 	}
@@ -107,7 +109,7 @@ int cantidadPersonajes(){
 	* @DESC: devuelve la cantidad de personajes conectados al nivel
 	*/
 	int i =0;
-	PersonajeEnNivel* personaje = listaPersonajes;
+	PersonajeEnNivel *personaje = listaPersonajes;
 
 	while(personaje != NULL){
 		i++;
@@ -184,7 +186,6 @@ int buscarEnReferenciaRecurso(char idRecurso, char referenciaRecurso[]) {
 		}
 	}
 	return i;
-
 }
 
 int buscarEnReferenciaPersonaje(char idPersonaje, char referenciaPersonaje[]) {
@@ -248,7 +249,7 @@ void cargarRecursosDisponibles(int recursosDisponibles[], char referenciaRecurso
 	}
 }
 
-void cargarRecursosSolicitados(int cantRecursos, int **recursosSolicitados, char *referenciaRecurso, char *referenciaPersonaje){
+void cargarRecursosSolicitados(int cantRecursos, int *recursosSolicitados, char *referenciaRecurso, char *referenciaPersonaje){
 	/*@NAME: cargarRecursosSolicitados
 	* @DESC: carga la matriz dependiendo de el recurso solicitado que tuvo cada personaje
 	*/
@@ -292,7 +293,7 @@ void cargarRecursosSolicitados(int cantRecursos, int **recursosSolicitados, char
 	}
 }
 
-void cargarRecursosAsignados(int cantRecursos,int **recursosAsignados, char *referenciaRecurso, char *referenciaPersonaje){
+void cargarRecursosAsignados(int cantRecursos,int *recursosAsignados, char *referenciaRecurso, char *referenciaPersonaje){
 	/*@NAME: cargarRecursosAsignados
 	* @DESC: carga la matriz dependiendo de los recursos que tiene asignado cada personaje
 	*/
@@ -305,8 +306,7 @@ void cargarRecursosAsignados(int cantRecursos,int **recursosAsignados, char *ref
 	while(personaje != NULL){
 		posPersonaje = buscarEnReferenciaPersonaje(personaje->id,referenciaPersonaje );
 		//recorro la lista de recursos de ese personaje
-		t_recursos* recurso;
-		recurso = personaje->recursos;
+		t_recursos *recurso = personaje->recursos;
 
 		while(recurso != NULL){
 			//busca la posicion en la matriz del char de ese recurso
@@ -321,7 +321,7 @@ void cargarRecursosAsignados(int cantRecursos,int **recursosAsignados, char *ref
 	}
 }
 
-void marcarPersonajesSinRecursos (int **recursosAsignados, char *referenciaPersonaje, bool *marcados, int cantPersonajes, int cantRecursos){
+void marcarPersonajesSinRecursos (int *recursosAsignados, char *referenciaPersonaje, bool *marcados, int cantPersonajes, int cantRecursos){
 	/*@NAME: marcarPersonajesSinRecursos
 	* @DESC: marca a los personajes que no tienen recursos asignados
 	*/
@@ -342,7 +342,7 @@ void marcarPersonajesSinRecursos (int **recursosAsignados, char *referenciaPerso
 
 }
 
-void marcarPersonajesConRecursos (int **recursosAsignados, int **recursosSolicitados, int *recursosDisponibles, bool *marcados, int cantPersonajes, int cantRecursos, char *referenciaPersonaje){
+void marcarPersonajesConRecursos (int *recursosAsignados, int *recursosSolicitados, int *recursosDisponibles, bool *marcados, int cantPersonajes, int cantRecursos, char *referenciaPersonaje){
 	/*@NAME: marcarPersonajesConRecursos
 	* @DESC: marca a los personajes que pueden ejecutar
 	*/
