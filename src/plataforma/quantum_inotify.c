@@ -63,8 +63,7 @@ void *monitorear_quantum(void *filename)
 				actualizar_quantum(quantum_config);
 			}
 			else if (event->mask & IN_DELETE_SELF) {
-				log_error(Logger, "Archivo de quantum eliminado! No se podra modificar mas en runtime.");
-				set_default_quantum();
+				log_warning(Logger, "Archivo de quantum eliminado! No se podra modificar mas en runtime.");
 				break;
 			}
 			i += QUANTUM_IN_EVENT_SIZE + event->len; // Pasar al siguiente mensaje
