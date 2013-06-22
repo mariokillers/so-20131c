@@ -312,7 +312,7 @@ void marcarPersonajesSinRecursos (int *recursosAsignados, char *referenciaPerson
 	for(i=0;i<cantPersonajes;i++){
 		int flag=0;
 		for(j=0;j<cantRecursos;j++){
-			if(recursosAsignados[i*cantRecursos +j]!= 0){
+			if(recursosAsignados[i*cantRecursos +j]== 0){
 				flag=1;
 			}
 		}
@@ -375,6 +375,7 @@ void comprobarDeadlock (bool marcados[],int cantPersonajes, char referenciaPerso
 	//recorremos el vector de marcados
 	for(i=0;i < cantPersonajes;i++){
 		if(marcados[i]==false){
+			log_info(loggerInterbloqueo, "Hay personaje en deadlock");
 			//Si el personaje no esta marcado, esta comprometido en un deadlock.
 			personajesInterbloqueados[j]=referenciaPersonaje[i];
 			log_info(loggerInterbloqueo, string_from_format("El personajes: %c esta en deadlock", referenciaPersonaje[i]));
