@@ -294,21 +294,6 @@ int main(int argc, char *argv[]) {
 							"El personaje: %c ha sido elegido como victima del interbloqueo",
 							idVictima));
 
-			//entro en la region critica
-			pthread_mutex_lock(&mutex);
-
-			PersonajeEnNivel* personaje = buscarPersonaje_byid(idVictima);
-
-			pthread_mutex_unlock(&mutex);
-
-			//salgo de la region critica
-			log_info(logger,
-								string_from_format(
-										"El personaje: %c ha sido matado y ha liberado sus recursos",
-										personaje->id));
-
-			matarPersonaje(personaje->fd);
-
 		}
 		break;
 
