@@ -264,8 +264,6 @@ int main(int argc, char *argv[]) {
 		case TERMINE_NIVEL: {
 			log_info(logger, "Recibi TERMINE_NIVEL");
 
-			matarPersonaje(mensaje->from);
-
 			//entro en la region critica
 			pthread_mutex_lock(&mutex);
 
@@ -273,6 +271,8 @@ int main(int argc, char *argv[]) {
 
 			pthread_mutex_unlock(&mutex);
 			//salgo de la region critica
+
+			matarPersonaje(mensaje->from);
 
 			log_info(logger,
 							string_from_format(

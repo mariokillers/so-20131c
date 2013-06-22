@@ -8,7 +8,7 @@ void *interbloqueo(void* a){
 	* @DESC: hilo que se encarga de detectar interbloqueo
 	*/
 	char *referenciaPersonaje, *referenciaRecursos;
-	int *recursosTotales, *recursosDisponibles, *aux, **recursosAsignados, **recursosSolicitados;
+	int *recursosTotales, *recursosDisponibles, *aux, *recursosAsignados, *recursosSolicitados;
 	bool *marcados;
 
 	while(1) {
