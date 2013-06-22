@@ -100,8 +100,6 @@ void MoverPersonaje(ITEM_NIVEL* ListaItems, char id, int x, int y);
 
 Posicion obtenerPosRecurso(char recurso);
 
-t_recursos* liberarRecursos(PersonajeEnNivel* personaje );
-
 int validarPosYRecursos(PersonajeEnNivel* personaje, char idRecurso);
 
 PersonajeEnNivel* cargarPersonajeEnNivel(Personaje* miPersonaje);
@@ -124,7 +122,7 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador);
 
 void agregarRecursosAListaItems(char idRecurso, int cant);
 
-void reasignarRecursos(Recursos* listaRecursos);
+void reasignarRecursosAListaItems(t_recursos *listaRecursos);
 
 void quitarSolicitudesDeRecurso(PersonajeEnNivel* personaje, char idRecurso);
 

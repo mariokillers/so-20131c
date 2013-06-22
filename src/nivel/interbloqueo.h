@@ -32,7 +32,7 @@ void inicializarReferenciaPersonaje(int cantidadPersonajes, char *referenciaPers
 
 void comprobarDeadlock (bool *marcados,int cantPersonajes, char *referenciaPersonaje);
 
-void marcarPersonajesConRecursos (int **recursosAsignados, int **recursosSolicitados, int *recursosDisponibles, bool *marcados, int cantPersonajes, int cantRecursos);
+void marcarPersonajesConRecursos (int **recursosAsignados, int **recursosSolicitados, int *recursosDisponibles, bool *marcados, int cantPersonajes, int cantRecursos, char *referenciaPersonaje);
 
 void marcarPersonajesSinRecursos (int **recursosAsignados, char *referenciaPersonaje, bool *marcados, int cantPersonajes, int cantRecursos);
 
