@@ -31,7 +31,7 @@ int main (){
 	quantum_inicial=3;
 	pthread_create(&orquestador, NULL, orq, NULL);
 	log_info(Logger, "Crea Thread Orquestador.");
-	pthread_create(&quantum_monitor, NULL, monitorear_quantum, "../conf/quantum.conf");
+	pthread_create(&quantum_monitor, NULL, monitorear_quantum, "../conf/quantum.conf"); // TODO: Pasar por parametro
 
 	pthread_join(orquestador, NULL);
 

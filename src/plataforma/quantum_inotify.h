@@ -8,9 +8,12 @@
 #define QUANTUM_DEFAULT 3
 #define QUANTUM_CONF_KEY "quantum"
 
+t_config *quantum_config;
+char *quantum_config_filename;
+
 void *monitorear_quantum(void *filename);
 bool plataforma_activo(pthread_mutex_t *mutex);
 void set_default_quantum(void);
-void actualizar_quantum(t_config *quantum_config);
+void actualizar_quantum();
 
 #endif
