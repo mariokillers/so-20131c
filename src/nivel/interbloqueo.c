@@ -309,11 +309,11 @@ void marcarPersonajesSinRecursos (int *recursosAsignados, char *referenciaPerson
 	for(i=0;i<cantPersonajes;i++){
 		int flag=0;
 		for(j=0;j<cantRecursos;j++){
-			if(recursosAsignados[i*cantRecursos +j]== 0){
+			if(recursosAsignados[i*cantRecursos +j]!= 0){
 				flag=1;
 			}
 		}
-		if (flag==1){
+		if (flag==0){
 			marcados[i]=true;
 			log_info(loggerInterbloqueo, string_from_format("El personajes: %c ha sido marcado sin recursos", referenciaPersonaje[i]));
 		}
@@ -335,7 +335,7 @@ void marcarPersonajesConRecursos (int *recursosAsignados, int *recursosSolicitad
 			//recorremos recursos del personaje actual
 			for(j=0;j<cantRecursos;j++){
 				//verifico que haya recursos susficientes para satisfacer el pedido
-				if(marcados[i]==false && recursosSolicitados[i*cantRecursos +j]<=recursosDisponibles[j]){
+				if(marcados[i]==false && recursosSolicitados[i*cantRecursos +j]>recursosDisponibles[j]){
 					asignacionImposible=1;
 				}
 			}
