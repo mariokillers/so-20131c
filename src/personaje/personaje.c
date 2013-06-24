@@ -155,11 +155,11 @@ int main(int argc, char *argv[]) {
 
 				switch (mensaje->type) {
 				case MOVIMIENTO_PERMITIDO:
-					log_info(logger, "llego mensaje MOVIMIENTO_PERMITIDO");
+					log_trace(logger, "llego mensaje MOVIMIENTO_PERMITIDO");
 					//si tengo la poscion del proximo recurso se mueve
 					if(flag == 0){
 						if (posicionProximoRecurso != NULL ) {
-							log_info(logger,
+							log_trace(logger,
 									"tengo posicion de recurso que necesito");
 
 							//realizo el movimiento y guardo nueva posicion del personaje
@@ -171,7 +171,7 @@ int main(int argc, char *argv[]) {
 									posicionActual->POS_Y;
 
 							//loggeo de la nueva posicion del personaje
-							log_info(logger,
+							log_trace(logger,
 									string_from_format(
 											"personaje %s nueva posicion: (%d,%d)",
 											personaje->nombre,
@@ -181,7 +181,7 @@ int main(int argc, char *argv[]) {
 							//analiza si llego a la posicion del proximo recurso (adentro manda los mensajes)
 							analizarRecurso();
 						} else {
-							log_info(logger, "no tengo posicion de recurso");
+							log_trace(logger, "no tengo posicion de recurso");
 							//solicitar posicion del proximo recurso y loggea solicitud
 							proxRecurso = proximoRecurso(
 									personaje->niveles);
@@ -189,7 +189,7 @@ int main(int argc, char *argv[]) {
 							mandarMensaje(nivelCCB.sockfd, REQUEST_POS_RECURSO,
 									sizeof(proxRecurso), (char *) &proxRecurso);
 
-							log_info(logger,
+							log_trace(logger,
 									string_from_format(
 											"personaje %s solicita posicion del recurso %c a %s",
 											personaje->nombre,
@@ -230,7 +230,7 @@ int main(int argc, char *argv[]) {
 				switch (mensaje->type) {
 				case POSICION_RECURSO:
 					posicionProximoRecurso = (Posicion*) mensaje->data;
-					log_info(logger,
+					log_trace(logger,
 							string_from_format(
 									"recibi la posicion del recurso %c: (%d,%d)",
 									proxRecurso, posicionProximoRecurso->POS_X,
@@ -242,7 +242,7 @@ int main(int argc, char *argv[]) {
 					((Posicion*) (personaje->posActual))->POS_Y =
 							posicionActual->POS_Y;
 
-					log_info(logger,
+					log_trace(logger,
 							string_from_format(
 									"personaje %s nueva posicion: (%d,%d)",
 									personaje->nombre,
@@ -259,13 +259,13 @@ int main(int argc, char *argv[]) {
 			if (mensajes(colaDeMensajes, nivelCCB)) {
 				mensaje = queue_pop(colaDeMensajes);
 
-				log_info(logger,
+				log_trace(logger,
 						string_from_format("Recibi mensaje: %d",
 								(int) (mensaje->type)));
 
 				respuestaConfirmacionRecurso = *(bool*) mensaje->data;
 
-				log_info(logger,
+				log_trace(logger,
 						string_from_format("Recibi respuesta: %d",
 								(respuestaConfirmacionRecurso)));
 
@@ -410,7 +410,7 @@ Posicion *realizarMovimiento() {
 	mandarMensaje(nivelCCB.sockfd, REQUEST_MOVIMIENTO, sizeof(Posicion),
 			nuevaPos);
 
-	log_info(logger,
+	log_trace(logger,
 			string_from_format(
 					"personaje %s solicita movimiento a %s a la posicion (%d, %d)",
 					personaje->nombre, nombreNivelActual, nuevaPos->POS_X,
@@ -424,13 +424,13 @@ void analizarRecurso() {
 		int res;
 		res = mandarMensaje(nivelCCB.sockfd, REQUEST_RECURSO,
 				sizeof(proxRecurso), &proxRecurso);
-		log_info(logger,
+		log_trace(logger,
 				string_from_format(
 						"Pedido enviado recurso %c con resultado %d, al filedesc %d",
 						proxRecurso, res, nivelCCB.sockfd));
 		miEstado = WAIT_REC;
 	} else {
-		log_info(logger, "no llegue al recurso");
+		log_trace(logger, "no llegue al recurso");
 
 		mandarMensaje(planificadorCCB.sockfd, TERMINE_TURNO, 0, NULL );
 
@@ -515,7 +515,7 @@ void morir() {
 	//desconecta del nivel y del planificador
 	close(nivelCCB.sockfd);
 	close(planificadorCCB.sockfd);
-	log_info(logger,
+	log_debug(logger,
 			string_from_format(
 					"personaje %s se desconecto del %s y de su planificador",
 					personaje->nombre, nombreNivelActual));
