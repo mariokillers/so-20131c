@@ -70,8 +70,8 @@ int mensajes(t_queue* mensajesQueue, CCB myCOM){
 						0);
 				if (s == 0)
 				{
-					printf("Accepted connection on descriptor %d "
-							"(host=%s, port=%s)\n", infd, hbuf, sbuf);
+					//printf("Accepted connection on descriptor %d "
+					//		"(host=%s, port=%s)\n", infd, hbuf, sbuf);
 				}
 				/*
 				//CREO LA NUEVA INSTANCIA CONNECTION TODO LIBERAR ESTRUCTURA MENSAJE
