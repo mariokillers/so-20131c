@@ -434,7 +434,7 @@ void analizarRecurso() {
 
 		mandarMensaje(planificadorCCB.sockfd, TERMINE_TURNO, 0, NULL );
 
-		log_info(logger,
+		log_trace(logger,
 				string_from_format("personaje %s termino turno en %s",
 						personaje->nombre, nombreNivelActual));
 
@@ -802,7 +802,7 @@ void llegoRecurso(){
 					personaje->nombre,
 					proxRecurso, nombreNivelActual));
 
-	log_info(logger,
+	log_trace(logger,
 			string_from_format(
 					"personaje %s termino turno en %s",
 					personaje->nombre,
