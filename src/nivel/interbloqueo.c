@@ -50,8 +50,8 @@ void *interbloqueo(void* a){
 			recursosDisponibles = malloc(cantRecursos * sizeof(int));
 
 			//matrices para interbloqueo
-			recursosAsignados = malloc(cantPersonajes * cantRecursos * sizeof(int));
-			recursosSolicitados = malloc(cantPersonajes * cantRecursos * sizeof(int));
+			recursosAsignados = calloc(cantPersonajes * cantRecursos, sizeof(int));
+			recursosSolicitados = calloc(cantPersonajes * cantRecursos, sizeof(int));
 
 			aux = malloc(cantRecursos * sizeof(int));
 
@@ -78,8 +78,7 @@ void *interbloqueo(void* a){
 			pthread_mutex_unlock(&mutex);
 			//salgo de la region critica
 
-			//usleep(recovery_time);
-			sleep(5);
+			usleep(recovery_time);
 			log_info(loggerInterbloqueo, "----------------------------------------------");
 	}
 	return NULL;
