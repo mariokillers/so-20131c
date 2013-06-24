@@ -106,7 +106,7 @@ void* Planif(void* nivel){
 			miMensaje = queue_pop(misMensajes);
 			switch(miMensaje->type){
 			case HANDSHAKE:
-				//CONEXION DE P	ERSONAJE
+				//CONEXION DE PERSONAJE
 				log_info(Logger, "Recibe mensaje de conexion de Proceso Personaje.");
 				if(((char*)miMensaje->data)[0]=='P'){
 					//Inicializo la instancia de personaje correspondiente
@@ -290,8 +290,10 @@ void* orq (void* a){
 				Victima = findUltimoEnLlegar (miGestor->personajes_en_nivel, PersonajesInterbloqueados);
 				log_info(Logger, "Envia mensaje indicando que murio el personaje");
 				mandarMensaje(Victima->FD,MORISTE_PERSONAJE,0,NULL);
-				log_info(Logger, string_from_format("Mata al personaje (NOMBRE VICTIMA: %s)", Victima->ID[1]));
-				mandarMensaje(miMensaje->from, NOMBRE_VICTIMA ,1,&(Victima->ID[1]));
+				log_info(Logger, string_from_format("Mata al personaje (NOMBRE VICTIMA: %s)", Victima->ID));
+				mandarMensaje(miMensaje->from, NOMBRE_VICTIMA ,1,&(Victima->ID));
+				removePersonaje_byid (miGestor->queue_listos->elements, Victima);
+				
 			}
 			break;
 			case GANE:
@@ -382,9 +384,7 @@ Personaje* removePersonaje_byfd (t_list* personajes_en_nivel, int fd){
 
 
 Personaje* removePersonaje_byid (t_list* personajes_en_nivel, Personaje * miPersonaje){
-	log_info(Logger, string_from_format ("recibi id %s", miPersonaje->ID));
 	bool _eselPersonaje (Personaje* comparador){
-		log_info(Logger, string_from_format ("recibi fd %s", comparador->ID));
 		return(string_equals_ignore_case(comparador->ID, miPersonaje->ID));
 	}
 	return (list_remove_by_condition(personajes_en_nivel,(void*)_eselPersonaje));
@@ -430,7 +430,7 @@ Personaje* findUltimoEnLlegar (t_list* ListaDePersonajes, char PersonajesInterbl
 		}
 		return false;
 	}
-	return (list_find(ListaDePersonajes,(void*)_esElUltimoEnEncontrarse));
+	return (list_remove_by_condition(ListaDePersonajes,(void*)_esElUltimoEnEncontrarse));
 
 }
 

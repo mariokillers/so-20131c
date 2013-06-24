@@ -1,0 +1,1478 @@
+[INFO] 23:23:12:255 Interbloqueo/(3495:3496): Empieza a ejecutar el hilo interbloqueo
+[INFO] 23:23:12:255 Interbloqueo/(3495:3496): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 23:23:12:255 Interbloqueo/(3495:3496): Cargue las matrices
+[INFO] 23:23:12:255 Interbloqueo/(3495:3496): Comprobe deadlock
+[INFO] 23:23:17:256 Interbloqueo/(3495:3496): ----------------------------------------------
+[INFO] 23:23:17:256 Interbloqueo/(3495:3496): Empieza a ejecutar el hilo interbloqueo
+[INFO] 23:23:17:256 Interbloqueo/(3495:3496): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 23:23:17:256 Interbloqueo/(3495:3496): Cargue las matrices
+[INFO] 23:23:17:256 Interbloqueo/(3495:3496): Hay personaje en deadlock
+[INFO] 23:23:17:256 Interbloqueo/(3495:3496): El personajes: # esta en deadlock
+[INFO] 23:23:17:256 Interbloqueo/(3495:3496): Hay personaje en deadlock
+[INFO] 23:23:17:256 Interbloqueo/(3495:3496): El personajes: @ esta en deadlock
+[INFO] 23:23:17:257 Interbloqueo/(3495:3496): Comprobe deadlock
+[INFO] 23:23:22:258 Interbloqueo/(3495:3496): ----------------------------------------------
+[INFO] 23:23:22:259 Interbloqueo/(3495:3496): Empieza a ejecutar el hilo interbloqueo
+[INFO] 23:23:22:259 Interbloqueo/(3495:3496): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 23:23:22:259 Interbloqueo/(3495:3496): Cargue las matrices
+[INFO] 23:23:22:259 Interbloqueo/(3495:3496): Hay personaje en deadlock
+[INFO] 23:23:22:259 Interbloqueo/(3495:3496): El personajes: # esta en deadlock
+[INFO] 23:23:22:259 Interbloqueo/(3495:3496): Hay personaje en deadlock
+[INFO] 23:23:22:259 Interbloqueo/(3495:3496): El personajes: @ esta en deadlock
+[INFO] 23:23:22:259 Interbloqueo/(3495:3496): Comprobe deadlock
+[INFO] 23:23:27:259 Interbloqueo/(3495:3496): ----------------------------------------------
+[INFO] 23:23:27:260 Interbloqueo/(3495:3496): Empieza a ejecutar el hilo interbloqueo
+[INFO] 23:23:27:260 Interbloqueo/(3495:3496): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 23:23:27:260 Interbloqueo/(3495:3496): Cargue las matrices
+[INFO] 23:23:27:260 Interbloqueo/(3495:3496): Hay personaje en deadlock
+[INFO] 23:23:27:260 Interbloqueo/(3495:3496): El personajes: # esta en deadlock
+[INFO] 23:23:27:260 Interbloqueo/(3495:3496): Hay personaje en deadlock
+[INFO] 23:23:27:260 Interbloqueo/(3495:3496): El personajes: @ esta en deadlock
+[INFO] 00:54:35:30 Interbloqueo/(3653:3654): Empieza a ejecutar el hilo interbloqueo
+[INFO] 00:54:35:30 Interbloqueo/(3653:3654): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 00:54:35:30 Interbloqueo/(3653:3654): Cargue las matrices
+[INFO] 00:54:35:30 Interbloqueo/(3653:3654): Comprobe deadlock
+[INFO] 00:54:40:31 Interbloqueo/(3653:3654): ----------------------------------------------
+[INFO] 00:54:40:32 Interbloqueo/(3653:3654): Empieza a ejecutar el hilo interbloqueo
+[INFO] 00:54:40:32 Interbloqueo/(3653:3654): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 00:54:40:32 Interbloqueo/(3653:3654): Cargue las matrices
+[INFO] 00:54:40:73 Interbloqueo/(3653:3654): Comprobe deadlock
+[INFO] 00:54:45:75 Interbloqueo/(3653:3654): ----------------------------------------------
+[INFO] 00:54:45:75 Interbloqueo/(3653:3654): Empieza a ejecutar el hilo interbloqueo
+[INFO] 00:54:45:76 Interbloqueo/(3653:3654): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 00:54:45:76 Interbloqueo/(3653:3654): Cargue las matrices
+[INFO] 00:54:45:76 Interbloqueo/(3653:3654): Comprobe deadlock
+[INFO] 00:54:50:77 Interbloqueo/(3653:3654): ----------------------------------------------
+[INFO] 00:54:50:77 Interbloqueo/(3653:3654): Empieza a ejecutar el hilo interbloqueo
+[INFO] 00:54:50:77 Interbloqueo/(3653:3654): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 00:54:50:77 Interbloqueo/(3653:3654): Cargue las matrices
+[INFO] 00:54:50:77 Interbloqueo/(3653:3654): Hay personaje en deadlock
+[INFO] 00:54:50:77 Interbloqueo/(3653:3654): El personajes: # esta en deadlock
+[INFO] 00:54:50:77 Interbloqueo/(3653:3654): Hay personaje en deadlock
+[INFO] 00:54:50:77 Interbloqueo/(3653:3654): El personajes: @ esta en deadlock
+[INFO] 00:54:50:77 Interbloqueo/(3653:3654): Comprobe deadlock
+[INFO] 00:54:55:78 Interbloqueo/(3653:3654): ----------------------------------------------
+[INFO] 00:54:55:78 Interbloqueo/(3653:3654): Empieza a ejecutar el hilo interbloqueo
+[INFO] 00:54:55:78 Interbloqueo/(3653:3654): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 00:54:55:78 Interbloqueo/(3653:3654): Cargue las matrices
+[INFO] 00:54:55:78 Interbloqueo/(3653:3654): Hay personaje en deadlock
+[INFO] 00:54:55:78 Interbloqueo/(3653:3654): El personajes: # esta en deadlock
+[INFO] 00:54:55:78 Interbloqueo/(3653:3654): Hay personaje en deadlock
+[INFO] 00:54:55:78 Interbloqueo/(3653:3654): El personajes: @ esta en deadlock
+[INFO] 00:54:55:78 Interbloqueo/(3653:3654): Comprobe deadlock
+[INFO] 00:55:00:79 Interbloqueo/(3653:3654): ----------------------------------------------
+[INFO] 00:55:00:79 Interbloqueo/(3653:3654): Empieza a ejecutar el hilo interbloqueo
+[INFO] 00:55:00:79 Interbloqueo/(3653:3654): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 00:55:00:79 Interbloqueo/(3653:3654): Cargue las matrices
+[INFO] 00:55:00:79 Interbloqueo/(3653:3654): Hay personaje en deadlock
+[INFO] 00:55:00:79 Interbloqueo/(3653:3654): El personajes: # esta en deadlock
+[INFO] 00:55:00:79 Interbloqueo/(3653:3654): Hay personaje en deadlock
+[INFO] 00:55:00:80 Interbloqueo/(3653:3654): El personajes: @ esta en deadlock
+[INFO] 00:57:22:443 Interbloqueo/(3677:3678): Empieza a ejecutar el hilo interbloqueo
+[INFO] 00:57:22:444 Interbloqueo/(3677:3678): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 00:57:22:444 Interbloqueo/(3677:3678): Cargue las matrices
+[INFO] 00:57:22:444 Interbloqueo/(3677:3678): Comprobe deadlock
+[INFO] 00:57:27:444 Interbloqueo/(3677:3678): ----------------------------------------------
+[INFO] 00:57:27:444 Interbloqueo/(3677:3678): Empieza a ejecutar el hilo interbloqueo
+[INFO] 00:57:27:444 Interbloqueo/(3677:3678): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 00:57:27:445 Interbloqueo/(3677:3678): Cargue las matrices
+[INFO] 00:57:27:445 Interbloqueo/(3677:3678): Comprobe deadlock
+[INFO] 00:57:32:446 Interbloqueo/(3677:3678): ----------------------------------------------
+[INFO] 00:57:32:447 Interbloqueo/(3677:3678): Empieza a ejecutar el hilo interbloqueo
+[INFO] 00:57:32:447 Interbloqueo/(3677:3678): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 00:57:32:447 Interbloqueo/(3677:3678): Cargue las matrices
+[INFO] 00:57:32:447 Interbloqueo/(3677:3678): Comprobe deadlock
+[INFO] 00:57:37:448 Interbloqueo/(3677:3678): ----------------------------------------------
+[INFO] 00:57:37:448 Interbloqueo/(3677:3678): Empieza a ejecutar el hilo interbloqueo
+[INFO] 00:57:37:449 Interbloqueo/(3677:3678): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 00:57:37:449 Interbloqueo/(3677:3678): Cargue las matrices
+[INFO] 00:57:37:449 Interbloqueo/(3677:3678): Comprobe deadlock
+[INFO] 00:57:42:449 Interbloqueo/(3677:3678): ----------------------------------------------
+[INFO] 00:57:42:449 Interbloqueo/(3677:3678): Empieza a ejecutar el hilo interbloqueo
+[INFO] 00:57:42:449 Interbloqueo/(3677:3678): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 00:57:42:449 Interbloqueo/(3677:3678): Cargue las matrices
+[INFO] 00:57:42:450 Interbloqueo/(3677:3678): Comprobe deadlock
+[INFO] 00:57:47:451 Interbloqueo/(3677:3678): ----------------------------------------------
+[INFO] 00:57:47:451 Interbloqueo/(3677:3678): Empieza a ejecutar el hilo interbloqueo
+[INFO] 00:57:47:452 Interbloqueo/(3677:3678): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 00:57:47:453 Interbloqueo/(3677:3678): Cargue las matrices
+[INFO] 00:57:47:453 Interbloqueo/(3677:3678): Comprobe deadlock
+[INFO] 00:57:52:453 Interbloqueo/(3677:3678): ----------------------------------------------
+[INFO] 00:57:52:453 Interbloqueo/(3677:3678): Empieza a ejecutar el hilo interbloqueo
+[INFO] 00:57:52:454 Interbloqueo/(3677:3678): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 00:57:52:454 Interbloqueo/(3677:3678): Cargue las matrices
+[INFO] 00:57:52:454 Interbloqueo/(3677:3678): Hay personaje en deadlock
+[INFO] 00:57:52:454 Interbloqueo/(3677:3678): El personajes: # esta en deadlock
+[INFO] 00:57:52:454 Interbloqueo/(3677:3678): Hay personaje en deadlock
+[INFO] 00:57:52:454 Interbloqueo/(3677:3678): El personajes: @ esta en deadlock
+[INFO] 00:57:52:455 Interbloqueo/(3677:3678): Comprobe deadlock
+[INFO] 00:57:57:456 Interbloqueo/(3677:3678): ----------------------------------------------
+[INFO] 00:57:57:456 Interbloqueo/(3677:3678): Empieza a ejecutar el hilo interbloqueo
+[INFO] 00:57:57:456 Interbloqueo/(3677:3678): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 00:57:57:456 Interbloqueo/(3677:3678): Cargue las matrices
+[INFO] 00:57:57:456 Interbloqueo/(3677:3678): Hay personaje en deadlock
+[INFO] 00:57:57:456 Interbloqueo/(3677:3678): El personajes: # esta en deadlock
+[INFO] 00:57:57:456 Interbloqueo/(3677:3678): Hay personaje en deadlock
+[INFO] 00:57:57:456 Interbloqueo/(3677:3678): El personajes: @ esta en deadlock
+[INFO] 00:57:57:457 Interbloqueo/(3677:3678): Comprobe deadlock
+[INFO] 00:58:02:458 Interbloqueo/(3677:3678): ----------------------------------------------
+[INFO] 00:58:02:458 Interbloqueo/(3677:3678): Empieza a ejecutar el hilo interbloqueo
+[INFO] 00:58:02:458 Interbloqueo/(3677:3678): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 00:58:02:458 Interbloqueo/(3677:3678): Cargue las matrices
+[INFO] 00:58:02:459 Interbloqueo/(3677:3678): Hay personaje en deadlock
+[INFO] 00:58:02:459 Interbloqueo/(3677:3678): El personajes: # esta en deadlock
+[INFO] 00:58:02:459 Interbloqueo/(3677:3678): Hay personaje en deadlock
+[INFO] 00:58:02:459 Interbloqueo/(3677:3678): El personajes: @ esta en deadlock
+[INFO] 01:05:24:968 Interbloqueo/(3749:3750): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:05:24:968 Interbloqueo/(3749:3750): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 01:05:24:968 Interbloqueo/(3749:3750): Cargue las matrices
+[INFO] 01:05:24:968 Interbloqueo/(3749:3750): Comprobe deadlock
+[INFO] 01:05:29:968 Interbloqueo/(3749:3750): ----------------------------------------------
+[INFO] 01:05:29:968 Interbloqueo/(3749:3750): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:05:29:969 Interbloqueo/(3749:3750): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 01:05:29:969 Interbloqueo/(3749:3750): Cargue las matrices
+[INFO] 01:05:29:969 Interbloqueo/(3749:3750): Comprobe deadlock
+[INFO] 01:05:34:971 Interbloqueo/(3749:3750): ----------------------------------------------
+[INFO] 01:05:34:971 Interbloqueo/(3749:3750): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:05:34:971 Interbloqueo/(3749:3750): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:05:34:971 Interbloqueo/(3749:3750): Cargue las matrices
+[INFO] 01:05:34:971 Interbloqueo/(3749:3750): Hay personaje en deadlock
+[INFO] 01:05:34:971 Interbloqueo/(3749:3750): El personajes: # esta en deadlock
+[INFO] 01:05:34:971 Interbloqueo/(3749:3750): Hay personaje en deadlock
+[INFO] 01:05:34:971 Interbloqueo/(3749:3750): El personajes: @ esta en deadlock
+[INFO] 01:05:34:972 Interbloqueo/(3749:3750): Comprobe deadlock
+[INFO] 01:05:39:973 Interbloqueo/(3749:3750): ----------------------------------------------
+[INFO] 01:05:39:973 Interbloqueo/(3749:3750): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:05:39:973 Interbloqueo/(3749:3750): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:05:39:973 Interbloqueo/(3749:3750): Cargue las matrices
+[INFO] 01:05:39:973 Interbloqueo/(3749:3750): Hay personaje en deadlock
+[INFO] 01:05:39:973 Interbloqueo/(3749:3750): El personajes: # esta en deadlock
+[INFO] 01:05:39:973 Interbloqueo/(3749:3750): Hay personaje en deadlock
+[INFO] 01:05:39:973 Interbloqueo/(3749:3750): El personajes: @ esta en deadlock
+[INFO] 01:05:39:974 Interbloqueo/(3749:3750): Comprobe deadlock
+[INFO] 01:05:44:976 Interbloqueo/(3749:3750): ----------------------------------------------
+[INFO] 01:05:44:976 Interbloqueo/(3749:3750): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:05:44:976 Interbloqueo/(3749:3750): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:05:44:976 Interbloqueo/(3749:3750): Cargue las matrices
+[INFO] 01:05:44:976 Interbloqueo/(3749:3750): Hay personaje en deadlock
+[INFO] 01:05:44:977 Interbloqueo/(3749:3750): El personajes: # esta en deadlock
+[INFO] 01:05:44:977 Interbloqueo/(3749:3750): Hay personaje en deadlock
+[INFO] 01:05:44:977 Interbloqueo/(3749:3750): El personajes: @ esta en deadlock
+[INFO] 01:07:58:516 Interbloqueo/(3776:3777): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:07:58:519 Interbloqueo/(3776:3777): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 01:07:58:519 Interbloqueo/(3776:3777): Cargue las matrices
+[INFO] 01:07:58:519 Interbloqueo/(3776:3777): Comprobe deadlock
+[INFO] 01:08:03:519 Interbloqueo/(3776:3777): ----------------------------------------------
+[INFO] 01:08:03:519 Interbloqueo/(3776:3777): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:08:03:520 Interbloqueo/(3776:3777): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 01:08:03:521 Interbloqueo/(3776:3777): Cargue las matrices
+[INFO] 01:08:03:521 Interbloqueo/(3776:3777): Comprobe deadlock
+[INFO] 01:08:08:521 Interbloqueo/(3776:3777): ----------------------------------------------
+[INFO] 01:08:08:521 Interbloqueo/(3776:3777): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:08:08:521 Interbloqueo/(3776:3777): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:08:08:521 Interbloqueo/(3776:3777): Cargue las matrices
+[INFO] 01:08:08:521 Interbloqueo/(3776:3777): Hay personaje en deadlock
+[INFO] 01:08:08:522 Interbloqueo/(3776:3777): El personajes: # esta en deadlock
+[INFO] 01:08:08:522 Interbloqueo/(3776:3777): Hay personaje en deadlock
+[INFO] 01:08:08:522 Interbloqueo/(3776:3777): El personajes: @ esta en deadlock
+[INFO] 01:08:08:522 Interbloqueo/(3776:3777): Comprobe deadlock
+[INFO] 01:08:13:522 Interbloqueo/(3776:3777): ----------------------------------------------
+[INFO] 01:08:13:522 Interbloqueo/(3776:3777): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:08:13:522 Interbloqueo/(3776:3777): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:08:13:522 Interbloqueo/(3776:3777): Cargue las matrices
+[INFO] 01:08:13:523 Interbloqueo/(3776:3777): Hay personaje en deadlock
+[INFO] 01:08:13:523 Interbloqueo/(3776:3777): El personajes: # esta en deadlock
+[INFO] 01:08:13:523 Interbloqueo/(3776:3777): Hay personaje en deadlock
+[INFO] 01:08:13:523 Interbloqueo/(3776:3777): El personajes: @ esta en deadlock
+[INFO] 01:08:13:523 Interbloqueo/(3776:3777): Comprobe deadlock
+[INFO] 01:08:18:524 Interbloqueo/(3776:3777): ----------------------------------------------
+[INFO] 01:08:18:524 Interbloqueo/(3776:3777): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:08:18:524 Interbloqueo/(3776:3777): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:08:18:524 Interbloqueo/(3776:3777): Cargue las matrices
+[INFO] 01:08:18:525 Interbloqueo/(3776:3777): Hay personaje en deadlock
+[INFO] 01:08:18:525 Interbloqueo/(3776:3777): El personajes: # esta en deadlock
+[INFO] 01:08:18:525 Interbloqueo/(3776:3777): Hay personaje en deadlock
+[INFO] 01:08:18:525 Interbloqueo/(3776:3777): El personajes: @ esta en deadlock
+[INFO] 01:09:04:232 Interbloqueo/(3873:3874): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:09:04:232 Interbloqueo/(3873:3874): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 01:09:04:232 Interbloqueo/(3873:3874): Cargue las matrices
+[INFO] 01:09:04:232 Interbloqueo/(3873:3874): Comprobe deadlock
+[INFO] 01:09:09:234 Interbloqueo/(3873:3874): ----------------------------------------------
+[INFO] 01:09:09:234 Interbloqueo/(3873:3874): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:09:09:234 Interbloqueo/(3873:3874): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 01:09:09:235 Interbloqueo/(3873:3874): Cargue las matrices
+[INFO] 01:09:09:235 Interbloqueo/(3873:3874): Comprobe deadlock
+[INFO] 01:09:14:236 Interbloqueo/(3873:3874): ----------------------------------------------
+[INFO] 01:09:14:236 Interbloqueo/(3873:3874): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:09:14:236 Interbloqueo/(3873:3874): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:09:14:236 Interbloqueo/(3873:3874): Cargue las matrices
+[INFO] 01:09:14:236 Interbloqueo/(3873:3874): Hay personaje en deadlock
+[INFO] 01:09:14:236 Interbloqueo/(3873:3874): El personajes: # esta en deadlock
+[INFO] 01:09:14:236 Interbloqueo/(3873:3874): Hay personaje en deadlock
+[INFO] 01:09:14:236 Interbloqueo/(3873:3874): El personajes: @ esta en deadlock
+[INFO] 01:09:14:236 Interbloqueo/(3873:3874): Comprobe deadlock
+[INFO] 01:09:19:237 Interbloqueo/(3873:3874): ----------------------------------------------
+[INFO] 01:09:19:237 Interbloqueo/(3873:3874): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:09:19:237 Interbloqueo/(3873:3874): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:09:19:237 Interbloqueo/(3873:3874): Cargue las matrices
+[INFO] 01:09:19:237 Interbloqueo/(3873:3874): Hay personaje en deadlock
+[INFO] 01:09:19:237 Interbloqueo/(3873:3874): El personajes: # esta en deadlock
+[INFO] 01:09:19:238 Interbloqueo/(3873:3874): Hay personaje en deadlock
+[INFO] 01:09:19:238 Interbloqueo/(3873:3874): El personajes: @ esta en deadlock
+[INFO] 01:09:19:238 Interbloqueo/(3873:3874): Comprobe deadlock
+[INFO] 01:09:24:238 Interbloqueo/(3873:3874): ----------------------------------------------
+[INFO] 01:09:24:238 Interbloqueo/(3873:3874): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:09:24:238 Interbloqueo/(3873:3874): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:09:24:238 Interbloqueo/(3873:3874): Cargue las matrices
+[INFO] 01:09:24:239 Interbloqueo/(3873:3874): Hay personaje en deadlock
+[INFO] 01:09:24:239 Interbloqueo/(3873:3874): El personajes: # esta en deadlock
+[INFO] 01:09:24:239 Interbloqueo/(3873:3874): Hay personaje en deadlock
+[INFO] 01:09:24:239 Interbloqueo/(3873:3874): El personajes: @ esta en deadlock
+[INFO] 01:10:54:875 Interbloqueo/(3972:3973): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:10:54:876 Interbloqueo/(3972:3973): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 01:10:54:876 Interbloqueo/(3972:3973): Cargue las matrices
+[INFO] 01:10:54:876 Interbloqueo/(3972:3973): Comprobe deadlock
+[INFO] 01:10:59:877 Interbloqueo/(3972:3973): ----------------------------------------------
+[INFO] 01:10:59:877 Interbloqueo/(3972:3973): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:10:59:877 Interbloqueo/(3972:3973): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 01:10:59:878 Interbloqueo/(3972:3973): Cargue las matrices
+[INFO] 01:10:59:878 Interbloqueo/(3972:3973): Comprobe deadlock
+[INFO] 01:11:04:878 Interbloqueo/(3972:3973): ----------------------------------------------
+[INFO] 01:11:04:878 Interbloqueo/(3972:3973): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:11:04:878 Interbloqueo/(3972:3973): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:11:04:878 Interbloqueo/(3972:3973): Cargue las matrices
+[INFO] 01:11:04:878 Interbloqueo/(3972:3973): Hay personaje en deadlock
+[INFO] 01:11:04:878 Interbloqueo/(3972:3973): El personajes: # esta en deadlock
+[INFO] 01:11:04:878 Interbloqueo/(3972:3973): Hay personaje en deadlock
+[INFO] 01:11:04:878 Interbloqueo/(3972:3973): El personajes: @ esta en deadlock
+[INFO] 01:11:04:879 Interbloqueo/(3972:3973): Comprobe deadlock
+[INFO] 01:11:09:879 Interbloqueo/(3972:3973): ----------------------------------------------
+[INFO] 01:11:09:879 Interbloqueo/(3972:3973): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:11:09:879 Interbloqueo/(3972:3973): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:11:09:880 Interbloqueo/(3972:3973): Cargue las matrices
+[INFO] 01:11:09:880 Interbloqueo/(3972:3973): Hay personaje en deadlock
+[INFO] 01:11:09:880 Interbloqueo/(3972:3973): El personajes: # esta en deadlock
+[INFO] 01:11:09:880 Interbloqueo/(3972:3973): Hay personaje en deadlock
+[INFO] 01:11:09:880 Interbloqueo/(3972:3973): El personajes: @ esta en deadlock
+[INFO] 01:11:09:880 Interbloqueo/(3972:3973): Comprobe deadlock
+[INFO] 01:11:14:880 Interbloqueo/(3972:3973): ----------------------------------------------
+[INFO] 01:11:14:880 Interbloqueo/(3972:3973): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:11:14:880 Interbloqueo/(3972:3973): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:11:14:881 Interbloqueo/(3972:3973): Cargue las matrices
+[INFO] 01:11:14:881 Interbloqueo/(3972:3973): Hay personaje en deadlock
+[INFO] 01:11:14:881 Interbloqueo/(3972:3973): El personajes: # esta en deadlock
+[INFO] 01:11:14:881 Interbloqueo/(3972:3973): Hay personaje en deadlock
+[INFO] 01:11:14:881 Interbloqueo/(3972:3973): El personajes: @ esta en deadlock
+[INFO] 01:11:14:881 Interbloqueo/(3972:3973): Comprobe deadlock
+[INFO] 01:11:19:881 Interbloqueo/(3972:3973): ----------------------------------------------
+[INFO] 01:11:19:881 Interbloqueo/(3972:3973): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:11:19:882 Interbloqueo/(3972:3973): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:11:19:882 Interbloqueo/(3972:3973): Cargue las matrices
+[INFO] 01:11:19:882 Interbloqueo/(3972:3973): Hay personaje en deadlock
+[INFO] 01:11:19:882 Interbloqueo/(3972:3973): El personajes: # esta en deadlock
+[INFO] 01:11:19:882 Interbloqueo/(3972:3973): Hay personaje en deadlock
+[INFO] 01:11:19:882 Interbloqueo/(3972:3973): El personajes: @ esta en deadlock
+[INFO] 01:11:19:882 Interbloqueo/(3972:3973): Comprobe deadlock
+[INFO] 01:11:24:883 Interbloqueo/(3972:3973): ----------------------------------------------
+[INFO] 01:11:24:883 Interbloqueo/(3972:3973): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:11:24:884 Interbloqueo/(3972:3973): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:11:24:884 Interbloqueo/(3972:3973): Cargue las matrices
+[INFO] 01:11:24:884 Interbloqueo/(3972:3973): Hay personaje en deadlock
+[INFO] 01:11:24:884 Interbloqueo/(3972:3973): El personajes: # esta en deadlock
+[INFO] 01:11:24:884 Interbloqueo/(3972:3973): Hay personaje en deadlock
+[INFO] 01:11:24:884 Interbloqueo/(3972:3973): El personajes: @ esta en deadlock
+[INFO] 01:11:24:884 Interbloqueo/(3972:3973): Comprobe deadlock
+[INFO] 01:11:29:885 Interbloqueo/(3972:3973): ----------------------------------------------
+[INFO] 01:11:29:885 Interbloqueo/(3972:3973): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:11:29:885 Interbloqueo/(3972:3973): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:11:29:886 Interbloqueo/(3972:3973): Cargue las matrices
+[INFO] 01:11:29:886 Interbloqueo/(3972:3973): Hay personaje en deadlock
+[INFO] 01:11:29:886 Interbloqueo/(3972:3973): El personajes: # esta en deadlock
+[INFO] 01:11:29:886 Interbloqueo/(3972:3973): Hay personaje en deadlock
+[INFO] 01:11:29:886 Interbloqueo/(3972:3973): El personajes: @ esta en deadlock
+[INFO] 01:11:29:886 Interbloqueo/(3972:3973): Comprobe deadlock
+[INFO] 01:11:34:887 Interbloqueo/(3972:3973): ----------------------------------------------
+[INFO] 01:11:34:888 Interbloqueo/(3972:3973): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:11:34:888 Interbloqueo/(3972:3973): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:11:34:888 Interbloqueo/(3972:3973): Cargue las matrices
+[INFO] 01:11:34:888 Interbloqueo/(3972:3973): Hay personaje en deadlock
+[INFO] 01:11:34:888 Interbloqueo/(3972:3973): El personajes: # esta en deadlock
+[INFO] 01:11:34:888 Interbloqueo/(3972:3973): Hay personaje en deadlock
+[INFO] 01:11:34:888 Interbloqueo/(3972:3973): El personajes: @ esta en deadlock
+[INFO] 01:11:34:889 Interbloqueo/(3972:3973): Comprobe deadlock
+[INFO] 01:11:39:889 Interbloqueo/(3972:3973): ----------------------------------------------
+[INFO] 01:11:39:889 Interbloqueo/(3972:3973): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:11:39:889 Interbloqueo/(3972:3973): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:11:39:890 Interbloqueo/(3972:3973): Cargue las matrices
+[INFO] 01:11:39:890 Interbloqueo/(3972:3973): Hay personaje en deadlock
+[INFO] 01:11:39:890 Interbloqueo/(3972:3973): El personajes: # esta en deadlock
+[INFO] 01:11:39:890 Interbloqueo/(3972:3973): Hay personaje en deadlock
+[INFO] 01:11:39:890 Interbloqueo/(3972:3973): El personajes: @ esta en deadlock
+[INFO] 01:11:39:890 Interbloqueo/(3972:3973): Comprobe deadlock
+[INFO] 01:11:44:891 Interbloqueo/(3972:3973): ----------------------------------------------
+[INFO] 01:11:44:891 Interbloqueo/(3972:3973): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:11:44:891 Interbloqueo/(3972:3973): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:11:44:891 Interbloqueo/(3972:3973): Cargue las matrices
+[INFO] 01:11:44:891 Interbloqueo/(3972:3973): Hay personaje en deadlock
+[INFO] 01:11:44:892 Interbloqueo/(3972:3973): El personajes: # esta en deadlock
+[INFO] 01:11:44:892 Interbloqueo/(3972:3973): Hay personaje en deadlock
+[INFO] 01:11:44:892 Interbloqueo/(3972:3973): El personajes: @ esta en deadlock
+[INFO] 01:11:44:892 Interbloqueo/(3972:3973): Comprobe deadlock
+[INFO] 01:11:49:892 Interbloqueo/(3972:3973): ----------------------------------------------
+[INFO] 01:11:49:893 Interbloqueo/(3972:3973): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:11:49:893 Interbloqueo/(3972:3973): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:11:49:893 Interbloqueo/(3972:3973): Cargue las matrices
+[INFO] 01:11:49:893 Interbloqueo/(3972:3973): Hay personaje en deadlock
+[INFO] 01:11:49:893 Interbloqueo/(3972:3973): El personajes: # esta en deadlock
+[INFO] 01:11:49:893 Interbloqueo/(3972:3973): Hay personaje en deadlock
+[INFO] 01:11:49:893 Interbloqueo/(3972:3973): El personajes: @ esta en deadlock
+[INFO] 01:11:49:893 Interbloqueo/(3972:3973): Comprobe deadlock
+[INFO] 01:11:54:894 Interbloqueo/(3972:3973): ----------------------------------------------
+[INFO] 01:11:54:894 Interbloqueo/(3972:3973): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:11:54:894 Interbloqueo/(3972:3973): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:11:54:895 Interbloqueo/(3972:3973): Cargue las matrices
+[INFO] 01:11:54:895 Interbloqueo/(3972:3973): Hay personaje en deadlock
+[INFO] 01:11:54:895 Interbloqueo/(3972:3973): El personajes: # esta en deadlock
+[INFO] 01:11:54:895 Interbloqueo/(3972:3973): Hay personaje en deadlock
+[INFO] 01:11:54:895 Interbloqueo/(3972:3973): El personajes: @ esta en deadlock
+[INFO] 01:11:54:895 Interbloqueo/(3972:3973): Comprobe deadlock
+[INFO] 01:11:59:896 Interbloqueo/(3972:3973): ----------------------------------------------
+[INFO] 01:11:59:897 Interbloqueo/(3972:3973): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:11:59:897 Interbloqueo/(3972:3973): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:11:59:897 Interbloqueo/(3972:3973): Cargue las matrices
+[INFO] 01:11:59:898 Interbloqueo/(3972:3973): Hay personaje en deadlock
+[INFO] 01:11:59:898 Interbloqueo/(3972:3973): El personajes: # esta en deadlock
+[INFO] 01:11:59:898 Interbloqueo/(3972:3973): Hay personaje en deadlock
+[INFO] 01:11:59:898 Interbloqueo/(3972:3973): El personajes: @ esta en deadlock
+[INFO] 01:33:15:863 Interbloqueo/(4288:4289): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:33:15:863 Interbloqueo/(4288:4289): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 01:33:15:863 Interbloqueo/(4288:4289): Cargue las matrices
+[INFO] 01:33:15:863 Interbloqueo/(4288:4289): Comprobe deadlock
+[INFO] 01:33:20:865 Interbloqueo/(4288:4289): ----------------------------------------------
+[INFO] 01:33:20:865 Interbloqueo/(4288:4289): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:33:20:865 Interbloqueo/(4288:4289): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 01:33:20:866 Interbloqueo/(4288:4289): Cargue las matrices
+[INFO] 01:33:20:866 Interbloqueo/(4288:4289): Comprobe deadlock
+[INFO] 01:33:25:866 Interbloqueo/(4288:4289): ----------------------------------------------
+[INFO] 01:33:25:866 Interbloqueo/(4288:4289): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:33:25:866 Interbloqueo/(4288:4289): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 01:33:25:867 Interbloqueo/(4288:4289): Cargue las matrices
+[INFO] 01:33:25:867 Interbloqueo/(4288:4289): Hay personaje en deadlock
+[INFO] 01:33:25:867 Interbloqueo/(4288:4289): El personajes: @ esta en deadlock
+[INFO] 01:33:25:867 Interbloqueo/(4288:4289): Comprobe deadlock
+[INFO] 01:33:30:867 Interbloqueo/(4288:4289): ----------------------------------------------
+[INFO] 01:33:30:867 Interbloqueo/(4288:4289): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:33:30:867 Interbloqueo/(4288:4289): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 01:33:30:867 Interbloqueo/(4288:4289): Cargue las matrices
+[INFO] 01:33:30:867 Interbloqueo/(4288:4289): Hay personaje en deadlock
+[INFO] 01:33:30:867 Interbloqueo/(4288:4289): El personajes: @ esta en deadlock
+[INFO] 01:38:34:696 Interbloqueo/(4497:4498): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:38:34:696 Interbloqueo/(4497:4498): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 01:38:34:696 Interbloqueo/(4497:4498): Cargue las matrices
+[INFO] 01:38:34:696 Interbloqueo/(4497:4498): Comprobe deadlock
+[INFO] 01:38:39:696 Interbloqueo/(4497:4498): ----------------------------------------------
+[INFO] 01:38:39:696 Interbloqueo/(4497:4498): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:38:39:696 Interbloqueo/(4497:4498): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 01:38:39:696 Interbloqueo/(4497:4498): Cargue las matrices
+[INFO] 01:38:39:696 Interbloqueo/(4497:4498): Hay personaje en deadlock
+[INFO] 01:38:39:696 Interbloqueo/(4497:4498): El personajes: @ esta en deadlock
+[INFO] 01:38:39:696 Interbloqueo/(4497:4498): Comprobe deadlock
+[INFO] 01:38:44:697 Interbloqueo/(4497:4498): ----------------------------------------------
+[INFO] 01:38:44:697 Interbloqueo/(4497:4498): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:38:44:697 Interbloqueo/(4497:4498): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 01:38:44:697 Interbloqueo/(4497:4498): Cargue las matrices
+[INFO] 01:38:44:697 Interbloqueo/(4497:4498): Hay personaje en deadlock
+[INFO] 01:38:44:697 Interbloqueo/(4497:4498): El personajes: @ esta en deadlock
+[INFO] 01:38:44:698 Interbloqueo/(4497:4498): Comprobe deadlock
+[INFO] 01:38:49:698 Interbloqueo/(4497:4498): ----------------------------------------------
+[INFO] 01:38:49:698 Interbloqueo/(4497:4498): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:38:49:698 Interbloqueo/(4497:4498): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 01:38:49:698 Interbloqueo/(4497:4498): Cargue las matrices
+[INFO] 01:38:49:698 Interbloqueo/(4497:4498): Hay personaje en deadlock
+[INFO] 01:38:49:698 Interbloqueo/(4497:4498): El personajes: @ esta en deadlock
+[INFO] 01:39:24:937 Interbloqueo/(4505:4506): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:39:24:937 Interbloqueo/(4505:4506): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 01:39:24:937 Interbloqueo/(4505:4506): Cargue las matrices
+[INFO] 01:39:24:937 Interbloqueo/(4505:4506): Comprobe deadlock
+[INFO] 01:39:29:938 Interbloqueo/(4505:4506): ----------------------------------------------
+[INFO] 01:39:29:938 Interbloqueo/(4505:4506): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:39:29:938 Interbloqueo/(4505:4506): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 01:39:29:938 Interbloqueo/(4505:4506): Cargue las matrices
+[INFO] 01:39:29:938 Interbloqueo/(4505:4506): Comprobe deadlock
+[INFO] 01:39:34:993 Interbloqueo/(4505:4506): ----------------------------------------------
+[INFO] 01:39:34:993 Interbloqueo/(4505:4506): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:39:34:993 Interbloqueo/(4505:4506): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 01:39:34:993 Interbloqueo/(4505:4506): Cargue las matrices
+[INFO] 01:39:34:993 Interbloqueo/(4505:4506): Hay personaje en deadlock
+[INFO] 01:39:34:993 Interbloqueo/(4505:4506): El personajes: @ esta en deadlock
+[INFO] 01:39:34:993 Interbloqueo/(4505:4506): Comprobe deadlock
+[INFO] 01:39:39:994 Interbloqueo/(4505:4506): ----------------------------------------------
+[INFO] 01:39:39:994 Interbloqueo/(4505:4506): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:39:39:994 Interbloqueo/(4505:4506): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 01:39:39:994 Interbloqueo/(4505:4506): Cargue las matrices
+[INFO] 01:39:39:994 Interbloqueo/(4505:4506): Hay personaje en deadlock
+[INFO] 01:39:39:994 Interbloqueo/(4505:4506): El personajes: @ esta en deadlock
+[INFO] 01:39:39:994 Interbloqueo/(4505:4506): Comprobe deadlock
+[INFO] 01:39:44:994 Interbloqueo/(4505:4506): ----------------------------------------------
+[INFO] 01:39:44:994 Interbloqueo/(4505:4506): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:39:44:995 Interbloqueo/(4505:4506): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 01:39:44:995 Interbloqueo/(4505:4506): Cargue las matrices
+[INFO] 01:39:44:995 Interbloqueo/(4505:4506): Hay personaje en deadlock
+[INFO] 01:39:44:995 Interbloqueo/(4505:4506): El personajes: @ esta en deadlock
+[INFO] 01:48:31:114 Interbloqueo/(4560:4562): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:48:31:114 Interbloqueo/(4560:4562): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 01:48:31:114 Interbloqueo/(4560:4562): Cargue las matrices
+[INFO] 01:48:31:114 Interbloqueo/(4560:4562): Comprobe deadlock
+[INFO] 01:48:36:114 Interbloqueo/(4560:4562): ----------------------------------------------
+[INFO] 01:48:36:115 Interbloqueo/(4560:4562): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:48:36:115 Interbloqueo/(4560:4562): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 01:48:36:117 Interbloqueo/(4560:4562): Cargue las matrices
+[INFO] 01:48:36:135 Interbloqueo/(4560:4562): Hay personaje en deadlock
+[INFO] 01:48:36:135 Interbloqueo/(4560:4562): El personajes: @ esta en deadlock
+[INFO] 01:48:36:135 Interbloqueo/(4560:4562): Comprobe deadlock
+[INFO] 01:48:41:135 Interbloqueo/(4560:4562): ----------------------------------------------
+[INFO] 01:48:41:136 Interbloqueo/(4560:4562): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:48:41:138 Interbloqueo/(4560:4562): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 01:48:41:138 Interbloqueo/(4560:4562): Cargue las matrices
+[INFO] 01:48:41:138 Interbloqueo/(4560:4562): Hay personaje en deadlock
+[INFO] 01:48:41:138 Interbloqueo/(4560:4562): El personajes: @ esta en deadlock
+[INFO] 01:48:41:138 Interbloqueo/(4560:4562): Comprobe deadlock
+[INFO] 01:48:46:139 Interbloqueo/(4560:4562): ----------------------------------------------
+[INFO] 01:48:46:139 Interbloqueo/(4560:4562): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:48:46:139 Interbloqueo/(4560:4562): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 01:48:46:139 Interbloqueo/(4560:4562): Cargue las matrices
+[INFO] 01:48:46:140 Interbloqueo/(4560:4562): Hay personaje en deadlock
+[INFO] 01:48:46:140 Interbloqueo/(4560:4562): El personajes: @ esta en deadlock
+[INFO] 01:52:12:188 Interbloqueo/(4571:4572): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:52:12:190 Interbloqueo/(4571:4572): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 01:52:12:190 Interbloqueo/(4571:4572): Cargue las matrices
+[INFO] 01:52:12:190 Interbloqueo/(4571:4572): Comprobe deadlock
+[INFO] 01:52:17:190 Interbloqueo/(4571:4572): ----------------------------------------------
+[INFO] 01:52:17:191 Interbloqueo/(4571:4572): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:52:17:191 Interbloqueo/(4571:4572): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:52:17:191 Interbloqueo/(4571:4572): Cargue las matrices
+[INFO] 01:52:17:191 Interbloqueo/(4571:4572): Hay personaje en deadlock
+[INFO] 01:52:17:191 Interbloqueo/(4571:4572): El personajes: # esta en deadlock
+[INFO] 01:52:17:191 Interbloqueo/(4571:4572): Hay personaje en deadlock
+[INFO] 01:52:17:191 Interbloqueo/(4571:4572): El personajes: @ esta en deadlock
+[INFO] 01:52:17:191 Interbloqueo/(4571:4572): Comprobe deadlock
+[INFO] 01:52:22:192 Interbloqueo/(4571:4572): ----------------------------------------------
+[INFO] 01:52:22:192 Interbloqueo/(4571:4572): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:52:22:192 Interbloqueo/(4571:4572): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:52:22:192 Interbloqueo/(4571:4572): Cargue las matrices
+[INFO] 01:52:22:192 Interbloqueo/(4571:4572): Hay personaje en deadlock
+[INFO] 01:52:22:192 Interbloqueo/(4571:4572): El personajes: # esta en deadlock
+[INFO] 01:52:22:192 Interbloqueo/(4571:4572): Hay personaje en deadlock
+[INFO] 01:52:22:192 Interbloqueo/(4571:4572): El personajes: @ esta en deadlock
+[INFO] 01:52:22:192 Interbloqueo/(4571:4572): Comprobe deadlock
+[INFO] 01:52:27:193 Interbloqueo/(4571:4572): ----------------------------------------------
+[INFO] 01:52:27:194 Interbloqueo/(4571:4572): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:52:27:194 Interbloqueo/(4571:4572): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:52:27:194 Interbloqueo/(4571:4572): Cargue las matrices
+[INFO] 01:52:27:194 Interbloqueo/(4571:4572): Hay personaje en deadlock
+[INFO] 01:52:27:194 Interbloqueo/(4571:4572): El personajes: # esta en deadlock
+[INFO] 01:52:27:194 Interbloqueo/(4571:4572): Hay personaje en deadlock
+[INFO] 01:52:27:194 Interbloqueo/(4571:4572): El personajes: @ esta en deadlock
+[INFO] 01:55:31:852 Interbloqueo/(4596:4597): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:55:31:852 Interbloqueo/(4596:4597): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 01:55:31:852 Interbloqueo/(4596:4597): Cargue las matrices
+[INFO] 01:55:31:852 Interbloqueo/(4596:4597): Comprobe deadlock
+[INFO] 01:55:36:852 Interbloqueo/(4596:4597): ----------------------------------------------
+[INFO] 01:55:36:852 Interbloqueo/(4596:4597): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:55:36:852 Interbloqueo/(4596:4597): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 01:55:36:852 Interbloqueo/(4596:4597): Cargue las matrices
+[INFO] 01:55:36:852 Interbloqueo/(4596:4597): Comprobe deadlock
+[INFO] 01:55:41:854 Interbloqueo/(4596:4597): ----------------------------------------------
+[INFO] 01:55:41:854 Interbloqueo/(4596:4597): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:55:41:854 Interbloqueo/(4596:4597): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:55:41:854 Interbloqueo/(4596:4597): Cargue las matrices
+[INFO] 01:55:41:854 Interbloqueo/(4596:4597): Hay personaje en deadlock
+[INFO] 01:55:41:854 Interbloqueo/(4596:4597): El personajes: # esta en deadlock
+[INFO] 01:55:41:854 Interbloqueo/(4596:4597): Hay personaje en deadlock
+[INFO] 01:55:41:854 Interbloqueo/(4596:4597): El personajes: @ esta en deadlock
+[INFO] 01:55:41:854 Interbloqueo/(4596:4597): Comprobe deadlock
+[INFO] 01:55:46:855 Interbloqueo/(4596:4597): ----------------------------------------------
+[INFO] 01:55:46:855 Interbloqueo/(4596:4597): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:55:46:855 Interbloqueo/(4596:4597): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:55:46:855 Interbloqueo/(4596:4597): Cargue las matrices
+[INFO] 01:55:46:855 Interbloqueo/(4596:4597): Hay personaje en deadlock
+[INFO] 01:55:46:855 Interbloqueo/(4596:4597): El personajes: # esta en deadlock
+[INFO] 01:55:46:855 Interbloqueo/(4596:4597): Hay personaje en deadlock
+[INFO] 01:55:46:855 Interbloqueo/(4596:4597): El personajes: @ esta en deadlock
+[INFO] 01:55:46:855 Interbloqueo/(4596:4597): Comprobe deadlock
+[INFO] 01:55:51:859 Interbloqueo/(4596:4597): ----------------------------------------------
+[INFO] 01:55:51:859 Interbloqueo/(4596:4597): Empieza a ejecutar el hilo interbloqueo
+[INFO] 01:55:51:859 Interbloqueo/(4596:4597): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 01:55:51:859 Interbloqueo/(4596:4597): Cargue las matrices
+[INFO] 01:55:51:860 Interbloqueo/(4596:4597): Hay personaje en deadlock
+[INFO] 01:55:51:860 Interbloqueo/(4596:4597): El personajes: # esta en deadlock
+[INFO] 01:55:51:861 Interbloqueo/(4596:4597): Hay personaje en deadlock
+[INFO] 01:55:51:861 Interbloqueo/(4596:4597): El personajes: @ esta en deadlock
+[INFO] 02:01:38:230 Interbloqueo/(4617:4618): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:01:38:232 Interbloqueo/(4617:4618): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:01:38:232 Interbloqueo/(4617:4618): Cargue las matrices
+[INFO] 02:01:38:232 Interbloqueo/(4617:4618): Comprobe deadlock
+[INFO] 02:01:43:233 Interbloqueo/(4617:4618): ----------------------------------------------
+[INFO] 02:01:43:233 Interbloqueo/(4617:4618): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:01:43:233 Interbloqueo/(4617:4618): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:01:43:233 Interbloqueo/(4617:4618): Cargue las matrices
+[INFO] 02:01:43:233 Interbloqueo/(4617:4618): Comprobe deadlock
+[INFO] 02:01:48:233 Interbloqueo/(4617:4618): ----------------------------------------------
+[INFO] 02:01:48:233 Interbloqueo/(4617:4618): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:01:48:233 Interbloqueo/(4617:4618): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 02:01:48:233 Interbloqueo/(4617:4618): Cargue las matrices
+[INFO] 02:01:48:234 Interbloqueo/(4617:4618): Hay personaje en deadlock
+[INFO] 02:01:48:234 Interbloqueo/(4617:4618): El personajes: # esta en deadlock
+[INFO] 02:01:48:234 Interbloqueo/(4617:4618): Hay personaje en deadlock
+[INFO] 02:01:48:234 Interbloqueo/(4617:4618): El personajes: @ esta en deadlock
+[INFO] 02:01:48:235 Interbloqueo/(4617:4618): Comprobe deadlock
+[INFO] 02:01:53:235 Interbloqueo/(4617:4618): ----------------------------------------------
+[INFO] 02:01:53:235 Interbloqueo/(4617:4618): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:01:53:235 Interbloqueo/(4617:4618): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 02:01:53:235 Interbloqueo/(4617:4618): Cargue las matrices
+[INFO] 02:01:53:235 Interbloqueo/(4617:4618): Hay personaje en deadlock
+[INFO] 02:01:53:236 Interbloqueo/(4617:4618): El personajes: # esta en deadlock
+[INFO] 02:01:53:236 Interbloqueo/(4617:4618): Hay personaje en deadlock
+[INFO] 02:01:53:236 Interbloqueo/(4617:4618): El personajes: @ esta en deadlock
+[INFO] 02:01:53:237 Interbloqueo/(4617:4618): Comprobe deadlock
+[INFO] 02:01:58:238 Interbloqueo/(4617:4618): ----------------------------------------------
+[INFO] 02:01:58:238 Interbloqueo/(4617:4618): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:01:58:238 Interbloqueo/(4617:4618): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 02:01:58:238 Interbloqueo/(4617:4618): Cargue las matrices
+[INFO] 02:01:58:238 Interbloqueo/(4617:4618): Hay personaje en deadlock
+[INFO] 02:01:58:238 Interbloqueo/(4617:4618): El personajes: # esta en deadlock
+[INFO] 02:01:58:239 Interbloqueo/(4617:4618): Hay personaje en deadlock
+[INFO] 02:01:58:239 Interbloqueo/(4617:4618): El personajes: @ esta en deadlock
+[INFO] 02:04:49:805 Interbloqueo/(4640:4641): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:04:49:805 Interbloqueo/(4640:4641): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:04:49:805 Interbloqueo/(4640:4641): Cargue las matrices
+[INFO] 02:04:49:805 Interbloqueo/(4640:4641): Comprobe deadlock
+[INFO] 02:04:54:805 Interbloqueo/(4640:4641): ----------------------------------------------
+[INFO] 02:04:54:805 Interbloqueo/(4640:4641): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:04:54:805 Interbloqueo/(4640:4641): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:04:54:805 Interbloqueo/(4640:4641): Cargue las matrices
+[INFO] 02:04:54:806 Interbloqueo/(4640:4641): Comprobe deadlock
+[INFO] 02:04:59:806 Interbloqueo/(4640:4641): ----------------------------------------------
+[INFO] 02:04:59:806 Interbloqueo/(4640:4641): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:04:59:806 Interbloqueo/(4640:4641): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 02:04:59:806 Interbloqueo/(4640:4641): Cargue las matrices
+[INFO] 02:04:59:806 Interbloqueo/(4640:4641): Hay personaje en deadlock
+[INFO] 02:04:59:806 Interbloqueo/(4640:4641): El personajes: # esta en deadlock
+[INFO] 02:04:59:806 Interbloqueo/(4640:4641): Hay personaje en deadlock
+[INFO] 02:04:59:806 Interbloqueo/(4640:4641): El personajes: @ esta en deadlock
+[INFO] 02:04:59:807 Interbloqueo/(4640:4641): Comprobe deadlock
+[INFO] 02:05:04:807 Interbloqueo/(4640:4641): ----------------------------------------------
+[INFO] 02:05:04:807 Interbloqueo/(4640:4641): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:05:04:807 Interbloqueo/(4640:4641): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 02:05:04:807 Interbloqueo/(4640:4641): Cargue las matrices
+[INFO] 02:05:04:807 Interbloqueo/(4640:4641): Hay personaje en deadlock
+[INFO] 02:05:04:807 Interbloqueo/(4640:4641): El personajes: # esta en deadlock
+[INFO] 02:05:04:807 Interbloqueo/(4640:4641): Hay personaje en deadlock
+[INFO] 02:05:04:807 Interbloqueo/(4640:4641): El personajes: @ esta en deadlock
+[INFO] 02:05:04:808 Interbloqueo/(4640:4641): Comprobe deadlock
+[INFO] 02:05:09:809 Interbloqueo/(4640:4641): ----------------------------------------------
+[INFO] 02:05:09:810 Interbloqueo/(4640:4641): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:05:09:810 Interbloqueo/(4640:4641): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 02:05:09:810 Interbloqueo/(4640:4641): Cargue las matrices
+[INFO] 02:05:09:810 Interbloqueo/(4640:4641): Hay personaje en deadlock
+[INFO] 02:05:09:810 Interbloqueo/(4640:4641): El personajes: # esta en deadlock
+[INFO] 02:05:09:810 Interbloqueo/(4640:4641): Hay personaje en deadlock
+[INFO] 02:05:09:810 Interbloqueo/(4640:4641): El personajes: @ esta en deadlock
+[INFO] 02:07:33:452 Interbloqueo/(4753:4754): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:07:33:452 Interbloqueo/(4753:4754): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:07:33:452 Interbloqueo/(4753:4754): Cargue las matrices
+[INFO] 02:07:33:452 Interbloqueo/(4753:4754): Comprobe deadlock
+[INFO] 02:07:38:452 Interbloqueo/(4753:4754): ----------------------------------------------
+[INFO] 02:07:38:452 Interbloqueo/(4753:4754): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:07:38:452 Interbloqueo/(4753:4754): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:07:38:452 Interbloqueo/(4753:4754): Cargue las matrices
+[INFO] 02:07:38:452 Interbloqueo/(4753:4754): Comprobe deadlock
+[INFO] 02:07:43:453 Interbloqueo/(4753:4754): ----------------------------------------------
+[INFO] 02:07:43:453 Interbloqueo/(4753:4754): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:07:43:453 Interbloqueo/(4753:4754): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 02:07:43:453 Interbloqueo/(4753:4754): Cargue las matrices
+[INFO] 02:07:43:453 Interbloqueo/(4753:4754): Hay personaje en deadlock
+[INFO] 02:07:43:453 Interbloqueo/(4753:4754): El personajes: # esta en deadlock
+[INFO] 02:07:43:453 Interbloqueo/(4753:4754): Hay personaje en deadlock
+[INFO] 02:07:43:453 Interbloqueo/(4753:4754): El personajes: @ esta en deadlock
+[INFO] 02:07:43:453 Interbloqueo/(4753:4754): Comprobe deadlock
+[INFO] 02:07:48:454 Interbloqueo/(4753:4754): ----------------------------------------------
+[INFO] 02:07:48:454 Interbloqueo/(4753:4754): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:07:48:454 Interbloqueo/(4753:4754): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 02:07:48:454 Interbloqueo/(4753:4754): Cargue las matrices
+[INFO] 02:07:48:454 Interbloqueo/(4753:4754): Hay personaje en deadlock
+[INFO] 02:07:48:454 Interbloqueo/(4753:4754): El personajes: # esta en deadlock
+[INFO] 02:07:48:454 Interbloqueo/(4753:4754): Hay personaje en deadlock
+[INFO] 02:07:48:454 Interbloqueo/(4753:4754): El personajes: @ esta en deadlock
+[INFO] 02:07:48:454 Interbloqueo/(4753:4754): Comprobe deadlock
+[INFO] 02:07:53:455 Interbloqueo/(4753:4754): ----------------------------------------------
+[INFO] 02:07:53:455 Interbloqueo/(4753:4754): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:07:53:455 Interbloqueo/(4753:4754): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 02:07:53:455 Interbloqueo/(4753:4754): Cargue las matrices
+[INFO] 02:07:53:456 Interbloqueo/(4753:4754): Hay personaje en deadlock
+[INFO] 02:07:53:456 Interbloqueo/(4753:4754): El personajes: # esta en deadlock
+[INFO] 02:07:53:456 Interbloqueo/(4753:4754): Hay personaje en deadlock
+[INFO] 02:07:53:456 Interbloqueo/(4753:4754): El personajes: @ esta en deadlock
+[INFO] 02:07:53:457 Interbloqueo/(4753:4754): Comprobe deadlock
+[INFO] 02:07:58:457 Interbloqueo/(4753:4754): ----------------------------------------------
+[INFO] 02:07:58:457 Interbloqueo/(4753:4754): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:07:58:457 Interbloqueo/(4753:4754): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 02:07:58:457 Interbloqueo/(4753:4754): Cargue las matrices
+[INFO] 02:07:58:457 Interbloqueo/(4753:4754): Hay personaje en deadlock
+[INFO] 02:07:58:458 Interbloqueo/(4753:4754): El personajes: # esta en deadlock
+[INFO] 02:07:58:458 Interbloqueo/(4753:4754): Hay personaje en deadlock
+[INFO] 02:07:58:458 Interbloqueo/(4753:4754): El personajes: @ esta en deadlock
+[INFO] 02:07:58:458 Interbloqueo/(4753:4754): Comprobe deadlock
+[INFO] 02:08:03:458 Interbloqueo/(4753:4754): ----------------------------------------------
+[INFO] 02:08:03:458 Interbloqueo/(4753:4754): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:08:03:458 Interbloqueo/(4753:4754): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 02:08:03:458 Interbloqueo/(4753:4754): Cargue las matrices
+[INFO] 02:08:03:458 Interbloqueo/(4753:4754): Hay personaje en deadlock
+[INFO] 02:08:03:458 Interbloqueo/(4753:4754): El personajes: # esta en deadlock
+[INFO] 02:08:03:458 Interbloqueo/(4753:4754): Hay personaje en deadlock
+[INFO] 02:08:03:459 Interbloqueo/(4753:4754): El personajes: @ esta en deadlock
+[INFO] 02:08:03:459 Interbloqueo/(4753:4754): Comprobe deadlock
+[INFO] 02:08:08:459 Interbloqueo/(4753:4754): ----------------------------------------------
+[INFO] 02:08:08:459 Interbloqueo/(4753:4754): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:08:08:459 Interbloqueo/(4753:4754): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 02:08:08:459 Interbloqueo/(4753:4754): Cargue las matrices
+[INFO] 02:08:08:460 Interbloqueo/(4753:4754): Hay personaje en deadlock
+[INFO] 02:08:08:460 Interbloqueo/(4753:4754): El personajes: # esta en deadlock
+[INFO] 02:08:08:460 Interbloqueo/(4753:4754): Hay personaje en deadlock
+[INFO] 02:08:08:460 Interbloqueo/(4753:4754): El personajes: @ esta en deadlock
+[INFO] 02:08:08:461 Interbloqueo/(4753:4754): Comprobe deadlock
+[INFO] 02:08:13:462 Interbloqueo/(4753:4754): ----------------------------------------------
+[INFO] 02:08:13:462 Interbloqueo/(4753:4754): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:08:13:462 Interbloqueo/(4753:4754): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 02:08:13:462 Interbloqueo/(4753:4754): Cargue las matrices
+[INFO] 02:08:13:462 Interbloqueo/(4753:4754): Hay personaje en deadlock
+[INFO] 02:08:13:462 Interbloqueo/(4753:4754): El personajes: # esta en deadlock
+[INFO] 02:08:13:462 Interbloqueo/(4753:4754): Hay personaje en deadlock
+[INFO] 02:08:13:462 Interbloqueo/(4753:4754): El personajes: @ esta en deadlock
+[INFO] 02:11:15:237 Interbloqueo/(4795:4796): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:11:15:238 Interbloqueo/(4795:4796): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:11:15:238 Interbloqueo/(4795:4796): Cargue las matrices
+[INFO] 02:11:15:238 Interbloqueo/(4795:4796): Comprobe deadlock
+[INFO] 02:11:20:239 Interbloqueo/(4795:4796): ----------------------------------------------
+[INFO] 02:11:20:239 Interbloqueo/(4795:4796): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:11:20:239 Interbloqueo/(4795:4796): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:11:20:239 Interbloqueo/(4795:4796): Cargue las matrices
+[INFO] 02:11:20:239 Interbloqueo/(4795:4796): Comprobe deadlock
+[INFO] 02:11:25:239 Interbloqueo/(4795:4796): ----------------------------------------------
+[INFO] 02:11:25:239 Interbloqueo/(4795:4796): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:11:25:239 Interbloqueo/(4795:4796): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 02:11:25:240 Interbloqueo/(4795:4796): Cargue las matrices
+[INFO] 02:11:25:240 Interbloqueo/(4795:4796): Hay personaje en deadlock
+[INFO] 02:11:25:240 Interbloqueo/(4795:4796): El personajes: # esta en deadlock
+[INFO] 02:11:25:240 Interbloqueo/(4795:4796): Hay personaje en deadlock
+[INFO] 02:11:25:240 Interbloqueo/(4795:4796): El personajes: @ esta en deadlock
+[INFO] 02:11:25:240 Interbloqueo/(4795:4796): Comprobe deadlock
+[INFO] 02:11:30:240 Interbloqueo/(4795:4796): ----------------------------------------------
+[INFO] 02:11:30:240 Interbloqueo/(4795:4796): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:11:30:241 Interbloqueo/(4795:4796): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 02:11:30:241 Interbloqueo/(4795:4796): Cargue las matrices
+[INFO] 02:11:30:241 Interbloqueo/(4795:4796): Hay personaje en deadlock
+[INFO] 02:11:30:241 Interbloqueo/(4795:4796): El personajes: # esta en deadlock
+[INFO] 02:11:30:241 Interbloqueo/(4795:4796): Hay personaje en deadlock
+[INFO] 02:11:30:241 Interbloqueo/(4795:4796): El personajes: @ esta en deadlock
+[INFO] 02:11:30:241 Interbloqueo/(4795:4796): Comprobe deadlock
+[INFO] 02:11:35:241 Interbloqueo/(4795:4796): ----------------------------------------------
+[INFO] 02:11:35:241 Interbloqueo/(4795:4796): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:11:35:242 Interbloqueo/(4795:4796): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 02:11:35:242 Interbloqueo/(4795:4796): Cargue las matrices
+[INFO] 02:11:35:242 Interbloqueo/(4795:4796): Hay personaje en deadlock
+[INFO] 02:11:35:242 Interbloqueo/(4795:4796): El personajes: # esta en deadlock
+[INFO] 02:11:35:242 Interbloqueo/(4795:4796): Comprobe deadlock
+[INFO] 02:11:40:243 Interbloqueo/(4795:4796): ----------------------------------------------
+[INFO] 02:11:40:243 Interbloqueo/(4795:4796): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:11:40:243 Interbloqueo/(4795:4796): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:11:40:243 Interbloqueo/(4795:4796): Cargue las matrices
+[INFO] 02:11:40:244 Interbloqueo/(4795:4796): Comprobe deadlock
+[INFO] 02:11:45:244 Interbloqueo/(4795:4796): ----------------------------------------------
+[INFO] 02:11:45:244 Interbloqueo/(4795:4796): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:11:45:244 Interbloqueo/(4795:4796): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:11:45:244 Interbloqueo/(4795:4796): Cargue las matrices
+[INFO] 02:11:45:244 Interbloqueo/(4795:4796): Comprobe deadlock
+[INFO] 02:11:50:245 Interbloqueo/(4795:4796): ----------------------------------------------
+[INFO] 02:11:50:245 Interbloqueo/(4795:4796): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:11:50:245 Interbloqueo/(4795:4796): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:11:50:245 Interbloqueo/(4795:4796): Cargue las matrices
+[INFO] 02:11:50:246 Interbloqueo/(4795:4796): Comprobe deadlock
+[INFO] 02:11:55:246 Interbloqueo/(4795:4796): ----------------------------------------------
+[INFO] 02:11:55:246 Interbloqueo/(4795:4796): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:11:55:246 Interbloqueo/(4795:4796): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:11:55:246 Interbloqueo/(4795:4796): Cargue las matrices
+[INFO] 02:11:55:246 Interbloqueo/(4795:4796): Comprobe deadlock
+[INFO] 02:12:00:246 Interbloqueo/(4795:4796): ----------------------------------------------
+[INFO] 02:12:00:247 Interbloqueo/(4795:4796): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:12:00:247 Interbloqueo/(4795:4796): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:12:00:247 Interbloqueo/(4795:4796): Cargue las matrices
+[INFO] 02:12:00:248 Interbloqueo/(4795:4796): Comprobe deadlock
+[INFO] 02:12:05:249 Interbloqueo/(4795:4796): ----------------------------------------------
+[INFO] 02:12:05:249 Interbloqueo/(4795:4796): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:12:05:249 Interbloqueo/(4795:4796): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:12:05:249 Interbloqueo/(4795:4796): Cargue las matrices
+[INFO] 02:12:05:249 Interbloqueo/(4795:4796): Comprobe deadlock
+[INFO] 02:12:10:250 Interbloqueo/(4795:4796): ----------------------------------------------
+[INFO] 02:12:10:250 Interbloqueo/(4795:4796): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:12:10:250 Interbloqueo/(4795:4796): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:12:10:250 Interbloqueo/(4795:4796): Cargue las matrices
+[INFO] 02:12:10:250 Interbloqueo/(4795:4796): Comprobe deadlock
+[INFO] 02:13:44:815 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:13:44:817 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:13:44:817 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:13:44:817 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:13:49:817 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:13:49:817 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:13:49:817 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:13:49:817 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:13:49:817 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:13:54:818 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:13:54:818 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:13:54:818 Interbloqueo/(4875:4876): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 02:13:54:818 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:13:54:818 Interbloqueo/(4875:4876): Hay personaje en deadlock
+[INFO] 02:13:54:818 Interbloqueo/(4875:4876): El personajes: # esta en deadlock
+[INFO] 02:13:54:818 Interbloqueo/(4875:4876): Hay personaje en deadlock
+[INFO] 02:13:54:818 Interbloqueo/(4875:4876): El personajes: @ esta en deadlock
+[INFO] 02:13:54:819 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:13:59:857 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:13:59:858 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:13:59:858 Interbloqueo/(4875:4876): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 02:13:59:858 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:13:59:858 Interbloqueo/(4875:4876): Hay personaje en deadlock
+[INFO] 02:13:59:858 Interbloqueo/(4875:4876): El personajes: # esta en deadlock
+[INFO] 02:13:59:858 Interbloqueo/(4875:4876): Hay personaje en deadlock
+[INFO] 02:13:59:859 Interbloqueo/(4875:4876): El personajes: @ esta en deadlock
+[INFO] 02:13:59:859 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:14:04:859 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:14:04:859 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:14:04:860 Interbloqueo/(4875:4876): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 02:14:04:860 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:14:04:860 Interbloqueo/(4875:4876): Hay personaje en deadlock
+[INFO] 02:14:04:860 Interbloqueo/(4875:4876): El personajes: # esta en deadlock
+[INFO] 02:14:04:860 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:14:09:860 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:14:09:860 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:14:09:860 Interbloqueo/(4875:4876): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 02:14:09:861 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:14:09:861 Interbloqueo/(4875:4876): Hay personaje en deadlock
+[INFO] 02:14:09:861 Interbloqueo/(4875:4876): El personajes: # esta en deadlock
+[INFO] 02:14:09:862 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:14:14:862 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:14:14:862 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:14:14:862 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:14:14:862 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:14:14:862 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:14:19:863 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:14:19:863 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:14:19:863 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:14:19:864 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:14:19:864 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:14:24:865 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:14:24:865 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:14:24:865 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:14:24:866 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:14:24:866 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:14:29:866 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:14:29:867 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:14:29:867 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:14:29:867 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:14:29:867 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:14:34:868 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:14:34:868 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:14:34:868 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:14:34:869 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:14:34:869 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:14:39:870 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:14:39:870 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:14:39:870 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:14:39:870 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:14:39:870 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:14:44:872 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:14:44:872 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:14:44:872 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:14:44:872 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:14:44:872 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:14:49:872 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:14:49:873 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:14:49:873 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:14:49:873 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:14:49:873 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:14:54:874 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:14:54:874 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:14:54:875 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:14:54:875 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:14:54:875 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:14:59:875 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:14:59:875 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:14:59:875 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:14:59:876 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:14:59:876 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:15:04:877 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:15:04:877 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:15:04:877 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:15:04:878 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:15:04:878 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:15:09:879 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:15:09:879 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:15:09:879 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:15:09:880 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:15:09:880 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:15:14:881 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:15:14:882 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:15:14:882 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:15:14:882 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:15:14:882 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:15:19:883 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:15:19:883 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:15:19:883 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:15:19:883 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:15:19:883 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:15:24:884 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:15:24:884 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:15:24:884 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:15:24:885 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:15:24:885 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:15:29:885 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:15:29:885 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:15:29:885 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:15:29:886 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:15:29:886 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:15:34:887 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:15:34:887 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:15:34:888 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:15:34:888 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:15:34:888 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:15:39:889 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:15:39:889 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:15:39:889 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:15:39:890 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:15:39:890 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:15:44:890 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:15:44:890 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:15:44:891 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:15:44:891 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:15:44:891 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:15:49:891 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:15:49:891 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:15:49:891 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:15:49:891 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:15:49:891 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:15:54:892 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:15:54:892 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:15:54:892 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:15:54:893 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:15:54:893 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:15:59:893 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:15:59:893 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:15:59:893 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:15:59:893 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:15:59:894 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:16:04:895 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:16:04:895 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:16:04:896 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:16:04:896 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:16:04:896 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:16:09:896 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:16:09:896 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:16:09:896 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:16:09:897 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:16:09:897 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:16:14:898 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:16:14:898 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:16:14:898 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:16:14:898 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:16:14:898 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:16:19:899 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:16:19:899 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:16:19:899 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:16:19:900 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:16:19:900 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:16:24:901 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:16:24:901 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:16:24:902 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:16:24:902 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:16:24:903 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:16:29:903 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:16:29:903 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:16:29:904 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:16:29:904 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:16:29:904 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:16:34:904 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:16:34:904 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:16:34:904 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:16:34:905 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:16:34:905 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:16:39:906 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:16:39:906 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:16:39:906 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:16:39:906 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:16:39:907 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:16:44:908 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:16:44:908 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:16:44:908 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:16:44:909 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:16:44:909 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:16:49:910 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:16:49:910 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:16:49:910 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:16:49:912 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:16:49:912 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:16:54:912 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:16:54:912 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:16:54:912 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:16:54:912 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:16:54:912 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:16:59:913 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:16:59:913 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:16:59:913 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:16:59:913 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:16:59:913 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:17:04:913 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:17:04:914 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:17:04:915 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:17:04:915 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:17:04:915 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:17:09:915 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:17:09:915 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:17:09:916 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:17:09:916 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:17:09:916 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:17:14:916 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:17:14:917 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:17:14:918 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:17:14:918 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:17:14:918 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:17:19:919 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:17:19:919 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:17:19:920 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:17:19:921 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:17:19:921 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:17:24:921 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:17:24:922 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:17:24:922 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:17:24:922 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:17:24:922 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:17:29:923 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:17:29:923 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:17:29:923 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:17:29:924 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:17:29:924 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:17:34:925 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:17:34:925 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:17:34:926 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:17:34:926 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:17:34:926 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:17:39:926 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:17:39:927 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:17:39:928 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:17:39:928 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:17:39:928 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:17:44:929 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:17:44:929 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:17:44:929 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:17:44:929 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:17:44:929 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:17:49:930 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:17:49:931 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:17:49:931 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:17:49:931 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:17:49:931 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:17:54:932 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:17:54:932 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:17:54:932 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:17:54:932 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:17:54:932 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:17:59:933 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:17:59:934 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:17:59:934 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:17:59:934 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:17:59:934 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:18:04:934 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:18:04:934 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:18:04:934 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:18:04:935 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:18:04:935 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:18:09:936 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:18:09:936 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:18:09:937 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:18:09:937 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:18:09:937 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:18:14:937 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:18:14:938 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:18:14:939 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:18:14:939 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:18:14:939 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:18:19:939 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:18:19:939 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:18:19:941 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:18:19:941 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:18:19:941 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:18:24:942 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:18:24:942 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:18:24:942 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:18:24:943 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:18:24:943 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:18:29:944 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:18:29:945 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:18:29:945 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:18:29:945 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:18:29:945 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:18:34:946 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:18:34:946 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:18:34:946 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:18:34:946 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:18:34:946 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:18:39:947 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:18:39:947 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:18:39:947 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:18:39:947 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:18:39:947 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:18:44:947 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:18:44:947 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:18:44:947 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:18:44:947 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:18:44:948 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:18:49:949 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:18:49:949 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:18:49:949 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:18:49:949 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:18:49:949 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:18:54:950 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:18:54:950 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:18:54:950 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:18:54:950 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:18:54:951 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:18:59:951 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:18:59:952 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:18:59:953 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:18:59:953 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:18:59:953 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:19:04:953 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:19:04:953 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:19:04:953 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:19:04:953 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:19:04:953 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:19:09:954 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:19:09:954 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:19:09:954 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:19:09:954 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:19:09:954 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:19:14:954 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:19:14:955 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:19:14:955 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:19:14:955 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:19:14:955 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:19:19:955 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:19:19:955 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:19:19:955 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:19:19:955 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:19:19:956 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:19:24:958 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:19:24:958 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:19:24:958 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:19:24:958 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:19:24:958 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:19:29:959 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:19:29:960 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:19:29:960 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:19:29:960 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:19:29:960 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:19:34:960 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:19:34:960 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:19:34:960 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:19:34:960 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:19:34:960 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:19:39:961 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:19:39:961 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:19:39:961 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:19:39:962 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:19:39:962 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:19:44:963 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:19:44:964 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:19:44:964 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:19:44:964 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:19:44:964 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:19:49:965 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:19:49:965 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:19:49:965 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:19:49:965 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:19:49:965 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:19:54:966 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:19:54:966 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:19:54:966 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:19:54:967 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:19:54:967 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:19:59:967 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:19:59:967 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:19:59:967 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:19:59:967 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:19:59:967 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:20:04:968 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:20:04:968 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:20:04:968 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:20:04:968 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:20:04:968 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:20:09:969 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:20:09:969 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:20:09:969 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:20:09:969 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:20:09:969 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:20:14:970 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:20:14:970 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:20:14:970 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:20:14:970 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:20:14:970 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:20:19:971 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:20:19:971 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:20:19:972 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:20:19:972 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:20:19:972 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:20:24:972 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:20:24:972 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:20:24:972 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:20:24:972 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:20:24:973 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:20:29:973 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:20:29:974 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:20:29:974 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:20:29:974 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:20:29:974 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:20:34:975 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:20:34:975 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:20:34:976 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:20:34:976 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:20:34:976 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:20:39:977 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:20:39:977 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:20:39:977 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:20:39:978 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:20:39:978 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:20:44:978 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:20:44:978 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:20:44:978 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:20:44:979 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:20:44:980 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:20:49:980 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:20:49:980 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:20:49:980 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:20:49:980 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:20:49:980 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:20:54:981 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:20:54:981 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:20:54:982 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:20:54:982 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:20:54:982 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:20:59:982 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:20:59:982 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:20:59:982 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:20:59:983 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:20:59:983 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:21:04:983 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:21:04:984 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:21:04:985 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:21:04:985 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:21:04:985 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:21:09:986 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:21:09:986 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:21:09:986 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:21:09:986 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:21:09:986 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:21:14:986 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:21:14:987 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:21:14:987 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:21:14:987 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:21:14:987 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:21:19:987 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:21:19:987 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:21:19:987 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:21:19:987 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:21:19:988 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:21:24:989 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:21:24:989 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:21:24:989 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:21:24:989 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:21:24:989 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:21:29:989 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:21:29:989 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:21:29:989 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:21:29:990 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:21:29:990 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:21:34:990 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:21:34:990 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:21:34:991 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:21:34:991 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:21:34:991 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:21:39:992 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:21:39:992 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:21:39:992 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:21:39:993 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:21:39:993 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:21:44:993 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:21:44:993 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:21:44:994 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:21:44:994 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:21:44:994 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:21:49:995 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:21:49:995 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:21:49:996 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:21:49:996 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:21:49:996 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:21:54:996 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:21:54:996 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:21:54:996 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:21:54:997 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:21:54:997 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:21:59:998 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:21:59:998 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:21:59:998 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:21:59:998 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:21:59:998 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:22:04:999 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:22:04:999 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:22:04:0 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:22:04:0 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:22:04:0 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:22:10:1 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:22:10:1 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:22:10:1 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:22:10:2 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:22:10:2 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:22:15:2 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:22:15:2 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:22:15:2 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:22:15:2 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:22:15:3 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:22:20:4 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:22:20:5 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:22:20:6 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:22:20:6 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:22:20:6 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:22:25:6 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:22:25:7 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:22:25:7 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:22:25:8 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:22:25:8 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:22:30:10 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:22:30:10 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:22:30:10 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:22:30:11 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:22:30:11 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:22:35:12 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:22:35:12 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:22:35:13 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:22:35:13 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:22:35:13 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:22:40:14 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:22:40:14 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:22:40:15 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:22:40:15 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:22:40:15 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:22:45:15 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:22:45:15 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:22:45:15 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:22:45:16 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:22:45:16 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 02:22:50:17 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 02:22:50:17 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 02:22:50:17 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 02:22:50:17 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 02:22:50:17 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 12:49:32:996 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 12:49:32:996 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 12:49:32:996 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:49:32:996 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 12:49:32:996 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 12:49:37:997 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 12:49:37:997 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 12:49:37:997 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:49:37:997 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 12:49:37:997 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 12:49:40:919 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 12:49:40:919 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 12:49:40:919 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:49:40:919 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 12:49:40:919 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 12:49:45:920 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 12:49:45:920 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 12:49:45:920 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:49:45:920 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 12:49:45:920 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 12:49:50:921 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 12:49:50:921 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 12:49:50:921 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:49:50:921 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 12:49:50:921 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 12:49:55:921 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 12:49:55:921 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 12:49:55:921 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:49:55:921 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 12:49:55:921 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 12:50:00:922 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 12:50:00:922 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 12:50:00:922 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:50:00:922 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 12:50:00:922 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 12:50:05:922 Interbloqueo/(4875:4876): ----------------------------------------------
+[INFO] 12:50:05:922 Interbloqueo/(4875:4876): Empieza a ejecutar el hilo interbloqueo
+[INFO] 12:50:05:922 Interbloqueo/(4875:4876): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:50:05:922 Interbloqueo/(4875:4876): Cargue las matrices
+[INFO] 12:50:05:923 Interbloqueo/(4875:4876): Comprobe deadlock
+[INFO] 12:50:12:193 Interbloqueo/(5335:5336): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:50:17:193 Interbloqueo/(5335:5336): ----------------------------------------------
+[INFO] 12:50:17:193 Interbloqueo/(5335:5336): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:50:22:194 Interbloqueo/(5335:5336): ----------------------------------------------
+[INFO] 12:50:22:194 Interbloqueo/(5335:5336): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:50:27:194 Interbloqueo/(5335:5336): ----------------------------------------------
+[INFO] 12:50:27:195 Interbloqueo/(5335:5336): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:50:32:195 Interbloqueo/(5335:5336): ----------------------------------------------
+[INFO] 12:50:32:195 Interbloqueo/(5335:5336): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 12:50:32:195 Interbloqueo/(5335:5336): El personajes: # esta en deadlock
+[INFO] 12:50:32:195 Interbloqueo/(5335:5336): El personajes: @ esta en deadlock
+[INFO] 12:50:32:195 Interbloqueo/(5335:5336): Los personajes que estan en deadlock son: Ð 
+[INFO] 12:50:37:196 Interbloqueo/(5335:5336): ----------------------------------------------
+[INFO] 12:50:37:197 Interbloqueo/(5335:5336): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 12:50:37:197 Interbloqueo/(5335:5336): El personajes: # esta en deadlock
+[INFO] 12:50:37:197 Interbloqueo/(5335:5336): El personajes: @ esta en deadlock
+[INFO] 12:50:37:197 Interbloqueo/(5335:5336): Los personajes que estan en deadlock son: Ð 
+[INFO] 12:50:42:199 Interbloqueo/(5335:5336): ----------------------------------------------
+[INFO] 12:50:42:200 Interbloqueo/(5335:5336): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 12:50:42:201 Interbloqueo/(5335:5336): El personajes: # esta en deadlock
+[INFO] 12:50:42:201 Interbloqueo/(5335:5336): El personajes: @ esta en deadlock
+[INFO] 12:50:42:201 Interbloqueo/(5335:5336): Los personajes que estan en deadlock son: Ð 
+[INFO] 12:53:16:179 Interbloqueo/(5468:5469): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:53:21:180 Interbloqueo/(5468:5469): ----------------------------------------------
+[INFO] 12:53:21:180 Interbloqueo/(5468:5469): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 12:53:21:180 Interbloqueo/(5468:5469): El personajes: # esta en deadlock
+[INFO] 12:53:21:180 Interbloqueo/(5468:5469): Los personajes que estan en deadlock son: Ð 
+[INFO] 12:53:26:181 Interbloqueo/(5468:5469): ----------------------------------------------
+[INFO] 12:53:26:181 Interbloqueo/(5468:5469): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 12:53:26:181 Interbloqueo/(5468:5469): El personajes: @ esta en deadlock
+[INFO] 12:53:26:181 Interbloqueo/(5468:5469): El personajes: # esta en deadlock
+[INFO] 12:53:26:181 Interbloqueo/(5468:5469): Los personajes que estan en deadlock son: Ð 
+[INFO] 12:53:31:183 Interbloqueo/(5468:5469): ----------------------------------------------
+[INFO] 12:53:31:183 Interbloqueo/(5468:5469): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 12:53:31:183 Interbloqueo/(5468:5469): El personajes: @ ha sido marcado con recursos
+[INFO] 12:53:36:183 Interbloqueo/(5468:5469): ----------------------------------------------
+[INFO] 12:53:36:183 Interbloqueo/(5468:5469): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:53:41:184 Interbloqueo/(5468:5469): ----------------------------------------------
+[INFO] 12:53:41:184 Interbloqueo/(5468:5469): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:53:46:185 Interbloqueo/(5468:5469): ----------------------------------------------
+[INFO] 12:53:46:185 Interbloqueo/(5468:5469): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:54:53:857 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:54:58:857 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:54:58:857 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:55:03:859 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:55:03:859 Interbloqueo/(5530:5531): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 12:55:03:859 Interbloqueo/(5530:5531): El personajes: # esta en deadlock
+[INFO] 12:55:03:859 Interbloqueo/(5530:5531): El personajes: @ esta en deadlock
+[INFO] 12:55:03:859 Interbloqueo/(5530:5531): Los personajes que estan en deadlock son: Ð 
+[INFO] 12:55:08:862 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:55:08:862 Interbloqueo/(5530:5531): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 12:55:08:862 Interbloqueo/(5530:5531): El personajes: # ha sido marcado con recursos
+[INFO] 12:55:08:862 Interbloqueo/(5530:5531): El personajes: @ ha sido marcado con recursos
+[INFO] 12:55:13:863 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:55:13:863 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:55:18:865 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:55:18:865 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:55:23:866 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:55:23:866 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:55:28:868 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:55:28:868 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:55:33:868 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:55:33:868 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:55:38:869 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:55:38:869 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:55:43:869 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:55:43:869 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:55:48:871 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:55:48:871 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:55:53:871 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:55:53:871 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:55:58:872 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:55:58:872 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:56:03:872 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:56:03:872 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:56:08:873 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:56:08:873 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:56:13:873 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:56:13:873 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:56:18:874 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:56:18:874 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:56:23:874 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:56:23:874 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:56:28:876 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:56:28:876 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:56:33:877 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:56:33:877 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:56:38:878 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:56:38:879 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:56:43:880 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:56:43:880 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:56:48:881 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:56:48:882 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:56:53:882 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:56:53:882 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:56:58:883 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:56:58:884 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:57:03:884 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:57:03:885 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:57:08:886 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:57:08:886 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:57:13:886 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:57:13:886 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:57:18:887 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:57:18:887 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:57:23:887 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:57:23:887 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:57:28:888 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:57:28:888 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:57:33:889 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:57:33:889 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:57:38:889 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:57:38:890 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:57:43:894 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:57:43:895 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:57:48:895 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:57:48:895 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:57:53:897 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:57:53:897 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:57:58:898 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:57:58:898 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:58:03:901 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:58:03:901 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:58:08:901 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:58:08:901 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:58:13:902 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:58:13:902 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:58:18:903 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:58:18:903 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:58:23:903 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:58:23:904 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:58:28:904 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:58:28:904 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:58:33:905 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:58:33:905 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:58:38:906 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:58:38:906 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:58:43:906 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:58:43:907 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:58:48:908 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:58:48:908 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:58:53:910 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:58:53:910 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:58:58:911 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:58:58:911 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:59:03:911 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:59:03:911 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:59:08:912 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:59:08:912 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:59:13:913 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:59:13:913 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:59:18:913 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:59:18:914 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:59:23:914 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:59:23:914 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:59:28:914 Interbloqueo/(5530:5531): ----------------------------------------------
+[INFO] 12:59:28:915 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
