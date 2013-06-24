@@ -342,13 +342,14 @@ void matarPersonaje(int fdPersonaje) {
 
 	log_info(logger, "Mande recursos liberados");
 
+	log_info(logger,
+				string_from_format("El personaje: %c ha sido borrado del nivel",
+						personaje->id));
+
 	//borra el personaje del nivel y libera al personaje de listaPersonajes
 	BorrarItem(&ListaItems, personaje->id);
 	borrarPersonajeEnNivel(personaje->id);
 
-	log_info(logger,
-			string_from_format("El personaje: %c ha sido borrado del nivel",
-					personaje->id));
 
 	//re-dibuja el nivel ya sin el personaje y con la cantidad de recursos nueva
 	nivel_gui_dibujar(ListaItems);

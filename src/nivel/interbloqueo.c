@@ -305,10 +305,11 @@ void marcarPersonajesSinRecursos (int *recursosAsignados, char *referenciaPerson
 	* @DESC: marca a los personajes que no tienen recursos asignados
 	*/
 
-	int i,j;
+	int i,j, flag;
 	for(i=0;i<cantPersonajes;i++){
-		int flag=0;
+		flag=0;
 		for(j=0;j<cantRecursos;j++){
+			//si tiene asignado algo... seteo el flag en 1
 			if(recursosAsignados[i*cantRecursos +j]!= 0){
 				flag=1;
 			}
@@ -355,7 +356,6 @@ void marcarPersonajesConRecursos (int *recursosAsignados, int *recursosSolicitad
 			}else{
 				return;
 			}
-
 		}
 
 	//si se encontro, termina el algoritmo
@@ -381,7 +381,7 @@ void comprobarDeadlock (bool marcados[],int cantPersonajes, char referenciaPerso
 	personajesInterbloqueados[j]='\0';
 
 	if(recovery && personajesInterbloqueados[0]!='\0'){
-		log_info(loggerInterbloqueo, string_from_format("Los personajes que estan en deadlock son: %c ", personajesInterbloqueados));
+		log_info(loggerInterbloqueo, string_from_format("Los personajes que estan en deadlock son: %s ", personajesInterbloqueados));
 		mandarMensaje(clientCCB.sockfd,REQUEST_INTERBLOQUEO,strlen(personajesInterbloqueados)+1,personajesInterbloqueados);
 	}
 }
