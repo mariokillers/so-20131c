@@ -510,8 +510,6 @@ PersonajeEnNivel* cargarPersonajeEnNivel(Personaje* miPersonaje) {
 
 	personaje->recursoPendiente = '\0';
 
-	personaje->marcado = false;
-
 	personaje->sig = listaPersonajes;
 	listaPersonajes = personaje;
 

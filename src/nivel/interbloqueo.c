@@ -24,7 +24,6 @@ void *interbloqueo(void* a){
 			free(marcados);*/
 			return NULL;
 		}
-		log_info(loggerInterbloqueo, "Empieza a ejecutar el hilo interbloqueo");
 
 			//entro en la region critica
 			pthread_mutex_lock(&mutex);
@@ -62,12 +61,10 @@ void *interbloqueo(void* a){
 			cargarRecursosSolicitados(cantRecursos,recursosSolicitados, referenciaRecursos, referenciaPersonaje);
 			cargarRecursosAsignados(cantRecursos,recursosAsignados, referenciaRecursos, referenciaPersonaje);
 
-			log_info(loggerInterbloqueo, "Cargue las matrices");
 
 			marcarPersonajesSinRecursos(recursosAsignados,referenciaPersonaje,marcados,cantPersonajes, cantRecursos);
 			marcarPersonajesConRecursos(recursosAsignados, recursosSolicitados, recursosDisponibles, marcados,cantPersonajes, cantRecursos, referenciaPersonaje);
 			comprobarDeadlock(marcados,cantPersonajes, referenciaPersonaje);
-			log_info(loggerInterbloqueo, "Comprobe deadlock");
 
 			free(aux);
 			free(recursosAsignados);
@@ -367,7 +364,6 @@ void marcarPersonajesConRecursos (int *recursosAsignados, int *recursosSolicitad
 }
 
 void comprobarDeadlock (bool marcados[],int cantPersonajes, char referenciaPersonaje[]){
-	//CHEQUEAR INOTIFY
 
 	int i,j;
 	j=0;
@@ -375,7 +371,6 @@ void comprobarDeadlock (bool marcados[],int cantPersonajes, char referenciaPerso
 	//recorremos el vector de marcados
 	for(i=0;i < cantPersonajes;i++){
 		if(marcados[i]==false){
-			log_info(loggerInterbloqueo, "Hay personaje en deadlock");
 			//Si el personaje no esta marcado, esta comprometido en un deadlock.
 			personajesInterbloqueados[j]=referenciaPersonaje[i];
 			log_info(loggerInterbloqueo, string_from_format("El personajes: %c esta en deadlock", referenciaPersonaje[i]));
@@ -386,6 +381,7 @@ void comprobarDeadlock (bool marcados[],int cantPersonajes, char referenciaPerso
 	personajesInterbloqueados[j]='\0';
 
 	if(recovery && personajesInterbloqueados[0]!='\0'){
+		log_info(loggerInterbloqueo, string_from_format("Los personajes que estan en deadlock son: %c ", personajesInterbloqueados));
 		mandarMensaje(clientCCB.sockfd,REQUEST_INTERBLOQUEO,strlen(personajesInterbloqueados)+1,personajesInterbloqueados);
 	}
 }

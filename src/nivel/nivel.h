@@ -34,8 +34,6 @@ typedef struct PersonajeEnNivel{
 
 	char recursoPendiente;
 
-	bool marcado;
-
 	struct PersonajeEnNivel *sig;
 
 	int fd;
