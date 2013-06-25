@@ -243,7 +243,7 @@ void cargarRecursosSolicitados(int cantRecursos, int *recursosSolicitados, char 
 		//cargo el recurso que solicito el personaje
 		recurso = personaje->recursoPendiente;
 
-		if(recurso != '/0'){
+		if(recurso != '\0'){
 
 					//busco la posicion del personaje y el recurso en el vector de referencia
 					posPersonaje = buscarEnReferenciaPersonaje(personaje->id,referenciaPersonaje );
