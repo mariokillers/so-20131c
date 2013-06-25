@@ -29,18 +29,17 @@ t_memoria crear_memoria(int tamanio) {
 	tamanio_segmento = tamanio;
 	ultimo_ingreso = 0;
 
+	segmento = malloc(tamanio);
+
 	//inicio una particion inicial vacia que ocupe toodo el segmento y la agrego a la lista de particiones
 	t_particion *part = malloc(sizeof(t_particion));
 	part->id = '#';
 	part->inicio = 0;
 	part->tamanio = tamanio;
 	part->libre = true;
+	part->dato = segmento;
 
 	list_add(list_particiones, part);
-
-	segmento = malloc(tamanio);
-
-//	printf("SEGMENTO CREADO DE TAMANIO %d\n", tamanio_segmento);
 
 	return segmento;
 }
@@ -49,7 +48,6 @@ int almacenar_particion(t_memoria segmento, char id, int tamanio, char* contenid
 
 	t_particion *particion = malloc(sizeof(t_particion));
 	t_particion *auxParticion;
-	t_particion *part_useless;
 	int validacion = buscarSegmentoLibre(segmento, tamanio);//devuelve una posicion en la lista, no la posicion inicial
 
 	//validaciones de tamanio e id
@@ -76,19 +74,20 @@ int almacenar_particion(t_memoria segmento, char id, int tamanio, char* contenid
 
 	//si el tamanio de la particion nueva es igual al de la vieja, la reemplazo
 	if(tamanio == auxParticion->tamanio){
-		part_useless = list_replace(list_particiones, ultimo_ingreso, particion);
+		list_replace(list_particiones, ultimo_ingreso, particion);
 	//si el tamanio es menor, agrego la particion nueva en esa posicion y modifico la vieja
 	}else{
 		auxParticion->inicio = (particion->inicio + particion->tamanio);
 		auxParticion->libre = true;
 		auxParticion->tamanio = (auxParticion->tamanio - particion->tamanio);
 		auxParticion->id = '#';
+		auxParticion->dato = (segmento+auxParticion->inicio);
 
 		//agrego la nueva particion
 		list_add_in_index(list_particiones, ultimo_ingreso, particion);
 
 		//reemplazo la particion vieja libre con la nueva actualizada
-		part_useless = list_replace(list_particiones, (ultimo_ingreso + 1), auxParticion);
+		list_replace(list_particiones, (ultimo_ingreso + 1), auxParticion);
 	}
 
 	//copio el contenido al segmento
@@ -152,13 +151,12 @@ int eliminar_particion(t_memoria segmento, char id) {
 	int i = 0;
 	int len = list_size(list_particiones);
 	t_particion *aux;
-	t_particion *part_useless;
 	while(i<len){
 		aux = list_get(list_particiones, i);
 		if(aux->id == id){
 			aux->libre = true;
 			aux->id = '#';
-			part_useless = list_replace(list_particiones, i, aux);
+			list_replace(list_particiones, i, aux);
 			return 1;
 		} else{
 			i++;
