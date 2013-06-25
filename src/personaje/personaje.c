@@ -619,9 +619,9 @@ t_personaje *create_personaje(t_config *p) {
 	personaje->orquestador->PORT = tomarPuerto(
 			config_get_string_value(p, "orquestador"));
 
-	personaje->posActual->POS_X = 0;
+	personaje->posActual->POS_X = 1;
 
-	personaje->posActual->POS_Y = 0;
+	personaje->posActual->POS_Y = 1;
 
 	return personaje;
 }
@@ -834,9 +834,9 @@ void llegoRecurso(){
 						nombreNivelActual));
 
 		((Posicion*) (personaje->posActual))->POS_X =
-				0;
+				1;
 		((Posicion*) (personaje->posActual))->POS_Y =
-				0;
+				1;
 
 		//personaje se desconecta del nivel actual y loggea la desconexion
 		close(nivelCCB.sockfd);
