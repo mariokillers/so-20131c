@@ -57,7 +57,7 @@ void *interbloqueo(void* a){
 
 			//inicializo log vectores-matrices
 			cargarRecursosTotales(recursosTotales, cantRecursos, referenciaRecursos);
-			cargarRecursosDisponibles(aux, referenciaRecursos);
+			cargarRecursosDisponibles(recursosDisponibles, referenciaRecursos);
 			cargarRecursosSolicitados(cantRecursos,recursosSolicitados, referenciaRecursos, referenciaPersonaje);
 			cargarRecursosAsignados(cantRecursos,recursosAsignados, referenciaRecursos, referenciaPersonaje);
 
@@ -78,7 +78,7 @@ void *interbloqueo(void* a){
 			pthread_mutex_unlock(&mutex);
 			//salgo de la region critica
 
-			usleep(recovery_time);
+			sleep(recovery_time);
 			log_info(loggerInterbloqueo, "----------------------------------------------");
 	}
 	return NULL;
@@ -332,6 +332,8 @@ void marcarPersonajesConRecursos (int *recursosAsignados, int *recursosSolicitad
 		for(i=0;i<cantPersonajes;i++){
 			asignacionImposible=0;
 
+			if(marcados[i]==false){
+
 			//recorremos recursos del personaje actual
 			for(j=0;j<cantRecursos;j++){
 				//verifico que haya recursos susficientes para satisfacer el pedido
@@ -354,6 +356,7 @@ void marcarPersonajesConRecursos (int *recursosAsignados, int *recursosSolicitad
 				}
 			}else{
 				return;
+			}
 			}
 		}
 
