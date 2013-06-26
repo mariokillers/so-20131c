@@ -189,7 +189,8 @@ void cargarRecursosTotales(int *recursosTotales, int cantRecursos , char *refere
 	* @DESC: completa el vector con la cantidad de recursos que hay en total
 	*/
 
-	int i, pos;
+	int i;
+	int pos =-1;
 
 	ITEM_NIVEL *recurso = recursosIniciales;
 
@@ -210,7 +211,7 @@ void cargarRecursosDisponibles(int recursosDisponibles[], char referenciaRecurso
 	* @DESC: completa el vector con la cantidad de recursos que quedan sin asignar
 	*/
 
-	int pos;
+	int pos =-1;
 
 	ITEM_NIVEL *recurso = ListaItems;
 
@@ -236,22 +237,35 @@ void cargarRecursosSolicitados(int cantRecursos, int *recursosSolicitados, char 
 	PersonajeEnNivel *personaje = listaPersonajes;
 	char recurso;
 
-	int posPersonaje, posRecurso;
+	int posPersonaje = -1;
+	int posRecurso = -1;
 
 	while(personaje != NULL){
 
 		//cargo el recurso que solicito el personaje
 		recurso = personaje->recursoPendiente;
 
-		if(recurso != '\0'){
+		if(recurso != NULL){
+					log_info(logger,
+									string_from_format("El recurso pendiente es: %c",
+									recurso));
 
 					//busco la posicion del personaje y el recurso en el vector de referencia
 					posPersonaje = buscarEnReferenciaPersonaje(personaje->id,referenciaPersonaje );
+					log_info(logger,
+									string_from_format("La pos del personaje es: %d",
+											posPersonaje));
 
 					posRecurso = buscarEnReferenciaRecurso(recurso, referenciaRecurso);
+					log_info(logger,
+									string_from_format("La pos del recurso es: %d",
+											posRecurso));
 
-					//en la fila del personaje, en la columna del recurso, pongo un 1 que es el recurso que solicito
-					recursosSolicitados[posPersonaje*cantRecursos + posRecurso]= 1;
+					if((posRecurso != -1) && (posPersonaje != -1)){
+						//en la fila del personaje, en la columna del recurso, pongo un 1 que es el recurso que solicito
+						recursosSolicitados[posPersonaje*cantRecursos + posRecurso]= 1;
+					}
+
 		}
 		personaje = personaje->sig;
 	}
@@ -262,13 +276,13 @@ void cargarRecursosAsignados(int cantRecursos,int *recursosAsignados, char *refe
 	* @DESC: carga la matriz dependiendo de los recursos que tiene asignado cada personaje
 	*/
 
-	int posPersonaje, posRecurso;
+	int posPersonaje = -1;
+	int posRecurso = -1;
 
 	PersonajeEnNivel *personaje = listaPersonajes;
 
 	while(personaje != NULL){
 		posPersonaje = buscarEnReferenciaPersonaje(personaje->id,referenciaPersonaje );
-
 		//recorro la lista de recursos de ese personaje
 		t_recursos *recurso = personaje->recursos;
 
@@ -311,7 +325,7 @@ void marcarPersonajesConRecursos (int *recursosAsignados, int *recursosSolicitad
 	/*@NAME: marcarPersonajesConRecursos
 	* @DESC: marca a los personajes que pueden ejecutar
 	*/
-	int i,j,k,asignacionImposible;
+	int i,j,asignacionImposible, flagTerminar;
 	//do{
 		//flagTerminar=0;
 		//recorremos personajes
@@ -329,7 +343,7 @@ void marcarPersonajesConRecursos (int *recursosAsignados, int *recursosSolicitad
 			}
 
 			//es posible ejecutar el personaje
-			if(asignacionImposible == 0){
+			if(!asignacionImposible){
 				//SI ENCUENTRA UNO QUE PUEDA EJECUTAR, SETEA PARA CONTINUAR EL ALGORTIMO
 				//flagTerminar=1;
 				marcados[i]=true;
@@ -337,8 +351,8 @@ void marcarPersonajesConRecursos (int *recursosAsignados, int *recursosSolicitad
 				log_info(loggerInterbloqueo, string_from_format("El personajes: %c ha sido marcado con recursos", referenciaPersonaje[i]));
 
 				//si se puede ejecutar, actualizo el disponible
-				for(k=0;k<cantRecursos;k++){
-					recursosDisponibles[k]+=recursosAsignados[i* cantRecursos +k];
+				for(j=0;j<cantRecursos;j++){
+					recursosDisponibles[j]+=recursosAsignados[i* cantRecursos +j];
 				}
 			}else{
 				return;
@@ -358,7 +372,7 @@ void comprobarDeadlock (bool marcados[],int cantPersonajes, char referenciaPerso
 	char personajesInterbloqueados[cantPersonajes+1];
 	//recorremos el vector de marcados
 	for(i=0;i < cantPersonajes;i++){
-		if(marcados[i]== false){
+		if(marcados[i]==false){
 			//Si el personaje no esta marcado, esta comprometido en un deadlock.
 			personajesInterbloqueados[j]=referenciaPersonaje[i];
 			log_info(loggerInterbloqueo, string_from_format("El personajes: %c esta en deadlock", referenciaPersonaje[i]));
@@ -368,10 +382,8 @@ void comprobarDeadlock (bool marcados[],int cantPersonajes, char referenciaPerso
 	}
 	personajesInterbloqueados[j]='\0';
 
-	log_info(loggerInterbloqueo, string_from_format("Los personajes que estan en deadlock son: %s ", personajesInterbloqueados));
-
-	if(recovery){
+	if(recovery && personajesInterbloqueados[0]!='\0'){
+		log_info(loggerInterbloqueo, string_from_format("Los personajes que estan en deadlock son: %s ", personajesInterbloqueados));
 		mandarMensaje(clientCCB.sockfd,REQUEST_INTERBLOQUEO,strlen(personajesInterbloqueados)+1,personajesInterbloqueados);
 	}
 }
-

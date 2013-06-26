@@ -1476,3 +1476,42 @@
 [INFO] 12:59:23:914 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
 [INFO] 12:59:28:914 Interbloqueo/(5530:5531): ----------------------------------------------
 [INFO] 12:59:28:915 Interbloqueo/(5530:5531): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:15:25:271 Interbloqueo/(7543:7544): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:15:25:271 Interbloqueo/(7543:7544): Los personajes que estan en deadlock son:  
+[INFO] 12:15:29:272 Interbloqueo/(7543:7544): ----------------------------------------------
+[INFO] 12:15:29:272 Interbloqueo/(7543:7544): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:15:29:272 Interbloqueo/(7543:7544): Los personajes que estan en deadlock son:  
+[INFO] 12:15:33:272 Interbloqueo/(7543:7544): ----------------------------------------------
+[INFO] 12:15:33:273 Interbloqueo/(7543:7544): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:15:33:273 Interbloqueo/(7543:7544): Los personajes que estan en deadlock son:  
+[INFO] 12:17:27:435 Interbloqueo/(7681:7682): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:17:31:435 Interbloqueo/(7681:7682): ----------------------------------------------
+[INFO] 12:17:31:436 Interbloqueo/(7681:7682): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:17:35:437 Interbloqueo/(7681:7682): ----------------------------------------------
+[INFO] 12:17:35:437 Interbloqueo/(7681:7682): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:17:39:437 Interbloqueo/(7681:7682): ----------------------------------------------
+[INFO] 12:17:39:438 Interbloqueo/(7681:7682): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:17:43:438 Interbloqueo/(7681:7682): ----------------------------------------------
+[INFO] 12:17:43:438 Interbloqueo/(7681:7682): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:17:47:440 Interbloqueo/(7681:7682): ----------------------------------------------
+[INFO] 12:17:47:440 Interbloqueo/(7681:7682): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:17:51:441 Interbloqueo/(7681:7682): ----------------------------------------------
+[INFO] 12:17:51:441 Interbloqueo/(7681:7682): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:17:55:442 Interbloqueo/(7681:7682): ----------------------------------------------
+[INFO] 12:17:55:442 Interbloqueo/(7681:7682): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 12:17:59:442 Interbloqueo/(7681:7682): ----------------------------------------------
+[INFO] 12:17:59:442 Interbloqueo/(7681:7682): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 12:17:59:442 Interbloqueo/(7681:7682): El personajes: # ha sido marcado sin recursos
+[INFO] 12:17:59:442 Interbloqueo/(7681:7682): El personajes: @ ha sido marcado sin recursos
+[INFO] 12:18:03:482 Interbloqueo/(7681:7682): ----------------------------------------------
+[INFO] 12:18:03:483 Interbloqueo/(7681:7682): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 12:18:03:483 Interbloqueo/(7681:7682): El personajes: # ha sido marcado con recursos
+[INFO] 12:18:03:483 Interbloqueo/(7681:7682): El personajes: @ ha sido marcado con recursos
+[INFO] 12:18:07:483 Interbloqueo/(7681:7682): ----------------------------------------------
+[INFO] 12:18:07:483 Interbloqueo/(7681:7682): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 12:18:07:483 Interbloqueo/(7681:7682): El personajes: # esta en deadlock
+[INFO] 12:18:07:483 Interbloqueo/(7681:7682): El personajes: @ esta en deadlock
+[INFO] 12:18:07:483 Interbloqueo/(7681:7682): Los personajes que estan en deadlock son: #@ 
+[INFO] 12:18:11:490 Interbloqueo/(7681:7682): ----------------------------------------------
+[INFO] 12:18:11:490 Interbloqueo/(7681:7682): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 12:18:11:490 Interbloqueo/(7681:7682): El personajes: # ha sido marcado con recursos

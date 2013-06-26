@@ -6965,3 +6965,762 @@
 [INFO] 12:55:12:560 ProcesoNivel/(5530:5530): El personaje: à ha sido borrado del nivel
 [INFO] 12:55:12:560 ProcesoNivel/(5530:5530): ----------------------------------------------
 [INFO] 12:55:12:560 ProcesoNivel/(5530:5530): Esperando Mensaje
+[INFO] 12:15:25:266 ProcesoNivel/(7543:7543): El nivel se conecto al puerto: 5000
+[INFO] 12:15:25:267 ProcesoNivel/(7543:7543): El nivel: Nivel1 le hizo HANDSHAKE al socket: 7
+[INFO] 12:15:25:267 ProcesoNivel/(7543:7543): El recovery esta activado
+[INFO] 12:15:25:269 ProcesoNivel/(7543:7543): Esperando Mensaje
+[INFO] 12:17:27:431 ProcesoNivel/(7681:7681): El nivel se conecto al puerto: 5000
+[INFO] 12:17:27:431 ProcesoNivel/(7681:7681): El nivel: Nivel1 le hizo HANDSHAKE al socket: 7
+[INFO] 12:17:27:432 ProcesoNivel/(7681:7681): El recovery esta activado
+[INFO] 12:17:27:434 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:55:832 ProcesoNivel/(7681:7681): Recibi HANDSHAKE del personaje: P@
+[INFO] 12:17:55:833 ProcesoNivel/(7681:7681): Se dibujo el personaje: @ en la pos (0,0)
+[INFO] 12:17:55:833 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:55:833 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:56:119 ProcesoNivel/(7681:7681): Recibi HANDSHAKE del personaje: P#
+[INFO] 12:17:56:119 ProcesoNivel/(7681:7681): Se dibujo el personaje: # en la pos (0,0)
+[INFO] 12:17:56:119 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:56:119 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:56:321 ProcesoNivel/(7681:7681): Recibi REQUEST_POS_RECURSO
+[INFO] 12:17:56:321 ProcesoNivel/(7681:7681): El recurso pedido es: H
+[INFO] 12:17:56:322 ProcesoNivel/(7681:7681): Mando la posicion del recurso H: (4,23)
+[INFO] 12:17:56:322 ProcesoNivel/(7681:7681): Mande la posicion del recurso: H al personaje: @
+[INFO] 12:17:56:322 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:56:322 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:56:322 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:56:322 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (2,1)
+[INFO] 12:17:56:323 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(2,1)
+[INFO] 12:17:56:323 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:56:323 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:56:361 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:56:362 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (3,1)
+[INFO] 12:17:56:362 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(3,1)
+[INFO] 12:17:56:362 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:56:362 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:56:362 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:56:362 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (4,1)
+[INFO] 12:17:56:362 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(4,1)
+[INFO] 12:17:56:362 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:56:362 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:56:526 ProcesoNivel/(7681:7681): Recibi REQUEST_POS_RECURSO
+[INFO] 12:17:56:526 ProcesoNivel/(7681:7681): El recurso pedido es: F
+[INFO] 12:17:56:526 ProcesoNivel/(7681:7681): Mando la posicion del recurso F: (23,4)
+[INFO] 12:17:56:526 ProcesoNivel/(7681:7681): Mande la posicion del recurso: F al personaje: #
+[INFO] 12:17:56:526 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:56:526 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:56:527 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:56:527 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (2,1)
+[INFO] 12:17:56:527 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(2,1)
+[INFO] 12:17:56:527 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:56:527 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:56:566 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:56:567 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (3,1)
+[INFO] 12:17:56:567 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(3,1)
+[INFO] 12:17:56:567 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:56:567 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:56:567 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:56:567 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (4,1)
+[INFO] 12:17:56:567 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(4,1)
+[INFO] 12:17:56:567 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:56:567 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:56:731 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:56:731 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (4,2)
+[INFO] 12:17:56:731 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(4,2)
+[INFO] 12:17:56:731 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:56:731 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:56:731 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:56:731 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (4,3)
+[INFO] 12:17:56:732 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(4,3)
+[INFO] 12:17:56:732 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:56:732 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:56:732 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:56:732 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (4,4)
+[INFO] 12:17:56:732 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(4,4)
+[INFO] 12:17:56:732 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:56:732 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:56:934 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:56:934 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (5,1)
+[INFO] 12:17:56:934 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(5,1)
+[INFO] 12:17:56:934 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:56:934 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:56:935 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:56:935 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (6,1)
+[INFO] 12:17:56:935 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(6,1)
+[INFO] 12:17:56:935 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:56:935 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:56:936 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:56:936 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (7,1)
+[INFO] 12:17:56:936 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(7,1)
+[INFO] 12:17:56:936 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:56:936 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:57:138 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:57:138 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (4,5)
+[INFO] 12:17:57:138 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(4,5)
+[INFO] 12:17:57:138 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:57:139 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:57:139 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:57:139 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (4,6)
+[INFO] 12:17:57:139 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(4,6)
+[INFO] 12:17:57:139 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:57:139 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:57:141 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:57:142 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (4,7)
+[INFO] 12:17:57:142 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(4,7)
+[INFO] 12:17:57:142 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:57:142 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:57:342 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:57:343 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (8,1)
+[INFO] 12:17:57:343 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(8,1)
+[INFO] 12:17:57:343 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:57:343 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:57:343 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:57:344 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (9,1)
+[INFO] 12:17:57:344 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(9,1)
+[INFO] 12:17:57:344 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:57:344 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:57:344 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:57:345 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (10,1)
+[INFO] 12:17:57:345 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(10,1)
+[INFO] 12:17:57:345 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:57:345 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:57:546 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:57:546 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (4,8)
+[INFO] 12:17:57:546 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(4,8)
+[INFO] 12:17:57:546 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:57:546 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:57:547 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:57:547 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (4,9)
+[INFO] 12:17:57:547 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(4,9)
+[INFO] 12:17:57:547 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:57:548 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:57:548 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:57:548 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (4,10)
+[INFO] 12:17:57:548 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(4,10)
+[INFO] 12:17:57:548 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:57:548 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:57:750 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:57:750 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (11,1)
+[INFO] 12:17:57:750 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(11,1)
+[INFO] 12:17:57:751 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:57:751 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:57:752 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:57:752 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (12,1)
+[INFO] 12:17:57:752 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(12,1)
+[INFO] 12:17:57:752 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:57:752 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:57:753 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:57:753 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (13,1)
+[INFO] 12:17:57:753 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(13,1)
+[INFO] 12:17:57:753 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:57:753 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:57:956 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:57:956 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (4,11)
+[INFO] 12:17:57:956 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(4,11)
+[INFO] 12:17:57:956 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:57:956 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:57:957 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:57:957 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (4,12)
+[INFO] 12:17:57:957 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(4,12)
+[INFO] 12:17:57:957 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:57:957 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:57:958 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:57:958 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (4,13)
+[INFO] 12:17:57:958 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(4,13)
+[INFO] 12:17:57:958 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:57:958 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:58:160 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:58:161 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (14,1)
+[INFO] 12:17:58:161 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(14,1)
+[INFO] 12:17:58:161 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:58:161 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:58:162 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:58:162 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (15,1)
+[INFO] 12:17:58:162 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(15,1)
+[INFO] 12:17:58:162 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:58:162 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:58:163 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:58:163 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (16,1)
+[INFO] 12:17:58:163 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(16,1)
+[INFO] 12:17:58:163 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:58:163 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:58:365 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:58:365 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (4,14)
+[INFO] 12:17:58:365 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(4,14)
+[INFO] 12:17:58:366 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:58:366 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:58:366 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:58:366 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (4,15)
+[INFO] 12:17:58:366 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(4,15)
+[INFO] 12:17:58:366 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:58:366 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:58:366 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:58:367 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (4,16)
+[INFO] 12:17:58:367 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(4,16)
+[INFO] 12:17:58:367 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:58:367 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:58:568 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:58:568 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (17,1)
+[INFO] 12:17:58:568 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(17,1)
+[INFO] 12:17:58:568 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:58:568 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:58:569 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:58:569 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (18,1)
+[INFO] 12:17:58:569 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(18,1)
+[INFO] 12:17:58:569 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:58:569 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:58:618 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:58:619 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (19,1)
+[INFO] 12:17:58:619 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(19,1)
+[INFO] 12:17:58:619 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:58:619 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:58:879 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:58:879 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (4,17)
+[INFO] 12:17:58:879 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(4,17)
+[INFO] 12:17:58:879 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:58:879 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:58:881 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:58:881 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (4,18)
+[INFO] 12:17:58:882 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(4,18)
+[INFO] 12:17:58:882 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:58:882 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:58:882 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:58:882 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (4,19)
+[INFO] 12:17:58:882 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(4,19)
+[INFO] 12:17:58:882 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:58:882 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:59:84 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:59:84 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (20,1)
+[INFO] 12:17:59:84 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(20,1)
+[INFO] 12:17:59:84 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:59:84 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:59:85 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:59:85 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (21,1)
+[INFO] 12:17:59:85 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(21,1)
+[INFO] 12:17:59:85 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:59:85 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:59:86 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:59:86 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (22,1)
+[INFO] 12:17:59:86 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(22,1)
+[INFO] 12:17:59:86 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:59:86 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:59:288 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:59:289 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (4,20)
+[INFO] 12:17:59:289 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(4,20)
+[INFO] 12:17:59:289 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:59:289 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:59:289 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:59:290 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (4,21)
+[INFO] 12:17:59:290 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(4,21)
+[INFO] 12:17:59:290 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:59:290 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:59:291 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:59:291 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (4,22)
+[INFO] 12:17:59:291 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(4,22)
+[INFO] 12:17:59:291 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:59:291 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:59:493 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:59:493 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (23,1)
+[INFO] 12:17:59:493 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(23,1)
+[INFO] 12:17:59:493 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:59:493 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:59:494 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:59:494 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (23,2)
+[INFO] 12:17:59:494 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(23,2)
+[INFO] 12:17:59:494 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:59:494 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:59:643 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:59:643 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (23,3)
+[INFO] 12:17:59:643 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(23,3)
+[INFO] 12:17:59:643 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:59:643 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:59:845 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:59:845 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (4,23)
+[INFO] 12:17:59:845 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(4,23)
+[INFO] 12:17:59:845 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:59:845 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:59:845 ProcesoNivel/(7681:7681): Recibi REQUEST_RECURSO
+[INFO] 12:17:59:845 ProcesoNivel/(7681:7681): El personaje: @ me pidio el recurso:H
+[INFO] 12:17:59:845 ProcesoNivel/(7681:7681): La posicion del personaje: @ es:(4,23) y la posicion del recurso: H es:(4,23) y su cantidad: 1
+[INFO] 12:17:59:845 ProcesoNivel/(7681:7681): El personaje puede tomar el recurso
+[INFO] 12:17:59:845 ProcesoNivel/(7681:7681): El personaje:@ pudo obtener el recurso:H
+[INFO] 12:17:59:845 ProcesoNivel/(7681:7681): Resto el recurso: H de ListaItems
+[INFO] 12:17:59:845 ProcesoNivel/(7681:7681): El personaje no tenia recursos.El recurso: H se agrega al personaje: @
+[INFO] 12:17:59:845 ProcesoNivel/(7681:7681): Se agrega recurso: H al personaje: @
+[INFO] 12:17:59:846 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:59:846 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:59:847 ProcesoNivel/(7681:7681): Recibi REQUEST_POS_RECURSO
+[INFO] 12:17:59:847 ProcesoNivel/(7681:7681): El recurso pedido es: F
+[INFO] 12:17:59:847 ProcesoNivel/(7681:7681): Mando la posicion del recurso F: (23,4)
+[INFO] 12:17:59:847 ProcesoNivel/(7681:7681): Mande la posicion del recurso: F al personaje: @
+[INFO] 12:17:59:847 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:59:847 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:59:847 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:59:847 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (5,23)
+[INFO] 12:17:59:847 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(5,23)
+[INFO] 12:17:59:848 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:59:848 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:17:59:885 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:17:59:886 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (6,23)
+[INFO] 12:17:59:886 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(6,23)
+[INFO] 12:17:59:886 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:17:59:886 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:00:50 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:00:50 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (23,4)
+[INFO] 12:18:00:50 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(23,4)
+[INFO] 12:18:00:50 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:00:50 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:00:50 ProcesoNivel/(7681:7681): Recibi REQUEST_RECURSO
+[INFO] 12:18:00:50 ProcesoNivel/(7681:7681): El personaje: # me pidio el recurso:F
+[INFO] 12:18:00:50 ProcesoNivel/(7681:7681): La posicion del personaje: # es:(23,4) y la posicion del recurso: F es:(23,4) y su cantidad: 1
+[INFO] 12:18:00:50 ProcesoNivel/(7681:7681): El personaje puede tomar el recurso
+[INFO] 12:18:00:50 ProcesoNivel/(7681:7681): El personaje:# pudo obtener el recurso:F
+[INFO] 12:18:00:51 ProcesoNivel/(7681:7681): Resto el recurso: F de ListaItems
+[INFO] 12:18:00:51 ProcesoNivel/(7681:7681): El personaje no tenia recursos.El recurso: F se agrega al personaje: #
+[INFO] 12:18:00:51 ProcesoNivel/(7681:7681): Se agrega recurso: F al personaje: #
+[INFO] 12:18:00:51 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:00:51 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:00:52 ProcesoNivel/(7681:7681): Recibi REQUEST_POS_RECURSO
+[INFO] 12:18:00:52 ProcesoNivel/(7681:7681): El recurso pedido es: H
+[INFO] 12:18:00:52 ProcesoNivel/(7681:7681): Mando la posicion del recurso H: (4,23)
+[INFO] 12:18:00:52 ProcesoNivel/(7681:7681): Mande la posicion del recurso: H al personaje: #
+[INFO] 12:18:00:52 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:00:53 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:00:53 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:00:53 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (22,4)
+[INFO] 12:18:00:53 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(22,4)
+[INFO] 12:18:00:53 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:00:53 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:00:89 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:00:90 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (21,4)
+[INFO] 12:18:00:90 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(21,4)
+[INFO] 12:18:00:90 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:00:90 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:00:257 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:00:257 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (7,23)
+[INFO] 12:18:00:257 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(7,23)
+[INFO] 12:18:00:257 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:00:257 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:00:258 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:00:258 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (8,23)
+[INFO] 12:18:00:258 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(8,23)
+[INFO] 12:18:00:258 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:00:258 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:00:259 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:00:259 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (9,23)
+[INFO] 12:18:00:259 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(9,23)
+[INFO] 12:18:00:259 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:00:259 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:00:461 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:00:465 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (20,4)
+[INFO] 12:18:00:465 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(20,4)
+[INFO] 12:18:00:465 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:00:465 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:00:465 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:00:465 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (19,4)
+[INFO] 12:18:00:465 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(19,4)
+[INFO] 12:18:00:465 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:00:465 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:00:466 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:00:466 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (18,4)
+[INFO] 12:18:00:466 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(18,4)
+[INFO] 12:18:00:466 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:00:466 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:00:666 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:00:666 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (10,23)
+[INFO] 12:18:00:667 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(10,23)
+[INFO] 12:18:00:667 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:00:667 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:00:667 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:00:667 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (11,23)
+[INFO] 12:18:00:667 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(11,23)
+[INFO] 12:18:00:667 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:00:667 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:00:672 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:00:672 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (12,23)
+[INFO] 12:18:00:673 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(12,23)
+[INFO] 12:18:00:673 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:00:673 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:00:871 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:00:871 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (17,4)
+[INFO] 12:18:00:871 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(17,4)
+[INFO] 12:18:00:871 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:00:871 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:00:874 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:00:875 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (16,4)
+[INFO] 12:18:00:875 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(16,4)
+[INFO] 12:18:00:875 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:00:875 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:00:876 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:00:876 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (15,4)
+[INFO] 12:18:00:876 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(15,4)
+[INFO] 12:18:00:876 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:00:876 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:01:78 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:01:78 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (13,23)
+[INFO] 12:18:01:78 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(13,23)
+[INFO] 12:18:01:78 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:01:78 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:01:78 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:01:78 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (14,23)
+[INFO] 12:18:01:78 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(14,23)
+[INFO] 12:18:01:78 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:01:78 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:01:79 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:01:80 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (15,23)
+[INFO] 12:18:01:80 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(15,23)
+[INFO] 12:18:01:80 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:01:80 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:01:281 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:01:281 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (14,4)
+[INFO] 12:18:01:281 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(14,4)
+[INFO] 12:18:01:281 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:01:281 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:01:288 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:01:288 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (13,4)
+[INFO] 12:18:01:288 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(13,4)
+[INFO] 12:18:01:288 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:01:288 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:01:288 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:01:288 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (12,4)
+[INFO] 12:18:01:288 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(12,4)
+[INFO] 12:18:01:288 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:01:288 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:01:488 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:01:489 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (16,23)
+[INFO] 12:18:01:489 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(16,23)
+[INFO] 12:18:01:489 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:01:489 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:01:490 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:01:490 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (17,23)
+[INFO] 12:18:01:490 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(17,23)
+[INFO] 12:18:01:490 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:01:490 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:01:491 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:01:491 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (18,23)
+[INFO] 12:18:01:491 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(18,23)
+[INFO] 12:18:01:491 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:01:491 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:01:693 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:01:694 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (11,4)
+[INFO] 12:18:01:694 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(11,4)
+[INFO] 12:18:01:694 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:01:694 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:01:694 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:01:694 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (10,4)
+[INFO] 12:18:01:694 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(10,4)
+[INFO] 12:18:01:694 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:01:694 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:01:695 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:01:696 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (9,4)
+[INFO] 12:18:01:696 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(9,4)
+[INFO] 12:18:01:696 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:01:696 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:01:5 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:02:6 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (19,23)
+[INFO] 12:18:02:6 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(19,23)
+[INFO] 12:18:02:6 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:02:6 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:02:8 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:02:8 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (20,23)
+[INFO] 12:18:02:8 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(20,23)
+[INFO] 12:18:02:8 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:02:8 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:02:9 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:02:9 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (21,23)
+[INFO] 12:18:02:9 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(21,23)
+[INFO] 12:18:02:9 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:02:9 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:02:211 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:02:212 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (8,4)
+[INFO] 12:18:02:212 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(8,4)
+[INFO] 12:18:02:212 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:02:212 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:02:212 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:02:213 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (7,4)
+[INFO] 12:18:02:213 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(7,4)
+[INFO] 12:18:02:213 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:02:213 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:02:213 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:02:213 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (6,4)
+[INFO] 12:18:02:213 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(6,4)
+[INFO] 12:18:02:213 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:02:213 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:02:415 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:02:415 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (22,23)
+[INFO] 12:18:02:415 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(22,23)
+[INFO] 12:18:02:415 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:02:415 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:02:416 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:02:416 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (23,23)
+[INFO] 12:18:02:416 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(23,23)
+[INFO] 12:18:02:416 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:02:416 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:02:417 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:02:417 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (23,22)
+[INFO] 12:18:02:417 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(23,22)
+[INFO] 12:18:02:417 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:02:417 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:02:620 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:02:621 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (5,4)
+[INFO] 12:18:02:622 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(5,4)
+[INFO] 12:18:02:622 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:02:622 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:02:622 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:02:622 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (4,4)
+[INFO] 12:18:02:622 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(4,4)
+[INFO] 12:18:02:622 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:02:622 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:02:622 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:02:622 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (4,5)
+[INFO] 12:18:02:622 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(4,5)
+[INFO] 12:18:02:622 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:02:622 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:02:823 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:02:823 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (23,21)
+[INFO] 12:18:02:823 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(23,21)
+[INFO] 12:18:02:823 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:02:823 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:02:824 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:02:824 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (23,20)
+[INFO] 12:18:02:824 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(23,20)
+[INFO] 12:18:02:824 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:02:824 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:02:825 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:02:825 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (23,19)
+[INFO] 12:18:02:825 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(23,19)
+[INFO] 12:18:02:825 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:02:826 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:03:27 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:03:27 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (4,6)
+[INFO] 12:18:03:28 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(4,6)
+[INFO] 12:18:03:28 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:03:28 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:03:28 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:03:28 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (4,7)
+[INFO] 12:18:03:28 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(4,7)
+[INFO] 12:18:03:28 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:03:28 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:03:29 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:03:29 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (4,8)
+[INFO] 12:18:03:29 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(4,8)
+[INFO] 12:18:03:29 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:03:29 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:03:231 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:03:231 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (23,18)
+[INFO] 12:18:03:232 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(23,18)
+[INFO] 12:18:03:232 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:03:232 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:03:232 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:03:232 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (23,17)
+[INFO] 12:18:03:233 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(23,17)
+[INFO] 12:18:03:233 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:03:233 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:03:233 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:03:234 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (23,16)
+[INFO] 12:18:03:234 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(23,16)
+[INFO] 12:18:03:234 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:03:234 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:03:435 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:03:436 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (4,9)
+[INFO] 12:18:03:436 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(4,9)
+[INFO] 12:18:03:436 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:03:436 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:03:436 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:03:437 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (4,10)
+[INFO] 12:18:03:437 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(4,10)
+[INFO] 12:18:03:437 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:03:437 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:03:481 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:03:481 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (4,11)
+[INFO] 12:18:03:481 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(4,11)
+[INFO] 12:18:03:481 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:03:481 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:03:683 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:03:683 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (23,15)
+[INFO] 12:18:03:683 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(23,15)
+[INFO] 12:18:03:683 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:03:683 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:03:684 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:03:684 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (23,14)
+[INFO] 12:18:03:684 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(23,14)
+[INFO] 12:18:03:684 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:03:684 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:03:685 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:03:685 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (23,13)
+[INFO] 12:18:03:685 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(23,13)
+[INFO] 12:18:03:685 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:03:685 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:03:886 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:03:887 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (4,12)
+[INFO] 12:18:03:887 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(4,12)
+[INFO] 12:18:03:887 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:03:887 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:03:887 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:03:888 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (4,13)
+[INFO] 12:18:03:888 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(4,13)
+[INFO] 12:18:03:888 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:03:888 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:03:888 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:03:888 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (4,14)
+[INFO] 12:18:03:888 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(4,14)
+[INFO] 12:18:03:888 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:03:888 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:04:91 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:04:91 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (23,12)
+[INFO] 12:18:04:91 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(23,12)
+[INFO] 12:18:04:91 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:04:91 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:04:92 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:04:92 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (23,11)
+[INFO] 12:18:04:92 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(23,11)
+[INFO] 12:18:04:92 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:04:92 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:04:93 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:04:93 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (23,10)
+[INFO] 12:18:04:93 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(23,10)
+[INFO] 12:18:04:93 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:04:93 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:04:297 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:04:297 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (4,15)
+[INFO] 12:18:04:297 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(4,15)
+[INFO] 12:18:04:297 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:04:297 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:04:298 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:04:299 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (4,16)
+[INFO] 12:18:04:299 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(4,16)
+[INFO] 12:18:04:299 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:04:299 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:04:299 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:04:299 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (4,17)
+[INFO] 12:18:04:299 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(4,17)
+[INFO] 12:18:04:299 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:04:299 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:04:501 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:04:502 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (23,9)
+[INFO] 12:18:04:502 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(23,9)
+[INFO] 12:18:04:502 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:04:502 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:04:503 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:04:503 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (23,8)
+[INFO] 12:18:04:503 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(23,8)
+[INFO] 12:18:04:503 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:04:503 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:04:503 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:04:504 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (23,7)
+[INFO] 12:18:04:504 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(23,7)
+[INFO] 12:18:04:504 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:04:504 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:04:706 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:04:706 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (4,18)
+[INFO] 12:18:04:706 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(4,18)
+[INFO] 12:18:04:706 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:04:706 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:04:707 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:04:707 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (4,19)
+[INFO] 12:18:04:707 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(4,19)
+[INFO] 12:18:04:707 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:04:707 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:04:708 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:04:708 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (4,20)
+[INFO] 12:18:04:708 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(4,20)
+[INFO] 12:18:04:708 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:04:708 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:04:910 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:04:911 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (23,6)
+[INFO] 12:18:04:911 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(23,6)
+[INFO] 12:18:04:911 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:04:911 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:04:911 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:04:911 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (23,5)
+[INFO] 12:18:04:911 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(23,5)
+[INFO] 12:18:04:912 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:04:912 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:04:912 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:04:912 ProcesoNivel/(7681:7681): Modifico posicion personaje: @ en posicion (23,4)
+[INFO] 12:18:04:912 ProcesoNivel/(7681:7681): Movi el personaje: @ a la posicion:(23,4)
+[INFO] 12:18:04:912 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:04:912 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:04:912 ProcesoNivel/(7681:7681): Recibi REQUEST_RECURSO
+[INFO] 12:18:04:912 ProcesoNivel/(7681:7681): El personaje: @ me pidio el recurso:F
+[INFO] 12:18:04:912 ProcesoNivel/(7681:7681): La posicion del personaje: @ es:(23,4) y la posicion del recurso: F es:(23,4) y su cantidad: 0
+[INFO] 12:18:04:912 ProcesoNivel/(7681:7681): El personaje no puede tomar el recurso
+[INFO] 12:18:04:912 ProcesoNivel/(7681:7681): El personaje:@ no pudo obtener el recurso:F
+[INFO] 12:18:04:913 ProcesoNivel/(7681:7681): Se agrego la solicitud del recurso:F del personaje:@ a solicitudes pendientes
+[INFO] 12:18:04:913 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:04:913 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:05:115 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:05:115 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (4,21)
+[INFO] 12:18:05:115 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(4,21)
+[INFO] 12:18:05:115 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:05:115 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:05:116 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:05:116 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (4,22)
+[INFO] 12:18:05:116 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(4,22)
+[INFO] 12:18:05:116 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:05:116 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:05:117 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:05:117 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (4,23)
+[INFO] 12:18:05:117 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(4,23)
+[INFO] 12:18:05:117 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:05:117 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:05:117 ProcesoNivel/(7681:7681): Recibi REQUEST_RECURSO
+[INFO] 12:18:05:117 ProcesoNivel/(7681:7681): El personaje: # me pidio el recurso:H
+[INFO] 12:18:05:117 ProcesoNivel/(7681:7681): La posicion del personaje: # es:(4,23) y la posicion del recurso: H es:(4,23) y su cantidad: 0
+[INFO] 12:18:05:117 ProcesoNivel/(7681:7681): El personaje no puede tomar el recurso
+[INFO] 12:18:05:117 ProcesoNivel/(7681:7681): El personaje:# no pudo obtener el recurso:H
+[INFO] 12:18:05:117 ProcesoNivel/(7681:7681): Se agrego la solicitud del recurso:H del personaje:# a solicitudes pendientes
+[INFO] 12:18:05:118 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:05:118 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:07:483 ProcesoNivel/(7681:7682): El recurso pendiente es: H
+[INFO] 12:18:07:483 ProcesoNivel/(7681:7682): La pos del personaje es: 0
+[INFO] 12:18:07:483 ProcesoNivel/(7681:7682): La pos del recurso es: 1
+[INFO] 12:18:07:483 ProcesoNivel/(7681:7682): El recurso pendiente es: F
+[INFO] 12:18:07:483 ProcesoNivel/(7681:7682): La pos del personaje es: 1
+[INFO] 12:18:07:483 ProcesoNivel/(7681:7682): La pos del recurso es: 2
+[INFO] 12:18:07:484 ProcesoNivel/(7681:7681): Recibi TERMINE_NIVEL
+[INFO] 12:18:07:484 ProcesoNivel/(7681:7681): El personaje: # ha terminado el nivel
+[INFO] 12:18:07:485 ProcesoNivel/(7681:7681): Tengo recursos a liberar por parte del personaje: # 
+[INFO] 12:18:07:485 ProcesoNivel/(7681:7681): Reasigno a ListaItems el recurso: F con la cant: 1
+[INFO] 12:18:07:485 ProcesoNivel/(7681:7681): La cantidad del recurso: F que sera liberado es: 1
+[INFO] 12:18:07:485 ProcesoNivel/(7681:7681): Mando mensaje al orquestador con los recursos que libero
+[INFO] 12:18:07:487 ProcesoNivel/(7681:7681): Es recurso pendiente
+[INFO] 12:18:07:487 ProcesoNivel/(7681:7681): Reasigno el recurso: F al personaje: @
+[INFO] 12:18:07:525 ProcesoNivel/(7681:7681): Mande recursos liberados
+[INFO] 12:18:07:525 ProcesoNivel/(7681:7681): El personaje: # ha sido borrado del nivel
+[INFO] 12:18:07:525 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:07:526 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:07:526 ProcesoNivel/(7681:7681): Recibi HANDSHAKE del personaje: P#
+[INFO] 12:18:07:526 ProcesoNivel/(7681:7681): Se dibujo el personaje: # en la pos (0,0)
+[INFO] 12:18:07:526 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:07:527 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:07:691 ProcesoNivel/(7681:7681): Recibi TERMINE_NIVEL
+[INFO] 12:18:07:691 ProcesoNivel/(7681:7681): El personaje: @ ha terminado el nivel
+[INFO] 12:18:07:691 ProcesoNivel/(7681:7681): Tengo recursos a liberar por parte del personaje: @ 
+[INFO] 12:18:07:691 ProcesoNivel/(7681:7681): Reasigno a ListaItems el recurso: F con la cant: 1
+[INFO] 12:18:07:691 ProcesoNivel/(7681:7681): Reasigno a ListaItems el recurso: H con la cant: 1
+[INFO] 12:18:07:691 ProcesoNivel/(7681:7681): La cantidad del recurso: F que sera liberado es: 1
+[INFO] 12:18:07:691 ProcesoNivel/(7681:7681): Mando mensaje al orquestador con los recursos que libero
+[INFO] 12:18:07:694 ProcesoNivel/(7681:7681): La cantidad del recurso: H que sera liberado es: 1
+[INFO] 12:18:07:694 ProcesoNivel/(7681:7681): Mando mensaje al orquestador con los recursos que libero
+[INFO] 12:18:07:695 ProcesoNivel/(7681:7681): El personaje no tenia recursos.El recurso: H se agrega al personaje: #
+[INFO] 12:18:07:695 ProcesoNivel/(7681:7681): Reasigno el recurso: H al personaje: #
+[INFO] 12:18:07:738 ProcesoNivel/(7681:7681): Mande recursos liberados
+[INFO] 12:18:07:738 ProcesoNivel/(7681:7681): El personaje: @ ha sido borrado del nivel
+[INFO] 12:18:07:739 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:07:739 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:08:397 ProcesoNivel/(7681:7681): Recibi REQUEST_POS_RECURSO
+[INFO] 12:18:08:397 ProcesoNivel/(7681:7681): El recurso pedido es: F
+[INFO] 12:18:08:397 ProcesoNivel/(7681:7681): Mando la posicion del recurso F: (23,4)
+[INFO] 12:18:08:397 ProcesoNivel/(7681:7681): Mande la posicion del recurso: F al personaje: #
+[INFO] 12:18:08:397 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:08:397 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:08:398 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:08:398 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (1,0)
+[INFO] 12:18:08:398 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(1,0)
+[INFO] 12:18:08:398 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:08:398 ProcesoNivel/(7681:7681): Esperando Mensaje
+[INFO] 12:18:08:437 ProcesoNivel/(7681:7681): Recibi REQUEST_MOVIMIENTO
+[INFO] 12:18:08:438 ProcesoNivel/(7681:7681): Modifico posicion personaje: # en posicion (2,0)
+[INFO] 12:18:08:438 ProcesoNivel/(7681:7681): Movi el personaje: # a la posicion:(2,0)
+[INFO] 12:18:08:438 ProcesoNivel/(7681:7681): ----------------------------------------------
+[INFO] 12:18:08:438 ProcesoNivel/(7681:7681): Esperando Mensaje
