@@ -3,7 +3,8 @@
 #include <string.h>
 
 int main (){
-
+	
+	
 	pthread_mutex_lock(&mutex_plataforma);
 	Gestores = list_create();
 	personajes_jugando = list_create();
@@ -11,23 +12,7 @@ int main (){
 	log_info(Logger, "************************************************************************");
 	log_info(Logger, "Se inicia Proceso Plataforma.");
 	
-	//TEST 1
-	/*
-	GestorNivel* test;
-	GestorNivel* test2;
-	char buf[10];
-	for (i=0; i<10; i++){
-	test = malloc (sizeof(GestorNivel));
-	sprintf(buf,"%d",i);
-	strcat(buf, "hola");
-	strcpy(test->ID , buf);
-	printf("%s",test->ID);
-	list_add(Gestores, test);
-	}
-
-	test2 = findGestor_byid("4hola");
-	printf("%s",test2->ID);
-	 */
+	
 	quantum_inicial=3;
 	pthread_create(&orquestador, NULL, orq, NULL);
 	log_info(Logger, "Crea Thread Orquestador.");
@@ -40,13 +25,7 @@ int main (){
 
 	return 0;
 }
-/*
-Elemento_personaje* personaje_crear(char* nombre) {
-	Elemento_personaje* personaje = mallot_list* c(sizeof(Elemento_personaje));
-	strncpy(personaje->nombre, nombre, 24);
-	return personaje;
-}
- */
+
 
 
 void* Planif(void* nivel){
@@ -59,6 +38,7 @@ void* Planif(void* nivel){
 	misMensajes = queue_create();
 	Mensaje* miMensaje;
 	CCB miCON;
+	
 	
 	//CREO LA INSTANCIA DEL GESTOR
 	if((miGestor= malloc(sizeof(GestorNivel)))==NULL){
@@ -91,9 +71,14 @@ void* Planif(void* nivel){
 	//Copio la instancia de dataNivel
 	memcpy(&(miGestor->dataNivel),miNivel, sizeof(Nivel));
 	free(miNivel);
-
+	
+	//Creo la instancia del mutex del gestor
+	miGestor->miMutex = malloc(sizeof(pthread_mutex_t));
+	pthread_mutex_init(miGestor->miMutex, NULL );
+	
 	//Agrego el gestor a la lista de gestores.
 	list_add (Gestores, miGestor);
+	
 
 	miCON = initServer(miGestor->dataPlanificador.PORT);
 
@@ -110,14 +95,30 @@ void* Planif(void* nivel){
 				log_info(Logger, "Recibe mensaje de conexion de Proceso Personaje.");
 				if(((char*)miMensaje->data)[0]=='P'){
 					//Inicializo la instancia de personaje correspondiente
-					Personaje* miPersonaje = malloc (sizeof(Personaje));
-					strcpy(miPersonaje->ID, ((Personaje*) miMensaje->data)->ID);
-					miPersonaje->FD=miMensaje->from;
+					Personaje* auxPersonaje = malloc (sizeof(Personaje));
+					Personaje* miPersonaje;
+					strcpy(auxPersonaje->ID, ((Personaje*) miMensaje->data)->ID);
 					
-					//AGREGO EL PERSONAJE A LA LISTA DE PERSONAJES JUGANDO
-					if(findPersonaje_byid(personajes_jugando,miPersonaje->ID)== NULL)
+					
+					if((miPersonaje = findPersonaje_byid(personajes_jugando,auxPersonaje->ID))== NULL){
+
+						//USO LA MEMORIA AUXILIAR Y SE LA ASIGNO AL PERSONAJE
+						miPersonaje = auxPersonaje;
+
+						//AGREGO EL PERSONAJE A LA LISTA DE PERSONAJES JUGANDO
 						list_add(personajes_jugando, miPersonaje);
+
+					}else{
+
+						//SI YA EXISTIA SIGO TRABAJANDO CON LA MISMA MEMORIA, Y LIBERO LA AUXILIAR
+						free(auxPersonaje);
+					}
 					
+					miPersonaje->FD=miMensaje->from;
+
+					//ENTRO EN ZONA CRITICA
+					pthread_mutex_lock(miGestor->miMutex);
+
 					//Lo agrego a la lista de personajes en nivel
 					list_add(miGestor->personajes_en_nivel, miPersonaje);
 					
@@ -125,10 +126,18 @@ void* Planif(void* nivel){
 					queue_push (miGestor->queue_listos, miPersonaje);
 					
 					imprimirListos(miGestor->queue_listos, string_from_format("Agrega personaje '%s' a cola de listos.", miPersonaje->ID));
+					
+					//SALGO DE ZONA CRITICA
+					pthread_mutex_unlock(miGestor->miMutex);
+
 				}
 				break;
 			case TERMINE_TURNO:
 				log_info(Logger, "Recibe mensaje de finalizacion de turno.");
+				
+				//ENTRO EN ZONA CRITICA
+				pthread_mutex_lock(miGestor->miMutex);
+
 				if(miMensaje->from == miGestor->PersonajeEnMovimiento->FD){
 					miGestor->turno_entregado=0;
 					miGestor->quantum--;
@@ -144,10 +153,17 @@ void* Planif(void* nivel){
 					}
 					
 				}
+				//SALGO DE ZONA CRITICA
+				pthread_mutex_unlock(miGestor->miMutex);
 
 				break;
+
 			case PERSONAJE_BLOQUEADO:
 				log_info(Logger, "Recibe mensaje de personaje bloqueado.");
+
+				//ENTRO EN ZONA CRITICA
+					pthread_mutex_lock(miGestor->miMutex);
+
 				if(miMensaje->from == miGestor->PersonajeEnMovimiento->FD){
 					miGestor->turno_entregado=0;
 					Queue_bloqueados* queue_bloq;
@@ -168,19 +184,33 @@ void* Planif(void* nivel){
 					miGestor->quantum=quantum_inicial;
 					entregarTurno(miGestor);
 				}
+				//SALGO DE ZONA CRITICA
+					pthread_mutex_unlock(miGestor->miMutex);
+
 				break;
 			case TERMINE_NIVEL:
 				log_info(Logger,"Personaje termino nivel");
+
+				//ENTRO EN ZONA CRITICA
+					pthread_mutex_lock(miGestor->miMutex);
+
 				miGestor->turno_entregado=0;
 				removePersonaje_byfd (miGestor->personajes_en_nivel, miMensaje->from);
+
+				//SALGO DE ZONA CRITICA
+					pthread_mutex_unlock(miGestor->miMutex);
 				break;
 			}
 			borrarMensaje(miMensaje);//fin de antencion a los mensajes
 			
 		}else{ //NO HAY MENSAJES, ME FIJO SI DESBLOQUEO ALGUNO
+			//ENTRO EN ZONA CRITICA
+					pthread_mutex_lock(miGestor->miMutex);
 			if(!(miGestor->turno_entregado)){//ESTOY EN STANDBY PORQUE NO HABIA PERSONAJES EN COLA DE LISTOS
 				entregarTurno(miGestor);
 			}
+			//SALGO DE ZONA CRITICA
+					pthread_mutex_unlock(miGestor->miMutex);
 			
 		}//fin de CHEKEO DE MENSAJES
 	}//FIN DEL LOOP
@@ -190,7 +220,7 @@ void* Planif(void* nivel){
 
 
 void* orq (void* a){
-
+		
 	Mensaje* miMensaje;
 	t_queue* queue_mensajes = queue_create();
 	CCB CCB_Orquestador;
@@ -207,6 +237,7 @@ void* orq (void* a){
 				if (((char*)miMensaje->data)[0]!='P'){
 					//CREO LA INSTANCIA DEL THREAD PLANIFICADOR
 					pthread_t thr;
+	
 					//CREO LA INSTANCIA NIVEL, COPIO LOS PARAMETROS, Y LA AGREGO A LA LISTA
 					Nivel* miNivel = malloc(sizeof(Nivel));
 					miNivel->FD = miMensaje->from;
@@ -226,8 +257,9 @@ void* orq (void* a){
 			{
 				log_info(Logger, "Recibe mensaje pidiendo informacion del nivel.");
 				GestorNivel* miGestor;
-				Data_Nivel miDataNivel;
+			
 				miGestor=findGestor_byid(((char*)(miMensaje->data)));
+				
 				if(miGestor==NULL){
 					log_info(Logger, string_from_format("El nivel %s no esta conectado a plataforma.", (char*)miMensaje->data));
 					mandarMensaje(miMensaje->from,NODATANIVEL,0,NULL);
@@ -254,6 +286,9 @@ void* orq (void* a){
 					while(miRecurso->cant){
 						//SI LA COLA DE BLOQUEADOS NO ESTA VACIA
 						if(!queue_is_empty(queue_bloq->queue)){
+							//ENTRO EN ZONA CRITICA
+							pthread_mutex_lock(miGestor->miMutex);	
+						
 							personajeAux = queue_pop(queue_bloq->queue);
 							imprimirBloqueados(miGestor->queues_bloq, string_from_format("Quita personaje '%s' asignado al recurso '%c' de la lista de bloqueados.", personajeAux->ID, queue_bloq->idRecurso));
 							asignarDatos(&recursoAsignado, miRecurso->idRecurso, personajeAux);
@@ -262,6 +297,9 @@ void* orq (void* a){
 							queue_push(miGestor->queue_listos, personajeAux);
 							imprimirListos(miGestor->queue_listos, string_from_format("Agrega personaje '%s' a cola de listos.", personajeAux->ID));
 							(miRecurso->cant)--;
+							
+							//SALGO DE ZONA CRITICA
+							pthread_mutex_unlock(miGestor->miMutex);									
 						}else{
 							//LA COLA ESTA VACIA
 							miRecurso->cant=0;
@@ -286,13 +324,24 @@ void* orq (void* a){
 				GestorNivel* miGestor;
 				Personaje* Victima;
 				strcpy(PersonajesInterbloqueados, miMensaje->data);
+				
 				miGestor = findGestor_byfd(miMensaje->from);
+
 				Victima = findUltimoEnLlegar (miGestor->personajes_en_nivel, PersonajesInterbloqueados);
 				log_info(Logger, "Envia mensaje indicando que murio el personaje");
 				mandarMensaje(Victima->FD,MORISTE_PERSONAJE,0,NULL);
 				log_info(Logger, string_from_format("Mata al personaje (NOMBRE VICTIMA: %s)", Victima->ID));
-				mandarMensaje(miMensaje->from, NOMBRE_VICTIMA ,1,&(Victima->ID));
+				mandarMensaje(miMensaje->from, NOMBRE_VICTIMA ,1,&(Victima->ID[1]));
+
+				//ENTRO EN ZONA CRITICA
+					pthread_mutex_lock(miGestor->miMutex);
+
 				removePersonaje_byid (miGestor->queue_listos->elements, Victima);
+				removePersonaje_fromBloq(miGestor->queues_bloq, Victima);
+				imprimirBloqueados(miGestor->queues_bloq,"Borro victima de lista de Bloqueados");
+				
+				//ENTRO EN ZONA CRITICA
+					pthread_mutex_unlock(miGestor->miMutex);
 				
 			}
 			break;
@@ -301,7 +350,8 @@ void* orq (void* a){
 				Personaje* miPersonaje;
 				log_info(Logger, string_from_format("Recibe mensaje de que gano, hay %d personajes jugando",list_size(personajes_jugando)) );
 				miPersonaje = removePersonaje_byid(personajes_jugando, (Personaje *) miMensaje->data);
-				if(miPersonaje!=NULL) log_info(Logger, string_from_format("Removi %s", miPersonaje->ID)); else log_info(Logger,"NADA");
+				if(miPersonaje!=NULL) log_info(Logger, string_from_format("Removi %s de los personajes jugando", miPersonaje->ID)); else log_info(Logger,"NADA");
+				free(miPersonaje);
 				if(list_is_empty(personajes_jugando)) finalizarProceso();
 			}
 				break;
@@ -319,6 +369,7 @@ void finalizarProceso() {
 	log_destroy(Logger);
 	execv("./koopa", argumentos);
 }
+
 
 void imprimirListos(t_queue* listos, char* mensaje) {
 	if (!string_is_empty(mensaje)) {
@@ -371,6 +422,7 @@ GestorNivel* findGestor_byid (char* nivel){
 		return(string_equals_ignore_case(comparador->ID, nivel));
 	}
 	return (list_find(Gestores,(void*)_eselGestor));
+	
 }
 
 Personaje* removePersonaje_byfd (t_list* personajes_en_nivel, int fd){
@@ -388,6 +440,17 @@ Personaje* removePersonaje_byid (t_list* personajes_en_nivel, Personaje * miPers
 		return(string_equals_ignore_case(comparador->ID, miPersonaje->ID));
 	}
 	return (list_remove_by_condition(personajes_en_nivel,(void*)_eselPersonaje));
+}
+
+
+void removePersonaje_fromBloq (t_list* bloqueados, Personaje* miPersonaje){
+	int index = 0;
+	while (index < list_size(bloqueados)) {
+		Queue_bloqueados* queueBloqueados = (Queue_bloqueados*)list_get(bloqueados, index);
+		removePersonaje_byid(queueBloqueados->queue->elements, miPersonaje);
+		index++;
+	}
+
 }
 
 Personaje* findPersonaje_byid (t_list* personajes_en_nivel, char* id){
@@ -411,7 +474,9 @@ GestorNivel* findGestor_byfd (int fd){
 	bool _eselGestor (GestorNivel* comparador){
 		return(comparador->dataNivel.FD==fd);
 	}
+	
 	return (list_find(Gestores,(void*)_eselGestor));
+	
 }
 
 //CHEKEADA

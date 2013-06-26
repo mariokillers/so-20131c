@@ -25,6 +25,9 @@ pthread_t orquestador;
 pthread_t quantum_monitor;
 pthread_mutex_t mutex_plataforma;
 
+
+
+
 typedef struct {
 	char ID[20];
 	Nivel dataNivel;
@@ -35,6 +38,7 @@ typedef struct {
 	Personaje* PersonajeEnMovimiento;
 	char turno_entregado;
 	int quantum;
+	pthread_mutex_t * miMutex;
 
 }GestorNivel;
 
@@ -57,6 +61,7 @@ Queue_bloqueados* findBloqQueue_byidRecurso (t_list*, char);
 Personaje* removePersonaje_byid (t_list* personajes_en_nivel, Personaje* miPersonaje);
 Personaje* removePersonaje_byfd (t_list* personajes_en_nivel, int fd);
 Personaje* findPersonaje_byid (t_list* personajes_en_nivel, char* id);
+void removePersonaje_fromBloq (t_list* bloqueados, Personaje* miPersonaje);
 void entregarTurno (GestorNivel* miGestor);
 Personaje* findUltimoEnLlegar (t_list*, char*);
 void asignarDatos (Recursos* Aux, char recurso, Personaje* miPersonaje);
