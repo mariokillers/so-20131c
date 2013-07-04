@@ -157,53 +157,52 @@ int main(int argc, char *argv[]) {
 				case MOVIMIENTO_PERMITIDO:
 					log_trace(logger, "llego mensaje MOVIMIENTO_PERMITIDO");
 					//si tengo la poscion del proximo recurso se mueve
-					if(flag == 0){
-						if (posicionProximoRecurso != NULL ) {
-							log_trace(logger,
-									"tengo posicion de recurso que necesito");
-
-							//realizo el movimiento y guardo nueva posicion del personaje
-							nuevaPosicion = realizarMovimiento();
-							posicionActual = nuevaPosicion;
-							((Posicion*) (personaje->posActual))->POS_X =
-									posicionActual->POS_X;
-							((Posicion*) (personaje->posActual))->POS_Y =
-									posicionActual->POS_Y;
-
-							//loggeo de la nueva posicion del personaje
-							log_trace(logger,
-									string_from_format(
-											"personaje %s nueva posicion: (%d,%d)",
-											personaje->nombre,
-											personaje->posActual->POS_X,
-											personaje->posActual->POS_Y));
-
-							//analiza si llego a la posicion del proximo recurso (adentro manda los mensajes)
-							analizarRecurso();
-						} else {
-							log_trace(logger, "no tengo posicion de recurso");
-							//solicitar posicion del proximo recurso y loggea solicitud
-							proxRecurso = proximoRecurso(
-									personaje->niveles);
-
-							mandarMensaje(nivelCCB.sockfd, REQUEST_POS_RECURSO,
-									sizeof(proxRecurso), (char *) &proxRecurso);
-
-							log_trace(logger,
-									string_from_format(
-											"personaje %s solicita posicion del recurso %c a %s",
-											personaje->nombre,
-											proxRecurso, nombreNivelActual));
-
-							miEstado = WAIT_POS_REC;
-							log_info(logger,
-									string_from_format(
-											"personaje %s cambia a estado %d",
-											personaje->nombre, miEstado));
-						}
-					} else{
+					if(flag != 0){
 						flag = 0;
 						llegoRecurso();
+					}
+					if (posicionProximoRecurso != NULL ) {
+						log_trace(logger,
+								"tengo posicion de recurso que necesito");
+
+						//realizo el movimiento y guardo nueva posicion del personaje
+						nuevaPosicion = realizarMovimiento();
+						posicionActual = nuevaPosicion;
+						((Posicion*) (personaje->posActual))->POS_X =
+								posicionActual->POS_X;
+						((Posicion*) (personaje->posActual))->POS_Y =
+								posicionActual->POS_Y;
+
+						//loggeo de la nueva posicion del personaje
+						log_trace(logger,
+								string_from_format(
+										"personaje %s nueva posicion: (%d,%d)",
+										personaje->nombre,
+										personaje->posActual->POS_X,
+										personaje->posActual->POS_Y));
+
+						//analiza si llego a la posicion del proximo recurso (adentro manda los mensajes)
+						analizarRecurso();
+					} else {
+						log_trace(logger, "no tengo posicion de recurso");
+						//solicitar posicion del proximo recurso y loggea solicitud
+						proxRecurso = proximoRecurso(
+								personaje->niveles);
+
+						mandarMensaje(nivelCCB.sockfd, REQUEST_POS_RECURSO,
+								sizeof(proxRecurso), (char *) &proxRecurso);
+
+						log_trace(logger,
+								string_from_format(
+										"personaje %s solicita posicion del recurso %c a %s",
+										personaje->nombre,
+										proxRecurso, nombreNivelActual));
+
+						miEstado = WAIT_POS_REC;
+						log_info(logger,
+								string_from_format(
+										"personaje %s cambia a estado %d",
+										personaje->nombre, miEstado));
 						break;
 					}
 					break;
@@ -529,6 +528,7 @@ void morir() {
 		reiniciarNivel(personaje->niveles);
 
 		posicionProximoRecurso = NULL;
+		flag = 0;
 
 		//conecto a nivel y planificador y hago HANDSHAKE
 		conectarNivel(nivelActualData.IP, nivelActualData.PORT);
