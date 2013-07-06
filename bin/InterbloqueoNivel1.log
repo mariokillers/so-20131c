@@ -1,20 +1,1545 @@
-[INFO] 16:57:03:194 Interbloqueo/(2351:2352): La cantidad de personajes es: 0 y de recursos es: 3
-[INFO] 16:57:07:195 Interbloqueo/(2351:2352): ----------------------------------------------
-[INFO] 16:57:07:195 Interbloqueo/(2351:2352): La cantidad de personajes es: 0 y de recursos es: 3
-[INFO] 16:57:11:195 Interbloqueo/(2351:2352): ----------------------------------------------
-[INFO] 16:57:11:195 Interbloqueo/(2351:2352): La cantidad de personajes es: 2 y de recursos es: 3
-[INFO] 16:57:11:195 Interbloqueo/(2351:2352): El personajes: # ha sido marcado sin recursos
-[INFO] 16:57:11:196 Interbloqueo/(2351:2352): El personajes: @ ha sido marcado con recursos
-[INFO] 16:57:15:197 Interbloqueo/(2351:2352): ----------------------------------------------
-[INFO] 16:57:15:197 Interbloqueo/(2351:2352): La cantidad de personajes es: 2 y de recursos es: 3
-[INFO] 16:57:15:197 Interbloqueo/(2351:2352): El personajes: # ha sido marcado con recursos
-[INFO] 16:57:15:197 Interbloqueo/(2351:2352): El personajes: @ ha sido marcado con recursos
-[INFO] 16:57:19:199 Interbloqueo/(2351:2352): ----------------------------------------------
-[INFO] 16:57:19:199 Interbloqueo/(2351:2352): La cantidad de personajes es: 2 y de recursos es: 3
-[INFO] 16:57:19:199 Interbloqueo/(2351:2352): El personajes: # esta en deadlock
-[INFO] 16:57:19:199 Interbloqueo/(2351:2352): El personajes: @ esta en deadlock
-[INFO] 16:57:19:199 Interbloqueo/(2351:2352): Los personajes que estan en deadlock son: #@ 
-[INFO] 16:57:23:201 Interbloqueo/(2351:2352): ----------------------------------------------
-[INFO] 16:57:23:201 Interbloqueo/(2351:2352): La cantidad de personajes es: 0 y de recursos es: 3
-[INFO] 16:57:27:201 Interbloqueo/(2351:2352): ----------------------------------------------
-[INFO] 16:57:27:201 Interbloqueo/(2351:2352): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:08:56:615 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:09:00:620 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:09:00:620 Interbloqueo/(3224:3225): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 14:09:00:620 Interbloqueo/(3224:3225): El personajes: @ ha sido marcado sin recursos
+[INFO] 14:09:04:621 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:09:04:621 Interbloqueo/(3224:3225): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 14:09:04:621 Interbloqueo/(3224:3225): El personajes: # ha sido marcado con recursos
+[INFO] 14:09:04:621 Interbloqueo/(3224:3225): El personajes: @ ha sido marcado con recursos
+[INFO] 14:09:08:621 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:09:08:621 Interbloqueo/(3224:3225): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 14:09:08:621 Interbloqueo/(3224:3225): El personajes: # ha sido marcado con recursos
+[INFO] 14:09:08:622 Interbloqueo/(3224:3225): El personajes: @ ha sido marcado con recursos
+[INFO] 14:09:12:622 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:09:12:622 Interbloqueo/(3224:3225): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 14:09:12:622 Interbloqueo/(3224:3225): El personajes: # esta en deadlock
+[INFO] 14:09:12:622 Interbloqueo/(3224:3225): El personajes: @ esta en deadlock
+[INFO] 14:09:12:623 Interbloqueo/(3224:3225): Los personajes que estan en deadlock son: #@ 
+[INFO] 14:09:16:623 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:09:16:623 Interbloqueo/(3224:3225): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 14:09:16:623 Interbloqueo/(3224:3225): El personajes: # ha sido marcado con recursos
+[INFO] 14:09:20:624 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:09:20:624 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:09:24:625 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:09:24:625 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:09:28:626 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:09:28:626 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:09:32:627 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:09:32:627 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:09:36:627 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:09:36:627 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:09:40:628 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:09:40:628 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:09:44:629 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:09:44:630 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:09:48:630 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:09:48:630 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:09:52:631 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:09:52:632 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:09:56:632 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:09:56:632 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:10:00:632 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:10:00:633 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:10:04:633 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:10:04:633 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:10:08:634 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:10:08:634 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:10:12:634 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:10:12:635 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:10:16:635 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:10:16:635 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:10:20:636 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:10:20:636 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:10:24:636 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:10:24:636 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:10:28:637 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:10:28:637 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:10:32:638 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:10:32:638 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:10:36:638 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:10:36:638 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:10:40:639 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:10:40:639 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:10:44:639 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:10:44:639 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:10:48:640 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:10:48:640 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:10:52:640 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:10:52:640 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:10:56:641 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:10:56:641 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:11:00:642 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:11:00:642 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:11:04:642 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:11:04:643 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:11:08:643 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:11:08:643 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:11:12:644 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:11:12:644 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:11:16:644 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:11:16:644 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:11:20:644 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:11:20:645 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:11:24:646 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:11:24:646 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:11:28:647 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:11:28:647 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:11:32:648 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:11:32:648 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:11:36:649 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:11:36:649 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:11:40:650 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:11:40:650 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:11:44:651 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:11:44:651 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:11:48:651 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:11:48:651 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:11:52:652 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:11:52:652 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:11:56:652 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:11:56:652 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:12:00:653 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:12:00:653 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:12:04:654 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:12:04:655 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:12:08:655 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:12:08:655 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:12:12:657 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:12:12:657 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:12:16:658 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:12:16:658 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:12:20:659 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:12:20:659 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:12:24:659 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:12:24:659 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:12:28:660 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:12:28:660 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:12:32:660 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:12:32:660 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:12:36:661 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:12:36:661 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:12:40:662 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:12:40:662 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:12:44:663 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:12:44:663 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:12:48:664 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:12:48:664 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:12:52:665 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:12:52:665 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:12:56:666 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:12:56:666 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:13:00:666 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:13:00:667 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:13:04:669 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:13:04:669 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:13:08:671 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:13:08:671 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:13:12:671 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:13:12:671 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:13:16:672 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:13:16:672 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:13:20:672 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:13:20:672 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:13:24:673 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:13:24:673 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:13:28:683 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:13:28:683 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:13:32:684 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:13:32:684 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:13:36:685 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:13:36:686 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:13:40:687 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:13:40:687 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:13:44:689 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:13:44:689 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:13:48:690 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:13:48:690 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:13:52:690 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:13:52:690 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:13:56:691 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:13:56:691 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:14:00:691 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:14:00:691 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:14:04:693 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:14:04:693 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:14:08:694 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:14:08:694 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:14:12:694 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:14:12:695 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:14:16:695 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:14:16:695 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:14:20:695 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:14:20:696 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:14:24:725 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:14:24:726 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:14:28:729 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:14:28:729 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:14:32:730 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:14:32:730 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:14:36:731 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:14:36:731 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:14:40:732 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:14:40:732 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:14:44:733 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:14:44:733 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:14:48:733 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:14:48:733 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:14:52:734 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:14:52:734 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:14:56:734 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:14:56:734 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:15:00:736 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:15:00:736 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:15:04:736 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:15:04:736 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:15:08:736 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:15:08:737 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:15:12:737 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:15:12:737 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:15:16:737 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:15:16:738 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:15:20:739 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:15:20:739 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:15:24:740 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:15:24:740 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:15:28:741 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:15:28:741 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:15:32:742 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:15:32:742 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:15:36:743 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:15:36:743 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:15:40:743 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:15:40:743 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:15:44:744 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:15:44:744 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:15:48:748 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:15:48:748 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:15:52:748 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:15:52:749 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:15:56:750 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:15:56:750 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:16:00:750 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:16:00:750 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:16:04:751 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:16:04:751 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:16:08:751 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:16:08:751 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:16:12:753 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:16:12:753 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:16:16:754 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:16:16:755 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:16:20:756 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:16:20:756 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:16:24:757 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:16:24:757 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:16:28:757 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:16:28:757 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:16:32:762 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:16:32:762 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:16:36:763 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:16:36:763 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:16:40:763 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:16:40:763 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:16:44:764 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:16:44:764 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:16:48:764 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:16:48:764 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:16:52:766 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:16:52:766 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:16:56:766 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:16:56:767 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:17:00:768 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:17:00:768 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:17:04:769 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:17:04:769 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:17:08:769 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:17:08:769 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:17:12:770 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:17:12:770 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:17:16:771 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:17:16:771 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:17:20:773 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:17:20:773 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:17:24:774 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:17:24:774 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:17:28:775 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:17:28:775 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:17:32:775 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:17:32:775 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:17:36:776 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:17:36:776 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:17:40:776 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:17:40:777 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:17:44:777 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:17:44:777 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:17:48:778 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:17:48:778 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:17:52:779 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:17:52:779 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:17:56:780 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:17:56:780 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:18:00:780 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:18:00:780 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:18:04:781 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:18:04:781 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:18:08:782 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:18:08:782 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:18:12:784 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:18:12:784 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:18:16:785 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:18:16:785 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:18:20:785 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:18:20:785 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:18:24:786 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:18:24:786 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:18:28:787 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:18:28:787 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:18:32:787 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:18:32:787 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:18:36:788 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:18:36:788 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:18:40:789 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:18:40:789 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:18:44:790 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:18:44:790 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:18:48:791 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:18:48:791 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:18:52:792 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:18:52:792 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:18:56:794 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:18:56:794 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:19:00:794 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:19:00:795 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:19:04:795 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:19:04:795 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:19:08:796 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:19:08:797 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:19:12:798 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:19:12:798 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:19:16:798 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:19:16:799 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:19:20:799 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:19:20:799 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:19:24:800 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:19:24:801 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:19:28:802 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:19:28:802 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:19:32:803 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:19:32:803 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:19:36:803 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:19:36:803 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:19:40:804 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:19:40:804 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:19:44:804 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:19:44:804 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:19:48:805 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:19:48:805 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:19:52:807 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:19:52:807 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:19:56:808 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:19:56:808 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:20:00:809 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:20:00:809 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:20:04:809 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:20:04:809 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:20:08:809 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:20:08:810 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:20:12:811 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:20:12:811 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:20:16:811 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:20:16:811 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:20:20:812 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:20:20:812 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:20:24:812 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:20:24:812 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:20:28:813 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:20:28:813 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:20:32:813 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:20:32:813 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:20:36:814 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:20:36:814 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:20:40:814 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:20:40:814 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:20:44:823 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:20:44:823 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:20:48:824 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:20:48:824 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:20:52:824 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:20:52:824 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:20:56:825 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:20:56:825 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:21:00:826 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:21:00:826 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:21:04:826 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:21:04:826 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:21:08:828 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:21:08:828 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:21:12:829 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:21:12:830 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:21:16:830 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:21:16:830 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:21:20:830 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:21:20:831 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:21:24:835 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:21:24:835 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:21:28:837 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:21:28:837 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:21:32:838 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:21:32:838 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:21:36:838 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:21:36:838 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:21:40:839 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:21:40:839 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:21:44:839 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:21:44:839 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:21:48:840 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:21:48:840 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:21:52:843 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:21:52:843 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:21:56:845 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:21:56:845 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:22:00:847 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:22:00:847 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:22:04:848 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:22:04:848 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:22:08:849 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:22:08:849 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:22:12:849 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:22:12:849 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:22:16:851 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:22:16:851 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:22:20:851 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:22:20:851 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:22:24:852 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:22:24:852 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:22:28:853 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:22:28:853 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:22:32:854 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:22:32:854 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:22:36:854 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:22:36:854 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:22:40:855 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:22:40:855 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:22:44:855 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:22:44:855 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:22:48:856 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:22:48:857 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:22:52:857 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:22:52:857 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:22:56:858 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:22:56:859 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:23:00:859 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:23:00:859 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:23:04:860 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:23:04:860 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:23:08:861 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:23:08:861 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:23:12:862 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:23:12:862 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:23:16:864 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:23:16:864 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:23:20:865 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:23:20:865 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:23:24:867 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:23:24:867 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:23:28:867 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:23:28:867 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:23:32:868 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:23:32:868 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:23:36:869 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:23:36:869 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:23:40:870 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:23:40:870 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:23:44:872 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:23:44:872 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:23:48:872 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:23:48:872 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:23:52:874 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:23:52:874 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:23:56:875 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:23:56:875 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:24:00:876 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:24:00:876 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:24:04:876 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:24:04:876 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:24:08:877 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:24:08:877 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:24:12:877 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:24:12:877 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:24:16:878 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:24:16:878 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:24:20:879 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:24:20:879 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:24:24:880 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:24:24:880 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:24:28:882 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:24:28:882 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:24:32:883 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:24:32:883 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:24:36:884 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:24:36:884 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:24:40:884 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:24:40:884 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:24:44:886 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:24:44:886 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:24:48:886 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:24:48:886 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:24:52:888 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:24:52:888 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:24:56:888 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:24:56:888 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:25:00:889 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:25:00:889 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:25:04:889 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:25:04:889 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:25:08:890 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:25:08:890 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:25:12:890 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:25:12:891 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:25:16:891 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:25:16:891 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:25:20:892 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:25:20:892 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:25:24:893 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:25:24:893 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:25:28:894 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:25:28:894 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:25:32:895 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:25:32:895 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:25:36:897 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:25:36:897 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:25:40:897 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:25:40:897 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:25:44:898 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:25:44:898 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:25:48:898 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:25:48:898 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:25:52:899 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:25:52:899 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:25:56:901 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:25:56:901 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:26:00:902 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:26:00:902 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:26:04:903 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:26:04:903 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:26:08:904 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:26:08:904 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:26:12:906 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:26:12:906 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:26:16:906 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:26:16:906 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:26:20:907 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:26:20:907 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:26:24:908 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:26:24:908 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:26:28:909 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:26:28:909 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:26:32:911 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:26:32:911 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:26:36:912 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:26:36:913 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:26:40:913 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:26:40:913 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:26:44:914 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:26:44:914 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:26:48:915 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:26:48:915 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:26:52:915 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:26:52:916 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:26:56:917 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:26:56:917 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:27:00:917 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:27:00:917 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:27:04:919 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:27:04:919 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:27:08:920 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:27:08:920 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:27:12:920 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:27:12:921 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:27:16:921 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:27:16:921 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:27:20:947 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:27:20:947 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:27:24:947 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:27:24:947 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:27:28:948 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:27:28:948 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:27:32:949 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:27:32:949 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:27:36:950 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:27:36:950 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:27:40:952 Interbloqueo/(3224:3225): ----------------------------------------------
+[INFO] 14:27:40:952 Interbloqueo/(3224:3225): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:27:47:950 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:27:51:950 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:27:51:950 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:27:55:951 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:27:55:951 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:27:59:951 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:27:59:951 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:28:03:952 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:28:03:952 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:28:07:953 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:28:07:953 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:28:11:953 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:28:11:953 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:28:15:954 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:28:15:954 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:28:19:954 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:28:19:954 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:28:23:956 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:28:23:956 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:28:27:956 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:28:27:956 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:28:31:957 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:28:31:957 Interbloqueo/(3560:3561): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 14:28:31:957 Interbloqueo/(3560:3561): El personajes: @ ha sido marcado sin recursos
+[INFO] 14:28:35:958 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:28:35:958 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:28:39:959 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:28:39:959 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:28:43:959 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:28:43:959 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:28:47:961 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:28:47:961 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:28:51:961 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:28:51:961 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:28:55:961 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:28:55:961 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:28:59:962 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:28:59:962 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:29:03:962 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:29:03:963 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:29:07:964 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:29:07:964 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:29:11:964 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:29:11:964 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:29:15:965 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:29:15:965 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:29:19:966 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:29:19:966 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:29:23:966 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:29:23:966 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:29:27:967 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:29:27:967 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:29:31:968 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:29:31:968 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:29:35:970 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:29:35:970 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:29:39:971 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:29:39:971 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:29:43:971 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:29:43:971 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:29:47:972 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:29:47:972 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:29:51:972 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:29:51:972 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:29:55:973 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:29:55:973 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:29:59:973 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:29:59:974 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:30:03:974 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:30:03:974 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:30:07:975 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:30:07:975 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:30:11:976 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:30:11:976 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:30:15:977 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:30:15:977 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:30:19:978 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:30:19:978 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:30:23:979 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:30:23:979 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:30:27:979 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:30:27:979 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:30:31:980 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:30:31:980 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:30:35:981 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:30:35:981 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:30:39:981 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:30:39:981 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:30:43:982 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:30:43:982 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:30:47:982 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:30:47:982 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:30:51:984 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:30:51:984 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:30:55:984 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:30:55:984 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:30:59:985 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:30:59:985 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:31:03:986 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:31:03:986 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:31:07:986 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:31:07:986 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:31:11:987 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:31:11:987 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:31:15:987 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:31:15:987 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:31:19:987 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:31:19:988 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:31:23:988 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:31:23:988 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:31:27:989 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:31:27:989 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:31:31:990 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:31:31:991 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:31:35:991 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:31:35:992 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:31:39:992 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:31:39:992 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:31:43:993 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:31:43:993 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:31:47:993 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:31:47:993 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:31:51:994 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:31:51:994 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:31:55:996 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:31:55:996 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:31:59:997 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:31:59:997 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:32:03:998 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:32:03:998 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:32:07:999 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:32:07:999 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:32:11:1 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:32:11:1 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:32:15:1 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:32:15:1 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:32:19:2 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:32:19:2 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:32:23:3 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:32:23:3 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:32:27:4 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:32:27:4 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:32:32:4 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:32:32:4 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:32:36:5 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:32:36:5 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:32:40:6 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:32:40:6 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:32:44:7 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:32:44:7 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:32:48:7 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:32:48:7 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:32:52:8 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:32:52:8 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:32:56:8 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:32:56:8 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:33:00:9 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:33:00:9 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:33:04:9 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:33:04:10 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:33:08:10 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:33:08:10 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:33:12:10 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:33:12:10 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:33:16:11 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:33:16:11 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:33:20:11 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:33:20:12 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:33:24:12 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:33:24:12 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:33:28:12 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:33:28:12 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:33:32:14 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:33:32:14 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:33:36:15 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:33:36:15 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:33:40:16 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:33:40:16 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:33:44:16 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:33:44:17 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:33:48:17 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:33:48:17 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:33:52:17 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:33:52:17 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:33:56:18 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:33:56:18 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:34:00:19 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:34:00:19 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:34:04:20 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:34:04:20 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:34:08:20 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:34:08:20 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:34:12:21 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:34:12:21 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:34:16:21 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:34:16:21 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:34:20:22 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:34:20:22 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:34:24:85 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:34:24:85 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:34:28:86 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:34:28:86 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:34:32:87 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:34:32:87 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:34:36:88 Interbloqueo/(3560:3561): ----------------------------------------------
+[INFO] 14:34:36:88 Interbloqueo/(3560:3561): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:34:42:182 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:34:46:182 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:34:46:182 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:34:50:183 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:34:50:183 Interbloqueo/(3856:3857): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 14:34:50:183 Interbloqueo/(3856:3857): El personajes: # ha sido marcado sin recursos
+[INFO] 14:34:54:184 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:34:54:184 Interbloqueo/(3856:3857): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 14:34:54:184 Interbloqueo/(3856:3857): El personajes: @ ha sido marcado sin recursos
+[INFO] 14:34:54:184 Interbloqueo/(3856:3857): El personajes: # ha sido marcado con recursos
+[INFO] 14:34:58:185 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:34:58:185 Interbloqueo/(3856:3857): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 14:34:58:185 Interbloqueo/(3856:3857): El personajes: @ ha sido marcado con recursos
+[INFO] 14:35:02:185 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:35:02:185 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:35:06:186 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:35:06:186 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:35:10:186 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:35:10:186 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:35:14:186 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:35:14:186 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:35:18:187 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:35:18:187 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:35:22:188 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:35:22:188 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:35:26:188 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:35:26:188 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:35:30:189 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:35:30:189 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:35:34:189 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:35:34:189 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:35:38:190 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:35:38:190 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:35:42:190 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:35:42:190 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:35:46:191 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:35:46:191 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:35:50:191 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:35:50:191 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:35:54:191 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:35:54:191 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:35:58:192 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:35:58:192 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:36:02:193 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:36:02:193 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:36:06:194 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:36:06:194 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:36:10:200 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:36:10:200 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:36:14:200 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:36:14:200 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:36:18:202 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:36:18:202 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:36:22:203 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:36:22:203 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:36:26:204 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:36:26:204 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:36:30:204 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:36:30:205 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:36:34:206 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:36:34:206 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:36:38:206 Interbloqueo/(3856:3857): ----------------------------------------------
+[INFO] 14:36:38:207 Interbloqueo/(3856:3857): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:39:07:81 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:39:11:83 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:39:11:83 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:39:15:83 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:39:15:83 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:39:19:84 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:39:19:84 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:39:23:84 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:39:23:84 Interbloqueo/(3897:3898): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 14:39:23:84 Interbloqueo/(3897:3898): El personajes: # ha sido marcado sin recursos
+[INFO] 14:39:23:84 Interbloqueo/(3897:3898): El personajes: @ ha sido marcado sin recursos
+[INFO] 14:39:27:85 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:39:27:85 Interbloqueo/(3897:3898): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 14:39:27:85 Interbloqueo/(3897:3898): El personajes: # ha sido marcado con recursos
+[INFO] 14:39:27:86 Interbloqueo/(3897:3898): El personajes: @ ha sido marcado con recursos
+[INFO] 14:39:31:86 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:39:31:86 Interbloqueo/(3897:3898): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 14:39:31:86 Interbloqueo/(3897:3898): El personajes: # ha sido marcado con recursos
+[INFO] 14:39:31:86 Interbloqueo/(3897:3898): El personajes: @ ha sido marcado con recursos
+[INFO] 14:39:35:87 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:39:35:87 Interbloqueo/(3897:3898): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 14:39:35:87 Interbloqueo/(3897:3898): El personajes: # esta en deadlock
+[INFO] 14:39:35:87 Interbloqueo/(3897:3898): El personajes: @ esta en deadlock
+[INFO] 14:39:35:87 Interbloqueo/(3897:3898): Los personajes que estan en deadlock son: #@ 
+[INFO] 14:39:39:88 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:39:39:88 Interbloqueo/(3897:3898): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 14:39:39:88 Interbloqueo/(3897:3898): El personajes: # ha sido marcado con recursos
+[INFO] 14:39:43:89 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:39:43:90 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:39:47:90 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:39:47:90 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:39:51:91 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:39:51:91 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:39:55:91 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:39:55:91 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:39:59:92 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:39:59:92 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:40:03:93 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:40:03:94 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:40:07:94 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:40:07:94 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:40:11:95 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:40:11:95 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:40:15:95 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:40:15:95 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:40:19:96 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:40:19:96 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:40:23:96 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:40:23:96 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:40:27:97 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:40:27:97 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:40:31:97 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:40:31:98 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:40:35:98 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:40:35:98 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:40:39:99 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:40:39:99 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:40:43:100 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:40:43:100 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:40:47:101 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:40:47:101 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:40:51:102 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:40:51:102 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:40:55:103 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:40:55:103 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:40:59:105 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:40:59:105 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:41:03:105 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:41:03:106 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:41:07:106 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:41:07:106 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:41:11:107 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:41:11:107 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:41:15:108 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:41:15:108 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:41:19:109 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:41:19:109 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:41:23:109 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:41:23:110 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:41:27:111 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:41:27:111 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:41:31:111 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:41:31:111 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:41:35:113 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:41:35:113 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:41:39:113 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:41:39:114 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:41:43:115 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:41:43:116 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:41:47:116 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:41:47:117 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:41:51:117 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:41:51:117 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:41:55:118 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:41:55:118 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:41:59:118 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:41:59:118 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:42:03:120 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:42:03:120 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:42:07:120 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:42:07:121 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:42:11:122 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:42:11:122 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:42:15:122 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:42:15:123 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:42:19:123 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:42:19:123 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:42:23:124 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:42:23:125 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:42:27:125 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:42:27:125 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:42:31:125 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:42:31:126 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:42:35:126 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:42:35:126 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:42:39:127 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:42:39:127 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:42:43:127 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:42:43:127 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:42:47:128 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:42:47:128 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:42:51:129 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:42:51:129 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:42:55:130 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:42:55:130 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:42:59:130 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:42:59:130 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:43:03:131 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:43:03:131 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:43:07:131 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:43:07:132 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:43:11:132 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:43:11:132 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:43:15:133 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:43:15:133 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:43:19:134 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:43:19:134 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:43:23:134 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:43:23:134 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:43:27:136 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:43:27:136 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:43:31:136 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:43:31:136 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:43:35:137 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:43:35:138 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:43:39:139 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:43:39:139 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:43:43:140 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:43:43:140 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:43:47:140 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:43:47:140 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:43:51:142 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:43:51:142 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:43:55:142 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:43:55:142 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:43:59:144 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:43:59:144 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:44:03:144 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:44:03:145 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:44:07:146 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:44:07:146 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:44:11:146 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:44:11:147 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:44:15:147 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:44:15:147 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:44:19:148 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:44:19:149 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:44:23:149 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:44:23:149 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:44:27:150 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:44:27:150 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:44:31:150 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:44:31:150 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:44:35:151 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:44:35:151 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:44:39:152 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:44:39:152 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:44:43:152 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:44:43:152 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:44:47:153 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:44:47:153 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:44:51:153 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:44:51:154 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:44:55:154 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:44:55:154 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:44:59:155 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:44:59:155 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:45:03:155 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:45:03:156 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:45:07:156 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:45:07:156 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:45:11:157 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:45:11:157 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:45:15:157 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:45:15:157 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:45:19:158 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:45:19:158 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:45:23:159 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:45:23:159 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:45:27:159 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:45:27:160 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:45:31:160 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:45:31:160 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:45:35:161 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:45:35:161 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:45:39:161 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:45:39:161 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:45:43:163 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:45:43:163 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:45:47:164 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:45:47:164 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:45:51:166 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:45:51:166 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:45:55:166 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:45:55:166 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:45:59:167 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:45:59:167 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:46:03:168 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:46:03:168 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:46:07:170 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:46:07:170 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:46:11:170 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:46:11:170 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:46:15:171 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:46:15:171 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:46:19:172 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:46:19:172 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:46:23:173 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:46:23:173 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:46:27:173 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:46:27:174 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:46:31:174 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:46:31:174 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:46:35:175 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:46:35:175 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:46:39:175 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:46:39:175 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:46:43:177 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:46:43:177 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:46:47:179 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:46:47:179 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:46:51:179 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:46:51:179 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:46:55:180 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:46:55:180 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:46:59:180 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:46:59:180 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:47:03:181 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:47:03:181 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:47:07:181 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:47:07:181 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:47:11:183 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:47:11:183 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:47:15:183 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:47:15:183 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:47:19:184 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:47:19:184 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:47:23:184 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:47:23:184 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:47:27:186 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:47:27:186 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:47:31:186 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:47:31:186 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:47:35:188 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:47:35:188 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:47:39:189 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:47:39:190 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:47:43:190 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:47:43:190 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:47:47:191 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:47:47:191 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:47:51:191 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:47:51:192 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:47:55:193 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:47:55:193 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:47:59:194 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:47:59:195 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:48:03:195 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:48:03:195 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:48:07:197 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:48:07:197 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:48:11:198 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:48:11:198 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:48:15:199 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:48:15:199 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:48:19:200 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:48:19:200 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:48:23:201 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:48:23:201 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:48:27:202 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:48:27:202 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:48:31:202 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:48:31:202 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:48:35:205 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:48:35:205 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:48:39:206 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:48:39:206 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:48:43:206 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:48:43:206 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:48:47:207 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:48:47:207 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:48:51:207 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:48:51:207 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:48:55:209 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:48:55:210 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:48:59:212 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:48:59:212 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:49:03:212 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:49:03:212 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:49:07:214 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:49:07:214 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:49:11:215 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:49:11:215 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:49:15:215 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:49:15:215 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:49:19:216 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:49:19:216 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:49:23:217 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:49:23:217 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:49:27:219 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:49:27:219 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:49:31:220 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:49:31:220 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:49:35:221 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:49:35:221 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:49:39:221 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:49:39:221 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:49:43:222 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:49:43:222 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:49:47:224 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:49:47:224 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:49:51:226 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:49:51:226 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:49:55:226 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:49:55:226 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:49:59:227 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:49:59:227 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:50:03:228 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:50:03:228 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:50:07:229 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:50:07:229 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:50:11:229 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:50:11:229 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:50:15:230 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:50:15:230 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:50:19:230 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:50:19:231 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:50:23:231 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:50:23:231 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:50:27:232 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:50:27:232 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:50:31:232 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:50:31:232 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:50:35:234 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:50:35:234 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:50:39:234 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:50:39:234 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:50:43:236 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:50:43:236 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:50:47:237 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:50:47:237 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:50:51:238 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:50:51:238 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:50:55:239 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:50:55:239 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:50:59:240 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:50:59:240 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:51:03:241 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:51:03:241 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:51:07:241 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:51:07:241 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:51:11:243 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:51:11:243 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:51:15:243 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:51:15:243 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:51:19:244 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:51:19:244 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:51:23:245 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:51:23:245 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:51:27:245 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:51:27:245 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:51:31:246 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:51:31:246 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:51:35:246 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:51:35:246 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:51:39:247 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:51:39:247 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:51:43:247 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:51:43:248 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:51:47:248 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:51:47:248 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:51:51:249 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:51:51:249 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:51:55:249 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:51:55:249 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:51:59:250 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:51:59:250 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:52:03:250 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:52:03:251 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:52:07:251 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:52:07:251 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:52:11:252 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:52:11:252 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:52:15:253 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:52:15:253 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:52:19:254 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:52:19:254 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:52:23:256 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:52:23:256 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:52:27:257 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:52:27:257 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:52:31:259 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:52:31:259 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:52:35:259 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:52:35:259 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:52:39:260 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:52:39:260 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:52:43:260 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:52:43:260 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:52:47:261 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:52:47:261 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:52:51:261 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:52:51:261 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:52:55:262 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:52:55:262 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:52:59:262 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:52:59:263 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:53:03:263 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:53:03:263 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:53:07:264 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:53:07:264 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:53:11:264 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:53:11:264 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:53:15:265 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:53:15:265 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:53:19:266 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:53:19:267 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:53:23:267 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:53:23:267 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:53:27:268 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:53:27:269 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:53:31:269 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:53:31:269 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:53:35:269 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:53:35:270 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:53:39:270 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:53:39:270 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:53:43:271 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:53:43:271 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:53:47:272 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:53:47:272 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:53:51:273 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:53:51:273 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:53:55:273 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:53:55:273 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:53:59:274 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:53:59:274 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:54:03:274 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:54:03:274 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:54:07:275 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:54:07:275 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:54:11:276 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:54:11:276 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:54:15:277 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:54:15:277 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:54:19:277 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:54:19:278 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:54:23:278 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:54:23:278 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:54:27:280 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:54:27:280 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:54:31:280 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:54:31:281 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:54:35:281 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:54:35:282 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:54:39:283 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:54:39:283 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:54:43:283 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:54:43:283 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:54:47:284 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:54:47:284 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:54:51:285 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:54:51:286 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:54:55:286 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:54:55:286 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:54:59:287 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:54:59:287 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:55:03:387 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:55:03:387 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:55:07:387 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:55:07:387 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:55:11:388 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:55:11:388 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:55:15:435 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:55:15:435 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:55:19:436 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:55:19:436 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:55:23:437 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:55:23:437 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:55:27:437 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:55:27:437 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:55:31:438 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:55:31:438 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:55:35:438 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:55:35:439 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:55:39:439 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:55:39:439 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:55:43:440 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:55:43:440 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:55:47:440 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:55:47:440 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:55:51:442 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:55:51:442 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:55:55:442 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:55:55:443 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:55:59:444 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:55:59:444 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:56:03:445 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:56:03:445 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:56:07:446 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:56:07:446 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:56:11:447 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:56:11:447 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:56:15:448 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:56:15:449 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:56:19:449 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:56:19:449 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:56:23:450 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:56:23:450 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:56:27:450 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:56:27:450 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:56:31:451 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:56:31:451 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:56:35:454 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:56:35:454 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:56:39:455 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:56:39:455 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:56:43:455 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:56:43:455 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:56:47:462 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:56:47:463 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:56:51:464 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:56:51:464 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:56:55:464 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:56:55:464 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:56:59:465 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:56:59:465 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:57:03:465 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:57:03:465 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:57:07:467 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:57:07:467 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:57:11:467 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:57:11:467 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:57:15:468 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:57:15:468 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:57:19:468 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:57:19:468 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:57:23:470 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:57:23:470 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:57:27:472 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:57:27:472 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:57:31:473 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:57:31:473 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:57:35:474 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:57:35:474 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:57:39:474 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:57:39:475 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:57:43:476 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:57:43:476 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:57:47:476 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:57:47:477 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:57:51:478 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:57:51:478 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:57:55:479 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:57:55:480 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:57:59:481 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:57:59:481 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:58:03:482 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:58:03:482 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:58:07:482 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:58:07:483 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:58:11:483 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:58:11:483 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:58:15:484 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:58:15:484 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:58:19:485 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:58:19:485 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:58:23:486 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:58:23:486 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:58:27:486 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:58:27:487 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:58:31:487 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:58:31:487 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:58:35:488 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:58:35:488 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:58:39:488 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:58:39:488 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:58:43:489 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:58:43:489 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:58:47:489 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:58:47:490 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:58:51:491 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:58:51:491 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:58:55:492 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:58:55:492 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:58:59:493 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:58:59:494 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:59:03:495 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:59:03:495 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:59:07:496 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:59:07:497 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:59:11:498 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:59:11:498 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:59:15:499 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:59:15:499 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:59:19:499 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:59:19:499 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:59:23:501 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:59:23:501 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:59:27:503 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:59:27:503 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:59:31:504 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:59:31:504 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:59:35:505 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:59:35:505 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:59:39:506 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:59:39:506 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:59:43:506 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:59:43:506 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:59:47:507 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:59:47:507 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:59:51:507 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:59:51:507 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:59:55:508 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:59:55:508 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 14:59:59:509 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 14:59:59:509 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:00:03:509 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 15:00:03:509 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:00:07:510 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 15:00:07:510 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:00:11:511 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 15:00:11:511 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:00:15:511 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 15:00:15:511 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:00:19:512 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 15:00:19:512 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:00:23:513 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 15:00:23:513 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:00:27:514 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 15:00:27:514 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:00:31:515 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 15:00:31:515 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:00:35:516 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 15:00:35:516 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:00:39:516 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 15:00:39:516 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:00:43:517 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 15:00:43:517 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:00:47:763 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 15:00:47:763 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:00:51:764 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 15:00:51:764 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:00:55:764 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 15:00:55:765 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:00:59:765 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 15:00:59:765 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:01:03:767 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 15:01:03:767 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:01:07:770 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 15:01:07:771 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:01:11:771 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 15:01:11:771 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:01:15:773 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 15:01:15:774 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:01:19:774 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 15:01:19:774 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:01:23:775 Interbloqueo/(3897:3898): ----------------------------------------------
+[INFO] 15:01:23:775 Interbloqueo/(3897:3898): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:02:09:208 Interbloqueo/(4353:4354): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:02:13:209 Interbloqueo/(4353:4354): ----------------------------------------------
+[INFO] 15:02:13:209 Interbloqueo/(4353:4354): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:02:17:210 Interbloqueo/(4353:4354): ----------------------------------------------
+[INFO] 15:02:17:210 Interbloqueo/(4353:4354): La cantidad de personajes es: 0 y de recursos es: 3
+[INFO] 15:02:21:211 Interbloqueo/(4353:4354): ----------------------------------------------
+[INFO] 15:02:21:211 Interbloqueo/(4353:4354): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 15:02:21:211 Interbloqueo/(4353:4354): El personajes: @ ha sido marcado sin recursos
+[INFO] 15:02:25:212 Interbloqueo/(4353:4354): ----------------------------------------------
+[INFO] 15:02:25:212 Interbloqueo/(4353:4354): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 15:02:25:213 Interbloqueo/(4353:4354): El personajes: # ha sido marcado con recursos
+[INFO] 15:02:25:213 Interbloqueo/(4353:4354): El personajes: @ ha sido marcado con recursos
+[INFO] 15:02:29:213 Interbloqueo/(4353:4354): ----------------------------------------------
+[INFO] 15:02:29:213 Interbloqueo/(4353:4354): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 15:02:29:213 Interbloqueo/(4353:4354): El personajes: # ha sido marcado con recursos
+[INFO] 15:02:29:213 Interbloqueo/(4353:4354): El personajes: @ ha sido marcado con recursos
+[INFO] 15:02:33:214 Interbloqueo/(4353:4354): ----------------------------------------------
+[INFO] 15:02:33:214 Interbloqueo/(4353:4354): La cantidad de personajes es: 2 y de recursos es: 3
+[INFO] 15:02:33:214 Interbloqueo/(4353:4354): El personajes: # esta en deadlock
+[INFO] 15:02:33:214 Interbloqueo/(4353:4354): El personajes: @ esta en deadlock
+[INFO] 15:02:33:214 Interbloqueo/(4353:4354): Los personajes que estan en deadlock son: #@ 
+[INFO] 15:02:37:215 Interbloqueo/(4353:4354): ----------------------------------------------
+[INFO] 15:02:37:215 Interbloqueo/(4353:4354): La cantidad de personajes es: 1 y de recursos es: 3
+[INFO] 15:02:37:215 Interbloqueo/(4353:4354): El personajes: # ha sido marcado con recursos
+[INFO] 15:02:41:216 Interbloqueo/(4353:4354): ----------------------------------------------

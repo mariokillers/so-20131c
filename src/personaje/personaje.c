@@ -53,6 +53,7 @@ int main(int argc, char *argv[]) {
 		//analiza el estado actual del proceso y en base a eso, actua
 		switch (miEstado) {
 		case NUEVO_NIVEL:
+			log_info(logger, "intentando");
 			orquestadorCCB =
 					connectServer("localhost",
 							5000/*((char*)((Direccion*)(personaje->personaje_orquestador))->IP), ((Direccion*)(personaje->personaje_orquestador))->PORT*/);
@@ -161,6 +162,12 @@ int main(int argc, char *argv[]) {
 						flag = 0;
 						llegoRecurso();
 					}
+						//verifico si el personaje finalizo el nivel
+					if (nivelTerminado(personaje->niveles,
+							nombreNivelActual)) {
+						break;
+					}								
+								
 					if (posicionProximoRecurso != NULL ) {
 						log_trace(logger,
 								"tengo posicion de recurso que necesito");
