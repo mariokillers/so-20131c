@@ -607,6 +607,7 @@ t_personaje *create_personaje(t_config *p) {
 
 	personaje = (t_personaje*) malloc(sizeof(t_personaje));
 	personaje->orquestador = (Direccion *) malloc(sizeof(Direccion));
+	personaje->miDireccion = (Direccion *) malloc(sizeof(Direccion));
 	personaje->posActual = (Posicion *) malloc(
 			sizeof(Posicion));
 
@@ -625,12 +626,12 @@ t_personaje *create_personaje(t_config *p) {
 
 	personaje->orquestador->PORT = tomarPuerto(
 			config_get_string_value(p, "orquestador"));
-/*
+
 	strcpy(personaje->miDireccion->IP,
 			tomarIP(config_get_string_value(p, "miDireccion")));
 
 	personaje->miDireccion->PORT = tomarPuerto(
-			config_get_string_value(p, "miDireccion"));*/
+			config_get_string_value(p, "miDireccion"));
 
 	personaje->posActual->POS_X = 1;
 
