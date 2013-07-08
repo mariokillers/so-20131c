@@ -47,12 +47,12 @@ t_nivel *create_nivel(t_config *n){
 	nivel->nivel_tiempo_deadlock = config_get_double_value(n, "tiempoChequeoDeadlock");
 
 	nivel->nivel_recovery = config_get_int_value(n, "recovery");
-	
+	/*
 	strcpy(nivel->miDireccion->IP,
 		tomarIP(config_get_string_value(n, "miDireccion")));
 
 	nivel->miDireccion->PORT = tomarPuerto(
-			config_get_string_value(n, "miDireccion"));
+			config_get_string_value(n, "miDireccion"));*/
 
 	return nivel;
 }

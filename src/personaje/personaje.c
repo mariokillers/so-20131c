@@ -625,12 +625,12 @@ t_personaje *create_personaje(t_config *p) {
 
 	personaje->orquestador->PORT = tomarPuerto(
 			config_get_string_value(p, "orquestador"));
-			
+/*
 	strcpy(personaje->miDireccion->IP,
 			tomarIP(config_get_string_value(p, "miDireccion")));
 
 	personaje->miDireccion->PORT = tomarPuerto(
-			config_get_string_value(p, "miDireccion"));
+			config_get_string_value(p, "miDireccion"));*/
 
 	personaje->posActual->POS_X = 1;
 
