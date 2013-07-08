@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
 	inicializarPersonaje();
 
 	//instancio el logger
-	logger = log_create("personaje.log", "ProcesoPersonaje", true,
+	logger = log_create(string_from_format("ProcesoPersonaje%s.log", personaje->nombre), "ProcesoPersonaje", false,
 			LOG_LEVEL_INFO);
 
 	//declaro las seniales
@@ -248,7 +248,7 @@ int main(int argc, char *argv[]) {
 					((Posicion*) (personaje->posActual))->POS_Y =
 							posicionActual->POS_Y;
 
-					log_trace(logger,
+					log_info(logger,
 							string_from_format(
 									"personaje %s nueva posicion: (%d,%d)",
 									personaje->nombre,
@@ -625,6 +625,12 @@ t_personaje *create_personaje(t_config *p) {
 
 	personaje->orquestador->PORT = tomarPuerto(
 			config_get_string_value(p, "orquestador"));
+			
+	strcpy(personaje->miDireccion->IP,
+			tomarIP(config_get_string_value(p, "miDireccion")));
+
+	personaje->miDireccion->PORT = tomarPuerto(
+			config_get_string_value(p, "miDireccion"));
 
 	personaje->posActual->POS_X = 1;
 

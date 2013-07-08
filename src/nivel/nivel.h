@@ -59,6 +59,8 @@ typedef struct t_nivel {
 	long nivel_tiempo_deadlock;
 
 	int nivel_recovery;
+	
+	Direccion *miDireccion;
 
 } t_nivel;
 

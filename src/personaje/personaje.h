@@ -65,6 +65,7 @@ typedef struct t_personaje {
 	int vidasRestantes;
 	Direccion *orquestador;
 	Posicion *posActual;
+	Direccion *miDireccion;
 } t_personaje;
 
 t_personaje *read_personaje_archivo_configuracion(char* path);
