@@ -84,7 +84,6 @@ int main(int argc, char *argv[]) {
 	//salgo de la region critica
 
 	while (1) {
-		log_info(logger, "Esperando Mensaje");
 		//Recibo mensajes, y bloqueo si no hay.
 		while (!mensajes(colaDeMensajes, serverCCB))
 			;
@@ -125,7 +124,7 @@ int main(int argc, char *argv[]) {
 
 			log_info(logger,
 					string_from_format(
-							"Se dibujo el personaje: %c en la pos (0,0)",
+							"Se dibujo el personaje: %c en la pos (1,1)",
 							miPersonaje->id));
 		}
 		break;
