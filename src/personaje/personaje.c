@@ -603,17 +603,18 @@ t_personaje *read_personaje_archivo_configuracion(char* path) {
 
 t_personaje *create_personaje(t_config *p) {
 	t_personaje *personaje;
-	char *aux = config_get_string_value(p, "simbolo");
+	//char *aux = config_get_string_value(p, "simbolo");
 
 	personaje = (t_personaje*) malloc(sizeof(t_personaje));
 	personaje->orquestador = (Direccion *) malloc(sizeof(Direccion));
-	personaje->miDireccion = (Direccion *) malloc(sizeof(Direccion));
 	personaje->posActual = (Posicion *) malloc(
 			sizeof(Posicion));
 
 	personaje->nombre = config_get_string_value(p, "nombre");
 
-	personaje->simbolo = aux[0];
+	//personaje->simbolo = aux[0];
+
+	personaje->simbolo = (config_get_string_value(p, "simbolo"))[0];
 
 	personaje->niveles = create_lista_niveles(personaje, p);
 
@@ -626,12 +627,12 @@ t_personaje *create_personaje(t_config *p) {
 
 	personaje->orquestador->PORT = tomarPuerto(
 			config_get_string_value(p, "orquestador"));
-
+/*
 	strcpy(personaje->miDireccion->IP,
 			tomarIP(config_get_string_value(p, "miDireccion")));
 
 	personaje->miDireccion->PORT = tomarPuerto(
-			config_get_string_value(p, "miDireccion"));
+			config_get_string_value(p, "miDireccion"));*/
 
 	personaje->posActual->POS_X = 1;
 
