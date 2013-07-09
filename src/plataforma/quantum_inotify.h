@@ -5,7 +5,7 @@
 
 #define QUANTUM_IN_EVENT_SIZE  (sizeof (struct inotify_event)) // inotify event size
 #define QUANTUM_IN_BUF_LEN     (1024 * (QUANTUM_IN_EVENT_SIZE + 16)) // inotify max buffer size
-#define QUANTUM_DEFAULT 3
+#define QUANTUM_DEFAULT 1
 #define QUANTUM_CONF_KEY "quantum"
 
 t_config *quantum_config;
