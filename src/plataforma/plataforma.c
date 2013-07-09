@@ -328,15 +328,15 @@ void* orq (void* a){
 				miGestor = findGestor_byfd(miMensaje->from);
 
 				Victima = findUltimoEnLlegar (miGestor->personajes_en_nivel, PersonajesInterbloqueados);
+				mandarMensaje(miMensaje->from, NOMBRE_VICTIMA ,1,&(Victima->ID[1]));
 				log_info(Logger, "Envia mensaje indicando que murio el personaje");
 				mandarMensaje(Victima->FD,MORISTE_PERSONAJE,0,NULL);
 				log_info(Logger, string_from_format("Mata al personaje (NOMBRE VICTIMA: %s)", Victima->ID));
-				mandarMensaje(miMensaje->from, NOMBRE_VICTIMA ,1,&(Victima->ID[1]));
+				
 
 				//ENTRO EN ZONA CRITICA
 					pthread_mutex_lock(miGestor->miMutex);
 
-				removePersonaje_byid (miGestor->queue_listos->elements, Victima);
 				removePersonaje_fromBloq(miGestor->queues_bloq, Victima);
 				imprimirBloqueados(miGestor->queues_bloq,"Borro victima de lista de Bloqueados");
 				
