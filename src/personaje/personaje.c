@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
 	inicializarPersonaje();
 
 	//instancio el logger
-	logger = log_create(string_from_format("ProcesoPersonaje%s.log", personaje->nombre), "ProcesoPersonaje", false,
+	logger = log_create(string_from_format("ProcesoPersonaje%s.log", personaje->nombre), "ProcesoPersonaje", true,
 			LOG_LEVEL_INFO);
 
 	//declaro las seniales
@@ -181,7 +181,7 @@ int main(int argc, char *argv[]) {
 								posicionActual->POS_Y;
 
 						//loggeo de la nueva posicion del personaje
-						log_trace(logger,
+						log_info(logger,
 								string_from_format(
 										"personaje %s nueva posicion: (%d,%d)",
 										personaje->nombre,
@@ -416,7 +416,7 @@ Posicion *realizarMovimiento() {
 	mandarMensaje(nivelCCB.sockfd, REQUEST_MOVIMIENTO, sizeof(Posicion),
 			nuevaPos);
 
-	log_trace(logger,
+	log_info(logger,
 			string_from_format(
 					"personaje %s solicita movimiento a %s a la posicion (%d, %d)",
 					personaje->nombre, nombreNivelActual, nuevaPos->POS_X,
