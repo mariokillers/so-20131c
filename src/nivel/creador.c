@@ -35,7 +35,7 @@ t_nivel *create_nivel(t_config *n){
 	t_nivel *nivel;
 	nivel = (t_nivel*)malloc(sizeof(t_nivel));
 	nivel->nivel_orquestador = (Direccion*) malloc(sizeof(Direccion));
-	personaje->miDireccion = (Direccion *) malloc(sizeof(Direccion));
+	nivel->miDireccion = (Direccion *) malloc(sizeof(Direccion));
 
 	nivel->nivel_items = create_lista_cajas(n);
 
