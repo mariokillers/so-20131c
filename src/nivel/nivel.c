@@ -144,11 +144,6 @@ int main(int argc, char *argv[]) {
 			//obtengo la posicion del recurso
 			Posicion pos = obtenerPosRecurso(recurso);
 
-			log_info(logger,
-					string_from_format(
-							"Mando la posicion del recurso %c: (%d,%d)",
-							recurso, pos.POS_X, pos.POS_Y));
-
 			pthread_mutex_unlock(&mutex);
 			//salgo de la region critica
 
@@ -159,8 +154,8 @@ int main(int argc, char *argv[]) {
 
 			log_info(logger,
 					string_from_format(
-							"Mande la posicion del recurso: %c al personaje: %c",
-							recurso, personaje->id));
+							"Mande la posicion del recurso: %c: (%d,%d) al personaje: %c",
+							recurso,pos.POS_X, pos.POS_Y ,personaje->id));
 		}
 		break;
 
