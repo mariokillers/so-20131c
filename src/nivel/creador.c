@@ -118,9 +118,9 @@ void ListItems_add_caja(t_config *n, char *buffer_caja_num, ITEM_NIVEL **list){
 	
 	new->item_type = RECURSO_ITEM_TYPE;
 
-	new->posx = atoi(aux[3]);
+	new->posx = atoi(aux[4]);
 
-	new->posy = atoi(aux[4]);	
+	new->posy = atoi(aux[3]);
 
 	new->next = *list;
 	
