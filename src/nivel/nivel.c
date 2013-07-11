@@ -465,10 +465,8 @@ int validarPosYRecursos(PersonajeEnNivel* personaje, char idRecurso) {
 	//comparo
 	if (((personajePosx == recurso->posx) && (personajePosy == recurso->posy))
 			&& ((recurso->quantity) > 0)) {
-		log_info(logger, "El personaje puede tomar el recurso");
 		return 1;
 	}
-	log_info(logger, "El personaje no puede tomar el recurso");
 	return 0;
 }
 
