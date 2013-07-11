@@ -40,6 +40,7 @@ int main(int argc, char* argv[]) {
 	nivel_gui_inicializar();
 
 	serverCCB = initServer(nivel->miDireccion->PORT);
+	serverCCB.flag_desconexiones = 1;
 
 	clientCCB = connectServer(nivel->orquestador->IP, nivel->orquestador->PORT);
 
@@ -220,8 +221,8 @@ int main(int argc, char* argv[]) {
 				restarRecurso(ListaItems, recurso);
 
 				log_info(logger,
-								string_from_format("Resto el recurso: %c de ListaItems",
-												recurso));
+						string_from_format("Resto el recurso: %c de ListaItems",
+								recurso));
 				agregarRecursoAPersonaje(personaje, recurso);
 				log_info(logger,
 						string_from_format(
@@ -266,14 +267,36 @@ int main(int argc, char* argv[]) {
 			//salgo de la region critica
 
 			log_info(logger,
-							string_from_format(
-								"El personaje: %c ha terminado el nivel",
-								personaje->id));
+					string_from_format(
+							"El personaje: %c ha terminado el nivel",
+							personaje->id));
 
 			matarPersonaje(mensaje->from);
 
 		}
 		break;
+
+		case DESCONEXION: {
+			log_info(logger, "Recibi DESCONEXION");
+
+			//entro en la region critica
+			pthread_mutex_lock(&mutex);
+
+			PersonajeEnNivel* personaje = buscarPersonaje_byfd(*(int*)mensaje->data);
+
+			pthread_mutex_unlock(&mutex);
+			//salgo de la region critica
+
+			log_info(logger,
+					string_from_format(
+							"El personaje: %c ha sido desconectado del nivel",
+							personaje->id));
+
+			matarPersonaje(*(int*)mensaje->data);
+
+		}
+		break;
+
 
 		case NOMBRE_VICTIMA: {
 			log_info(logger, "Recibi NOMBRE_VICTIMA");
@@ -323,8 +346,8 @@ void matarPersonaje(int fdPersonaje) {
 	t_recursos* recursosALiberar = personaje->recursos;
 
 	log_info(logger,
-				string_from_format("Tengo recursos a liberar por parte del personaje: %c ",
-						personaje->id));
+			string_from_format("Tengo recursos a liberar por parte del personaje: %c ",
+					personaje->id));
 
 	//reasigno los recursos que libera el personaje a listaItems
 	reasignarRecursosAListaItems(recursosALiberar);
@@ -335,8 +358,8 @@ void matarPersonaje(int fdPersonaje) {
 	log_info(logger, "Mande recursos liberados");
 
 	log_info(logger,
-				string_from_format("El personaje: %c ha sido borrado del nivel",
-						personaje->id));
+			string_from_format("El personaje: %c ha sido borrado del nivel",
+					personaje->id));
 
 	//borra el personaje del nivel y libera al personaje de listaPersonajes
 	BorrarItem(&ListaItems, personaje->id);
@@ -413,9 +436,9 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador) {
 				agregarRecursoAPersonaje(personaje, recursoAReasignar->idRecurso);
 
 				log_info(logger,
-								string_from_format(
-										"Reasigno el recurso: %c al personaje: %c",
-										recursoAReasignar->idRecurso, personaje->id));
+						string_from_format(
+								"Reasigno el recurso: %c al personaje: %c",
+								recursoAReasignar->idRecurso, personaje->id));
 
 			}
 			borrarMensaje(mensaje);
@@ -634,8 +657,8 @@ void agregarRecursosAListaItems(char idRecurso, int cant) {
 	temp->quantity = temp->quantity + cant;
 
 	log_info(logger,
-					string_from_format("Reasigno a ListaItems el recurso: %c con la cant: %d",
-						temp->id, cant));
+			string_from_format("Reasigno a ListaItems el recurso: %c con la cant: %d",
+					temp->id, cant));
 }
 
 void modificarPosPersonaje(PersonajeEnNivel* personaje, int posx, int posy) {

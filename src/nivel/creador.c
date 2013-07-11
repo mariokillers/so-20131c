@@ -6,7 +6,7 @@ PARAM: char* path -> direccion del archivo de configuracion
 RETURN: t_nivel * -> un nivel creado en base a un archivo de configuracion
 DESC: instancia un t_config (struct de commons/config.h) tomando valores del archivo de configuracion y devuelve 
 	un nivel creado en base a este t_config
-	*/
+ */
 
 t_nivel *read_nivel_archivo_configuracion(char* path){
 
@@ -28,7 +28,7 @@ PARAM: t_config *n -> una instancia de t_config con los valores de un archivo de
 RETURN: t_nivel * -> el nivel creado
 DESC: con las funciones de commons/config.h va tomando los valores del t_config dependiendo de la key pasada
 	como parametro a cada función
-	*/
+ */
 
 t_nivel *create_nivel(t_config *n){
 
@@ -61,7 +61,7 @@ t_nivel *create_nivel(t_config *n){
 PARAM: t_config *n -> una instancia de t_config con los valores de un archivo de configuracion
 RETURN: ITEM_NIVEL * -> una instancia de ITEM_NIVEL * (so-nivel-gui-library-master/nivel-gui/nivel.h) como una lista nueva
 DESC: crea una lista de ITEM_NIVEL con sus respectivos atributos
-	*/
+ */
 
 ITEM_NIVEL *create_lista_cajas(t_config *n){
 
@@ -103,11 +103,11 @@ DESC: crea una nueva instancia de ITEM_NIVEL * utilizando las funciones de commo
 EXPLICACION: el arch viene en formato "x,y,z,w", para poder tomar cada valor por separado, hay que convertirlo
 	a formato ["x","y","z","w"], utilizando las funciones de commons/string.h  string_from_format\2 y
 	string_get_string_as_array\1
-	*/
+ */
 
 void ListItems_add_caja(t_config *n, char *buffer_caja_num, ITEM_NIVEL **list){
 	ITEM_NIVEL *new = malloc(sizeof(ITEM_NIVEL));
-	
+
 	char* aux_string = string_from_format("[%s]", config_get_string_value(n, buffer_caja_num));
 
 	char **aux = string_get_string_as_array(aux_string);
@@ -115,7 +115,7 @@ void ListItems_add_caja(t_config *n, char *buffer_caja_num, ITEM_NIVEL **list){
 	new->id = aux[1][0];
 
 	new->quantity = atoi(aux[2]);
-	
+
 	new->item_type = RECURSO_ITEM_TYPE;
 
 	new->posx = atoi(aux[4]);
@@ -123,6 +123,6 @@ void ListItems_add_caja(t_config *n, char *buffer_caja_num, ITEM_NIVEL **list){
 	new->posy = atoi(aux[3]);
 
 	new->next = *list;
-	
+
 	*list = new;
 }
