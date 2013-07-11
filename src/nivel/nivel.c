@@ -3,7 +3,7 @@
 #include <string.h>
 #include "interbloqueo.h"
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[]) {
 	pthread_mutex_init(&mutex, NULL );
 	pthread_mutex_init(&deadlock_mutex, NULL );
 	pthread_mutex_lock(&deadlock_mutex);
@@ -21,7 +21,8 @@ int main(int argc, char *argv[]) {
 	path_config = argv[1];
 
 	//inicializo el nivel desde el archivo config
-	t_nivel *nivel = read_nivel_archivo_configuracion(path_config);
+	nivel = read_nivel_archivo_configuracion(path_config);
+
 	if (nivel == NULL ) {
 		fprintf(stderr,
 				"ERROR: no se pudo leer el archivo de configuracion %s\n",
@@ -98,7 +99,7 @@ int main(int argc, char *argv[]) {
 		break;
 
 		case HANDSHAKE: {
-			Personaje *personajeNuevo = malloc(sizeof(Personaje));
+			Personaje* personajeNuevo = malloc(sizeof(Personaje));
 			memcpy(personajeNuevo, mensaje->data, sizeof(Personaje));
 			personajeNuevo->FD = mensaje->from;
 
@@ -110,7 +111,7 @@ int main(int argc, char *argv[]) {
 			pthread_mutex_lock(&mutex);
 
 			//cargo el personaje en las listas que voy a manejar para validar recursos e interbloqueo
-			PersonajeEnNivel *miPersonaje = cargarPersonajeEnNivel(
+			PersonajeEnNivel* miPersonaje = cargarPersonajeEnNivel(
 					personajeNuevo);
 
 			//creo el personaje en el nivel. Le pongo como pos inicial la (0,0) y lo dibujo
@@ -148,7 +149,7 @@ int main(int argc, char *argv[]) {
 			mandarMensaje(mensaje->from, POSICION_RECURSO, sizeof(Posicion),
 					&pos);
 
-			PersonajeEnNivel *personaje = buscarPersonaje_byfd(mensaje->from);
+			PersonajeEnNivel* personaje = buscarPersonaje_byfd(mensaje->from);
 
 			log_info(logger,
 					string_from_format(
@@ -319,7 +320,7 @@ void matarPersonaje(int fdPersonaje) {
 	PersonajeEnNivel* personaje = buscarPersonaje_byfd(fdPersonaje);
 
 	//se fija que recursos tenia asignado el personaje para liberarlos
-	t_recursos *recursosALiberar = personaje->recursos;
+	t_recursos* recursosALiberar = personaje->recursos;
 
 	log_info(logger,
 				string_from_format("Tengo recursos a liberar por parte del personaje: %c ",
@@ -353,7 +354,7 @@ void reasignarRecursosAListaItems(t_recursos *listaRecursos) {
 	/** @NAME: reasignarRecursos
 	 * @DESC: reasigna los recursos que libero el personaje
 	 */
-	t_recursos *recurso = listaRecursos;
+	t_recursos* recurso = listaRecursos;
 
 	while(recurso != NULL){
 
@@ -367,10 +368,10 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador) {
 	/** @NAME: mandarRecursosLiberados
 	 * @DESC: le manda al orquestador la cantidad de recursos que se liberaron POR RECURSO
 	 */
-	t_recursos *aux = recursosALiberar;
+	t_recursos* aux = recursosALiberar;
 
-	t_queue *colaDeMensajes = queue_create();
-	Mensaje *mensaje;
+	t_queue* colaDeMensajes = queue_create();
+	Mensaje* mensaje;
 
 	while (aux != NULL ) {
 		//paso a la struct a la que voy a mandar los mensajes
@@ -404,11 +405,11 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador) {
 			if (mensaje->type == RECURSOS_REASIGNADOS) {
 
 				//llamo a reasignar con la data que me envio
-				Recursos *recursoAReasignar = (Recursos*)mensaje->data;
+				Recursos* recursoAReasignar = (Recursos*)mensaje->data;
 
 				restarRecurso(ListaItems, recursoAReasignar->idRecurso);
 
-				PersonajeEnNivel *personaje = buscarPersonaje_byid( recursoAReasignar->idPersonaje);
+				PersonajeEnNivel* personaje = buscarPersonaje_byid( recursoAReasignar->idPersonaje);
 				agregarRecursoAPersonaje(personaje, recursoAReasignar->idRecurso);
 
 				log_info(logger,
@@ -465,10 +466,8 @@ int validarPosYRecursos(PersonajeEnNivel* personaje, char idRecurso) {
 	//comparo
 	if (((personajePosx == recurso->posx) && (personajePosy == recurso->posy))
 			&& ((recurso->quantity) > 0)) {
-		log_info(logger, "El personaje puede tomar el recurso");
 		return 1;
 	}
-	log_info(logger, "El personaje no puede tomar el recurso");
 	return 0;
 }
 
@@ -695,6 +694,7 @@ void rutinaSignal(int n){
 	 */
 	log_info(logger, "Recibi senal de morir");
 
-	mandarMensaje(clientCCB.sockfd, CERRANDO_NIVEL, 0, NULL);
+	mandarMensaje(clientCCB.sockfd, CERRANDO_NIVEL, sizeof(nivel->nombre),nivel->nombre );
+
 	exit(1);
 }

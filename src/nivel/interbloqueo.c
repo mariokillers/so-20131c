@@ -352,7 +352,7 @@ void comprobarDeadlock (bool marcados[],int cantPersonajes, char referenciaPerso
 		if(marcados[i]==false){
 			//Si el personaje no esta marcado, esta comprometido en un deadlock.
 			personajesInterbloqueados[j]=referenciaPersonaje[i];
-			log_info(loggerInterbloqueo, string_from_format("El personajes: %c esta en deadlock", referenciaPersonaje[i]));
+			log_info(loggerInterbloqueo, string_from_format("El personaje: %c esta en deadlock", referenciaPersonaje[i]));
 			j++;
 
 		}
