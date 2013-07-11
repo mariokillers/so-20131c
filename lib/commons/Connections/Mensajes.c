@@ -29,7 +29,7 @@ int mensajes(t_queue* mensajesQueue, CCB myCOM){
 		if ((myCOM.events[i].events & EPOLLERR) || (myCOM.events[i].events & EPOLLRDHUP) || (myCOM.events[i].events & EPOLLHUP) || (!(myCOM.events[i].events & EPOLLIN))) {
 			fprintf (stderr, "epoll error\n");
 			//CIERRO EL EVENTO
-			Cerrar_Conexion(myCOM.events[i].data.fd);
+			Cerrar_Conexion(myCOM.events[i].data.fd, &myCOM, mensajesQueue);
 			continue;
 		}
 
@@ -171,7 +171,7 @@ int mensajes(t_queue* mensajesQueue, CCB myCOM){
 			}
 			//SI TERMINE CIERRO CONEXION
 			if (done){
-				Cerrar_Conexion(myCOM.events[i].data.fd);
+				Cerrar_Conexion(myCOM.events[i].data.fd, &myCOM, mensajesQueue);
 			}
 		}
 	}
@@ -223,8 +223,25 @@ int obtenerData(void* destino, Mensaje* miMensaje){
 ///////////////////////////////PRIVATE////////////////////////////////
 
 
-void Cerrar_Conexion (int fd){
+void Cerrar_Conexion (int fd, CCB* miCOM, t_queue* mensajes_queue){
+	if(miCOM->flag_desconexiones==1){
+		Mensaje* NuevoMensaje;
+		if((NuevoMensaje = malloc(sizeof(Mensaje))) == NULL){
+			perror ("malloc");
+			exit(1);
+		}
 
+		//ASIGNO LOS DATOS DEL MENSAJE
+		NuevoMensaje->from = 200;
+		NuevoMensaje->type = DESCONEXION;
+		if((NuevoMensaje->data = malloc(sizeof(int))) == NULL){
+			perror ("malloc");
+			exit(1);
+		}
+		memcpy(NuevoMensaje->data,&fd,sizeof(int));
+		queue_push(mensajes_queue, NuevoMensaje);
+		
+	}
 	printf ("Closed connection on descriptor %d\n", fd);
 	//CIERRO CONEXION
 	close (fd);

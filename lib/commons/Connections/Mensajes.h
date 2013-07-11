@@ -26,6 +26,7 @@
 #include <netdb.h>
 #include <fcntl.h>
 #include "../collections/queue.h"
+#include "EstructurasMensajes.h"
 
 #define BACKLOG 20
 // Cuántas conexiones pendientes se mantienen en cola
@@ -42,6 +43,7 @@
 typedef struct {
 	int instancia_epoll;			// Instancia epoll
 	int sockfd, masterfd; 			// Escuchar sobre sock_fd, nuevas conexiones sobre new_fd
+	char flag_desconexiones;
 	struct epoll_event event;		//
 	struct epoll_event *events;
 	struct sockaddr_in my_addr; 	// Información sobre mi dirección
@@ -66,6 +68,6 @@ int mandarMensaje( int , char , uint16_t , void*);
 void borrarMensaje(Mensaje*);
 int obtenerData(void* , Mensaje*);
 int make_socket_non_blocking (int);
-void Cerrar_Conexion (int);
+void Cerrar_Conexion (int fd, CCB* miCON, t_queue* mensajes_queue);
 
 #endif /* MENSAJES_H_ */

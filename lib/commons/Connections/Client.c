@@ -66,6 +66,7 @@ CCB connectServer(char *IP, int PORT){
 		}
 
 		myClient.events = calloc (MAXEVENTS, sizeof myClient.event);
+		myClient.flag_desconexiones = 0;
 
 	return myClient;
 

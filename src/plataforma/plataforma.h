@@ -44,6 +44,7 @@ typedef struct {
 	char turno_entregado;
 	int quantum;
 	pthread_mutex_t * miMutex;
+	CCB miCON;
 
 }GestorNivel;
 

@@ -63,7 +63,8 @@ CCB initServer(int MYPORT){
 		    exit(1);
 		}
 
-
+		myServer.flag_desconexiones = 0;
+		
 		return myServer;
 }
 

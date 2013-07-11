@@ -45,7 +45,7 @@ void* Planif(void* nivel){
 	t_queue* misMensajes;
 	misMensajes = queue_create();
 	Mensaje* miMensaje;
-	CCB miCON;
+	
 	
 	
 	//CREO LA INSTANCIA DEL GESTOR
@@ -88,14 +88,14 @@ void* Planif(void* nivel){
 	list_add (Gestores, miGestor);
 	
 
-	miCON = initServer(miGestor->dataPlanificador.PORT);
+	miGestor->miCON = initServer(miGestor->dataPlanificador.PORT);
 
 	log_info(Logger, "Crea e inicializa las variables y colecciones necesarias del Planificador.");
 	
 	
 	while(1){
 		
-		if(mensajes(misMensajes ,miCON)){
+		if(mensajes(misMensajes , miGestor->miCON)){
 			miMensaje = queue_pop(misMensajes);
 			switch(miMensaje->type){
 			case HANDSHAKE:
@@ -214,6 +214,27 @@ void* Planif(void* nivel){
 					pthread_mutex_unlock(miGestor->miMutex);
 			}
 				break;
+			case DESCONEXION:
+			{
+							Personaje* Person;
+							log_info(Logger,"Se desconecto personaje");
+
+							//ENTRO EN ZONA CRITICA
+								pthread_mutex_lock(miGestor->miMutex);
+
+							
+							Person = removePersonaje_byfd (miGestor->personajes_en_nivel, miMensaje->from);
+							//log_info(Logger, string_from_format("termino nivel%x",Person));
+							if(miGestor->PersonajeEnMovimiento){
+								miGestor->turno_entregado=0;
+							}
+							removePersonaje_byfd (miGestor->queue_listos->elements, miMensaje->from);
+							if (Person != NULL) removePersonaje_fromBloq(miGestor->queues_bloq, Person);
+
+							//SALGO DE ZONA CRITICA
+								pthread_mutex_unlock(miGestor->miMutex);
+			}
+			break;
 			}
 			borrarMensaje(miMensaje);//fin de antencion a los mensajes
 			
@@ -374,7 +395,7 @@ void* orq (void* a){
 					GestorNivel* miGestor;
 					Personaje* AUX;
 					int index = 0;			
-					miGestor=findGestor_byid(((char*)(miMensaje->data)));
+					miGestor=findGestor_byfd(miMensaje->from);
 					pthread_mutex_lock(miGestor->miMutex);
 					while(queue_size(miGestor->queue_listos)){
 						
@@ -386,11 +407,12 @@ void* orq (void* a){
 							Queue_bloqueados* queueBloqueados = (Queue_bloqueados*)list_get(miGestor->queues_bloq, index);
 							while(queue_size(queueBloqueados->queue)){
 								
-								AUX = queue_pop(queueBloqueados);
+								AUX = queue_pop(queueBloqueados->queue);
 								mandarMensaje(AUX->FD,REINICIAR_NIVEL,0,NULL);
 							}
 							index++;
 					}
+					close(miGestor->miCON.masterfd);
 					removeGestor_byid(((char*)(miMensaje->data)));
 					pthread_mutex_unlock(miGestor->miMutex);
 					
