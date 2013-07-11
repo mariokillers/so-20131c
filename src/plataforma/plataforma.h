@@ -20,6 +20,7 @@
 t_list* Gestores;
 t_log* Logger;
 int quantum_inicial;
+long quantum_delay;
 t_list* personajes_jugando;
 pthread_t orquestador;
 pthread_t quantum_monitor;

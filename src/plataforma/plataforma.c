@@ -14,6 +14,7 @@ int main (){
 	
 	
 	quantum_inicial=3;
+	quantum_delay=500000;
 	pthread_create(&orquestador, NULL, orq, NULL);
 	log_info(Logger, "Crea Thread Orquestador.");
 	pthread_create(&quantum_monitor, NULL, monitorear_quantum, "../conf/quantum.conf"); // TODO: Pasar por parametro
@@ -189,16 +190,21 @@ void* Planif(void* nivel){
 
 				break;
 			case TERMINE_NIVEL:
+			{
+				Personaje* miPersonaje;
 				log_info(Logger,"Personaje termino nivel");
 
 				//ENTRO EN ZONA CRITICA
 					pthread_mutex_lock(miGestor->miMutex);
 
 				miGestor->turno_entregado=0;
-				removePersonaje_byfd (miGestor->personajes_en_nivel, miMensaje->from);
+				miPersonaje= removePersonaje_byfd (miGestor->personajes_en_nivel, miMensaje->from);
+				removePersonaje_byfd (miGestor->queue_listos->elements, miMensaje->from);
+				removePersonaje_fromBloq(miGestor->queues_bloq, miPersonaje);
 
 				//SALGO DE ZONA CRITICA
 					pthread_mutex_unlock(miGestor->miMutex);
+			}
 				break;
 			}
 			borrarMensaje(miMensaje);//fin de antencion a los mensajes
@@ -393,11 +399,11 @@ void imprimirBloqueados(t_list* bloqueados, char* mensaje) {
 	int index = 0;
 	while (index < list_size(bloqueados)) {
 		Queue_bloqueados* queueBloqueados = (Queue_bloqueados*)list_get(bloqueados, index);
-		log_info(Logger, string_from_format("Recurso: '%c' index %d", queueBloqueados->idRecurso, index));
+		log_info(Logger, string_from_format("Recurso: '%c'", queueBloqueados->idRecurso));
 		int queueIndex = 0;
 		while (queueIndex < queue_size(queueBloqueados->queue)) {
 			Personaje* personaje = (Personaje*)list_get(queueBloqueados->queue->elements, queueIndex);
-			log_info(Logger, string_from_format("-> Personaje '%s' indicelocal %d", personaje->ID, queueIndex));
+			log_info(Logger, string_from_format("-> Personaje '%s'", personaje->ID));
 			queueIndex++;
 		}
 		index++;
@@ -406,7 +412,8 @@ void imprimirBloqueados(t_list* bloqueados, char* mensaje) {
 }
 
 void entregarTurno (GestorNivel* miGestor){
-	usleep(200000);
+	
+	usleep(quantum_delay);
 	miGestor->PersonajeEnMovimiento = (Personaje*) (queue_pop (miGestor->queue_listos));
 	if(miGestor->PersonajeEnMovimiento != NULL){ //Si hay personaje en cola de listos, entrega turno
 		miGestor->turno_entregado=1;// SINO, SIGO.
