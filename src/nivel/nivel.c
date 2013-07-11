@@ -9,15 +9,13 @@ int main(int argc, char *argv[]) {
 	pthread_mutex_lock(&deadlock_mutex);
 
 	char *path_config;
-	int puerto;
-	if (argc < 3) {
-		fprintf(stderr, "%s: Faltan parametros (%s archivoconfig puerto)\n",
+	if (argc < 2) {
+		fprintf(stderr, "%s: Faltan parametros (%s archivoconfig )\n",
 				"nivel", "nivel");
 		exit(1);
 	}
 
 	path_config = argv[1];
-	puerto = atoi(argv[2]);
 
 	//inicializo el nivel desde el archivo config
 	t_nivel *nivel = read_nivel_archivo_configuracion(path_config);
@@ -37,7 +35,7 @@ int main(int argc, char *argv[]) {
 	//inicializo el proceso nivel
 	nivel_gui_inicializar();
 
-	serverCCB = initServer(puerto);
+	serverCCB = initServer(nivel->miDireccion->PORT);
 
 	clientCCB = connectServer(nivel->nivel_orquestador->IP, nivel->nivel_orquestador->PORT);
 
@@ -46,8 +44,8 @@ int main(int argc, char *argv[]) {
 
 	//le mando handshake al orquestador
 	strcpy(yoNivel.ID, nivel->nivel_nombre);
-	strcpy(yoNivel.IP, nivel->nivel_orquestador->IP);
-	yoNivel.PORT = puerto;
+	strcpy(yoNivel.IP, nivel->miDireccion->IP);
+	yoNivel.PORT = nivel->miDireccion->PORT;
 	mandarMensaje(clientCCB.sockfd, HANDSHAKE, sizeof(Nivel), &yoNivel);
 	log_info(logger,
 			string_from_format("El nivel: %s le hizo HANDSHAKE al socket: %d",

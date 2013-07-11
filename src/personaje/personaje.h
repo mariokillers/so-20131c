@@ -1,25 +1,7 @@
 #ifndef PERSONAJE_H_
 #define PERSONAJE_H_
 
-enum ESTADO {STANDBY, WAIT_DATA_LEVEL, WAIT_POS_REC, WAIT_REC, NUEVO_NIVEL, WIN};
-
-/*---------------------INCLUDES DEL TESTER, COMENTAR ANTES DE HACER PUSH--------------------------------*/
-/*
-#include <signal.h>
-#include <string.h>
-#include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include "EstructurasMensajes.h"
-#include "Client.h"
-#include "Server.h"
-#include "Mensajes.h"
-#include "commons/config.h"
-#include "commons/string.h"
-#include "commons/collections/list.h"
-*/
-/*--------------------------------------------------------------------------------------------*/
-
+enum ESTADO {STANDBY, WAIT_DATA_LEVEL, WAIT_POS_REC, WAIT_REC, NUEVO_NIVEL, WIN, MUEROSENIAL};
 
 #include <commons/Connections/Client.h>
 #include <commons/Connections/Mensajes.h>
