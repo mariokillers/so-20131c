@@ -50,10 +50,17 @@ int main(int argc, char *argv[]) {
 
 	//mientras tenga algun mensaje del Server
 	while (1) {
+		
+		
 		//analiza el estado actual del proceso y en base a eso, actua
 		switch (miEstado) {
+		case MUEROSENIAL:
+				log_info(logger,
+				string_from_format("personaje %s murio por SIGTERM",
+						personaje->nombre));
+				morir();
+				break;			
 		case NUEVO_NIVEL:
-			log_info(logger, "intentando");
 			orquestadorCCB =
 					connectServer("localhost",
 							5000/*((char*)((Direccion*)(personaje->personaje_orquestador))->IP), ((Direccion*)(personaje->personaje_orquestador))->PORT*/);
@@ -331,6 +338,7 @@ int main(int argc, char *argv[]) {
 			break;
 		}
 	}
+	
 
 	return 1;
 }
@@ -509,7 +517,6 @@ bool ganado(t_list *niveles) {
 }
 
 void morir() {
-
 	mandarMensaje(nivelCCB.sockfd, TERMINE_NIVEL, 0, NULL );
 	mandarMensaje(planificadorCCB.sockfd, TERMINE_NIVEL, 0, NULL );
 	personaje->vidasRestantes--;
@@ -550,16 +557,25 @@ void morir() {
 						personaje->nombre, nombreNivelActual));
 
 		miEstado = STANDBY;
+		log_info(logger,
+				string_from_format(
+						"personaje %s cambia a estado %d",
+						personaje->nombre, miEstado));
 	}
 }
 
 void rutinaSignal(int n) {
 	switch (n) {
 	case SIGTERM:
-		log_info(logger,
-				string_from_format("personaje %s murio por SIGTERM",
-						personaje->nombre));
-		morir();
+	
+		if (miEstado == STANDBY || miEstado == WAIT_POS_REC
+			|| miEstado == WAIT_REC) {
+				miEstado = MUEROSENIAL;
+				log_info(logger,
+					string_from_format(
+						"personaje %s cambia a estado %d",
+						personaje->nombre, miEstado));
+		}
 
 		break;
 	case SIGUSR1:
