@@ -18,7 +18,7 @@ typedef struct t_recursos{
 
 	int cant;
 
-	struct t_recursos *sig;
+	struct t_recursos* sig;
 
 }t_recursos;
 
@@ -30,11 +30,11 @@ typedef struct PersonajeEnNivel{
 
 	Posicion pos;
 
-	t_recursos *recursos;
+	t_recursos* recursos;
 
 	char recursoPendiente;
 
-	struct PersonajeEnNivel *sig;
+	struct PersonajeEnNivel* sig;
 
 	int fd;
 
@@ -50,13 +50,13 @@ con toda su estructura de datos
 
 typedef struct t_nivel {
 
-	ITEM_NIVEL *nivel_items;
+	ITEM_NIVEL* nivel_items;
 
-	Direccion *orquestador;
+	Direccion* orquestador;
 
-	Direccion *miDireccion;
+	Direccion* miDireccion;
 
-	char *nombre;
+	char* nombre;
 
 	long tiempo_deadlcok;
 
@@ -66,22 +66,23 @@ typedef struct t_nivel {
 } t_nivel;
 
 // Variables Globales
-PersonajeEnNivel *listaPersonajes;
+PersonajeEnNivel* listaPersonajes;
 ITEM_NIVEL *ListaItems, *recursosIniciales; //lista para tratar interbloqueo
 CCB serverCCB, clientCCB;
 pthread_mutex_t mutex;
 t_log *logger, *loggerInterbloqueo;
+t_nivel* nivel;
 
 // Declaraciones de funciones
-t_nivel *read_nivel_archivo_configuracion(char* path);
+t_nivel* read_nivel_archivo_configuracion(char* path);
 
-t_nivel *create_nivel(t_config *n);
+t_nivel* create_nivel(t_config* n);
 
-ITEM_NIVEL *create_lista_cajas(t_config *n);
+ITEM_NIVEL* create_lista_cajas(t_config* n);
 
-void imprimir_lista_cajas(t_list *cajas);
+void imprimir_lista_cajas(t_list* cajas);
 
-void ListItems_add_caja(t_config *n, char *buffer_caja_num, ITEM_NIVEL **list);
+void ListItems_add_caja(t_config* n, char* buffer_caja_num, ITEM_NIVEL** list);
 
 
 
@@ -91,7 +92,7 @@ void ListItems_add_caja(t_config *n, char *buffer_caja_num, ITEM_NIVEL **list);
 
 */
 
-ITEM_NIVEL *crear_lista_items(t_list *cajas, t_list *personajes);
+ITEM_NIVEL* crear_lista_items(t_list* cajas, t_list* personajes);
 
 void BorrarItem(ITEM_NIVEL** i, char id);
 
@@ -123,17 +124,17 @@ void mandarRecursosLiberados(t_recursos* recursosALiberar, int fdOrquestador);
 
 void agregarRecursosAListaItems(char idRecurso, int cant);
 
-void reasignarRecursosAListaItems(t_recursos *listaRecursos);
+void reasignarRecursosAListaItems(t_recursos* listaRecursos);
 
 void quitarSolicitudesDeRecurso(PersonajeEnNivel* personaje, char idRecurso);
 
-PersonajeEnNivel *buscarPersonaje_byfd(int fd);
+PersonajeEnNivel* buscarPersonaje_byfd(int fd);
 
 PersonajeEnNivel* buscarPersonaje_byid(char id);
 
 void matarPersonaje(int fdPersonaje);
 
-void *interbloqueo(void*);
+void* interbloqueo(void*);
 
 char* tomarIP(char* direct);
 
