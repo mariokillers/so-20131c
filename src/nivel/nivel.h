@@ -52,7 +52,9 @@ typedef struct t_nivel {
 
 	ITEM_NIVEL *nivel_items;
 
-	Direccion* nivel_orquestador;
+	Direccion *nivel_orquestador;
+
+	Direccion *miDireccion;
 
 	char *nivel_nombre;
 
@@ -60,7 +62,6 @@ typedef struct t_nivel {
 
 	int nivel_recovery;
 	
-	Direccion *miDireccion;
 
 } t_nivel;
 
