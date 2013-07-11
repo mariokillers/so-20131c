@@ -89,6 +89,7 @@ void* Planif(void* nivel){
 	
 
 	miGestor->miCON = initServer(miGestor->dataPlanificador.PORT);
+	miGestor->miCON.flag_desconexiones = 1;
 
 	log_info(Logger, "Crea e inicializa las variables y colecciones necesarias del Planificador.");
 	
@@ -223,14 +224,14 @@ void* Planif(void* nivel){
 								pthread_mutex_lock(miGestor->miMutex);
 
 							
-							Person = removePersonaje_byfd (miGestor->personajes_en_nivel, miMensaje->from);
+							Person = removePersonaje_byfd (miGestor->personajes_en_nivel, *((int*)miMensaje->data));
 							//log_info(Logger, string_from_format("termino nivel%x",Person));
 							if(miGestor->PersonajeEnMovimiento){
 								miGestor->turno_entregado=0;
 							}
-							removePersonaje_byfd (miGestor->queue_listos->elements, miMensaje->from);
+							removePersonaje_byfd (miGestor->queue_listos->elements, *((int*)miMensaje->data));
 							if (Person != NULL) removePersonaje_fromBloq(miGestor->queues_bloq, Person);
-
+							removePersonaje_byfd(personajes_jugando, *((int*)miMensaje->data));
 							//SALGO DE ZONA CRITICA
 								pthread_mutex_unlock(miGestor->miMutex);
 			}
