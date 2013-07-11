@@ -1,4 +1,6 @@
-bin/
+bin/personaje
+bin/plataforma
+bin/nivel
 *.log
 
 # Object files
