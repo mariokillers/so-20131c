@@ -100,8 +100,8 @@ RETURN: ITEM_NIVEL * -> devuelve una instancia de ITEM_NIVEL * con los valores t
 pasada como argumento
 DESC: crea una nueva instancia de ITEM_NIVEL * utilizando las funciones de commons/config.h para tomar los valores
 	de t_config *n.
-EXPLICACION: el arch viene en formato "x,y,z,w", para poder tomar cada valor por separado, hay que convertirlo 
-	a formato ["x","y","z","w"], utilizando las funciones de commons/string.h  string_from_format\2 y 
+EXPLICACION: el arch viene en formato "x,y,z,w", para poder tomar cada valor por separado, hay que convertirlo
+	a formato ["x","y","z","w"], utilizando las funciones de commons/string.h  string_from_format\2 y
 	string_get_string_as_array\1
 	*/
 
@@ -126,89 +126,3 @@ void ListItems_add_caja(t_config *n, char *buffer_caja_num, ITEM_NIVEL **list){
 	
 	*list = new;
 }
-
-/*-----------------------------FUNCIONES DE USO PARA DIBUJAR NIVEL----------------------------------------*/
-/*
-ITEM_NIVEL *crear_lista_items(t_list *cajas, t_list *personajes){
-	
-	ITEM_NIVEL *ListaItems = NULL;
-	int i = 0;
-	int j = 0;
-	t_nivel_caja *caja;
-	t_personaje_en_nivel *personaje;
-
-	while(i < (list_size(cajas))){
-		caja = list_get(cajas, i);
-		add_caja_item_nivel(caja, &ListaItems, RECURSO_ITEM_TYPE),		
-		i++;
-	}
-	
-	while(j < (list_size(personajes))){
-		personaje = list_get(personajes, i);
-		add_personaje_item_nivel(personaje, &ListaItems, PERSONAJE_ITEM_TYPE),		
-		j++;
-	}	
-	return ListaItems,
-}
-
-void add_caja_item_nivel(t_nivel_caja *caja, ITEM_NIVEL **list, char tipo){
-	    ITEM_NIVEL * temp;
-        temp = malloc(sizeof(ITEM_NIVEL));
-
-        temp->id = caja->caja_simbolo;
-        temp->posx = caja->caja_pos_x;
-        temp->posy = caja->caja_pos_y;
-        temp->item_type = tipo;
-        temp->quantity = caja->caja_instancias;
-        temp->next = *list;
-        *list = temp;
-}
-
-void add_personaje_item_nivel(t_personaje_en_nivel *personaje, ITEM_NIVEL **list, char tipo){
-	    ITEM_NIVEL * temp;
-        temp = malloc(sizeof(ITEM_NIVEL));
-
-        temp->id = personaje->personaje_simbolo;
-        temp->posx = personaje->personaje_pos_x;
-        temp->posy = personaje->personaje_pos_y;
-        temp->item_type = tipo;
-        temp->quantity = 0;
-        temp->next = *list;
-        *list = temp;
-}
-
-void BorrarItem(ITEM_NIVEL** ListaItems, char id) {
-        ITEM_NIVEL * temp = *ListaItems;
-        ITEM_NIVEL * oldtemp;
-
-        if ((temp != NULL) && (temp->id == id)) {
-                *ListaItems = (*ListaItems)->next;
-		free(temp);
-        } else {
-                while((temp != NULL) && (temp->id != id)) {
-                        oldtemp = temp;
-                        temp = temp->next;
-                }
-                if ((temp != NULL) && (temp->id == id)) {
-                        oldtemp->next = temp->next;
-			free(temp);
-                }
-        }
-}
-
-void MoverPersonaje(ITEM_NIVEL* ListaItems, char id, int x, int y) {
-
-        ITEM_NIVEL * temp;
-        temp = ListaItems;
-
-        while ((temp != NULL) && (temp->id != id)) {
-                temp = temp->next;
-        }
-        if ((temp != NULL) && (temp->id == id)) {
-                temp->posx = x;
-                temp->posy = y;
-        }
-}
-	
-	
-	*/

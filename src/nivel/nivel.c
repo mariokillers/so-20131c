@@ -39,17 +39,14 @@ int main(int argc, char *argv[]) {
 
 	serverCCB = initServer(puerto);
 
-	Direccion * dir = nivel->nivel_orquestador;
-	char ip[20];
-	strcpy(ip, "localhost");
-	clientCCB = connectServer("localhost", dir->PORT);
+	clientCCB = connectServer(nivel->nivel_orquestador->IP, nivel->nivel_orquestador->PORT);
 
 	log_info(logger,
-			string_from_format("El nivel se conecto al puerto: %d", dir->PORT));
+			string_from_format("El nivel se conecto al puerto: %d",  nivel->nivel_orquestador->PORT));
 
 	//le mando handshake al orquestador
 	strcpy(yoNivel.ID, nivel->nivel_nombre);
-	strcpy(yoNivel.IP, "localhost");
+	strcpy(yoNivel.IP, nivel->nivel_orquestador->IP);
 	yoNivel.PORT = puerto;
 	mandarMensaje(clientCCB.sockfd, HANDSHAKE, sizeof(Nivel), &yoNivel);
 	log_info(logger,
@@ -306,7 +303,6 @@ int main(int argc, char *argv[]) {
 	//cierro el socket del cliente
 	close(clientCCB.sockfd);
 
-	//nivel_gui_terminar();
 	return 0;
 
 }
@@ -510,8 +506,6 @@ PersonajeEnNivel* cargarPersonajeEnNivel(Personaje* miPersonaje) {
 
 	return personaje;
 
-	//free(personaje);
-
 }
 
 void agregarARecursosPendientes(PersonajeEnNivel *personaje, char recurso) {
@@ -585,7 +579,6 @@ void agregarRecursoAPersonaje(PersonajeEnNivel *personaje, char recurso) {
 
 			personaje->recursos = temp;
 
-			//free(temp);
 		}
 	}
 
