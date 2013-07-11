@@ -8,6 +8,9 @@ int main(int argc, char *argv[]) {
 	pthread_mutex_init(&deadlock_mutex, NULL );
 	pthread_mutex_lock(&deadlock_mutex);
 
+	signal(SIGINT,rutinaSignal);
+
+
 	char *path_config;
 	if (argc < 2) {
 		fprintf(stderr, "%s: Faltan parametros (%s archivoconfig )\n",
@@ -26,9 +29,9 @@ int main(int argc, char *argv[]) {
 		exit(1);
 	}
 
-	logger = log_create(string_from_format("Proceso%s.log", nivel->nivel_nombre), "ProcesoNivel", false,
+	logger = log_create(string_from_format("Proceso%s.log", nivel->nombre), "ProcesoNivel", false,
 			LOG_LEVEL_INFO);
-	loggerInterbloqueo = log_create(string_from_format("Interbloqueo%s.log", nivel->nivel_nombre), "Interbloqueo", false, LOG_LEVEL_INFO);
+	loggerInterbloqueo = log_create(string_from_format("Interbloqueo%s.log", nivel->nombre), "Interbloqueo", false, LOG_LEVEL_INFO);
 
 	Nivel yoNivel;
 
@@ -37,13 +40,13 @@ int main(int argc, char *argv[]) {
 
 	serverCCB = initServer(nivel->miDireccion->PORT);
 
-	clientCCB = connectServer(nivel->nivel_orquestador->IP, nivel->nivel_orquestador->PORT);
+	clientCCB = connectServer(nivel->orquestador->IP, nivel->orquestador->PORT);
 
 	log_info(logger,
-			string_from_format("El nivel se conecto al puerto: %d",  nivel->nivel_orquestador->PORT));
+			string_from_format("El nivel se conecto al puerto: %d",  nivel->orquestador->PORT));
 
 	//le mando handshake al orquestador
-	strcpy(yoNivel.ID, nivel->nivel_nombre);
+	strcpy(yoNivel.ID, nivel->nombre);
 	strcpy(yoNivel.IP, nivel->miDireccion->IP);
 	yoNivel.PORT = nivel->miDireccion->PORT;
 	mandarMensaje(clientCCB.sockfd, HANDSHAKE, sizeof(Nivel), &yoNivel);
@@ -52,11 +55,11 @@ int main(int argc, char *argv[]) {
 					yoNivel.ID, clientCCB.sockfd));
 
 	//inicializo el recovery
-	recovery = nivel->nivel_recovery;
+	recovery = nivel->recovery;
 	if (recovery)
 		log_info(logger, "El recovery esta activado");
 
-	recovery_time = nivel->nivel_tiempo_deadlock;
+	recovery_time = nivel->tiempo_deadlcok;
 
 	//inicializo la cola de mensajes
 	t_queue* colaDeMensajes;
@@ -684,4 +687,14 @@ PersonajeEnNivel* buscarPersonaje_byid(char id) {
 	}
 	return NULL ;
 
+}
+
+void rutinaSignal(int n){
+	/*@NAME: rutinaSignal
+	 * @DESC: cuando llega la senal cntrl+c, le avisa al orquestador
+	 */
+	log_info(logger, "Recibi senal de morir");
+
+	mandarMensaje(clientCCB.sockfd, CERRANDO_NIVEL, 0, NULL);
+	exit(1);
 }
