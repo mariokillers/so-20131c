@@ -2,7 +2,15 @@
 #include "quantum_inotify.h"
 #include <string.h>
 
-int main (){
+int main (int argc, char *argv[]){
+	
+	if (argc < 2) {
+		fprintf(stderr, "Falta el archivo de configuracion por parametro!\n");
+		return EXIT_FAILURE;
+	}
+	
+	path_archivo_config = argv[1];
+	leerArchivoConfig();
 	
 	
 	pthread_mutex_lock(&mutex_plataforma);
@@ -14,10 +22,9 @@ int main (){
 	
 	
 	quantum_inicial=3;
-	quantum_delay=500000;
 	pthread_create(&orquestador, NULL, orq, NULL);
 	log_info(Logger, "Crea Thread Orquestador.");
-	pthread_create(&quantum_monitor, NULL, monitorear_quantum, "../conf/quantum.conf"); // TODO: Pasar por parametro
+	pthread_create(&quantum_monitor, NULL, monitorear_quantum, path_archivo_config); // TODO: Pasar por parametro
 
 	pthread_join(orquestador, NULL);
 
@@ -67,7 +74,7 @@ void* Planif(void* nivel){
 	miGestor->dataPlanificador.ID[0]='P';
 	//Los puertos de los planificadores son 5501 5502 5503...
 	miGestor->dataPlanificador.PORT= miNivel->PORT+1000;
-	strcpy(miGestor->dataPlanificador.IP, "localhost");
+	strcpy(miGestor->dataPlanificador.IP, mi_ip);
 
 	//Copio la instancia de dataNivel
 	memcpy(&(miGestor->dataNivel),miNivel, sizeof(Nivel));
@@ -191,16 +198,17 @@ void* Planif(void* nivel){
 				break;
 			case TERMINE_NIVEL:
 			{
-				Personaje* miPersonaje;
+				Personaje* Person;
 				log_info(Logger,"Personaje termino nivel");
 
 				//ENTRO EN ZONA CRITICA
 					pthread_mutex_lock(miGestor->miMutex);
 
 				miGestor->turno_entregado=0;
-				miPersonaje= removePersonaje_byfd (miGestor->personajes_en_nivel, miMensaje->from);
+				Person = removePersonaje_byfd (miGestor->personajes_en_nivel, miMensaje->from);
+				log_info(Logger, string_from_format("termino nivel%x",Person));
 				removePersonaje_byfd (miGestor->queue_listos->elements, miMensaje->from);
-				removePersonaje_fromBloq(miGestor->queues_bloq, miPersonaje);
+				removePersonaje_fromBloq(miGestor->queues_bloq, Person);
 
 				//SALGO DE ZONA CRITICA
 					pthread_mutex_unlock(miGestor->miMutex);
@@ -341,13 +349,13 @@ void* orq (void* a){
 				
 
 				//ENTRO EN ZONA CRITICA
-					pthread_mutex_lock(miGestor->miMutex);
+				//	pthread_mutex_lock(miGestor->miMutex);
 
-				removePersonaje_fromBloq(miGestor->queues_bloq, Victima);
-				imprimirBloqueados(miGestor->queues_bloq,"Borro victima de lista de Bloqueados");
+				//removePersonaje_fromBloq(miGestor->queues_bloq, Victima);
+				//imprimirBloqueados(miGestor->queues_bloq,"Borro victima de lista de Bloqueados");
 				
 				//ENTRO EN ZONA CRITICA
-					pthread_mutex_unlock(miGestor->miMutex);
+				//	pthread_mutex_unlock(miGestor->miMutex);
 				
 			}
 			break;
@@ -360,7 +368,34 @@ void* orq (void* a){
 				free(miPersonaje);
 				if(list_is_empty(personajes_jugando)) finalizarProceso();
 			}
-				break;
+			case CERRANDO_NIVEL:
+				{
+					log_info(Logger, "Recibe mensaje avisando desconexion de nivel.");
+					GestorNivel* miGestor;
+					Personaje* AUX;
+					int index = 0;			
+					miGestor=findGestor_byid(((char*)(miMensaje->data)));
+					pthread_mutex_lock(miGestor->miMutex);
+					while(queue_size(miGestor->queue_listos)){
+						
+						AUX = queue_pop(miGestor->queue_listos);
+						mandarMensaje(AUX->FD,REINICIAR_NIVEL,0,NULL);
+					}
+					
+					while (index < list_size(miGestor->queues_bloq)) {
+							Queue_bloqueados* queueBloqueados = (Queue_bloqueados*)list_get(miGestor->queues_bloq, index);
+							while(queue_size(queueBloqueados->queue)){
+								
+								AUX = queue_pop(queueBloqueados);
+								mandarMensaje(AUX->FD,REINICIAR_NIVEL,0,NULL);
+							}
+							index++;
+					}
+					removeGestor_byid(((char*)(miMensaje->data)));
+					pthread_mutex_unlock(miGestor->miMutex);
+					
+				}
+			break;
 			}
 			borrarMensaje(miMensaje);
 		}
@@ -371,7 +406,7 @@ void* orq (void* a){
 
 void finalizarProceso() {
 	log_info(Logger, "Ganaron todos. NIVEL FINAL -- KOOPA");
-	char *argumentos[] = {"./koopa", "archivo.lst", NULL};
+	char *argumentos[] = {"./koopa", path_koopa_lst, NULL};
 	log_destroy(Logger);
 	execv("./koopa", argumentos);
 }
@@ -431,14 +466,21 @@ GestorNivel* findGestor_byid (char* nivel){
 	return (list_find(Gestores,(void*)_eselGestor));
 	
 }
+GestorNivel* removeGestor_byid (char* nivel){
+	bool _eselGestor (GestorNivel* comparador){
+		return(string_equals_ignore_case(comparador->ID, nivel));
+	}
+	return (list_remove_by_condition(Gestores,(void*)_eselGestor));
+	
+}
+
 
 Personaje* removePersonaje_byfd (t_list* personajes_en_nivel, int fd){
 	
 	bool _eselPersonaje (Personaje* comparador){
-	
-		return(comparador->FD ==fd);
-	}
-	return (list_remove_by_condition(personajes_en_nivel,(void*)_eselPersonaje));
+			return((comparador->FD)==fd);
+		}
+		return (list_remove_by_condition(personajes_en_nivel,(void*)_eselPersonaje));
 }
 
 
@@ -471,7 +513,6 @@ Personaje* findPersonaje_byid (t_list* personajes_en_nivel, char* id){
 Queue_bloqueados* findBloqQueue_byidRecurso (t_list* lista, char idRecurso){
 	log_info(Logger, string_from_format("Busco lista de bloqueados de recurs: %c",idRecurso));
 	bool _eselGestor (Queue_bloqueados* comparador){
-		log_info(Logger, string_from_format("comparo y tengo resultado %d",(comparador->idRecurso==idRecurso)));
 		return(comparador->idRecurso==idRecurso);
 	}
 	return (list_find(lista,(void*)_eselGestor));
@@ -494,19 +535,28 @@ Personaje* findUltimoEnLlegar (t_list* ListaDePersonajes, char PersonajesInterbl
 		int i;
 		for (i=0; i<(strlen(PersonajesABuscar)); i++){
 			if(comparador->ID[1]==PersonajesABuscar[i]) {
-				memmove((&PersonajesABuscar[i]), (&PersonajesABuscar[i+1]), strlen(PersonajesABuscar)-i);
-				if (!strcmp(PersonajesABuscar,"")){
-					return true;
-				}
+				return true;
 			}
 		}
 		return false;
 	}
-	return (list_remove_by_condition(ListaDePersonajes,(void*)_esElUltimoEnEncontrarse));
+	return (list_find(ListaDePersonajes,(void*)_esElUltimoEnEncontrarse));
 
 }
 
 void asignarDatos (Recursos* Aux, char recurso, Personaje* miPersonaje){
 	Aux->idRecurso = recurso;
 	Aux->idPersonaje = miPersonaje->ID[1];
+}
+
+void leerArchivoConfig(void){
+	plataforma_config = config_create(path_archivo_config);
+		if (plataforma_config == NULL) {
+			fprintf(stderr, "Archivo de configuracion invalido!\n");
+			exit(EXIT_FAILURE);
+		}
+			
+		mi_ip = config_get_string_value(plataforma_config, "IPlocal");
+		quantum_delay = config_get_long_value(plataforma_config, "quantum_delay");
+		path_koopa_lst = config_get_string_value(plataforma_config, "KoopaLst");
 }

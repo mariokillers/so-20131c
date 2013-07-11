@@ -10,6 +10,7 @@
 #include <commons/collections/stack.h>
 #include <commons/log.h>
 #include <commons/string.h>
+#include <commons/config.h>
 #include <pthread.h>
 #include <unistd.h>
 #include <commons/Connections/Server.h>
@@ -20,12 +21,15 @@
 t_list* Gestores;
 t_log* Logger;
 int quantum_inicial;
-long quantum_delay;
+int quantum_delay;
 t_list* personajes_jugando;
 pthread_t orquestador;
 pthread_t quantum_monitor;
 pthread_mutex_t mutex_plataforma;
-
+t_config *plataforma_config;
+char *mi_ip;
+char *path_koopa_lst;
+char *path_archivo_config;
 
 
 
@@ -66,4 +70,6 @@ void removePersonaje_fromBloq (t_list* bloqueados, Personaje* miPersonaje);
 void entregarTurno (GestorNivel* miGestor);
 Personaje* findUltimoEnLlegar (t_list*, char*);
 void asignarDatos (Recursos* Aux, char recurso, Personaje* miPersonaje);
+void leerArchivoConfig(void);
+GestorNivel* removeGestor_byid (char* nivel);
 #endif /* PROCESO_PLATAFORMA_H_ */
