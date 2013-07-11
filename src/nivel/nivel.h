@@ -52,15 +52,15 @@ typedef struct t_nivel {
 
 	ITEM_NIVEL *nivel_items;
 
-	Direccion *nivel_orquestador;
+	Direccion *orquestador;
 
 	Direccion *miDireccion;
 
-	char *nivel_nombre;
+	char *nombre;
 
-	long nivel_tiempo_deadlock;
+	long tiempo_deadlcok;
 
-	int nivel_recovery;
+	int recovery;
 	
 
 } t_nivel;
@@ -138,6 +138,8 @@ void *interbloqueo(void*);
 char* tomarIP(char* direct);
 
 int tomarPuerto(char* direct);
+
+void rutinaSignal(int n);
 
 
 
