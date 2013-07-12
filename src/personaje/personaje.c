@@ -164,6 +164,10 @@ int main(int argc, char *argv[]) {
 
 				switch (mensaje->type) {
 				case REINICIAR_NIVEL:
+				log_info(logger,
+						string_from_format(
+								"llego mensaje de reiniciar %s por desconexion de este",
+								nombreNivelActual));
 					mandarMensaje(planificadorCCB.sockfd, TERMINE_NIVEL, 0, NULL );
 
 					//desconecta del nivel y del planificador
@@ -289,6 +293,11 @@ int main(int argc, char *argv[]) {
 									personaje->posActual->POS_Y));
 
 					analizarRecurso();
+					miEstado = STANDBY;
+					log_info(logger,
+							string_from_format(
+									"personaje %s cambia a estado %d",
+									personaje->nombre, miEstado));
 				}
 				break;
 				borrarMensaje(mensaje);
@@ -479,6 +488,10 @@ void analizarRecurso() {
 						personaje->nombre, nombreNivelActual));
 
 		miEstado = STANDBY;
+		log_info(logger,
+			string_from_format(
+					"personaje %s cambia a estado %d",
+					personaje->nombre, miEstado));
 	}
 }
 
