@@ -81,6 +81,8 @@ int main(int argc, char *argv[]) {
 
 				//mando el primer mensaje al orquestador solicitando informacion del nivel y su planificador
 				strcpy(nombreProximoNivel, proximoNivel(personaje->niveles));
+				proxRecurso = proximoRecurso(
+						personaje->niveles);
 
 				solicitarDataNivel();
 				mandarMensaje(orquestadorCCB.sockfd, REQUEST_DATA_NIVEL,
@@ -167,7 +169,7 @@ int main(int argc, char *argv[]) {
 					//desconecta del nivel y del planificador
 					close(nivelCCB.sockfd);
 					close(planificadorCCB.sockfd);
-					log_debug(logger,
+					log_info(logger,
 							string_from_format(
 									"personaje %s se desconecto del %s y de su planificador",
 									personaje->nombre, nombreNivelActual));
@@ -824,6 +826,7 @@ void inicializarPersonaje() {
 
 	strcpy(nombreNivelActual, "");
 	posicionActual = (Posicion*) personaje->posActual;
+	posicionProximoRecurso = NULL;
 	flag = 0;
 	miEstado = NUEVO_NIVEL;
 }
