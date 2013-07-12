@@ -405,6 +405,7 @@ void* orq (void* a){
 					int index = 0;			
 					miGestor=findGestor_byfd(miMensaje->from);
 					pthread_mutex_lock(miGestor->miMutex);
+					mandarMensaje(miGestor->PersonajeEnMovimiento->FD,REINICIAR_NIVEL,0,NULL);
 					while(queue_size(miGestor->queue_listos)){
 						
 						AUX = queue_pop(miGestor->queue_listos);
