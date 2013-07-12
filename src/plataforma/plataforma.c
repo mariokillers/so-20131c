@@ -45,6 +45,7 @@ void* Planif(void* nivel){
 	t_queue* misMensajes;
 	misMensajes = queue_create();
 	Mensaje* miMensaje;
+	int desconexion_autorizada = 0;
 	
 	
 	
@@ -210,6 +211,7 @@ void* Planif(void* nivel){
 				log_info(Logger, string_from_format("termino nivel%x",Person));
 				removePersonaje_byfd (miGestor->queue_listos->elements, miMensaje->from);
 				removePersonaje_fromBloq(miGestor->queues_bloq, Person);
+				desconexion_autorizada=1;
 
 				//SALGO DE ZONA CRITICA
 					pthread_mutex_unlock(miGestor->miMutex);
@@ -217,6 +219,7 @@ void* Planif(void* nivel){
 				break;
 			case DESCONEXION:
 			{
+				if(desconexion_autorizada == 0){
 							Personaje* Person;
 							log_info(Logger,"Se desconecto personaje");
 
@@ -234,6 +237,9 @@ void* Planif(void* nivel){
 							removePersonaje_byfd(personajes_jugando, *((int*)miMensaje->data));
 							//SALGO DE ZONA CRITICA
 								pthread_mutex_unlock(miGestor->miMutex);
+				}else{
+					desconexion_autorizada=0;
+				}
 			}
 			break;
 			}
@@ -389,6 +395,7 @@ void* orq (void* a){
 				if(miPersonaje!=NULL) log_info(Logger, string_from_format("Removi %s de los personajes jugando", miPersonaje->ID)); else log_info(Logger,"NADA");
 				free(miPersonaje);
 				if(list_is_empty(personajes_jugando)) finalizarProceso();
+				break;
 			}
 			case CERRANDO_NIVEL:
 				{
