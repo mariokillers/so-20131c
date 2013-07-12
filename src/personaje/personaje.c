@@ -50,20 +50,19 @@ int main(int argc, char *argv[]) {
 
 	//mientras tenga algun mensaje del Server
 	while (1) {
-		
-		
+
+
 		//analiza el estado actual del proceso y en base a eso, actua
 		switch (miEstado) {
 		case MUEROSENIAL:
-				log_info(logger,
-				string_from_format("personaje %s murio por SIGTERM",
-						personaje->nombre));
-				morir();
-				break;			
+			log_info(logger,
+					string_from_format("personaje %s murio por SIGTERM",
+							personaje->nombre));
+			morir();
+			break;
 		case NUEVO_NIVEL:
 			orquestadorCCB =
-					connectServer("localhost",
-							5000/*((char*)((Direccion*)(personaje->personaje_orquestador))->IP), ((Direccion*)(personaje->personaje_orquestador))->PORT*/);
+					connectServer(((char*)((Direccion*)(personaje->orquestador))->IP), ((Direccion*)(personaje->orquestador))->PORT);
 
 			//loggeo la conexion del personaje al orquestador
 			log_info(logger,
@@ -162,6 +161,31 @@ int main(int argc, char *argv[]) {
 				mensaje = queue_pop(colaDeMensajes);
 
 				switch (mensaje->type) {
+				case REINICIAR_NIVEL:
+					mandarMensaje(planificadorCCB.sockfd, TERMINE_NIVEL, 0, NULL );
+
+					//desconecta del nivel y del planificador
+					close(nivelCCB.sockfd);
+					close(planificadorCCB.sockfd);
+					log_debug(logger,
+							string_from_format(
+									"personaje %s se desconecto del %s y de su planificador",
+									personaje->nombre, nombreNivelActual));
+
+					//reinicio el nivel, vuelvo a pedir la DATA_LEVEL
+					reiniciarNivel(personaje->niveles);
+
+					posicionProximoRecurso = NULL;
+					flag = 0;
+
+					miEstado = NUEVO_NIVEL;
+					log_info(logger,
+							string_from_format(
+									"personaje %s cambia a estado %d",
+									personaje->nombre, miEstado));
+					break;
+
+
 				case MOVIMIENTO_PERMITIDO:
 					log_trace(logger, "llego mensaje MOVIMIENTO_PERMITIDO");
 					//si tengo la poscion del proximo recurso se mueve
@@ -169,12 +193,12 @@ int main(int argc, char *argv[]) {
 						flag = 0;
 						llegoRecurso();
 					}
-						//verifico si el personaje finalizo el nivel
+					//verifico si el personaje finalizo el nivel
 					if (nivelTerminado(personaje->niveles,
 							nombreNivelActual)) {
 						break;
 					}								
-								
+
 					if (posicionProximoRecurso != NULL ) {
 						log_trace(logger,
 								"tengo posicion de recurso que necesito");
@@ -338,7 +362,7 @@ int main(int argc, char *argv[]) {
 			break;
 		}
 	}
-	
+
 
 	return 1;
 }
@@ -567,14 +591,14 @@ void morir() {
 void rutinaSignal(int n) {
 	switch (n) {
 	case SIGTERM:
-	
+
 		if (miEstado == STANDBY || miEstado == WAIT_POS_REC
-			|| miEstado == WAIT_REC) {
-				miEstado = MUEROSENIAL;
-				log_info(logger,
+				|| miEstado == WAIT_REC) {
+			miEstado = MUEROSENIAL;
+			log_info(logger,
 					string_from_format(
-						"personaje %s cambia a estado %d",
-						personaje->nombre, miEstado));
+							"personaje %s cambia a estado %d",
+							personaje->nombre, miEstado));
 		}
 
 		break;
@@ -643,7 +667,7 @@ t_personaje *create_personaje(t_config *p) {
 
 	personaje->orquestador->PORT = tomarPuerto(
 			config_get_string_value(p, "orquestador"));
-/*
+	/*
 	strcpy(personaje->miDireccion->IP,
 			tomarIP(config_get_string_value(p, "miDireccion")));
 
