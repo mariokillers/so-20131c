@@ -41,6 +41,7 @@ int main(int argc, char* argv[]) {
 
 	serverCCB = initServer(nivel->miDireccion->PORT);
 	serverCCB.flag_desconexiones = 1;
+	int desconexionAutorizada=0;
 
 	clientCCB = connectServer(nivel->orquestador->IP, nivel->orquestador->PORT);
 
@@ -273,26 +274,32 @@ int main(int argc, char* argv[]) {
 
 			matarPersonaje(mensaje->from);
 
+			desconexionAutorizada=1;
+
 		}
 		break;
 
 		case DESCONEXION: {
 			log_info(logger, "Recibi DESCONEXION");
 
-			//entro en la region critica
-			pthread_mutex_lock(&mutex);
+			if(!desconexionAutorizada){
+				//entro en la region critica
+				pthread_mutex_lock(&mutex);
 
-			PersonajeEnNivel* personaje = buscarPersonaje_byfd(*(int*)mensaje->data);
+				PersonajeEnNivel* personaje = buscarPersonaje_byfd(*(int*)mensaje->data);
 
-			pthread_mutex_unlock(&mutex);
-			//salgo de la region critica
+				pthread_mutex_unlock(&mutex);
+				//salgo de la region critica
 
-			log_info(logger,
-					string_from_format(
-							"El personaje: %c ha sido desconectado del nivel",
-							personaje->id));
+				log_info(logger,
+						string_from_format(
+								"El personaje: %c ha sido desconectado del nivel",
+								personaje->id));
 
-			matarPersonaje(*(int*)mensaje->data);
+				matarPersonaje(*(int*)mensaje->data);
+			}else{
+				desconexionAutorizada=0;
+			}
 
 		}
 		break;
