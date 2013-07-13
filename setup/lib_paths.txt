@@ -1,4 +1,4 @@
-export LIBS=/home/utnso/repo/lib
+export LIBS=/home/utnso/mario-killers/lib
 export LD_LIBRARY_PATH=$LIBS
 export LIBRARY_PATH=$LIBS
 export C_INCLUDE_PATH=$LIBS
