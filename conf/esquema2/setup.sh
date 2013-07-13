@@ -13,7 +13,7 @@ ssh $2 "cd ~/mario-killers/conf/esquema2 && rm personajeTortuga.config personaje
 # VM1
 scp nivel\ DeadLock.config plataforma.config $1:~/mario-killers/conf/esquema2	
 ssh $1 "cd ~/mario-killers/conf/esquema2 && 
-	echo -e 'orquestador=$1:5000\n' >> plataforma.config &&
+	echo -e 'orquestador=$1:5000\n' >> nivel\ DeadLock.config &&
 	echo miDireccion=`hostname -I | cut -d' ' -f1`:20010 >> nivel\ DeadLock.config"
 
 # VM2
