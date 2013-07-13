@@ -27,7 +27,7 @@ int mensajes(t_queue* mensajesQueue, CCB myCOM){
 	{
 		//// SI EL EVENTO QUE ESTOY MIRANDO DIO ERROR O NO ESTA LISTO PARA SER LEIDO
 		if ((myCOM.events[i].events & EPOLLERR) || (myCOM.events[i].events & EPOLLRDHUP) || (myCOM.events[i].events & EPOLLHUP) || (!(myCOM.events[i].events & EPOLLIN))) {
-			fprintf (stderr, "epoll error\n");
+			//fprintf (stderr, "epoll error\n");
 			//CIERRO EL EVENTO
 			Cerrar_Conexion(myCOM.events[i].data.fd, &myCOM, mensajesQueue);
 			continue;
@@ -242,7 +242,7 @@ void Cerrar_Conexion (int fd, CCB* miCOM, t_queue* mensajes_queue){
 		queue_push(mensajes_queue, NuevoMensaje);
 		
 	}
-	printf ("Closed connection on descriptor %d\n", fd);
+	//printf ("Closed connection on descriptor %d\n", fd);
 	//CIERRO CONEXION
 	close (fd);
 

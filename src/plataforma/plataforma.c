@@ -91,6 +91,7 @@ void* Planif(void* nivel){
 
 	miGestor->miCON = initServer(miGestor->dataPlanificador.PORT);
 	miGestor->miCON.flag_desconexiones = 1;
+	miGestor->PersonajeEnMovimiento = NULL;
 
 	log_info(Logger, "Crea e inicializa las variables y colecciones necesarias del Planificador.");
 	
@@ -399,17 +400,21 @@ void* orq (void* a){
 			}
 			case CERRANDO_NIVEL:
 				{
-					log_info(Logger, "Recibe mensaje avisando desconexion de nivel.");
+					
 					GestorNivel* miGestor;
 					Personaje* AUX;
 					int index = 0;			
+					//log_info(Logger, "0");
 					miGestor=findGestor_byfd(miMensaje->from);
+					log_info(Logger, string_from_format("Recibe mensaje avisando desconexion de nivel: %s.",miGestor->ID));
 					pthread_mutex_lock(miGestor->miMutex);
-					mandarMensaje(miGestor->PersonajeEnMovimiento->FD,REINICIAR_NIVEL,0,NULL);
+					if(miGestor->PersonajeEnMovimiento) mandarMensaje(miGestor->PersonajeEnMovimiento->FD,REINICIAR_NIVEL,0,NULL);
+					//log_info(Logger, "1");
 					while(queue_size(miGestor->queue_listos)){
 						
 						AUX = queue_pop(miGestor->queue_listos);
 						mandarMensaje(AUX->FD,REINICIAR_NIVEL,0,NULL);
+						//log_info(Logger, "2");
 					}
 					
 					while (index < list_size(miGestor->queues_bloq)) {
@@ -422,7 +427,7 @@ void* orq (void* a){
 							index++;
 					}
 					close(miGestor->miCON.masterfd);
-					removeGestor_byid(((char*)(miMensaje->data)));
+					removeGestor_byfd(miMensaje->from);
 					pthread_mutex_unlock(miGestor->miMutex);
 					
 				}
@@ -497,9 +502,9 @@ GestorNivel* findGestor_byid (char* nivel){
 	return (list_find(Gestores,(void*)_eselGestor));
 	
 }
-GestorNivel* removeGestor_byid (char* nivel){
+GestorNivel* removeGestor_byfd (int fd){
 	bool _eselGestor (GestorNivel* comparador){
-		return(string_equals_ignore_case(comparador->ID, nivel));
+		return(comparador->dataNivel.FD==fd);
 	}
 	return (list_remove_by_condition(Gestores,(void*)_eselGestor));
 	

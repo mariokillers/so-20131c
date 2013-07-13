@@ -72,5 +72,5 @@ void entregarTurno (GestorNivel* miGestor);
 Personaje* findUltimoEnLlegar (t_list*, char*);
 void asignarDatos (Recursos* Aux, char recurso, Personaje* miPersonaje);
 void leerArchivoConfig(void);
-GestorNivel* removeGestor_byid (char* nivel);
+GestorNivel* removeGestor_byfd (int fd);
 #endif /* PROCESO_PLATAFORMA_H_ */
