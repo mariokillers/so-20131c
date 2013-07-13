@@ -8,7 +8,7 @@ fi
 
 # Empezar de 0
 ssh $1 "cd ~/mario-killers/conf/esquema2 && rm nivel\ DeadLock.config plataforma.config"
-ssh $2 "cd ~/mario-killers/conf/esquema1 && rm personajeTortuga.config personajeLuigi.config personajeGoomba.config personajeMario.config"
+ssh $2 "cd ~/mario-killers/conf/esquema2 && rm personajeTortuga.config personajeLuigi.config personajeGoomba.config personajeMario.config"
 
 # VM1
 scp nivel\ DeadLock.config plataforma.config $1:~/mario-killers/conf/esquema2	
