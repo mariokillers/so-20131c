@@ -13,7 +13,7 @@ ssh $3 "cd ~/mario-killers/conf/esquema1 && rm Level3-1.config personajeLuigi.co
 ssh $4 "cd ~/mario-killers/conf/esquema1 && rm Level8-8.config personajeTortuga.config"
 
 # VM1
-scp Level1-1.config personajeMario.config $1:~/mario-killers
+scp Level1-1.config personajeMario.config $1:~/mario-killers/conf/esquema1
 ssh $1 "cd ~/mario-killers/conf/esquema1 && 
 	echo -e 'orquestador=$2:5000\n' >> plataforma.config &&
 	echo miDireccion=`hostname -I | cut -d' ' -f1`:20001 >> Level1-1.config &&
