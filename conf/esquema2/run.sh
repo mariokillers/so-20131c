@@ -5,18 +5,13 @@
 BIN_DIR=../../bin
 CONF_DIR=.
 
-echo "Levantando plataforma..."
-$BIN_DIR/plataforma 2>&1 &
-sleep 1
-
 echo "Levantando personajes..."
-$BIN_DIR/personaje $CONF_DIR/personajeGoomba.conf& 
-$BIN_DIR/personaje $CONF_DIR/personajeMario.conf& 
-$BIN_DIR/personaje $CONF_DIR/personajeTortuga.conf& 
+$BIN_DIR/personaje $CONF_DIR/personajeGoomba.config& 
+$BIN_DIR/personaje $CONF_DIR/personajeMario.config& 
+$BIN_DIR/personaje $CONF_DIR/personajeTortuga.config& 
 
-read -p "Presiona enter para matar plataforma y personajes..."
+read -p "Presiona enter para matar personajes..."
 
-killall personaje
-killall plataforma
+killall -9 personaje
 
 echo "Terminado!"
